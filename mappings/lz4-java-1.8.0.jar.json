@@ -1,0 +1,5213 @@
+{
+  "md5": "936a927700aa8fc3b75d21d7571171f6",
+  "sha2": "4b986a99445e49ea5fbf5d149c4b63f6ed6c6780",
+  "sha256": "d74a3334fb35195009b338a951f918203d6bbca3d1d359033dc33edd1cadc9ef",
+  "contents": {
+    "classes": {
+      "net/jpountz/xxhash/AbstractStreamingXXHash32Java.class": {
+        "ver": 51,
+        "acc": 1056,
+        "nme": "net/jpountz/xxhash/AbstractStreamingXXHash32Java",
+        "super": "net/jpountz/xxhash/StreamingXXHash32",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "reset",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "v1",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "v2",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "v3",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "v4",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "memSize",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "totalLen",
+            "dsc": "J"
+          },
+          {
+            "acc": 16,
+            "nme": "memory",
+            "dsc": "[B"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4BlockInputStream.class": {
+        "ver": 51,
+        "acc": 33,
+        "nme": "net/jpountz/lz4/LZ4BlockInputStream",
+        "super": "java/io/FilterInputStream",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/io/InputStream;Lnet/jpountz/lz4/LZ4FastDecompressor;Ljava/util/zip/Checksum;Z)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/io/InputStream;Lnet/jpountz/lz4/LZ4FastDecompressor;Ljava/util/zip/Checksum;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/io/InputStream;Lnet/jpountz/lz4/LZ4FastDecompressor;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/io/InputStream;Z)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/io/InputStream;)V"
+          },
+          {
+            "nme": "available",
+            "acc": 1,
+            "dsc": "()I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "read",
+            "acc": 1,
+            "dsc": "()I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "read",
+            "acc": 1,
+            "dsc": "([BII)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "read",
+            "acc": 1,
+            "dsc": "([B)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "skip",
+            "acc": 1,
+            "dsc": "(J)J",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "refill",
+            "acc": 2,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "tryReadFully",
+            "acc": 2,
+            "dsc": "([BI)Z",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "readFully",
+            "acc": 2,
+            "dsc": "([BI)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "markSupported",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "mark",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "reset",
+            "acc": 1,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "decompressor",
+            "dsc": "Lnet/jpountz/lz4/LZ4FastDecompressor;"
+          },
+          {
+            "acc": 18,
+            "nme": "checksum",
+            "dsc": "Ljava/util/zip/Checksum;"
+          },
+          {
+            "acc": 18,
+            "nme": "stopOnEmptyBlock",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "buffer",
+            "dsc": "[B"
+          },
+          {
+            "acc": 2,
+            "nme": "compressedBuffer",
+            "dsc": "[B"
+          },
+          {
+            "acc": 2,
+            "nme": "originalLen",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "o",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "finished",
+            "dsc": "Z"
+          },
+          {
+            "acc": 4120,
+            "nme": "$assertionsDisabled",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4FrameOutputStream.class": {
+        "ver": 51,
+        "acc": 33,
+        "nme": "net/jpountz/lz4/LZ4FrameOutputStream",
+        "super": "java/io/FilterOutputStream",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 129,
+            "dsc": "(Ljava/io/OutputStream;Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;[Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 129,
+            "dsc": "(Ljava/io/OutputStream;Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;J[Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 129,
+            "dsc": "(Ljava/io/OutputStream;Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;JLnet/jpountz/lz4/LZ4Compressor;Lnet/jpountz/xxhash/XXHash32;[Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/io/OutputStream;Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/io/OutputStream;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "writeHeader",
+            "acc": 2,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "writeBlock",
+            "acc": 2,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "writeEndMark",
+            "acc": 2,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "write",
+            "acc": 1,
+            "dsc": "(I)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "write",
+            "acc": 1,
+            "dsc": "([BII)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "flush",
+            "acc": 1,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "ensureNotFinished",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "close",
+            "acc": 1,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 24,
+            "nme": "INTEGER_BYTES",
+            "dsc": "I",
+            "val": 4
+          },
+          {
+            "acc": 24,
+            "nme": "LONG_BYTES",
+            "dsc": "I",
+            "val": 8
+          },
+          {
+            "acc": 24,
+            "nme": "MAGIC",
+            "dsc": "I",
+            "val": 407708164
+          },
+          {
+            "acc": 24,
+            "nme": "LZ4_MAX_HEADER_LENGTH",
+            "dsc": "I",
+            "val": 15
+          },
+          {
+            "acc": 24,
+            "nme": "LZ4_FRAME_INCOMPRESSIBLE_MASK",
+            "dsc": "I",
+            "val": -2147483648
+          },
+          {
+            "acc": 24,
+            "nme": "DEFAULT_FEATURES",
+            "dsc": "[Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;"
+          },
+          {
+            "acc": 24,
+            "nme": "CLOSED_STREAM",
+            "dsc": "Ljava/lang/String;",
+            "val": "The stream is already closed"
+          },
+          {
+            "acc": 18,
+            "nme": "compressor",
+            "dsc": "Lnet/jpountz/lz4/LZ4Compressor;"
+          },
+          {
+            "acc": 18,
+            "nme": "checksum",
+            "dsc": "Lnet/jpountz/xxhash/XXHash32;"
+          },
+          {
+            "acc": 18,
+            "nme": "buffer",
+            "dsc": "Ljava/nio/ByteBuffer;"
+          },
+          {
+            "acc": 18,
+            "nme": "compressedBuffer",
+            "dsc": "[B"
+          },
+          {
+            "acc": 18,
+            "nme": "maxBlockSize",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "knownSize",
+            "dsc": "J"
+          },
+          {
+            "acc": 18,
+            "nme": "intLEBuffer",
+            "dsc": "Ljava/nio/ByteBuffer;"
+          },
+          {
+            "acc": 2,
+            "nme": "frameInfo",
+            "dsc": "Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;"
+          }
+        ]
+      },
+      "net/jpountz/xxhash/XXHash32JNI.class": {
+        "ver": 51,
+        "acc": 48,
+        "nme": "net/jpountz/xxhash/XXHash32JNI",
+        "super": "net/jpountz/xxhash/XXHash32",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "hash",
+            "acc": 1,
+            "dsc": "([BIII)I"
+          },
+          {
+            "nme": "hash",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;III)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/jpountz/xxhash/XXHash32;"
+          },
+          {
+            "acc": 10,
+            "nme": "SAFE_INSTANCE",
+            "dsc": "Lnet/jpountz/xxhash/XXHash32;"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4BlockOutputStream.class": {
+        "ver": 51,
+        "acc": 33,
+        "nme": "net/jpountz/lz4/LZ4BlockOutputStream",
+        "super": "java/io/FilterOutputStream",
+        "mthds": [
+          {
+            "nme": "compressionLevel",
+            "acc": 10,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/io/OutputStream;ILnet/jpountz/lz4/LZ4Compressor;Ljava/util/zip/Checksum;Z)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/io/OutputStream;ILnet/jpountz/lz4/LZ4Compressor;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/io/OutputStream;I)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/io/OutputStream;)V"
+          },
+          {
+            "nme": "ensureNotFinished",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "write",
+            "acc": 1,
+            "dsc": "(I)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "write",
+            "acc": 1,
+            "dsc": "([BII)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "write",
+            "acc": 1,
+            "dsc": "([B)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "close",
+            "acc": 1,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "flushBufferedData",
+            "acc": 2,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "flush",
+            "acc": 1,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "finish",
+            "acc": 1,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "writeIntLE",
+            "acc": 10,
+            "dsc": "(I[BI)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 24,
+            "nme": "MAGIC",
+            "dsc": "[B"
+          },
+          {
+            "acc": 24,
+            "nme": "MAGIC_LENGTH",
+            "dsc": "I"
+          },
+          {
+            "acc": 24,
+            "nme": "HEADER_LENGTH",
+            "dsc": "I"
+          },
+          {
+            "acc": 24,
+            "nme": "COMPRESSION_LEVEL_BASE",
+            "dsc": "I",
+            "val": 10
+          },
+          {
+            "acc": 24,
+            "nme": "MIN_BLOCK_SIZE",
+            "dsc": "I",
+            "val": 64
+          },
+          {
+            "acc": 24,
+            "nme": "MAX_BLOCK_SIZE",
+            "dsc": "I",
+            "val": 33554432
+          },
+          {
+            "acc": 24,
+            "nme": "COMPRESSION_METHOD_RAW",
+            "dsc": "I",
+            "val": 16
+          },
+          {
+            "acc": 24,
+            "nme": "COMPRESSION_METHOD_LZ4",
+            "dsc": "I",
+            "val": 32
+          },
+          {
+            "acc": 24,
+            "nme": "DEFAULT_SEED",
+            "dsc": "I",
+            "val": -1756908916
+          },
+          {
+            "acc": 18,
+            "nme": "blockSize",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "compressionLevel",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "compressor",
+            "dsc": "Lnet/jpountz/lz4/LZ4Compressor;"
+          },
+          {
+            "acc": 18,
+            "nme": "checksum",
+            "dsc": "Ljava/util/zip/Checksum;"
+          },
+          {
+            "acc": 18,
+            "nme": "buffer",
+            "dsc": "[B"
+          },
+          {
+            "acc": 18,
+            "nme": "compressedBuffer",
+            "dsc": "[B"
+          },
+          {
+            "acc": 18,
+            "nme": "syncFlush",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "finished",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "o",
+            "dsc": "I"
+          },
+          {
+            "acc": 4120,
+            "nme": "$assertionsDisabled",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4JNI.class": {
+        "ver": 51,
+        "acc": 16432,
+        "nme": "net/jpountz/lz4/LZ4JNI",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lnet/jpountz/lz4/LZ4JNI;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lnet/jpountz/lz4/LZ4JNI;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "init",
+            "acc": 264,
+            "dsc": "()V"
+          },
+          {
+            "nme": "LZ4_compress_limitedOutput",
+            "acc": 264,
+            "dsc": "([BLjava/nio/ByteBuffer;II[BLjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "LZ4_compressHC",
+            "acc": 264,
+            "dsc": "([BLjava/nio/ByteBuffer;II[BLjava/nio/ByteBuffer;III)I"
+          },
+          {
+            "nme": "LZ4_decompress_fast",
+            "acc": 264,
+            "dsc": "([BLjava/nio/ByteBuffer;I[BLjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "LZ4_decompress_safe",
+            "acc": 264,
+            "dsc": "([BLjava/nio/ByteBuffer;II[BLjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "LZ4_compressBound",
+            "acc": 264,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lnet/jpountz/lz4/LZ4JNI;"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4JavaUnsafeFastDecompressor.class": {
+        "ver": 51,
+        "acc": 48,
+        "nme": "net/jpountz/lz4/LZ4JavaUnsafeFastDecompressor",
+        "super": "net/jpountz/lz4/LZ4FastDecompressor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "decompress",
+            "acc": 1,
+            "dsc": "([BI[BII)I"
+          },
+          {
+            "nme": "decompress",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;ILjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/jpountz/lz4/LZ4FastDecompressor;"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4SafeUtils.class": {
+        "ver": 51,
+        "acc": 16432,
+        "nme": "net/jpountz/lz4/LZ4SafeUtils",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lnet/jpountz/lz4/LZ4SafeUtils;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lnet/jpountz/lz4/LZ4SafeUtils;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "hash",
+            "acc": 8,
+            "dsc": "([BI)I"
+          },
+          {
+            "nme": "hash64k",
+            "acc": 8,
+            "dsc": "([BI)I"
+          },
+          {
+            "nme": "readIntEquals",
+            "acc": 8,
+            "dsc": "([BII)Z"
+          },
+          {
+            "nme": "safeIncrementalCopy",
+            "acc": 8,
+            "dsc": "([BIII)V"
+          },
+          {
+            "nme": "wildIncrementalCopy",
+            "acc": 8,
+            "dsc": "([BIII)V"
+          },
+          {
+            "nme": "copy8Bytes",
+            "acc": 8,
+            "dsc": "([BI[BI)V"
+          },
+          {
+            "nme": "commonBytes",
+            "acc": 8,
+            "dsc": "([BIII)I"
+          },
+          {
+            "nme": "commonBytesBackward",
+            "acc": 8,
+            "dsc": "([BIIII)I"
+          },
+          {
+            "nme": "safeArraycopy",
+            "acc": 8,
+            "dsc": "([BI[BII)V"
+          },
+          {
+            "nme": "wildArraycopy",
+            "acc": 8,
+            "dsc": "([BI[BII)V"
+          },
+          {
+            "nme": "encodeSequence",
+            "acc": 8,
+            "dsc": "([BIIII[BII)I"
+          },
+          {
+            "nme": "lastLiterals",
+            "acc": 8,
+            "dsc": "([BII[BII)I"
+          },
+          {
+            "nme": "writeLen",
+            "acc": 8,
+            "dsc": "(I[BI)I"
+          },
+          {
+            "nme": "copyTo",
+            "acc": 8,
+            "dsc": "(Lnet/jpountz/lz4/LZ4SafeUtils$Match;Lnet/jpountz/lz4/LZ4SafeUtils$Match;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lnet/jpountz/lz4/LZ4SafeUtils;"
+          }
+        ]
+      },
+      "net/jpountz/xxhash/StreamingXXHash32JNI$Factory.class": {
+        "ver": 51,
+        "acc": 32,
+        "nme": "net/jpountz/xxhash/StreamingXXHash32JNI$Factory",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "newStreamingHash",
+            "acc": 1,
+            "dsc": "(I)Lnet/jpountz/xxhash/StreamingXXHash32;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/jpountz/xxhash/StreamingXXHash32$Factory;"
+          }
+        ]
+      },
+      "net/jpountz/util/UnsafeUtils.class": {
+        "ver": 51,
+        "acc": 16433,
+        "nme": "net/jpountz/util/UnsafeUtils",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lnet/jpountz/util/UnsafeUtils;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lnet/jpountz/util/UnsafeUtils;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "checkRange",
+            "acc": 9,
+            "dsc": "([BI)V"
+          },
+          {
+            "nme": "checkRange",
+            "acc": 9,
+            "dsc": "([BII)V"
+          },
+          {
+            "nme": "checkLength",
+            "acc": 9,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "readByte",
+            "acc": 9,
+            "dsc": "([BI)B"
+          },
+          {
+            "nme": "writeByte",
+            "acc": 9,
+            "dsc": "([BIB)V"
+          },
+          {
+            "nme": "writeByte",
+            "acc": 9,
+            "dsc": "([BII)V"
+          },
+          {
+            "nme": "readLong",
+            "acc": 9,
+            "dsc": "([BI)J"
+          },
+          {
+            "nme": "readLongLE",
+            "acc": 9,
+            "dsc": "([BI)J"
+          },
+          {
+            "nme": "writeLong",
+            "acc": 9,
+            "dsc": "([BIJ)V"
+          },
+          {
+            "nme": "readInt",
+            "acc": 9,
+            "dsc": "([BI)I"
+          },
+          {
+            "nme": "readIntLE",
+            "acc": 9,
+            "dsc": "([BI)I"
+          },
+          {
+            "nme": "writeInt",
+            "acc": 9,
+            "dsc": "([BII)V"
+          },
+          {
+            "nme": "readShort",
+            "acc": 9,
+            "dsc": "([BI)S"
+          },
+          {
+            "nme": "readShortLE",
+            "acc": 9,
+            "dsc": "([BI)I"
+          },
+          {
+            "nme": "writeShort",
+            "acc": 9,
+            "dsc": "([BIS)V"
+          },
+          {
+            "nme": "writeShortLE",
+            "acc": 9,
+            "dsc": "([BII)V"
+          },
+          {
+            "nme": "readInt",
+            "acc": 9,
+            "dsc": "([II)I"
+          },
+          {
+            "nme": "writeInt",
+            "acc": 9,
+            "dsc": "([III)V"
+          },
+          {
+            "nme": "readShort",
+            "acc": 9,
+            "dsc": "([SI)I"
+          },
+          {
+            "nme": "writeShort",
+            "acc": 9,
+            "dsc": "([SII)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "UNSAFE",
+            "dsc": "Lsun/misc/Unsafe;"
+          },
+          {
+            "acc": 26,
+            "nme": "BYTE_ARRAY_OFFSET",
+            "dsc": "J"
+          },
+          {
+            "acc": 26,
+            "nme": "BYTE_ARRAY_SCALE",
+            "dsc": "I"
+          },
+          {
+            "acc": 26,
+            "nme": "INT_ARRAY_OFFSET",
+            "dsc": "J"
+          },
+          {
+            "acc": 26,
+            "nme": "INT_ARRAY_SCALE",
+            "dsc": "I"
+          },
+          {
+            "acc": 26,
+            "nme": "SHORT_ARRAY_OFFSET",
+            "dsc": "J"
+          },
+          {
+            "acc": 26,
+            "nme": "SHORT_ARRAY_SCALE",
+            "dsc": "I"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lnet/jpountz/util/UnsafeUtils;"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4HCJavaSafeCompressor$HashTable.class": {
+        "ver": 51,
+        "acc": 32,
+        "nme": "net/jpountz/lz4/LZ4HCJavaSafeCompressor$HashTable",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lnet/jpountz/lz4/LZ4HCJavaSafeCompressor;I)V"
+          },
+          {
+            "nme": "hashPointer",
+            "acc": 2,
+            "dsc": "([BI)I"
+          },
+          {
+            "nme": "hashPointer",
+            "acc": 2,
+            "dsc": "(Ljava/nio/ByteBuffer;I)I"
+          },
+          {
+            "nme": "hashPointer",
+            "acc": 2,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "next",
+            "acc": 2,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "addHash",
+            "acc": 2,
+            "dsc": "([BI)V"
+          },
+          {
+            "nme": "addHash",
+            "acc": 2,
+            "dsc": "(Ljava/nio/ByteBuffer;I)V"
+          },
+          {
+            "nme": "addHash",
+            "acc": 2,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "insert",
+            "acc": 0,
+            "dsc": "(I[B)V"
+          },
+          {
+            "nme": "insert",
+            "acc": 0,
+            "dsc": "(ILjava/nio/ByteBuffer;)V"
+          },
+          {
+            "nme": "insertAndFindBestMatch",
+            "acc": 0,
+            "dsc": "([BIILnet/jpountz/lz4/LZ4Utils$Match;)Z"
+          },
+          {
+            "nme": "insertAndFindWiderMatch",
+            "acc": 0,
+            "dsc": "([BIIIILnet/jpountz/lz4/LZ4Utils$Match;)Z"
+          },
+          {
+            "nme": "insertAndFindBestMatch",
+            "acc": 0,
+            "dsc": "(Ljava/nio/ByteBuffer;IILnet/jpountz/lz4/LZ4Utils$Match;)Z"
+          },
+          {
+            "nme": "insertAndFindWiderMatch",
+            "acc": 0,
+            "dsc": "(Ljava/nio/ByteBuffer;IIIILnet/jpountz/lz4/LZ4Utils$Match;)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 24,
+            "nme": "MASK",
+            "dsc": "I",
+            "val": 65535
+          },
+          {
+            "acc": 0,
+            "nme": "nextToUpdate",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "base",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "hashTable",
+            "dsc": "[I"
+          },
+          {
+            "acc": 18,
+            "nme": "chainTable",
+            "dsc": "[S"
+          },
+          {
+            "acc": 4120,
+            "nme": "$assertionsDisabled",
+            "dsc": "Z"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lnet/jpountz/lz4/LZ4HCJavaSafeCompressor;"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4HCJavaUnsafeCompressor$HashTable.class": {
+        "ver": 51,
+        "acc": 32,
+        "nme": "net/jpountz/lz4/LZ4HCJavaUnsafeCompressor$HashTable",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lnet/jpountz/lz4/LZ4HCJavaUnsafeCompressor;I)V"
+          },
+          {
+            "nme": "hashPointer",
+            "acc": 2,
+            "dsc": "([BI)I"
+          },
+          {
+            "nme": "hashPointer",
+            "acc": 2,
+            "dsc": "(Ljava/nio/ByteBuffer;I)I"
+          },
+          {
+            "nme": "hashPointer",
+            "acc": 2,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "next",
+            "acc": 2,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "addHash",
+            "acc": 2,
+            "dsc": "([BI)V"
+          },
+          {
+            "nme": "addHash",
+            "acc": 2,
+            "dsc": "(Ljava/nio/ByteBuffer;I)V"
+          },
+          {
+            "nme": "addHash",
+            "acc": 2,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "insert",
+            "acc": 0,
+            "dsc": "(I[B)V"
+          },
+          {
+            "nme": "insert",
+            "acc": 0,
+            "dsc": "(ILjava/nio/ByteBuffer;)V"
+          },
+          {
+            "nme": "insertAndFindBestMatch",
+            "acc": 0,
+            "dsc": "([BIILnet/jpountz/lz4/LZ4Utils$Match;)Z"
+          },
+          {
+            "nme": "insertAndFindWiderMatch",
+            "acc": 0,
+            "dsc": "([BIIIILnet/jpountz/lz4/LZ4Utils$Match;)Z"
+          },
+          {
+            "nme": "insertAndFindBestMatch",
+            "acc": 0,
+            "dsc": "(Ljava/nio/ByteBuffer;IILnet/jpountz/lz4/LZ4Utils$Match;)Z"
+          },
+          {
+            "nme": "insertAndFindWiderMatch",
+            "acc": 0,
+            "dsc": "(Ljava/nio/ByteBuffer;IIIILnet/jpountz/lz4/LZ4Utils$Match;)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 24,
+            "nme": "MASK",
+            "dsc": "I",
+            "val": 65535
+          },
+          {
+            "acc": 0,
+            "nme": "nextToUpdate",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "base",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "hashTable",
+            "dsc": "[I"
+          },
+          {
+            "acc": 18,
+            "nme": "chainTable",
+            "dsc": "[S"
+          },
+          {
+            "acc": 4120,
+            "nme": "$assertionsDisabled",
+            "dsc": "Z"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lnet/jpountz/lz4/LZ4HCJavaUnsafeCompressor;"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4Compressor.class": {
+        "ver": 51,
+        "acc": 1057,
+        "nme": "net/jpountz/lz4/LZ4Compressor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "maxCompressedLength",
+            "acc": 17,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "compress",
+            "acc": 1025,
+            "dsc": "([BII[BII)I"
+          },
+          {
+            "nme": "compress",
+            "acc": 1025,
+            "dsc": "(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "compress",
+            "acc": 17,
+            "dsc": "([BII[BI)I"
+          },
+          {
+            "nme": "compress",
+            "acc": 17,
+            "dsc": "([B[B)I"
+          },
+          {
+            "nme": "compress",
+            "acc": 17,
+            "dsc": "([BII)[B"
+          },
+          {
+            "nme": "compress",
+            "acc": 17,
+            "dsc": "([B)[B"
+          },
+          {
+            "nme": "compress",
+            "acc": 17,
+            "dsc": "(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": []
+      },
+      "net/jpountz/xxhash/XXHashJNI.class": {
+        "ver": 51,
+        "acc": 16432,
+        "nme": "net/jpountz/xxhash/XXHashJNI",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lnet/jpountz/xxhash/XXHashJNI;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lnet/jpountz/xxhash/XXHashJNI;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "init",
+            "acc": 266,
+            "dsc": "()V"
+          },
+          {
+            "nme": "XXH32",
+            "acc": 264,
+            "dsc": "([BIII)I"
+          },
+          {
+            "nme": "XXH32BB",
+            "acc": 264,
+            "dsc": "(Ljava/nio/ByteBuffer;III)I"
+          },
+          {
+            "nme": "XXH32_init",
+            "acc": 264,
+            "dsc": "(I)J"
+          },
+          {
+            "nme": "XXH32_update",
+            "acc": 264,
+            "dsc": "(J[BII)V"
+          },
+          {
+            "nme": "XXH32_digest",
+            "acc": 264,
+            "dsc": "(J)I"
+          },
+          {
+            "nme": "XXH32_free",
+            "acc": 264,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "XXH64",
+            "acc": 264,
+            "dsc": "([BIIJ)J"
+          },
+          {
+            "nme": "XXH64BB",
+            "acc": 264,
+            "dsc": "(Ljava/nio/ByteBuffer;IIJ)J"
+          },
+          {
+            "nme": "XXH64_init",
+            "acc": 264,
+            "dsc": "(J)J"
+          },
+          {
+            "nme": "XXH64_update",
+            "acc": 264,
+            "dsc": "(J[BII)V"
+          },
+          {
+            "nme": "XXH64_digest",
+            "acc": 264,
+            "dsc": "(J)J"
+          },
+          {
+            "nme": "XXH64_free",
+            "acc": 264,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lnet/jpountz/xxhash/XXHashJNI;"
+          }
+        ]
+      },
+      "net/jpountz/xxhash/XXHash64.class": {
+        "ver": 51,
+        "acc": 1057,
+        "nme": "net/jpountz/xxhash/XXHash64",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "hash",
+            "acc": 1025,
+            "dsc": "([BIIJ)J"
+          },
+          {
+            "nme": "hash",
+            "acc": 1025,
+            "dsc": "(Ljava/nio/ByteBuffer;IIJ)J"
+          },
+          {
+            "nme": "hash",
+            "acc": 17,
+            "dsc": "(Ljava/nio/ByteBuffer;J)J"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": []
+      },
+      "net/jpountz/lz4/LZ4SafeDecompressor.class": {
+        "ver": 51,
+        "acc": 1057,
+        "nme": "net/jpountz/lz4/LZ4SafeDecompressor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "decompress",
+            "acc": 1025,
+            "dsc": "([BII[BII)I"
+          },
+          {
+            "nme": "decompress",
+            "acc": 1025,
+            "dsc": "(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "decompress",
+            "acc": 17,
+            "dsc": "([BII[BI)I"
+          },
+          {
+            "nme": "decompress",
+            "acc": 17,
+            "dsc": "([B[B)I"
+          },
+          {
+            "nme": "decompress",
+            "acc": 17,
+            "dsc": "([BIII)[B"
+          },
+          {
+            "nme": "decompress",
+            "acc": 17,
+            "dsc": "([BI)[B"
+          },
+          {
+            "nme": "decompress",
+            "acc": 17,
+            "dsc": "(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": []
+      },
+      "net/jpountz/util/ByteBufferUtils.class": {
+        "ver": 51,
+        "acc": 16433,
+        "nme": "net/jpountz/util/ByteBufferUtils",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lnet/jpountz/util/ByteBufferUtils;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lnet/jpountz/util/ByteBufferUtils;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "checkRange",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;II)V"
+          },
+          {
+            "nme": "checkRange",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;I)V"
+          },
+          {
+            "nme": "inLittleEndianOrder",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;"
+          },
+          {
+            "nme": "inNativeByteOrder",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;"
+          },
+          {
+            "nme": "readByte",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;I)B"
+          },
+          {
+            "nme": "writeInt",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;II)V"
+          },
+          {
+            "nme": "readInt",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;I)I"
+          },
+          {
+            "nme": "readIntLE",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;I)I"
+          },
+          {
+            "nme": "writeLong",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;IJ)V"
+          },
+          {
+            "nme": "readLong",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;I)J"
+          },
+          {
+            "nme": "readLongLE",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;I)J"
+          },
+          {
+            "nme": "writeByte",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;II)V"
+          },
+          {
+            "nme": "writeShortLE",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;II)V"
+          },
+          {
+            "nme": "checkNotReadOnly",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;)V"
+          },
+          {
+            "nme": "readShortLE",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;I)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lnet/jpountz/util/ByteBufferUtils;"
+          },
+          {
+            "acc": 4120,
+            "nme": "$assertionsDisabled",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "net/jpountz/xxhash/StreamingXXHash32$Factory.class": {
+        "ver": 51,
+        "acc": 1536,
+        "nme": "net/jpountz/xxhash/StreamingXXHash32$Factory",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "newStreamingHash",
+            "acc": 1025,
+            "dsc": "(I)Lnet/jpountz/xxhash/StreamingXXHash32;"
+          }
+        ],
+        "flds": []
+      },
+      "net/jpountz/xxhash/XXHash64JavaUnsafe.class": {
+        "ver": 51,
+        "acc": 48,
+        "nme": "net/jpountz/xxhash/XXHash64JavaUnsafe",
+        "super": "net/jpountz/xxhash/XXHash64",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "hash",
+            "acc": 1,
+            "dsc": "([BIIJ)J"
+          },
+          {
+            "nme": "hash",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;IIJ)J"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/jpountz/xxhash/XXHash64;"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4ByteBufferUtils$Match.class": {
+        "ver": 51,
+        "acc": 32,
+        "nme": "net/jpountz/lz4/LZ4ByteBufferUtils$Match",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "fix",
+            "acc": 0,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "end",
+            "acc": 0,
+            "dsc": "()I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "start",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "ref",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "len",
+            "dsc": "I"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4Constants.class": {
+        "ver": 51,
+        "acc": 16432,
+        "nme": "net/jpountz/lz4/LZ4Constants",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lnet/jpountz/lz4/LZ4Constants;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lnet/jpountz/lz4/LZ4Constants;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 24,
+            "nme": "DEFAULT_COMPRESSION_LEVEL",
+            "dsc": "I",
+            "val": 9
+          },
+          {
+            "acc": 24,
+            "nme": "MAX_COMPRESSION_LEVEL",
+            "dsc": "I",
+            "val": 17
+          },
+          {
+            "acc": 24,
+            "nme": "MEMORY_USAGE",
+            "dsc": "I",
+            "val": 14
+          },
+          {
+            "acc": 24,
+            "nme": "NOT_COMPRESSIBLE_DETECTION_LEVEL",
+            "dsc": "I",
+            "val": 6
+          },
+          {
+            "acc": 24,
+            "nme": "MIN_MATCH",
+            "dsc": "I",
+            "val": 4
+          },
+          {
+            "acc": 24,
+            "nme": "HASH_LOG",
+            "dsc": "I",
+            "val": 12
+          },
+          {
+            "acc": 24,
+            "nme": "HASH_TABLE_SIZE",
+            "dsc": "I",
+            "val": 4096
+          },
+          {
+            "acc": 24,
+            "nme": "SKIP_STRENGTH",
+            "dsc": "I"
+          },
+          {
+            "acc": 24,
+            "nme": "COPY_LENGTH",
+            "dsc": "I",
+            "val": 8
+          },
+          {
+            "acc": 24,
+            "nme": "LAST_LITERALS",
+            "dsc": "I",
+            "val": 5
+          },
+          {
+            "acc": 24,
+            "nme": "MF_LIMIT",
+            "dsc": "I",
+            "val": 12
+          },
+          {
+            "acc": 24,
+            "nme": "MIN_LENGTH",
+            "dsc": "I",
+            "val": 13
+          },
+          {
+            "acc": 24,
+            "nme": "MAX_DISTANCE",
+            "dsc": "I",
+            "val": 65536
+          },
+          {
+            "acc": 24,
+            "nme": "ML_BITS",
+            "dsc": "I",
+            "val": 4
+          },
+          {
+            "acc": 24,
+            "nme": "ML_MASK",
+            "dsc": "I",
+            "val": 15
+          },
+          {
+            "acc": 24,
+            "nme": "RUN_BITS",
+            "dsc": "I",
+            "val": 4
+          },
+          {
+            "acc": 24,
+            "nme": "RUN_MASK",
+            "dsc": "I",
+            "val": 15
+          },
+          {
+            "acc": 24,
+            "nme": "LZ4_64K_LIMIT",
+            "dsc": "I",
+            "val": 65547
+          },
+          {
+            "acc": 24,
+            "nme": "HASH_LOG_64K",
+            "dsc": "I",
+            "val": 13
+          },
+          {
+            "acc": 24,
+            "nme": "HASH_TABLE_SIZE_64K",
+            "dsc": "I",
+            "val": 8192
+          },
+          {
+            "acc": 24,
+            "nme": "HASH_LOG_HC",
+            "dsc": "I",
+            "val": 15
+          },
+          {
+            "acc": 24,
+            "nme": "HASH_TABLE_SIZE_HC",
+            "dsc": "I",
+            "val": 32768
+          },
+          {
+            "acc": 24,
+            "nme": "OPTIMAL_ML",
+            "dsc": "I",
+            "val": 18
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lnet/jpountz/lz4/LZ4Constants;"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4Utils$Match.class": {
+        "ver": 51,
+        "acc": 32,
+        "nme": "net/jpountz/lz4/LZ4Utils$Match",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "fix",
+            "acc": 0,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "end",
+            "acc": 0,
+            "dsc": "()I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "start",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "ref",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "len",
+            "dsc": "I"
+          }
+        ]
+      },
+      "net/jpountz/xxhash/StreamingXXHash32JNI.class": {
+        "ver": 51,
+        "acc": 48,
+        "nme": "net/jpountz/xxhash/StreamingXXHash32JNI",
+        "super": "net/jpountz/xxhash/StreamingXXHash32",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "checkState",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "reset",
+            "acc": 33,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getValue",
+            "acc": 33,
+            "dsc": "()I"
+          },
+          {
+            "nme": "update",
+            "acc": 33,
+            "dsc": "([BII)V"
+          },
+          {
+            "nme": "close",
+            "acc": 33,
+            "dsc": "()V"
+          },
+          {
+            "nme": "finalize",
+            "acc": 36,
+            "dsc": "()V",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "state",
+            "dsc": "J"
+          }
+        ]
+      },
+      "net/jpountz/util/SafeUtils.class": {
+        "ver": 51,
+        "acc": 16433,
+        "nme": "net/jpountz/util/SafeUtils",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lnet/jpountz/util/SafeUtils;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lnet/jpountz/util/SafeUtils;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "checkRange",
+            "acc": 9,
+            "dsc": "([BI)V"
+          },
+          {
+            "nme": "checkRange",
+            "acc": 9,
+            "dsc": "([BII)V"
+          },
+          {
+            "nme": "checkLength",
+            "acc": 9,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "readByte",
+            "acc": 9,
+            "dsc": "([BI)B"
+          },
+          {
+            "nme": "readIntBE",
+            "acc": 9,
+            "dsc": "([BI)I"
+          },
+          {
+            "nme": "readIntLE",
+            "acc": 9,
+            "dsc": "([BI)I"
+          },
+          {
+            "nme": "readInt",
+            "acc": 9,
+            "dsc": "([BI)I"
+          },
+          {
+            "nme": "readLongLE",
+            "acc": 9,
+            "dsc": "([BI)J"
+          },
+          {
+            "nme": "writeShortLE",
+            "acc": 9,
+            "dsc": "([BII)V"
+          },
+          {
+            "nme": "writeInt",
+            "acc": 9,
+            "dsc": "([III)V"
+          },
+          {
+            "nme": "readInt",
+            "acc": 9,
+            "dsc": "([II)I"
+          },
+          {
+            "nme": "writeByte",
+            "acc": 9,
+            "dsc": "([BII)V"
+          },
+          {
+            "nme": "writeShort",
+            "acc": 9,
+            "dsc": "([SII)V"
+          },
+          {
+            "nme": "readShortLE",
+            "acc": 9,
+            "dsc": "([BI)I"
+          },
+          {
+            "nme": "readShort",
+            "acc": 9,
+            "dsc": "([SI)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lnet/jpountz/util/SafeUtils;"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4UnsafeUtils.class": {
+        "ver": 51,
+        "acc": 16432,
+        "nme": "net/jpountz/lz4/LZ4UnsafeUtils",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lnet/jpountz/lz4/LZ4UnsafeUtils;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lnet/jpountz/lz4/LZ4UnsafeUtils;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "safeArraycopy",
+            "acc": 8,
+            "dsc": "([BI[BII)V"
+          },
+          {
+            "nme": "wildArraycopy",
+            "acc": 8,
+            "dsc": "([BI[BII)V"
+          },
+          {
+            "nme": "wildIncrementalCopy",
+            "acc": 8,
+            "dsc": "([BIII)V"
+          },
+          {
+            "nme": "safeIncrementalCopy",
+            "acc": 8,
+            "dsc": "([BIII)V"
+          },
+          {
+            "nme": "readShortLittleEndian",
+            "acc": 8,
+            "dsc": "([BI)I"
+          },
+          {
+            "nme": "writeShortLittleEndian",
+            "acc": 8,
+            "dsc": "([BII)V"
+          },
+          {
+            "nme": "readIntEquals",
+            "acc": 8,
+            "dsc": "([BII)Z"
+          },
+          {
+            "nme": "commonBytes",
+            "acc": 8,
+            "dsc": "([BIII)I"
+          },
+          {
+            "nme": "writeLen",
+            "acc": 8,
+            "dsc": "(I[BI)I"
+          },
+          {
+            "nme": "encodeSequence",
+            "acc": 8,
+            "dsc": "([BIIII[BII)I"
+          },
+          {
+            "nme": "commonBytesBackward",
+            "acc": 8,
+            "dsc": "([BIIII)I"
+          },
+          {
+            "nme": "lastLiterals",
+            "acc": 8,
+            "dsc": "([BII[BII)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lnet/jpountz/lz4/LZ4UnsafeUtils;"
+          },
+          {
+            "acc": 4120,
+            "nme": "$assertionsDisabled",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4CompressorWithLength.class": {
+        "ver": 51,
+        "acc": 33,
+        "nme": "net/jpountz/lz4/LZ4CompressorWithLength",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/jpountz/lz4/LZ4Compressor;)V"
+          },
+          {
+            "nme": "putOriginalLength",
+            "acc": 2,
+            "dsc": "([BII)V"
+          },
+          {
+            "nme": "putOriginalLength",
+            "acc": 2,
+            "dsc": "(Ljava/nio/ByteBuffer;II)V"
+          },
+          {
+            "nme": "maxCompressedLength",
+            "acc": 1,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "compress",
+            "acc": 1,
+            "dsc": "([B)[B"
+          },
+          {
+            "nme": "compress",
+            "acc": 1,
+            "dsc": "([BII)[B"
+          },
+          {
+            "nme": "compress",
+            "acc": 1,
+            "dsc": "([B[B)I"
+          },
+          {
+            "nme": "compress",
+            "acc": 1,
+            "dsc": "([BII[BI)I"
+          },
+          {
+            "nme": "compress",
+            "acc": 1,
+            "dsc": "([BII[BII)I"
+          },
+          {
+            "nme": "compress",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)V"
+          },
+          {
+            "nme": "compress",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "compressor",
+            "dsc": "Lnet/jpountz/lz4/LZ4Compressor;"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4Factory.class": {
+        "ver": 51,
+        "acc": 49,
+        "nme": "net/jpountz/lz4/LZ4Factory",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "instance",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Lnet/jpountz/lz4/LZ4Factory;"
+          },
+          {
+            "nme": "nativeInstance",
+            "acc": 41,
+            "dsc": "()Lnet/jpountz/lz4/LZ4Factory;"
+          },
+          {
+            "nme": "safeInstance",
+            "acc": 41,
+            "dsc": "()Lnet/jpountz/lz4/LZ4Factory;"
+          },
+          {
+            "nme": "unsafeInstance",
+            "acc": 41,
+            "dsc": "()Lnet/jpountz/lz4/LZ4Factory;"
+          },
+          {
+            "nme": "fastestJavaInstance",
+            "acc": 9,
+            "dsc": "()Lnet/jpountz/lz4/LZ4Factory;"
+          },
+          {
+            "nme": "fastestInstance",
+            "acc": 9,
+            "dsc": "()Lnet/jpountz/lz4/LZ4Factory;"
+          },
+          {
+            "nme": "classInstance",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/Object;",
+            "sig": "<T:Ljava/lang/Object;>(Ljava/lang/String;)TT;",
+            "exs": [
+              "java/lang/NoSuchFieldException",
+              "java/lang/SecurityException",
+              "java/lang/ClassNotFoundException",
+              "java/lang/IllegalArgumentException",
+              "java/lang/IllegalAccessException"
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;)V",
+            "exs": [
+              "java/lang/ClassNotFoundException",
+              "java/lang/NoSuchFieldException",
+              "java/lang/SecurityException",
+              "java/lang/IllegalArgumentException",
+              "java/lang/IllegalAccessException",
+              "java/lang/NoSuchMethodException",
+              "java/lang/InstantiationException",
+              "java/lang/reflect/InvocationTargetException"
+            ]
+          },
+          {
+            "nme": "fastCompressor",
+            "acc": 1,
+            "dsc": "()Lnet/jpountz/lz4/LZ4Compressor;"
+          },
+          {
+            "nme": "highCompressor",
+            "acc": 1,
+            "dsc": "()Lnet/jpountz/lz4/LZ4Compressor;"
+          },
+          {
+            "nme": "highCompressor",
+            "acc": 1,
+            "dsc": "(I)Lnet/jpountz/lz4/LZ4Compressor;"
+          },
+          {
+            "nme": "fastDecompressor",
+            "acc": 1,
+            "dsc": "()Lnet/jpountz/lz4/LZ4FastDecompressor;"
+          },
+          {
+            "nme": "safeDecompressor",
+            "acc": 1,
+            "dsc": "()Lnet/jpountz/lz4/LZ4SafeDecompressor;"
+          },
+          {
+            "nme": "unknownSizeDecompressor",
+            "acc": 131073,
+            "dsc": "()Lnet/jpountz/lz4/LZ4UnknownSizeDecompressor;"
+          },
+          {
+            "nme": "decompressor",
+            "acc": 131073,
+            "dsc": "()Lnet/jpountz/lz4/LZ4Decompressor;"
+          },
+          {
+            "nme": "main",
+            "acc": 9,
+            "dsc": "([Ljava/lang/String;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 10,
+            "nme": "NATIVE_INSTANCE",
+            "dsc": "Lnet/jpountz/lz4/LZ4Factory;"
+          },
+          {
+            "acc": 10,
+            "nme": "JAVA_UNSAFE_INSTANCE",
+            "dsc": "Lnet/jpountz/lz4/LZ4Factory;"
+          },
+          {
+            "acc": 10,
+            "nme": "JAVA_SAFE_INSTANCE",
+            "dsc": "Lnet/jpountz/lz4/LZ4Factory;"
+          },
+          {
+            "acc": 18,
+            "nme": "impl",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "fastCompressor",
+            "dsc": "Lnet/jpountz/lz4/LZ4Compressor;"
+          },
+          {
+            "acc": 18,
+            "nme": "highCompressor",
+            "dsc": "Lnet/jpountz/lz4/LZ4Compressor;"
+          },
+          {
+            "acc": 18,
+            "nme": "fastDecompressor",
+            "dsc": "Lnet/jpountz/lz4/LZ4FastDecompressor;"
+          },
+          {
+            "acc": 18,
+            "nme": "safeDecompressor",
+            "dsc": "Lnet/jpountz/lz4/LZ4SafeDecompressor;"
+          },
+          {
+            "acc": 18,
+            "nme": "highCompressors",
+            "dsc": "[Lnet/jpountz/lz4/LZ4Compressor;"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4FrameOutputStream$FrameInfo.class": {
+        "ver": 51,
+        "acc": 32,
+        "nme": "net/jpountz/lz4/LZ4FrameOutputStream$FrameInfo",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;Lnet/jpountz/lz4/LZ4FrameOutputStream$BD;)V"
+          },
+          {
+            "nme": "isEnabled",
+            "acc": 1,
+            "dsc": "(Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;)Z"
+          },
+          {
+            "nme": "getFLG",
+            "acc": 1,
+            "dsc": "()Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;"
+          },
+          {
+            "nme": "getBD",
+            "acc": 1,
+            "dsc": "()Lnet/jpountz/lz4/LZ4FrameOutputStream$BD;"
+          },
+          {
+            "nme": "updateStreamHash",
+            "acc": 1,
+            "dsc": "([BII)V"
+          },
+          {
+            "nme": "currentStreamHash",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "finish",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "isFinished",
+            "acc": 1,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "flg",
+            "dsc": "Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;"
+          },
+          {
+            "acc": 18,
+            "nme": "bd",
+            "dsc": "Lnet/jpountz/lz4/LZ4FrameOutputStream$BD;"
+          },
+          {
+            "acc": 18,
+            "nme": "streamHash",
+            "dsc": "Lnet/jpountz/xxhash/StreamingXXHash32;"
+          },
+          {
+            "acc": 2,
+            "nme": "finished",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "net/jpountz/xxhash/StreamingXXHash32.class": {
+        "ver": 51,
+        "acc": 1057,
+        "nme": "net/jpountz/xxhash/StreamingXXHash32",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "getValue",
+            "acc": 1025,
+            "dsc": "()I"
+          },
+          {
+            "nme": "update",
+            "acc": 1025,
+            "dsc": "([BII)V"
+          },
+          {
+            "nme": "reset",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "close",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "asChecksum",
+            "acc": 17,
+            "dsc": "()Ljava/util/zip/Checksum;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16,
+            "nme": "seed",
+            "dsc": "I"
+          }
+        ]
+      },
+      "net/jpountz/xxhash/StreamingXXHash64JNI$Factory.class": {
+        "ver": 51,
+        "acc": 32,
+        "nme": "net/jpountz/xxhash/StreamingXXHash64JNI$Factory",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "newStreamingHash",
+            "acc": 1,
+            "dsc": "(J)Lnet/jpountz/xxhash/StreamingXXHash64;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/jpountz/xxhash/StreamingXXHash64$Factory;"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4Decompressor.class": {
+        "ver": 51,
+        "acc": 132609,
+        "nme": "net/jpountz/lz4/LZ4Decompressor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "decompress",
+            "acc": 1025,
+            "dsc": "([BI[BII)I"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/Deprecated;"
+          }
+        ]
+      },
+      "net/jpountz/xxhash/XXHash32JavaSafe.class": {
+        "ver": 51,
+        "acc": 48,
+        "nme": "net/jpountz/xxhash/XXHash32JavaSafe",
+        "super": "net/jpountz/xxhash/XXHash32",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "hash",
+            "acc": 1,
+            "dsc": "([BIII)I"
+          },
+          {
+            "nme": "hash",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;III)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/jpountz/xxhash/XXHash32;"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4FastDecompressor.class": {
+        "ver": 51,
+        "acc": 1057,
+        "nme": "net/jpountz/lz4/LZ4FastDecompressor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "decompress",
+            "acc": 1025,
+            "dsc": "([BI[BII)I"
+          },
+          {
+            "nme": "decompress",
+            "acc": 1025,
+            "dsc": "(Ljava/nio/ByteBuffer;ILjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "decompress",
+            "acc": 17,
+            "dsc": "([B[BI)I"
+          },
+          {
+            "nme": "decompress",
+            "acc": 17,
+            "dsc": "([B[B)I"
+          },
+          {
+            "nme": "decompress",
+            "acc": 17,
+            "dsc": "([BII)[B"
+          },
+          {
+            "nme": "decompress",
+            "acc": 17,
+            "dsc": "([BI)[B"
+          },
+          {
+            "nme": "decompress",
+            "acc": 17,
+            "dsc": "(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": []
+      },
+      "net/jpountz/xxhash/XXHashFactory.class": {
+        "ver": 51,
+        "acc": 49,
+        "nme": "net/jpountz/xxhash/XXHashFactory",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "instance",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Lnet/jpountz/xxhash/XXHashFactory;"
+          },
+          {
+            "nme": "nativeInstance",
+            "acc": 41,
+            "dsc": "()Lnet/jpountz/xxhash/XXHashFactory;"
+          },
+          {
+            "nme": "safeInstance",
+            "acc": 41,
+            "dsc": "()Lnet/jpountz/xxhash/XXHashFactory;"
+          },
+          {
+            "nme": "unsafeInstance",
+            "acc": 41,
+            "dsc": "()Lnet/jpountz/xxhash/XXHashFactory;"
+          },
+          {
+            "nme": "fastestJavaInstance",
+            "acc": 9,
+            "dsc": "()Lnet/jpountz/xxhash/XXHashFactory;"
+          },
+          {
+            "nme": "fastestInstance",
+            "acc": 9,
+            "dsc": "()Lnet/jpountz/xxhash/XXHashFactory;"
+          },
+          {
+            "nme": "classInstance",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/Object;",
+            "sig": "<T:Ljava/lang/Object;>(Ljava/lang/String;)TT;",
+            "exs": [
+              "java/lang/NoSuchFieldException",
+              "java/lang/SecurityException",
+              "java/lang/ClassNotFoundException",
+              "java/lang/IllegalArgumentException",
+              "java/lang/IllegalAccessException"
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;)V",
+            "exs": [
+              "java/lang/ClassNotFoundException",
+              "java/lang/NoSuchFieldException",
+              "java/lang/SecurityException",
+              "java/lang/IllegalArgumentException",
+              "java/lang/IllegalAccessException"
+            ]
+          },
+          {
+            "nme": "hash32",
+            "acc": 1,
+            "dsc": "()Lnet/jpountz/xxhash/XXHash32;"
+          },
+          {
+            "nme": "hash64",
+            "acc": 1,
+            "dsc": "()Lnet/jpountz/xxhash/XXHash64;"
+          },
+          {
+            "nme": "newStreamingHash32",
+            "acc": 1,
+            "dsc": "(I)Lnet/jpountz/xxhash/StreamingXXHash32;"
+          },
+          {
+            "nme": "newStreamingHash64",
+            "acc": 1,
+            "dsc": "(J)Lnet/jpountz/xxhash/StreamingXXHash64;"
+          },
+          {
+            "nme": "main",
+            "acc": 9,
+            "dsc": "([Ljava/lang/String;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 10,
+            "nme": "NATIVE_INSTANCE",
+            "dsc": "Lnet/jpountz/xxhash/XXHashFactory;"
+          },
+          {
+            "acc": 10,
+            "nme": "JAVA_UNSAFE_INSTANCE",
+            "dsc": "Lnet/jpountz/xxhash/XXHashFactory;"
+          },
+          {
+            "acc": 10,
+            "nme": "JAVA_SAFE_INSTANCE",
+            "dsc": "Lnet/jpountz/xxhash/XXHashFactory;"
+          },
+          {
+            "acc": 18,
+            "nme": "impl",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "hash32",
+            "dsc": "Lnet/jpountz/xxhash/XXHash32;"
+          },
+          {
+            "acc": 18,
+            "nme": "hash64",
+            "dsc": "Lnet/jpountz/xxhash/XXHash64;"
+          },
+          {
+            "acc": 18,
+            "nme": "streamingHash32Factory",
+            "dsc": "Lnet/jpountz/xxhash/StreamingXXHash32$Factory;"
+          },
+          {
+            "acc": 18,
+            "nme": "streamingHash64Factory",
+            "dsc": "Lnet/jpountz/xxhash/StreamingXXHash64$Factory;"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4FrameInputStream.class": {
+        "ver": 51,
+        "acc": 33,
+        "nme": "net/jpountz/lz4/LZ4FrameInputStream",
+        "super": "java/io/FilterInputStream",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/io/InputStream;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/io/InputStream;Z)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/io/InputStream;Lnet/jpountz/lz4/LZ4SafeDecompressor;Lnet/jpountz/xxhash/XXHash32;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/io/InputStream;Lnet/jpountz/lz4/LZ4SafeDecompressor;Lnet/jpountz/xxhash/XXHash32;Z)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "nextFrameInfo",
+            "acc": 2,
+            "dsc": "()Z",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "skippableFrame",
+            "acc": 2,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "readHeader",
+            "acc": 2,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "readLong",
+            "acc": 2,
+            "dsc": "(Ljava/io/InputStream;)J",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "readInt",
+            "acc": 2,
+            "dsc": "(Ljava/io/InputStream;)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "readBlock",
+            "acc": 2,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "read",
+            "acc": 1,
+            "dsc": "()I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "read",
+            "acc": 1,
+            "dsc": "([BII)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "skip",
+            "acc": 1,
+            "dsc": "(J)J",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "available",
+            "acc": 1,
+            "dsc": "()I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "close",
+            "acc": 1,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "mark",
+            "acc": 33,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "reset",
+            "acc": 33,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "markSupported",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getExpectedContentSize",
+            "acc": 1,
+            "dsc": "()J",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "isExpectedContentSizeDefined",
+            "acc": 1,
+            "dsc": "()Z",
+            "exs": [
+              "java/io/IOException"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 24,
+            "nme": "PREMATURE_EOS",
+            "dsc": "Ljava/lang/String;",
+            "val": "Stream ended prematurely"
+          },
+          {
+            "acc": 24,
+            "nme": "NOT_SUPPORTED",
+            "dsc": "Ljava/lang/String;",
+            "val": "Stream unsupported"
+          },
+          {
+            "acc": 24,
+            "nme": "BLOCK_HASH_MISMATCH",
+            "dsc": "Ljava/lang/String;",
+            "val": "Block checksum mismatch"
+          },
+          {
+            "acc": 24,
+            "nme": "DESCRIPTOR_HASH_MISMATCH",
+            "dsc": "Ljava/lang/String;",
+            "val": "Stream frame descriptor corrupted"
+          },
+          {
+            "acc": 24,
+            "nme": "MAGIC_SKIPPABLE_BASE",
+            "dsc": "I",
+            "val": 407710288
+          },
+          {
+            "acc": 18,
+            "nme": "decompressor",
+            "dsc": "Lnet/jpountz/lz4/LZ4SafeDecompressor;"
+          },
+          {
+            "acc": 18,
+            "nme": "checksum",
+            "dsc": "Lnet/jpountz/xxhash/XXHash32;"
+          },
+          {
+            "acc": 18,
+            "nme": "headerArray",
+            "dsc": "[B"
+          },
+          {
+            "acc": 18,
+            "nme": "headerBuffer",
+            "dsc": "Ljava/nio/ByteBuffer;"
+          },
+          {
+            "acc": 18,
+            "nme": "readSingleFrame",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "compressedBuffer",
+            "dsc": "[B"
+          },
+          {
+            "acc": 2,
+            "nme": "buffer",
+            "dsc": "Ljava/nio/ByteBuffer;"
+          },
+          {
+            "acc": 2,
+            "nme": "rawBuffer",
+            "dsc": "[B"
+          },
+          {
+            "acc": 2,
+            "nme": "maxBlockSize",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "expectedContentSize",
+            "dsc": "J"
+          },
+          {
+            "acc": 2,
+            "nme": "totalContentSize",
+            "dsc": "J"
+          },
+          {
+            "acc": 2,
+            "nme": "firstFrameHeaderRead",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "frameInfo",
+            "dsc": "Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;"
+          },
+          {
+            "acc": 18,
+            "nme": "readNumberBuff",
+            "dsc": "Ljava/nio/ByteBuffer;"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4DecompressorWithLength.class": {
+        "ver": 51,
+        "acc": 33,
+        "nme": "net/jpountz/lz4/LZ4DecompressorWithLength",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getDecompressedLength",
+            "acc": 9,
+            "dsc": "([B)I"
+          },
+          {
+            "nme": "getDecompressedLength",
+            "acc": 9,
+            "dsc": "([BI)I"
+          },
+          {
+            "nme": "getDecompressedLength",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;)I"
+          },
+          {
+            "nme": "getDecompressedLength",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;I)I"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/jpountz/lz4/LZ4FastDecompressor;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/jpountz/lz4/LZ4SafeDecompressor;)V"
+          },
+          {
+            "nme": "decompress",
+            "acc": 1,
+            "dsc": "([B[B)I"
+          },
+          {
+            "nme": "decompress",
+            "acc": 1,
+            "dsc": "([BI[BI)I"
+          },
+          {
+            "nme": "decompress",
+            "acc": 1,
+            "dsc": "([BII[BI)I"
+          },
+          {
+            "nme": "decompress",
+            "acc": 1,
+            "dsc": "([B)[B"
+          },
+          {
+            "nme": "decompress",
+            "acc": 1,
+            "dsc": "([BI)[B"
+          },
+          {
+            "nme": "decompress",
+            "acc": 1,
+            "dsc": "([BII)[B"
+          },
+          {
+            "nme": "decompress",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)V"
+          },
+          {
+            "nme": "decompress",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;ILjava/nio/ByteBuffer;I)I"
+          },
+          {
+            "nme": "decompress",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;I)I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "fastDecompressor",
+            "dsc": "Lnet/jpountz/lz4/LZ4FastDecompressor;"
+          },
+          {
+            "acc": 18,
+            "nme": "safeDecompressor",
+            "dsc": "Lnet/jpountz/lz4/LZ4SafeDecompressor;"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4HCJNICompressor.class": {
+        "ver": 51,
+        "acc": 48,
+        "nme": "net/jpountz/lz4/LZ4HCJNICompressor",
+        "super": "net/jpountz/lz4/LZ4Compressor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "compress",
+            "acc": 1,
+            "dsc": "([BII[BII)I"
+          },
+          {
+            "nme": "compress",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/jpountz/lz4/LZ4HCJNICompressor;"
+          },
+          {
+            "acc": 10,
+            "nme": "SAFE_INSTANCE",
+            "dsc": "Lnet/jpountz/lz4/LZ4Compressor;"
+          },
+          {
+            "acc": 18,
+            "nme": "compressionLevel",
+            "dsc": "I"
+          },
+          {
+            "acc": 4120,
+            "nme": "$assertionsDisabled",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4JNISafeDecompressor.class": {
+        "ver": 51,
+        "acc": 48,
+        "nme": "net/jpountz/lz4/LZ4JNISafeDecompressor",
+        "super": "net/jpountz/lz4/LZ4SafeDecompressor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "decompress",
+            "acc": 17,
+            "dsc": "([BII[BII)I"
+          },
+          {
+            "nme": "decompress",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/jpountz/lz4/LZ4JNISafeDecompressor;"
+          },
+          {
+            "acc": 10,
+            "nme": "SAFE_INSTANCE",
+            "dsc": "Lnet/jpountz/lz4/LZ4SafeDecompressor;"
+          },
+          {
+            "acc": 4120,
+            "nme": "$assertionsDisabled",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "net/jpountz/xxhash/XXHash64JavaSafe.class": {
+        "ver": 51,
+        "acc": 48,
+        "nme": "net/jpountz/xxhash/XXHash64JavaSafe",
+        "super": "net/jpountz/xxhash/XXHash64",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "hash",
+            "acc": 1,
+            "dsc": "([BIIJ)J"
+          },
+          {
+            "nme": "hash",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;IIJ)J"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/jpountz/xxhash/XXHash64;"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4JNIFastDecompressor.class": {
+        "ver": 51,
+        "acc": 48,
+        "nme": "net/jpountz/lz4/LZ4JNIFastDecompressor",
+        "super": "net/jpountz/lz4/LZ4FastDecompressor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "decompress",
+            "acc": 17,
+            "dsc": "([BI[BII)I"
+          },
+          {
+            "nme": "decompress",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;ILjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/jpountz/lz4/LZ4JNIFastDecompressor;"
+          },
+          {
+            "acc": 10,
+            "nme": "SAFE_INSTANCE",
+            "dsc": "Lnet/jpountz/lz4/LZ4FastDecompressor;"
+          },
+          {
+            "acc": 4120,
+            "nme": "$assertionsDisabled",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits.class": {
+        "ver": 51,
+        "acc": 16433,
+        "nme": "net/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;II)V",
+            "sig": "(I)V"
+          },
+          {
+            "nme": "access$100",
+            "acc": 4104,
+            "dsc": "(Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "RESERVED_0",
+            "dsc": "Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;"
+          },
+          {
+            "acc": 16409,
+            "nme": "RESERVED_1",
+            "dsc": "Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;"
+          },
+          {
+            "acc": 16409,
+            "nme": "CONTENT_CHECKSUM",
+            "dsc": "Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;"
+          },
+          {
+            "acc": 16409,
+            "nme": "CONTENT_SIZE",
+            "dsc": "Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;"
+          },
+          {
+            "acc": 16409,
+            "nme": "BLOCK_CHECKSUM",
+            "dsc": "Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;"
+          },
+          {
+            "acc": 16409,
+            "nme": "BLOCK_INDEPENDENCE",
+            "dsc": "Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;"
+          },
+          {
+            "acc": 18,
+            "nme": "position",
+            "dsc": "I"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4FrameOutputStream$1.class": {
+        "ver": 51,
+        "acc": 4128,
+        "nme": "net/jpountz/lz4/LZ4FrameOutputStream$1",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "net/jpountz/lz4/LZ4JNICompressor.class": {
+        "ver": 51,
+        "acc": 48,
+        "nme": "net/jpountz/lz4/LZ4JNICompressor",
+        "super": "net/jpountz/lz4/LZ4Compressor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "compress",
+            "acc": 1,
+            "dsc": "([BII[BII)I"
+          },
+          {
+            "nme": "compress",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/jpountz/lz4/LZ4Compressor;"
+          },
+          {
+            "acc": 10,
+            "nme": "SAFE_INSTANCE",
+            "dsc": "Lnet/jpountz/lz4/LZ4Compressor;"
+          },
+          {
+            "acc": 4120,
+            "nme": "$assertionsDisabled",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "net/jpountz/xxhash/XXHashConstants.class": {
+        "ver": 51,
+        "acc": 16432,
+        "nme": "net/jpountz/xxhash/XXHashConstants",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lnet/jpountz/xxhash/XXHashConstants;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lnet/jpountz/xxhash/XXHashConstants;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 24,
+            "nme": "PRIME1",
+            "dsc": "I",
+            "val": -1640531535
+          },
+          {
+            "acc": 24,
+            "nme": "PRIME2",
+            "dsc": "I",
+            "val": -2048144777
+          },
+          {
+            "acc": 24,
+            "nme": "PRIME3",
+            "dsc": "I",
+            "val": -1028477379
+          },
+          {
+            "acc": 24,
+            "nme": "PRIME4",
+            "dsc": "I",
+            "val": 668265263
+          },
+          {
+            "acc": 24,
+            "nme": "PRIME5",
+            "dsc": "I",
+            "val": 374761393
+          },
+          {
+            "acc": 24,
+            "nme": "PRIME64_1",
+            "dsc": "J",
+            "val": -7046029288634856825
+          },
+          {
+            "acc": 24,
+            "nme": "PRIME64_2",
+            "dsc": "J",
+            "val": -4417276706812531889
+          },
+          {
+            "acc": 24,
+            "nme": "PRIME64_3",
+            "dsc": "J",
+            "val": 1609587929392839161
+          },
+          {
+            "acc": 24,
+            "nme": "PRIME64_4",
+            "dsc": "J",
+            "val": -8796714831421723037
+          },
+          {
+            "acc": 24,
+            "nme": "PRIME64_5",
+            "dsc": "J",
+            "val": 2870177450012600261
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lnet/jpountz/xxhash/XXHashConstants;"
+          }
+        ]
+      },
+      "net/jpountz/util/Native$1.class": {
+        "ver": 51,
+        "acc": 48,
+        "nme": "net/jpountz/util/Native$1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Ljava/io/File;Ljava/lang/String;)Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "searchPattern",
+            "dsc": "Ljava/lang/String;",
+            "val": "liblz4-java-"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4SafeUtils$Match.class": {
+        "ver": 51,
+        "acc": 32,
+        "nme": "net/jpountz/lz4/LZ4SafeUtils$Match",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "fix",
+            "acc": 0,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "end",
+            "acc": 0,
+            "dsc": "()I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "start",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "ref",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "len",
+            "dsc": "I"
+          }
+        ]
+      },
+      "net/jpountz/xxhash/StreamingXXHash64JavaUnsafe.class": {
+        "ver": 51,
+        "acc": 48,
+        "nme": "net/jpountz/xxhash/StreamingXXHash64JavaUnsafe",
+        "super": "net/jpountz/xxhash/AbstractStreamingXXHash64Java",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "getValue",
+            "acc": 1,
+            "dsc": "()J"
+          },
+          {
+            "nme": "update",
+            "acc": 1,
+            "dsc": "([BII)V"
+          }
+        ],
+        "flds": []
+      },
+      "net/jpountz/lz4/LZ4Exception.class": {
+        "ver": 51,
+        "acc": 33,
+        "nme": "net/jpountz/lz4/LZ4Exception",
+        "super": "java/lang/RuntimeException",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": 1
+          }
+        ]
+      },
+      "net/jpountz/xxhash/StreamingXXHash64$Factory.class": {
+        "ver": 51,
+        "acc": 1536,
+        "nme": "net/jpountz/xxhash/StreamingXXHash64$Factory",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "newStreamingHash",
+            "acc": 1025,
+            "dsc": "(J)Lnet/jpountz/xxhash/StreamingXXHash64;"
+          }
+        ],
+        "flds": []
+      },
+      "net/jpountz/xxhash/XXHash64JNI.class": {
+        "ver": 51,
+        "acc": 48,
+        "nme": "net/jpountz/xxhash/XXHash64JNI",
+        "super": "net/jpountz/xxhash/XXHash64",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "hash",
+            "acc": 1,
+            "dsc": "([BIIJ)J"
+          },
+          {
+            "nme": "hash",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;IIJ)J"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/jpountz/xxhash/XXHash64;"
+          },
+          {
+            "acc": 10,
+            "nme": "SAFE_INSTANCE",
+            "dsc": "Lnet/jpountz/xxhash/XXHash64;"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4HCJavaUnsafeCompressor.class": {
+        "ver": 51,
+        "acc": 48,
+        "nme": "net/jpountz/lz4/LZ4HCJavaUnsafeCompressor",
+        "super": "net/jpountz/lz4/LZ4Compressor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "compress",
+            "acc": 1,
+            "dsc": "([BII[BII)I"
+          },
+          {
+            "nme": "compress",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "access$000",
+            "acc": 4104,
+            "dsc": "(Lnet/jpountz/lz4/LZ4HCJavaUnsafeCompressor;)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/jpountz/lz4/LZ4Compressor;"
+          },
+          {
+            "acc": 18,
+            "nme": "maxAttempts",
+            "dsc": "I"
+          },
+          {
+            "acc": 16,
+            "nme": "compressionLevel",
+            "dsc": "I"
+          },
+          {
+            "acc": 4120,
+            "nme": "$assertionsDisabled",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "net/jpountz/xxhash/StreamingXXHash32JavaSafe.class": {
+        "ver": 51,
+        "acc": 48,
+        "nme": "net/jpountz/xxhash/StreamingXXHash32JavaSafe",
+        "super": "net/jpountz/xxhash/AbstractStreamingXXHash32Java",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "getValue",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "update",
+            "acc": 1,
+            "dsc": "([BII)V"
+          }
+        ],
+        "flds": []
+      },
+      "net/jpountz/lz4/LZ4ByteBufferUtils.class": {
+        "ver": 51,
+        "acc": 16432,
+        "nme": "net/jpountz/lz4/LZ4ByteBufferUtils",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lnet/jpountz/lz4/LZ4ByteBufferUtils;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lnet/jpountz/lz4/LZ4ByteBufferUtils;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "hash",
+            "acc": 8,
+            "dsc": "(Ljava/nio/ByteBuffer;I)I"
+          },
+          {
+            "nme": "hash64k",
+            "acc": 8,
+            "dsc": "(Ljava/nio/ByteBuffer;I)I"
+          },
+          {
+            "nme": "readIntEquals",
+            "acc": 8,
+            "dsc": "(Ljava/nio/ByteBuffer;II)Z"
+          },
+          {
+            "nme": "safeIncrementalCopy",
+            "acc": 8,
+            "dsc": "(Ljava/nio/ByteBuffer;III)V"
+          },
+          {
+            "nme": "wildIncrementalCopy",
+            "acc": 8,
+            "dsc": "(Ljava/nio/ByteBuffer;III)V"
+          },
+          {
+            "nme": "commonBytes",
+            "acc": 8,
+            "dsc": "(Ljava/nio/ByteBuffer;III)I"
+          },
+          {
+            "nme": "commonBytesBackward",
+            "acc": 8,
+            "dsc": "(Ljava/nio/ByteBuffer;IIII)I"
+          },
+          {
+            "nme": "safeArraycopy",
+            "acc": 8,
+            "dsc": "(Ljava/nio/ByteBuffer;ILjava/nio/ByteBuffer;II)V"
+          },
+          {
+            "nme": "wildArraycopy",
+            "acc": 8,
+            "dsc": "(Ljava/nio/ByteBuffer;ILjava/nio/ByteBuffer;II)V"
+          },
+          {
+            "nme": "encodeSequence",
+            "acc": 8,
+            "dsc": "(Ljava/nio/ByteBuffer;IIIILjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "lastLiterals",
+            "acc": 8,
+            "dsc": "(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "writeLen",
+            "acc": 8,
+            "dsc": "(ILjava/nio/ByteBuffer;I)I"
+          },
+          {
+            "nme": "copyTo",
+            "acc": 8,
+            "dsc": "(Lnet/jpountz/lz4/LZ4ByteBufferUtils$Match;Lnet/jpountz/lz4/LZ4ByteBufferUtils$Match;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lnet/jpountz/lz4/LZ4ByteBufferUtils;"
+          },
+          {
+            "acc": 4120,
+            "nme": "$assertionsDisabled",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "net/jpountz/xxhash/StreamingXXHash64$1.class": {
+        "ver": 51,
+        "acc": 32,
+        "nme": "net/jpountz/xxhash/StreamingXXHash64$1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lnet/jpountz/xxhash/StreamingXXHash64;)V"
+          },
+          {
+            "nme": "getValue",
+            "acc": 1,
+            "dsc": "()J"
+          },
+          {
+            "nme": "reset",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "update",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "update",
+            "acc": 1,
+            "dsc": "([BII)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lnet/jpountz/xxhash/StreamingXXHash64;"
+          }
+        ]
+      },
+      "net/jpountz/xxhash/StreamingXXHash64.class": {
+        "ver": 51,
+        "acc": 1057,
+        "nme": "net/jpountz/xxhash/StreamingXXHash64",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "getValue",
+            "acc": 1025,
+            "dsc": "()J"
+          },
+          {
+            "nme": "update",
+            "acc": 1025,
+            "dsc": "([BII)V"
+          },
+          {
+            "nme": "reset",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "close",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "asChecksum",
+            "acc": 17,
+            "dsc": "()Ljava/util/zip/Checksum;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16,
+            "nme": "seed",
+            "dsc": "J"
+          }
+        ]
+      },
+      "net/jpountz/xxhash/StreamingXXHash32$1.class": {
+        "ver": 51,
+        "acc": 32,
+        "nme": "net/jpountz/xxhash/StreamingXXHash32$1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lnet/jpountz/xxhash/StreamingXXHash32;)V"
+          },
+          {
+            "nme": "getValue",
+            "acc": 1,
+            "dsc": "()J"
+          },
+          {
+            "nme": "reset",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "update",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "update",
+            "acc": 1,
+            "dsc": "([BII)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lnet/jpountz/xxhash/StreamingXXHash32;"
+          }
+        ]
+      },
+      "net/jpountz/xxhash/StreamingXXHash64JavaUnsafe$Factory.class": {
+        "ver": 51,
+        "acc": 32,
+        "nme": "net/jpountz/xxhash/StreamingXXHash64JavaUnsafe$Factory",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "newStreamingHash",
+            "acc": 1,
+            "dsc": "(J)Lnet/jpountz/xxhash/StreamingXXHash64;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/jpountz/xxhash/StreamingXXHash64$Factory;"
+          }
+        ]
+      },
+      "net/jpountz/util/Native$OS.class": {
+        "ver": 51,
+        "acc": 16432,
+        "nme": "net/jpountz/util/Native$OS",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lnet/jpountz/util/Native$OS;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lnet/jpountz/util/Native$OS;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V",
+            "sig": "(Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "WINDOWS",
+            "dsc": "Lnet/jpountz/util/Native$OS;"
+          },
+          {
+            "acc": 16409,
+            "nme": "LINUX",
+            "dsc": "Lnet/jpountz/util/Native$OS;"
+          },
+          {
+            "acc": 16409,
+            "nme": "MAC",
+            "dsc": "Lnet/jpountz/util/Native$OS;"
+          },
+          {
+            "acc": 16409,
+            "nme": "SOLARIS",
+            "dsc": "Lnet/jpountz/util/Native$OS;"
+          },
+          {
+            "acc": 17,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 17,
+            "nme": "libExtension",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lnet/jpountz/util/Native$OS;"
+          }
+        ]
+      },
+      "net/jpountz/xxhash/StreamingXXHash64JNI.class": {
+        "ver": 51,
+        "acc": 48,
+        "nme": "net/jpountz/xxhash/StreamingXXHash64JNI",
+        "super": "net/jpountz/xxhash/StreamingXXHash64",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "checkState",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "reset",
+            "acc": 33,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getValue",
+            "acc": 33,
+            "dsc": "()J"
+          },
+          {
+            "nme": "update",
+            "acc": 33,
+            "dsc": "([BII)V"
+          },
+          {
+            "nme": "close",
+            "acc": 33,
+            "dsc": "()V"
+          },
+          {
+            "nme": "finalize",
+            "acc": 36,
+            "dsc": "()V",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "state",
+            "dsc": "J"
+          }
+        ]
+      },
+      "net/jpountz/xxhash/XXHash32.class": {
+        "ver": 51,
+        "acc": 1057,
+        "nme": "net/jpountz/xxhash/XXHash32",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "hash",
+            "acc": 1025,
+            "dsc": "([BIII)I"
+          },
+          {
+            "nme": "hash",
+            "acc": 1025,
+            "dsc": "(Ljava/nio/ByteBuffer;III)I"
+          },
+          {
+            "nme": "hash",
+            "acc": 17,
+            "dsc": "(Ljava/nio/ByteBuffer;I)I"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": []
+      },
+      "net/jpountz/xxhash/AbstractStreamingXXHash64Java.class": {
+        "ver": 51,
+        "acc": 1056,
+        "nme": "net/jpountz/xxhash/AbstractStreamingXXHash64Java",
+        "super": "net/jpountz/xxhash/StreamingXXHash64",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "reset",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "memSize",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "v1",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "v2",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "v3",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "v4",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "totalLen",
+            "dsc": "J"
+          },
+          {
+            "acc": 16,
+            "nme": "memory",
+            "dsc": "[B"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4FrameOutputStream$BD.class": {
+        "ver": 51,
+        "acc": 33,
+        "nme": "net/jpountz/lz4/LZ4FrameOutputStream$BD",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;)V"
+          },
+          {
+            "nme": "fromByte",
+            "acc": 9,
+            "dsc": "(B)Lnet/jpountz/lz4/LZ4FrameOutputStream$BD;"
+          },
+          {
+            "nme": "getBlockMaximumSize",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "toByte",
+            "acc": 1,
+            "dsc": "()B"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4096,
+            "dsc": "(Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;Lnet/jpountz/lz4/LZ4FrameOutputStream$1;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "RESERVED_MASK",
+            "dsc": "I",
+            "val": 143
+          },
+          {
+            "acc": 18,
+            "nme": "blockSizeValue",
+            "dsc": "Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;"
+          }
+        ]
+      },
+      "net/jpountz/xxhash/StreamingXXHash32JavaUnsafe$Factory.class": {
+        "ver": 51,
+        "acc": 32,
+        "nme": "net/jpountz/xxhash/StreamingXXHash32JavaUnsafe$Factory",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "newStreamingHash",
+            "acc": 1,
+            "dsc": "(I)Lnet/jpountz/xxhash/StreamingXXHash32;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/jpountz/xxhash/StreamingXXHash32$Factory;"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4Utils.class": {
+        "ver": 51,
+        "acc": 16432,
+        "nme": "net/jpountz/lz4/LZ4Utils",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lnet/jpountz/lz4/LZ4Utils;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lnet/jpountz/lz4/LZ4Utils;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "maxCompressedLength",
+            "acc": 8,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "hash",
+            "acc": 8,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "hash64k",
+            "acc": 8,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "hashHC",
+            "acc": 8,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "copyTo",
+            "acc": 8,
+            "dsc": "(Lnet/jpountz/lz4/LZ4Utils$Match;Lnet/jpountz/lz4/LZ4Utils$Match;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "MAX_INPUT_SIZE",
+            "dsc": "I",
+            "val": 2113929216
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lnet/jpountz/lz4/LZ4Utils;"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4JavaUnsafeCompressor.class": {
+        "ver": 51,
+        "acc": 48,
+        "nme": "net/jpountz/lz4/LZ4JavaUnsafeCompressor",
+        "super": "net/jpountz/lz4/LZ4Compressor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "compress64k",
+            "acc": 8,
+            "dsc": "([BII[BII)I"
+          },
+          {
+            "nme": "compress",
+            "acc": 1,
+            "dsc": "([BII[BII)I"
+          },
+          {
+            "nme": "compress64k",
+            "acc": 8,
+            "dsc": "(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "compress",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/jpountz/lz4/LZ4Compressor;"
+          }
+        ]
+      },
+      "net/jpountz/xxhash/StreamingXXHash64JavaSafe.class": {
+        "ver": 51,
+        "acc": 48,
+        "nme": "net/jpountz/xxhash/StreamingXXHash64JavaSafe",
+        "super": "net/jpountz/xxhash/AbstractStreamingXXHash64Java",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "getValue",
+            "acc": 1,
+            "dsc": "()J"
+          },
+          {
+            "nme": "update",
+            "acc": 1,
+            "dsc": "([BII)V"
+          }
+        ],
+        "flds": []
+      },
+      "net/jpountz/lz4/LZ4HCJavaSafeCompressor.class": {
+        "ver": 51,
+        "acc": 48,
+        "nme": "net/jpountz/lz4/LZ4HCJavaSafeCompressor",
+        "super": "net/jpountz/lz4/LZ4Compressor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "compress",
+            "acc": 1,
+            "dsc": "([BII[BII)I"
+          },
+          {
+            "nme": "compress",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "access$000",
+            "acc": 4104,
+            "dsc": "(Lnet/jpountz/lz4/LZ4HCJavaSafeCompressor;)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/jpountz/lz4/LZ4Compressor;"
+          },
+          {
+            "acc": 18,
+            "nme": "maxAttempts",
+            "dsc": "I"
+          },
+          {
+            "acc": 16,
+            "nme": "compressionLevel",
+            "dsc": "I"
+          },
+          {
+            "acc": 4120,
+            "nme": "$assertionsDisabled",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "net/jpountz/xxhash/StreamingXXHash32JavaUnsafe.class": {
+        "ver": 51,
+        "acc": 48,
+        "nme": "net/jpountz/xxhash/StreamingXXHash32JavaUnsafe",
+        "super": "net/jpountz/xxhash/AbstractStreamingXXHash32Java",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "getValue",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "update",
+            "acc": 1,
+            "dsc": "([BII)V"
+          }
+        ],
+        "flds": []
+      },
+      "net/jpountz/xxhash/XXHash32JavaUnsafe.class": {
+        "ver": 51,
+        "acc": 48,
+        "nme": "net/jpountz/xxhash/XXHash32JavaUnsafe",
+        "super": "net/jpountz/xxhash/XXHash32",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "hash",
+            "acc": 1,
+            "dsc": "([BIII)I"
+          },
+          {
+            "nme": "hash",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;III)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/jpountz/xxhash/XXHash32;"
+          }
+        ]
+      },
+      "net/jpountz/xxhash/StreamingXXHash32JavaSafe$Factory.class": {
+        "ver": 51,
+        "acc": 32,
+        "nme": "net/jpountz/xxhash/StreamingXXHash32JavaSafe$Factory",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "newStreamingHash",
+            "acc": 1,
+            "dsc": "(I)Lnet/jpountz/xxhash/StreamingXXHash32;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/jpountz/xxhash/StreamingXXHash32$Factory;"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4JavaSafeSafeDecompressor.class": {
+        "ver": 51,
+        "acc": 48,
+        "nme": "net/jpountz/lz4/LZ4JavaSafeSafeDecompressor",
+        "super": "net/jpountz/lz4/LZ4SafeDecompressor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "decompress",
+            "acc": 1,
+            "dsc": "([BII[BII)I"
+          },
+          {
+            "nme": "decompress",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/jpountz/lz4/LZ4SafeDecompressor;"
+          }
+        ]
+      },
+      "net/jpountz/util/Native.class": {
+        "ver": 51,
+        "acc": 16433,
+        "nme": "net/jpountz/util/Native",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lnet/jpountz/util/Native;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lnet/jpountz/util/Native;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "arch",
+            "acc": 10,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "os",
+            "acc": 10,
+            "dsc": "()Lnet/jpountz/util/Native$OS;"
+          },
+          {
+            "nme": "resourceName",
+            "acc": 10,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "isLoaded",
+            "acc": 41,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "cleanupOldTempLibs",
+            "acc": 10,
+            "dsc": "()V"
+          },
+          {
+            "nme": "load",
+            "acc": 41,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 10,
+            "nme": "loaded",
+            "dsc": "Z"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lnet/jpountz/util/Native;"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4UnknownSizeDecompressor.class": {
+        "ver": 51,
+        "acc": 132609,
+        "nme": "net/jpountz/lz4/LZ4UnknownSizeDecompressor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "decompress",
+            "acc": 1025,
+            "dsc": "([BII[BII)I"
+          },
+          {
+            "nme": "decompress",
+            "acc": 1025,
+            "dsc": "([BII[BI)I"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/Deprecated;"
+          }
+        ]
+      },
+      "net/jpountz/xxhash/StreamingXXHash64JavaSafe$Factory.class": {
+        "ver": 51,
+        "acc": 32,
+        "nme": "net/jpountz/xxhash/StreamingXXHash64JavaSafe$Factory",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "newStreamingHash",
+            "acc": 1,
+            "dsc": "(J)Lnet/jpountz/xxhash/StreamingXXHash64;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/jpountz/xxhash/StreamingXXHash64$Factory;"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4JavaSafeFastDecompressor.class": {
+        "ver": 51,
+        "acc": 48,
+        "nme": "net/jpountz/lz4/LZ4JavaSafeFastDecompressor",
+        "super": "net/jpountz/lz4/LZ4FastDecompressor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "decompress",
+            "acc": 1,
+            "dsc": "([BI[BII)I"
+          },
+          {
+            "nme": "decompress",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;ILjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/jpountz/lz4/LZ4FastDecompressor;"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4FrameOutputStream$FLG.class": {
+        "ver": 51,
+        "acc": 33,
+        "nme": "net/jpountz/lz4/LZ4FrameOutputStream$FLG",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 129,
+            "dsc": "(I[Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(IB)V"
+          },
+          {
+            "nme": "fromByte",
+            "acc": 9,
+            "dsc": "(B)Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;"
+          },
+          {
+            "nme": "toByte",
+            "acc": 1,
+            "dsc": "()B"
+          },
+          {
+            "nme": "validate",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "isEnabled",
+            "acc": 1,
+            "dsc": "(Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;)Z"
+          },
+          {
+            "nme": "getVersion",
+            "acc": 1,
+            "dsc": "()I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "DEFAULT_VERSION",
+            "dsc": "I",
+            "val": 1
+          },
+          {
+            "acc": 18,
+            "nme": "bitSet",
+            "dsc": "Ljava/util/BitSet;"
+          },
+          {
+            "acc": 18,
+            "nme": "version",
+            "dsc": "I"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4JavaSafeCompressor.class": {
+        "ver": 51,
+        "acc": 48,
+        "nme": "net/jpountz/lz4/LZ4JavaSafeCompressor",
+        "super": "net/jpountz/lz4/LZ4Compressor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "compress64k",
+            "acc": 8,
+            "dsc": "([BII[BII)I"
+          },
+          {
+            "nme": "compress",
+            "acc": 1,
+            "dsc": "([BII[BII)I"
+          },
+          {
+            "nme": "compress64k",
+            "acc": 8,
+            "dsc": "(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "compress",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/jpountz/lz4/LZ4Compressor;"
+          }
+        ]
+      },
+      "net/jpountz/util/Utils.class": {
+        "ver": 51,
+        "acc": 16433,
+        "nme": "net/jpountz/util/Utils",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lnet/jpountz/util/Utils;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lnet/jpountz/util/Utils;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "isUnalignedAccessAllowed",
+            "acc": 9,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "NATIVE_BYTE_ORDER",
+            "dsc": "Ljava/nio/ByteOrder;"
+          },
+          {
+            "acc": 26,
+            "nme": "unalignedAccessAllowed",
+            "dsc": "Z"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lnet/jpountz/util/Utils;"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE.class": {
+        "ver": 51,
+        "acc": 16433,
+        "nme": "net/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;II)V",
+            "sig": "(I)V"
+          },
+          {
+            "nme": "getIndicator",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(I)Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "SIZE_64KB",
+            "dsc": "Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;"
+          },
+          {
+            "acc": 16409,
+            "nme": "SIZE_256KB",
+            "dsc": "Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;"
+          },
+          {
+            "acc": 16409,
+            "nme": "SIZE_1MB",
+            "dsc": "Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;"
+          },
+          {
+            "acc": 16409,
+            "nme": "SIZE_4MB",
+            "dsc": "Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;"
+          },
+          {
+            "acc": 18,
+            "nme": "indicator",
+            "dsc": "I"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;"
+          }
+        ]
+      },
+      "net/jpountz/lz4/LZ4JavaUnsafeSafeDecompressor.class": {
+        "ver": 51,
+        "acc": 48,
+        "nme": "net/jpountz/lz4/LZ4JavaUnsafeSafeDecompressor",
+        "super": "net/jpountz/lz4/LZ4SafeDecompressor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "decompress",
+            "acc": 1,
+            "dsc": "([BII[BII)I"
+          },
+          {
+            "nme": "decompress",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/jpountz/lz4/LZ4SafeDecompressor;"
+          }
+        ]
+      }
+    }
+  }
+}

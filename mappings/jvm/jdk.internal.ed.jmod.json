@@ -1,0 +1,192 @@
+{
+  "md5": "1e0da49800659e104196c1ad293cd691",
+  "sha2": "cd599b4317d8f160f2536689e9a1fc78145b26a4",
+  "sha256": "13a606aeb70d1fa74a1e7b2c321b29c13359ae351fa150d1e2ac812d1b31ceff",
+  "contents": {
+    "classes": {
+      "classes/module-info.class": {
+        "ver": 65,
+        "acc": 32768,
+        "nme": "module-info",
+        "mthds": [],
+        "flds": []
+      },
+      "classes/jdk/internal/editor/external/ExternalEditor$1.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "jdk/internal/editor/external/ExternalEditor$1",
+        "super": "java/nio/file/SimpleFileVisitor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljdk/internal/editor/external/ExternalEditor;)V"
+          },
+          {
+            "nme": "visitFile",
+            "acc": 1,
+            "dsc": "(Ljava/nio/file/Path;Ljava/nio/file/attribute/BasicFileAttributes;)Ljava/nio/file/FileVisitResult;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "postVisitDirectory",
+            "acc": 1,
+            "dsc": "(Ljava/nio/file/Path;Ljava/io/IOException;)Ljava/nio/file/FileVisitResult;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "postVisitDirectory",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/Object;Ljava/io/IOException;)Ljava/nio/file/FileVisitResult;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "visitFile",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/Object;Ljava/nio/file/attribute/BasicFileAttributes;)Ljava/nio/file/FileVisitResult;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          }
+        ],
+        "flds": []
+      },
+      "classes/jdk/internal/editor/external/ExternalEditor.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "jdk/internal/editor/external/ExternalEditor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "edit",
+            "acc": 9,
+            "dsc": "([Ljava/lang/String;Ljava/lang/String;Ljava/util/function/Consumer;Ljava/util/function/Consumer;Ljava/lang/Runnable;Ljava/lang/Runnable;ZLjava/lang/Runnable;)V",
+            "sig": "([Ljava/lang/String;Ljava/lang/String;Ljava/util/function/Consumer<Ljava/lang/String;>;Ljava/util/function/Consumer<Ljava/lang/String;>;Ljava/lang/Runnable;Ljava/lang/Runnable;ZLjava/lang/Runnable;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/util/function/Consumer;Ljava/util/function/Consumer;Ljava/lang/Runnable;Ljava/lang/Runnable;ZLjava/lang/Runnable;)V",
+            "sig": "(Ljava/util/function/Consumer<Ljava/lang/String;>;Ljava/util/function/Consumer<Ljava/lang/String;>;Ljava/lang/Runnable;Ljava/lang/Runnable;ZLjava/lang/Runnable;)V"
+          },
+          {
+            "nme": "edit",
+            "acc": 2,
+            "dsc": "([Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "setupWatch",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "launch",
+            "acc": 2,
+            "dsc": "([Ljava/lang/String;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "saveFile",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "deleteDirectory",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lambda$setupWatch$0",
+            "acc": 4098,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "errorHandler",
+            "dsc": "Ljava/util/function/Consumer;",
+            "sig": "Ljava/util/function/Consumer<Ljava/lang/String;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "saveHandler",
+            "dsc": "Ljava/util/function/Consumer;",
+            "sig": "Ljava/util/function/Consumer<Ljava/lang/String;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "wait",
+            "dsc": "Z"
+          },
+          {
+            "acc": 18,
+            "nme": "suspendInteractiveInput",
+            "dsc": "Ljava/lang/Runnable;"
+          },
+          {
+            "acc": 18,
+            "nme": "resumeInteractiveInput",
+            "dsc": "Ljava/lang/Runnable;"
+          },
+          {
+            "acc": 18,
+            "nme": "promptForNewLineToEndWait",
+            "dsc": "Ljava/lang/Runnable;"
+          },
+          {
+            "acc": 2,
+            "nme": "watcher",
+            "dsc": "Ljava/nio/file/WatchService;"
+          },
+          {
+            "acc": 2,
+            "nme": "watchedThread",
+            "dsc": "Ljava/lang/Thread;"
+          },
+          {
+            "acc": 2,
+            "nme": "dir",
+            "dsc": "Ljava/nio/file/Path;"
+          },
+          {
+            "acc": 2,
+            "nme": "tmpfile",
+            "dsc": "Ljava/nio/file/Path;"
+          }
+        ]
+      },
+      "classes/jdk/internal/editor/spi/BuildInEditorProvider.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "jdk/internal/editor/spi/BuildInEditorProvider",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "rank",
+            "acc": 1025,
+            "dsc": "()I"
+          },
+          {
+            "nme": "edit",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/util/function/Consumer;Ljava/util/function/Consumer;)V",
+            "sig": "(Ljava/lang/String;Ljava/lang/String;Ljava/util/function/Consumer<Ljava/lang/String;>;Ljava/util/function/Consumer<Ljava/lang/String;>;)V"
+          }
+        ],
+        "flds": []
+      }
+    }
+  }
+}

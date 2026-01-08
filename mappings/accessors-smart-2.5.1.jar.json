@@ -1,0 +1,856 @@
+{
+  "md5": "51e60dbf9ac51f6666f0077317990944",
+  "sha2": "19b820261eb2e7de7d5bde11d1c06e4501dd7e5f",
+  "sha256": "2796ae857d0c7be4bc3580daa4d3828d555212355f4c83d38dd0af0742b3c812",
+  "contents": {
+    "classes": {
+      "net/minidev/asm/BeansAccessBuilder.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "net/minidev/asm/BeansAccessBuilder",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Class;[Lnet/minidev/asm/Accessor;Lnet/minidev/asm/DynamicClassLoader;)V",
+            "sig": "(Ljava/lang/Class<*>;[Lnet/minidev/asm/Accessor;Lnet/minidev/asm/DynamicClassLoader;)V"
+          },
+          {
+            "nme": "addConversion",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Iterable;)V",
+            "sig": "(Ljava/lang/Iterable<Ljava/lang/Class<*>;>;)V"
+          },
+          {
+            "nme": "addConversion",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Class;)V",
+            "sig": "(Ljava/lang/Class<*>;)V"
+          },
+          {
+            "nme": "bulid",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<*>;"
+          },
+          {
+            "nme": "dumpDebug",
+            "acc": 2,
+            "dsc": "([BLjava/lang/String;)V"
+          },
+          {
+            "nme": "internalSetFiled",
+            "acc": 2,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;Lnet/minidev/asm/Accessor;)V"
+          },
+          {
+            "nme": "throwExIntParam",
+            "acc": 2,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;Ljava/lang/Class;)V",
+            "sig": "(Lorg/objectweb/asm/MethodVisitor;Ljava/lang/Class<*>;)V"
+          },
+          {
+            "nme": "throwExStrParam",
+            "acc": 2,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;Ljava/lang/Class;)V",
+            "sig": "(Lorg/objectweb/asm/MethodVisitor;Ljava/lang/Class<*>;)V"
+          },
+          {
+            "nme": "ifNotEqJmp",
+            "acc": 2,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;IILorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 10,
+            "nme": "METHOD_ACCESS_NAME",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 16,
+            "nme": "type",
+            "dsc": "Ljava/lang/Class;",
+            "sig": "Ljava/lang/Class<*>;"
+          },
+          {
+            "acc": 16,
+            "nme": "accs",
+            "dsc": "[Lnet/minidev/asm/Accessor;"
+          },
+          {
+            "acc": 16,
+            "nme": "loader",
+            "dsc": "Lnet/minidev/asm/DynamicClassLoader;"
+          },
+          {
+            "acc": 16,
+            "nme": "className",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 16,
+            "nme": "accessClassName",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 16,
+            "nme": "accessClassNameInternal",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 16,
+            "nme": "classNameInternal",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 16,
+            "nme": "convMtds",
+            "dsc": "Ljava/util/HashMap;",
+            "sig": "Ljava/util/HashMap<Ljava/lang/Class<*>;Ljava/lang/reflect/Method;>;"
+          },
+          {
+            "acc": 0,
+            "nme": "exceptionClass",
+            "dsc": "Ljava/lang/Class;",
+            "sig": "Ljava/lang/Class<+Ljava/lang/Exception;>;"
+          }
+        ]
+      },
+      "net/minidev/asm/Accessor.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "net/minidev/asm/Accessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getIndex",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "isPublic",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isEnum",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getName",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getType",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<*>;"
+          },
+          {
+            "nme": "getGenericType",
+            "acc": 1,
+            "dsc": "()Ljava/lang/reflect/Type;"
+          },
+          {
+            "nme": "isUsable",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isReadable",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isWritable",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Class;Ljava/lang/reflect/Field;Lnet/minidev/asm/FieldFilter;)V",
+            "sig": "(Ljava/lang/Class<*>;Ljava/lang/reflect/Field;Lnet/minidev/asm/FieldFilter;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4,
+            "nme": "field",
+            "dsc": "Ljava/lang/reflect/Field;"
+          },
+          {
+            "acc": 4,
+            "nme": "setter",
+            "dsc": "Ljava/lang/reflect/Method;"
+          },
+          {
+            "acc": 4,
+            "nme": "getter",
+            "dsc": "Ljava/lang/reflect/Method;"
+          },
+          {
+            "acc": 4,
+            "nme": "index",
+            "dsc": "I"
+          },
+          {
+            "acc": 4,
+            "nme": "type",
+            "dsc": "Ljava/lang/Class;",
+            "sig": "Ljava/lang/Class<*>;"
+          },
+          {
+            "acc": 4,
+            "nme": "genericType",
+            "dsc": "Ljava/lang/reflect/Type;"
+          },
+          {
+            "acc": 4,
+            "nme": "fieldName",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "net/minidev/asm/ConvertDate.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "net/minidev/asm/ConvertDate",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getMonth",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/Integer;"
+          },
+          {
+            "nme": "parseMonth",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/Integer;"
+          },
+          {
+            "nme": "newCalandar",
+            "acc": 10,
+            "dsc": "()Ljava/util/GregorianCalendar;"
+          },
+          {
+            "nme": "fillMap",
+            "acc": 10,
+            "dsc": "(Ljava/util/TreeMap;Ljava/lang/String;Ljava/lang/Integer;)V",
+            "sig": "(Ljava/util/TreeMap<Ljava/lang/String;Ljava/lang/Integer;>;Ljava/lang/String;Ljava/lang/Integer;)V"
+          },
+          {
+            "nme": "convertToDate",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)Ljava/util/Date;"
+          },
+          {
+            "nme": "getYYYYMMDD",
+            "acc": 10,
+            "dsc": "(Ljava/util/StringTokenizer;Ljava/lang/String;)Ljava/util/Date;"
+          },
+          {
+            "nme": "getYear",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)I"
+          },
+          {
+            "nme": "getMMDDYYYY",
+            "acc": 10,
+            "dsc": "(Ljava/util/StringTokenizer;Ljava/lang/String;)Ljava/util/Date;"
+          },
+          {
+            "nme": "getDDMMYYYY",
+            "acc": 10,
+            "dsc": "(Ljava/util/StringTokenizer;Ljava/lang/String;)Ljava/util/Date;"
+          },
+          {
+            "nme": "addHour",
+            "acc": 10,
+            "dsc": "(Ljava/util/StringTokenizer;Ljava/util/Calendar;Ljava/lang/String;)Ljava/util/Date;"
+          },
+          {
+            "nme": "addHour2",
+            "acc": 10,
+            "dsc": "(Ljava/util/StringTokenizer;Ljava/util/Calendar;Ljava/lang/String;)Ljava/util/Date;"
+          },
+          {
+            "nme": "trySkip",
+            "acc": 10,
+            "dsc": "(Ljava/util/StringTokenizer;Ljava/lang/String;Ljava/util/Calendar;)Ljava/lang/String;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 8,
+            "nme": "monthsTable",
+            "dsc": "Ljava/util/TreeMap;",
+            "sig": "Ljava/util/TreeMap<Ljava/lang/String;Ljava/lang/Integer;>;"
+          },
+          {
+            "acc": 8,
+            "nme": "daysTable",
+            "dsc": "Ljava/util/TreeMap;",
+            "sig": "Ljava/util/TreeMap<Ljava/lang/String;Ljava/lang/Integer;>;"
+          },
+          {
+            "acc": 10,
+            "nme": "voidData",
+            "dsc": "Ljava/util/HashSet;",
+            "sig": "Ljava/util/HashSet<Ljava/lang/String;>;"
+          },
+          {
+            "acc": 9,
+            "nme": "defaultTimeZone",
+            "dsc": "Ljava/util/TimeZone;"
+          },
+          {
+            "acc": 8,
+            "nme": "timeZoneMapping",
+            "dsc": "Ljava/util/TreeMap;",
+            "sig": "Ljava/util/TreeMap<Ljava/lang/String;Ljava/util/TimeZone;>;"
+          }
+        ]
+      },
+      "net/minidev/asm/BeansAccess.class": {
+        "ver": 52,
+        "acc": 1057,
+        "nme": "net/minidev/asm/BeansAccess",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setAccessor",
+            "acc": 4,
+            "dsc": "([Lnet/minidev/asm/Accessor;)V"
+          },
+          {
+            "nme": "getMap",
+            "acc": 1,
+            "dsc": "()Ljava/util/HashMap;",
+            "sig": "()Ljava/util/HashMap<Ljava/lang/String;Lnet/minidev/asm/Accessor;>;"
+          },
+          {
+            "nme": "getAccessors",
+            "acc": 1,
+            "dsc": "()[Lnet/minidev/asm/Accessor;"
+          },
+          {
+            "nme": "get",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Class;)Lnet/minidev/asm/BeansAccess;",
+            "sig": "<P:Ljava/lang/Object;>(Ljava/lang/Class<TP;>;)Lnet/minidev/asm/BeansAccess<TP;>;"
+          },
+          {
+            "nme": "get",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Class;Lnet/minidev/asm/FieldFilter;)Lnet/minidev/asm/BeansAccess;",
+            "sig": "<P:Ljava/lang/Object;>(Ljava/lang/Class<TP;>;Lnet/minidev/asm/FieldFilter;)Lnet/minidev/asm/BeansAccess<TP;>;"
+          },
+          {
+            "nme": "getParents",
+            "acc": 10,
+            "dsc": "(Ljava/lang/Class;)Ljava/util/LinkedList;",
+            "sig": "(Ljava/lang/Class<*>;)Ljava/util/LinkedList<Ljava/lang/Class<*>;>;"
+          },
+          {
+            "nme": "addAlias",
+            "acc": 10,
+            "dsc": "(Lnet/minidev/asm/BeansAccess;Ljava/util/HashMap;)V",
+            "sig": "(Lnet/minidev/asm/BeansAccess<*>;Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;)V"
+          },
+          {
+            "nme": "set",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;ILjava/lang/Object;)V",
+            "sig": "(TT;ILjava/lang/Object;)V"
+          },
+          {
+            "nme": "get",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;I)Ljava/lang/Object;",
+            "sig": "(TT;I)Ljava/lang/Object;"
+          },
+          {
+            "nme": "newInstance",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/Object;",
+            "sig": "()TT;"
+          },
+          {
+            "nme": "set",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;)V",
+            "sig": "(TT;Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "get",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;",
+            "sig": "(TT;Ljava/lang/String;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "getIndex",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "map",
+            "dsc": "Ljava/util/HashMap;",
+            "sig": "Ljava/util/HashMap<Ljava/lang/String;Lnet/minidev/asm/Accessor;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "accs",
+            "dsc": "[Lnet/minidev/asm/Accessor;"
+          },
+          {
+            "acc": 10,
+            "nme": "cache",
+            "dsc": "Ljava/util/concurrent/ConcurrentHashMap;",
+            "sig": "Ljava/util/concurrent/ConcurrentHashMap<Ljava/lang/Class<*>;Lnet/minidev/asm/BeansAccess<*>;>;"
+          }
+        ]
+      },
+      "net/minidev/asm/BasicFiledFilter.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "net/minidev/asm/BasicFiledFilter",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "canUse",
+            "acc": 1,
+            "dsc": "(Ljava/lang/reflect/Field;)Z"
+          },
+          {
+            "nme": "canUse",
+            "acc": 1,
+            "dsc": "(Ljava/lang/reflect/Field;Ljava/lang/reflect/Method;)Z"
+          },
+          {
+            "nme": "canRead",
+            "acc": 1,
+            "dsc": "(Ljava/lang/reflect/Field;)Z"
+          },
+          {
+            "nme": "canWrite",
+            "acc": 1,
+            "dsc": "(Ljava/lang/reflect/Field;)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "SINGLETON",
+            "dsc": "Lnet/minidev/asm/BasicFiledFilter;"
+          }
+        ]
+      },
+      "net/minidev/asm/ConvertDate$StringCmpNS.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "net/minidev/asm/ConvertDate$StringCmpNS",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "compare",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)I"
+          },
+          {
+            "nme": "compare",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)I"
+          }
+        ],
+        "flds": []
+      },
+      "net/minidev/asm/BeansAccessConfig.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "net/minidev/asm/BeansAccessConfig",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "addTypeMapper",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Class;Ljava/lang/Class;)V",
+            "sig": "(Ljava/lang/Class<*>;Ljava/lang/Class<*>;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 12,
+            "nme": "classMapper",
+            "dsc": "Ljava/util/HashMap;",
+            "sig": "Ljava/util/HashMap<Ljava/lang/Class<*>;Ljava/util/LinkedHashSet<Ljava/lang/Class<*>;>;>;"
+          },
+          {
+            "acc": 12,
+            "nme": "classFiledNameMapper",
+            "dsc": "Ljava/util/HashMap;",
+            "sig": "Ljava/util/HashMap<Ljava/lang/Class<*>;Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;>;"
+          }
+        ]
+      },
+      "net/minidev/asm/DefaultConverter.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "net/minidev/asm/DefaultConverter",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "convertToint",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)I"
+          },
+          {
+            "nme": "convertToInt",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Integer;"
+          },
+          {
+            "nme": "convertToshort",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)S"
+          },
+          {
+            "nme": "convertToShort",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Short;"
+          },
+          {
+            "nme": "convertTolong",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)J"
+          },
+          {
+            "nme": "convertToLong",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Long;"
+          },
+          {
+            "nme": "convertTobyte",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)B"
+          },
+          {
+            "nme": "convertToByte",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Byte;"
+          },
+          {
+            "nme": "convertTofloat",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)F"
+          },
+          {
+            "nme": "convertToFloat",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Float;"
+          },
+          {
+            "nme": "convertTodouble",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)D"
+          },
+          {
+            "nme": "convertToDouble",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Double;"
+          },
+          {
+            "nme": "convertTochar",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)C"
+          },
+          {
+            "nme": "convertToChar",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Character;"
+          },
+          {
+            "nme": "convertTobool",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "convertToBool",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Boolean;"
+          }
+        ],
+        "flds": []
+      },
+      "net/minidev/asm/DynamicClassLoader.class": {
+        "ver": 52,
+        "acc": 32,
+        "nme": "net/minidev/asm/DynamicClassLoader",
+        "super": "java/lang/ClassLoader",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/ClassLoader;)V"
+          },
+          {
+            "nme": "directLoad",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Class;Ljava/lang/String;[B)Ljava/lang/Class;",
+            "sig": "<T:Ljava/lang/Object;>(Ljava/lang/Class<+TT;>;Ljava/lang/String;[B)Ljava/lang/Class<TT;>;"
+          },
+          {
+            "nme": "directInstance",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Class;Ljava/lang/String;[B)Ljava/lang/Object;",
+            "sig": "<T:Ljava/lang/Object;>(Ljava/lang/Class<+TT;>;Ljava/lang/String;[B)TT;",
+            "exs": [
+              "java/lang/InstantiationException",
+              "java/lang/IllegalAccessException"
+            ]
+          },
+          {
+            "nme": "loadClass",
+            "acc": 36,
+            "dsc": "(Ljava/lang/String;Z)Ljava/lang/Class;",
+            "sig": "(Ljava/lang/String;Z)Ljava/lang/Class<*>;",
+            "exs": [
+              "java/lang/ClassNotFoundException"
+            ]
+          },
+          {
+            "nme": "defineClass",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;[B)Ljava/lang/Class;",
+            "sig": "(Ljava/lang/String;[B)Ljava/lang/Class<*>;",
+            "exs": [
+              "java/lang/ClassFormatError"
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "BEAN_AC",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 26,
+            "nme": "DEF_CLASS_SIG",
+            "dsc": "[Ljava/lang/Class;",
+            "sig": "[Ljava/lang/Class<*>;"
+          }
+        ]
+      },
+      "net/minidev/asm/ex/ConvertException.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "net/minidev/asm/ex/ConvertException",
+        "super": "java/lang/RuntimeException",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": 1
+          }
+        ]
+      },
+      "net/minidev/asm/FieldFilter.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "net/minidev/asm/FieldFilter",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "canUse",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/reflect/Field;)Z"
+          },
+          {
+            "nme": "canUse",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/reflect/Field;Ljava/lang/reflect/Method;)Z"
+          },
+          {
+            "nme": "canRead",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/reflect/Field;)Z"
+          },
+          {
+            "nme": "canWrite",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/reflect/Field;)Z"
+          }
+        ],
+        "flds": []
+      },
+      "net/minidev/asm/ASMUtil.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "net/minidev/asm/ASMUtil",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "autoBoxing",
+            "acc": 9,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;Ljava/lang/Class;)V",
+            "sig": "(Lorg/objectweb/asm/MethodVisitor;Ljava/lang/Class<*>;)V"
+          },
+          {
+            "nme": "getAccessors",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Class;Lnet/minidev/asm/FieldFilter;)[Lnet/minidev/asm/Accessor;",
+            "sig": "(Ljava/lang/Class<*>;Lnet/minidev/asm/FieldFilter;)[Lnet/minidev/asm/Accessor;"
+          },
+          {
+            "nme": "autoBoxing",
+            "acc": 12,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "autoUnBoxing1",
+            "acc": 12,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "autoUnBoxing2",
+            "acc": 12,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "newLabels",
+            "acc": 9,
+            "dsc": "(I)[Lorg/objectweb/asm/Label;"
+          },
+          {
+            "nme": "getSetterName",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "getGetterName",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "getIsName",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          }
+        ],
+        "flds": []
+      },
+      "net/minidev/asm/ex/NoSuchFieldException.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "net/minidev/asm/ex/NoSuchFieldException",
+        "super": "java/lang/RuntimeException",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": 1
+          }
+        ]
+      }
+    }
+  }
+}

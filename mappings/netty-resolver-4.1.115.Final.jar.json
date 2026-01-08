@@ -1,0 +1,1506 @@
+{
+  "md5": "e133793fdcb3ea2846693f1de1d31906",
+  "sha2": "e33b4d476c03975957f5d8d0319d592bf2bc5e96",
+  "sha256": "7b3455d14f59828765a00573bc3967dc59379e874bd62a67eb1926d6512109d1",
+  "contents": {
+    "classes": {
+      "io/netty/resolver/RoundRobinInetAddressResolver.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "io/netty/resolver/RoundRobinInetAddressResolver",
+        "super": "io/netty/resolver/InetNameResolver",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lio/netty/util/concurrent/EventExecutor;Lio/netty/resolver/NameResolver;)V",
+            "sig": "(Lio/netty/util/concurrent/EventExecutor;Lio/netty/resolver/NameResolver<Ljava/net/InetAddress;>;)V"
+          },
+          {
+            "nme": "doResolve",
+            "acc": 4,
+            "dsc": "(Ljava/lang/String;Lio/netty/util/concurrent/Promise;)V",
+            "sig": "(Ljava/lang/String;Lio/netty/util/concurrent/Promise<Ljava/net/InetAddress;>;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "doResolveAll",
+            "acc": 4,
+            "dsc": "(Ljava/lang/String;Lio/netty/util/concurrent/Promise;)V",
+            "sig": "(Ljava/lang/String;Lio/netty/util/concurrent/Promise<Ljava/util/List<Ljava/net/InetAddress;>;>;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "randomIndex",
+            "acc": 10,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "close",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "access$000",
+            "acc": 4104,
+            "dsc": "(I)I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "nameResolver",
+            "dsc": "Lio/netty/resolver/NameResolver;",
+            "sig": "Lio/netty/resolver/NameResolver<Ljava/net/InetAddress;>;"
+          }
+        ]
+      },
+      "io/netty/resolver/CompositeNameResolver$2.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "io/netty/resolver/CompositeNameResolver$2",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lio/netty/resolver/CompositeNameResolver;Lio/netty/util/concurrent/Promise;Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "operationComplete",
+            "acc": 1,
+            "dsc": "(Lio/netty/util/concurrent/Future;)V",
+            "sig": "(Lio/netty/util/concurrent/Future<Ljava/util/List<TT;>;>;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4112,
+            "nme": "val$promise",
+            "dsc": "Lio/netty/util/concurrent/Promise;"
+          },
+          {
+            "acc": 4112,
+            "nme": "val$inetHost",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 4112,
+            "nme": "val$resolverIndex",
+            "dsc": "I"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lio/netty/resolver/CompositeNameResolver;"
+          }
+        ]
+      },
+      "io/netty/resolver/DefaultHostsFileEntriesResolver.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "io/netty/resolver/DefaultHostsFileEntriesResolver",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lio/netty/resolver/HostsFileEntriesProvider$Parser;J)V"
+          },
+          {
+            "nme": "address",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Lio/netty/resolver/ResolvedAddressTypes;)Ljava/net/InetAddress;"
+          },
+          {
+            "nme": "addresses",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Lio/netty/resolver/ResolvedAddressTypes;)Ljava/util/List;",
+            "sig": "(Ljava/lang/String;Lio/netty/resolver/ResolvedAddressTypes;)Ljava/util/List<Ljava/net/InetAddress;>;"
+          },
+          {
+            "nme": "ensureHostsFileEntriesAreFresh",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "normalize",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "allAddresses",
+            "acc": 10,
+            "dsc": "(Ljava/util/List;Ljava/util/List;)Ljava/util/List;",
+            "sig": "(Ljava/util/List<Ljava/net/InetAddress;>;Ljava/util/List<Ljava/net/InetAddress;>;)Ljava/util/List<Ljava/net/InetAddress;>;"
+          },
+          {
+            "nme": "firstAddress",
+            "acc": 10,
+            "dsc": "(Ljava/util/List;)Ljava/net/InetAddress;",
+            "sig": "(Ljava/util/List<Ljava/net/InetAddress;>;)Ljava/net/InetAddress;"
+          },
+          {
+            "nme": "parseEntries",
+            "acc": 10,
+            "dsc": "(Lio/netty/resolver/HostsFileEntriesProvider$Parser;)Lio/netty/resolver/HostsFileEntriesProvider;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "logger",
+            "dsc": "Lio/netty/util/internal/logging/InternalLogger;"
+          },
+          {
+            "acc": 26,
+            "nme": "DEFAULT_REFRESH_INTERVAL",
+            "dsc": "J"
+          },
+          {
+            "acc": 18,
+            "nme": "refreshInterval",
+            "dsc": "J"
+          },
+          {
+            "acc": 18,
+            "nme": "lastRefresh",
+            "dsc": "Ljava/util/concurrent/atomic/AtomicLong;"
+          },
+          {
+            "acc": 18,
+            "nme": "hostsFileParser",
+            "dsc": "Lio/netty/resolver/HostsFileEntriesProvider$Parser;"
+          },
+          {
+            "acc": 66,
+            "nme": "inet4Entries",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/net/InetAddress;>;>;"
+          },
+          {
+            "acc": 66,
+            "nme": "inet6Entries",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/net/InetAddress;>;>;"
+          }
+        ]
+      },
+      "io/netty/resolver/HostsFileEntriesResolver.class": {
+        "ver": 50,
+        "acc": 1537,
+        "nme": "io/netty/resolver/HostsFileEntriesResolver",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "address",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Lio/netty/resolver/ResolvedAddressTypes;)Ljava/net/InetAddress;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "DEFAULT",
+            "dsc": "Lio/netty/resolver/HostsFileEntriesResolver;"
+          }
+        ]
+      },
+      "io/netty/resolver/InetSocketAddressResolver$1.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "io/netty/resolver/InetSocketAddressResolver$1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lio/netty/resolver/InetSocketAddressResolver;Lio/netty/util/concurrent/Promise;Ljava/net/InetSocketAddress;)V"
+          },
+          {
+            "nme": "operationComplete",
+            "acc": 1,
+            "dsc": "(Lio/netty/util/concurrent/Future;)V",
+            "sig": "(Lio/netty/util/concurrent/Future<Ljava/net/InetAddress;>;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4112,
+            "nme": "val$promise",
+            "dsc": "Lio/netty/util/concurrent/Promise;"
+          },
+          {
+            "acc": 4112,
+            "nme": "val$unresolvedAddress",
+            "dsc": "Ljava/net/InetSocketAddress;"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lio/netty/resolver/InetSocketAddressResolver;"
+          }
+        ]
+      },
+      "io/netty/resolver/DefaultNameResolver.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "io/netty/resolver/DefaultNameResolver",
+        "super": "io/netty/resolver/InetNameResolver",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lio/netty/util/concurrent/EventExecutor;)V"
+          },
+          {
+            "nme": "doResolve",
+            "acc": 4,
+            "dsc": "(Ljava/lang/String;Lio/netty/util/concurrent/Promise;)V",
+            "sig": "(Ljava/lang/String;Lio/netty/util/concurrent/Promise<Ljava/net/InetAddress;>;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "doResolveAll",
+            "acc": 4,
+            "dsc": "(Ljava/lang/String;Lio/netty/util/concurrent/Promise;)V",
+            "sig": "(Ljava/lang/String;Lio/netty/util/concurrent/Promise<Ljava/util/List<Ljava/net/InetAddress;>;>;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          }
+        ],
+        "flds": []
+      },
+      "io/netty/resolver/AddressResolverGroup.class": {
+        "ver": 50,
+        "acc": 1057,
+        "nme": "io/netty/resolver/AddressResolverGroup",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getResolver",
+            "acc": 1,
+            "dsc": "(Lio/netty/util/concurrent/EventExecutor;)Lio/netty/resolver/AddressResolver;",
+            "sig": "(Lio/netty/util/concurrent/EventExecutor;)Lio/netty/resolver/AddressResolver<TT;>;"
+          },
+          {
+            "nme": "newResolver",
+            "acc": 1028,
+            "dsc": "(Lio/netty/util/concurrent/EventExecutor;)Lio/netty/resolver/AddressResolver;",
+            "sig": "(Lio/netty/util/concurrent/EventExecutor;)Lio/netty/resolver/AddressResolver<TT;>;",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "close",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "access$000",
+            "acc": 4104,
+            "dsc": "(Lio/netty/resolver/AddressResolverGroup;)Ljava/util/Map;"
+          },
+          {
+            "nme": "access$100",
+            "acc": 4104,
+            "dsc": "(Lio/netty/resolver/AddressResolverGroup;)Ljava/util/Map;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "logger",
+            "dsc": "Lio/netty/util/internal/logging/InternalLogger;"
+          },
+          {
+            "acc": 18,
+            "nme": "resolvers",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lio/netty/util/concurrent/EventExecutor;Lio/netty/resolver/AddressResolver<TT;>;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "executorTerminationListeners",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lio/netty/util/concurrent/EventExecutor;Lio/netty/util/concurrent/GenericFutureListener<Lio/netty/util/concurrent/Future<Ljava/lang/Object;>;>;>;"
+          }
+        ]
+      },
+      "io/netty/resolver/InetSocketAddressResolver.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "io/netty/resolver/InetSocketAddressResolver",
+        "super": "io/netty/resolver/AbstractAddressResolver",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lio/netty/util/concurrent/EventExecutor;Lio/netty/resolver/NameResolver;)V",
+            "sig": "(Lio/netty/util/concurrent/EventExecutor;Lio/netty/resolver/NameResolver<Ljava/net/InetAddress;>;)V"
+          },
+          {
+            "nme": "doIsResolved",
+            "acc": 4,
+            "dsc": "(Ljava/net/InetSocketAddress;)Z"
+          },
+          {
+            "nme": "doResolve",
+            "acc": 4,
+            "dsc": "(Ljava/net/InetSocketAddress;Lio/netty/util/concurrent/Promise;)V",
+            "sig": "(Ljava/net/InetSocketAddress;Lio/netty/util/concurrent/Promise<Ljava/net/InetSocketAddress;>;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "doResolveAll",
+            "acc": 4,
+            "dsc": "(Ljava/net/InetSocketAddress;Lio/netty/util/concurrent/Promise;)V",
+            "sig": "(Ljava/net/InetSocketAddress;Lio/netty/util/concurrent/Promise<Ljava/util/List<Ljava/net/InetSocketAddress;>;>;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "close",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "doResolveAll",
+            "acc": 4164,
+            "dsc": "(Ljava/net/SocketAddress;Lio/netty/util/concurrent/Promise;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "doResolve",
+            "acc": 4164,
+            "dsc": "(Ljava/net/SocketAddress;Lio/netty/util/concurrent/Promise;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "doIsResolved",
+            "acc": 4164,
+            "dsc": "(Ljava/net/SocketAddress;)Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16,
+            "nme": "nameResolver",
+            "dsc": "Lio/netty/resolver/NameResolver;",
+            "sig": "Lio/netty/resolver/NameResolver<Ljava/net/InetAddress;>;"
+          }
+        ]
+      },
+      "io/netty/resolver/NoopAddressResolver.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "io/netty/resolver/NoopAddressResolver",
+        "super": "io/netty/resolver/AbstractAddressResolver",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lio/netty/util/concurrent/EventExecutor;)V"
+          },
+          {
+            "nme": "doIsResolved",
+            "acc": 4,
+            "dsc": "(Ljava/net/SocketAddress;)Z"
+          },
+          {
+            "nme": "doResolve",
+            "acc": 4,
+            "dsc": "(Ljava/net/SocketAddress;Lio/netty/util/concurrent/Promise;)V",
+            "sig": "(Ljava/net/SocketAddress;Lio/netty/util/concurrent/Promise<Ljava/net/SocketAddress;>;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "doResolveAll",
+            "acc": 4,
+            "dsc": "(Ljava/net/SocketAddress;Lio/netty/util/concurrent/Promise;)V",
+            "sig": "(Ljava/net/SocketAddress;Lio/netty/util/concurrent/Promise<Ljava/util/List<Ljava/net/SocketAddress;>;>;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          }
+        ],
+        "flds": []
+      },
+      "io/netty/resolver/SimpleNameResolver.class": {
+        "ver": 50,
+        "acc": 1057,
+        "nme": "io/netty/resolver/SimpleNameResolver",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(Lio/netty/util/concurrent/EventExecutor;)V"
+          },
+          {
+            "nme": "executor",
+            "acc": 4,
+            "dsc": "()Lio/netty/util/concurrent/EventExecutor;"
+          },
+          {
+            "nme": "resolve",
+            "acc": 17,
+            "dsc": "(Ljava/lang/String;)Lio/netty/util/concurrent/Future;",
+            "sig": "(Ljava/lang/String;)Lio/netty/util/concurrent/Future<TT;>;"
+          },
+          {
+            "nme": "resolve",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Lio/netty/util/concurrent/Promise;)Lio/netty/util/concurrent/Future;",
+            "sig": "(Ljava/lang/String;Lio/netty/util/concurrent/Promise<TT;>;)Lio/netty/util/concurrent/Future<TT;>;"
+          },
+          {
+            "nme": "resolveAll",
+            "acc": 17,
+            "dsc": "(Ljava/lang/String;)Lio/netty/util/concurrent/Future;",
+            "sig": "(Ljava/lang/String;)Lio/netty/util/concurrent/Future<Ljava/util/List<TT;>;>;"
+          },
+          {
+            "nme": "resolveAll",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Lio/netty/util/concurrent/Promise;)Lio/netty/util/concurrent/Future;",
+            "sig": "(Ljava/lang/String;Lio/netty/util/concurrent/Promise<Ljava/util/List<TT;>;>;)Lio/netty/util/concurrent/Future<Ljava/util/List<TT;>;>;"
+          },
+          {
+            "nme": "doResolve",
+            "acc": 1028,
+            "dsc": "(Ljava/lang/String;Lio/netty/util/concurrent/Promise;)V",
+            "sig": "(Ljava/lang/String;Lio/netty/util/concurrent/Promise<TT;>;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "doResolveAll",
+            "acc": 1028,
+            "dsc": "(Ljava/lang/String;Lio/netty/util/concurrent/Promise;)V",
+            "sig": "(Ljava/lang/String;Lio/netty/util/concurrent/Promise<Ljava/util/List<TT;>;>;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "close",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "executor",
+            "dsc": "Lio/netty/util/concurrent/EventExecutor;"
+          }
+        ]
+      },
+      "io/netty/resolver/RoundRobinInetAddressResolver$2.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "io/netty/resolver/RoundRobinInetAddressResolver$2",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lio/netty/resolver/RoundRobinInetAddressResolver;Lio/netty/util/concurrent/Promise;)V"
+          },
+          {
+            "nme": "operationComplete",
+            "acc": 1,
+            "dsc": "(Lio/netty/util/concurrent/Future;)V",
+            "sig": "(Lio/netty/util/concurrent/Future<Ljava/util/List<Ljava/net/InetAddress;>;>;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4112,
+            "nme": "val$promise",
+            "dsc": "Lio/netty/util/concurrent/Promise;"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lio/netty/resolver/RoundRobinInetAddressResolver;"
+          }
+        ]
+      },
+      "io/netty/resolver/InetSocketAddressResolver$2.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "io/netty/resolver/InetSocketAddressResolver$2",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lio/netty/resolver/InetSocketAddressResolver;Ljava/net/InetSocketAddress;Lio/netty/util/concurrent/Promise;)V"
+          },
+          {
+            "nme": "operationComplete",
+            "acc": 1,
+            "dsc": "(Lio/netty/util/concurrent/Future;)V",
+            "sig": "(Lio/netty/util/concurrent/Future<Ljava/util/List<Ljava/net/InetAddress;>;>;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4112,
+            "nme": "val$unresolvedAddress",
+            "dsc": "Ljava/net/InetSocketAddress;"
+          },
+          {
+            "acc": 4112,
+            "nme": "val$promise",
+            "dsc": "Lio/netty/util/concurrent/Promise;"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lio/netty/resolver/InetSocketAddressResolver;"
+          }
+        ]
+      },
+      "io/netty/resolver/DefaultAddressResolverGroup.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "io/netty/resolver/DefaultAddressResolverGroup",
+        "super": "io/netty/resolver/AddressResolverGroup",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "newResolver",
+            "acc": 4,
+            "dsc": "(Lio/netty/util/concurrent/EventExecutor;)Lio/netty/resolver/AddressResolver;",
+            "sig": "(Lio/netty/util/concurrent/EventExecutor;)Lio/netty/resolver/AddressResolver<Ljava/net/InetSocketAddress;>;",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lio/netty/resolver/DefaultAddressResolverGroup;"
+          }
+        ]
+      },
+      "io/netty/resolver/CompositeNameResolver$1.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "io/netty/resolver/CompositeNameResolver$1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lio/netty/resolver/CompositeNameResolver;Lio/netty/util/concurrent/Promise;Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "operationComplete",
+            "acc": 1,
+            "dsc": "(Lio/netty/util/concurrent/Future;)V",
+            "sig": "(Lio/netty/util/concurrent/Future<TT;>;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4112,
+            "nme": "val$promise",
+            "dsc": "Lio/netty/util/concurrent/Promise;"
+          },
+          {
+            "acc": 4112,
+            "nme": "val$inetHost",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 4112,
+            "nme": "val$resolverIndex",
+            "dsc": "I"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lio/netty/resolver/CompositeNameResolver;"
+          }
+        ]
+      },
+      "io/netty/resolver/HostsFileEntriesProvider$ParserImpl.class": {
+        "ver": 50,
+        "acc": 48,
+        "nme": "io/netty/resolver/HostsFileEntriesProvider$ParserImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "parse",
+            "acc": 1,
+            "dsc": "()Lio/netty/resolver/HostsFileEntriesProvider;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "parse",
+            "acc": 129,
+            "dsc": "([Ljava/nio/charset/Charset;)Lio/netty/resolver/HostsFileEntriesProvider;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "parse",
+            "acc": 129,
+            "dsc": "(Ljava/io/File;[Ljava/nio/charset/Charset;)Lio/netty/resolver/HostsFileEntriesProvider;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "parse",
+            "acc": 1,
+            "dsc": "(Ljava/io/Reader;)Lio/netty/resolver/HostsFileEntriesProvider;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "parseSilently",
+            "acc": 1,
+            "dsc": "()Lio/netty/resolver/HostsFileEntriesProvider;"
+          },
+          {
+            "nme": "parseSilently",
+            "acc": 129,
+            "dsc": "([Ljava/nio/charset/Charset;)Lio/netty/resolver/HostsFileEntriesProvider;"
+          },
+          {
+            "nme": "parseSilently",
+            "acc": 129,
+            "dsc": "(Ljava/io/File;[Ljava/nio/charset/Charset;)Lio/netty/resolver/HostsFileEntriesProvider;"
+          },
+          {
+            "nme": "locateHostsFile",
+            "acc": 10,
+            "dsc": "()Ljava/io/File;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "WINDOWS_DEFAULT_SYSTEM_ROOT",
+            "dsc": "Ljava/lang/String;",
+            "val": "C:\\Windows"
+          },
+          {
+            "acc": 26,
+            "nme": "WINDOWS_HOSTS_FILE_RELATIVE_PATH",
+            "dsc": "Ljava/lang/String;",
+            "val": "\\system32\\drivers\\etc\\hosts"
+          },
+          {
+            "acc": 26,
+            "nme": "X_PLATFORMS_HOSTS_FILE_PATH",
+            "dsc": "Ljava/lang/String;",
+            "val": "/etc/hosts"
+          },
+          {
+            "acc": 26,
+            "nme": "WHITESPACES",
+            "dsc": "Ljava/util/regex/Pattern;"
+          },
+          {
+            "acc": 26,
+            "nme": "logger",
+            "dsc": "Lio/netty/util/internal/logging/InternalLogger;"
+          },
+          {
+            "acc": 24,
+            "nme": "INSTANCE",
+            "dsc": "Lio/netty/resolver/HostsFileEntriesProvider$ParserImpl;"
+          }
+        ]
+      },
+      "io/netty/resolver/DefaultHostsFileEntriesResolver$1.class": {
+        "ver": 50,
+        "acc": 4128,
+        "nme": "io/netty/resolver/DefaultHostsFileEntriesResolver$1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4120,
+            "nme": "$SwitchMap$io$netty$resolver$ResolvedAddressTypes",
+            "dsc": "[I"
+          }
+        ]
+      },
+      "io/netty/resolver/InetNameResolver.class": {
+        "ver": 50,
+        "acc": 1057,
+        "nme": "io/netty/resolver/InetNameResolver",
+        "super": "io/netty/resolver/SimpleNameResolver",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(Lio/netty/util/concurrent/EventExecutor;)V"
+          },
+          {
+            "nme": "asAddressResolver",
+            "acc": 1,
+            "dsc": "()Lio/netty/resolver/AddressResolver;",
+            "sig": "()Lio/netty/resolver/AddressResolver<Ljava/net/InetSocketAddress;>;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 66,
+            "nme": "addressResolver",
+            "dsc": "Lio/netty/resolver/AddressResolver;",
+            "sig": "Lio/netty/resolver/AddressResolver<Ljava/net/InetSocketAddress;>;"
+          }
+        ]
+      },
+      "io/netty/resolver/NameResolver.class": {
+        "ver": 50,
+        "acc": 1537,
+        "nme": "io/netty/resolver/NameResolver",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "resolve",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)Lio/netty/util/concurrent/Future;",
+            "sig": "(Ljava/lang/String;)Lio/netty/util/concurrent/Future<TT;>;"
+          },
+          {
+            "nme": "resolve",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Lio/netty/util/concurrent/Promise;)Lio/netty/util/concurrent/Future;",
+            "sig": "(Ljava/lang/String;Lio/netty/util/concurrent/Promise<TT;>;)Lio/netty/util/concurrent/Future<TT;>;"
+          },
+          {
+            "nme": "resolveAll",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)Lio/netty/util/concurrent/Future;",
+            "sig": "(Ljava/lang/String;)Lio/netty/util/concurrent/Future<Ljava/util/List<TT;>;>;"
+          },
+          {
+            "nme": "resolveAll",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Lio/netty/util/concurrent/Promise;)Lio/netty/util/concurrent/Future;",
+            "sig": "(Ljava/lang/String;Lio/netty/util/concurrent/Promise<Ljava/util/List<TT;>;>;)Lio/netty/util/concurrent/Future<Ljava/util/List<TT;>;>;"
+          },
+          {
+            "nme": "close",
+            "acc": 1025,
+            "dsc": "()V"
+          }
+        ],
+        "flds": []
+      },
+      "io/netty/resolver/HostsFileParser.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "io/netty/resolver/HostsFileParser",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "parseSilently",
+            "acc": 9,
+            "dsc": "()Lio/netty/resolver/HostsFileEntries;"
+          },
+          {
+            "nme": "parseSilently",
+            "acc": 137,
+            "dsc": "([Ljava/nio/charset/Charset;)Lio/netty/resolver/HostsFileEntries;"
+          },
+          {
+            "nme": "parse",
+            "acc": 9,
+            "dsc": "()Lio/netty/resolver/HostsFileEntries;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "parse",
+            "acc": 9,
+            "dsc": "(Ljava/io/File;)Lio/netty/resolver/HostsFileEntries;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "parse",
+            "acc": 137,
+            "dsc": "(Ljava/io/File;[Ljava/nio/charset/Charset;)Lio/netty/resolver/HostsFileEntries;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "parse",
+            "acc": 9,
+            "dsc": "(Ljava/io/Reader;)Lio/netty/resolver/HostsFileEntries;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "hostsFileEntries",
+            "acc": 10,
+            "dsc": "(Lio/netty/resolver/HostsFileEntriesProvider;)Lio/netty/resolver/HostsFileEntries;"
+          },
+          {
+            "nme": "toMapWithSingleValue",
+            "acc": 10,
+            "dsc": "(Ljava/util/Map;)Ljava/util/Map;",
+            "sig": "(Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/net/InetAddress;>;>;)Ljava/util/Map<Ljava/lang/String;*>;"
+          }
+        ],
+        "flds": []
+      },
+      "io/netty/resolver/ResolvedAddressTypes.class": {
+        "ver": 50,
+        "acc": 16433,
+        "nme": "io/netty/resolver/ResolvedAddressTypes",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lio/netty/resolver/ResolvedAddressTypes;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lio/netty/resolver/ResolvedAddressTypes;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "IPV4_ONLY",
+            "dsc": "Lio/netty/resolver/ResolvedAddressTypes;"
+          },
+          {
+            "acc": 16409,
+            "nme": "IPV6_ONLY",
+            "dsc": "Lio/netty/resolver/ResolvedAddressTypes;"
+          },
+          {
+            "acc": 16409,
+            "nme": "IPV4_PREFERRED",
+            "dsc": "Lio/netty/resolver/ResolvedAddressTypes;"
+          },
+          {
+            "acc": 16409,
+            "nme": "IPV6_PREFERRED",
+            "dsc": "Lio/netty/resolver/ResolvedAddressTypes;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lio/netty/resolver/ResolvedAddressTypes;"
+          }
+        ]
+      },
+      "io/netty/resolver/AddressResolverGroup$1.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "io/netty/resolver/AddressResolverGroup$1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lio/netty/resolver/AddressResolverGroup;Lio/netty/util/concurrent/EventExecutor;Lio/netty/resolver/AddressResolver;)V"
+          },
+          {
+            "nme": "operationComplete",
+            "acc": 1,
+            "dsc": "(Lio/netty/util/concurrent/Future;)V",
+            "sig": "(Lio/netty/util/concurrent/Future<Ljava/lang/Object;>;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4112,
+            "nme": "val$executor",
+            "dsc": "Lio/netty/util/concurrent/EventExecutor;"
+          },
+          {
+            "acc": 4112,
+            "nme": "val$newResolver",
+            "dsc": "Lio/netty/resolver/AddressResolver;"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lio/netty/resolver/AddressResolverGroup;"
+          }
+        ]
+      },
+      "io/netty/resolver/AddressResolver.class": {
+        "ver": 50,
+        "acc": 1537,
+        "nme": "io/netty/resolver/AddressResolver",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "isSupported",
+            "acc": 1025,
+            "dsc": "(Ljava/net/SocketAddress;)Z"
+          },
+          {
+            "nme": "isResolved",
+            "acc": 1025,
+            "dsc": "(Ljava/net/SocketAddress;)Z"
+          },
+          {
+            "nme": "resolve",
+            "acc": 1025,
+            "dsc": "(Ljava/net/SocketAddress;)Lio/netty/util/concurrent/Future;",
+            "sig": "(Ljava/net/SocketAddress;)Lio/netty/util/concurrent/Future<TT;>;"
+          },
+          {
+            "nme": "resolve",
+            "acc": 1025,
+            "dsc": "(Ljava/net/SocketAddress;Lio/netty/util/concurrent/Promise;)Lio/netty/util/concurrent/Future;",
+            "sig": "(Ljava/net/SocketAddress;Lio/netty/util/concurrent/Promise<TT;>;)Lio/netty/util/concurrent/Future<TT;>;"
+          },
+          {
+            "nme": "resolveAll",
+            "acc": 1025,
+            "dsc": "(Ljava/net/SocketAddress;)Lio/netty/util/concurrent/Future;",
+            "sig": "(Ljava/net/SocketAddress;)Lio/netty/util/concurrent/Future<Ljava/util/List<TT;>;>;"
+          },
+          {
+            "nme": "resolveAll",
+            "acc": 1025,
+            "dsc": "(Ljava/net/SocketAddress;Lio/netty/util/concurrent/Promise;)Lio/netty/util/concurrent/Future;",
+            "sig": "(Ljava/net/SocketAddress;Lio/netty/util/concurrent/Promise<Ljava/util/List<TT;>;>;)Lio/netty/util/concurrent/Future<Ljava/util/List<TT;>;>;"
+          },
+          {
+            "nme": "close",
+            "acc": 1025,
+            "dsc": "()V"
+          }
+        ],
+        "flds": []
+      },
+      "io/netty/resolver/NoopAddressResolverGroup.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "io/netty/resolver/NoopAddressResolverGroup",
+        "super": "io/netty/resolver/AddressResolverGroup",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "newResolver",
+            "acc": 4,
+            "dsc": "(Lio/netty/util/concurrent/EventExecutor;)Lio/netty/resolver/AddressResolver;",
+            "sig": "(Lio/netty/util/concurrent/EventExecutor;)Lio/netty/resolver/AddressResolver<Ljava/net/SocketAddress;>;",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lio/netty/resolver/NoopAddressResolverGroup;"
+          }
+        ]
+      },
+      "io/netty/resolver/CompositeNameResolver.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "io/netty/resolver/CompositeNameResolver",
+        "super": "io/netty/resolver/SimpleNameResolver",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 129,
+            "dsc": "(Lio/netty/util/concurrent/EventExecutor;[Lio/netty/resolver/NameResolver;)V",
+            "sig": "(Lio/netty/util/concurrent/EventExecutor;[Lio/netty/resolver/NameResolver<TT;>;)V"
+          },
+          {
+            "nme": "doResolve",
+            "acc": 4,
+            "dsc": "(Ljava/lang/String;Lio/netty/util/concurrent/Promise;)V",
+            "sig": "(Ljava/lang/String;Lio/netty/util/concurrent/Promise<TT;>;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "doResolveRec",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;Lio/netty/util/concurrent/Promise;ILjava/lang/Throwable;)V",
+            "sig": "(Ljava/lang/String;Lio/netty/util/concurrent/Promise<TT;>;ILjava/lang/Throwable;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "doResolveAll",
+            "acc": 4,
+            "dsc": "(Ljava/lang/String;Lio/netty/util/concurrent/Promise;)V",
+            "sig": "(Ljava/lang/String;Lio/netty/util/concurrent/Promise<Ljava/util/List<TT;>;>;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "doResolveAllRec",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;Lio/netty/util/concurrent/Promise;ILjava/lang/Throwable;)V",
+            "sig": "(Ljava/lang/String;Lio/netty/util/concurrent/Promise<Ljava/util/List<TT;>;>;ILjava/lang/Throwable;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "access$000",
+            "acc": 4104,
+            "dsc": "(Lio/netty/resolver/CompositeNameResolver;Ljava/lang/String;Lio/netty/util/concurrent/Promise;ILjava/lang/Throwable;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "access$100",
+            "acc": 4104,
+            "dsc": "(Lio/netty/resolver/CompositeNameResolver;Ljava/lang/String;Lio/netty/util/concurrent/Promise;ILjava/lang/Throwable;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "resolvers",
+            "dsc": "[Lio/netty/resolver/NameResolver;",
+            "sig": "[Lio/netty/resolver/NameResolver<TT;>;"
+          }
+        ]
+      },
+      "io/netty/resolver/AbstractAddressResolver.class": {
+        "ver": 50,
+        "acc": 1057,
+        "nme": "io/netty/resolver/AbstractAddressResolver",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(Lio/netty/util/concurrent/EventExecutor;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(Lio/netty/util/concurrent/EventExecutor;Ljava/lang/Class;)V",
+            "sig": "(Lio/netty/util/concurrent/EventExecutor;Ljava/lang/Class<+TT;>;)V"
+          },
+          {
+            "nme": "executor",
+            "acc": 4,
+            "dsc": "()Lio/netty/util/concurrent/EventExecutor;"
+          },
+          {
+            "nme": "isSupported",
+            "acc": 1,
+            "dsc": "(Ljava/net/SocketAddress;)Z"
+          },
+          {
+            "nme": "isResolved",
+            "acc": 17,
+            "dsc": "(Ljava/net/SocketAddress;)Z"
+          },
+          {
+            "nme": "doIsResolved",
+            "acc": 1028,
+            "dsc": "(Ljava/net/SocketAddress;)Z",
+            "sig": "(TT;)Z"
+          },
+          {
+            "nme": "resolve",
+            "acc": 17,
+            "dsc": "(Ljava/net/SocketAddress;)Lio/netty/util/concurrent/Future;",
+            "sig": "(Ljava/net/SocketAddress;)Lio/netty/util/concurrent/Future<TT;>;"
+          },
+          {
+            "nme": "resolve",
+            "acc": 17,
+            "dsc": "(Ljava/net/SocketAddress;Lio/netty/util/concurrent/Promise;)Lio/netty/util/concurrent/Future;",
+            "sig": "(Ljava/net/SocketAddress;Lio/netty/util/concurrent/Promise<TT;>;)Lio/netty/util/concurrent/Future<TT;>;"
+          },
+          {
+            "nme": "resolveAll",
+            "acc": 17,
+            "dsc": "(Ljava/net/SocketAddress;)Lio/netty/util/concurrent/Future;",
+            "sig": "(Ljava/net/SocketAddress;)Lio/netty/util/concurrent/Future<Ljava/util/List<TT;>;>;"
+          },
+          {
+            "nme": "resolveAll",
+            "acc": 17,
+            "dsc": "(Ljava/net/SocketAddress;Lio/netty/util/concurrent/Promise;)Lio/netty/util/concurrent/Future;",
+            "sig": "(Ljava/net/SocketAddress;Lio/netty/util/concurrent/Promise<Ljava/util/List<TT;>;>;)Lio/netty/util/concurrent/Future<Ljava/util/List<TT;>;>;"
+          },
+          {
+            "nme": "doResolve",
+            "acc": 1028,
+            "dsc": "(Ljava/net/SocketAddress;Lio/netty/util/concurrent/Promise;)V",
+            "sig": "(TT;Lio/netty/util/concurrent/Promise<TT;>;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "doResolveAll",
+            "acc": 1028,
+            "dsc": "(Ljava/net/SocketAddress;Lio/netty/util/concurrent/Promise;)V",
+            "sig": "(TT;Lio/netty/util/concurrent/Promise<Ljava/util/List<TT;>;>;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "close",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "executor",
+            "dsc": "Lio/netty/util/concurrent/EventExecutor;"
+          },
+          {
+            "acc": 18,
+            "nme": "matcher",
+            "dsc": "Lio/netty/util/internal/TypeParameterMatcher;"
+          }
+        ]
+      },
+      "io/netty/resolver/HostsFileEntries.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "io/netty/resolver/HostsFileEntries",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/util/Map;Ljava/util/Map;)V",
+            "sig": "(Ljava/util/Map<Ljava/lang/String;Ljava/net/Inet4Address;>;Ljava/util/Map<Ljava/lang/String;Ljava/net/Inet6Address;>;)V"
+          },
+          {
+            "nme": "inet4Entries",
+            "acc": 1,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<Ljava/lang/String;Ljava/net/Inet4Address;>;"
+          },
+          {
+            "nme": "inet6Entries",
+            "acc": 1,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<Ljava/lang/String;Ljava/net/Inet6Address;>;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 24,
+            "nme": "EMPTY",
+            "dsc": "Lio/netty/resolver/HostsFileEntries;"
+          },
+          {
+            "acc": 18,
+            "nme": "inet4Entries",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/String;Ljava/net/Inet4Address;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "inet6Entries",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/String;Ljava/net/Inet6Address;>;"
+          }
+        ]
+      },
+      "io/netty/resolver/HostsFileEntriesProvider.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "io/netty/resolver/HostsFileEntriesProvider",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "parser",
+            "acc": 9,
+            "dsc": "()Lio/netty/resolver/HostsFileEntriesProvider$Parser;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/util/Map;Ljava/util/Map;)V",
+            "sig": "(Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/net/InetAddress;>;>;Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/net/InetAddress;>;>;)V"
+          },
+          {
+            "nme": "ipv4Entries",
+            "acc": 1,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/net/InetAddress;>;>;"
+          },
+          {
+            "nme": "ipv6Entries",
+            "acc": 1,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/net/InetAddress;>;>;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 24,
+            "nme": "EMPTY",
+            "dsc": "Lio/netty/resolver/HostsFileEntriesProvider;"
+          },
+          {
+            "acc": 18,
+            "nme": "ipv4Entries",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/net/InetAddress;>;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "ipv6Entries",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/net/InetAddress;>;>;"
+          }
+        ]
+      },
+      "io/netty/resolver/RoundRobinInetAddressResolver$1.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "io/netty/resolver/RoundRobinInetAddressResolver$1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lio/netty/resolver/RoundRobinInetAddressResolver;Lio/netty/util/concurrent/Promise;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "operationComplete",
+            "acc": 1,
+            "dsc": "(Lio/netty/util/concurrent/Future;)V",
+            "sig": "(Lio/netty/util/concurrent/Future<Ljava/util/List<Ljava/net/InetAddress;>;>;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4112,
+            "nme": "val$promise",
+            "dsc": "Lio/netty/util/concurrent/Promise;"
+          },
+          {
+            "acc": 4112,
+            "nme": "val$inetHost",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lio/netty/resolver/RoundRobinInetAddressResolver;"
+          }
+        ]
+      },
+      "io/netty/resolver/HostsFileEntriesProvider$Parser.class": {
+        "ver": 50,
+        "acc": 1537,
+        "nme": "io/netty/resolver/HostsFileEntriesProvider$Parser",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "parse",
+            "acc": 1025,
+            "dsc": "()Lio/netty/resolver/HostsFileEntriesProvider;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "parse",
+            "acc": 1153,
+            "dsc": "([Ljava/nio/charset/Charset;)Lio/netty/resolver/HostsFileEntriesProvider;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "parse",
+            "acc": 1153,
+            "dsc": "(Ljava/io/File;[Ljava/nio/charset/Charset;)Lio/netty/resolver/HostsFileEntriesProvider;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "parse",
+            "acc": 1025,
+            "dsc": "(Ljava/io/Reader;)Lio/netty/resolver/HostsFileEntriesProvider;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "parseSilently",
+            "acc": 1025,
+            "dsc": "()Lio/netty/resolver/HostsFileEntriesProvider;"
+          },
+          {
+            "nme": "parseSilently",
+            "acc": 1153,
+            "dsc": "([Ljava/nio/charset/Charset;)Lio/netty/resolver/HostsFileEntriesProvider;"
+          },
+          {
+            "nme": "parseSilently",
+            "acc": 1153,
+            "dsc": "(Ljava/io/File;[Ljava/nio/charset/Charset;)Lio/netty/resolver/HostsFileEntriesProvider;"
+          }
+        ],
+        "flds": []
+      }
+    }
+  }
+}

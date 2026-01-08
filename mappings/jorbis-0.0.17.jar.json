@@ -1,0 +1,4383 @@
+{
+  "md5": "4794379b6074b962bb4cab21bfdb8d9c",
+  "sha2": "8872d22b293e8f5d7d56ff92be966e6dc28ebdc6",
+  "sha256": "e067f29a3701426b67ed973036949c6e58ca5bb53eef7240b2e71e286d252a9e",
+  "contents": {
+    "classes": {
+      "com/jcraft/jorbis/Lsp.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/Lsp",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lsp_to_curve",
+            "acc": 8,
+            "dsc": "([F[III[FIFF)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 24,
+            "nme": "M_PI",
+            "dsc": "F",
+            "val": 3.1415927
+          }
+        ]
+      },
+      "com/jcraft/jogg/Packet.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/jcraft/jogg/Packet",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "packet_base",
+            "dsc": "[B"
+          },
+          {
+            "acc": 1,
+            "nme": "packet",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "bytes",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "b_o_s",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "e_o_s",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "granulepos",
+            "dsc": "J"
+          },
+          {
+            "acc": 1,
+            "nme": "packetno",
+            "dsc": "J"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/PsyInfo.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/PsyInfo",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "free",
+            "acc": 0,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "athp",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "decayp",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "smoothp",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "noisefitp",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "noisefit_subblock",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "noisefit_threshdB",
+            "dsc": "F"
+          },
+          {
+            "acc": 0,
+            "nme": "ath_att",
+            "dsc": "F"
+          },
+          {
+            "acc": 0,
+            "nme": "tonemaskp",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "toneatt_125Hz",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "toneatt_250Hz",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "toneatt_500Hz",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "toneatt_1000Hz",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "toneatt_2000Hz",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "toneatt_4000Hz",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "toneatt_8000Hz",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "peakattp",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "peakatt_125Hz",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "peakatt_250Hz",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "peakatt_500Hz",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "peakatt_1000Hz",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "peakatt_2000Hz",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "peakatt_4000Hz",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "peakatt_8000Hz",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "noisemaskp",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "noiseatt_125Hz",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "noiseatt_250Hz",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "noiseatt_500Hz",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "noiseatt_1000Hz",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "noiseatt_2000Hz",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "noiseatt_4000Hz",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "noiseatt_8000Hz",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "max_curve_dB",
+            "dsc": "F"
+          },
+          {
+            "acc": 0,
+            "nme": "attack_coeff",
+            "dsc": "F"
+          },
+          {
+            "acc": 0,
+            "nme": "decay_coeff",
+            "dsc": "F"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/Residue0.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/Residue0",
+        "super": "com/jcraft/jorbis/FuncResidue",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "pack",
+            "acc": 0,
+            "dsc": "(Ljava/lang/Object;Lcom/jcraft/jogg/Buffer;)V"
+          },
+          {
+            "nme": "unpack",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Info;Lcom/jcraft/jogg/Buffer;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "look",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/DspState;Lcom/jcraft/jorbis/InfoMode;Ljava/lang/Object;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "free_info",
+            "acc": 0,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "free_look",
+            "acc": 0,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "_01inverse",
+            "acc": 40,
+            "dsc": "(Lcom/jcraft/jorbis/Block;Ljava/lang/Object;[[FII)I"
+          },
+          {
+            "nme": "_2inverse",
+            "acc": 40,
+            "dsc": "(Lcom/jcraft/jorbis/Block;Ljava/lang/Object;[[FI)I"
+          },
+          {
+            "nme": "inverse",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Block;Ljava/lang/Object;[[F[II)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 10,
+            "nme": "_01inverse_partword",
+            "dsc": "[[[I"
+          },
+          {
+            "acc": 8,
+            "nme": "_2inverse_partword",
+            "dsc": "[[I"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/PsyLook.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/PsyLook",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "init",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/PsyInfo;II)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "n",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "vi",
+            "dsc": "Lcom/jcraft/jorbis/PsyInfo;"
+          },
+          {
+            "acc": 0,
+            "nme": "tonecurves",
+            "dsc": "[[[F"
+          },
+          {
+            "acc": 0,
+            "nme": "peakatt",
+            "dsc": "[[F"
+          },
+          {
+            "acc": 0,
+            "nme": "noisecurves",
+            "dsc": "[[[F"
+          },
+          {
+            "acc": 0,
+            "nme": "ath",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "octave",
+            "dsc": "[I"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/FuncResidue.class": {
+        "ver": 50,
+        "acc": 1056,
+        "nme": "com/jcraft/jorbis/FuncResidue",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "pack",
+            "acc": 1024,
+            "dsc": "(Ljava/lang/Object;Lcom/jcraft/jogg/Buffer;)V"
+          },
+          {
+            "nme": "unpack",
+            "acc": 1024,
+            "dsc": "(Lcom/jcraft/jorbis/Info;Lcom/jcraft/jogg/Buffer;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "look",
+            "acc": 1024,
+            "dsc": "(Lcom/jcraft/jorbis/DspState;Lcom/jcraft/jorbis/InfoMode;Ljava/lang/Object;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "free_info",
+            "acc": 1024,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "free_look",
+            "acc": 1024,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "inverse",
+            "acc": 1024,
+            "dsc": "(Lcom/jcraft/jorbis/Block;Ljava/lang/Object;[[F[II)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 9,
+            "nme": "residue_P",
+            "dsc": "[Lcom/jcraft/jorbis/FuncResidue;"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/Floor1$LookFloor1.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/Floor1$LookFloor1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Floor1;)V"
+          },
+          {
+            "nme": "free",
+            "acc": 0,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 24,
+            "nme": "VIF_POSIT",
+            "dsc": "I",
+            "val": 63
+          },
+          {
+            "acc": 0,
+            "nme": "sorted_index",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "forward_index",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "reverse_index",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "hineighbor",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "loneighbor",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "posts",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "n",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "quant_q",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "vi",
+            "dsc": "Lcom/jcraft/jorbis/Floor1$InfoFloor1;"
+          },
+          {
+            "acc": 0,
+            "nme": "phrasebits",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "postbits",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "frames",
+            "dsc": "I"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lcom/jcraft/jorbis/Floor1;"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/FuncMapping.class": {
+        "ver": 50,
+        "acc": 1056,
+        "nme": "com/jcraft/jorbis/FuncMapping",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "pack",
+            "acc": 1024,
+            "dsc": "(Lcom/jcraft/jorbis/Info;Ljava/lang/Object;Lcom/jcraft/jogg/Buffer;)V"
+          },
+          {
+            "nme": "unpack",
+            "acc": 1024,
+            "dsc": "(Lcom/jcraft/jorbis/Info;Lcom/jcraft/jogg/Buffer;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "look",
+            "acc": 1024,
+            "dsc": "(Lcom/jcraft/jorbis/DspState;Lcom/jcraft/jorbis/InfoMode;Ljava/lang/Object;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "free_info",
+            "acc": 1024,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "free_look",
+            "acc": 1024,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "inverse",
+            "acc": 1024,
+            "dsc": "(Lcom/jcraft/jorbis/Block;Ljava/lang/Object;)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 9,
+            "nme": "mapping_P",
+            "dsc": "[Lcom/jcraft/jorbis/FuncMapping;"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/Residue2.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/Residue2",
+        "super": "com/jcraft/jorbis/Residue0",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "inverse",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Block;Ljava/lang/Object;[[F[II)I"
+          }
+        ],
+        "flds": []
+      },
+      "com/jcraft/jorbis/InfoMode.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/InfoMode",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "blockflag",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "windowtype",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "transformtype",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "mapping",
+            "dsc": "I"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/Floor0$InfoFloor0.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/Floor0$InfoFloor0",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Floor0;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "order",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "rate",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "barkmap",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "ampbits",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "ampdB",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "numbooks",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "books",
+            "dsc": "[I"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lcom/jcraft/jorbis/Floor0;"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/Info.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/jcraft/jorbis/Info",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "init",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "clear",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "unpack_info",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jogg/Buffer;)I"
+          },
+          {
+            "nme": "unpack_books",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jogg/Buffer;)I"
+          },
+          {
+            "nme": "synthesis_headerin",
+            "acc": 1,
+            "dsc": "(Lcom/jcraft/jorbis/Comment;Lcom/jcraft/jogg/Packet;)I"
+          },
+          {
+            "nme": "pack_info",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jogg/Buffer;)I"
+          },
+          {
+            "nme": "pack_books",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jogg/Buffer;)I"
+          },
+          {
+            "nme": "blocksize",
+            "acc": 1,
+            "dsc": "(Lcom/jcraft/jogg/Packet;)I"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "OV_EBADPACKET",
+            "dsc": "I",
+            "val": -136
+          },
+          {
+            "acc": 26,
+            "nme": "OV_ENOTAUDIO",
+            "dsc": "I",
+            "val": -135
+          },
+          {
+            "acc": 10,
+            "nme": "_vorbis",
+            "dsc": "[B"
+          },
+          {
+            "acc": 26,
+            "nme": "VI_TIMEB",
+            "dsc": "I",
+            "val": 1
+          },
+          {
+            "acc": 26,
+            "nme": "VI_FLOORB",
+            "dsc": "I",
+            "val": 2
+          },
+          {
+            "acc": 26,
+            "nme": "VI_RESB",
+            "dsc": "I",
+            "val": 3
+          },
+          {
+            "acc": 26,
+            "nme": "VI_MAPB",
+            "dsc": "I",
+            "val": 1
+          },
+          {
+            "acc": 26,
+            "nme": "VI_WINDOWB",
+            "dsc": "I",
+            "val": 1
+          },
+          {
+            "acc": 1,
+            "nme": "version",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "channels",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "rate",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "bitrate_upper",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "bitrate_nominal",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "bitrate_lower",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "blocksizes",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "modes",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "maps",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "times",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "floors",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "residues",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "books",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "psys",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "mode_param",
+            "dsc": "[Lcom/jcraft/jorbis/InfoMode;"
+          },
+          {
+            "acc": 0,
+            "nme": "map_type",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "map_param",
+            "dsc": "[Ljava/lang/Object;"
+          },
+          {
+            "acc": 0,
+            "nme": "time_type",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "time_param",
+            "dsc": "[Ljava/lang/Object;"
+          },
+          {
+            "acc": 0,
+            "nme": "floor_type",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "floor_param",
+            "dsc": "[Ljava/lang/Object;"
+          },
+          {
+            "acc": 0,
+            "nme": "residue_type",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "residue_param",
+            "dsc": "[Ljava/lang/Object;"
+          },
+          {
+            "acc": 0,
+            "nme": "book_param",
+            "dsc": "[Lcom/jcraft/jorbis/StaticCodeBook;"
+          },
+          {
+            "acc": 0,
+            "nme": "psy_param",
+            "dsc": "[Lcom/jcraft/jorbis/PsyInfo;"
+          },
+          {
+            "acc": 0,
+            "nme": "envelopesa",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "preecho_thresh",
+            "dsc": "F"
+          },
+          {
+            "acc": 0,
+            "nme": "preecho_clamp",
+            "dsc": "F"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/Mdct.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/Mdct",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "init",
+            "acc": 0,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "clear",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "forward",
+            "acc": 0,
+            "dsc": "([F[F)V"
+          },
+          {
+            "nme": "backward",
+            "acc": 32,
+            "dsc": "([F[F)V"
+          },
+          {
+            "nme": "mdct_kernel",
+            "acc": 2,
+            "dsc": "([F[FIIII)[F"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "n",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "log2n",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "trig",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "bitrev",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "scale",
+            "dsc": "F"
+          },
+          {
+            "acc": 0,
+            "nme": "_x",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "_w",
+            "dsc": "[F"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/Floor0.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/Floor0",
+        "super": "com/jcraft/jorbis/FuncFloor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "pack",
+            "acc": 0,
+            "dsc": "(Ljava/lang/Object;Lcom/jcraft/jogg/Buffer;)V"
+          },
+          {
+            "nme": "unpack",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Info;Lcom/jcraft/jogg/Buffer;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "look",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/DspState;Lcom/jcraft/jorbis/InfoMode;Ljava/lang/Object;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "toBARK",
+            "acc": 8,
+            "dsc": "(F)F"
+          },
+          {
+            "nme": "state",
+            "acc": 0,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "free_info",
+            "acc": 0,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "free_look",
+            "acc": 0,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "free_state",
+            "acc": 0,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "forward",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Block;Ljava/lang/Object;[F[FLjava/lang/Object;)I"
+          },
+          {
+            "nme": "inverse",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Block;Ljava/lang/Object;[F)I"
+          },
+          {
+            "nme": "inverse1",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Block;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "inverse2",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Block;Ljava/lang/Object;Ljava/lang/Object;[F)I"
+          },
+          {
+            "nme": "fromdB",
+            "acc": 8,
+            "dsc": "(F)F"
+          },
+          {
+            "nme": "lsp_to_lpc",
+            "acc": 8,
+            "dsc": "([F[FI)V"
+          },
+          {
+            "nme": "lpc_to_curve",
+            "acc": 8,
+            "dsc": "([F[FFLcom/jcraft/jorbis/Floor0$LookFloor0;Ljava/lang/String;I)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "lsp",
+            "dsc": "[F"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/Block.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/jcraft/jorbis/Block",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/jcraft/jorbis/DspState;)V"
+          },
+          {
+            "nme": "init",
+            "acc": 1,
+            "dsc": "(Lcom/jcraft/jorbis/DspState;)V"
+          },
+          {
+            "nme": "clear",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "synthesis",
+            "acc": 1,
+            "dsc": "(Lcom/jcraft/jogg/Packet;)I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "pcm",
+            "dsc": "[[F"
+          },
+          {
+            "acc": 0,
+            "nme": "opb",
+            "dsc": "Lcom/jcraft/jogg/Buffer;"
+          },
+          {
+            "acc": 0,
+            "nme": "lW",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "W",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "nW",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "pcmend",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "mode",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "eofflag",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "granulepos",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "sequence",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "vd",
+            "dsc": "Lcom/jcraft/jorbis/DspState;"
+          },
+          {
+            "acc": 0,
+            "nme": "glue_bits",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "time_bits",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "floor_bits",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "res_bits",
+            "dsc": "I"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/Lookup.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/Lookup",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "coslook",
+            "acc": 8,
+            "dsc": "(F)F"
+          },
+          {
+            "nme": "invsqlook",
+            "acc": 8,
+            "dsc": "(F)F"
+          },
+          {
+            "nme": "invsq2explook",
+            "acc": 8,
+            "dsc": "(I)F"
+          },
+          {
+            "nme": "fromdBlook",
+            "acc": 8,
+            "dsc": "(F)F"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 24,
+            "nme": "COS_LOOKUP_SZ",
+            "dsc": "I",
+            "val": 128
+          },
+          {
+            "acc": 24,
+            "nme": "COS_LOOKUP",
+            "dsc": "[F"
+          },
+          {
+            "acc": 24,
+            "nme": "INVSQ_LOOKUP_SZ",
+            "dsc": "I",
+            "val": 32
+          },
+          {
+            "acc": 24,
+            "nme": "INVSQ_LOOKUP",
+            "dsc": "[F"
+          },
+          {
+            "acc": 24,
+            "nme": "INVSQ2EXP_LOOKUP_MIN",
+            "dsc": "I",
+            "val": -32
+          },
+          {
+            "acc": 24,
+            "nme": "INVSQ2EXP_LOOKUP_MAX",
+            "dsc": "I",
+            "val": 32
+          },
+          {
+            "acc": 24,
+            "nme": "INVSQ2EXP_LOOKUP",
+            "dsc": "[F"
+          },
+          {
+            "acc": 24,
+            "nme": "FROMdB_LOOKUP_SZ",
+            "dsc": "I",
+            "val": 35
+          },
+          {
+            "acc": 24,
+            "nme": "FROMdB2_LOOKUP_SZ",
+            "dsc": "I",
+            "val": 32
+          },
+          {
+            "acc": 24,
+            "nme": "FROMdB_SHIFT",
+            "dsc": "I",
+            "val": 5
+          },
+          {
+            "acc": 24,
+            "nme": "FROMdB2_SHIFT",
+            "dsc": "I",
+            "val": 3
+          },
+          {
+            "acc": 24,
+            "nme": "FROMdB2_MASK",
+            "dsc": "I",
+            "val": 31
+          },
+          {
+            "acc": 24,
+            "nme": "FROMdB_LOOKUP",
+            "dsc": "[F"
+          },
+          {
+            "acc": 24,
+            "nme": "FROMdB2_LOOKUP",
+            "dsc": "[F"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/FuncFloor.class": {
+        "ver": 50,
+        "acc": 1056,
+        "nme": "com/jcraft/jorbis/FuncFloor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "pack",
+            "acc": 1024,
+            "dsc": "(Ljava/lang/Object;Lcom/jcraft/jogg/Buffer;)V"
+          },
+          {
+            "nme": "unpack",
+            "acc": 1024,
+            "dsc": "(Lcom/jcraft/jorbis/Info;Lcom/jcraft/jogg/Buffer;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "look",
+            "acc": 1024,
+            "dsc": "(Lcom/jcraft/jorbis/DspState;Lcom/jcraft/jorbis/InfoMode;Ljava/lang/Object;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "free_info",
+            "acc": 1024,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "free_look",
+            "acc": 1024,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "free_state",
+            "acc": 1024,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "forward",
+            "acc": 1024,
+            "dsc": "(Lcom/jcraft/jorbis/Block;Ljava/lang/Object;[F[FLjava/lang/Object;)I"
+          },
+          {
+            "nme": "inverse1",
+            "acc": 1024,
+            "dsc": "(Lcom/jcraft/jorbis/Block;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "inverse2",
+            "acc": 1024,
+            "dsc": "(Lcom/jcraft/jorbis/Block;Ljava/lang/Object;Ljava/lang/Object;[F)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 9,
+            "nme": "floor_P",
+            "dsc": "[Lcom/jcraft/jorbis/FuncFloor;"
+          }
+        ]
+      },
+      "com/jcraft/jogg/SyncState.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/jcraft/jogg/SyncState",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "clear",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "buffer",
+            "acc": 1,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "wrote",
+            "acc": 1,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "pageseek",
+            "acc": 1,
+            "dsc": "(Lcom/jcraft/jogg/Page;)I"
+          },
+          {
+            "nme": "pageout",
+            "acc": 1,
+            "dsc": "(Lcom/jcraft/jogg/Page;)I"
+          },
+          {
+            "nme": "reset",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "init",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getDataOffset",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getBufferOffset",
+            "acc": 1,
+            "dsc": "()I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "data",
+            "dsc": "[B"
+          },
+          {
+            "acc": 0,
+            "nme": "storage",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "fill",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "returned",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "unsynced",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "headerbytes",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "bodybytes",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "pageseek",
+            "dsc": "Lcom/jcraft/jogg/Page;"
+          },
+          {
+            "acc": 2,
+            "nme": "chksum",
+            "dsc": "[B"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/Floor1$EchstateFloor1.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/Floor1$EchstateFloor1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Floor1;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "codewords",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "curve",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "frameno",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "codes",
+            "dsc": "J"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lcom/jcraft/jorbis/Floor1;"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/VorbisFile$SeekableInputStream.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/VorbisFile$SeekableInputStream",
+        "super": "java/io/InputStream",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/VorbisFile;Ljava/lang/String;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "read",
+            "acc": 1,
+            "dsc": "()I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "read",
+            "acc": 1,
+            "dsc": "([B)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "read",
+            "acc": 1,
+            "dsc": "([BII)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "skip",
+            "acc": 1,
+            "dsc": "(J)J",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "getLength",
+            "acc": 1,
+            "dsc": "()J",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "tell",
+            "acc": 1,
+            "dsc": "()J",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "available",
+            "acc": 1,
+            "dsc": "()I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "close",
+            "acc": 1,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "mark",
+            "acc": 33,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "reset",
+            "acc": 33,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "markSupported",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "seek",
+            "acc": 1,
+            "dsc": "(J)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "raf",
+            "dsc": "Ljava/io/RandomAccessFile;"
+          },
+          {
+            "acc": 16,
+            "nme": "mode",
+            "dsc": "Ljava/lang/String;",
+            "val": "r"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lcom/jcraft/jorbis/VorbisFile;"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/Lpc.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/Lpc",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lpc_from_data",
+            "acc": 8,
+            "dsc": "([F[FII)F"
+          },
+          {
+            "nme": "lpc_from_curve",
+            "acc": 0,
+            "dsc": "([F[F)F"
+          },
+          {
+            "nme": "init",
+            "acc": 0,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "clear",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "FAST_HYPOT",
+            "acc": 8,
+            "dsc": "(FF)F"
+          },
+          {
+            "nme": "lpc_to_curve",
+            "acc": 0,
+            "dsc": "([F[FF)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "fft",
+            "dsc": "Lcom/jcraft/jorbis/Drft;"
+          },
+          {
+            "acc": 0,
+            "nme": "ln",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "m",
+            "dsc": "I"
+          }
+        ]
+      },
+      "com/jcraft/jogg/StreamState.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/jcraft/jogg/StreamState",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "init",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "init",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "clear",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "destroy",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "body_expand",
+            "acc": 0,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "lacing_expand",
+            "acc": 0,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "packetin",
+            "acc": 1,
+            "dsc": "(Lcom/jcraft/jogg/Packet;)I"
+          },
+          {
+            "nme": "packetout",
+            "acc": 1,
+            "dsc": "(Lcom/jcraft/jogg/Packet;)I"
+          },
+          {
+            "nme": "pagein",
+            "acc": 1,
+            "dsc": "(Lcom/jcraft/jogg/Page;)I"
+          },
+          {
+            "nme": "flush",
+            "acc": 1,
+            "dsc": "(Lcom/jcraft/jogg/Page;)I"
+          },
+          {
+            "nme": "pageout",
+            "acc": 1,
+            "dsc": "(Lcom/jcraft/jogg/Page;)I"
+          },
+          {
+            "nme": "eof",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "reset",
+            "acc": 1,
+            "dsc": "()I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "body_data",
+            "dsc": "[B"
+          },
+          {
+            "acc": 0,
+            "nme": "body_storage",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "body_fill",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "body_returned",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "lacing_vals",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "granule_vals",
+            "dsc": "[J"
+          },
+          {
+            "acc": 0,
+            "nme": "lacing_storage",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "lacing_fill",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "lacing_packet",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "lacing_returned",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "header",
+            "dsc": "[B"
+          },
+          {
+            "acc": 0,
+            "nme": "header_fill",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "e_o_s",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "b_o_s",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "serialno",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "pageno",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "packetno",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "granulepos",
+            "dsc": "J"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/Comment.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/jcraft/jorbis/Comment",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "init",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "add",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "add",
+            "acc": 2,
+            "dsc": "([B)V"
+          },
+          {
+            "nme": "add_tag",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "tagcompare",
+            "acc": 8,
+            "dsc": "([B[BI)Z"
+          },
+          {
+            "nme": "query",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "query",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;I)Ljava/lang/String;"
+          },
+          {
+            "nme": "query",
+            "acc": 2,
+            "dsc": "([BI)I"
+          },
+          {
+            "nme": "unpack",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jogg/Buffer;)I"
+          },
+          {
+            "nme": "pack",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jogg/Buffer;)I"
+          },
+          {
+            "nme": "header_out",
+            "acc": 1,
+            "dsc": "(Lcom/jcraft/jogg/Packet;)I"
+          },
+          {
+            "nme": "clear",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getVendor",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getComment",
+            "acc": 1,
+            "dsc": "(I)Ljava/lang/String;"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 10,
+            "nme": "_vorbis",
+            "dsc": "[B"
+          },
+          {
+            "acc": 10,
+            "nme": "_vendor",
+            "dsc": "[B"
+          },
+          {
+            "acc": 26,
+            "nme": "OV_EIMPL",
+            "dsc": "I",
+            "val": -130
+          },
+          {
+            "acc": 1,
+            "nme": "user_comments",
+            "dsc": "[[B"
+          },
+          {
+            "acc": 1,
+            "nme": "comment_lengths",
+            "dsc": "[I"
+          },
+          {
+            "acc": 1,
+            "nme": "comments",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "vendor",
+            "dsc": "[B"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/Mapping0.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/Mapping0",
+        "super": "com/jcraft/jorbis/FuncMapping",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "free_info",
+            "acc": 0,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "free_look",
+            "acc": 0,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "look",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/DspState;Lcom/jcraft/jorbis/InfoMode;Ljava/lang/Object;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "pack",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Info;Ljava/lang/Object;Lcom/jcraft/jogg/Buffer;)V"
+          },
+          {
+            "nme": "unpack",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Info;Lcom/jcraft/jogg/Buffer;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "inverse",
+            "acc": 32,
+            "dsc": "(Lcom/jcraft/jorbis/Block;Ljava/lang/Object;)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 8,
+            "nme": "seq",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "pcmbundle",
+            "dsc": "[[F"
+          },
+          {
+            "acc": 0,
+            "nme": "zerobundle",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "nonzero",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "floormemo",
+            "dsc": "[Ljava/lang/Object;"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/Residue1.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/Residue1",
+        "super": "com/jcraft/jorbis/Residue0",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "inverse",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Block;Ljava/lang/Object;[[F[II)I"
+          }
+        ],
+        "flds": []
+      },
+      "com/jcraft/jorbis/Floor0$LookFloor0.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/Floor0$LookFloor0",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Floor0;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "n",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "ln",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "m",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "linearmap",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "vi",
+            "dsc": "Lcom/jcraft/jorbis/Floor0$InfoFloor0;"
+          },
+          {
+            "acc": 0,
+            "nme": "lpclook",
+            "dsc": "Lcom/jcraft/jorbis/Lpc;"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lcom/jcraft/jorbis/Floor0;"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/Floor1$InfoFloor1.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/Floor1$InfoFloor1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Floor1;)V"
+          },
+          {
+            "nme": "free",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "copy_info",
+            "acc": 0,
+            "dsc": "()Ljava/lang/Object;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 24,
+            "nme": "VIF_POSIT",
+            "dsc": "I",
+            "val": 63
+          },
+          {
+            "acc": 24,
+            "nme": "VIF_CLASS",
+            "dsc": "I",
+            "val": 16
+          },
+          {
+            "acc": 24,
+            "nme": "VIF_PARTS",
+            "dsc": "I",
+            "val": 31
+          },
+          {
+            "acc": 0,
+            "nme": "partitions",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "partitionclass",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "class_dim",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "class_subs",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "class_book",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "class_subbook",
+            "dsc": "[[I"
+          },
+          {
+            "acc": 0,
+            "nme": "mult",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "postlist",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "maxover",
+            "dsc": "F"
+          },
+          {
+            "acc": 0,
+            "nme": "maxunder",
+            "dsc": "F"
+          },
+          {
+            "acc": 0,
+            "nme": "maxerr",
+            "dsc": "F"
+          },
+          {
+            "acc": 0,
+            "nme": "twofitminsize",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "twofitminused",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "twofitweight",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "twofitatten",
+            "dsc": "F"
+          },
+          {
+            "acc": 0,
+            "nme": "unusedminsize",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "unusedmin_n",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "n",
+            "dsc": "I"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lcom/jcraft/jorbis/Floor1;"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/DspState.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/jcraft/jorbis/DspState",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "window",
+            "acc": 8,
+            "dsc": "(IIII)[F"
+          },
+          {
+            "nme": "init",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Info;Z)I"
+          },
+          {
+            "nme": "synthesis_init",
+            "acc": 1,
+            "dsc": "(Lcom/jcraft/jorbis/Info;)I"
+          },
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Info;)V"
+          },
+          {
+            "nme": "synthesis_blockin",
+            "acc": 1,
+            "dsc": "(Lcom/jcraft/jorbis/Block;)I"
+          },
+          {
+            "nme": "synthesis_pcmout",
+            "acc": 1,
+            "dsc": "([[[F[I)I"
+          },
+          {
+            "nme": "synthesis_read",
+            "acc": 1,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "clear",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 24,
+            "nme": "M_PI",
+            "dsc": "F",
+            "val": 3.1415927
+          },
+          {
+            "acc": 24,
+            "nme": "VI_TRANSFORMB",
+            "dsc": "I",
+            "val": 1
+          },
+          {
+            "acc": 24,
+            "nme": "VI_WINDOWB",
+            "dsc": "I",
+            "val": 1
+          },
+          {
+            "acc": 0,
+            "nme": "analysisp",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "vi",
+            "dsc": "Lcom/jcraft/jorbis/Info;"
+          },
+          {
+            "acc": 0,
+            "nme": "modebits",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "pcm",
+            "dsc": "[[F"
+          },
+          {
+            "acc": 0,
+            "nme": "pcm_storage",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "pcm_current",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "pcm_returned",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "multipliers",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "envelope_storage",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "envelope_current",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "eofflag",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "lW",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "W",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "nW",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "centerW",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "granulepos",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "sequence",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "glue_bits",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "time_bits",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "floor_bits",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "res_bits",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "window",
+            "dsc": "[[[[[F"
+          },
+          {
+            "acc": 0,
+            "nme": "transform",
+            "dsc": "[[Ljava/lang/Object;"
+          },
+          {
+            "acc": 0,
+            "nme": "fullbooks",
+            "dsc": "[Lcom/jcraft/jorbis/CodeBook;"
+          },
+          {
+            "acc": 0,
+            "nme": "mode",
+            "dsc": "[Ljava/lang/Object;"
+          },
+          {
+            "acc": 0,
+            "nme": "header",
+            "dsc": "[B"
+          },
+          {
+            "acc": 0,
+            "nme": "header1",
+            "dsc": "[B"
+          },
+          {
+            "acc": 0,
+            "nme": "header2",
+            "dsc": "[B"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/Time0.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/Time0",
+        "super": "com/jcraft/jorbis/FuncTime",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "pack",
+            "acc": 0,
+            "dsc": "(Ljava/lang/Object;Lcom/jcraft/jogg/Buffer;)V"
+          },
+          {
+            "nme": "unpack",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Info;Lcom/jcraft/jogg/Buffer;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "look",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/DspState;Lcom/jcraft/jorbis/InfoMode;Ljava/lang/Object;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "free_info",
+            "acc": 0,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "free_look",
+            "acc": 0,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "inverse",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Block;Ljava/lang/Object;[F[F)I"
+          }
+        ],
+        "flds": []
+      },
+      "com/jcraft/jorbis/Floor0$EchstateFloor0.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/Floor0$EchstateFloor0",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Floor0;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "codewords",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "curve",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "frameno",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "codes",
+            "dsc": "J"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lcom/jcraft/jorbis/Floor0;"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/Floor1$Lsfit_acc.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/Floor1$Lsfit_acc",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Floor1;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "x0",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "x1",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "xa",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "ya",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "x2a",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "y2a",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "xya",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "n",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "an",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "un",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "edgey0",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "edgey1",
+            "dsc": "J"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lcom/jcraft/jorbis/Floor1;"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/FuncTime.class": {
+        "ver": 50,
+        "acc": 1056,
+        "nme": "com/jcraft/jorbis/FuncTime",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "pack",
+            "acc": 1024,
+            "dsc": "(Ljava/lang/Object;Lcom/jcraft/jogg/Buffer;)V"
+          },
+          {
+            "nme": "unpack",
+            "acc": 1024,
+            "dsc": "(Lcom/jcraft/jorbis/Info;Lcom/jcraft/jogg/Buffer;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "look",
+            "acc": 1024,
+            "dsc": "(Lcom/jcraft/jorbis/DspState;Lcom/jcraft/jorbis/InfoMode;Ljava/lang/Object;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "free_info",
+            "acc": 1024,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "free_look",
+            "acc": 1024,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "inverse",
+            "acc": 1024,
+            "dsc": "(Lcom/jcraft/jorbis/Block;Ljava/lang/Object;[F[F)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 9,
+            "nme": "time_P",
+            "dsc": "[Lcom/jcraft/jorbis/FuncTime;"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/CodeBook.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/CodeBook",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "encode",
+            "acc": 0,
+            "dsc": "(ILcom/jcraft/jogg/Buffer;)I"
+          },
+          {
+            "nme": "errorv",
+            "acc": 0,
+            "dsc": "([F)I"
+          },
+          {
+            "nme": "encodev",
+            "acc": 0,
+            "dsc": "(I[FLcom/jcraft/jogg/Buffer;)I"
+          },
+          {
+            "nme": "encodevs",
+            "acc": 0,
+            "dsc": "([FLcom/jcraft/jogg/Buffer;II)I"
+          },
+          {
+            "nme": "decodevs_add",
+            "acc": 32,
+            "dsc": "([FILcom/jcraft/jogg/Buffer;I)I"
+          },
+          {
+            "nme": "decodev_add",
+            "acc": 0,
+            "dsc": "([FILcom/jcraft/jogg/Buffer;I)I"
+          },
+          {
+            "nme": "decodev_set",
+            "acc": 0,
+            "dsc": "([FILcom/jcraft/jogg/Buffer;I)I"
+          },
+          {
+            "nme": "decodevv_add",
+            "acc": 0,
+            "dsc": "([[FIILcom/jcraft/jogg/Buffer;I)I"
+          },
+          {
+            "nme": "decode",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jogg/Buffer;)I"
+          },
+          {
+            "nme": "decodevs",
+            "acc": 0,
+            "dsc": "([FILcom/jcraft/jogg/Buffer;II)I"
+          },
+          {
+            "nme": "best",
+            "acc": 0,
+            "dsc": "([FI)I"
+          },
+          {
+            "nme": "besterror",
+            "acc": 0,
+            "dsc": "([FII)I"
+          },
+          {
+            "nme": "clear",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "dist",
+            "acc": 10,
+            "dsc": "(I[FI[FI)F"
+          },
+          {
+            "nme": "init_decode",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/StaticCodeBook;)I"
+          },
+          {
+            "nme": "make_words",
+            "acc": 8,
+            "dsc": "([II)[I"
+          },
+          {
+            "nme": "make_decode_tree",
+            "acc": 0,
+            "dsc": "()Lcom/jcraft/jorbis/CodeBook$DecodeAux;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "dim",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "entries",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "c",
+            "dsc": "Lcom/jcraft/jorbis/StaticCodeBook;"
+          },
+          {
+            "acc": 0,
+            "nme": "valuelist",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "codelist",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "decode_tree",
+            "dsc": "Lcom/jcraft/jorbis/CodeBook$DecodeAux;"
+          },
+          {
+            "acc": 2,
+            "nme": "t",
+            "dsc": "[I"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/CodeBook$DecodeAux.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/CodeBook$DecodeAux",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/CodeBook;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "tab",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "tabl",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "tabn",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "ptr0",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "ptr1",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "aux",
+            "dsc": "I"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lcom/jcraft/jorbis/CodeBook;"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/JOrbisException.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/jcraft/jorbis/JOrbisException",
+        "super": "java/lang/Exception",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": 1
+          }
+        ]
+      },
+      "com/jcraft/jorbis/Floor1.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/Floor1",
+        "super": "com/jcraft/jorbis/FuncFloor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "pack",
+            "acc": 0,
+            "dsc": "(Ljava/lang/Object;Lcom/jcraft/jogg/Buffer;)V"
+          },
+          {
+            "nme": "unpack",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Info;Lcom/jcraft/jogg/Buffer;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "look",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/DspState;Lcom/jcraft/jorbis/InfoMode;Ljava/lang/Object;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "free_info",
+            "acc": 0,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "free_look",
+            "acc": 0,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "free_state",
+            "acc": 0,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "forward",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Block;Ljava/lang/Object;[F[FLjava/lang/Object;)I"
+          },
+          {
+            "nme": "inverse1",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Block;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "render_point",
+            "acc": 10,
+            "dsc": "(IIIII)I"
+          },
+          {
+            "nme": "inverse2",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Block;Ljava/lang/Object;Ljava/lang/Object;[F)I"
+          },
+          {
+            "nme": "render_line",
+            "acc": 10,
+            "dsc": "(IIII[F)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 24,
+            "nme": "floor1_rangedb",
+            "dsc": "I",
+            "val": 140
+          },
+          {
+            "acc": 24,
+            "nme": "VIF_POSIT",
+            "dsc": "I",
+            "val": 63
+          },
+          {
+            "acc": 10,
+            "nme": "FLOOR_fromdB_LOOKUP",
+            "dsc": "[F"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/Mapping0$LookMapping0.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/Mapping0$LookMapping0",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Mapping0;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "mode",
+            "dsc": "Lcom/jcraft/jorbis/InfoMode;"
+          },
+          {
+            "acc": 0,
+            "nme": "map",
+            "dsc": "Lcom/jcraft/jorbis/Mapping0$InfoMapping0;"
+          },
+          {
+            "acc": 0,
+            "nme": "time_look",
+            "dsc": "[Ljava/lang/Object;"
+          },
+          {
+            "acc": 0,
+            "nme": "floor_look",
+            "dsc": "[Ljava/lang/Object;"
+          },
+          {
+            "acc": 0,
+            "nme": "floor_state",
+            "dsc": "[Ljava/lang/Object;"
+          },
+          {
+            "acc": 0,
+            "nme": "residue_look",
+            "dsc": "[Ljava/lang/Object;"
+          },
+          {
+            "acc": 0,
+            "nme": "psy_look",
+            "dsc": "[Lcom/jcraft/jorbis/PsyLook;"
+          },
+          {
+            "acc": 0,
+            "nme": "time_func",
+            "dsc": "[Lcom/jcraft/jorbis/FuncTime;"
+          },
+          {
+            "acc": 0,
+            "nme": "floor_func",
+            "dsc": "[Lcom/jcraft/jorbis/FuncFloor;"
+          },
+          {
+            "acc": 0,
+            "nme": "residue_func",
+            "dsc": "[Lcom/jcraft/jorbis/FuncResidue;"
+          },
+          {
+            "acc": 0,
+            "nme": "ch",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "decay",
+            "dsc": "[[F"
+          },
+          {
+            "acc": 0,
+            "nme": "lastframe",
+            "dsc": "I"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lcom/jcraft/jorbis/Mapping0;"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/Residue0$LookResidue0.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/Residue0$LookResidue0",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Residue0;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "info",
+            "dsc": "Lcom/jcraft/jorbis/Residue0$InfoResidue0;"
+          },
+          {
+            "acc": 0,
+            "nme": "map",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "parts",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "stages",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "fullbooks",
+            "dsc": "[Lcom/jcraft/jorbis/CodeBook;"
+          },
+          {
+            "acc": 0,
+            "nme": "phrasebook",
+            "dsc": "Lcom/jcraft/jorbis/CodeBook;"
+          },
+          {
+            "acc": 0,
+            "nme": "partbooks",
+            "dsc": "[[I"
+          },
+          {
+            "acc": 0,
+            "nme": "partvals",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "decodemap",
+            "dsc": "[[I"
+          },
+          {
+            "acc": 0,
+            "nme": "postbits",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "phrasebits",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "frames",
+            "dsc": "I"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lcom/jcraft/jorbis/Residue0;"
+          }
+        ]
+      },
+      "com/jcraft/jogg/Page.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/jcraft/jogg/Page",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "crc_entry",
+            "acc": 10,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "version",
+            "acc": 0,
+            "dsc": "()I"
+          },
+          {
+            "nme": "continued",
+            "acc": 0,
+            "dsc": "()I"
+          },
+          {
+            "nme": "bos",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "eos",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "granulepos",
+            "acc": 1,
+            "dsc": "()J"
+          },
+          {
+            "nme": "serialno",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "pageno",
+            "acc": 0,
+            "dsc": "()I"
+          },
+          {
+            "nme": "checksum",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "copy",
+            "acc": 1,
+            "dsc": "()Lcom/jcraft/jogg/Page;"
+          },
+          {
+            "nme": "copy",
+            "acc": 1,
+            "dsc": "(Lcom/jcraft/jogg/Page;)Lcom/jcraft/jogg/Page;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 10,
+            "nme": "crc_lookup",
+            "dsc": "[I"
+          },
+          {
+            "acc": 1,
+            "nme": "header_base",
+            "dsc": "[B"
+          },
+          {
+            "acc": 1,
+            "nme": "header",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "header_len",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "body_base",
+            "dsc": "[B"
+          },
+          {
+            "acc": 1,
+            "nme": "body",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "body_len",
+            "dsc": "I"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/VorbisFile.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/jcraft/jorbis/VorbisFile",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V",
+            "exs": [
+              "com/jcraft/jorbis/JOrbisException"
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/io/InputStream;[BI)V",
+            "exs": [
+              "com/jcraft/jorbis/JOrbisException"
+            ]
+          },
+          {
+            "nme": "get_data",
+            "acc": 2,
+            "dsc": "()I"
+          },
+          {
+            "nme": "seek_helper",
+            "acc": 2,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "get_next_page",
+            "acc": 2,
+            "dsc": "(Lcom/jcraft/jogg/Page;J)I"
+          },
+          {
+            "nme": "get_prev_page",
+            "acc": 2,
+            "dsc": "(Lcom/jcraft/jogg/Page;)I",
+            "exs": [
+              "com/jcraft/jorbis/JOrbisException"
+            ]
+          },
+          {
+            "nme": "bisect_forward_serialno",
+            "acc": 0,
+            "dsc": "(JJJII)I"
+          },
+          {
+            "nme": "fetch_headers",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Info;Lcom/jcraft/jorbis/Comment;[ILcom/jcraft/jogg/Page;)I"
+          },
+          {
+            "nme": "prefetch_all_headers",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Info;Lcom/jcraft/jorbis/Comment;I)V",
+            "exs": [
+              "com/jcraft/jorbis/JOrbisException"
+            ]
+          },
+          {
+            "nme": "make_decode_ready",
+            "acc": 2,
+            "dsc": "()I"
+          },
+          {
+            "nme": "open_seekable",
+            "acc": 0,
+            "dsc": "()I",
+            "exs": [
+              "com/jcraft/jorbis/JOrbisException"
+            ]
+          },
+          {
+            "nme": "open_nonseekable",
+            "acc": 0,
+            "dsc": "()I"
+          },
+          {
+            "nme": "decode_clear",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "process_packet",
+            "acc": 0,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "clear",
+            "acc": 0,
+            "dsc": "()I"
+          },
+          {
+            "nme": "fseek",
+            "acc": 8,
+            "dsc": "(Ljava/io/InputStream;JI)I"
+          },
+          {
+            "nme": "ftell",
+            "acc": 8,
+            "dsc": "(Ljava/io/InputStream;)J"
+          },
+          {
+            "nme": "open",
+            "acc": 0,
+            "dsc": "(Ljava/io/InputStream;[BI)I",
+            "exs": [
+              "com/jcraft/jorbis/JOrbisException"
+            ]
+          },
+          {
+            "nme": "open_callbacks",
+            "acc": 0,
+            "dsc": "(Ljava/io/InputStream;[BI)I",
+            "exs": [
+              "com/jcraft/jorbis/JOrbisException"
+            ]
+          },
+          {
+            "nme": "streams",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "seekable",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "bitrate",
+            "acc": 1,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "bitrate_instant",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "serialnumber",
+            "acc": 1,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "raw_total",
+            "acc": 1,
+            "dsc": "(I)J"
+          },
+          {
+            "nme": "pcm_total",
+            "acc": 1,
+            "dsc": "(I)J"
+          },
+          {
+            "nme": "time_total",
+            "acc": 1,
+            "dsc": "(I)F"
+          },
+          {
+            "nme": "raw_seek",
+            "acc": 1,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "pcm_seek",
+            "acc": 1,
+            "dsc": "(J)I"
+          },
+          {
+            "nme": "time_seek",
+            "acc": 0,
+            "dsc": "(F)I"
+          },
+          {
+            "nme": "raw_tell",
+            "acc": 1,
+            "dsc": "()J"
+          },
+          {
+            "nme": "pcm_tell",
+            "acc": 1,
+            "dsc": "()J"
+          },
+          {
+            "nme": "time_tell",
+            "acc": 1,
+            "dsc": "()F"
+          },
+          {
+            "nme": "getInfo",
+            "acc": 1,
+            "dsc": "(I)Lcom/jcraft/jorbis/Info;"
+          },
+          {
+            "nme": "getComment",
+            "acc": 1,
+            "dsc": "(I)Lcom/jcraft/jorbis/Comment;"
+          },
+          {
+            "nme": "host_is_big_endian",
+            "acc": 0,
+            "dsc": "()I"
+          },
+          {
+            "nme": "read",
+            "acc": 0,
+            "dsc": "([BIIII[I)I"
+          },
+          {
+            "nme": "getInfo",
+            "acc": 1,
+            "dsc": "()[Lcom/jcraft/jorbis/Info;"
+          },
+          {
+            "nme": "getComment",
+            "acc": 1,
+            "dsc": "()[Lcom/jcraft/jorbis/Comment;"
+          },
+          {
+            "nme": "close",
+            "acc": 1,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 24,
+            "nme": "CHUNKSIZE",
+            "dsc": "I",
+            "val": 8500
+          },
+          {
+            "acc": 24,
+            "nme": "SEEK_SET",
+            "dsc": "I",
+            "val": 0
+          },
+          {
+            "acc": 24,
+            "nme": "SEEK_CUR",
+            "dsc": "I",
+            "val": 1
+          },
+          {
+            "acc": 24,
+            "nme": "SEEK_END",
+            "dsc": "I",
+            "val": 2
+          },
+          {
+            "acc": 24,
+            "nme": "OV_FALSE",
+            "dsc": "I",
+            "val": -1
+          },
+          {
+            "acc": 24,
+            "nme": "OV_EOF",
+            "dsc": "I",
+            "val": -2
+          },
+          {
+            "acc": 24,
+            "nme": "OV_HOLE",
+            "dsc": "I",
+            "val": -3
+          },
+          {
+            "acc": 24,
+            "nme": "OV_EREAD",
+            "dsc": "I",
+            "val": -128
+          },
+          {
+            "acc": 24,
+            "nme": "OV_EFAULT",
+            "dsc": "I",
+            "val": -129
+          },
+          {
+            "acc": 24,
+            "nme": "OV_EIMPL",
+            "dsc": "I",
+            "val": -130
+          },
+          {
+            "acc": 24,
+            "nme": "OV_EINVAL",
+            "dsc": "I",
+            "val": -131
+          },
+          {
+            "acc": 24,
+            "nme": "OV_ENOTVORBIS",
+            "dsc": "I",
+            "val": -132
+          },
+          {
+            "acc": 24,
+            "nme": "OV_EBADHEADER",
+            "dsc": "I",
+            "val": -133
+          },
+          {
+            "acc": 24,
+            "nme": "OV_EVERSION",
+            "dsc": "I",
+            "val": -134
+          },
+          {
+            "acc": 24,
+            "nme": "OV_ENOTAUDIO",
+            "dsc": "I",
+            "val": -135
+          },
+          {
+            "acc": 24,
+            "nme": "OV_EBADPACKET",
+            "dsc": "I",
+            "val": -136
+          },
+          {
+            "acc": 24,
+            "nme": "OV_EBADLINK",
+            "dsc": "I",
+            "val": -137
+          },
+          {
+            "acc": 24,
+            "nme": "OV_ENOSEEK",
+            "dsc": "I",
+            "val": -138
+          },
+          {
+            "acc": 0,
+            "nme": "datasource",
+            "dsc": "Ljava/io/InputStream;"
+          },
+          {
+            "acc": 0,
+            "nme": "seekable",
+            "dsc": "Z"
+          },
+          {
+            "acc": 0,
+            "nme": "offset",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "end",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "oy",
+            "dsc": "Lcom/jcraft/jogg/SyncState;"
+          },
+          {
+            "acc": 0,
+            "nme": "links",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "offsets",
+            "dsc": "[J"
+          },
+          {
+            "acc": 0,
+            "nme": "dataoffsets",
+            "dsc": "[J"
+          },
+          {
+            "acc": 0,
+            "nme": "serialnos",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "pcmlengths",
+            "dsc": "[J"
+          },
+          {
+            "acc": 0,
+            "nme": "vi",
+            "dsc": "[Lcom/jcraft/jorbis/Info;"
+          },
+          {
+            "acc": 0,
+            "nme": "vc",
+            "dsc": "[Lcom/jcraft/jorbis/Comment;"
+          },
+          {
+            "acc": 0,
+            "nme": "pcm_offset",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "decode_ready",
+            "dsc": "Z"
+          },
+          {
+            "acc": 0,
+            "nme": "current_serialno",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "current_link",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "bittrack",
+            "dsc": "F"
+          },
+          {
+            "acc": 0,
+            "nme": "samptrack",
+            "dsc": "F"
+          },
+          {
+            "acc": 0,
+            "nme": "os",
+            "dsc": "Lcom/jcraft/jogg/StreamState;"
+          },
+          {
+            "acc": 0,
+            "nme": "vd",
+            "dsc": "Lcom/jcraft/jorbis/DspState;"
+          },
+          {
+            "acc": 0,
+            "nme": "vb",
+            "dsc": "Lcom/jcraft/jorbis/Block;"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/StaticCodeBook.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/StaticCodeBook",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "pack",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jogg/Buffer;)I"
+          },
+          {
+            "nme": "unpack",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jogg/Buffer;)I"
+          },
+          {
+            "nme": "maptype1_quantvals",
+            "acc": 2,
+            "dsc": "()I"
+          },
+          {
+            "nme": "clear",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "unquantize",
+            "acc": 0,
+            "dsc": "()[F"
+          },
+          {
+            "nme": "float32_pack",
+            "acc": 8,
+            "dsc": "(F)J"
+          },
+          {
+            "nme": "float32_unpack",
+            "acc": 8,
+            "dsc": "(I)F"
+          },
+          {
+            "nme": "ldexp",
+            "acc": 8,
+            "dsc": "(FI)F"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "dim",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "entries",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "lengthlist",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "maptype",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "q_min",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "q_delta",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "q_quant",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "q_sequencep",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "quantlist",
+            "dsc": "[I"
+          },
+          {
+            "acc": 24,
+            "nme": "VQ_FEXP",
+            "dsc": "I",
+            "val": 10
+          },
+          {
+            "acc": 24,
+            "nme": "VQ_FMAN",
+            "dsc": "I",
+            "val": 21
+          },
+          {
+            "acc": 24,
+            "nme": "VQ_FEXP_BIAS",
+            "dsc": "I",
+            "val": 768
+          }
+        ]
+      },
+      "com/jcraft/jogg/Buffer.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/jcraft/jogg/Buffer",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "writeinit",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "write",
+            "acc": 1,
+            "dsc": "([B)V"
+          },
+          {
+            "nme": "read",
+            "acc": 1,
+            "dsc": "([BI)V"
+          },
+          {
+            "nme": "reset",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "writeclear",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "readinit",
+            "acc": 1,
+            "dsc": "([BI)V"
+          },
+          {
+            "nme": "readinit",
+            "acc": 1,
+            "dsc": "([BII)V"
+          },
+          {
+            "nme": "write",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "look",
+            "acc": 1,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "look1",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "adv",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "adv1",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "read",
+            "acc": 1,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "readB",
+            "acc": 1,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "read1",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "bytes",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "bits",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "buffer",
+            "acc": 1,
+            "dsc": "()[B"
+          },
+          {
+            "nme": "ilog",
+            "acc": 9,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "report",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "BUFFER_INCREMENT",
+            "dsc": "I",
+            "val": 256
+          },
+          {
+            "acc": 26,
+            "nme": "mask",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "ptr",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "buffer",
+            "dsc": "[B"
+          },
+          {
+            "acc": 0,
+            "nme": "endbit",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "endbyte",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "storage",
+            "dsc": "I"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/Residue0$InfoResidue0.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/Residue0$InfoResidue0",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Residue0;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "begin",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "end",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "grouping",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "partitions",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "groupbook",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "secondstages",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "booklist",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "entmax",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "ampmax",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "subgrp",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "blimit",
+            "dsc": "[I"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lcom/jcraft/jorbis/Residue0;"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/Mapping0$InfoMapping0.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/Mapping0$InfoMapping0",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lcom/jcraft/jorbis/Mapping0;)V"
+          },
+          {
+            "nme": "free",
+            "acc": 0,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "submaps",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "chmuxlist",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "timesubmap",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "floorsubmap",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "residuesubmap",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "psysubmap",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "coupling_steps",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "coupling_mag",
+            "dsc": "[I"
+          },
+          {
+            "acc": 0,
+            "nme": "coupling_ang",
+            "dsc": "[I"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lcom/jcraft/jorbis/Mapping0;"
+          }
+        ]
+      },
+      "com/jcraft/jorbis/Util.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/Util",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "ilog",
+            "acc": 8,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "ilog2",
+            "acc": 8,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "icount",
+            "acc": 8,
+            "dsc": "(I)I"
+          }
+        ],
+        "flds": []
+      },
+      "com/jcraft/jorbis/Drft.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "com/jcraft/jorbis/Drft",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "backward",
+            "acc": 0,
+            "dsc": "([F)V"
+          },
+          {
+            "nme": "init",
+            "acc": 0,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "clear",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "drfti1",
+            "acc": 8,
+            "dsc": "(I[FI[I)V"
+          },
+          {
+            "nme": "fdrffti",
+            "acc": 8,
+            "dsc": "(I[F[I)V"
+          },
+          {
+            "nme": "dradf2",
+            "acc": 8,
+            "dsc": "(II[F[F[FI)V"
+          },
+          {
+            "nme": "dradf4",
+            "acc": 8,
+            "dsc": "(II[F[F[FI[FI[FI)V"
+          },
+          {
+            "nme": "dradfg",
+            "acc": 8,
+            "dsc": "(IIII[F[F[F[F[F[FI)V"
+          },
+          {
+            "nme": "drftf1",
+            "acc": 8,
+            "dsc": "(I[F[F[F[I)V"
+          },
+          {
+            "nme": "dradb2",
+            "acc": 8,
+            "dsc": "(II[F[F[FI)V"
+          },
+          {
+            "nme": "dradb3",
+            "acc": 8,
+            "dsc": "(II[F[F[FI[FI)V"
+          },
+          {
+            "nme": "dradb4",
+            "acc": 8,
+            "dsc": "(II[F[F[FI[FI[FI)V"
+          },
+          {
+            "nme": "dradbg",
+            "acc": 8,
+            "dsc": "(IIII[F[F[F[F[F[FI)V"
+          },
+          {
+            "nme": "drftb1",
+            "acc": 8,
+            "dsc": "(I[F[F[FI[I)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "n",
+            "dsc": "I"
+          },
+          {
+            "acc": 0,
+            "nme": "trigcache",
+            "dsc": "[F"
+          },
+          {
+            "acc": 0,
+            "nme": "splitcache",
+            "dsc": "[I"
+          },
+          {
+            "acc": 8,
+            "nme": "ntryh",
+            "dsc": "[I"
+          },
+          {
+            "acc": 8,
+            "nme": "tpi",
+            "dsc": "F"
+          },
+          {
+            "acc": 8,
+            "nme": "hsqt2",
+            "dsc": "F"
+          },
+          {
+            "acc": 8,
+            "nme": "taui",
+            "dsc": "F"
+          },
+          {
+            "acc": 8,
+            "nme": "taur",
+            "dsc": "F"
+          },
+          {
+            "acc": 8,
+            "nme": "sqrt2",
+            "dsc": "F"
+          }
+        ]
+      }
+    }
+  }
+}

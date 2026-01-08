@@ -1,0 +1,557 @@
+{
+  "md5": "c393d807ab02cb815cd5506dd18aa37c",
+  "sha2": "f7d2fa4fee9c0a61703a6392f3b649436b2d2fcd",
+  "sha256": "653076d91a2d1bd5b71efaf5a2c3d821f4ecf3229fb8af408b6fef8596b5edec",
+  "contents": {
+    "classes": {
+      "meteordevelopment/orbit/EventBus.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "meteordevelopment/orbit/EventBus",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "registerLambdaFactory",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Lmeteordevelopment/orbit/listeners/LambdaListener$Factory;)V"
+          },
+          {
+            "nme": "post",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "<T:Ljava/lang/Object;>(TT;)TT;"
+          },
+          {
+            "nme": "post",
+            "acc": 1,
+            "dsc": "(Lmeteordevelopment/orbit/ICancellable;)Lmeteordevelopment/orbit/ICancellable;",
+            "sig": "<T::Lmeteordevelopment/orbit/ICancellable;>(TT;)TT;"
+          },
+          {
+            "nme": "subscribe",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "subscribe",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Class;)V",
+            "sig": "(Ljava/lang/Class<*>;)V"
+          },
+          {
+            "nme": "subscribe",
+            "acc": 1,
+            "dsc": "(Lmeteordevelopment/orbit/listeners/IListener;)V"
+          },
+          {
+            "nme": "subscribe",
+            "acc": 2,
+            "dsc": "(Ljava/util/List;Z)V",
+            "sig": "(Ljava/util/List<Lmeteordevelopment/orbit/listeners/IListener;>;Z)V"
+          },
+          {
+            "nme": "subscribe",
+            "acc": 2,
+            "dsc": "(Lmeteordevelopment/orbit/listeners/IListener;Z)V"
+          },
+          {
+            "nme": "insert",
+            "acc": 2,
+            "dsc": "(Ljava/util/List;Lmeteordevelopment/orbit/listeners/IListener;)V",
+            "sig": "(Ljava/util/List<Lmeteordevelopment/orbit/listeners/IListener;>;Lmeteordevelopment/orbit/listeners/IListener;)V"
+          },
+          {
+            "nme": "unsubscribe",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "unsubscribe",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Class;)V",
+            "sig": "(Ljava/lang/Class<*>;)V"
+          },
+          {
+            "nme": "unsubscribe",
+            "acc": 1,
+            "dsc": "(Lmeteordevelopment/orbit/listeners/IListener;)V"
+          },
+          {
+            "nme": "unsubscribe",
+            "acc": 2,
+            "dsc": "(Ljava/util/List;Z)V",
+            "sig": "(Ljava/util/List<Lmeteordevelopment/orbit/listeners/IListener;>;Z)V"
+          },
+          {
+            "nme": "unsubscribe",
+            "acc": 2,
+            "dsc": "(Lmeteordevelopment/orbit/listeners/IListener;Z)V"
+          },
+          {
+            "nme": "getListeners",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Class;Ljava/lang/Object;)Ljava/util/List;",
+            "sig": "(Ljava/lang/Class<*>;Ljava/lang/Object;)Ljava/util/List<Lmeteordevelopment/orbit/listeners/IListener;>;"
+          },
+          {
+            "nme": "getListeners",
+            "acc": 2,
+            "dsc": "(Ljava/util/List;Ljava/lang/Class;Ljava/lang/Object;)V",
+            "sig": "(Ljava/util/List<Lmeteordevelopment/orbit/listeners/IListener;>;Ljava/lang/Class<*>;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "isValid",
+            "acc": 2,
+            "dsc": "(Ljava/lang/reflect/Method;)Z"
+          },
+          {
+            "nme": "getLambdaFactory",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Class;)Lmeteordevelopment/orbit/listeners/LambdaListener$Factory;",
+            "sig": "(Ljava/lang/Class<*>;)Lmeteordevelopment/orbit/listeners/LambdaListener$Factory;"
+          },
+          {
+            "nme": "lambda$getListeners$2",
+            "acc": 4098,
+            "dsc": "(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;"
+          },
+          {
+            "nme": "lambda$subscribe$1",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Class;)Ljava/util/List;"
+          },
+          {
+            "nme": "lambda$subscribe$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Class;)Ljava/util/List;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "listenerCache",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/Object;Ljava/util/List<Lmeteordevelopment/orbit/listeners/IListener;>;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "staticListenerCache",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/Class<*>;Ljava/util/List<Lmeteordevelopment/orbit/listeners/IListener;>;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "listenerMap",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/Class<*>;Ljava/util/List<Lmeteordevelopment/orbit/listeners/IListener;>;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "lambdaFactoryInfos",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lmeteordevelopment/orbit/EventBus$LambdaFactoryInfo;>;"
+          }
+        ]
+      },
+      "meteordevelopment/orbit/EventHandler.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "meteordevelopment/orbit/EventHandler",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "priority",
+            "acc": 1025,
+            "dsc": "()I"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "meteordevelopment/orbit/listeners/LambdaListener$Factory.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "meteordevelopment/orbit/listeners/LambdaListener$Factory",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "create",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/reflect/Method;Ljava/lang/Class;)Ljava/lang/invoke/MethodHandles$Lookup;",
+            "sig": "(Ljava/lang/reflect/Method;Ljava/lang/Class<*>;)Ljava/lang/invoke/MethodHandles$Lookup;",
+            "exs": [
+              "java/lang/reflect/InvocationTargetException",
+              "java/lang/IllegalAccessException"
+            ]
+          }
+        ],
+        "flds": []
+      },
+      "meteordevelopment/orbit/EventPriority.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "meteordevelopment/orbit/EventPriority",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "HIGHEST",
+            "dsc": "I",
+            "val": 200
+          },
+          {
+            "acc": 25,
+            "nme": "HIGH",
+            "dsc": "I",
+            "val": 100
+          },
+          {
+            "acc": 25,
+            "nme": "MEDIUM",
+            "dsc": "I",
+            "val": 0
+          },
+          {
+            "acc": 25,
+            "nme": "LOW",
+            "dsc": "I",
+            "val": -100
+          },
+          {
+            "acc": 25,
+            "nme": "LOWEST",
+            "dsc": "I",
+            "val": -200
+          }
+        ]
+      },
+      "meteordevelopment/orbit/NoLambdaFactoryException.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "meteordevelopment/orbit/NoLambdaFactoryException",
+        "super": "java/lang/RuntimeException",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Class;)V",
+            "sig": "(Ljava/lang/Class<*>;)V"
+          }
+        ],
+        "flds": []
+      },
+      "meteordevelopment/orbit/IEventBus.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "meteordevelopment/orbit/IEventBus",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "registerLambdaFactory",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Lmeteordevelopment/orbit/listeners/LambdaListener$Factory;)V"
+          },
+          {
+            "nme": "post",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "<T:Ljava/lang/Object;>(TT;)TT;"
+          },
+          {
+            "nme": "post",
+            "acc": 1025,
+            "dsc": "(Lmeteordevelopment/orbit/ICancellable;)Lmeteordevelopment/orbit/ICancellable;",
+            "sig": "<T::Lmeteordevelopment/orbit/ICancellable;>(TT;)TT;"
+          },
+          {
+            "nme": "subscribe",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "subscribe",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Class;)V",
+            "sig": "(Ljava/lang/Class<*>;)V"
+          },
+          {
+            "nme": "subscribe",
+            "acc": 1025,
+            "dsc": "(Lmeteordevelopment/orbit/listeners/IListener;)V"
+          },
+          {
+            "nme": "unsubscribe",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "unsubscribe",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Class;)V",
+            "sig": "(Ljava/lang/Class<*>;)V"
+          },
+          {
+            "nme": "unsubscribe",
+            "acc": 1025,
+            "dsc": "(Lmeteordevelopment/orbit/listeners/IListener;)V"
+          }
+        ],
+        "flds": []
+      },
+      "meteordevelopment/orbit/ICancellable.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "meteordevelopment/orbit/ICancellable",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "setCancelled",
+            "acc": 1025,
+            "dsc": "(Z)V"
+          },
+          {
+            "nme": "cancel",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "isCancelled",
+            "acc": 1025,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": []
+      },
+      "meteordevelopment/orbit/EventBus$LambdaFactoryInfo.class": {
+        "ver": 52,
+        "acc": 32,
+        "nme": "meteordevelopment/orbit/EventBus$LambdaFactoryInfo",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Lmeteordevelopment/orbit/listeners/LambdaListener$Factory;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 17,
+            "nme": "packagePrefix",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 17,
+            "nme": "factory",
+            "dsc": "Lmeteordevelopment/orbit/listeners/LambdaListener$Factory;"
+          }
+        ]
+      },
+      "meteordevelopment/orbit/listeners/ConsumerListener.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "meteordevelopment/orbit/listeners/ConsumerListener",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Class;ILjava/util/function/Consumer;)V",
+            "sig": "(Ljava/lang/Class<*>;ILjava/util/function/Consumer<TT;>;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Class;Ljava/util/function/Consumer;)V",
+            "sig": "(Ljava/lang/Class<*>;Ljava/util/function/Consumer<TT;>;)V"
+          },
+          {
+            "nme": "call",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "getTarget",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<*>;"
+          },
+          {
+            "nme": "getPriority",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "isStatic",
+            "acc": 1,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "target",
+            "dsc": "Ljava/lang/Class;",
+            "sig": "Ljava/lang/Class<*>;"
+          },
+          {
+            "acc": 18,
+            "nme": "priority",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "executor",
+            "dsc": "Ljava/util/function/Consumer;",
+            "sig": "Ljava/util/function/Consumer<TT;>;"
+          }
+        ]
+      },
+      "meteordevelopment/orbit/listeners/LambdaListener.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "meteordevelopment/orbit/listeners/LambdaListener",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lmeteordevelopment/orbit/listeners/LambdaListener$Factory;Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/reflect/Method;)V",
+            "sig": "(Lmeteordevelopment/orbit/listeners/LambdaListener$Factory;Ljava/lang/Class<*>;Ljava/lang/Object;Ljava/lang/reflect/Method;)V"
+          },
+          {
+            "nme": "call",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "getTarget",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<*>;"
+          },
+          {
+            "nme": "getPriority",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "isStatic",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 10,
+            "nme": "isJava1dot8",
+            "dsc": "Z"
+          },
+          {
+            "acc": 10,
+            "nme": "lookupConstructor",
+            "dsc": "Ljava/lang/reflect/Constructor;",
+            "sig": "Ljava/lang/reflect/Constructor<Ljava/lang/invoke/MethodHandles$Lookup;>;"
+          },
+          {
+            "acc": 10,
+            "nme": "privateLookupInMethod",
+            "dsc": "Ljava/lang/reflect/Method;"
+          },
+          {
+            "acc": 18,
+            "nme": "target",
+            "dsc": "Ljava/lang/Class;",
+            "sig": "Ljava/lang/Class<*>;"
+          },
+          {
+            "acc": 18,
+            "nme": "isStatic",
+            "dsc": "Z"
+          },
+          {
+            "acc": 18,
+            "nme": "priority",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "executor",
+            "dsc": "Ljava/util/function/Consumer;",
+            "sig": "Ljava/util/function/Consumer<Ljava/lang/Object;>;"
+          }
+        ]
+      },
+      "meteordevelopment/orbit/listeners/IListener.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "meteordevelopment/orbit/listeners/IListener",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "call",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "getTarget",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<*>;"
+          },
+          {
+            "nme": "getPriority",
+            "acc": 1025,
+            "dsc": "()I"
+          },
+          {
+            "nme": "isStatic",
+            "acc": 1025,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": []
+      }
+    }
+  }
+}

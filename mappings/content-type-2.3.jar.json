@@ -1,0 +1,253 @@
+{
+  "md5": "f0fc0d6be73e838863e2197c03a27c3f",
+  "sha2": "e3aa0be212d7a42839a8f3f506f5b990bcce0222",
+  "sha256": "60349793e006fba96b532cb0c21e10e969fe0db8d87f91c3b9eaf82ba2998895",
+  "contents": {
+    "classes": {
+      "com/nimbusds/common/contenttype/ContentType.class": {
+        "ver": 51,
+        "acc": 49,
+        "nme": "com/nimbusds/common/contenttype/ContentType",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 129,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;[Lcom/nimbusds/common/contenttype/ContentType$Parameter;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/nio/charset/Charset;)V"
+          },
+          {
+            "nme": "getBaseType",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getSubType",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getBaseSubType",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getSubTypeSuffix",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hasSubTypeSuffix",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "splitSubtype",
+            "acc": 2,
+            "dsc": "()Ljava/util/Map$Entry;",
+            "sig": "()Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+          },
+          {
+            "nme": "getType",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getParameters",
+            "acc": 1,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lcom/nimbusds/common/contenttype/ContentType$Parameter;>;"
+          },
+          {
+            "nme": "matches",
+            "acc": 1,
+            "dsc": "(Lcom/nimbusds/common/contenttype/ContentType;)Z"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "parse",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/nimbusds/common/contenttype/ContentType;",
+            "exs": [
+              "java/text/ParseException"
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "APPLICATION_JSON",
+            "dsc": "Lcom/nimbusds/common/contenttype/ContentType;"
+          },
+          {
+            "acc": 25,
+            "nme": "APPLICATION_JOSE",
+            "dsc": "Lcom/nimbusds/common/contenttype/ContentType;"
+          },
+          {
+            "acc": 25,
+            "nme": "APPLICATION_JWT",
+            "dsc": "Lcom/nimbusds/common/contenttype/ContentType;"
+          },
+          {
+            "acc": 25,
+            "nme": "APPLICATION_URLENCODED",
+            "dsc": "Lcom/nimbusds/common/contenttype/ContentType;"
+          },
+          {
+            "acc": 25,
+            "nme": "TEXT_PLAIN",
+            "dsc": "Lcom/nimbusds/common/contenttype/ContentType;"
+          },
+          {
+            "acc": 25,
+            "nme": "IMAGE_APNG",
+            "dsc": "Lcom/nimbusds/common/contenttype/ContentType;"
+          },
+          {
+            "acc": 25,
+            "nme": "IMAGE_AVIF",
+            "dsc": "Lcom/nimbusds/common/contenttype/ContentType;"
+          },
+          {
+            "acc": 25,
+            "nme": "IMAGE_GIF",
+            "dsc": "Lcom/nimbusds/common/contenttype/ContentType;"
+          },
+          {
+            "acc": 25,
+            "nme": "IMAGE_JPEG",
+            "dsc": "Lcom/nimbusds/common/contenttype/ContentType;"
+          },
+          {
+            "acc": 25,
+            "nme": "IMAGE_PNG",
+            "dsc": "Lcom/nimbusds/common/contenttype/ContentType;"
+          },
+          {
+            "acc": 25,
+            "nme": "IMAGE_SVG_XML",
+            "dsc": "Lcom/nimbusds/common/contenttype/ContentType;"
+          },
+          {
+            "acc": 25,
+            "nme": "IMAGE_WEBP",
+            "dsc": "Lcom/nimbusds/common/contenttype/ContentType;"
+          },
+          {
+            "acc": 25,
+            "nme": "APPLICATION_PDF",
+            "dsc": "Lcom/nimbusds/common/contenttype/ContentType;"
+          },
+          {
+            "acc": 18,
+            "nme": "baseType",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "subType",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "params",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lcom/nimbusds/common/contenttype/ContentType$Parameter;>;"
+          }
+        ]
+      },
+      "com/nimbusds/common/contenttype/ContentType$Parameter.class": {
+        "ver": 51,
+        "acc": 49,
+        "nme": "com/nimbusds/common/contenttype/ContentType$Parameter",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "getName",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getValue",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "CHARSET_UTF_8",
+            "dsc": "Lcom/nimbusds/common/contenttype/ContentType$Parameter;"
+          },
+          {
+            "acc": 18,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "value",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "com/nimbusds/common/contenttype/package-info.class": {
+        "ver": 51,
+        "acc": 5632,
+        "nme": "com/nimbusds/common/contenttype/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      }
+    }
+  }
+}

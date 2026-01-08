@@ -1,0 +1,987 @@
+{
+  "md5": "6605ae3c3aa0ce4ee9ff240c98d97434",
+  "sha2": "5d2fa527d68a3ef1c3234162830d076e666498ec",
+  "sha256": "7c0f48877beab39de35aaf5cf0c9fc99e93f3534e2a04920bc88e889f542f49a",
+  "contents": {
+    "classes": {
+      "net/fabricmc/fabric/impl/client/rendering/fluid/FluidRenderHandlerRegistryImpl.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/client/rendering/fluid/FluidRenderHandlerRegistryImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "get",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/fluid/Fluid;)Lnet/fabricmc/fabric/api/client/render/fluid/v1/FluidRenderHandler;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "getOverride",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/fluid/Fluid;)Lnet/fabricmc/fabric/api/client/render/fluid/v1/FluidRenderHandler;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "register",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/fluid/Fluid;Lnet/fabricmc/fabric/api/client/render/fluid/v1/FluidRenderHandler;)V"
+          },
+          {
+            "nme": "setBlockTransparency",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/block/Block;Z)V"
+          },
+          {
+            "nme": "isBlockTransparent",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/block/Block;)Z"
+          },
+          {
+            "nme": "onFluidRendererReload",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/render/block/FluidRenderer;[Lnet/minecraft/client/texture/Sprite;[Lnet/minecraft/client/texture/Sprite;Lnet/minecraft/client/texture/Sprite;)V"
+          },
+          {
+            "nme": "lambda$isBlockTransparent$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/block/Block;)Ljava/lang/Boolean;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "handlers",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/fluid/Fluid;Lnet/fabricmc/fabric/api/client/render/fluid/v1/FluidRenderHandler;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "modHandlers",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/fluid/Fluid;Lnet/fabricmc/fabric/api/client/render/fluid/v1/FluidRenderHandler;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "overlayBlocks",
+            "dsc": "Ljava/util/concurrent/ConcurrentMap;",
+            "sig": "Ljava/util/concurrent/ConcurrentMap<Lnet/minecraft/block/Block;Ljava/lang/Boolean;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/render/fluid/v1/FluidRenderHandler.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/render/fluid/v1/FluidRenderHandler",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getFluidSprites",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/world/BlockRenderView;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/fluid/FluidState;)[Lnet/minecraft/client/texture/Sprite;"
+          },
+          {
+            "nme": "getFluidColor",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/world/BlockRenderView;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/fluid/FluidState;)I"
+          },
+          {
+            "nme": "renderFluid",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/world/BlockRenderView;Lnet/minecraft/client/render/VertexConsumer;Lnet/minecraft/block/BlockState;Lnet/minecraft/fluid/FluidState;)V"
+          },
+          {
+            "nme": "reloadTextures",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/texture/SpriteAtlasTexture;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/render/fluid/v1/FluidRendering.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/client/render/fluid/v1/FluidRendering",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "render",
+            "acc": 9,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/render/fluid/v1/FluidRenderHandler;Lnet/minecraft/world/BlockRenderView;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/client/render/VertexConsumer;Lnet/minecraft/block/BlockState;Lnet/minecraft/fluid/FluidState;Lnet/fabricmc/fabric/api/client/render/fluid/v1/FluidRendering$DefaultRenderer;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/rendering/fluid/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/mixin/client/rendering/fluid/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/render/fluid/v1/SimpleFluidRenderHandler.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/api/client/render/fluid/v1/SimpleFluidRenderHandler",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/Identifier;Lnet/minecraft/util/Identifier;Lnet/minecraft/util/Identifier;I)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/Identifier;Lnet/minecraft/util/Identifier;Lnet/minecraft/util/Identifier;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/Identifier;Lnet/minecraft/util/Identifier;I)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/Identifier;Lnet/minecraft/util/Identifier;)V"
+          },
+          {
+            "nme": "coloredWater",
+            "acc": 9,
+            "dsc": "(I)Lnet/fabricmc/fabric/api/client/render/fluid/v1/SimpleFluidRenderHandler;"
+          },
+          {
+            "nme": "getFluidSprites",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/world/BlockRenderView;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/fluid/FluidState;)[Lnet/minecraft/client/texture/Sprite;"
+          },
+          {
+            "nme": "reloadTextures",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/texture/SpriteAtlasTexture;)V"
+          },
+          {
+            "nme": "getFluidColor",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/world/BlockRenderView;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/fluid/FluidState;)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "WATER_STILL",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "acc": 25,
+            "nme": "WATER_FLOWING",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "acc": 25,
+            "nme": "WATER_OVERLAY",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "acc": 25,
+            "nme": "LAVA_STILL",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "acc": 25,
+            "nme": "LAVA_FLOWING",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "acc": 20,
+            "nme": "stillTexture",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "acc": 20,
+            "nme": "flowingTexture",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "acc": 20,
+            "nme": "overlayTexture",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "acc": 20,
+            "nme": "sprites",
+            "dsc": "[Lnet/minecraft/client/texture/Sprite;"
+          },
+          {
+            "acc": 20,
+            "nme": "tint",
+            "dsc": "I"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/rendering/fluid/FluidRendererMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/client/rendering/fluid/FluidRendererMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "onResourceReloadReturn",
+            "acc": 1,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "method",
+                  [
+                    "onResourceReload"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "onHeadRender",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/world/BlockRenderView;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/client/render/VertexConsumer;Lnet/minecraft/block/BlockState;Lnet/minecraft/fluid/FluidState;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "method",
+                  [
+                    "render"
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "modLavaCheck",
+            "acc": 1,
+            "dsc": "(Z)Z",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/ModifyVariable;",
+                "vals": [
+                  "at",
+                  {
+                    "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                    "values": [
+                      "value",
+                      "INVOKE",
+                      "target",
+                      "Lnet/minecraft/client/render/block/FluidRenderer;isSameFluid(Lnet/minecraft/fluid/FluidState;Lnet/minecraft/fluid/FluidState;)Z"
+                    ],
+                    "api": 589824
+                  },
+                  "method",
+                  [
+                    "render"
+                  ],
+                  "ordinal",
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "modSpriteArray",
+            "acc": 1,
+            "dsc": "([Lnet/minecraft/client/texture/Sprite;)[Lnet/minecraft/client/texture/Sprite;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/ModifyVariable;",
+                "vals": [
+                  "at",
+                  {
+                    "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                    "values": [
+                      "value",
+                      "INVOKE",
+                      "target",
+                      "Lnet/minecraft/client/render/block/FluidRenderer;isSameFluid(Lnet/minecraft/fluid/FluidState;Lnet/minecraft/fluid/FluidState;)Z"
+                    ],
+                    "api": 589824
+                  },
+                  "method",
+                  [
+                    "render"
+                  ],
+                  "ordinal",
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "modTintColor",
+            "acc": 1,
+            "dsc": "(ILnet/minecraft/world/BlockRenderView;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/client/render/VertexConsumer;Lnet/minecraft/block/BlockState;Lnet/minecraft/fluid/FluidState;)I",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/ModifyVariable;",
+                "vals": [
+                  "at",
+                  {
+                    "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                    "values": [
+                      "value",
+                      "CONSTANT",
+                      "args",
+                      [
+                        "intValue=16"
+                      ],
+                      "ordinal",
+                      0,
+                      "shift",
+                      [
+                        "Lorg/spongepowered/asm/mixin/injection/At$Shift;",
+                        "BEFORE"
+                      ]
+                    ],
+                    "api": 589824
+                  },
+                  "method",
+                  [
+                    "render"
+                  ],
+                  "ordinal",
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "modWaterOverlaySprite",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/render/block/FluidRenderer;)Lnet/minecraft/client/texture/Sprite;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Redirect;",
+                "vals": [
+                  "at",
+                  {
+                    "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                    "values": [
+                      "value",
+                      "FIELD",
+                      "opcode",
+                      180,
+                      "target",
+                      "Lnet/minecraft/client/render/block/FluidRenderer;waterOverlaySprite:Lnet/minecraft/client/texture/Sprite;"
+                    ],
+                    "api": 589824
+                  },
+                  "method",
+                  [
+                    "render"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "getOverlayBlock",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/block/BlockState;)Lnet/minecraft/block/Block;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Redirect;",
+                "vals": [
+                  "at",
+                  {
+                    "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                    "values": [
+                      "value",
+                      "INVOKE",
+                      "target",
+                      "Lnet/minecraft/block/BlockState;getBlock()Lnet/minecraft/block/Block;"
+                    ],
+                    "api": 589824
+                  },
+                  "method",
+                  [
+                    "render"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "modSideSpriteForOverlay",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/texture/Sprite;)Lnet/minecraft/client/texture/Sprite;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/ModifyVariable;",
+                "vals": [
+                  "at",
+                  {
+                    "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                    "values": [
+                      "value",
+                      "INVOKE",
+                      "target",
+                      "Lnet/minecraft/block/BlockState;getBlock()Lnet/minecraft/block/Block;",
+                      "shift",
+                      [
+                        "Lorg/spongepowered/asm/mixin/injection/At$Shift;",
+                        "BY"
+                      ],
+                      "by",
+                      2
+                    ],
+                    "api": 589824
+                  },
+                  "method",
+                  [
+                    "render"
+                  ],
+                  "ordinal",
+                  0
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "field_4165",
+            "dsc": "[Lnet/minecraft/client/texture/Sprite;"
+          },
+          {
+            "acc": 2,
+            "nme": "field_4166",
+            "dsc": "[Lnet/minecraft/client/texture/Sprite;"
+          },
+          {
+            "acc": 2,
+            "nme": "field_4164",
+            "dsc": "Lnet/minecraft/client/texture/Sprite;"
+          },
+          {
+            "acc": 18,
+            "nme": "fabric_neighborBlock",
+            "dsc": "Ljava/lang/ThreadLocal;",
+            "sig": "Ljava/lang/ThreadLocal<Lnet/minecraft/block/Block;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/render/block/FluidRenderer"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/rendering/fluid/FluidRenderHandlerRegistryImpl$WaterRenderHandler.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "net/fabricmc/fabric/impl/client/rendering/fluid/FluidRenderHandlerRegistryImpl$WaterRenderHandler",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getFluidSprites",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/world/BlockRenderView;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/fluid/FluidState;)[Lnet/minecraft/client/texture/Sprite;"
+          },
+          {
+            "nme": "getFluidColor",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/world/BlockRenderView;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/fluid/FluidState;)I"
+          },
+          {
+            "nme": "updateSprites",
+            "acc": 1,
+            "dsc": "([Lnet/minecraft/client/texture/Sprite;Lnet/minecraft/client/texture/Sprite;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/fabricmc/fabric/impl/client/rendering/fluid/FluidRenderHandlerRegistryImpl$WaterRenderHandler;"
+          },
+          {
+            "acc": 26,
+            "nme": "DEFAULT_WATER_COLOR",
+            "dsc": "I",
+            "val": 4159204
+          },
+          {
+            "acc": 18,
+            "nme": "sprites",
+            "dsc": "[Lnet/minecraft/client/texture/Sprite;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/rendering/fluid/FluidRenderHandlerInfo.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/client/rendering/fluid/FluidRenderHandlerInfo",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setup",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/render/fluid/v1/FluidRenderHandler;Lnet/minecraft/world/BlockRenderView;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/fluid/FluidState;)V"
+          },
+          {
+            "nme": "clear",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 17,
+            "nme": "sprites",
+            "dsc": "[Lnet/minecraft/client/texture/Sprite;"
+          },
+          {
+            "acc": 1,
+            "nme": "handler",
+            "dsc": "Lnet/fabricmc/fabric/api/client/render/fluid/v1/FluidRenderHandler;"
+          },
+          {
+            "acc": 1,
+            "nme": "hasOverlay",
+            "dsc": "Z"
+          },
+          {
+            "acc": 1,
+            "nme": "overlaySprite",
+            "dsc": "Lnet/minecraft/client/texture/Sprite;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/render/fluid/v1/FluidRendering$DefaultRenderer.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/render/fluid/v1/FluidRendering$DefaultRenderer",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "render",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/render/fluid/v1/FluidRenderHandler;Lnet/minecraft/world/BlockRenderView;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/client/render/VertexConsumer;Lnet/minecraft/block/BlockState;Lnet/minecraft/fluid/FluidState;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/rendering/fluid/FluidRenderHandlerRegistryImpl$LavaRenderHandler.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "net/fabricmc/fabric/impl/client/rendering/fluid/FluidRenderHandlerRegistryImpl$LavaRenderHandler",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getFluidSprites",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/world/BlockRenderView;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/fluid/FluidState;)[Lnet/minecraft/client/texture/Sprite;"
+          },
+          {
+            "nme": "updateSprites",
+            "acc": 1,
+            "dsc": "([Lnet/minecraft/client/texture/Sprite;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/fabricmc/fabric/impl/client/rendering/fluid/FluidRenderHandlerRegistryImpl$LavaRenderHandler;"
+          },
+          {
+            "acc": 2,
+            "nme": "sprites",
+            "dsc": "[Lnet/minecraft/client/texture/Sprite;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/rendering/fluid/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/client/rendering/fluid/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/render/fluid/v1/FluidRenderHandlerRegistry.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/render/fluid/v1/FluidRenderHandlerRegistry",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "get",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/fluid/Fluid;)Lnet/fabricmc/fabric/api/client/render/fluid/v1/FluidRenderHandler;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "getOverride",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/fluid/Fluid;)Lnet/fabricmc/fabric/api/client/render/fluid/v1/FluidRenderHandler;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "register",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/fluid/Fluid;Lnet/fabricmc/fabric/api/client/render/fluid/v1/FluidRenderHandler;)V"
+          },
+          {
+            "nme": "register",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/fluid/Fluid;Lnet/minecraft/fluid/Fluid;Lnet/fabricmc/fabric/api/client/render/fluid/v1/FluidRenderHandler;)V"
+          },
+          {
+            "nme": "setBlockTransparency",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/block/Block;Z)V"
+          },
+          {
+            "nme": "isBlockTransparent",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/block/Block;)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/fabricmc/fabric/api/client/render/fluid/v1/FluidRenderHandlerRegistry;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/rendering/fluid/FluidRenderingImpl.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/client/rendering/fluid/FluidRenderingImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "render",
+            "acc": 9,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/render/fluid/v1/FluidRenderHandler;Lnet/minecraft/world/BlockRenderView;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/client/render/VertexConsumer;Lnet/minecraft/block/BlockState;Lnet/minecraft/fluid/FluidState;Lnet/fabricmc/fabric/api/client/render/fluid/v1/FluidRendering$DefaultRenderer;)V"
+          },
+          {
+            "nme": "renderDefault",
+            "acc": 9,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/render/fluid/v1/FluidRenderHandler;Lnet/minecraft/world/BlockRenderView;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/client/render/VertexConsumer;Lnet/minecraft/block/BlockState;Lnet/minecraft/fluid/FluidState;)V"
+          },
+          {
+            "nme": "renderVanillaDefault",
+            "acc": 9,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/render/fluid/v1/FluidRenderHandler;Lnet/minecraft/world/BlockRenderView;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/client/render/VertexConsumer;Lnet/minecraft/block/BlockState;Lnet/minecraft/fluid/FluidState;)V"
+          },
+          {
+            "nme": "setVanillaRenderer",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/client/render/block/FluidRenderer;)V"
+          },
+          {
+            "nme": "getCurrentInfo",
+            "acc": 9,
+            "dsc": "()Lnet/fabricmc/fabric/impl/client/rendering/fluid/FluidRenderHandlerInfo;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "CURRENT_DEFAULT_RENDERER",
+            "dsc": "Ljava/lang/ThreadLocal;",
+            "sig": "Ljava/lang/ThreadLocal<Lnet/fabricmc/fabric/api/client/render/fluid/v1/FluidRendering$DefaultRenderer;>;"
+          },
+          {
+            "acc": 26,
+            "nme": "CURRENT_INFO",
+            "dsc": "Ljava/lang/ThreadLocal;",
+            "sig": "Ljava/lang/ThreadLocal<Lnet/fabricmc/fabric/impl/client/rendering/fluid/FluidRenderHandlerInfo;>;"
+          },
+          {
+            "acc": 10,
+            "nme": "vanillaRenderer",
+            "dsc": "Lnet/minecraft/client/render/block/FluidRenderer;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,2682 @@
+{
+  "md5": "e85029f613b6469989cc7cf53fe06b74",
+  "sha2": "3a53139787663b139de76b627fca0084ab60d32c",
+  "sha256": "9929881f59eb6b840e86d54570c77b59ce721d104e6dfd7a40978991c2d3b41f",
+  "contents": {
+    "classes": {
+      "org/objectweb/asm/tree/InsnList.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/InsnList",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "size",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getFirst",
+            "acc": 1,
+            "dsc": "()Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          },
+          {
+            "nme": "getLast",
+            "acc": 1,
+            "dsc": "()Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          },
+          {
+            "nme": "get",
+            "acc": 1,
+            "dsc": "(I)Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          },
+          {
+            "nme": "contains",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;)Z"
+          },
+          {
+            "nme": "indexOf",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;)I"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;)V"
+          },
+          {
+            "nme": "iterator",
+            "acc": 1,
+            "dsc": "()Ljava/util/ListIterator;",
+            "sig": "()Ljava/util/ListIterator<Lorg/objectweb/asm/tree/AbstractInsnNode;>;"
+          },
+          {
+            "nme": "iterator",
+            "acc": 1,
+            "dsc": "(I)Ljava/util/ListIterator;",
+            "sig": "(I)Ljava/util/ListIterator<Lorg/objectweb/asm/tree/AbstractInsnNode;>;"
+          },
+          {
+            "nme": "toArray",
+            "acc": 1,
+            "dsc": "()[Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          },
+          {
+            "nme": "set",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/AbstractInsnNode;)V"
+          },
+          {
+            "nme": "add",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;)V"
+          },
+          {
+            "nme": "add",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/InsnList;)V"
+          },
+          {
+            "nme": "insert",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;)V"
+          },
+          {
+            "nme": "insert",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/InsnList;)V"
+          },
+          {
+            "nme": "insert",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/AbstractInsnNode;)V"
+          },
+          {
+            "nme": "insert",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/InsnList;)V"
+          },
+          {
+            "nme": "insertBefore",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/AbstractInsnNode;)V"
+          },
+          {
+            "nme": "insertBefore",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/InsnList;)V"
+          },
+          {
+            "nme": "remove",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;)V"
+          },
+          {
+            "nme": "removeAll",
+            "acc": 0,
+            "dsc": "(Z)V"
+          },
+          {
+            "nme": "clear",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "resetLabels",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "iterator",
+            "acc": 4161,
+            "dsc": "()Ljava/util/Iterator;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "size",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "firstInsn",
+            "dsc": "Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          },
+          {
+            "acc": 2,
+            "nme": "lastInsn",
+            "dsc": "Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          },
+          {
+            "acc": 0,
+            "nme": "cache",
+            "dsc": "[Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/MethodNode$1.class": {
+        "ver": 49,
+        "acc": 32,
+        "nme": "org/objectweb/asm/tree/MethodNode$1",
+        "super": "java/util/ArrayList",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lorg/objectweb/asm/tree/MethodNode;I)V"
+          },
+          {
+            "nme": "add",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lorg/objectweb/asm/tree/MethodNode;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/FieldInsnNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/FieldInsnNode",
+        "super": "org/objectweb/asm/tree/AbstractInsnNode",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "setOpcode",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "getType",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;)V"
+          },
+          {
+            "nme": "clone",
+            "acc": 1,
+            "dsc": "(Ljava/util/Map;)Lorg/objectweb/asm/tree/AbstractInsnNode;",
+            "sig": "(Ljava/util/Map<Lorg/objectweb/asm/tree/LabelNode;Lorg/objectweb/asm/tree/LabelNode;>;)Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "owner",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "desc",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/ModuleRequireNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/ModuleRequireNode",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;ILjava/lang/String;)V"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/ModuleVisitor;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "module",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "access",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "version",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/LineNumberNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/LineNumberNode",
+        "super": "org/objectweb/asm/tree/AbstractInsnNode",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/tree/LabelNode;)V"
+          },
+          {
+            "nme": "getType",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;)V"
+          },
+          {
+            "nme": "clone",
+            "acc": 1,
+            "dsc": "(Ljava/util/Map;)Lorg/objectweb/asm/tree/AbstractInsnNode;",
+            "sig": "(Ljava/util/Map<Lorg/objectweb/asm/tree/LabelNode;Lorg/objectweb/asm/tree/LabelNode;>;)Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "line",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "start",
+            "dsc": "Lorg/objectweb/asm/tree/LabelNode;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/LocalVariableNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/LocalVariableNode",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/objectweb/asm/tree/LabelNode;Lorg/objectweb/asm/tree/LabelNode;I)V"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "desc",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "signature",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "start",
+            "dsc": "Lorg/objectweb/asm/tree/LabelNode;"
+          },
+          {
+            "acc": 1,
+            "nme": "end",
+            "dsc": "Lorg/objectweb/asm/tree/LabelNode;"
+          },
+          {
+            "acc": 1,
+            "nme": "index",
+            "dsc": "I"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/LocalVariableAnnotationNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/LocalVariableAnnotationNode",
+        "super": "org/objectweb/asm/tree/TypeAnnotationNode",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/TypePath;[Lorg/objectweb/asm/tree/LabelNode;[Lorg/objectweb/asm/tree/LabelNode;[ILjava/lang/String;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(IILorg/objectweb/asm/TypePath;[Lorg/objectweb/asm/tree/LabelNode;[Lorg/objectweb/asm/tree/LabelNode;[ILjava/lang/String;)V"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;Z)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "start",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/LabelNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "end",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/LabelNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "index",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Ljava/lang/Integer;>;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/FieldNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/FieldNode",
+        "super": "org/objectweb/asm/FieldVisitor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "visitAnnotation",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Z)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "visitTypeAnnotation",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/TypePath;Ljava/lang/String;Z)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "visitAttribute",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Attribute;)V"
+          },
+          {
+            "nme": "visitEnd",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "check",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/ClassVisitor;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "access",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "desc",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "signature",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "value",
+            "dsc": "Ljava/lang/Object;"
+          },
+          {
+            "acc": 1,
+            "nme": "visibleAnnotations",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/AnnotationNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "invisibleAnnotations",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/AnnotationNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "visibleTypeAnnotations",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/TypeAnnotationNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "invisibleTypeAnnotations",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/TypeAnnotationNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "attrs",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/Attribute;>;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/TableSwitchInsnNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/TableSwitchInsnNode",
+        "super": "org/objectweb/asm/tree/AbstractInsnNode",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 129,
+            "dsc": "(IILorg/objectweb/asm/tree/LabelNode;[Lorg/objectweb/asm/tree/LabelNode;)V"
+          },
+          {
+            "nme": "getType",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;)V"
+          },
+          {
+            "nme": "clone",
+            "acc": 1,
+            "dsc": "(Ljava/util/Map;)Lorg/objectweb/asm/tree/AbstractInsnNode;",
+            "sig": "(Ljava/util/Map<Lorg/objectweb/asm/tree/LabelNode;Lorg/objectweb/asm/tree/LabelNode;>;)Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "min",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "max",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "dflt",
+            "dsc": "Lorg/objectweb/asm/tree/LabelNode;"
+          },
+          {
+            "acc": 1,
+            "nme": "labels",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/LabelNode;>;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/JumpInsnNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/JumpInsnNode",
+        "super": "org/objectweb/asm/tree/AbstractInsnNode",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/tree/LabelNode;)V"
+          },
+          {
+            "nme": "setOpcode",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "getType",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;)V"
+          },
+          {
+            "nme": "clone",
+            "acc": 1,
+            "dsc": "(Ljava/util/Map;)Lorg/objectweb/asm/tree/AbstractInsnNode;",
+            "sig": "(Ljava/util/Map<Lorg/objectweb/asm/tree/LabelNode;Lorg/objectweb/asm/tree/LabelNode;>;)Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "label",
+            "dsc": "Lorg/objectweb/asm/tree/LabelNode;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/MethodNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/MethodNode",
+        "super": "org/objectweb/asm/MethodVisitor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitParameter",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "visitAnnotationDefault",
+            "acc": 1,
+            "dsc": "()Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "visitAnnotation",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Z)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "visitTypeAnnotation",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/TypePath;Ljava/lang/String;Z)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "visitAnnotableParameterCount",
+            "acc": 1,
+            "dsc": "(IZ)V"
+          },
+          {
+            "nme": "visitParameterAnnotation",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;Z)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "visitAttribute",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Attribute;)V"
+          },
+          {
+            "nme": "visitCode",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "visitFrame",
+            "acc": 1,
+            "dsc": "(II[Ljava/lang/Object;I[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "visitInsn",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "visitIntInsn",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "visitVarInsn",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "visitTypeInsn",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;)V"
+          },
+          {
+            "nme": "visitFieldInsn",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitMethodInsn",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V"
+          },
+          {
+            "nme": "visitInvokeDynamicInsn",
+            "acc": 129,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Lorg/objectweb/asm/Handle;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "visitJumpInsn",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "visitLabel",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "visitLdcInsn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "visitIincInsn",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "visitTableSwitchInsn",
+            "acc": 129,
+            "dsc": "(IILorg/objectweb/asm/Label;[Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "visitLookupSwitchInsn",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;[I[Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "visitMultiANewArrayInsn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "visitInsnAnnotation",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/TypePath;Ljava/lang/String;Z)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "visitTryCatchBlock",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;Lorg/objectweb/asm/Label;Lorg/objectweb/asm/Label;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitTryCatchAnnotation",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/TypePath;Ljava/lang/String;Z)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "visitLocalVariable",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/objectweb/asm/Label;Lorg/objectweb/asm/Label;I)V"
+          },
+          {
+            "nme": "visitLocalVariableAnnotation",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/TypePath;[Lorg/objectweb/asm/Label;[Lorg/objectweb/asm/Label;[ILjava/lang/String;Z)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "visitLineNumber",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "visitMaxs",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "visitEnd",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getLabelNode",
+            "acc": 4,
+            "dsc": "(Lorg/objectweb/asm/Label;)Lorg/objectweb/asm/tree/LabelNode;"
+          },
+          {
+            "nme": "getLabelNodes",
+            "acc": 2,
+            "dsc": "([Lorg/objectweb/asm/Label;)[Lorg/objectweb/asm/tree/LabelNode;"
+          },
+          {
+            "nme": "getLabelNodes",
+            "acc": 2,
+            "dsc": "([Ljava/lang/Object;)[Ljava/lang/Object;"
+          },
+          {
+            "nme": "check",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/ClassVisitor;)V"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "access",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "desc",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "signature",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "exceptions",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Ljava/lang/String;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "parameters",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/ParameterNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "visibleAnnotations",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/AnnotationNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "invisibleAnnotations",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/AnnotationNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "visibleTypeAnnotations",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/TypeAnnotationNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "invisibleTypeAnnotations",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/TypeAnnotationNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "attrs",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/Attribute;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "annotationDefault",
+            "dsc": "Ljava/lang/Object;"
+          },
+          {
+            "acc": 1,
+            "nme": "visibleAnnotableParameterCount",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "visibleParameterAnnotations",
+            "dsc": "[Ljava/util/List;",
+            "sig": "[Ljava/util/List<Lorg/objectweb/asm/tree/AnnotationNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "invisibleAnnotableParameterCount",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "invisibleParameterAnnotations",
+            "dsc": "[Ljava/util/List;",
+            "sig": "[Ljava/util/List<Lorg/objectweb/asm/tree/AnnotationNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "instructions",
+            "dsc": "Lorg/objectweb/asm/tree/InsnList;"
+          },
+          {
+            "acc": 1,
+            "nme": "tryCatchBlocks",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/TryCatchBlockNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "maxStack",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "maxLocals",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "localVariables",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/LocalVariableNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "visibleLocalVariableAnnotations",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/LocalVariableAnnotationNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "invisibleLocalVariableAnnotations",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/LocalVariableAnnotationNode;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "visited",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/ClassNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/ClassNode",
+        "super": "org/objectweb/asm/ClassVisitor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "visit",
+            "acc": 1,
+            "dsc": "(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitSource",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitModule",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;ILjava/lang/String;)Lorg/objectweb/asm/ModuleVisitor;"
+          },
+          {
+            "nme": "visitNestHost",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitOuterClass",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitAnnotation",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Z)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "visitTypeAnnotation",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/TypePath;Ljava/lang/String;Z)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "visitAttribute",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Attribute;)V"
+          },
+          {
+            "nme": "visitNestMember",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitPermittedSubclass",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitInnerClass",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "visitRecordComponent",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/objectweb/asm/RecordComponentVisitor;"
+          },
+          {
+            "nme": "visitField",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)Lorg/objectweb/asm/FieldVisitor;"
+          },
+          {
+            "nme": "visitMethod",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Lorg/objectweb/asm/MethodVisitor;"
+          },
+          {
+            "nme": "visitEnd",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "check",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/ClassVisitor;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "version",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "access",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "signature",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "superName",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "interfaces",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Ljava/lang/String;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "sourceFile",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "sourceDebug",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "module",
+            "dsc": "Lorg/objectweb/asm/tree/ModuleNode;"
+          },
+          {
+            "acc": 1,
+            "nme": "outerClass",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "outerMethod",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "outerMethodDesc",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "visibleAnnotations",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/AnnotationNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "invisibleAnnotations",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/AnnotationNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "visibleTypeAnnotations",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/TypeAnnotationNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "invisibleTypeAnnotations",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/TypeAnnotationNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "attrs",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/Attribute;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "innerClasses",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/InnerClassNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "nestHostClass",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "nestMembers",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Ljava/lang/String;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "permittedSubclasses",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Ljava/lang/String;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "recordComponents",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/RecordComponentNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "fields",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/FieldNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "methods",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/MethodNode;>;"
+          }
+        ]
+      },
+      "module-info.class": {
+        "ver": 53,
+        "acc": 32768,
+        "nme": "module-info",
+        "mthds": [],
+        "flds": []
+      },
+      "org/objectweb/asm/tree/IntInsnNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/IntInsnNode",
+        "super": "org/objectweb/asm/tree/AbstractInsnNode",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "setOpcode",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "getType",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;)V"
+          },
+          {
+            "nme": "clone",
+            "acc": 1,
+            "dsc": "(Ljava/util/Map;)Lorg/objectweb/asm/tree/AbstractInsnNode;",
+            "sig": "(Ljava/util/Map<Lorg/objectweb/asm/tree/LabelNode;Lorg/objectweb/asm/tree/LabelNode;>;)Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "operand",
+            "dsc": "I"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/ModuleProvideNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/ModuleProvideNode",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/util/List;)V",
+            "sig": "(Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;)V"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/ModuleVisitor;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "service",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "providers",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Ljava/lang/String;>;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/InsnNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/InsnNode",
+        "super": "org/objectweb/asm/tree/AbstractInsnNode",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "getType",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;)V"
+          },
+          {
+            "nme": "clone",
+            "acc": 1,
+            "dsc": "(Ljava/util/Map;)Lorg/objectweb/asm/tree/AbstractInsnNode;",
+            "sig": "(Ljava/util/Map<Lorg/objectweb/asm/tree/LabelNode;Lorg/objectweb/asm/tree/LabelNode;>;)Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          }
+        ],
+        "flds": []
+      },
+      "org/objectweb/asm/tree/Util.class": {
+        "ver": 49,
+        "acc": 48,
+        "nme": "org/objectweb/asm/tree/Util",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "add",
+            "acc": 8,
+            "dsc": "(Ljava/util/List;Ljava/lang/Object;)Ljava/util/List;",
+            "sig": "<T:Ljava/lang/Object;>(Ljava/util/List<TT;>;TT;)Ljava/util/List<TT;>;"
+          },
+          {
+            "nme": "asArrayList",
+            "acc": 8,
+            "dsc": "(I)Ljava/util/List;",
+            "sig": "<T:Ljava/lang/Object;>(I)Ljava/util/List<TT;>;"
+          },
+          {
+            "nme": "asArrayList",
+            "acc": 8,
+            "dsc": "([Ljava/lang/Object;)Ljava/util/List;",
+            "sig": "<T:Ljava/lang/Object;>([TT;)Ljava/util/List<TT;>;"
+          },
+          {
+            "nme": "asArrayList",
+            "acc": 8,
+            "dsc": "([B)Ljava/util/List;",
+            "sig": "([B)Ljava/util/List<Ljava/lang/Byte;>;"
+          },
+          {
+            "nme": "asArrayList",
+            "acc": 8,
+            "dsc": "([Z)Ljava/util/List;",
+            "sig": "([Z)Ljava/util/List<Ljava/lang/Boolean;>;"
+          },
+          {
+            "nme": "asArrayList",
+            "acc": 8,
+            "dsc": "([S)Ljava/util/List;",
+            "sig": "([S)Ljava/util/List<Ljava/lang/Short;>;"
+          },
+          {
+            "nme": "asArrayList",
+            "acc": 8,
+            "dsc": "([C)Ljava/util/List;",
+            "sig": "([C)Ljava/util/List<Ljava/lang/Character;>;"
+          },
+          {
+            "nme": "asArrayList",
+            "acc": 8,
+            "dsc": "([I)Ljava/util/List;",
+            "sig": "([I)Ljava/util/List<Ljava/lang/Integer;>;"
+          },
+          {
+            "nme": "asArrayList",
+            "acc": 8,
+            "dsc": "([F)Ljava/util/List;",
+            "sig": "([F)Ljava/util/List<Ljava/lang/Float;>;"
+          },
+          {
+            "nme": "asArrayList",
+            "acc": 8,
+            "dsc": "([J)Ljava/util/List;",
+            "sig": "([J)Ljava/util/List<Ljava/lang/Long;>;"
+          },
+          {
+            "nme": "asArrayList",
+            "acc": 8,
+            "dsc": "([D)Ljava/util/List;",
+            "sig": "([D)Ljava/util/List<Ljava/lang/Double;>;"
+          },
+          {
+            "nme": "asArrayList",
+            "acc": 8,
+            "dsc": "(I[Ljava/lang/Object;)Ljava/util/List;",
+            "sig": "<T:Ljava/lang/Object;>(I[TT;)Ljava/util/List<TT;>;"
+          }
+        ],
+        "flds": []
+      },
+      "org/objectweb/asm/tree/FrameNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/FrameNode",
+        "super": "org/objectweb/asm/tree/AbstractInsnNode",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(II[Ljava/lang/Object;I[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "getType",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;)V"
+          },
+          {
+            "nme": "clone",
+            "acc": 1,
+            "dsc": "(Ljava/util/Map;)Lorg/objectweb/asm/tree/AbstractInsnNode;",
+            "sig": "(Ljava/util/Map<Lorg/objectweb/asm/tree/LabelNode;Lorg/objectweb/asm/tree/LabelNode;>;)Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          },
+          {
+            "nme": "asArray",
+            "acc": 10,
+            "dsc": "(Ljava/util/List;)[Ljava/lang/Object;",
+            "sig": "(Ljava/util/List<Ljava/lang/Object;>;)[Ljava/lang/Object;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "type",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "local",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Ljava/lang/Object;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "stack",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Ljava/lang/Object;>;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/MethodInsnNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/MethodInsnNode",
+        "super": "org/objectweb/asm/tree/AbstractInsnNode",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V"
+          },
+          {
+            "nme": "setOpcode",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "getType",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;)V"
+          },
+          {
+            "nme": "clone",
+            "acc": 1,
+            "dsc": "(Ljava/util/Map;)Lorg/objectweb/asm/tree/AbstractInsnNode;",
+            "sig": "(Ljava/util/Map<Lorg/objectweb/asm/tree/LabelNode;Lorg/objectweb/asm/tree/LabelNode;>;)Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "owner",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "desc",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "itf",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/AnnotationNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/AnnotationNode",
+        "super": "org/objectweb/asm/AnnotationVisitor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/util/List;)V",
+            "sig": "(Ljava/util/List<Ljava/lang/Object;>;)V"
+          },
+          {
+            "nme": "visit",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "visitEnum",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitAnnotation",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "visitArray",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "visitEnd",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "check",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/AnnotationVisitor;)V"
+          },
+          {
+            "nme": "accept",
+            "acc": 8,
+            "dsc": "(Lorg/objectweb/asm/AnnotationVisitor;Ljava/lang/String;Ljava/lang/Object;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "desc",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "values",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Ljava/lang/Object;>;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/TypeInsnNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/TypeInsnNode",
+        "super": "org/objectweb/asm/tree/AbstractInsnNode",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;)V"
+          },
+          {
+            "nme": "setOpcode",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "getType",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;)V"
+          },
+          {
+            "nme": "clone",
+            "acc": 1,
+            "dsc": "(Ljava/util/Map;)Lorg/objectweb/asm/tree/AbstractInsnNode;",
+            "sig": "(Ljava/util/Map<Lorg/objectweb/asm/tree/LabelNode;Lorg/objectweb/asm/tree/LabelNode;>;)Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "desc",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/TypeAnnotationNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/TypeAnnotationNode",
+        "super": "org/objectweb/asm/tree/AnnotationNode",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/TypePath;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(IILorg/objectweb/asm/TypePath;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "typeRef",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "typePath",
+            "dsc": "Lorg/objectweb/asm/TypePath;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/ModuleNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/ModuleNode",
+        "super": "org/objectweb/asm/ModuleVisitor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;ILjava/lang/String;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;ILjava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;)V",
+            "sig": "(ILjava/lang/String;ILjava/lang/String;Ljava/util/List<Lorg/objectweb/asm/tree/ModuleRequireNode;>;Ljava/util/List<Lorg/objectweb/asm/tree/ModuleExportNode;>;Ljava/util/List<Lorg/objectweb/asm/tree/ModuleOpenNode;>;Ljava/util/List<Ljava/lang/String;>;Ljava/util/List<Lorg/objectweb/asm/tree/ModuleProvideNode;>;)V"
+          },
+          {
+            "nme": "visitMainClass",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitPackage",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitRequire",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;ILjava/lang/String;)V"
+          },
+          {
+            "nme": "visitExport",
+            "acc": 129,
+            "dsc": "(Ljava/lang/String;I[Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitOpen",
+            "acc": 129,
+            "dsc": "(Ljava/lang/String;I[Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitUse",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitProvide",
+            "acc": 129,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitEnd",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/ClassVisitor;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "access",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "version",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "mainClass",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "packages",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Ljava/lang/String;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "requires",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/ModuleRequireNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "exports",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/ModuleExportNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "opens",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/ModuleOpenNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "uses",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Ljava/lang/String;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "provides",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/ModuleProvideNode;>;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/InvokeDynamicInsnNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/InvokeDynamicInsnNode",
+        "super": "org/objectweb/asm/tree/AbstractInsnNode",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 129,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Lorg/objectweb/asm/Handle;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "getType",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;)V"
+          },
+          {
+            "nme": "clone",
+            "acc": 1,
+            "dsc": "(Ljava/util/Map;)Lorg/objectweb/asm/tree/AbstractInsnNode;",
+            "sig": "(Ljava/util/Map<Lorg/objectweb/asm/tree/LabelNode;Lorg/objectweb/asm/tree/LabelNode;>;)Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "desc",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "bsm",
+            "dsc": "Lorg/objectweb/asm/Handle;"
+          },
+          {
+            "acc": 1,
+            "nme": "bsmArgs",
+            "dsc": "[Ljava/lang/Object;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/VarInsnNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/VarInsnNode",
+        "super": "org/objectweb/asm/tree/AbstractInsnNode",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "setOpcode",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "getType",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;)V"
+          },
+          {
+            "nme": "clone",
+            "acc": 1,
+            "dsc": "(Ljava/util/Map;)Lorg/objectweb/asm/tree/AbstractInsnNode;",
+            "sig": "(Ljava/util/Map<Lorg/objectweb/asm/tree/LabelNode;Lorg/objectweb/asm/tree/LabelNode;>;)Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "var",
+            "dsc": "I"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/ModuleOpenNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/ModuleOpenNode",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;ILjava/util/List;)V",
+            "sig": "(Ljava/lang/String;ILjava/util/List<Ljava/lang/String;>;)V"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/ModuleVisitor;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "packaze",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "access",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "modules",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Ljava/lang/String;>;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/TryCatchBlockNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/TryCatchBlockNode",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/LabelNode;Lorg/objectweb/asm/tree/LabelNode;Lorg/objectweb/asm/tree/LabelNode;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "updateIndex",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "start",
+            "dsc": "Lorg/objectweb/asm/tree/LabelNode;"
+          },
+          {
+            "acc": 1,
+            "nme": "end",
+            "dsc": "Lorg/objectweb/asm/tree/LabelNode;"
+          },
+          {
+            "acc": 1,
+            "nme": "handler",
+            "dsc": "Lorg/objectweb/asm/tree/LabelNode;"
+          },
+          {
+            "acc": 1,
+            "nme": "type",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "visibleTypeAnnotations",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/TypeAnnotationNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "invisibleTypeAnnotations",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/TypeAnnotationNode;>;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/LdcInsnNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/LdcInsnNode",
+        "super": "org/objectweb/asm/tree/AbstractInsnNode",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "getType",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;)V"
+          },
+          {
+            "nme": "clone",
+            "acc": 1,
+            "dsc": "(Ljava/util/Map;)Lorg/objectweb/asm/tree/AbstractInsnNode;",
+            "sig": "(Ljava/util/Map<Lorg/objectweb/asm/tree/LabelNode;Lorg/objectweb/asm/tree/LabelNode;>;)Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "cst",
+            "dsc": "Ljava/lang/Object;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/RecordComponentNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/RecordComponentNode",
+        "super": "org/objectweb/asm/RecordComponentVisitor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitAnnotation",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Z)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "visitTypeAnnotation",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/TypePath;Ljava/lang/String;Z)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "visitAttribute",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Attribute;)V"
+          },
+          {
+            "nme": "visitEnd",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "check",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/ClassVisitor;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "descriptor",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "signature",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "visibleAnnotations",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/AnnotationNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "invisibleAnnotations",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/AnnotationNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "visibleTypeAnnotations",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/TypeAnnotationNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "invisibleTypeAnnotations",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/TypeAnnotationNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "attrs",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/Attribute;>;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/InnerClassNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/InnerClassNode",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/ClassVisitor;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "outerName",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "innerName",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "access",
+            "dsc": "I"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/LookupSwitchInsnNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/LookupSwitchInsnNode",
+        "super": "org/objectweb/asm/tree/AbstractInsnNode",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/LabelNode;[I[Lorg/objectweb/asm/tree/LabelNode;)V"
+          },
+          {
+            "nme": "getType",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;)V"
+          },
+          {
+            "nme": "clone",
+            "acc": 1,
+            "dsc": "(Ljava/util/Map;)Lorg/objectweb/asm/tree/AbstractInsnNode;",
+            "sig": "(Ljava/util/Map<Lorg/objectweb/asm/tree/LabelNode;Lorg/objectweb/asm/tree/LabelNode;>;)Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "dflt",
+            "dsc": "Lorg/objectweb/asm/tree/LabelNode;"
+          },
+          {
+            "acc": 1,
+            "nme": "keys",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Ljava/lang/Integer;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "labels",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/LabelNode;>;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/InsnList$InsnListIterator.class": {
+        "ver": 49,
+        "acc": 48,
+        "nme": "org/objectweb/asm/tree/InsnList$InsnListIterator",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lorg/objectweb/asm/tree/InsnList;I)V"
+          },
+          {
+            "nme": "hasNext",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "next",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Object;"
+          },
+          {
+            "nme": "remove",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "hasPrevious",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "previous",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Object;"
+          },
+          {
+            "nme": "nextIndex",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "previousIndex",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "add",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "set",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "nextInsn",
+            "dsc": "Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          },
+          {
+            "acc": 0,
+            "nme": "previousInsn",
+            "dsc": "Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          },
+          {
+            "acc": 0,
+            "nme": "remove",
+            "dsc": "Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lorg/objectweb/asm/tree/InsnList;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/LabelNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/LabelNode",
+        "super": "org/objectweb/asm/tree/AbstractInsnNode",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "getType",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getLabel",
+            "acc": 1,
+            "dsc": "()Lorg/objectweb/asm/Label;"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;)V"
+          },
+          {
+            "nme": "clone",
+            "acc": 1,
+            "dsc": "(Ljava/util/Map;)Lorg/objectweb/asm/tree/AbstractInsnNode;",
+            "sig": "(Ljava/util/Map<Lorg/objectweb/asm/tree/LabelNode;Lorg/objectweb/asm/tree/LabelNode;>;)Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          },
+          {
+            "nme": "resetLabel",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "value",
+            "dsc": "Lorg/objectweb/asm/Label;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/MultiANewArrayInsnNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/MultiANewArrayInsnNode",
+        "super": "org/objectweb/asm/tree/AbstractInsnNode",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "getType",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;)V"
+          },
+          {
+            "nme": "clone",
+            "acc": 1,
+            "dsc": "(Ljava/util/Map;)Lorg/objectweb/asm/tree/AbstractInsnNode;",
+            "sig": "(Ljava/util/Map<Lorg/objectweb/asm/tree/LabelNode;Lorg/objectweb/asm/tree/LabelNode;>;)Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "desc",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "dims",
+            "dsc": "I"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/ModuleExportNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/ModuleExportNode",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;ILjava/util/List;)V",
+            "sig": "(Ljava/lang/String;ILjava/util/List<Ljava/lang/String;>;)V"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/ModuleVisitor;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "packaze",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "access",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "modules",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Ljava/lang/String;>;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/AbstractInsnNode.class": {
+        "ver": 49,
+        "acc": 1057,
+        "nme": "org/objectweb/asm/tree/AbstractInsnNode",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "getOpcode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getType",
+            "acc": 1025,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getPrevious",
+            "acc": 1,
+            "dsc": "()Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          },
+          {
+            "nme": "getNext",
+            "acc": 1,
+            "dsc": "()Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          },
+          {
+            "nme": "accept",
+            "acc": 1025,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;)V"
+          },
+          {
+            "nme": "acceptAnnotations",
+            "acc": 20,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;)V"
+          },
+          {
+            "nme": "clone",
+            "acc": 1025,
+            "dsc": "(Ljava/util/Map;)Lorg/objectweb/asm/tree/AbstractInsnNode;",
+            "sig": "(Ljava/util/Map<Lorg/objectweb/asm/tree/LabelNode;Lorg/objectweb/asm/tree/LabelNode;>;)Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          },
+          {
+            "nme": "clone",
+            "acc": 8,
+            "dsc": "(Lorg/objectweb/asm/tree/LabelNode;Ljava/util/Map;)Lorg/objectweb/asm/tree/LabelNode;",
+            "sig": "(Lorg/objectweb/asm/tree/LabelNode;Ljava/util/Map<Lorg/objectweb/asm/tree/LabelNode;Lorg/objectweb/asm/tree/LabelNode;>;)Lorg/objectweb/asm/tree/LabelNode;"
+          },
+          {
+            "nme": "clone",
+            "acc": 8,
+            "dsc": "(Ljava/util/List;Ljava/util/Map;)[Lorg/objectweb/asm/tree/LabelNode;",
+            "sig": "(Ljava/util/List<Lorg/objectweb/asm/tree/LabelNode;>;Ljava/util/Map<Lorg/objectweb/asm/tree/LabelNode;Lorg/objectweb/asm/tree/LabelNode;>;)[Lorg/objectweb/asm/tree/LabelNode;"
+          },
+          {
+            "nme": "cloneAnnotations",
+            "acc": 20,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;)Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSN",
+            "dsc": "I",
+            "val": 0
+          },
+          {
+            "acc": 25,
+            "nme": "INT_INSN",
+            "dsc": "I",
+            "val": 1
+          },
+          {
+            "acc": 25,
+            "nme": "VAR_INSN",
+            "dsc": "I",
+            "val": 2
+          },
+          {
+            "acc": 25,
+            "nme": "TYPE_INSN",
+            "dsc": "I",
+            "val": 3
+          },
+          {
+            "acc": 25,
+            "nme": "FIELD_INSN",
+            "dsc": "I",
+            "val": 4
+          },
+          {
+            "acc": 25,
+            "nme": "METHOD_INSN",
+            "dsc": "I",
+            "val": 5
+          },
+          {
+            "acc": 25,
+            "nme": "INVOKE_DYNAMIC_INSN",
+            "dsc": "I",
+            "val": 6
+          },
+          {
+            "acc": 25,
+            "nme": "JUMP_INSN",
+            "dsc": "I",
+            "val": 7
+          },
+          {
+            "acc": 25,
+            "nme": "LABEL",
+            "dsc": "I",
+            "val": 8
+          },
+          {
+            "acc": 25,
+            "nme": "LDC_INSN",
+            "dsc": "I",
+            "val": 9
+          },
+          {
+            "acc": 25,
+            "nme": "IINC_INSN",
+            "dsc": "I",
+            "val": 10
+          },
+          {
+            "acc": 25,
+            "nme": "TABLESWITCH_INSN",
+            "dsc": "I",
+            "val": 11
+          },
+          {
+            "acc": 25,
+            "nme": "LOOKUPSWITCH_INSN",
+            "dsc": "I",
+            "val": 12
+          },
+          {
+            "acc": 25,
+            "nme": "MULTIANEWARRAY_INSN",
+            "dsc": "I",
+            "val": 13
+          },
+          {
+            "acc": 25,
+            "nme": "FRAME",
+            "dsc": "I",
+            "val": 14
+          },
+          {
+            "acc": 25,
+            "nme": "LINE",
+            "dsc": "I",
+            "val": 15
+          },
+          {
+            "acc": 4,
+            "nme": "opcode",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "visibleTypeAnnotations",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/TypeAnnotationNode;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "invisibleTypeAnnotations",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/TypeAnnotationNode;>;"
+          },
+          {
+            "acc": 0,
+            "nme": "previousInsn",
+            "dsc": "Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          },
+          {
+            "acc": 0,
+            "nme": "nextInsn",
+            "dsc": "Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          },
+          {
+            "acc": 0,
+            "nme": "index",
+            "dsc": "I"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/ParameterNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/ParameterNode",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "access",
+            "dsc": "I"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/UnsupportedClassVersionException.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/UnsupportedClassVersionException",
+        "super": "java/lang/RuntimeException",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": -3502347765891805831
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/IincInsnNode.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/IincInsnNode",
+        "super": "org/objectweb/asm/tree/AbstractInsnNode",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "getType",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;)V"
+          },
+          {
+            "nme": "clone",
+            "acc": 1,
+            "dsc": "(Ljava/util/Map;)Lorg/objectweb/asm/tree/AbstractInsnNode;",
+            "sig": "(Ljava/util/Map<Lorg/objectweb/asm/tree/LabelNode;Lorg/objectweb/asm/tree/LabelNode;>;)Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "var",
+            "dsc": "I"
+          },
+          {
+            "acc": 1,
+            "nme": "incr",
+            "dsc": "I"
+          }
+        ]
+      }
+    }
+  }
+}

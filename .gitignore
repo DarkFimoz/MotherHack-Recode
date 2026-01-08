@@ -1,0 +1,14 @@
+/.idea/
+/.gradle/
+/build/
+/run/
+/bin/
+/.classpath/
+/.project/
+/.settings/
+/motherhack-recode-fabric_client.launch/
+/motherhack-recode-fabric_server.launch/
+
+# ProGuard outputs
+*-obfuscated.jar
+mapping.txt

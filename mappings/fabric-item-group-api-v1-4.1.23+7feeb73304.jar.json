@@ -1,0 +1,1432 @@
+{
+  "md5": "1794894d98b7190009577a30f0d6884c",
+  "sha2": "b1e5097f3ecf7a5474175e70cd89322af30372a0",
+  "sha256": "9eaeb5c95c163a540078085a263505fc123958eeb4398b9a77722db7e38c4730",
+  "contents": {
+    "classes": {
+      "net/fabricmc/fabric/api/itemgroup/v1/FabricItemGroupEntries$1.class": {
+        "ver": 65,
+        "acc": 4128,
+        "nme": "net/fabricmc/fabric/api/itemgroup/v1/FabricItemGroupEntries$1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4120,
+            "nme": "$SwitchMap$net$minecraft$item$ItemGroup$StackVisibility",
+            "dsc": "[I"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/itemgroup/v1/FabricItemGroup.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/itemgroup/v1/FabricItemGroup",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "builder",
+            "acc": 9,
+            "dsc": "()Lnet/minecraft/item/ItemGroup$Builder;"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/mixin/itemgroup/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/mixin/itemgroup/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/itemgroup/FabricCreativeGuiComponents$ItemGroupButtonWidget.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/client/itemgroup/FabricCreativeGuiComponents$ItemGroupButtonWidget",
+        "super": "net/minecraft/client/gui/widget/ButtonWidget",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(IILnet/fabricmc/fabric/impl/client/itemgroup/FabricCreativeGuiComponents$Type;Lnet/minecraft/client/gui/screen/ingame/CreativeInventoryScreen;)V"
+          },
+          {
+            "nme": "renderWidget",
+            "acc": 4,
+            "dsc": "(Lnet/minecraft/client/gui/DrawContext;IIF)V"
+          },
+          {
+            "nme": "lambda$new$0",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/impl/client/itemgroup/FabricCreativeGuiComponents$Type;Lnet/minecraft/client/gui/screen/ingame/CreativeInventoryScreen;Lnet/minecraft/client/gui/widget/ButtonWidget;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16,
+            "nme": "screen",
+            "dsc": "Lnet/minecraft/client/gui/screen/ingame/CreativeInventoryScreen;"
+          },
+          {
+            "acc": 16,
+            "nme": "type",
+            "dsc": "Lnet/fabricmc/fabric/impl/client/itemgroup/FabricCreativeGuiComponents$Type;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/itemgroup/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/itemgroup/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/itemgroup/v1/FabricCreativeInventoryScreen.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/itemgroup/v1/FabricCreativeInventoryScreen",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "switchToPage",
+            "acc": 1,
+            "dsc": "(I)Z"
+          },
+          {
+            "nme": "switchToNextPage",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "switchToPreviousPage",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getCurrentPage",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getPageCount",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getItemGroupsOnPage",
+            "acc": 1,
+            "dsc": "(I)Ljava/util/List;",
+            "sig": "(I)Ljava/util/List<Lnet/minecraft/item/ItemGroup;>;"
+          },
+          {
+            "nme": "getPage",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/item/ItemGroup;)I"
+          },
+          {
+            "nme": "hasAdditionalPages",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getSelectedItemGroup",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/item/ItemGroup;"
+          },
+          {
+            "nme": "setSelectedItemGroup",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/item/ItemGroup;)Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/itemgroup/ItemGroupsMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/itemgroup/ItemGroupsMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "deferDuplicateCheck",
+            "acc": 10,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "collect"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "paginateGroups",
+            "acc": 10,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "updateEntries"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "TAIL"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "lambda$paginateGroups$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/registry/entry/RegistryEntry$Reference;Lnet/minecraft/registry/entry/RegistryEntry$Reference;)I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "TABS_PER_PAGE",
+            "dsc": "I",
+            "val": 10
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/item/ItemGroups"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/itemgroup/FabricItemGroupBuilderImpl.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/itemgroup/FabricItemGroupBuilderImpl",
+        "super": "net/minecraft/item/ItemGroup$Builder",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "displayName",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/text/Text;)Lnet/minecraft/item/ItemGroup$Builder;"
+          },
+          {
+            "nme": "build",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/item/ItemGroup;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "hasDisplayName",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/itemgroup/ItemGroupEventsImpl.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/itemgroup/ItemGroupEventsImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getOrCreateModifyEntriesEvent",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/item/ItemGroup;>;)Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/itemgroup/v1/ItemGroupEvents$ModifyEntries;>;"
+          },
+          {
+            "nme": "getModifyEntriesEvent",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/item/ItemGroup;>;)Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/itemgroup/v1/ItemGroupEvents$ModifyEntries;>;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "createModifyEvent",
+            "acc": 10,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/itemgroup/v1/ItemGroupEvents$ModifyEntries;>;"
+          },
+          {
+            "nme": "lambda$createModifyEvent$2",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/itemgroup/v1/ItemGroupEvents$ModifyEntries;)Lnet/fabricmc/fabric/api/itemgroup/v1/ItemGroupEvents$ModifyEntries;"
+          },
+          {
+            "nme": "lambda$createModifyEvent$1",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/itemgroup/v1/ItemGroupEvents$ModifyEntries;Lnet/fabricmc/fabric/api/itemgroup/v1/FabricItemGroupEntries;)V"
+          },
+          {
+            "nme": "lambda$getOrCreateModifyEntriesEvent$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Lnet/fabricmc/fabric/api/event/Event;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "ITEM_GROUP_EVENT_MAP",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/item/ItemGroup;>;Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/itemgroup/v1/ItemGroupEvents$ModifyEntries;>;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/itemgroup/v1/ItemGroupEvents$ModifyEntriesAll.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/itemgroup/v1/ItemGroupEvents$ModifyEntriesAll",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "modifyEntries",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/item/ItemGroup;Lnet/fabricmc/fabric/api/itemgroup/v1/FabricItemGroupEntries;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/itemgroup/v1/FabricItemGroupEntries.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/api/itemgroup/v1/FabricItemGroupEntries",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/item/ItemGroup$DisplayContext;Ljava/util/List;Ljava/util/List;)V",
+            "sig": "(Lnet/minecraft/item/ItemGroup$DisplayContext;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+              }
+            ]
+          },
+          {
+            "nme": "getContext",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/item/ItemGroup$DisplayContext;"
+          },
+          {
+            "nme": "getEnabledFeatures",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/resource/featuretoggle/FeatureSet;"
+          },
+          {
+            "nme": "shouldShowOpRestrictedItems",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getDisplayStacks",
+            "acc": 1,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lnet/minecraft/item/ItemStack;>;"
+          },
+          {
+            "nme": "getSearchTabStacks",
+            "acc": 1,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lnet/minecraft/item/ItemStack;>;"
+          },
+          {
+            "nme": "add",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemGroup$StackVisibility;)V"
+          },
+          {
+            "nme": "prepend",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/item/ItemStack;)V"
+          },
+          {
+            "nme": "prepend",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemGroup$StackVisibility;)V"
+          },
+          {
+            "nme": "prepend",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/item/ItemConvertible;)V"
+          },
+          {
+            "nme": "prepend",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/item/ItemConvertible;Lnet/minecraft/item/ItemGroup$StackVisibility;)V"
+          },
+          {
+            "nme": "addAfter",
+            "acc": 129,
+            "dsc": "(Lnet/minecraft/item/ItemConvertible;[Lnet/minecraft/item/ItemStack;)V"
+          },
+          {
+            "nme": "addAfter",
+            "acc": 129,
+            "dsc": "(Lnet/minecraft/item/ItemStack;[Lnet/minecraft/item/ItemStack;)V"
+          },
+          {
+            "nme": "addAfter",
+            "acc": 129,
+            "dsc": "(Lnet/minecraft/item/ItemConvertible;[Lnet/minecraft/item/ItemConvertible;)V"
+          },
+          {
+            "nme": "addAfter",
+            "acc": 129,
+            "dsc": "(Lnet/minecraft/item/ItemStack;[Lnet/minecraft/item/ItemConvertible;)V"
+          },
+          {
+            "nme": "addAfter",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/item/ItemConvertible;Ljava/util/Collection;)V",
+            "sig": "(Lnet/minecraft/item/ItemConvertible;Ljava/util/Collection<Lnet/minecraft/item/ItemStack;>;)V"
+          },
+          {
+            "nme": "addAfter",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/item/ItemStack;Ljava/util/Collection;)V",
+            "sig": "(Lnet/minecraft/item/ItemStack;Ljava/util/Collection<Lnet/minecraft/item/ItemStack;>;)V"
+          },
+          {
+            "nme": "addAfter",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/item/ItemConvertible;Ljava/util/Collection;Lnet/minecraft/item/ItemGroup$StackVisibility;)V",
+            "sig": "(Lnet/minecraft/item/ItemConvertible;Ljava/util/Collection<Lnet/minecraft/item/ItemStack;>;Lnet/minecraft/item/ItemGroup$StackVisibility;)V"
+          },
+          {
+            "nme": "addAfter",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/item/ItemStack;Ljava/util/Collection;Lnet/minecraft/item/ItemGroup$StackVisibility;)V",
+            "sig": "(Lnet/minecraft/item/ItemStack;Ljava/util/Collection<Lnet/minecraft/item/ItemStack;>;Lnet/minecraft/item/ItemGroup$StackVisibility;)V"
+          },
+          {
+            "nme": "addAfter",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/Predicate;Ljava/util/Collection;Lnet/minecraft/item/ItemGroup$StackVisibility;)V",
+            "sig": "(Ljava/util/function/Predicate<Lnet/minecraft/item/ItemStack;>;Ljava/util/Collection<Lnet/minecraft/item/ItemStack;>;Lnet/minecraft/item/ItemGroup$StackVisibility;)V"
+          },
+          {
+            "nme": "addBefore",
+            "acc": 129,
+            "dsc": "(Lnet/minecraft/item/ItemConvertible;[Lnet/minecraft/item/ItemStack;)V"
+          },
+          {
+            "nme": "addBefore",
+            "acc": 129,
+            "dsc": "(Lnet/minecraft/item/ItemStack;[Lnet/minecraft/item/ItemStack;)V"
+          },
+          {
+            "nme": "addBefore",
+            "acc": 129,
+            "dsc": "(Lnet/minecraft/item/ItemConvertible;[Lnet/minecraft/item/ItemConvertible;)V"
+          },
+          {
+            "nme": "addBefore",
+            "acc": 129,
+            "dsc": "(Lnet/minecraft/item/ItemStack;[Lnet/minecraft/item/ItemConvertible;)V"
+          },
+          {
+            "nme": "addBefore",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/item/ItemConvertible;Ljava/util/Collection;)V",
+            "sig": "(Lnet/minecraft/item/ItemConvertible;Ljava/util/Collection<Lnet/minecraft/item/ItemStack;>;)V"
+          },
+          {
+            "nme": "addBefore",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/item/ItemStack;Ljava/util/Collection;)V",
+            "sig": "(Lnet/minecraft/item/ItemStack;Ljava/util/Collection<Lnet/minecraft/item/ItemStack;>;)V"
+          },
+          {
+            "nme": "addBefore",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/item/ItemConvertible;Ljava/util/Collection;Lnet/minecraft/item/ItemGroup$StackVisibility;)V",
+            "sig": "(Lnet/minecraft/item/ItemConvertible;Ljava/util/Collection<Lnet/minecraft/item/ItemStack;>;Lnet/minecraft/item/ItemGroup$StackVisibility;)V"
+          },
+          {
+            "nme": "addBefore",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/item/ItemStack;Ljava/util/Collection;Lnet/minecraft/item/ItemGroup$StackVisibility;)V",
+            "sig": "(Lnet/minecraft/item/ItemStack;Ljava/util/Collection<Lnet/minecraft/item/ItemStack;>;Lnet/minecraft/item/ItemGroup$StackVisibility;)V"
+          },
+          {
+            "nme": "addBefore",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/Predicate;Ljava/util/Collection;Lnet/minecraft/item/ItemGroup$StackVisibility;)V",
+            "sig": "(Ljava/util/function/Predicate<Lnet/minecraft/item/ItemStack;>;Ljava/util/Collection<Lnet/minecraft/item/ItemStack;>;Lnet/minecraft/item/ItemGroup$StackVisibility;)V"
+          },
+          {
+            "nme": "isEnabled",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/item/ItemStack;)Z"
+          },
+          {
+            "nme": "getEnabledStacks",
+            "acc": 2,
+            "dsc": "(Ljava/util/Collection;)Ljava/util/Collection;",
+            "sig": "(Ljava/util/Collection<Lnet/minecraft/item/ItemStack;>;)Ljava/util/Collection<Lnet/minecraft/item/ItemStack;>;"
+          },
+          {
+            "nme": "addBefore",
+            "acc": 10,
+            "dsc": "(Ljava/util/function/Predicate;Ljava/util/Collection;Ljava/util/List;)V",
+            "sig": "(Ljava/util/function/Predicate<Lnet/minecraft/item/ItemStack;>;Ljava/util/Collection<Lnet/minecraft/item/ItemStack;>;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+          },
+          {
+            "nme": "addAfter",
+            "acc": 10,
+            "dsc": "(Ljava/util/function/Predicate;Ljava/util/Collection;Ljava/util/List;)V",
+            "sig": "(Ljava/util/function/Predicate<Lnet/minecraft/item/ItemStack;>;Ljava/util/Collection<Lnet/minecraft/item/ItemStack;>;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+          },
+          {
+            "nme": "addBefore",
+            "acc": 10,
+            "dsc": "(Lnet/minecraft/item/ItemStack;Ljava/util/Collection;Ljava/util/List;)V",
+            "sig": "(Lnet/minecraft/item/ItemStack;Ljava/util/Collection<Lnet/minecraft/item/ItemStack;>;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+          },
+          {
+            "nme": "addAfter",
+            "acc": 10,
+            "dsc": "(Lnet/minecraft/item/ItemStack;Ljava/util/Collection;Ljava/util/List;)V",
+            "sig": "(Lnet/minecraft/item/ItemStack;Ljava/util/Collection<Lnet/minecraft/item/ItemStack;>;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+          },
+          {
+            "nme": "addBefore",
+            "acc": 10,
+            "dsc": "(Lnet/minecraft/item/ItemConvertible;Ljava/util/Collection;Ljava/util/List;)V",
+            "sig": "(Lnet/minecraft/item/ItemConvertible;Ljava/util/Collection<Lnet/minecraft/item/ItemStack;>;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+          },
+          {
+            "nme": "addAfter",
+            "acc": 10,
+            "dsc": "(Lnet/minecraft/item/ItemConvertible;Ljava/util/Collection;Ljava/util/List;)V",
+            "sig": "(Lnet/minecraft/item/ItemConvertible;Ljava/util/Collection<Lnet/minecraft/item/ItemStack;>;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+          },
+          {
+            "nme": "checkStacks",
+            "acc": 10,
+            "dsc": "(Ljava/util/Collection;)V",
+            "sig": "(Ljava/util/Collection<Lnet/minecraft/item/ItemStack;>;)V"
+          },
+          {
+            "nme": "checkStack",
+            "acc": 10,
+            "dsc": "(Lnet/minecraft/item/ItemStack;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "context",
+            "dsc": "Lnet/minecraft/item/ItemGroup$DisplayContext;"
+          },
+          {
+            "acc": 18,
+            "nme": "displayStacks",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lnet/minecraft/item/ItemStack;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "searchTabStacks",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lnet/minecraft/item/ItemStack;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/itemgroup/client/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/mixin/itemgroup/client/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/itemgroup/v1/ItemGroupEvents.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/itemgroup/v1/ItemGroupEvents",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "modifyEntriesEvent",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/item/ItemGroup;>;)Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/itemgroup/v1/ItemGroupEvents$ModifyEntries;>;"
+          },
+          {
+            "nme": "lambda$static$1",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/itemgroup/v1/ItemGroupEvents$ModifyEntriesAll;)Lnet/fabricmc/fabric/api/itemgroup/v1/ItemGroupEvents$ModifyEntriesAll;"
+          },
+          {
+            "nme": "lambda$static$0",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/itemgroup/v1/ItemGroupEvents$ModifyEntriesAll;Lnet/minecraft/item/ItemGroup;Lnet/fabricmc/fabric/api/itemgroup/v1/FabricItemGroupEntries;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "MODIFY_ENTRIES_ALL",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/itemgroup/v1/ItemGroupEvents$ModifyEntriesAll;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/itemgroup/v1/ItemGroupEvents$ModifyEntries.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/itemgroup/v1/ItemGroupEvents$ModifyEntries",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "modifyEntries",
+            "acc": 1025,
+            "dsc": "(Lnet/fabricmc/fabric/api/itemgroup/v1/FabricItemGroupEntries;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/itemgroup/ItemGroupAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/itemgroup/ItemGroupAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "setRow",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/item/ItemGroup$Row;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;"
+              },
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Mutable;"
+              },
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Final;"
+              }
+            ]
+          },
+          {
+            "nme": "setColumn",
+            "acc": 1025,
+            "dsc": "(I)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;"
+              },
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Mutable;"
+              },
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Final;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/item/ItemGroup"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/itemgroup/ItemGroupsMixin$1ItemGroupPosition.class": {
+        "ver": 65,
+        "acc": 65584,
+        "nme": "net/fabricmc/fabric/mixin/itemgroup/ItemGroupsMixin$1ItemGroupPosition",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lnet/minecraft/item/ItemGroup$Row;II)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "row",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/item/ItemGroup$Row;"
+          },
+          {
+            "nme": "column",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "page",
+            "acc": 1,
+            "dsc": "()I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "row",
+            "dsc": "Lnet/minecraft/item/ItemGroup$Row;"
+          },
+          {
+            "acc": 18,
+            "nme": "column",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "page",
+            "dsc": "I"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/itemgroup/client/CreativeInventoryScreenMixin.class": {
+        "ver": 65,
+        "acc": 1057,
+        "nme": "net/fabricmc/fabric/mixin/itemgroup/client/CreativeInventoryScreenMixin",
+        "super": "net/minecraft/client/gui/screen/ingame/HandledScreen",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/gui/screen/ingame/CreativeInventoryScreen$CreativeScreenHandler;Lnet/minecraft/entity/player/PlayerInventory;Lnet/minecraft/text/Text;)V"
+          },
+          {
+            "nme": "method_2466",
+            "acc": 1028,
+            "dsc": "(Lnet/minecraft/item/ItemGroup;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Shadow;"
+              }
+            ]
+          },
+          {
+            "nme": "updateSelection",
+            "acc": 2,
+            "dsc": "()V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Unique;"
+              }
+            ]
+          },
+          {
+            "nme": "init",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "init"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "setSelectedTab",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/item/ItemGroup;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "setSelectedTab"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "renderTabTooltipIfHovered",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/client/gui/DrawContext;Lnet/minecraft/item/ItemGroup;IILorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lnet/minecraft/client/gui/DrawContext;Lnet/minecraft/item/ItemGroup;IILorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/lang/Boolean;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "renderTabTooltipIfHovered"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "isClickInTab",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/item/ItemGroup;DDLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lnet/minecraft/item/ItemGroup;DDLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/lang/Boolean;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "isClickInTab"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "renderTabIcon",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/client/gui/DrawContext;Lnet/minecraft/item/ItemGroup;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "renderTabIcon"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "isGroupVisible",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/item/ItemGroup;)Z",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Unique;"
+              }
+            ]
+          },
+          {
+            "nme": "getPage",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/item/ItemGroup;)I"
+          },
+          {
+            "nme": "hasGroupForPage",
+            "acc": 2,
+            "dsc": "(I)Z",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Unique;"
+              }
+            ]
+          },
+          {
+            "nme": "switchToPage",
+            "acc": 1,
+            "dsc": "(I)Z"
+          },
+          {
+            "nme": "getCurrentPage",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getPageCount",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getItemGroupsOnPage",
+            "acc": 1,
+            "dsc": "(I)Ljava/util/List;",
+            "sig": "(I)Ljava/util/List<Lnet/minecraft/item/ItemGroup;>;"
+          },
+          {
+            "nme": "hasAdditionalPages",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getSelectedItemGroup",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/item/ItemGroup;"
+          },
+          {
+            "nme": "setSelectedItemGroup",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/item/ItemGroup;)Z"
+          },
+          {
+            "nme": "lambda$getItemGroupsOnPage$3",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/item/ItemGroup;Lnet/minecraft/item/ItemGroup;)I"
+          },
+          {
+            "nme": "lambda$getItemGroupsOnPage$2",
+            "acc": 4098,
+            "dsc": "(ILnet/minecraft/item/ItemGroup;)Z"
+          },
+          {
+            "nme": "lambda$hasGroupForPage$1",
+            "acc": 4098,
+            "dsc": "(ILnet/minecraft/item/ItemGroup;)Z"
+          },
+          {
+            "nme": "lambda$updateSelection$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/item/ItemGroup;Lnet/minecraft/item/ItemGroup;)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 10,
+            "nme": "field_2896",
+            "dsc": "Lnet/minecraft/item/ItemGroup;"
+          },
+          {
+            "acc": 10,
+            "nme": "currentPage",
+            "dsc": "I"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/gui/screen/ingame/CreativeInventoryScreen"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/itemgroup/ItemGroupMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/itemgroup/ItemGroupMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getStacks",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/item/ItemGroup$DisplayContext;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "updateEntries"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "TAIL"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "fabric_getPage",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "fabric_setPage",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "lambda$getStacks$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/item/ItemGroup;)Ljava/lang/IllegalStateException;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "field_40859",
+            "dsc": "Ljava/util/Collection;",
+            "sig": "Ljava/util/Collection<Lnet/minecraft/item/ItemStack;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "field_40860",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Lnet/minecraft/item/ItemStack;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "page",
+            "dsc": "I"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/item/ItemGroup"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/itemgroup/FabricItemGroupImpl.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/impl/itemgroup/FabricItemGroupImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "fabric_getPage",
+            "acc": 1025,
+            "dsc": "()I"
+          },
+          {
+            "nme": "fabric_setPage",
+            "acc": 1025,
+            "dsc": "(I)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "TABS_PER_PAGE",
+            "dsc": "I",
+            "val": 10
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/itemgroup/FabricCreativeGuiComponents.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/client/itemgroup/FabricCreativeGuiComponents",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getPageCount",
+            "acc": 9,
+            "dsc": "()I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "BUTTON_TEX",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "acc": 26,
+            "nme": "TABS_PER_PAGE",
+            "dsc": "D",
+            "val": 10.0
+          },
+          {
+            "acc": 25,
+            "nme": "COMMON_GROUPS",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Lnet/minecraft/item/ItemGroup;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/itemgroup/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/client/itemgroup/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/itemgroup/FabricCreativeGuiComponents$Type.class": {
+        "ver": 65,
+        "acc": 16433,
+        "nme": "net/fabricmc/fabric/impl/client/itemgroup/FabricCreativeGuiComponents$Type",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lnet/fabricmc/fabric/impl/client/itemgroup/FabricCreativeGuiComponents$Type;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lnet/fabricmc/fabric/impl/client/itemgroup/FabricCreativeGuiComponents$Type;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;ILnet/minecraft/text/Text;Ljava/util/function/Consumer;Ljava/util/function/Predicate;)V",
+            "sig": "(Lnet/minecraft/text/Text;Ljava/util/function/Consumer<Lnet/minecraft/client/gui/screen/ingame/CreativeInventoryScreen;>;Ljava/util/function/Predicate<Lnet/minecraft/client/gui/screen/ingame/CreativeInventoryScreen;>;)V"
+          },
+          {
+            "nme": "lambda$static$1",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/client/gui/screen/ingame/CreativeInventoryScreen;)Z"
+          },
+          {
+            "nme": "lambda$static$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/client/gui/screen/ingame/CreativeInventoryScreen;)Z"
+          },
+          {
+            "nme": "$values",
+            "acc": 4106,
+            "dsc": "()[Lnet/fabricmc/fabric/impl/client/itemgroup/FabricCreativeGuiComponents$Type;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "NEXT",
+            "dsc": "Lnet/fabricmc/fabric/impl/client/itemgroup/FabricCreativeGuiComponents$Type;"
+          },
+          {
+            "acc": 16409,
+            "nme": "PREVIOUS",
+            "dsc": "Lnet/fabricmc/fabric/impl/client/itemgroup/FabricCreativeGuiComponents$Type;"
+          },
+          {
+            "acc": 16,
+            "nme": "text",
+            "dsc": "Lnet/minecraft/text/Text;"
+          },
+          {
+            "acc": 16,
+            "nme": "clickConsumer",
+            "dsc": "Ljava/util/function/Consumer;",
+            "sig": "Ljava/util/function/Consumer<Lnet/minecraft/client/gui/screen/ingame/CreativeInventoryScreen;>;"
+          },
+          {
+            "acc": 16,
+            "nme": "isEnabled",
+            "dsc": "Ljava/util/function/Predicate;",
+            "sig": "Ljava/util/function/Predicate<Lnet/minecraft/client/gui/screen/ingame/CreativeInventoryScreen;>;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lnet/fabricmc/fabric/impl/client/itemgroup/FabricCreativeGuiComponents$Type;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

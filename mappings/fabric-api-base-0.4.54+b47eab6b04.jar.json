@@ -1,0 +1,756 @@
+{
+  "md5": "aab336eb8696663c3ddcc45cffa3e8db",
+  "sha2": "283fe22da0cd76f40887d8e5b214b78038b07da1",
+  "sha256": "961f362fc73b1c1447333d22b781acc4f367f1286cc12b2943b0d4beccda86fa",
+  "contents": {
+    "classes": {
+      "net/fabricmc/fabric/impl/base/toposort/NodeSorting$NodeScc.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "net/fabricmc/fabric/impl/base/toposort/NodeSorting$NodeScc",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/util/List;)V",
+            "sig": "(Ljava/util/List<TN;>;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16,
+            "nme": "nodes",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<TN;>;"
+          },
+          {
+            "acc": 16,
+            "nme": "subsequentSccs",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lnet/fabricmc/fabric/impl/base/toposort/NodeSorting$NodeScc<TN;>;>;"
+          },
+          {
+            "acc": 0,
+            "nme": "inDegree",
+            "dsc": "I"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/event/Event.class": {
+        "ver": 65,
+        "acc": 1057,
+        "nme": "net/fabricmc/fabric/api/event/Event",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "invoker",
+            "acc": 17,
+            "dsc": "()Ljava/lang/Object;",
+            "sig": "()TT;"
+          },
+          {
+            "nme": "register",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)V",
+            "sig": "(TT;)V"
+          },
+          {
+            "nme": "register",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/Identifier;Ljava/lang/Object;)V",
+            "sig": "(Lnet/minecraft/util/Identifier;TT;)V"
+          },
+          {
+            "nme": "addPhaseOrdering",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/Identifier;Lnet/minecraft/util/Identifier;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 68,
+            "nme": "invoker",
+            "dsc": "Ljava/lang/Object;",
+            "sig": "TT;"
+          },
+          {
+            "acc": 25,
+            "nme": "DEFAULT_PHASE",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/base/toposort/NodeSorting.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/base/toposort/NodeSorting",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "sort",
+            "acc": 9,
+            "dsc": "(Ljava/util/List;Ljava/lang/String;Ljava/util/Comparator;)Z",
+            "sig": "<N:Lnet/fabricmc/fabric/impl/base/toposort/SortableNode<TN;>;>(Ljava/util/List<TN;>;Ljava/lang/String;Ljava/util/Comparator<TN;>;)Z"
+          },
+          {
+            "nme": "forwardVisit",
+            "acc": 10,
+            "dsc": "(Lnet/fabricmc/fabric/impl/base/toposort/SortableNode;Lnet/fabricmc/fabric/impl/base/toposort/SortableNode;Ljava/util/List;)V",
+            "sig": "<N:Lnet/fabricmc/fabric/impl/base/toposort/SortableNode<TN;>;>(TN;TN;Ljava/util/List<TN;>;)V"
+          },
+          {
+            "nme": "clearStatus",
+            "acc": 10,
+            "dsc": "(Ljava/util/List;)V",
+            "sig": "<N:Lnet/fabricmc/fabric/impl/base/toposort/SortableNode<TN;>;>(Ljava/util/List<TN;>;)V"
+          },
+          {
+            "nme": "backwardVisit",
+            "acc": 10,
+            "dsc": "(Lnet/fabricmc/fabric/impl/base/toposort/SortableNode;Ljava/util/List;)V",
+            "sig": "<N:Lnet/fabricmc/fabric/impl/base/toposort/SortableNode<TN;>;>(TN;Ljava/util/List<TN;>;)V"
+          },
+          {
+            "nme": "lambda$sort$0",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/impl/base/toposort/NodeSorting$NodeScc;)Lnet/fabricmc/fabric/impl/base/toposort/SortableNode;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 9,
+            "nme": "ENABLE_CYCLE_WARNING",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/util/NbtType.class": {
+        "ver": 65,
+        "acc": 131121,
+        "nme": "net/fabricmc/fabric/api/util/NbtType",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "END",
+            "dsc": "I",
+            "val": 0
+          },
+          {
+            "acc": 25,
+            "nme": "BYTE",
+            "dsc": "I",
+            "val": 1
+          },
+          {
+            "acc": 25,
+            "nme": "SHORT",
+            "dsc": "I",
+            "val": 2
+          },
+          {
+            "acc": 25,
+            "nme": "INT",
+            "dsc": "I",
+            "val": 3
+          },
+          {
+            "acc": 25,
+            "nme": "LONG",
+            "dsc": "I",
+            "val": 4
+          },
+          {
+            "acc": 25,
+            "nme": "FLOAT",
+            "dsc": "I",
+            "val": 5
+          },
+          {
+            "acc": 25,
+            "nme": "DOUBLE",
+            "dsc": "I",
+            "val": 6
+          },
+          {
+            "acc": 25,
+            "nme": "BYTE_ARRAY",
+            "dsc": "I",
+            "val": 7
+          },
+          {
+            "acc": 25,
+            "nme": "STRING",
+            "dsc": "I",
+            "val": 8
+          },
+          {
+            "acc": 25,
+            "nme": "LIST",
+            "dsc": "I",
+            "val": 9
+          },
+          {
+            "acc": 25,
+            "nme": "COMPOUND",
+            "dsc": "I",
+            "val": 10
+          },
+          {
+            "acc": 25,
+            "nme": "INT_ARRAY",
+            "dsc": "I",
+            "val": 11
+          },
+          {
+            "acc": 25,
+            "nme": "LONG_ARRAY",
+            "dsc": "I",
+            "val": 12
+          },
+          {
+            "acc": 25,
+            "nme": "NUMBER",
+            "dsc": "I",
+            "val": 99
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/Deprecated;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/util/BooleanFunction.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/util/BooleanFunction",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "apply",
+            "acc": 1025,
+            "dsc": "(Z)Ljava/lang/Object;",
+            "sig": "(Z)TR;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/base/event/ArrayBackedEvent.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "net/fabricmc/fabric/impl/base/event/ArrayBackedEvent",
+        "super": "net/fabricmc/fabric/api/event/Event",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/Class;Ljava/util/function/Function;)V",
+            "sig": "(Ljava/lang/Class<-TT;>;Ljava/util/function/Function<[TT;TT;>;)V"
+          },
+          {
+            "nme": "update",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "register",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V",
+            "sig": "(TT;)V"
+          },
+          {
+            "nme": "register",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/Identifier;Ljava/lang/Object;)V",
+            "sig": "(Lnet/minecraft/util/Identifier;TT;)V"
+          },
+          {
+            "nme": "getOrCreatePhase",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/util/Identifier;Z)Lnet/fabricmc/fabric/impl/base/event/EventPhaseData;",
+            "sig": "(Lnet/minecraft/util/Identifier;Z)Lnet/fabricmc/fabric/impl/base/event/EventPhaseData<TT;>;"
+          },
+          {
+            "nme": "rebuildInvoker",
+            "acc": 2,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "addPhaseOrdering",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/Identifier;Lnet/minecraft/util/Identifier;)V"
+          },
+          {
+            "nme": "lambda$addPhaseOrdering$1",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/impl/base/event/EventPhaseData;)Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "nme": "lambda$getOrCreatePhase$0",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/impl/base/event/EventPhaseData;)Lnet/minecraft/util/Identifier;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "invokerFactory",
+            "dsc": "Ljava/util/function/Function;",
+            "sig": "Ljava/util/function/Function<[TT;TT;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "lock",
+            "dsc": "Ljava/lang/Object;"
+          },
+          {
+            "acc": 2,
+            "nme": "handlers",
+            "dsc": "[Ljava/lang/Object;",
+            "sig": "[TT;"
+          },
+          {
+            "acc": 18,
+            "nme": "phases",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/util/Identifier;Lnet/fabricmc/fabric/impl/base/event/EventPhaseData<TT;>;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "sortedPhases",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lnet/fabricmc/fabric/impl/base/event/EventPhaseData<TT;>;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/base/toposort/SortableNode.class": {
+        "ver": 65,
+        "acc": 1057,
+        "nme": "net/fabricmc/fabric/impl/base/toposort/SortableNode",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getDescription",
+            "acc": 1028,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "link",
+            "acc": 9,
+            "dsc": "(Lnet/fabricmc/fabric/impl/base/toposort/SortableNode;Lnet/fabricmc/fabric/impl/base/toposort/SortableNode;)V",
+            "sig": "<N:Lnet/fabricmc/fabric/impl/base/toposort/SortableNode<TN;>;>(TN;TN;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16,
+            "nme": "subsequentNodes",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<TN;>;"
+          },
+          {
+            "acc": 16,
+            "nme": "previousNodes",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<TN;>;"
+          },
+          {
+            "acc": 0,
+            "nme": "visited",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/base/event/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/base/event/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/base/event/EventFactoryImpl.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/base/event/EventFactoryImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "invalidate",
+            "acc": 9,
+            "dsc": "()V"
+          },
+          {
+            "nme": "createArrayBacked",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Class;Ljava/util/function/Function;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "<T:Ljava/lang/Object;>(Ljava/lang/Class<-TT;>;Ljava/util/function/Function<[TT;TT;>;)Lnet/fabricmc/fabric/api/event/Event<TT;>;"
+          },
+          {
+            "nme": "ensureContainsDefault",
+            "acc": 9,
+            "dsc": "([Lnet/minecraft/util/Identifier;)V"
+          },
+          {
+            "nme": "ensureNoDuplicates",
+            "acc": 9,
+            "dsc": "([Lnet/minecraft/util/Identifier;)V"
+          },
+          {
+            "nme": "buildEmptyInvoker",
+            "acc": 10,
+            "dsc": "(Ljava/lang/Class;Ljava/util/function/Function;)Ljava/lang/Object;",
+            "sig": "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;Ljava/util/function/Function<[TT;TT;>;)TT;"
+          },
+          {
+            "nme": "lambda$buildEmptyInvoker$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "ARRAY_BACKED_EVENTS",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Lnet/fabricmc/fabric/impl/base/event/ArrayBackedEvent<*>;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/base/toposort/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/base/toposort/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/event/EventFactory.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/event/EventFactory",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "createArrayBacked",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Class;Ljava/util/function/Function;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "<T:Ljava/lang/Object;>(Ljava/lang/Class<-TT;>;Ljava/util/function/Function<[TT;TT;>;)Lnet/fabricmc/fabric/api/event/Event<TT;>;"
+          },
+          {
+            "nme": "createArrayBacked",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Class;Ljava/lang/Object;Ljava/util/function/Function;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;TT;Ljava/util/function/Function<[TT;TT;>;)Lnet/fabricmc/fabric/api/event/Event<TT;>;"
+          },
+          {
+            "nme": "createWithPhases",
+            "acc": 137,
+            "dsc": "(Ljava/lang/Class;Ljava/util/function/Function;[Lnet/minecraft/util/Identifier;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "<T:Ljava/lang/Object;>(Ljava/lang/Class<-TT;>;Ljava/util/function/Function<[TT;TT;>;[Lnet/minecraft/util/Identifier;)Lnet/fabricmc/fabric/api/event/Event<TT;>;"
+          },
+          {
+            "nme": "getHandlerName",
+            "acc": 131081,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "isProfilingEnabled",
+            "acc": 131081,
+            "dsc": "()Z",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "invalidate",
+            "acc": 131081,
+            "dsc": "()V",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;",
+                "vals": [
+                  "forRemoval",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "lambda$createArrayBacked$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Object;Ljava/util/function/Function;[Ljava/lang/Object;)Ljava/lang/Object;"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/api/event/AutoInvokingEvent.class": {
+        "ver": 65,
+        "acc": 9729,
+        "nme": "net/fabricmc/fabric/api/event/AutoInvokingEvent",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/base/event/EventPhaseData.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "net/fabricmc/fabric/impl/base/event/EventPhaseData",
+        "super": "net/fabricmc/fabric/impl/base/toposort/SortableNode",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lnet/minecraft/util/Identifier;Ljava/lang/Class;)V",
+            "sig": "(Lnet/minecraft/util/Identifier;Ljava/lang/Class<*>;)V"
+          },
+          {
+            "nme": "addListener",
+            "acc": 0,
+            "dsc": "(Ljava/lang/Object;)V",
+            "sig": "(TT;)V"
+          },
+          {
+            "nme": "getDescription",
+            "acc": 4,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16,
+            "nme": "id",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "acc": 0,
+            "nme": "listeners",
+            "dsc": "[Ljava/lang/Object;",
+            "sig": "[TT;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/util/TriState.class": {
+        "ver": 65,
+        "acc": 16433,
+        "nme": "net/fabricmc/fabric/api/util/TriState",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lnet/fabricmc/fabric/api/util/TriState;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lnet/fabricmc/fabric/api/util/TriState;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "of",
+            "acc": 9,
+            "dsc": "(Z)Lnet/fabricmc/fabric/api/util/TriState;"
+          },
+          {
+            "nme": "of",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Boolean;)Lnet/fabricmc/fabric/api/util/TriState;"
+          },
+          {
+            "nme": "get",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getBoxed",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Boolean;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "orElse",
+            "acc": 1,
+            "dsc": "(Z)Z"
+          },
+          {
+            "nme": "orElseGet",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/BooleanSupplier;)Z"
+          },
+          {
+            "nme": "map",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/util/BooleanFunction;)Ljava/util/Optional;",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/fabricmc/fabric/api/util/BooleanFunction<+TT;>;)Ljava/util/Optional<TT;>;"
+          },
+          {
+            "nme": "orElseThrow",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/Supplier;)Z",
+            "sig": "<X:Ljava/lang/Throwable;>(Ljava/util/function/Supplier<TX;>;)Z^TX;",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          },
+          {
+            "nme": "$values",
+            "acc": 4106,
+            "dsc": "()[Lnet/fabricmc/fabric/api/util/TriState;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "FALSE",
+            "dsc": "Lnet/fabricmc/fabric/api/util/TriState;"
+          },
+          {
+            "acc": 16409,
+            "nme": "DEFAULT",
+            "dsc": "Lnet/fabricmc/fabric/api/util/TriState;"
+          },
+          {
+            "acc": 16409,
+            "nme": "TRUE",
+            "dsc": "Lnet/fabricmc/fabric/api/util/TriState;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lnet/fabricmc/fabric/api/util/TriState;"
+          }
+        ]
+      }
+    }
+  }
+}

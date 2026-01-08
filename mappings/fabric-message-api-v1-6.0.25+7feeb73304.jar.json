@@ -1,0 +1,1530 @@
+{
+  "md5": "dc6d67f9b0969c07b6aa164916385d40",
+  "sha2": "da0c62a463d4faee38e432609529165699cfcf0b",
+  "sha256": "17ed674f79c026554e301a28f0c27e8a57bbd3e3b85b7385cb7efd3817ce4d6b",
+  "contents": {
+    "classes": {
+      "net/fabricmc/fabric/mixin/client/message/ClientPlayNetworkHandlerMixin.class": {
+        "ver": 65,
+        "acc": 1057,
+        "nme": "net/fabricmc/fabric/mixin/client/message/ClientPlayNetworkHandlerMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "fabric_allowSendChatMessage",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;Lcom/llamalad7/mixinextras/sugar/ref/LocalRef;)V",
+            "sig": "(Ljava/lang/String;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;Lcom/llamalad7/mixinextras/sugar/ref/LocalRef<Ljava/lang/String;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "sendChatMessage"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "fabric_allowSendCommandMessage",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;Lcom/llamalad7/mixinextras/sugar/ref/LocalRef;)V",
+            "sig": "(Ljava/lang/String;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;Lcom/llamalad7/mixinextras/sugar/ref/LocalRef<Ljava/lang/String;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "sendChatCommand"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/network/ClientPlayNetworkHandler"
+                }
+              ],
+              "priority",
+              800
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$CommandCanceled.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$CommandCanceled",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "onSendCommandMessageCanceled",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/message/v1/ServerMessageEvents$CommandMessage.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/message/v1/ServerMessageEvents$CommandMessage",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "onCommandMessage",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/network/message/SignedMessage;Lnet/minecraft/server/command/ServerCommandSource;Lnet/minecraft/network/message/MessageType$Parameters;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lambda$static$15",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$CommandCanceled;)Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$CommandCanceled;"
+          },
+          {
+            "nme": "lambda$static$14",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$CommandCanceled;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "lambda$static$13",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$ChatCanceled;)Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$ChatCanceled;"
+          },
+          {
+            "nme": "lambda$static$12",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$ChatCanceled;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "lambda$static$11",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$Command;)Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$Command;"
+          },
+          {
+            "nme": "lambda$static$10",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$Command;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "lambda$static$9",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$Chat;)Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$Chat;"
+          },
+          {
+            "nme": "lambda$static$8",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$Chat;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "lambda$static$7",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$ModifyCommand;)Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$ModifyCommand;"
+          },
+          {
+            "nme": "lambda$static$6",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$ModifyCommand;Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$static$5",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$ModifyChat;)Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$ModifyChat;"
+          },
+          {
+            "nme": "lambda$static$4",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$ModifyChat;Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$static$3",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$AllowCommand;)Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$AllowCommand;"
+          },
+          {
+            "nme": "lambda$static$2",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$AllowCommand;Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "lambda$static$1",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$AllowChat;)Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$AllowChat;"
+          },
+          {
+            "nme": "lambda$static$0",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$AllowChat;Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "ALLOW_CHAT",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$AllowChat;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ALLOW_COMMAND",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$AllowCommand;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "MODIFY_CHAT",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$ModifyChat;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "MODIFY_COMMAND",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$ModifyCommand;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CHAT",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$Chat;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "COMMAND",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$Command;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CHAT_CANCELED",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$ChatCanceled;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "COMMAND_CANCELED",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$CommandCanceled;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/message/v1/ServerMessageEvents$AllowChatMessage.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/message/v1/ServerMessageEvents$AllowChatMessage",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "allowChatMessage",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/network/message/SignedMessage;Lnet/minecraft/server/network/ServerPlayerEntity;Lnet/minecraft/network/message/MessageType$Parameters;)Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/message/v1/ServerMessageEvents$AllowCommandMessage.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/message/v1/ServerMessageEvents$AllowCommandMessage",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "allowCommandMessage",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/network/message/SignedMessage;Lnet/minecraft/server/command/ServerCommandSource;Lnet/minecraft/network/message/MessageType$Parameters;)Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/message/PlayerManagerMixin.class": {
+        "ver": 65,
+        "acc": 1057,
+        "nme": "net/fabricmc/fabric/mixin/message/PlayerManagerMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "onSendChatMessage",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/network/message/SignedMessage;Lnet/minecraft/server/network/ServerPlayerEntity;Lnet/minecraft/network/message/MessageType$Parameters;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "broadcast(Lnet/minecraft/network/message/SignedMessage;Lnet/minecraft/server/network/ServerPlayerEntity;Lnet/minecraft/network/message/MessageType$Parameters;)V"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "onSendGameMessage",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/text/Text;Ljava/util/function/Function;ZLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "sig": "(Lnet/minecraft/text/Text;Ljava/util/function/Function<Lnet/minecraft/server/network/ServerPlayerEntity;Lnet/minecraft/text/Text;>;ZLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "broadcast(Lnet/minecraft/text/Text;Ljava/util/function/Function;Z)V"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "onSendCommandMessage",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/network/message/SignedMessage;Lnet/minecraft/server/command/ServerCommandSource;Lnet/minecraft/network/message/MessageType$Parameters;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "broadcast(Lnet/minecraft/network/message/SignedMessage;Lnet/minecraft/server/command/ServerCommandSource;Lnet/minecraft/network/message/MessageType$Parameters;)V"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "field_14360",
+            "dsc": "Lnet/minecraft/server/MinecraftServer;"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/server/PlayerManager"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$AllowChat.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$AllowChat",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "allowSendChatMessage",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/message/MessageHandlerMixin.class": {
+        "ver": 65,
+        "acc": 1057,
+        "nme": "net/fabricmc/fabric/mixin/client/message/MessageHandlerMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "fabric_onSignedChatMessage",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/network/message/MessageType$Parameters;Lnet/minecraft/network/message/SignedMessage;Lnet/minecraft/text/Text;Lcom/mojang/authlib/GameProfile;ZLjava/time/Instant;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lnet/minecraft/network/message/MessageType$Parameters;Lnet/minecraft/network/message/SignedMessage;Lnet/minecraft/text/Text;Lcom/mojang/authlib/GameProfile;ZLjava/time/Instant;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/lang/Boolean;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "processChatMessageInternal"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/client/gui/hud/InGameHud;getChatHud()Lnet/minecraft/client/gui/hud/ChatHud;",
+                        "ordinal",
+                        0
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "fabric_onFilteredSignedChatMessage",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/network/message/MessageType$Parameters;Lnet/minecraft/network/message/SignedMessage;Lnet/minecraft/text/Text;Lcom/mojang/authlib/GameProfile;ZLjava/time/Instant;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lnet/minecraft/network/message/MessageType$Parameters;Lnet/minecraft/network/message/SignedMessage;Lnet/minecraft/text/Text;Lcom/mojang/authlib/GameProfile;ZLjava/time/Instant;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/lang/Boolean;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "processChatMessageInternal"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/client/gui/hud/InGameHud;getChatHud()Lnet/minecraft/client/gui/hud/ChatHud;",
+                        "ordinal",
+                        1
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "fabric_onProfilelessChatMessage",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/network/message/MessageType$Parameters;Lnet/minecraft/text/Text;Ljava/time/Instant;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lnet/minecraft/network/message/MessageType$Parameters;Lnet/minecraft/text/Text;Ljava/time/Instant;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/lang/Boolean;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "method_45745"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "fabric_onChatMessage",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/text/Text;Lnet/minecraft/network/message/SignedMessage;Lcom/mojang/authlib/GameProfile;Lnet/minecraft/network/message/MessageType$Parameters;Ljava/time/Instant;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lnet/minecraft/text/Text;Lnet/minecraft/network/message/SignedMessage;Lcom/mojang/authlib/GameProfile;Lnet/minecraft/network/message/MessageType$Parameters;Ljava/time/Instant;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/lang/Boolean;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Unique;"
+              }
+            ]
+          },
+          {
+            "nme": "fabric_allowGameMessage",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/text/Text;ZLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;Lcom/llamalad7/mixinextras/sugar/ref/LocalRef;)V",
+            "sig": "(Lnet/minecraft/text/Text;ZLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;Lcom/llamalad7/mixinextras/sugar/ref/LocalRef<Lnet/minecraft/text/Text;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "onGameMessage"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/network/message/MessageHandler"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$ChatCanceled.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$ChatCanceled",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "onReceiveChatMessageCanceled",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/text/Text;Lnet/minecraft/network/message/SignedMessage;Lcom/mojang/authlib/GameProfile;Lnet/minecraft/network/message/MessageType$Parameters;Ljava/time/Instant;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/message/v1/ServerMessageEvents$ChatMessage.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/message/v1/ServerMessageEvents$ChatMessage",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "onChatMessage",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/network/message/SignedMessage;Lnet/minecraft/server/network/ServerPlayerEntity;Lnet/minecraft/network/message/MessageType$Parameters;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$GameCanceled.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$GameCanceled",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "onReceiveGameMessageCanceled",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/text/Text;Z)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$AllowCommand.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$AllowCommand",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "allowSendCommandMessage",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$ChatCanceled.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$ChatCanceled",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "onSendChatMessageCanceled",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$AllowGame.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$AllowGame",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "allowReceiveGameMessage",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/text/Text;Z)Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$Chat.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$Chat",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "onReceiveChatMessage",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/text/Text;Lnet/minecraft/network/message/SignedMessage;Lcom/mojang/authlib/GameProfile;Lnet/minecraft/network/message/MessageType$Parameters;Ljava/time/Instant;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/message/v1/ServerMessageEvents$AllowGameMessage.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/message/v1/ServerMessageEvents$AllowGameMessage",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "allowGameMessage",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/text/Text;Z)Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$Command.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$Command",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "onSendCommandMessage",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/message/v1/ServerMessageEvents.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/message/v1/ServerMessageEvents",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lambda$static$11",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/message/v1/ServerMessageEvents$CommandMessage;)Lnet/fabricmc/fabric/api/message/v1/ServerMessageEvents$CommandMessage;"
+          },
+          {
+            "nme": "lambda$static$10",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/message/v1/ServerMessageEvents$CommandMessage;Lnet/minecraft/network/message/SignedMessage;Lnet/minecraft/server/command/ServerCommandSource;Lnet/minecraft/network/message/MessageType$Parameters;)V"
+          },
+          {
+            "nme": "lambda$static$9",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/message/v1/ServerMessageEvents$GameMessage;)Lnet/fabricmc/fabric/api/message/v1/ServerMessageEvents$GameMessage;"
+          },
+          {
+            "nme": "lambda$static$8",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/message/v1/ServerMessageEvents$GameMessage;Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/text/Text;Z)V"
+          },
+          {
+            "nme": "lambda$static$7",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/message/v1/ServerMessageEvents$ChatMessage;)Lnet/fabricmc/fabric/api/message/v1/ServerMessageEvents$ChatMessage;"
+          },
+          {
+            "nme": "lambda$static$6",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/message/v1/ServerMessageEvents$ChatMessage;Lnet/minecraft/network/message/SignedMessage;Lnet/minecraft/server/network/ServerPlayerEntity;Lnet/minecraft/network/message/MessageType$Parameters;)V"
+          },
+          {
+            "nme": "lambda$static$5",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/message/v1/ServerMessageEvents$AllowCommandMessage;)Lnet/fabricmc/fabric/api/message/v1/ServerMessageEvents$AllowCommandMessage;"
+          },
+          {
+            "nme": "lambda$static$4",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/message/v1/ServerMessageEvents$AllowCommandMessage;Lnet/minecraft/network/message/SignedMessage;Lnet/minecraft/server/command/ServerCommandSource;Lnet/minecraft/network/message/MessageType$Parameters;)Z"
+          },
+          {
+            "nme": "lambda$static$3",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/message/v1/ServerMessageEvents$AllowGameMessage;)Lnet/fabricmc/fabric/api/message/v1/ServerMessageEvents$AllowGameMessage;"
+          },
+          {
+            "nme": "lambda$static$2",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/message/v1/ServerMessageEvents$AllowGameMessage;Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/text/Text;Z)Z"
+          },
+          {
+            "nme": "lambda$static$1",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/message/v1/ServerMessageEvents$AllowChatMessage;)Lnet/fabricmc/fabric/api/message/v1/ServerMessageEvents$AllowChatMessage;"
+          },
+          {
+            "nme": "lambda$static$0",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/message/v1/ServerMessageEvents$AllowChatMessage;Lnet/minecraft/network/message/SignedMessage;Lnet/minecraft/server/network/ServerPlayerEntity;Lnet/minecraft/network/message/MessageType$Parameters;)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "ALLOW_CHAT_MESSAGE",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/message/v1/ServerMessageEvents$AllowChatMessage;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ALLOW_GAME_MESSAGE",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/message/v1/ServerMessageEvents$AllowGameMessage;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ALLOW_COMMAND_MESSAGE",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/message/v1/ServerMessageEvents$AllowCommandMessage;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CHAT_MESSAGE",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/message/v1/ServerMessageEvents$ChatMessage;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GAME_MESSAGE",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/message/v1/ServerMessageEvents$GameMessage;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "COMMAND_MESSAGE",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/message/v1/ServerMessageEvents$CommandMessage;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$ModifyGame.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$ModifyGame",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "modifyReceivedGameMessage",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/text/Text;Z)Lnet/minecraft/text/Text;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/message/v1/ServerMessageEvents$GameMessage.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/message/v1/ServerMessageEvents$GameMessage",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "onGameMessage",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/text/Text;Z)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/message/MinecraftServerMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/message/MinecraftServerMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "onGetChatDecorator",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Lnet/minecraft/network/message/MessageDecorator;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "getMessageDecorator"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "lambda$onGetChatDecorator$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/server/network/ServerPlayerEntity;Lnet/minecraft/text/Text;)Lnet/minecraft/text/Text;"
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/server/MinecraftServer"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lambda$static$13",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$GameCanceled;)Lnet/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$GameCanceled;"
+          },
+          {
+            "nme": "lambda$static$12",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$GameCanceled;Lnet/minecraft/text/Text;Z)V"
+          },
+          {
+            "nme": "lambda$static$11",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$ChatCanceled;)Lnet/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$ChatCanceled;"
+          },
+          {
+            "nme": "lambda$static$10",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$ChatCanceled;Lnet/minecraft/text/Text;Lnet/minecraft/network/message/SignedMessage;Lcom/mojang/authlib/GameProfile;Lnet/minecraft/network/message/MessageType$Parameters;Ljava/time/Instant;)V"
+          },
+          {
+            "nme": "lambda$static$9",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$Game;)Lnet/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$Game;"
+          },
+          {
+            "nme": "lambda$static$8",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$Game;Lnet/minecraft/text/Text;Z)V"
+          },
+          {
+            "nme": "lambda$static$7",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$Chat;)Lnet/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$Chat;"
+          },
+          {
+            "nme": "lambda$static$6",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$Chat;Lnet/minecraft/text/Text;Lnet/minecraft/network/message/SignedMessage;Lcom/mojang/authlib/GameProfile;Lnet/minecraft/network/message/MessageType$Parameters;Ljava/time/Instant;)V"
+          },
+          {
+            "nme": "lambda$static$5",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$ModifyGame;)Lnet/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$ModifyGame;"
+          },
+          {
+            "nme": "lambda$static$4",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$ModifyGame;Lnet/minecraft/text/Text;Z)Lnet/minecraft/text/Text;"
+          },
+          {
+            "nme": "lambda$static$3",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$AllowGame;)Lnet/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$AllowGame;"
+          },
+          {
+            "nme": "lambda$static$2",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$AllowGame;Lnet/minecraft/text/Text;Z)Z"
+          },
+          {
+            "nme": "lambda$static$1",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$AllowChat;)Lnet/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$AllowChat;"
+          },
+          {
+            "nme": "lambda$static$0",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$AllowChat;Lnet/minecraft/text/Text;Lnet/minecraft/network/message/SignedMessage;Lcom/mojang/authlib/GameProfile;Lnet/minecraft/network/message/MessageType$Parameters;Ljava/time/Instant;)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "ALLOW_CHAT",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$AllowChat;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ALLOW_GAME",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$AllowGame;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "MODIFY_GAME",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$ModifyGame;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CHAT",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$Chat;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GAME",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$Game;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CHAT_CANCELED",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$ChatCanceled;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GAME_CANCELED",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$GameCanceled;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$Chat.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$Chat",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "onSendChatMessage",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$Game.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$Game",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "onReceiveGameMessage",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/text/Text;Z)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/message/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/mixin/client/message/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/message/v1/ServerMessageDecoratorEvent.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/message/v1/ServerMessageDecoratorEvent",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "handle",
+            "acc": 10,
+            "dsc": "(Lnet/minecraft/text/Text;Lnet/minecraft/network/message/MessageDecorator;)Lnet/minecraft/text/Text;",
+            "sig": "<T::Lnet/minecraft/text/Text;>(TT;Lnet/minecraft/network/message/MessageDecorator;)TT;"
+          },
+          {
+            "nme": "lambda$static$1",
+            "acc": 4106,
+            "dsc": "([Lnet/minecraft/network/message/MessageDecorator;)Lnet/minecraft/network/message/MessageDecorator;"
+          },
+          {
+            "nme": "lambda$static$0",
+            "acc": 4106,
+            "dsc": "([Lnet/minecraft/network/message/MessageDecorator;Lnet/minecraft/server/network/ServerPlayerEntity;Lnet/minecraft/text/Text;)Lnet/minecraft/text/Text;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "CONTENT_PHASE",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "acc": 25,
+            "nme": "STYLING_PHASE",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "acc": 25,
+            "nme": "EVENT",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/minecraft/network/message/MessageDecorator;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/message/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/mixin/message/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$AllowChat.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents$AllowChat",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "allowReceiveChatMessage",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/text/Text;Lnet/minecraft/network/message/SignedMessage;Lcom/mojang/authlib/GameProfile;Lnet/minecraft/network/message/MessageType$Parameters;Ljava/time/Instant;)Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$ModifyChat.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$ModifyChat",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "modifySendChatMessage",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$ModifyCommand.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents$ModifyCommand",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "modifySendCommandMessage",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

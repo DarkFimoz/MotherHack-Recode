@@ -1,0 +1,1459 @@
+{
+  "md5": "4cd9e7178dfb85371bba3077e40cd514",
+  "sha2": "f97a3b319f0ed6a8cd944dc79060d3912a28985f",
+  "sha256": "85b29371884ba31bb76edf22323c2c24e172c3267a67152eba3d1ccc2e041ef2",
+  "contents": {
+    "classes": {
+      "org/objectweb/asm/tree/analysis/SourceInterpreter.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/analysis/SourceInterpreter",
+        "super": "org/objectweb/asm/tree/analysis/Interpreter",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "newValue",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)Lorg/objectweb/asm/tree/analysis/SourceValue;"
+          },
+          {
+            "nme": "newOperation",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;)Lorg/objectweb/asm/tree/analysis/SourceValue;"
+          },
+          {
+            "nme": "copyOperation",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/SourceValue;)Lorg/objectweb/asm/tree/analysis/SourceValue;"
+          },
+          {
+            "nme": "unaryOperation",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/SourceValue;)Lorg/objectweb/asm/tree/analysis/SourceValue;"
+          },
+          {
+            "nme": "binaryOperation",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/SourceValue;Lorg/objectweb/asm/tree/analysis/SourceValue;)Lorg/objectweb/asm/tree/analysis/SourceValue;"
+          },
+          {
+            "nme": "ternaryOperation",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/SourceValue;Lorg/objectweb/asm/tree/analysis/SourceValue;Lorg/objectweb/asm/tree/analysis/SourceValue;)Lorg/objectweb/asm/tree/analysis/SourceValue;"
+          },
+          {
+            "nme": "naryOperation",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Ljava/util/List;)Lorg/objectweb/asm/tree/analysis/SourceValue;",
+            "sig": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Ljava/util/List<+Lorg/objectweb/asm/tree/analysis/SourceValue;>;)Lorg/objectweb/asm/tree/analysis/SourceValue;"
+          },
+          {
+            "nme": "returnOperation",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/SourceValue;Lorg/objectweb/asm/tree/analysis/SourceValue;)V"
+          },
+          {
+            "nme": "merge",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/analysis/SourceValue;Lorg/objectweb/asm/tree/analysis/SourceValue;)Lorg/objectweb/asm/tree/analysis/SourceValue;"
+          },
+          {
+            "nme": "containsAll",
+            "acc": 10,
+            "dsc": "(Ljava/util/Set;Ljava/util/Set;)Z",
+            "sig": "<E:Ljava/lang/Object;>(Ljava/util/Set<TE;>;Ljava/util/Set<TE;>;)Z"
+          },
+          {
+            "nme": "merge",
+            "acc": 4161,
+            "dsc": "(Lorg/objectweb/asm/tree/analysis/Value;Lorg/objectweb/asm/tree/analysis/Value;)Lorg/objectweb/asm/tree/analysis/Value;"
+          },
+          {
+            "nme": "returnOperation",
+            "acc": 4161,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/Value;Lorg/objectweb/asm/tree/analysis/Value;)V",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "naryOperation",
+            "acc": 4161,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Ljava/util/List;)Lorg/objectweb/asm/tree/analysis/Value;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "ternaryOperation",
+            "acc": 4161,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/Value;Lorg/objectweb/asm/tree/analysis/Value;Lorg/objectweb/asm/tree/analysis/Value;)Lorg/objectweb/asm/tree/analysis/Value;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "binaryOperation",
+            "acc": 4161,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/Value;Lorg/objectweb/asm/tree/analysis/Value;)Lorg/objectweb/asm/tree/analysis/Value;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "unaryOperation",
+            "acc": 4161,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/Value;)Lorg/objectweb/asm/tree/analysis/Value;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "copyOperation",
+            "acc": 4161,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/Value;)Lorg/objectweb/asm/tree/analysis/Value;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "newOperation",
+            "acc": 4161,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;)Lorg/objectweb/asm/tree/analysis/Value;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "newValue",
+            "acc": 4161,
+            "dsc": "(Lorg/objectweb/asm/Type;)Lorg/objectweb/asm/tree/analysis/Value;"
+          }
+        ],
+        "flds": []
+      },
+      "org/objectweb/asm/tree/analysis/SimpleVerifier.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/analysis/SimpleVerifier",
+        "super": "org/objectweb/asm/tree/analysis/BasicVerifier",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;Lorg/objectweb/asm/Type;Z)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;Lorg/objectweb/asm/Type;Ljava/util/List;Z)V",
+            "sig": "(Lorg/objectweb/asm/Type;Lorg/objectweb/asm/Type;Ljava/util/List<Lorg/objectweb/asm/Type;>;Z)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(ILorg/objectweb/asm/Type;Lorg/objectweb/asm/Type;Ljava/util/List;Z)V",
+            "sig": "(ILorg/objectweb/asm/Type;Lorg/objectweb/asm/Type;Ljava/util/List<Lorg/objectweb/asm/Type;>;Z)V"
+          },
+          {
+            "nme": "setClassLoader",
+            "acc": 1,
+            "dsc": "(Ljava/lang/ClassLoader;)V"
+          },
+          {
+            "nme": "newValue",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)Lorg/objectweb/asm/tree/analysis/BasicValue;"
+          },
+          {
+            "nme": "isArrayValue",
+            "acc": 4,
+            "dsc": "(Lorg/objectweb/asm/tree/analysis/BasicValue;)Z"
+          },
+          {
+            "nme": "getElementValue",
+            "acc": 4,
+            "dsc": "(Lorg/objectweb/asm/tree/analysis/BasicValue;)Lorg/objectweb/asm/tree/analysis/BasicValue;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "isSubTypeOf",
+            "acc": 4,
+            "dsc": "(Lorg/objectweb/asm/tree/analysis/BasicValue;Lorg/objectweb/asm/tree/analysis/BasicValue;)Z"
+          },
+          {
+            "nme": "merge",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/analysis/BasicValue;Lorg/objectweb/asm/tree/analysis/BasicValue;)Lorg/objectweb/asm/tree/analysis/BasicValue;"
+          },
+          {
+            "nme": "newArrayValue",
+            "acc": 2,
+            "dsc": "(Lorg/objectweb/asm/Type;I)Lorg/objectweb/asm/tree/analysis/BasicValue;"
+          },
+          {
+            "nme": "isInterface",
+            "acc": 4,
+            "dsc": "(Lorg/objectweb/asm/Type;)Z"
+          },
+          {
+            "nme": "getSuperClass",
+            "acc": 4,
+            "dsc": "(Lorg/objectweb/asm/Type;)Lorg/objectweb/asm/Type;"
+          },
+          {
+            "nme": "isAssignableFrom",
+            "acc": 4,
+            "dsc": "(Lorg/objectweb/asm/Type;Lorg/objectweb/asm/Type;)Z"
+          },
+          {
+            "nme": "getClass",
+            "acc": 4,
+            "dsc": "(Lorg/objectweb/asm/Type;)Ljava/lang/Class;",
+            "sig": "(Lorg/objectweb/asm/Type;)Ljava/lang/Class<*>;"
+          },
+          {
+            "nme": "merge",
+            "acc": 4161,
+            "dsc": "(Lorg/objectweb/asm/tree/analysis/Value;Lorg/objectweb/asm/tree/analysis/Value;)Lorg/objectweb/asm/tree/analysis/Value;"
+          },
+          {
+            "nme": "newValue",
+            "acc": 4161,
+            "dsc": "(Lorg/objectweb/asm/Type;)Lorg/objectweb/asm/tree/analysis/Value;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "OBJECT_TYPE",
+            "dsc": "Lorg/objectweb/asm/Type;"
+          },
+          {
+            "acc": 18,
+            "nme": "currentClass",
+            "dsc": "Lorg/objectweb/asm/Type;"
+          },
+          {
+            "acc": 18,
+            "nme": "currentSuperClass",
+            "dsc": "Lorg/objectweb/asm/Type;"
+          },
+          {
+            "acc": 18,
+            "nme": "currentClassInterfaces",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/Type;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "isInterface",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "loader",
+            "dsc": "Ljava/lang/ClassLoader;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/analysis/SmallSet.class": {
+        "ver": 49,
+        "acc": 48,
+        "nme": "org/objectweb/asm/tree/analysis/SmallSet",
+        "super": "java/util/AbstractSet",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/Object;)V",
+            "sig": "(TT;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)V",
+            "sig": "(TT;TT;)V"
+          },
+          {
+            "nme": "iterator",
+            "acc": 1,
+            "dsc": "()Ljava/util/Iterator;",
+            "sig": "()Ljava/util/Iterator<TT;>;"
+          },
+          {
+            "nme": "size",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "union",
+            "acc": 0,
+            "dsc": "(Lorg/objectweb/asm/tree/analysis/SmallSet;)Ljava/util/Set;",
+            "sig": "(Lorg/objectweb/asm/tree/analysis/SmallSet<TT;>;)Ljava/util/Set<TT;>;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "element1",
+            "dsc": "Ljava/lang/Object;",
+            "sig": "TT;"
+          },
+          {
+            "acc": 18,
+            "nme": "element2",
+            "dsc": "Ljava/lang/Object;",
+            "sig": "TT;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/analysis/Analyzer.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/analysis/Analyzer",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/analysis/Interpreter;)V",
+            "sig": "(Lorg/objectweb/asm/tree/analysis/Interpreter<TV;>;)V"
+          },
+          {
+            "nme": "analyze",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Lorg/objectweb/asm/tree/MethodNode;)[Lorg/objectweb/asm/tree/analysis/Frame;",
+            "sig": "(Ljava/lang/String;Lorg/objectweb/asm/tree/MethodNode;)[Lorg/objectweb/asm/tree/analysis/Frame<TV;>;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "stringConcat$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "stringConcat$1",
+            "acc": 4106,
+            "dsc": "(ILjava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "stringConcat$2",
+            "acc": 4106,
+            "dsc": "(ILjava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "analyzeAndComputeMaxs",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Lorg/objectweb/asm/tree/MethodNode;)[Lorg/objectweb/asm/tree/analysis/Frame;",
+            "sig": "(Ljava/lang/String;Lorg/objectweb/asm/tree/MethodNode;)[Lorg/objectweb/asm/tree/analysis/Frame<TV;>;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "computeMaxLocals",
+            "acc": 10,
+            "dsc": "(Lorg/objectweb/asm/tree/MethodNode;)I"
+          },
+          {
+            "nme": "computeMaxStack",
+            "acc": 10,
+            "dsc": "([Lorg/objectweb/asm/tree/analysis/Frame;)I",
+            "sig": "([Lorg/objectweb/asm/tree/analysis/Frame<*>;)I"
+          },
+          {
+            "nme": "findSubroutines",
+            "acc": 2,
+            "dsc": "(I)V",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "findSubroutine",
+            "acc": 2,
+            "dsc": "(ILorg/objectweb/asm/tree/analysis/Subroutine;Ljava/util/List;)V",
+            "sig": "(ILorg/objectweb/asm/tree/analysis/Subroutine;Ljava/util/List<Lorg/objectweb/asm/tree/AbstractInsnNode;>;)V",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "computeInitialFrame",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;Lorg/objectweb/asm/tree/MethodNode;)Lorg/objectweb/asm/tree/analysis/Frame;",
+            "sig": "(Ljava/lang/String;Lorg/objectweb/asm/tree/MethodNode;)Lorg/objectweb/asm/tree/analysis/Frame<TV;>;"
+          },
+          {
+            "nme": "getFrames",
+            "acc": 1,
+            "dsc": "()[Lorg/objectweb/asm/tree/analysis/Frame;",
+            "sig": "()[Lorg/objectweb/asm/tree/analysis/Frame<TV;>;"
+          },
+          {
+            "nme": "getHandlers",
+            "acc": 1,
+            "dsc": "(I)Ljava/util/List;",
+            "sig": "(I)Ljava/util/List<Lorg/objectweb/asm/tree/TryCatchBlockNode;>;"
+          },
+          {
+            "nme": "init",
+            "acc": 4,
+            "dsc": "(Ljava/lang/String;Lorg/objectweb/asm/tree/MethodNode;)V",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "newFrame",
+            "acc": 4,
+            "dsc": "(II)Lorg/objectweb/asm/tree/analysis/Frame;",
+            "sig": "(II)Lorg/objectweb/asm/tree/analysis/Frame<TV;>;"
+          },
+          {
+            "nme": "newFrame",
+            "acc": 4,
+            "dsc": "(Lorg/objectweb/asm/tree/analysis/Frame;)Lorg/objectweb/asm/tree/analysis/Frame;",
+            "sig": "(Lorg/objectweb/asm/tree/analysis/Frame<+TV;>;)Lorg/objectweb/asm/tree/analysis/Frame<TV;>;"
+          },
+          {
+            "nme": "newControlFlowEdge",
+            "acc": 4,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "newControlFlowExceptionEdge",
+            "acc": 4,
+            "dsc": "(II)Z"
+          },
+          {
+            "nme": "newControlFlowExceptionEdge",
+            "acc": 4,
+            "dsc": "(ILorg/objectweb/asm/tree/TryCatchBlockNode;)Z"
+          },
+          {
+            "nme": "merge",
+            "acc": 2,
+            "dsc": "(ILorg/objectweb/asm/tree/analysis/Frame;Lorg/objectweb/asm/tree/analysis/Subroutine;)V",
+            "sig": "(ILorg/objectweb/asm/tree/analysis/Frame<TV;>;Lorg/objectweb/asm/tree/analysis/Subroutine;)V",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "merge",
+            "acc": 2,
+            "dsc": "(ILorg/objectweb/asm/tree/analysis/Frame;Lorg/objectweb/asm/tree/analysis/Frame;Lorg/objectweb/asm/tree/analysis/Subroutine;[Z)V",
+            "sig": "(ILorg/objectweb/asm/tree/analysis/Frame<TV;>;Lorg/objectweb/asm/tree/analysis/Frame<TV;>;Lorg/objectweb/asm/tree/analysis/Subroutine;[Z)V",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "interpreter",
+            "dsc": "Lorg/objectweb/asm/tree/analysis/Interpreter;",
+            "sig": "Lorg/objectweb/asm/tree/analysis/Interpreter<TV;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "insnList",
+            "dsc": "Lorg/objectweb/asm/tree/InsnList;"
+          },
+          {
+            "acc": 2,
+            "nme": "insnListSize",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "handlers",
+            "dsc": "[Ljava/util/List;",
+            "sig": "[Ljava/util/List<Lorg/objectweb/asm/tree/TryCatchBlockNode;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "frames",
+            "dsc": "[Lorg/objectweb/asm/tree/analysis/Frame;",
+            "sig": "[Lorg/objectweb/asm/tree/analysis/Frame<TV;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "subroutines",
+            "dsc": "[Lorg/objectweb/asm/tree/analysis/Subroutine;"
+          },
+          {
+            "acc": 2,
+            "nme": "inInstructionsToProcess",
+            "dsc": "[Z"
+          },
+          {
+            "acc": 2,
+            "nme": "instructionsToProcess",
+            "dsc": "[I"
+          },
+          {
+            "acc": 2,
+            "nme": "numInstructionsToProcess",
+            "dsc": "I"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/analysis/Frame.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/analysis/Frame",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/analysis/Frame;)V",
+            "sig": "(Lorg/objectweb/asm/tree/analysis/Frame<+TV;>;)V"
+          },
+          {
+            "nme": "init",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/analysis/Frame;)Lorg/objectweb/asm/tree/analysis/Frame;",
+            "sig": "(Lorg/objectweb/asm/tree/analysis/Frame<+TV;>;)Lorg/objectweb/asm/tree/analysis/Frame<TV;>;"
+          },
+          {
+            "nme": "initJumpTarget",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/tree/LabelNode;)V"
+          },
+          {
+            "nme": "setReturn",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/analysis/Value;)V",
+            "sig": "(TV;)V"
+          },
+          {
+            "nme": "getLocals",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getMaxStackSize",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getLocal",
+            "acc": 1,
+            "dsc": "(I)Lorg/objectweb/asm/tree/analysis/Value;",
+            "sig": "(I)TV;"
+          },
+          {
+            "nme": "stringConcat$0",
+            "acc": 4106,
+            "dsc": "(I)Ljava/lang/String;"
+          },
+          {
+            "nme": "setLocal",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/tree/analysis/Value;)V",
+            "sig": "(ITV;)V"
+          },
+          {
+            "nme": "stringConcat$1",
+            "acc": 4106,
+            "dsc": "(I)Ljava/lang/String;"
+          },
+          {
+            "nme": "getStackSize",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getStack",
+            "acc": 1,
+            "dsc": "(I)Lorg/objectweb/asm/tree/analysis/Value;",
+            "sig": "(I)TV;"
+          },
+          {
+            "nme": "setStack",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/tree/analysis/Value;)V",
+            "sig": "(ITV;)V"
+          },
+          {
+            "nme": "clearStack",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "pop",
+            "acc": 1,
+            "dsc": "()Lorg/objectweb/asm/tree/analysis/Value;",
+            "sig": "()TV;"
+          },
+          {
+            "nme": "push",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/analysis/Value;)V",
+            "sig": "(TV;)V"
+          },
+          {
+            "nme": "execute",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/Interpreter;)V",
+            "sig": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/Interpreter<TV;>;)V",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "stringConcat$2",
+            "acc": 4106,
+            "dsc": "(I)Ljava/lang/String;"
+          },
+          {
+            "nme": "executeDupX2",
+            "acc": 2,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/Value;Lorg/objectweb/asm/tree/analysis/Interpreter;)Z",
+            "sig": "(Lorg/objectweb/asm/tree/AbstractInsnNode;TV;Lorg/objectweb/asm/tree/analysis/Interpreter<TV;>;)Z",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "executeInvokeInsn",
+            "acc": 2,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Ljava/lang/String;Lorg/objectweb/asm/tree/analysis/Interpreter;)V",
+            "sig": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Ljava/lang/String;Lorg/objectweb/asm/tree/analysis/Interpreter<TV;>;)V",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "merge",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/analysis/Frame;Lorg/objectweb/asm/tree/analysis/Interpreter;)Z",
+            "sig": "(Lorg/objectweb/asm/tree/analysis/Frame<+TV;>;Lorg/objectweb/asm/tree/analysis/Interpreter<TV;>;)Z",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "merge",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/analysis/Frame;[Z)Z",
+            "sig": "(Lorg/objectweb/asm/tree/analysis/Frame<+TV;>;[Z)Z"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "MAX_STACK_SIZE",
+            "dsc": "I",
+            "val": 65536
+          },
+          {
+            "acc": 2,
+            "nme": "returnValue",
+            "dsc": "Lorg/objectweb/asm/tree/analysis/Value;",
+            "sig": "TV;"
+          },
+          {
+            "acc": 2,
+            "nme": "values",
+            "dsc": "[Lorg/objectweb/asm/tree/analysis/Value;",
+            "sig": "[TV;"
+          },
+          {
+            "acc": 2,
+            "nme": "numLocals",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "numStack",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "maxStack",
+            "dsc": "I"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/analysis/SourceValue.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/analysis/SourceValue",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/tree/AbstractInsnNode;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(ILjava/util/Set;)V",
+            "sig": "(ILjava/util/Set<Lorg/objectweb/asm/tree/AbstractInsnNode;>;)V"
+          },
+          {
+            "nme": "getSize",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 17,
+            "nme": "size",
+            "dsc": "I"
+          },
+          {
+            "acc": 17,
+            "nme": "insns",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Lorg/objectweb/asm/tree/AbstractInsnNode;>;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/analysis/BasicValue.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/analysis/BasicValue",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "getType",
+            "acc": 1,
+            "dsc": "()Lorg/objectweb/asm/Type;"
+          },
+          {
+            "nme": "getSize",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "isReference",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "UNINITIALIZED_VALUE",
+            "dsc": "Lorg/objectweb/asm/tree/analysis/BasicValue;"
+          },
+          {
+            "acc": 25,
+            "nme": "INT_VALUE",
+            "dsc": "Lorg/objectweb/asm/tree/analysis/BasicValue;"
+          },
+          {
+            "acc": 25,
+            "nme": "FLOAT_VALUE",
+            "dsc": "Lorg/objectweb/asm/tree/analysis/BasicValue;"
+          },
+          {
+            "acc": 25,
+            "nme": "LONG_VALUE",
+            "dsc": "Lorg/objectweb/asm/tree/analysis/BasicValue;"
+          },
+          {
+            "acc": 25,
+            "nme": "DOUBLE_VALUE",
+            "dsc": "Lorg/objectweb/asm/tree/analysis/BasicValue;"
+          },
+          {
+            "acc": 25,
+            "nme": "REFERENCE_VALUE",
+            "dsc": "Lorg/objectweb/asm/tree/analysis/BasicValue;"
+          },
+          {
+            "acc": 25,
+            "nme": "RETURNADDRESS_VALUE",
+            "dsc": "Lorg/objectweb/asm/tree/analysis/BasicValue;"
+          },
+          {
+            "acc": 18,
+            "nme": "type",
+            "dsc": "Lorg/objectweb/asm/Type;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/analysis/BasicInterpreter.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/analysis/BasicInterpreter",
+        "super": "org/objectweb/asm/tree/analysis/Interpreter",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "newValue",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)Lorg/objectweb/asm/tree/analysis/BasicValue;"
+          },
+          {
+            "nme": "newOperation",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;)Lorg/objectweb/asm/tree/analysis/BasicValue;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "stringConcat$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/String;"
+          },
+          {
+            "nme": "stringConcat$1",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/String;"
+          },
+          {
+            "nme": "copyOperation",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/BasicValue;)Lorg/objectweb/asm/tree/analysis/BasicValue;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "unaryOperation",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/BasicValue;)Lorg/objectweb/asm/tree/analysis/BasicValue;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "stringConcat$2",
+            "acc": 4106,
+            "dsc": "(Lorg/objectweb/asm/Type;)Ljava/lang/String;"
+          },
+          {
+            "nme": "binaryOperation",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/BasicValue;Lorg/objectweb/asm/tree/analysis/BasicValue;)Lorg/objectweb/asm/tree/analysis/BasicValue;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "ternaryOperation",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/BasicValue;Lorg/objectweb/asm/tree/analysis/BasicValue;Lorg/objectweb/asm/tree/analysis/BasicValue;)Lorg/objectweb/asm/tree/analysis/BasicValue;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "naryOperation",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Ljava/util/List;)Lorg/objectweb/asm/tree/analysis/BasicValue;",
+            "sig": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Ljava/util/List<+Lorg/objectweb/asm/tree/analysis/BasicValue;>;)Lorg/objectweb/asm/tree/analysis/BasicValue;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "returnOperation",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/BasicValue;Lorg/objectweb/asm/tree/analysis/BasicValue;)V",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "merge",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/analysis/BasicValue;Lorg/objectweb/asm/tree/analysis/BasicValue;)Lorg/objectweb/asm/tree/analysis/BasicValue;"
+          },
+          {
+            "nme": "merge",
+            "acc": 4161,
+            "dsc": "(Lorg/objectweb/asm/tree/analysis/Value;Lorg/objectweb/asm/tree/analysis/Value;)Lorg/objectweb/asm/tree/analysis/Value;"
+          },
+          {
+            "nme": "returnOperation",
+            "acc": 4161,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/Value;Lorg/objectweb/asm/tree/analysis/Value;)V",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "naryOperation",
+            "acc": 4161,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Ljava/util/List;)Lorg/objectweb/asm/tree/analysis/Value;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "ternaryOperation",
+            "acc": 4161,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/Value;Lorg/objectweb/asm/tree/analysis/Value;Lorg/objectweb/asm/tree/analysis/Value;)Lorg/objectweb/asm/tree/analysis/Value;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "binaryOperation",
+            "acc": 4161,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/Value;Lorg/objectweb/asm/tree/analysis/Value;)Lorg/objectweb/asm/tree/analysis/Value;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "unaryOperation",
+            "acc": 4161,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/Value;)Lorg/objectweb/asm/tree/analysis/Value;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "copyOperation",
+            "acc": 4161,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/Value;)Lorg/objectweb/asm/tree/analysis/Value;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "newOperation",
+            "acc": 4161,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;)Lorg/objectweb/asm/tree/analysis/Value;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "newValue",
+            "acc": 4161,
+            "dsc": "(Lorg/objectweb/asm/Type;)Lorg/objectweb/asm/tree/analysis/Value;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "NULL_TYPE",
+            "dsc": "Lorg/objectweb/asm/Type;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/analysis/Interpreter.class": {
+        "ver": 49,
+        "acc": 1057,
+        "nme": "org/objectweb/asm/tree/analysis/Interpreter",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "newValue",
+            "acc": 1025,
+            "dsc": "(Lorg/objectweb/asm/Type;)Lorg/objectweb/asm/tree/analysis/Value;",
+            "sig": "(Lorg/objectweb/asm/Type;)TV;"
+          },
+          {
+            "nme": "newParameterValue",
+            "acc": 1,
+            "dsc": "(ZILorg/objectweb/asm/Type;)Lorg/objectweb/asm/tree/analysis/Value;",
+            "sig": "(ZILorg/objectweb/asm/Type;)TV;"
+          },
+          {
+            "nme": "newReturnTypeValue",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)Lorg/objectweb/asm/tree/analysis/Value;",
+            "sig": "(Lorg/objectweb/asm/Type;)TV;"
+          },
+          {
+            "nme": "newEmptyValue",
+            "acc": 1,
+            "dsc": "(I)Lorg/objectweb/asm/tree/analysis/Value;",
+            "sig": "(I)TV;"
+          },
+          {
+            "nme": "newExceptionValue",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/TryCatchBlockNode;Lorg/objectweb/asm/tree/analysis/Frame;Lorg/objectweb/asm/Type;)Lorg/objectweb/asm/tree/analysis/Value;",
+            "sig": "(Lorg/objectweb/asm/tree/TryCatchBlockNode;Lorg/objectweb/asm/tree/analysis/Frame<TV;>;Lorg/objectweb/asm/Type;)TV;"
+          },
+          {
+            "nme": "newOperation",
+            "acc": 1025,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;)Lorg/objectweb/asm/tree/analysis/Value;",
+            "sig": "(Lorg/objectweb/asm/tree/AbstractInsnNode;)TV;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "copyOperation",
+            "acc": 1025,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/Value;)Lorg/objectweb/asm/tree/analysis/Value;",
+            "sig": "(Lorg/objectweb/asm/tree/AbstractInsnNode;TV;)TV;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "unaryOperation",
+            "acc": 1025,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/Value;)Lorg/objectweb/asm/tree/analysis/Value;",
+            "sig": "(Lorg/objectweb/asm/tree/AbstractInsnNode;TV;)TV;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "binaryOperation",
+            "acc": 1025,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/Value;Lorg/objectweb/asm/tree/analysis/Value;)Lorg/objectweb/asm/tree/analysis/Value;",
+            "sig": "(Lorg/objectweb/asm/tree/AbstractInsnNode;TV;TV;)TV;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "ternaryOperation",
+            "acc": 1025,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/Value;Lorg/objectweb/asm/tree/analysis/Value;Lorg/objectweb/asm/tree/analysis/Value;)Lorg/objectweb/asm/tree/analysis/Value;",
+            "sig": "(Lorg/objectweb/asm/tree/AbstractInsnNode;TV;TV;TV;)TV;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "naryOperation",
+            "acc": 1025,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Ljava/util/List;)Lorg/objectweb/asm/tree/analysis/Value;",
+            "sig": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Ljava/util/List<+TV;>;)TV;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "returnOperation",
+            "acc": 1025,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/Value;Lorg/objectweb/asm/tree/analysis/Value;)V",
+            "sig": "(Lorg/objectweb/asm/tree/AbstractInsnNode;TV;TV;)V",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "merge",
+            "acc": 1025,
+            "dsc": "(Lorg/objectweb/asm/tree/analysis/Value;Lorg/objectweb/asm/tree/analysis/Value;)Lorg/objectweb/asm/tree/analysis/Value;",
+            "sig": "(TV;TV;)TV;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 20,
+            "nme": "api",
+            "dsc": "I"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/analysis/Subroutine.class": {
+        "ver": 49,
+        "acc": 48,
+        "nme": "org/objectweb/asm/tree/analysis/Subroutine",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lorg/objectweb/asm/tree/LabelNode;ILorg/objectweb/asm/tree/JumpInsnNode;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lorg/objectweb/asm/tree/analysis/Subroutine;)V"
+          },
+          {
+            "nme": "merge",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/analysis/Subroutine;)Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16,
+            "nme": "start",
+            "dsc": "Lorg/objectweb/asm/tree/LabelNode;"
+          },
+          {
+            "acc": 16,
+            "nme": "localsUsed",
+            "dsc": "[Z"
+          },
+          {
+            "acc": 16,
+            "nme": "callers",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/tree/JumpInsnNode;>;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/analysis/AnalyzerException.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/analysis/AnalyzerException",
+        "super": "java/lang/Exception",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Ljava/lang/String;Ljava/lang/Object;Lorg/objectweb/asm/tree/analysis/Value;)V"
+          },
+          {
+            "nme": "stringConcat$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "stringConcat$1",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;Lorg/objectweb/asm/tree/analysis/Value;)Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": 3154190448018943333
+          },
+          {
+            "acc": 145,
+            "nme": "node",
+            "dsc": "Lorg/objectweb/asm/tree/AbstractInsnNode;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/analysis/BasicVerifier.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/tree/analysis/BasicVerifier",
+        "super": "org/objectweb/asm/tree/analysis/BasicInterpreter",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "copyOperation",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/BasicValue;)Lorg/objectweb/asm/tree/analysis/BasicValue;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "unaryOperation",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/BasicValue;)Lorg/objectweb/asm/tree/analysis/BasicValue;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "binaryOperation",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/BasicValue;Lorg/objectweb/asm/tree/analysis/BasicValue;)Lorg/objectweb/asm/tree/analysis/BasicValue;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "ternaryOperation",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/BasicValue;Lorg/objectweb/asm/tree/analysis/BasicValue;Lorg/objectweb/asm/tree/analysis/BasicValue;)Lorg/objectweb/asm/tree/analysis/BasicValue;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "stringConcat$0",
+            "acc": 4106,
+            "dsc": "(Lorg/objectweb/asm/tree/analysis/BasicValue;)Ljava/lang/String;"
+          },
+          {
+            "nme": "naryOperation",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Ljava/util/List;)Lorg/objectweb/asm/tree/analysis/BasicValue;",
+            "sig": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Ljava/util/List<+Lorg/objectweb/asm/tree/analysis/BasicValue;>;)Lorg/objectweb/asm/tree/analysis/BasicValue;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "stringConcat$1",
+            "acc": 4106,
+            "dsc": "(I)Ljava/lang/String;"
+          },
+          {
+            "nme": "returnOperation",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/BasicValue;Lorg/objectweb/asm/tree/analysis/BasicValue;)V",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "isArrayValue",
+            "acc": 4,
+            "dsc": "(Lorg/objectweb/asm/tree/analysis/BasicValue;)Z"
+          },
+          {
+            "nme": "getElementValue",
+            "acc": 4,
+            "dsc": "(Lorg/objectweb/asm/tree/analysis/BasicValue;)Lorg/objectweb/asm/tree/analysis/BasicValue;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "isSubTypeOf",
+            "acc": 4,
+            "dsc": "(Lorg/objectweb/asm/tree/analysis/BasicValue;Lorg/objectweb/asm/tree/analysis/BasicValue;)Z"
+          },
+          {
+            "nme": "returnOperation",
+            "acc": 4161,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/Value;Lorg/objectweb/asm/tree/analysis/Value;)V",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "naryOperation",
+            "acc": 4161,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Ljava/util/List;)Lorg/objectweb/asm/tree/analysis/Value;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "ternaryOperation",
+            "acc": 4161,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/Value;Lorg/objectweb/asm/tree/analysis/Value;Lorg/objectweb/asm/tree/analysis/Value;)Lorg/objectweb/asm/tree/analysis/Value;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "binaryOperation",
+            "acc": 4161,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/Value;Lorg/objectweb/asm/tree/analysis/Value;)Lorg/objectweb/asm/tree/analysis/Value;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "unaryOperation",
+            "acc": 4161,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/Value;)Lorg/objectweb/asm/tree/analysis/Value;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          },
+          {
+            "nme": "copyOperation",
+            "acc": 4161,
+            "dsc": "(Lorg/objectweb/asm/tree/AbstractInsnNode;Lorg/objectweb/asm/tree/analysis/Value;)Lorg/objectweb/asm/tree/analysis/Value;",
+            "exs": [
+              "org/objectweb/asm/tree/analysis/AnalyzerException"
+            ]
+          }
+        ],
+        "flds": []
+      },
+      "module-info.class": {
+        "ver": 53,
+        "acc": 32768,
+        "nme": "module-info",
+        "mthds": [],
+        "flds": []
+      },
+      "org/objectweb/asm/tree/analysis/SmallSet$IteratorImpl.class": {
+        "ver": 49,
+        "acc": 32,
+        "nme": "org/objectweb/asm/tree/analysis/SmallSet$IteratorImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)V",
+            "sig": "(TT;TT;)V"
+          },
+          {
+            "nme": "hasNext",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "next",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Object;",
+            "sig": "()TT;"
+          },
+          {
+            "nme": "remove",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "firstElement",
+            "dsc": "Ljava/lang/Object;",
+            "sig": "TT;"
+          },
+          {
+            "acc": 2,
+            "nme": "secondElement",
+            "dsc": "Ljava/lang/Object;",
+            "sig": "TT;"
+          }
+        ]
+      },
+      "org/objectweb/asm/tree/analysis/Value.class": {
+        "ver": 49,
+        "acc": 1537,
+        "nme": "org/objectweb/asm/tree/analysis/Value",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getSize",
+            "acc": 1025,
+            "dsc": "()I"
+          }
+        ],
+        "flds": []
+      }
+    }
+  }
+}

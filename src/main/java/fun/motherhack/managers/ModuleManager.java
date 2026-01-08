@@ -1,0 +1,185 @@
+package fun.motherhack.managers;
+
+import fun.motherhack.MotherHack;
+import fun.motherhack.api.events.impl.EventMouse;
+import fun.motherhack.modules.api.Category;
+import fun.motherhack.modules.api.Module;
+import fun.motherhack.api.events.impl.EventKey;
+import fun.motherhack.modules.impl.combat.*;
+import fun.motherhack.modules.impl.movement.*;
+import fun.motherhack.modules.impl.render.*;
+import fun.motherhack.modules.impl.misc.*;
+import fun.motherhack.modules.impl.client.*;
+import fun.motherhack.modules.impl.client.*;
+import fun.motherhack.modules.settings.Setting;
+import fun.motherhack.utils.Wrapper;
+import lombok.Getter;
+import meteordevelopment.orbit.EventHandler;
+
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+@Getter
+public class ModuleManager implements Wrapper {
+
+    private final List<Module> modules = new ArrayList<>();
+
+    public ModuleManager() {
+        MotherHack.getInstance().getEventHandler().subscribe(this);
+        addModules(
+                new Sprint(),
+                new UI(),
+                new MHACKGUI(),
+                new Configs(),
+                new CustomBackground(),
+                new NameTags(),
+                new GuiMove(),
+                new RPC(),
+                new MultiTask(),
+                new Aura(),
+                new NoPush(),
+                new NoRender(),
+                new FastUse(),
+                new MoveFix(),
+                new FakeLag(),
+                new NoAttackCooldown(),
+                new NoSlow(),
+                new AutoVault(),
+                new WindHop(),
+                new TargetEsp(),
+                new NoFriendDamage(),
+                new NoEntityTrace(),
+                new Panic(),
+                new NoJumpDelay(),
+                new ItemHelper(),
+                new AutoBuy(),
+                new AuctionHelper(),
+                new OffHand(),
+                new AutoGapple(),
+                new AntiBot(),
+                new DamageParticles(),
+                new Fullbright(),
+                new ElytraHelper(),
+                new ClickPearl(),
+                new ElytraForward(),
+                new ElytraBooster(),
+                new Targets(),
+                new Teams(),
+                new TargetStrafe(),
+                new Scaffold(),
+                new FuntimeHelper(),
+                new AutoAccept(),
+                new PotionTracker(),
+                new UseTracker(),
+                new ViewModel(),
+                new ScoreboardHealth(),
+                new MessageAppend(),
+                new BedTags(),
+                new ChinaHat(),
+                new JumpCircles(),
+                new Trails(),
+                new CrossHair(),
+                new SpeedMine(),
+                new ToxicBot(),
+                new Spammer(),
+                new NameProtect(),
+                new InvseeExploit(),
+                new AutoFlyme(),
+                new FastHub(),
+                new ElytraFlight(),
+                new ElytraRecast(),
+                new FreeLook(),
+                new Zoom(),
+                new InvSaver(),
+                new AutoClicker(),
+                new Freeze(),
+                new ItemScroller(),
+                //new BackSprint(), (АХЗЗХВАЗХВЗХАЗХВ Я ХОТЕЛ СДЕЛАТЬ ЛЕГИТ СТРЕЙФЫ КАК В КЕТЛИНЕ)
+                new Flight(),
+                new Speed(),
+                new Strafe(),
+                new Spider(),
+                new AKB(),
+                new Fun(),
+                new AutoWalk(),
+                new Fucker(),
+                new BedWarsHelper(),
+                new AntiCheatDetector(),
+                new MathSolver(),
+                new PenisESP(),
+                new Snow(),
+                new NoServerRotate(),
+                new AngelWingsESP(),
+                new HotBar(),
+                new ItemPhysics(),
+                new DamageTint(),
+                new SwingAnimations(),
+                new AspectRatio(),
+                new NoCameraClip(),
+                new VersionSpoof(),
+                new AutoLogin(),
+                new FakePlayer(),
+                new FreeCam(),
+                //new ResourcePackPositionManager() (нуууу короче хотел сделать так, чтобы можно было убирать удобно рп мазерхрюка)
+                //new AutoVote() (BWHelper заменил этот понос)
+                //new NingaBridge() (АВЗХЗХВАЗХВАЗХВ НУ ТИПО ЛЕГИТНЫЙ СКАФФУЛД)
+                //new GrimElytra(), (я тупо тестил)
+                new LegitAura(),
+                new Arrows(),
+                new AmbienceModule()
+        );
+
+        for (Module module : modules) {
+            try {
+                for (Field field : module.getClass().getDeclaredFields()) {
+                    if (!Setting.class.isAssignableFrom(field.getType())) continue;
+                    field.setAccessible(true);
+                    Setting<?> setting = (Setting<?>) field.get(module);
+                    if (setting != null && !module.getSettings().contains(setting)) module.getSettings().add(setting);
+                }
+            } catch (Exception ignored) {}
+        }
+    }
+
+    private void addModules(Module... module) {
+        this.modules.addAll(List.of(module));
+    }
+
+    @EventHandler
+    public void onKey(EventKey e) {
+        if (Module.fullNullCheck() || mc.currentScreen != null || MotherHack.getInstance().isPanic()) return;
+
+        if (e.getAction() == 1)
+            for (Module module : modules)
+                if (module.getBind().getKey() == e.getKey() && !module.getBind().isMouse())
+                    module.toggle();
+    }
+
+    @EventHandler
+    public void onMouse(EventMouse e) {
+        if (Module.fullNullCheck() || mc.currentScreen != null || MotherHack.getInstance().isPanic()) return;
+
+        if (e.getAction() == 1)
+            for (Module module : modules)
+                if (module.getBind().getKey() == e.getButton() && module.getBind().isMouse())
+                    module.toggle();
+    }
+
+    public List<Module> getModules(Category category) {
+        return modules.stream().filter(m -> m.getCategory() == category).toList();
+    }
+
+    public List<Category> getCategories() {
+        return Arrays.asList(Category.values());
+    }
+
+    public <T extends Module> T getModule(Class<T> clazz) {
+        for (Module module : modules) {
+            if (!clazz.isInstance(module)) continue;
+            return (T) module;
+        }
+        return null;
+    }
+}

@@ -1,0 +1,4728 @@
+{
+  "md5": "a38ffcf41f7c8f7d468ab58645124a02",
+  "sha2": "bdaeed8ac4ceaea2ff49c08827f82c49c5ec3edb",
+  "sha256": "582379d12cac0328b0cdd979542496f2c4592483cff8208a0e54c310267b49ff",
+  "contents": {
+    "classes": {
+      "net/fabricmc/fabric/mixin/client/gametest/MinecraftDedicatedServerMixin.class": {
+        "ver": 65,
+        "acc": 1057,
+        "nme": "net/fabricmc/fabric/mixin/client/gametest/MinecraftDedicatedServerMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "captureServerInstance",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/lang/Boolean;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "setupServer"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/server/dedicated/MinecraftDedicatedServer;loadWorld()V"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "dontStopExecutors",
+            "acc": 2,
+            "dsc": "(Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation;)V",
+            "sig": "(Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation<Ljava/lang/Void;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lcom/llamalad7/mixinextras/injector/wrapoperation/WrapOperation;",
+                "vals": [
+                  "method",
+                  [
+                    "shutdown"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/util/Util;shutdownExecutors()V"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/server/dedicated/MinecraftDedicatedServer"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/gametest/ClientGameTestMixinConfigPlugin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/client/gametest/ClientGameTestMixinConfigPlugin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "onLoad",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "getRefMapperConfig",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "shouldApplyMixin",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "acceptTargets",
+            "acc": 1,
+            "dsc": "(Ljava/util/Set;Ljava/util/Set;)V",
+            "sig": "(Ljava/util/Set<Ljava/lang/String;>;Ljava/util/Set<Ljava/lang/String;>;)V"
+          },
+          {
+            "nme": "getMixins",
+            "acc": 1,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "preApply",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Lorg/objectweb/asm/tree/ClassNode;Ljava/lang/String;Lorg/spongepowered/asm/mixin/extensibility/IMixinInfo;)V"
+          },
+          {
+            "nme": "postApply",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Lorg/objectweb/asm/tree/ClassNode;Ljava/lang/String;Lorg/spongepowered/asm/mixin/extensibility/IMixinInfo;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "ENABLED",
+            "dsc": "Z"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/gametest/v1/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/api/client/gametest/v1/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Experimental;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/gametest/MouseAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/client/gametest/MouseAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "invokeOnMouseButton",
+            "acc": 1025,
+            "dsc": "(JIII)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Invoker;"
+              }
+            ]
+          },
+          {
+            "nme": "invokeOnMouseScroll",
+            "acc": 1025,
+            "dsc": "(JDD)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Invoker;"
+              }
+            ]
+          },
+          {
+            "nme": "invokeOnCursorPos",
+            "acc": 1025,
+            "dsc": "(JDD)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Invoker;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/Mouse"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/gametest/TestSingleplayerContextImpl.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/client/gametest/TestSingleplayerContextImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/gametest/v1/ClientGameTestContext;Lnet/fabricmc/fabric/api/client/gametest/v1/TestWorldSave;Lnet/minecraft/server/MinecraftServer;)V"
+          },
+          {
+            "nme": "getWorldSave",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/client/gametest/v1/TestWorldSave;"
+          },
+          {
+            "nme": "getClientWorld",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/client/gametest/v1/TestClientWorldContext;"
+          },
+          {
+            "nme": "getServer",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/client/gametest/v1/TestServerContext;"
+          },
+          {
+            "nme": "close",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lambda$close$1",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;)Z"
+          },
+          {
+            "nme": "lambda$close$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;)V",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "context",
+            "dsc": "Lnet/fabricmc/fabric/api/client/gametest/v1/ClientGameTestContext;"
+          },
+          {
+            "acc": 18,
+            "nme": "worldSave",
+            "dsc": "Lnet/fabricmc/fabric/api/client/gametest/v1/TestWorldSave;"
+          },
+          {
+            "acc": 18,
+            "nme": "clientWorld",
+            "dsc": "Lnet/fabricmc/fabric/api/client/gametest/v1/TestClientWorldContext;"
+          },
+          {
+            "acc": 18,
+            "nme": "server",
+            "dsc": "Lnet/fabricmc/fabric/api/client/gametest/v1/TestServerContext;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/gametest/CreateWorldScreenAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/client/gametest/CreateWorldScreenAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getWorldCreator",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/client/gui/screen/world/WorldCreator;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/gui/screen/world/CreateWorldScreen"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/gametest/v1/TestInput.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/gametest/v1/TestInput",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "holdKey",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/option/KeyBinding;)V"
+          },
+          {
+            "nme": "holdKey",
+            "acc": 1025,
+            "dsc": "(Ljava/util/function/Function;)V",
+            "sig": "(Ljava/util/function/Function<Lnet/minecraft/client/option/GameOptions;Lnet/minecraft/client/option/KeyBinding;>;)V"
+          },
+          {
+            "nme": "holdKey",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/util/InputUtil$Key;)V"
+          },
+          {
+            "nme": "holdKey",
+            "acc": 1025,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "holdMouse",
+            "acc": 1025,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "holdControl",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "holdShift",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "holdAlt",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "releaseKey",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/option/KeyBinding;)V"
+          },
+          {
+            "nme": "releaseKey",
+            "acc": 1025,
+            "dsc": "(Ljava/util/function/Function;)V",
+            "sig": "(Ljava/util/function/Function<Lnet/minecraft/client/option/GameOptions;Lnet/minecraft/client/option/KeyBinding;>;)V"
+          },
+          {
+            "nme": "releaseKey",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/util/InputUtil$Key;)V"
+          },
+          {
+            "nme": "releaseKey",
+            "acc": 1025,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "releaseMouse",
+            "acc": 1025,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "releaseControl",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "releaseShift",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "releaseAlt",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "pressKey",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/option/KeyBinding;)V"
+          },
+          {
+            "nme": "pressKey",
+            "acc": 1025,
+            "dsc": "(Ljava/util/function/Function;)V",
+            "sig": "(Ljava/util/function/Function<Lnet/minecraft/client/option/GameOptions;Lnet/minecraft/client/option/KeyBinding;>;)V"
+          },
+          {
+            "nme": "pressKey",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/util/InputUtil$Key;)V"
+          },
+          {
+            "nme": "pressKey",
+            "acc": 1025,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "pressMouse",
+            "acc": 1025,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "holdKeyFor",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/option/KeyBinding;I)V"
+          },
+          {
+            "nme": "holdKeyFor",
+            "acc": 1025,
+            "dsc": "(Ljava/util/function/Function;I)V",
+            "sig": "(Ljava/util/function/Function<Lnet/minecraft/client/option/GameOptions;Lnet/minecraft/client/option/KeyBinding;>;I)V"
+          },
+          {
+            "nme": "holdKeyFor",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/util/InputUtil$Key;I)V"
+          },
+          {
+            "nme": "holdKeyFor",
+            "acc": 1025,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "holdMouseFor",
+            "acc": 1025,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "typeChar",
+            "acc": 1025,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "typeChars",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "scroll",
+            "acc": 1025,
+            "dsc": "(D)V"
+          },
+          {
+            "nme": "scroll",
+            "acc": 1025,
+            "dsc": "(DD)V"
+          },
+          {
+            "nme": "setCursorPos",
+            "acc": 1025,
+            "dsc": "(DD)V"
+          },
+          {
+            "nme": "moveCursor",
+            "acc": 1025,
+            "dsc": "(DD)V"
+          },
+          {
+            "nme": "resizeWindow",
+            "acc": 1025,
+            "dsc": "(II)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/gametest/TestInputImpl.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/client/gametest/TestInputImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/gametest/v1/ClientGameTestContext;)V"
+          },
+          {
+            "nme": "isKeyDown",
+            "acc": 9,
+            "dsc": "(I)Z"
+          },
+          {
+            "nme": "clearKeysDown",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "holdKey",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/option/KeyBinding;)V"
+          },
+          {
+            "nme": "holdKey",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/Function;)V",
+            "sig": "(Ljava/util/function/Function<Lnet/minecraft/client/option/GameOptions;Lnet/minecraft/client/option/KeyBinding;>;)V"
+          },
+          {
+            "nme": "holdKey",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/util/InputUtil$Key;)V"
+          },
+          {
+            "nme": "holdKey",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "holdMouse",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "holdControl",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "holdShift",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "holdAlt",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "releaseKey",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/option/KeyBinding;)V"
+          },
+          {
+            "nme": "releaseKey",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/Function;)V",
+            "sig": "(Ljava/util/function/Function<Lnet/minecraft/client/option/GameOptions;Lnet/minecraft/client/option/KeyBinding;>;)V"
+          },
+          {
+            "nme": "releaseKey",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/util/InputUtil$Key;)V"
+          },
+          {
+            "nme": "releaseKey",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "releaseMouse",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "releaseControl",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "releaseShift",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "releaseAlt",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "pressOrReleaseKey",
+            "acc": 10,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;Lnet/minecraft/client/util/InputUtil$Key;I)V"
+          },
+          {
+            "nme": "pressKey",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/option/KeyBinding;)V"
+          },
+          {
+            "nme": "pressKey",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/Function;)V",
+            "sig": "(Ljava/util/function/Function<Lnet/minecraft/client/option/GameOptions;Lnet/minecraft/client/option/KeyBinding;>;)V"
+          },
+          {
+            "nme": "pressKey",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/util/InputUtil$Key;)V"
+          },
+          {
+            "nme": "pressKey",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "pressMouse",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "holdKeyFor",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/option/KeyBinding;I)V"
+          },
+          {
+            "nme": "holdKeyFor",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/Function;I)V",
+            "sig": "(Ljava/util/function/Function<Lnet/minecraft/client/option/GameOptions;Lnet/minecraft/client/option/KeyBinding;>;I)V"
+          },
+          {
+            "nme": "holdKeyFor",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/util/InputUtil$Key;I)V"
+          },
+          {
+            "nme": "holdKeyFor",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "holdMouseFor",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "typeChar",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "typeChars",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "scroll",
+            "acc": 1,
+            "dsc": "(D)V"
+          },
+          {
+            "nme": "scroll",
+            "acc": 1,
+            "dsc": "(DD)V"
+          },
+          {
+            "nme": "setCursorPos",
+            "acc": 1,
+            "dsc": "(DD)V"
+          },
+          {
+            "nme": "moveCursor",
+            "acc": 1,
+            "dsc": "(DD)V"
+          },
+          {
+            "nme": "resizeWindow",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "getBoundKey",
+            "acc": 10,
+            "dsc": "(Lnet/minecraft/client/option/KeyBinding;Ljava/lang/String;)Lnet/minecraft/client/util/InputUtil$Key;"
+          },
+          {
+            "nme": "lambda$resizeWindow$12",
+            "acc": 4106,
+            "dsc": "(IILnet/minecraft/client/MinecraftClient;)V",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          },
+          {
+            "nme": "lambda$moveCursor$11",
+            "acc": 4106,
+            "dsc": "(DDLnet/minecraft/client/MinecraftClient;)V",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          },
+          {
+            "nme": "lambda$setCursorPos$10",
+            "acc": 4106,
+            "dsc": "(DDLnet/minecraft/client/MinecraftClient;)V",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          },
+          {
+            "nme": "lambda$scroll$9",
+            "acc": 4106,
+            "dsc": "(DDLnet/minecraft/client/MinecraftClient;)V",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          },
+          {
+            "nme": "lambda$typeChars$8",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;Lnet/minecraft/client/MinecraftClient;)V",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          },
+          {
+            "nme": "lambda$typeChars$7",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;I)V"
+          },
+          {
+            "nme": "lambda$typeChar$6",
+            "acc": 4106,
+            "dsc": "(ILnet/minecraft/client/MinecraftClient;)V",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          },
+          {
+            "nme": "lambda$holdKeyFor$5",
+            "acc": 4106,
+            "dsc": "(Ljava/util/function/Function;Lnet/minecraft/client/MinecraftClient;)Lnet/minecraft/client/option/KeyBinding;",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          },
+          {
+            "nme": "lambda$pressKey$4",
+            "acc": 4106,
+            "dsc": "(Ljava/util/function/Function;Lnet/minecraft/client/MinecraftClient;)Lnet/minecraft/client/option/KeyBinding;",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          },
+          {
+            "nme": "lambda$releaseKey$3",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/client/util/InputUtil$Key;Lnet/minecraft/client/MinecraftClient;)V",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          },
+          {
+            "nme": "lambda$releaseKey$2",
+            "acc": 4106,
+            "dsc": "(Ljava/util/function/Function;Lnet/minecraft/client/MinecraftClient;)Lnet/minecraft/client/option/KeyBinding;",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          },
+          {
+            "nme": "lambda$holdKey$1",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/client/util/InputUtil$Key;Lnet/minecraft/client/MinecraftClient;)V",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          },
+          {
+            "nme": "lambda$holdKey$0",
+            "acc": 4106,
+            "dsc": "(Ljava/util/function/Function;Lnet/minecraft/client/MinecraftClient;)Lnet/minecraft/client/option/KeyBinding;",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "KEYS_DOWN",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Lnet/minecraft/client/util/InputUtil$Key;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "context",
+            "dsc": "Lnet/fabricmc/fabric/api/client/gametest/v1/ClientGameTestContext;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/gametest/v1/TestWorldBuilder.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/gametest/v1/TestWorldBuilder",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "setUseConsistentSettings",
+            "acc": 1025,
+            "dsc": "(Z)Lnet/fabricmc/fabric/api/client/gametest/v1/TestWorldBuilder;"
+          },
+          {
+            "nme": "adjustSettings",
+            "acc": 1025,
+            "dsc": "(Ljava/util/function/Consumer;)Lnet/fabricmc/fabric/api/client/gametest/v1/TestWorldBuilder;",
+            "sig": "(Ljava/util/function/Consumer<Lnet/minecraft/client/gui/screen/world/WorldCreator;>;)Lnet/fabricmc/fabric/api/client/gametest/v1/TestWorldBuilder;"
+          },
+          {
+            "nme": "create",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/client/gametest/v1/TestSingleplayerContext;"
+          },
+          {
+            "nme": "createServer",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/client/gametest/v1/TestDedicatedServerContext;"
+          },
+          {
+            "nme": "createServer",
+            "acc": 1025,
+            "dsc": "(Ljava/util/Properties;)Lnet/fabricmc/fabric/api/client/gametest/v1/TestDedicatedServerContext;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/gametest/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/client/gametest/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/gametest/TestDedicatedServerContextImpl.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/client/gametest/TestDedicatedServerContextImpl",
+        "super": "net/fabricmc/fabric/impl/client/gametest/TestServerContextImpl",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/gametest/v1/ClientGameTestContext;Lnet/minecraft/server/dedicated/MinecraftDedicatedServer;)V"
+          },
+          {
+            "nme": "connect",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/client/gametest/v1/TestServerConnection;"
+          },
+          {
+            "nme": "getConnectionAddress",
+            "acc": 2,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "close",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lambda$close$1",
+            "acc": 4098,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;)Z"
+          },
+          {
+            "nme": "lambda$connect$0",
+            "acc": 4098,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;)V",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "context",
+            "dsc": "Lnet/fabricmc/fabric/api/client/gametest/v1/ClientGameTestContext;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/gametest/ClientGameTestContextImpl$1.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "net/fabricmc/fabric/impl/client/gametest/ClientGameTestContextImpl$1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "visitInt",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;I)I"
+          },
+          {
+            "nme": "visitBoolean",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Z)Z"
+          },
+          {
+            "nme": "visitString",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "visitFloat",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;F)F"
+          },
+          {
+            "nme": "visitObject",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/lang/Object;",
+            "sig": "<T:Ljava/lang/Object;>(Ljava/lang/String;TT;Ljava/util/function/Function<Ljava/lang/String;TT;>;Ljava/util/function/Function<TT;Ljava/lang/String;>;)TT;"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Lnet/minecraft/client/option/SimpleOption;)V",
+            "sig": "<T:Ljava/lang/Object;>(Ljava/lang/String;Lnet/minecraft/client/option/SimpleOption<TT;>;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/gametest/DedicatedServerImplUtil.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/client/gametest/DedicatedServerImplUtil",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "start",
+            "acc": 9,
+            "dsc": "(Ljava/util/Properties;)Lnet/minecraft/server/dedicated/MinecraftDedicatedServer;"
+          },
+          {
+            "nme": "setupServer",
+            "acc": 10,
+            "dsc": "(Ljava/util/Properties;)V"
+          },
+          {
+            "nme": "lambda$start$1",
+            "acc": 4106,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lambda$static$0",
+            "acc": 4106,
+            "dsc": "(Ljava/util/Properties;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 26,
+            "nme": "DEFAULT_SERVER_PROPERTIES",
+            "dsc": "Ljava/util/Properties;"
+          },
+          {
+            "acc": 9,
+            "nme": "saveLevelDataTo",
+            "dsc": "Ljava/nio/file/Path;"
+          },
+          {
+            "acc": 9,
+            "nme": "serverFuture",
+            "dsc": "Ljava/util/concurrent/CompletableFuture;",
+            "sig": "Ljava/util/concurrent/CompletableFuture<Lnet/minecraft/server/dedicated/MinecraftDedicatedServer;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/gametest/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/mixin/client/gametest/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/gametest/ClientGameTestImpl.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/client/gametest/ClientGameTestImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "waitForWorldLoad",
+            "acc": 9,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/gametest/v1/ClientGameTestContext;)V"
+          },
+          {
+            "nme": "isExperimentalWarningScreen",
+            "acc": 10,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;)Z"
+          },
+          {
+            "nme": "isWorldLoadingFinished",
+            "acc": 10,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;)Z"
+          },
+          {
+            "nme": "lambda$waitForWorldLoad$1",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;)Ljava/lang/Boolean;",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          },
+          {
+            "nme": "lambda$waitForWorldLoad$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;)Ljava/lang/Boolean;",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 9,
+            "nme": "screenshotCounter",
+            "dsc": "I"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/gametest/CyclingButtonWidgetAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/client/gametest/CyclingButtonWidgetAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getOptionText",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/text/Text;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/gui/widget/CyclingButtonWidget"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/gametest/TestInputImpl$1.class": {
+        "ver": 65,
+        "acc": 4128,
+        "nme": "net/fabricmc/fabric/impl/client/gametest/TestInputImpl$1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4120,
+            "nme": "$SwitchMap$net$minecraft$client$util$InputUtil$Type",
+            "dsc": "[I"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/gametest/v1/TestDedicatedServerContext.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/gametest/v1/TestDedicatedServerContext",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "connect",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/client/gametest/v1/TestServerConnection;"
+          },
+          {
+            "nme": "close",
+            "acc": 1025,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/gametest/InputUtilMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/client/gametest/InputUtilMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "useGameTestInputForKeyPressed",
+            "acc": 10,
+            "dsc": "(JILorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(JILorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/lang/Boolean;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "isKeyPressed"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "dontAttachCallbacks",
+            "acc": 10,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "setKeyboardCallbacks",
+                    "setMouseCallbacks"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "disableCursorLocking",
+            "acc": 10,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "setCursorParameters"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/util/InputUtil"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/gametest/RenderTickCounterConstantAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/client/gametest/RenderTickCounterConstantAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "(F)Lnet/minecraft/client/render/RenderTickCounter$Constant;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Invoker;",
+                "vals": [
+                  "value",
+                  "<init>"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/render/RenderTickCounter$Constant"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/gametest/v1/FabricClientGameTest.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/gametest/v1/FabricClientGameTest",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "runTest",
+            "acc": 1025,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/gametest/v1/ClientGameTestContext;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/gametest/ClientChunkMapAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/client/gametest/ClientChunkMapAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getCenterChunkX",
+            "acc": 1025,
+            "dsc": "()I",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;"
+              }
+            ]
+          },
+          {
+            "nme": "getCenterChunkZ",
+            "acc": 1025,
+            "dsc": "()I",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/world/ClientChunkManager$ClientChunkMap"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/gametest/v1/ClientGameTestContext.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/gametest/v1/ClientGameTestContext",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "waitTick",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "waitTicks",
+            "acc": 1025,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "waitFor",
+            "acc": 1025,
+            "dsc": "(Ljava/util/function/Predicate;)I",
+            "sig": "(Ljava/util/function/Predicate<Lnet/minecraft/client/MinecraftClient;>;)I"
+          },
+          {
+            "nme": "waitFor",
+            "acc": 1025,
+            "dsc": "(Ljava/util/function/Predicate;I)I",
+            "sig": "(Ljava/util/function/Predicate<Lnet/minecraft/client/MinecraftClient;>;I)I"
+          },
+          {
+            "nme": "waitForScreen",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Class;)I",
+            "sig": "(Ljava/lang/Class<+Lnet/minecraft/client/gui/screen/Screen;>;)I"
+          },
+          {
+            "nme": "setScreen",
+            "acc": 1025,
+            "dsc": "(Ljava/util/function/Supplier;)V",
+            "sig": "(Ljava/util/function/Supplier<Lnet/minecraft/client/gui/screen/Screen;>;)V"
+          },
+          {
+            "nme": "clickScreenButton",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "tryClickScreenButton",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "takeScreenshot",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)Ljava/nio/file/Path;"
+          },
+          {
+            "nme": "takeScreenshot",
+            "acc": 1025,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/gametest/v1/TestScreenshotOptions;)Ljava/nio/file/Path;"
+          },
+          {
+            "nme": "getInput",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/client/gametest/v1/TestInput;"
+          },
+          {
+            "nme": "worldBuilder",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/client/gametest/v1/TestWorldBuilder;"
+          },
+          {
+            "nme": "restoreDefaultGameOptions",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "runOnClient",
+            "acc": 1025,
+            "dsc": "(Lorg/apache/commons/lang3/function/FailableConsumer;)V",
+            "sig": "<E:Ljava/lang/Throwable;>(Lorg/apache/commons/lang3/function/FailableConsumer<Lnet/minecraft/client/MinecraftClient;TE;>;)V^TE;",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          },
+          {
+            "nme": "computeOnClient",
+            "acc": 1025,
+            "dsc": "(Lorg/apache/commons/lang3/function/FailableFunction;)Ljava/lang/Object;",
+            "sig": "<T:Ljava/lang/Object;E:Ljava/lang/Throwable;>(Lorg/apache/commons/lang3/function/FailableFunction<Lnet/minecraft/client/MinecraftClient;TT;TE;>;)TT;^TE;",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "NO_TIMEOUT",
+            "dsc": "I",
+            "val": -1
+          },
+          {
+            "acc": 25,
+            "nme": "DEFAULT_TIMEOUT",
+            "dsc": "I",
+            "val": 200
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/gametest/ThreadingImpl.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/client/gametest/ThreadingImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "enterPhase",
+            "acc": 9,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "setGameCrashed",
+            "acc": 9,
+            "dsc": "()V"
+          },
+          {
+            "nme": "runTestThread",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Runnable;)V"
+          },
+          {
+            "nme": "deregisterTestThread",
+            "acc": 10,
+            "dsc": "()V"
+          },
+          {
+            "nme": "checkOnGametestThread",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "runOnClient",
+            "acc": 9,
+            "dsc": "(Lorg/apache/commons/lang3/function/FailableRunnable;)V",
+            "sig": "<E:Ljava/lang/Throwable;>(Lorg/apache/commons/lang3/function/FailableRunnable<TE;>;)V^TE;",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          },
+          {
+            "nme": "runOnServer",
+            "acc": 9,
+            "dsc": "(Lorg/apache/commons/lang3/function/FailableRunnable;)V",
+            "sig": "<E:Ljava/lang/Throwable;>(Lorg/apache/commons/lang3/function/FailableRunnable<TE;>;)V^TE;",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          },
+          {
+            "nme": "runTaskOnOtherThread",
+            "acc": 10,
+            "dsc": "(Lorg/apache/commons/lang3/function/FailableRunnable;Ljava/util/concurrent/Semaphore;)V",
+            "sig": "<E:Ljava/lang/Throwable;>(Lorg/apache/commons/lang3/function/FailableRunnable<TE;>;Ljava/util/concurrent/Semaphore;)V^TE;",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          },
+          {
+            "nme": "runTaskOnThisThread",
+            "acc": 10,
+            "dsc": "(Lorg/apache/commons/lang3/function/FailableRunnable;Lorg/apache/commons/lang3/mutable/MutableObject;)V",
+            "sig": "<E:Ljava/lang/Throwable;>(Lorg/apache/commons/lang3/function/FailableRunnable<TE;>;Lorg/apache/commons/lang3/mutable/MutableObject<TE;>;)V"
+          },
+          {
+            "nme": "joinAsyncStackTrace",
+            "acc": 10,
+            "dsc": "(Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "runTick",
+            "acc": 9,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lambda$runTaskOnOtherThread$2",
+            "acc": 4106,
+            "dsc": "(Lorg/apache/commons/lang3/function/FailableRunnable;Lorg/apache/commons/lang3/mutable/MutableObject;)V"
+          },
+          {
+            "nme": "lambda$runTestThread$1",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Runnable;)V"
+          },
+          {
+            "nme": "lambda$runTestThread$0",
+            "acc": 4106,
+            "dsc": "()V",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 26,
+            "nme": "DISABLE_JOIN_ASYNC_STACK_TRACES",
+            "dsc": "Z"
+          },
+          {
+            "acc": 26,
+            "nme": "THREAD_IMPL_CLASS_NAME",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 26,
+            "nme": "TASK_ON_THIS_THREAD_METHOD_NAME",
+            "dsc": "Ljava/lang/String;",
+            "val": "runTaskOnThisThread"
+          },
+          {
+            "acc": 26,
+            "nme": "TASK_ON_OTHER_THREAD_METHOD_NAME",
+            "dsc": "Ljava/lang/String;",
+            "val": "runTaskOnOtherThread"
+          },
+          {
+            "acc": 25,
+            "nme": "PHASE_TICK",
+            "dsc": "I",
+            "val": 0
+          },
+          {
+            "acc": 25,
+            "nme": "PHASE_SERVER_TASKS",
+            "dsc": "I",
+            "val": 1
+          },
+          {
+            "acc": 25,
+            "nme": "PHASE_CLIENT_TASKS",
+            "dsc": "I",
+            "val": 2
+          },
+          {
+            "acc": 25,
+            "nme": "PHASE_TEST",
+            "dsc": "I",
+            "val": 3
+          },
+          {
+            "acc": 26,
+            "nme": "PHASE_MASK",
+            "dsc": "I",
+            "val": 3
+          },
+          {
+            "acc": 25,
+            "nme": "PHASER",
+            "dsc": "Ljava/util/concurrent/Phaser;"
+          },
+          {
+            "acc": 74,
+            "nme": "enablePhases",
+            "dsc": "Z"
+          },
+          {
+            "acc": 73,
+            "nme": "isClientRunning",
+            "dsc": "Z"
+          },
+          {
+            "acc": 73,
+            "nme": "clientCanAcceptTasks",
+            "dsc": "Z"
+          },
+          {
+            "acc": 25,
+            "nme": "CLIENT_SEMAPHORE",
+            "dsc": "Ljava/util/concurrent/Semaphore;"
+          },
+          {
+            "acc": 73,
+            "nme": "isServerRunning",
+            "dsc": "Z"
+          },
+          {
+            "acc": 73,
+            "nme": "serverCanAcceptTasks",
+            "dsc": "Z"
+          },
+          {
+            "acc": 25,
+            "nme": "SERVER_SEMAPHORE",
+            "dsc": "Ljava/util/concurrent/Semaphore;"
+          },
+          {
+            "acc": 9,
+            "nme": "testThread",
+            "dsc": "Ljava/lang/Thread;"
+          },
+          {
+            "acc": 25,
+            "nme": "TEST_SEMAPHORE",
+            "dsc": "Ljava/util/concurrent/Semaphore;"
+          },
+          {
+            "acc": 9,
+            "nme": "testFailureException",
+            "dsc": "Ljava/lang/Throwable;"
+          },
+          {
+            "acc": 9,
+            "nme": "taskToRun",
+            "dsc": "Ljava/lang/Runnable;"
+          },
+          {
+            "acc": 74,
+            "nme": "gameCrashed",
+            "dsc": "Z"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/gametest/MinecraftServerMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/client/gametest/MinecraftServerMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "onRunServer",
+            "acc": 2,
+            "dsc": "(Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation;)V",
+            "sig": "(Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation<Ljava/lang/Void;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lcom/llamalad7/mixinextras/injector/wrapmethod/WrapMethod;",
+                "vals": [
+                  "method",
+                  [
+                    "runServer"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "onCrash",
+            "acc": 4,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "runServer"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/server/MinecraftServer;setCrashReport(Lnet/minecraft/util/crash/CrashReport;)V",
+                        "shift",
+                        [
+                          "Lorg/spongepowered/asm/mixin/injection/At$Shift;",
+                          "AFTER"
+                        ]
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "preRunTasks",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "runServer"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/server/MinecraftServer;runTasksTillTickEnd()V"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "postRunTasks",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "runServer"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/server/MinecraftServer;runTasksTillTickEnd()V",
+                        "shift",
+                        [
+                          "Lorg/spongepowered/asm/mixin/injection/At$Shift;",
+                          "AFTER"
+                        ]
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "deregisterServer",
+            "acc": 2,
+            "dsc": "()V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Unique;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/server/MinecraftServer"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/gametest/v1/TestServerConnection.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/gametest/v1/TestServerConnection",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getClientWorld",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/client/gametest/v1/TestClientWorldContext;"
+          },
+          {
+            "nme": "close",
+            "acc": 1025,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/gametest/FramebufferMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/client/gametest/FramebufferMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "modifyWidth",
+            "acc": 2,
+            "dsc": "(I)I",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/ModifyVariable;",
+                "vals": [
+                  "method",
+                  [
+                    "draw",
+                    "drawInternal"
+                  ],
+                  "at",
+                  {
+                    "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                    "values": [
+                      "value",
+                      "HEAD"
+                    ],
+                    "api": 589824
+                  },
+                  "ordinal",
+                  0,
+                  "argsOnly",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "modifyHeight",
+            "acc": 2,
+            "dsc": "(I)I",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/ModifyVariable;",
+                "vals": [
+                  "method",
+                  [
+                    "draw",
+                    "drawInternal"
+                  ],
+                  "at",
+                  {
+                    "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                    "values": [
+                      "value",
+                      "HEAD"
+                    ],
+                    "api": 589824
+                  },
+                  "ordinal",
+                  1,
+                  "argsOnly",
+                  true
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/gl/Framebuffer"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/gametest/v1/TestServerContext.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/gametest/v1/TestServerContext",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "runCommand",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "runOnServer",
+            "acc": 1025,
+            "dsc": "(Lorg/apache/commons/lang3/function/FailableConsumer;)V",
+            "sig": "<E:Ljava/lang/Throwable;>(Lorg/apache/commons/lang3/function/FailableConsumer<Lnet/minecraft/server/MinecraftServer;TE;>;)V^TE;",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          },
+          {
+            "nme": "computeOnServer",
+            "acc": 1025,
+            "dsc": "(Lorg/apache/commons/lang3/function/FailableFunction;)Ljava/lang/Object;",
+            "sig": "<T:Ljava/lang/Object;E:Ljava/lang/Throwable;>(Lorg/apache/commons/lang3/function/FailableFunction<Lnet/minecraft/server/MinecraftServer;TT;TE;>;)TT;^TE;",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/gametest/ScreenAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/client/gametest/ScreenAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getDrawables",
+            "acc": 1025,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lnet/minecraft/client/gui/Drawable;>;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/gui/screen/Screen"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/gametest/FabricClientGameTestRunner.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/client/gametest/FabricClientGameTestRunner",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "start",
+            "acc": 9,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setupInitialGameTestState",
+            "acc": 10,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/gametest/v1/ClientGameTestContext;)V"
+          },
+          {
+            "nme": "setupAndCheckFinalGameTestState",
+            "acc": 10,
+            "dsc": "(Lnet/fabricmc/fabric/impl/client/gametest/ClientGameTestContextImpl;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "lambda$setupAndCheckFinalGameTestState$4",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;Lnet/minecraft/client/MinecraftClient;)V",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          },
+          {
+            "nme": "lambda$setupAndCheckFinalGameTestState$3",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;)Ljava/lang/Integer;",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          },
+          {
+            "nme": "lambda$setupAndCheckFinalGameTestState$2",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;)Ljava/lang/Integer;",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          },
+          {
+            "nme": "lambda$setupAndCheckFinalGameTestState$1",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;)V",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          },
+          {
+            "nme": "lambda$start$0",
+            "acc": 4106,
+            "dsc": "(Ljava/util/List;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "ENTRYPOINT_KEY",
+            "dsc": "Ljava/lang/String;",
+            "val": "fabric-client-gametest"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/gametest/KeyboardAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/client/gametest/KeyboardAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "invokeOnChar",
+            "acc": 1025,
+            "dsc": "(JII)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Invoker;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/Keyboard"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/gametest/MinecraftClientMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/client/gametest/MinecraftClientMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "onRun",
+            "acc": 2,
+            "dsc": "(Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation;)V",
+            "sig": "(Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation<Ljava/lang/Void;>;)V",
+            "exs": [
+              "java/lang/Throwable"
+            ],
+            "vanns": [
+              {
+                "dsc": "Lcom/llamalad7/mixinextras/injector/wrapmethod/WrapMethod;",
+                "vals": [
+                  "method",
+                  [
+                    "run"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "deregisterAfterCrash",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "cleanUpAfterCrash"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "onTick",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "tick"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "preRunTasks",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "render"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/client/MinecraftClient;runTasks()V"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "postRunTasks",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "render"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/client/MinecraftClient;runTasks()V",
+                        "shift",
+                        [
+                          "Lorg/spongepowered/asm/mixin/injection/At$Shift;",
+                          "AFTER"
+                        ]
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "deferStartIntegratedServer",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/world/level/storage/LevelStorage$Session;Lnet/minecraft/resource/ResourcePackManager;Lnet/minecraft/server/SaveLoader;ZLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "startIntegratedServer"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "onStartIntegratedServerBusyWait",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "startIntegratedServer"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Ljava/lang/Thread;sleep(J)V",
+                        "remap",
+                        false
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "deferDisconnect",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;ZLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "disconnect(Lnet/minecraft/client/gui/screen/Screen;Z)V"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "onDisconnectBusyWait",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "disconnect(Lnet/minecraft/client/gui/screen/Screen;Z)V"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/client/MinecraftClient;render(Z)V",
+                        "shift",
+                        [
+                          "Lorg/spongepowered/asm/mixin/injection/At$Shift;",
+                          "AFTER"
+                        ]
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "checkThreadOnGetInstance",
+            "acc": 10,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Lnet/minecraft/client/MinecraftClient;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "getInstance"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "hasZeroRealWidthOrHeight",
+            "acc": 2,
+            "dsc": "(Z)Z",
+            "vanns": [
+              {
+                "dsc": "Lcom/llamalad7/mixinextras/injector/ModifyExpressionValue;",
+                "vals": [
+                  "method",
+                  [
+                    "render"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/client/util/Window;hasZeroWidthOrHeight()Z"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "deregisterClient",
+            "acc": 10,
+            "dsc": "()V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Unique;"
+              }
+            ]
+          },
+          {
+            "nme": "lambda$deferDisconnect$1",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;Z)V"
+          },
+          {
+            "nme": "lambda$deferStartIntegratedServer$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/world/level/storage/LevelStorage$Session;Lnet/minecraft/resource/ResourcePackManager;Lnet/minecraft/server/SaveLoader;Z)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "startedClientGametests",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "deferredTask",
+            "dsc": "Ljava/lang/Runnable;"
+          },
+          {
+            "acc": 2,
+            "nme": "field_18175",
+            "dsc": "Lnet/minecraft/client/gui/screen/Overlay;"
+          },
+          {
+            "acc": 2,
+            "nme": "field_1704",
+            "dsc": "Lnet/minecraft/client/util/Window;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/MinecraftClient"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/gametest/v1/TestScreenshotOptions.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/gametest/v1/TestScreenshotOptions",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "of",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lnet/fabricmc/fabric/api/client/gametest/v1/TestScreenshotOptions;"
+          },
+          {
+            "nme": "disableCounterPrefix",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/client/gametest/v1/TestScreenshotOptions;"
+          },
+          {
+            "nme": "withTickDelta",
+            "acc": 1025,
+            "dsc": "(F)Lnet/fabricmc/fabric/api/client/gametest/v1/TestScreenshotOptions;"
+          },
+          {
+            "nme": "withSize",
+            "acc": 1025,
+            "dsc": "(II)Lnet/fabricmc/fabric/api/client/gametest/v1/TestScreenshotOptions;"
+          },
+          {
+            "nme": "withDestinationDir",
+            "acc": 1025,
+            "dsc": "(Ljava/nio/file/Path;)Lnet/fabricmc/fabric/api/client/gametest/v1/TestScreenshotOptions;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/gametest/v1/TestWorldSave.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/gametest/v1/TestWorldSave",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getSaveDirectory",
+            "acc": 1025,
+            "dsc": "()Ljava/nio/file/Path;"
+          },
+          {
+            "nme": "open",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/client/gametest/v1/TestSingleplayerContext;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/gametest/TestServerConnectionImpl.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/client/gametest/TestServerConnectionImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/gametest/v1/ClientGameTestContext;Lnet/fabricmc/fabric/api/client/gametest/v1/TestClientWorldContext;)V"
+          },
+          {
+            "nme": "getClientWorld",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/client/gametest/v1/TestClientWorldContext;"
+          },
+          {
+            "nme": "close",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lambda$close$1",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;)Z"
+          },
+          {
+            "nme": "lambda$close$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;)V",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "context",
+            "dsc": "Lnet/fabricmc/fabric/api/client/gametest/v1/ClientGameTestContext;"
+          },
+          {
+            "acc": 18,
+            "nme": "clientWorld",
+            "dsc": "Lnet/fabricmc/fabric/api/client/gametest/v1/TestClientWorldContext;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/gametest/KeyBindingAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/client/gametest/KeyBindingAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getBoundKey",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/client/util/InputUtil$Key;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/option/KeyBinding"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/gametest/ClientWorldAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/client/gametest/ClientWorldAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getChunkUpdaters",
+            "acc": 1025,
+            "dsc": "()Ljava/util/Deque;",
+            "sig": "()Ljava/util/Deque<Ljava/lang/Runnable;>;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/world/ClientWorld"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/gametest/TestWorldSaveImpl.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/client/gametest/TestWorldSaveImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/gametest/v1/ClientGameTestContext;Ljava/nio/file/Path;)V"
+          },
+          {
+            "nme": "getSaveDirectory",
+            "acc": 1,
+            "dsc": "()Ljava/nio/file/Path;"
+          },
+          {
+            "nme": "open",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/client/gametest/v1/TestSingleplayerContext;"
+          },
+          {
+            "nme": "lambda$open$1",
+            "acc": 4098,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;)V",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          },
+          {
+            "nme": "lambda$open$0",
+            "acc": 4106,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "context",
+            "dsc": "Lnet/fabricmc/fabric/api/client/gametest/v1/ClientGameTestContext;"
+          },
+          {
+            "acc": 18,
+            "nme": "saveDirectory",
+            "dsc": "Ljava/nio/file/Path;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/gametest/WindowMixin.class": {
+        "ver": 65,
+        "acc": 1057,
+        "nme": "net/fabricmc/fabric/mixin/client/gametest/WindowMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "method_4479",
+            "acc": 1028,
+            "dsc": "()V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Shadow;"
+              }
+            ]
+          },
+          {
+            "nme": "onInit",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/client/WindowEventHandler;Lnet/minecraft/client/util/MonitorTracker;Lnet/minecraft/client/WindowSettings;Ljava/lang/String;Ljava/lang/String;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "<init>"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "cancelEvents",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "onWindowFocusChanged",
+                    "onCursorEnterChanged",
+                    "onMinimizeChanged"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "cancelWindowSizeChanged",
+            "acc": 2,
+            "dsc": "(JIILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "onWindowSizeChanged"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "cancelFramebufferSizeChanged",
+            "acc": 2,
+            "dsc": "(JIILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "onFramebufferSizeChanged"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "wrapUpdateWindowRegion",
+            "acc": 2,
+            "dsc": "(Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation;)V",
+            "sig": "(Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation<Ljava/lang/Void;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lcom/llamalad7/mixinextras/injector/wrapmethod/WrapMethod;",
+                "vals": [
+                  "method",
+                  [
+                    "updateWindowRegion"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "setWindowedSize",
+            "acc": 2,
+            "dsc": "(IILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "setWindowedSize"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "fabric_getRealWidth",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "fabric_getRealHeight",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "fabric_getRealFramebufferWidth",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "fabric_getRealFramebufferHeight",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "fabric_resetSize",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "fabric_resize",
+            "acc": 1,
+            "dsc": "(II)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "field_5183",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "field_5198",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "field_5175",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "field_5185",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "field_5182",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "field_5197",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "field_5174",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "field_5184",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "field_5181",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "field_5196",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "field_5191",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "field_5176",
+            "dsc": "Lnet/minecraft/client/WindowEventHandler;"
+          },
+          {
+            "acc": 2,
+            "nme": "field_5195",
+            "dsc": "Lnet/minecraft/client/util/MonitorTracker;"
+          },
+          {
+            "acc": 2,
+            "nme": "field_5193",
+            "dsc": "Ljava/util/Optional;",
+            "sig": "Ljava/util/Optional<Lnet/minecraft/client/util/VideoMode;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "defaultWidth",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "defaultHeight",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "realWidth",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "realHeight",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "realFramebufferWidth",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "realFramebufferHeight",
+            "dsc": "I"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/util/Window"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/gametest/TestWorldBuilderImpl.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/client/gametest/TestWorldBuilderImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/gametest/v1/ClientGameTestContext;)V"
+          },
+          {
+            "nme": "setUseConsistentSettings",
+            "acc": 1,
+            "dsc": "(Z)Lnet/fabricmc/fabric/api/client/gametest/v1/TestWorldBuilder;"
+          },
+          {
+            "nme": "adjustSettings",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/Consumer;)Lnet/fabricmc/fabric/api/client/gametest/v1/TestWorldBuilder;",
+            "sig": "(Ljava/util/function/Consumer<Lnet/minecraft/client/gui/screen/world/WorldCreator;>;)Lnet/fabricmc/fabric/api/client/gametest/v1/TestWorldBuilder;"
+          },
+          {
+            "nme": "create",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/client/gametest/v1/TestSingleplayerContext;"
+          },
+          {
+            "nme": "createServer",
+            "acc": 1,
+            "dsc": "(Ljava/util/Properties;)Lnet/fabricmc/fabric/api/client/gametest/v1/TestDedicatedServerContext;"
+          },
+          {
+            "nme": "navigateCreateWorldScreen",
+            "acc": 2,
+            "dsc": "()Ljava/nio/file/Path;"
+          },
+          {
+            "nme": "setConsistentSettings",
+            "acc": 10,
+            "dsc": "(Lnet/minecraft/client/gui/screen/world/WorldCreator;)V"
+          },
+          {
+            "nme": "lambda$navigateCreateWorldScreen$1",
+            "acc": 4098,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;)Ljava/nio/file/Path;",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          },
+          {
+            "nme": "lambda$new$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/client/gui/screen/world/WorldCreator;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 18,
+            "nme": "context",
+            "dsc": "Lnet/fabricmc/fabric/api/client/gametest/v1/ClientGameTestContext;"
+          },
+          {
+            "acc": 2,
+            "nme": "useConsistentSettings",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "settingsAdjustor",
+            "dsc": "Ljava/util/function/Consumer;",
+            "sig": "Ljava/util/function/Consumer<Lnet/minecraft/client/gui/screen/world/WorldCreator;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/gametest/v1/TestClientWorldContext.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/gametest/v1/TestClientWorldContext",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "waitForChunksDownload",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "waitForChunksDownload",
+            "acc": 1025,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "waitForChunksRender",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "waitForChunksRender",
+            "acc": 1,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "waitForChunksRender",
+            "acc": 1,
+            "dsc": "(Z)I"
+          },
+          {
+            "nme": "waitForChunksRender",
+            "acc": 1025,
+            "dsc": "(ZI)I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "DEFAULT_CHUNK_LOAD_TIMEOUT",
+            "dsc": "I",
+            "val": 1200
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/gametest/WindowHooks.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/impl/client/gametest/WindowHooks",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "fabric_getRealWidth",
+            "acc": 1025,
+            "dsc": "()I"
+          },
+          {
+            "nme": "fabric_getRealHeight",
+            "acc": 1025,
+            "dsc": "()I"
+          },
+          {
+            "nme": "fabric_getRealFramebufferWidth",
+            "acc": 1025,
+            "dsc": "()I"
+          },
+          {
+            "nme": "fabric_getRealFramebufferHeight",
+            "acc": 1025,
+            "dsc": "()I"
+          },
+          {
+            "nme": "fabric_resetSize",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "fabric_resize",
+            "acc": 1025,
+            "dsc": "(II)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/gametest/ClientGameTestContextImpl.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/client/gametest/ClientGameTestContextImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "initGameOptions",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/client/option/GameOptions;)V"
+          },
+          {
+            "nme": "waitTick",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "waitTicks",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "waitFor",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/Predicate;)I",
+            "sig": "(Ljava/util/function/Predicate<Lnet/minecraft/client/MinecraftClient;>;)I"
+          },
+          {
+            "nme": "waitFor",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/Predicate;I)I",
+            "sig": "(Ljava/util/function/Predicate<Lnet/minecraft/client/MinecraftClient;>;I)I"
+          },
+          {
+            "nme": "waitForScreen",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Class;)I",
+            "sig": "(Ljava/lang/Class<+Lnet/minecraft/client/gui/screen/Screen;>;)I"
+          },
+          {
+            "nme": "setScreen",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/Supplier;)V",
+            "sig": "(Ljava/util/function/Supplier<Lnet/minecraft/client/gui/screen/Screen;>;)V"
+          },
+          {
+            "nme": "clickScreenButton",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "tryClickScreenButton",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "tryClickScreenButtonImpl",
+            "acc": 10,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "pressMatchingButton",
+            "acc": 10,
+            "dsc": "(Lnet/minecraft/client/gui/widget/ClickableWidget;Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "takeScreenshot",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Ljava/nio/file/Path;"
+          },
+          {
+            "nme": "takeScreenshot",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/gametest/v1/TestScreenshotOptions;)Ljava/nio/file/Path;"
+          },
+          {
+            "nme": "getInput",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/impl/client/gametest/TestInputImpl;"
+          },
+          {
+            "nme": "worldBuilder",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/client/gametest/v1/TestWorldBuilder;"
+          },
+          {
+            "nme": "restoreDefaultGameOptions",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "runOnClient",
+            "acc": 1,
+            "dsc": "(Lorg/apache/commons/lang3/function/FailableConsumer;)V",
+            "sig": "<E:Ljava/lang/Throwable;>(Lorg/apache/commons/lang3/function/FailableConsumer<Lnet/minecraft/client/MinecraftClient;TE;>;)V^TE;",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          },
+          {
+            "nme": "computeOnClient",
+            "acc": 1,
+            "dsc": "(Lorg/apache/commons/lang3/function/FailableFunction;)Ljava/lang/Object;",
+            "sig": "<T:Ljava/lang/Object;E:Ljava/lang/Throwable;>(Lorg/apache/commons/lang3/function/FailableFunction<Lnet/minecraft/client/MinecraftClient;TT;TE;>;)TT;^TE;",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          },
+          {
+            "nme": "getInput",
+            "acc": 4161,
+            "dsc": "()Lnet/fabricmc/fabric/api/client/gametest/v1/TestInput;"
+          },
+          {
+            "nme": "lambda$computeOnClient$11",
+            "acc": 4106,
+            "dsc": "(Lorg/apache/commons/lang3/mutable/MutableObject;Lorg/apache/commons/lang3/function/FailableFunction;)V",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          },
+          {
+            "nme": "lambda$runOnClient$10",
+            "acc": 4106,
+            "dsc": "(Lorg/apache/commons/lang3/function/FailableConsumer;)V",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          },
+          {
+            "nme": "lambda$restoreDefaultGameOptions$9",
+            "acc": 4098,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;)V",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          },
+          {
+            "nme": "lambda$takeScreenshot$8",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/impl/client/gametest/TestScreenshotOptionsImpl;Lnet/minecraft/client/MinecraftClient;)Ljava/nio/file/Path;",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          },
+          {
+            "nme": "lambda$takeScreenshot$7",
+            "acc": 4106,
+            "dsc": "()Ljava/nio/file/Path;"
+          },
+          {
+            "nme": "lambda$tryClickScreenButtonImpl$6",
+            "acc": 4106,
+            "dsc": "(Lorg/apache/commons/lang3/mutable/MutableBoolean;Ljava/lang/String;Lnet/minecraft/client/gui/widget/ClickableWidget;)V"
+          },
+          {
+            "nme": "lambda$tryClickScreenButton$5",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;Lnet/minecraft/client/MinecraftClient;)Ljava/lang/Boolean;",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          },
+          {
+            "nme": "lambda$clickScreenButton$4",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;Lnet/minecraft/client/MinecraftClient;)V",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          },
+          {
+            "nme": "lambda$clickScreenButton$3",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;)Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$setScreen$2",
+            "acc": 4106,
+            "dsc": "(Ljava/util/function/Supplier;Lnet/minecraft/client/MinecraftClient;)V",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          },
+          {
+            "nme": "lambda$waitForScreen$1",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Class;Lnet/minecraft/client/MinecraftClient;)Z"
+          },
+          {
+            "nme": "lambda$waitForScreen$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "input",
+            "dsc": "Lnet/fabricmc/fabric/impl/client/gametest/TestInputImpl;"
+          },
+          {
+            "acc": 26,
+            "nme": "DEFAULT_GAME_OPTIONS",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/gametest/CreateWorldScreenMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/client/gametest/CreateWorldScreenMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "createLevelDataForServers",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;Lnet/minecraft/registry/CombinedDynamicRegistries;Lnet/minecraft/world/level/LevelProperties;)V",
+            "sig": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;Lnet/minecraft/registry/CombinedDynamicRegistries<Lnet/minecraft/registry/ServerDynamicRegistryType;>;Lnet/minecraft/world/level/LevelProperties;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "createLevel"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/server/integrated/IntegratedServerLoader;tryLoad(Lnet/minecraft/client/MinecraftClient;Lnet/minecraft/client/gui/screen/world/CreateWorldScreen;Lcom/mojang/serialization/Lifecycle;Ljava/lang/Runnable;Z)V"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/gui/screen/world/CreateWorldScreen"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/gametest/ClientGameTestContextImpl$2.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "net/fabricmc/fabric/impl/client/gametest/ClientGameTestContextImpl$2",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lnet/fabricmc/fabric/impl/client/gametest/ClientGameTestContextImpl;)V"
+          },
+          {
+            "nme": "visitInt",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;I)I"
+          },
+          {
+            "nme": "visitBoolean",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Z)Z"
+          },
+          {
+            "nme": "visitString",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "visitFloat",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;F)F"
+          },
+          {
+            "nme": "visitObject",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;Ljava/util/function/Function;Ljava/util/function/Function;)Ljava/lang/Object;",
+            "sig": "<T:Ljava/lang/Object;>(Ljava/lang/String;TT;Ljava/util/function/Function<Ljava/lang/String;TT;>;Ljava/util/function/Function<TT;Ljava/lang/String;>;)TT;"
+          },
+          {
+            "nme": "accept",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Lnet/minecraft/client/option/SimpleOption;)V",
+            "sig": "<T:Ljava/lang/Object;>(Ljava/lang/String;Lnet/minecraft/client/option/SimpleOption<TT;>;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/gametest/ClientChunkManagerAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/client/gametest/ClientChunkManagerAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getChunks",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/client/world/ClientChunkManager$ClientChunkMap;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/world/ClientChunkManager"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/gametest/MonitorTrackerMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/client/gametest/MonitorTrackerMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getRealWidth",
+            "acc": 2,
+            "dsc": "(ILnet/minecraft/client/util/Window;)I",
+            "vanns": [
+              {
+                "dsc": "Lcom/llamalad7/mixinextras/injector/ModifyExpressionValue;",
+                "vals": [
+                  "method",
+                  [
+                    "getMonitor(Lnet/minecraft/client/util/Window;)Lnet/minecraft/client/util/Monitor;"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/client/util/Window;getWidth()I"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "getRealHeight",
+            "acc": 2,
+            "dsc": "(ILnet/minecraft/client/util/Window;)I",
+            "vanns": [
+              {
+                "dsc": "Lcom/llamalad7/mixinextras/injector/ModifyExpressionValue;",
+                "vals": [
+                  "method",
+                  [
+                    "getMonitor(Lnet/minecraft/client/util/Window;)Lnet/minecraft/client/util/Monitor;"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/client/util/Window;getHeight()I"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/util/MonitorTracker"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/gametest/TestScreenshotOptionsImpl.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/client/gametest/TestScreenshotOptionsImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "disableCounterPrefix",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/client/gametest/v1/TestScreenshotOptions;"
+          },
+          {
+            "nme": "withTickDelta",
+            "acc": 1,
+            "dsc": "(F)Lnet/fabricmc/fabric/api/client/gametest/v1/TestScreenshotOptions;"
+          },
+          {
+            "nme": "withSize",
+            "acc": 1,
+            "dsc": "(II)Lnet/fabricmc/fabric/api/client/gametest/v1/TestScreenshotOptions;"
+          },
+          {
+            "nme": "withDestinationDir",
+            "acc": 1,
+            "dsc": "(Ljava/nio/file/Path;)Lnet/fabricmc/fabric/api/client/gametest/v1/TestScreenshotOptions;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 17,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "counterPrefix",
+            "dsc": "Z"
+          },
+          {
+            "acc": 1,
+            "nme": "tickDelta",
+            "dsc": "F"
+          },
+          {
+            "acc": 1,
+            "nme": "size",
+            "dsc": "Lorg/joml/Vector2i;"
+          },
+          {
+            "acc": 1,
+            "nme": "destinationDir",
+            "dsc": "Ljava/nio/file/Path;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/gametest/v1/TestSingleplayerContext.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/gametest/v1/TestSingleplayerContext",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getWorldSave",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/client/gametest/v1/TestWorldSave;"
+          },
+          {
+            "nme": "getClientWorld",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/client/gametest/v1/TestClientWorldContext;"
+          },
+          {
+            "nme": "getServer",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/client/gametest/v1/TestServerContext;"
+          },
+          {
+            "nme": "close",
+            "acc": 1025,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/gametest/ServerMainMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/client/gametest/ServerMainMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "dontStartAnotherTimerHack",
+            "acc": 10,
+            "dsc": "()Z",
+            "vanns": [
+              {
+                "dsc": "Lcom/llamalad7/mixinextras/injector/v2/WrapWithCondition;",
+                "vals": [
+                  "method",
+                  [
+                    "main"
+                  ],
+                  "remap",
+                  false,
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/util/Util;startTimerHack()V",
+                        "remap",
+                        true
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/server/Main"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/gametest/GameOptionsMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/client/gametest/GameOptionsMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "onCreateGameOptions",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "<init>"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/option/GameOptions"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/gametest/GameOptionsAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/client/gametest/GameOptionsAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "invokeAccept",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/option/GameOptions$Visitor;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Invoker;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/option/GameOptions"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/gametest/TestServerContextImpl.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/client/gametest/TestServerContextImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/server/MinecraftServer;)V"
+          },
+          {
+            "nme": "runCommand",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "runOnServer",
+            "acc": 1,
+            "dsc": "(Lorg/apache/commons/lang3/function/FailableConsumer;)V",
+            "sig": "<E:Ljava/lang/Throwable;>(Lorg/apache/commons/lang3/function/FailableConsumer<Lnet/minecraft/server/MinecraftServer;TE;>;)V^TE;",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          },
+          {
+            "nme": "computeOnServer",
+            "acc": 1,
+            "dsc": "(Lorg/apache/commons/lang3/function/FailableFunction;)Ljava/lang/Object;",
+            "sig": "<T:Ljava/lang/Object;E:Ljava/lang/Throwable;>(Lorg/apache/commons/lang3/function/FailableFunction<Lnet/minecraft/server/MinecraftServer;TT;TE;>;)TT;^TE;",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          },
+          {
+            "nme": "lambda$computeOnServer$2",
+            "acc": 4098,
+            "dsc": "(Lorg/apache/commons/lang3/mutable/MutableObject;Lorg/apache/commons/lang3/function/FailableFunction;)V",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          },
+          {
+            "nme": "lambda$runOnServer$1",
+            "acc": 4098,
+            "dsc": "(Lorg/apache/commons/lang3/function/FailableConsumer;)V",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          },
+          {
+            "nme": "lambda$runCommand$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;Lnet/minecraft/server/MinecraftServer;)V",
+            "exs": [
+              "java/lang/RuntimeException"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 20,
+            "nme": "server",
+            "dsc": "Lnet/minecraft/server/MinecraftServer;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/gametest/TestClientWorldContextImpl.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/client/gametest/TestClientWorldContextImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/gametest/v1/ClientGameTestContext;)V"
+          },
+          {
+            "nme": "waitForChunksDownload",
+            "acc": 1,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "waitForChunksRender",
+            "acc": 1,
+            "dsc": "(ZI)I"
+          },
+          {
+            "nme": "areChunksLoaded",
+            "acc": 10,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;)Z"
+          },
+          {
+            "nme": "areChunksRendered",
+            "acc": 10,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;)Z"
+          },
+          {
+            "nme": "lambda$waitForChunksRender$0",
+            "acc": 4106,
+            "dsc": "(ZLnet/minecraft/client/MinecraftClient;)Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "context",
+            "dsc": "Lnet/fabricmc/fabric/api/client/gametest/v1/ClientGameTestContext;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

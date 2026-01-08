@@ -1,0 +1,4960 @@
+{
+  "md5": "c8de8f5d740584cb24b5652cfba8b3c4",
+  "sha2": "0172931663a09a1fa515567af5fbef00897d3c04",
+  "sha256": "a12578dde1ba00bd9b816d388a0b879928d00bab3c83c240f7013bf4196c579a",
+  "contents": {
+    "classes": {
+      "org/slf4j/helpers/SubstituteLogger.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/slf4j/helpers/SubstituteLogger",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/util/Queue;Z)V",
+            "sig": "(Ljava/lang/String;Ljava/util/Queue<Lorg/slf4j/event/SubstituteLoggingEvent;>;Z)V"
+          },
+          {
+            "nme": "getName",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "makeLoggingEventBuilder",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/event/Level;)Lorg/slf4j/spi/LoggingEventBuilder;"
+          },
+          {
+            "nme": "atLevel",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/event/Level;)Lorg/slf4j/spi/LoggingEventBuilder;"
+          },
+          {
+            "nme": "isEnabledForLevel",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/event/Level;)Z"
+          },
+          {
+            "nme": "isTraceEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 129,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isTraceEnabled",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;)Z"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 129,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "atTrace",
+            "acc": 1,
+            "dsc": "()Lorg/slf4j/spi/LoggingEventBuilder;"
+          },
+          {
+            "nme": "isDebugEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 129,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isDebugEnabled",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;)Z"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 129,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "atDebug",
+            "acc": 1,
+            "dsc": "()Lorg/slf4j/spi/LoggingEventBuilder;"
+          },
+          {
+            "nme": "isInfoEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 129,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isInfoEnabled",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;)Z"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 129,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "atInfo",
+            "acc": 1,
+            "dsc": "()Lorg/slf4j/spi/LoggingEventBuilder;"
+          },
+          {
+            "nme": "isWarnEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 129,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isWarnEnabled",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;)Z"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 129,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "atWarn",
+            "acc": 1,
+            "dsc": "()Lorg/slf4j/spi/LoggingEventBuilder;"
+          },
+          {
+            "nme": "isErrorEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 129,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isErrorEnabled",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;)Z"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 129,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "atError",
+            "acc": 1,
+            "dsc": "()Lorg/slf4j/spi/LoggingEventBuilder;"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "delegate",
+            "acc": 1,
+            "dsc": "()Lorg/slf4j/Logger;"
+          },
+          {
+            "nme": "getEventRecordingLogger",
+            "acc": 2,
+            "dsc": "()Lorg/slf4j/Logger;"
+          },
+          {
+            "nme": "setDelegate",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Logger;)V"
+          },
+          {
+            "nme": "isDelegateEventAware",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "log",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/event/LoggingEvent;)V"
+          },
+          {
+            "nme": "isDelegateNull",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isDelegateNOP",
+            "acc": 1,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 66,
+            "nme": "_delegate",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 2,
+            "nme": "delegateEventAware",
+            "dsc": "Ljava/lang/Boolean;"
+          },
+          {
+            "acc": 2,
+            "nme": "logMethodCache",
+            "dsc": "Ljava/lang/reflect/Method;"
+          },
+          {
+            "acc": 2,
+            "nme": "eventRecordingLogger",
+            "dsc": "Lorg/slf4j/event/EventRecordingLogger;"
+          },
+          {
+            "acc": 18,
+            "nme": "eventQueue",
+            "dsc": "Ljava/util/Queue;",
+            "sig": "Ljava/util/Queue<Lorg/slf4j/event/SubstituteLoggingEvent;>;"
+          },
+          {
+            "acc": 17,
+            "nme": "createdPostInitialization",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "org/slf4j/helpers/Reporter.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/slf4j/helpers/Reporter",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getTargetChoice",
+            "acc": 10,
+            "dsc": "()Lorg/slf4j/helpers/Reporter$TargetChoice;"
+          },
+          {
+            "nme": "initVerbosity",
+            "acc": 10,
+            "dsc": "()Lorg/slf4j/helpers/Reporter$Level;"
+          },
+          {
+            "nme": "isEnabledFor",
+            "acc": 8,
+            "dsc": "(Lorg/slf4j/helpers/Reporter$Level;)Z"
+          },
+          {
+            "nme": "getTarget",
+            "acc": 10,
+            "dsc": "()Ljava/io/PrintStream;"
+          },
+          {
+            "nme": "debug",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 25,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 25,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 25,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 24,
+            "nme": "SLF4J_DEBUG_PREFIX",
+            "dsc": "Ljava/lang/String;",
+            "val": "SLF4J(D): "
+          },
+          {
+            "acc": 24,
+            "nme": "SLF4J_INFO_PREFIX",
+            "dsc": "Ljava/lang/String;",
+            "val": "SLF4J(I): "
+          },
+          {
+            "acc": 24,
+            "nme": "SLF4J_WARN_PREFIX",
+            "dsc": "Ljava/lang/String;",
+            "val": "SLF4J(W): "
+          },
+          {
+            "acc": 24,
+            "nme": "SLF4J_ERROR_PREFIX",
+            "dsc": "Ljava/lang/String;",
+            "val": "SLF4J(E): "
+          },
+          {
+            "acc": 25,
+            "nme": "SLF4J_INTERNAL_REPORT_STREAM_KEY",
+            "dsc": "Ljava/lang/String;",
+            "val": "slf4j.internal.report.stream"
+          },
+          {
+            "acc": 26,
+            "nme": "SYSOUT_KEYS",
+            "dsc": "[Ljava/lang/String;"
+          },
+          {
+            "acc": 25,
+            "nme": "SLF4J_INTERNAL_VERBOSITY_KEY",
+            "dsc": "Ljava/lang/String;",
+            "val": "slf4j.internal.verbosity"
+          },
+          {
+            "acc": 26,
+            "nme": "TARGET_CHOICE",
+            "dsc": "Lorg/slf4j/helpers/Reporter$TargetChoice;"
+          },
+          {
+            "acc": 26,
+            "nme": "INTERNAL_VERBOSITY",
+            "dsc": "Lorg/slf4j/helpers/Reporter$Level;"
+          }
+        ]
+      },
+      "org/slf4j/helpers/NamedLoggerBase.class": {
+        "ver": 52,
+        "acc": 1056,
+        "nme": "org/slf4j/helpers/NamedLoggerBase",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getName",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "readResolve",
+            "acc": 4,
+            "dsc": "()Ljava/lang/Object;",
+            "exs": [
+              "java/io/ObjectStreamException"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": 7535258609338176893
+          },
+          {
+            "acc": 4,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "org/slf4j/helpers/NOP_FallbackServiceProvider.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/slf4j/helpers/NOP_FallbackServiceProvider",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getLoggerFactory",
+            "acc": 1,
+            "dsc": "()Lorg/slf4j/ILoggerFactory;"
+          },
+          {
+            "nme": "getMarkerFactory",
+            "acc": 1,
+            "dsc": "()Lorg/slf4j/IMarkerFactory;"
+          },
+          {
+            "nme": "getMDCAdapter",
+            "acc": 1,
+            "dsc": "()Lorg/slf4j/spi/MDCAdapter;"
+          },
+          {
+            "nme": "getRequestedApiVersion",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "initialize",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 9,
+            "nme": "REQUESTED_API_VERSION",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "loggerFactory",
+            "dsc": "Lorg/slf4j/ILoggerFactory;"
+          },
+          {
+            "acc": 18,
+            "nme": "markerFactory",
+            "dsc": "Lorg/slf4j/IMarkerFactory;"
+          },
+          {
+            "acc": 18,
+            "nme": "mdcAdapter",
+            "dsc": "Lorg/slf4j/spi/MDCAdapter;"
+          }
+        ]
+      },
+      "org/slf4j/spi/DefaultLoggingEventBuilder.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/slf4j/spi/DefaultLoggingEventBuilder",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Logger;Lorg/slf4j/event/Level;)V"
+          },
+          {
+            "nme": "addMarker",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;)Lorg/slf4j/spi/LoggingEventBuilder;"
+          },
+          {
+            "nme": "setCause",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Throwable;)Lorg/slf4j/spi/LoggingEventBuilder;"
+          },
+          {
+            "nme": "addArgument",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Lorg/slf4j/spi/LoggingEventBuilder;"
+          },
+          {
+            "nme": "addArgument",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/Supplier;)Lorg/slf4j/spi/LoggingEventBuilder;",
+            "sig": "(Ljava/util/function/Supplier<*>;)Lorg/slf4j/spi/LoggingEventBuilder;"
+          },
+          {
+            "nme": "addKeyValue",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)Lorg/slf4j/spi/LoggingEventBuilder;"
+          },
+          {
+            "nme": "addKeyValue",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/util/function/Supplier;)Lorg/slf4j/spi/LoggingEventBuilder;",
+            "sig": "(Ljava/lang/String;Ljava/util/function/Supplier<Ljava/lang/Object;>;)Lorg/slf4j/spi/LoggingEventBuilder;"
+          },
+          {
+            "nme": "setCallerBoundary",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "log",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setMessage",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Lorg/slf4j/spi/LoggingEventBuilder;"
+          },
+          {
+            "nme": "setMessage",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/Supplier;)Lorg/slf4j/spi/LoggingEventBuilder;",
+            "sig": "(Ljava/util/function/Supplier<Ljava/lang/String;>;)Lorg/slf4j/spi/LoggingEventBuilder;"
+          },
+          {
+            "nme": "log",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "log",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "log",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "log",
+            "acc": 129,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "log",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/Supplier;)V",
+            "sig": "(Ljava/util/function/Supplier<Ljava/lang/String;>;)V"
+          },
+          {
+            "nme": "log",
+            "acc": 4,
+            "dsc": "(Lorg/slf4j/event/LoggingEvent;)V"
+          },
+          {
+            "nme": "logViaLocationAwareLoggerAPI",
+            "acc": 2,
+            "dsc": "(Lorg/slf4j/spi/LocationAwareLogger;Lorg/slf4j/event/LoggingEvent;)V"
+          },
+          {
+            "nme": "logViaPublicSLF4JLoggerAPI",
+            "acc": 2,
+            "dsc": "(Lorg/slf4j/event/LoggingEvent;)V"
+          },
+          {
+            "nme": "mergeMarkersAndKeyValuePairsAndMessage",
+            "acc": 2,
+            "dsc": "(Lorg/slf4j/event/LoggingEvent;)Ljava/lang/String;"
+          },
+          {
+            "nme": "mergeMarkers",
+            "acc": 2,
+            "dsc": "(Ljava/util/List;Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;",
+            "sig": "(Ljava/util/List<Lorg/slf4j/Marker;>;Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;"
+          },
+          {
+            "nme": "mergeKeyValuePairs",
+            "acc": 2,
+            "dsc": "(Ljava/util/List;Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;",
+            "sig": "(Ljava/util/List<Lorg/slf4j/event/KeyValuePair;>;Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;"
+          },
+          {
+            "nme": "mergeMessage",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 8,
+            "nme": "DLEB_FQCN",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 4,
+            "nme": "loggingEvent",
+            "dsc": "Lorg/slf4j/event/DefaultLoggingEvent;"
+          },
+          {
+            "acc": 4,
+            "nme": "logger",
+            "dsc": "Lorg/slf4j/Logger;"
+          }
+        ]
+      },
+      "org/slf4j/spi/LoggingEventAware.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "org/slf4j/spi/LoggingEventAware",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "log",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/event/LoggingEvent;)V"
+          }
+        ],
+        "flds": []
+      },
+      "org/slf4j/helpers/Reporter$Level.class": {
+        "ver": 52,
+        "acc": 16432,
+        "nme": "org/slf4j/helpers/Reporter$Level",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lorg/slf4j/helpers/Reporter$Level;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lorg/slf4j/helpers/Reporter$Level;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;II)V",
+            "sig": "(I)V"
+          },
+          {
+            "nme": "getLevelInt",
+            "acc": 2,
+            "dsc": "()I"
+          },
+          {
+            "nme": "$values",
+            "acc": 4106,
+            "dsc": "()[Lorg/slf4j/helpers/Reporter$Level;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "DEBUG",
+            "dsc": "Lorg/slf4j/helpers/Reporter$Level;"
+          },
+          {
+            "acc": 16409,
+            "nme": "INFO",
+            "dsc": "Lorg/slf4j/helpers/Reporter$Level;"
+          },
+          {
+            "acc": 16409,
+            "nme": "WARN",
+            "dsc": "Lorg/slf4j/helpers/Reporter$Level;"
+          },
+          {
+            "acc": 16409,
+            "nme": "ERROR",
+            "dsc": "Lorg/slf4j/helpers/Reporter$Level;"
+          },
+          {
+            "acc": 0,
+            "nme": "levelInt",
+            "dsc": "I"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lorg/slf4j/helpers/Reporter$Level;"
+          }
+        ]
+      },
+      "org/slf4j/spi/LocationAwareLogger.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "org/slf4j/spi/LocationAwareLogger",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "log",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;ILjava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "TRACE_INT",
+            "dsc": "I",
+            "val": 0
+          },
+          {
+            "acc": 25,
+            "nme": "DEBUG_INT",
+            "dsc": "I",
+            "val": 10
+          },
+          {
+            "acc": 25,
+            "nme": "INFO_INT",
+            "dsc": "I",
+            "val": 20
+          },
+          {
+            "acc": 25,
+            "nme": "WARN_INT",
+            "dsc": "I",
+            "val": 30
+          },
+          {
+            "acc": 25,
+            "nme": "ERROR_INT",
+            "dsc": "I",
+            "val": 40
+          }
+        ]
+      },
+      "org/slf4j/helpers/MessageFormatter.class": {
+        "ver": 52,
+        "acc": 49,
+        "nme": "org/slf4j/helpers/MessageFormatter",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "format",
+            "acc": 25,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)Lorg/slf4j/helpers/FormattingTuple;"
+          },
+          {
+            "nme": "format",
+            "acc": 25,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)Lorg/slf4j/helpers/FormattingTuple;"
+          },
+          {
+            "nme": "arrayFormat",
+            "acc": 25,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;)Lorg/slf4j/helpers/FormattingTuple;"
+          },
+          {
+            "nme": "basicArrayFormat",
+            "acc": 25,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;"
+          },
+          {
+            "nme": "basicArrayFormat",
+            "acc": 9,
+            "dsc": "(Lorg/slf4j/helpers/NormalizedParameters;)Ljava/lang/String;"
+          },
+          {
+            "nme": "arrayFormat",
+            "acc": 25,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;)Lorg/slf4j/helpers/FormattingTuple;"
+          },
+          {
+            "nme": "isEscapedDelimeter",
+            "acc": 24,
+            "dsc": "(Ljava/lang/String;I)Z"
+          },
+          {
+            "nme": "isDoubleEscaped",
+            "acc": 24,
+            "dsc": "(Ljava/lang/String;I)Z"
+          },
+          {
+            "nme": "deeplyAppendParameter",
+            "acc": 10,
+            "dsc": "(Ljava/lang/StringBuilder;Ljava/lang/Object;Ljava/util/Map;)V",
+            "sig": "(Ljava/lang/StringBuilder;Ljava/lang/Object;Ljava/util/Map<[Ljava/lang/Object;Ljava/lang/Object;>;)V"
+          },
+          {
+            "nme": "safeObjectAppend",
+            "acc": 10,
+            "dsc": "(Ljava/lang/StringBuilder;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "objectArrayAppend",
+            "acc": 10,
+            "dsc": "(Ljava/lang/StringBuilder;[Ljava/lang/Object;Ljava/util/Map;)V",
+            "sig": "(Ljava/lang/StringBuilder;[Ljava/lang/Object;Ljava/util/Map<[Ljava/lang/Object;Ljava/lang/Object;>;)V"
+          },
+          {
+            "nme": "booleanArrayAppend",
+            "acc": 10,
+            "dsc": "(Ljava/lang/StringBuilder;[Z)V"
+          },
+          {
+            "nme": "byteArrayAppend",
+            "acc": 10,
+            "dsc": "(Ljava/lang/StringBuilder;[B)V"
+          },
+          {
+            "nme": "charArrayAppend",
+            "acc": 10,
+            "dsc": "(Ljava/lang/StringBuilder;[C)V"
+          },
+          {
+            "nme": "shortArrayAppend",
+            "acc": 10,
+            "dsc": "(Ljava/lang/StringBuilder;[S)V"
+          },
+          {
+            "nme": "intArrayAppend",
+            "acc": 10,
+            "dsc": "(Ljava/lang/StringBuilder;[I)V"
+          },
+          {
+            "nme": "longArrayAppend",
+            "acc": 10,
+            "dsc": "(Ljava/lang/StringBuilder;[J)V"
+          },
+          {
+            "nme": "floatArrayAppend",
+            "acc": 10,
+            "dsc": "(Ljava/lang/StringBuilder;[F)V"
+          },
+          {
+            "nme": "doubleArrayAppend",
+            "acc": 10,
+            "dsc": "(Ljava/lang/StringBuilder;[D)V"
+          },
+          {
+            "nme": "getThrowableCandidate",
+            "acc": 9,
+            "dsc": "([Ljava/lang/Object;)Ljava/lang/Throwable;"
+          },
+          {
+            "nme": "trimmedCopy",
+            "acc": 9,
+            "dsc": "([Ljava/lang/Object;)[Ljava/lang/Object;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 24,
+            "nme": "DELIM_START",
+            "dsc": "C",
+            "val": 123
+          },
+          {
+            "acc": 24,
+            "nme": "DELIM_STOP",
+            "dsc": "C",
+            "val": 125
+          },
+          {
+            "acc": 24,
+            "nme": "DELIM_STR",
+            "dsc": "Ljava/lang/String;",
+            "val": "{}"
+          },
+          {
+            "acc": 26,
+            "nme": "ESCAPE_CHAR",
+            "dsc": "C",
+            "val": 92
+          }
+        ]
+      },
+      "org/slf4j/helpers/Util$ClassContextSecurityManager.class": {
+        "ver": 52,
+        "acc": 48,
+        "nme": "org/slf4j/helpers/Util$ClassContextSecurityManager",
+        "super": "java/lang/SecurityManager",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getClassContext",
+            "acc": 4,
+            "dsc": "()[Ljava/lang/Class;",
+            "sig": "()[Ljava/lang/Class<*>;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4096,
+            "dsc": "(Lorg/slf4j/helpers/Util$1;)V"
+          }
+        ],
+        "flds": []
+      },
+      "org/slf4j/IMarkerFactory.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "org/slf4j/IMarkerFactory",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getMarker",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)Lorg/slf4j/Marker;"
+          },
+          {
+            "nme": "exists",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "detachMarker",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "getDetachedMarker",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)Lorg/slf4j/Marker;"
+          }
+        ],
+        "flds": []
+      },
+      "org/slf4j/MDC.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/slf4j/MDC",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "put",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V",
+            "exs": [
+              "java/lang/IllegalArgumentException"
+            ]
+          },
+          {
+            "nme": "putCloseable",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Lorg/slf4j/MDC$MDCCloseable;",
+            "exs": [
+              "java/lang/IllegalArgumentException"
+            ]
+          },
+          {
+            "nme": "get",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;",
+            "exs": [
+              "java/lang/IllegalArgumentException"
+            ]
+          },
+          {
+            "nme": "remove",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)V",
+            "exs": [
+              "java/lang/IllegalArgumentException"
+            ]
+          },
+          {
+            "nme": "clear",
+            "acc": 9,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getCopyOfContextMap",
+            "acc": 9,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+          },
+          {
+            "nme": "setContextMap",
+            "acc": 9,
+            "dsc": "(Ljava/util/Map;)V",
+            "sig": "(Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;)V"
+          },
+          {
+            "nme": "getMDCAdapter",
+            "acc": 9,
+            "dsc": "()Lorg/slf4j/spi/MDCAdapter;"
+          },
+          {
+            "nme": "pushByKey",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "popByKey",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "getCopyOfDequeByKey",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Ljava/util/Deque;",
+            "sig": "(Ljava/lang/String;)Ljava/util/Deque<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 24,
+            "nme": "NULL_MDCA_URL",
+            "dsc": "Ljava/lang/String;",
+            "val": "http://www.slf4j.org/codes.html#null_MDCA"
+          },
+          {
+            "acc": 26,
+            "nme": "MDC_APAPTER_CANNOT_BE_NULL_MESSAGE",
+            "dsc": "Ljava/lang/String;",
+            "val": "MDCAdapter cannot be null. See also http://www.slf4j.org/codes.html#null_MDCA"
+          },
+          {
+            "acc": 24,
+            "nme": "NO_STATIC_MDC_BINDER_URL",
+            "dsc": "Ljava/lang/String;",
+            "val": "http://www.slf4j.org/codes.html#no_static_mdc_binder"
+          },
+          {
+            "acc": 8,
+            "nme": "mdcAdapter",
+            "dsc": "Lorg/slf4j/spi/MDCAdapter;"
+          }
+        ]
+      },
+      "org/slf4j/event/LoggingEvent.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "org/slf4j/event/LoggingEvent",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getLevel",
+            "acc": 1025,
+            "dsc": "()Lorg/slf4j/event/Level;"
+          },
+          {
+            "nme": "getLoggerName",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getMessage",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getArguments",
+            "acc": 1025,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Ljava/lang/Object;>;"
+          },
+          {
+            "nme": "getArgumentArray",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/Object;"
+          },
+          {
+            "nme": "getMarkers",
+            "acc": 1025,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lorg/slf4j/Marker;>;"
+          },
+          {
+            "nme": "getKeyValuePairs",
+            "acc": 1025,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lorg/slf4j/event/KeyValuePair;>;"
+          },
+          {
+            "nme": "getThrowable",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/Throwable;"
+          },
+          {
+            "nme": "getTimeStamp",
+            "acc": 1025,
+            "dsc": "()J"
+          },
+          {
+            "nme": "getThreadName",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getCallerBoundary",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": []
+      },
+      "org/slf4j/spi/CallerBoundaryAware.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "org/slf4j/spi/CallerBoundaryAware",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "setCallerBoundary",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "org/slf4j/helpers/SubstituteLoggerFactory.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/slf4j/helpers/SubstituteLoggerFactory",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getLogger",
+            "acc": 33,
+            "dsc": "(Ljava/lang/String;)Lorg/slf4j/Logger;"
+          },
+          {
+            "nme": "getLoggerNames",
+            "acc": 1,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "getLoggers",
+            "acc": 1,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lorg/slf4j/helpers/SubstituteLogger;>;"
+          },
+          {
+            "nme": "getEventQueue",
+            "acc": 1,
+            "dsc": "()Ljava/util/concurrent/LinkedBlockingQueue;",
+            "sig": "()Ljava/util/concurrent/LinkedBlockingQueue<Lorg/slf4j/event/SubstituteLoggingEvent;>;"
+          },
+          {
+            "nme": "postInitialization",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "clear",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 64,
+            "nme": "postInitialization",
+            "dsc": "Z"
+          },
+          {
+            "acc": 16,
+            "nme": "loggers",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/String;Lorg/slf4j/helpers/SubstituteLogger;>;"
+          },
+          {
+            "acc": 16,
+            "nme": "eventQueue",
+            "dsc": "Ljava/util/concurrent/LinkedBlockingQueue;",
+            "sig": "Ljava/util/concurrent/LinkedBlockingQueue<Lorg/slf4j/event/SubstituteLoggingEvent;>;"
+          }
+        ]
+      },
+      "org/slf4j/spi/LoggingEventBuilder.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "org/slf4j/spi/LoggingEventBuilder",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "setCause",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Throwable;)Lorg/slf4j/spi/LoggingEventBuilder;",
+            "vanns": [
+              {
+                "dsc": "Lorg/slf4j/helpers/CheckReturnValue;"
+              }
+            ]
+          },
+          {
+            "nme": "addMarker",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;)Lorg/slf4j/spi/LoggingEventBuilder;",
+            "vanns": [
+              {
+                "dsc": "Lorg/slf4j/helpers/CheckReturnValue;"
+              }
+            ]
+          },
+          {
+            "nme": "addArgument",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)Lorg/slf4j/spi/LoggingEventBuilder;",
+            "vanns": [
+              {
+                "dsc": "Lorg/slf4j/helpers/CheckReturnValue;"
+              }
+            ]
+          },
+          {
+            "nme": "addArgument",
+            "acc": 1025,
+            "dsc": "(Ljava/util/function/Supplier;)Lorg/slf4j/spi/LoggingEventBuilder;",
+            "sig": "(Ljava/util/function/Supplier<*>;)Lorg/slf4j/spi/LoggingEventBuilder;",
+            "vanns": [
+              {
+                "dsc": "Lorg/slf4j/helpers/CheckReturnValue;"
+              }
+            ]
+          },
+          {
+            "nme": "addKeyValue",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)Lorg/slf4j/spi/LoggingEventBuilder;",
+            "vanns": [
+              {
+                "dsc": "Lorg/slf4j/helpers/CheckReturnValue;"
+              }
+            ]
+          },
+          {
+            "nme": "addKeyValue",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Ljava/util/function/Supplier;)Lorg/slf4j/spi/LoggingEventBuilder;",
+            "sig": "(Ljava/lang/String;Ljava/util/function/Supplier<Ljava/lang/Object;>;)Lorg/slf4j/spi/LoggingEventBuilder;",
+            "vanns": [
+              {
+                "dsc": "Lorg/slf4j/helpers/CheckReturnValue;"
+              }
+            ]
+          },
+          {
+            "nme": "setMessage",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)Lorg/slf4j/spi/LoggingEventBuilder;",
+            "vanns": [
+              {
+                "dsc": "Lorg/slf4j/helpers/CheckReturnValue;"
+              }
+            ]
+          },
+          {
+            "nme": "setMessage",
+            "acc": 1025,
+            "dsc": "(Ljava/util/function/Supplier;)Lorg/slf4j/spi/LoggingEventBuilder;",
+            "sig": "(Ljava/util/function/Supplier<Ljava/lang/String;>;)Lorg/slf4j/spi/LoggingEventBuilder;",
+            "vanns": [
+              {
+                "dsc": "Lorg/slf4j/helpers/CheckReturnValue;"
+              }
+            ]
+          },
+          {
+            "nme": "log",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "log",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "log",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "log",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "log",
+            "acc": 1153,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "log",
+            "acc": 1025,
+            "dsc": "(Ljava/util/function/Supplier;)V",
+            "sig": "(Ljava/util/function/Supplier<Ljava/lang/String;>;)V"
+          }
+        ],
+        "flds": []
+      },
+      "org/slf4j/helpers/FormattingTuple.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/slf4j/helpers/FormattingTuple",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "getMessage",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getArgArray",
+            "acc": 1,
+            "dsc": "()[Ljava/lang/Object;"
+          },
+          {
+            "nme": "getThrowable",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Throwable;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 9,
+            "nme": "NULL",
+            "dsc": "Lorg/slf4j/helpers/FormattingTuple;"
+          },
+          {
+            "acc": 18,
+            "nme": "message",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "throwable",
+            "dsc": "Ljava/lang/Throwable;"
+          },
+          {
+            "acc": 18,
+            "nme": "argArray",
+            "dsc": "[Ljava/lang/Object;"
+          }
+        ]
+      },
+      "org/slf4j/helpers/NormalizedParameters.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/slf4j/helpers/NormalizedParameters",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "getMessage",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getArguments",
+            "acc": 1,
+            "dsc": "()[Ljava/lang/Object;"
+          },
+          {
+            "nme": "getThrowable",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Throwable;"
+          },
+          {
+            "nme": "getThrowableCandidate",
+            "acc": 9,
+            "dsc": "([Ljava/lang/Object;)Ljava/lang/Throwable;"
+          },
+          {
+            "nme": "trimmedCopy",
+            "acc": 9,
+            "dsc": "([Ljava/lang/Object;)[Ljava/lang/Object;"
+          },
+          {
+            "nme": "normalize",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;)Lorg/slf4j/helpers/NormalizedParameters;"
+          },
+          {
+            "nme": "normalize",
+            "acc": 9,
+            "dsc": "(Lorg/slf4j/event/LoggingEvent;)Lorg/slf4j/helpers/NormalizedParameters;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16,
+            "nme": "message",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 16,
+            "nme": "arguments",
+            "dsc": "[Ljava/lang/Object;"
+          },
+          {
+            "acc": 16,
+            "nme": "throwable",
+            "dsc": "Ljava/lang/Throwable;"
+          }
+        ]
+      },
+      "org/slf4j/helpers/LegacyAbstractLogger.class": {
+        "ver": 52,
+        "acc": 1057,
+        "nme": "org/slf4j/helpers/LegacyAbstractLogger",
+        "super": "org/slf4j/helpers/AbstractLogger",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "isTraceEnabled",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;)Z"
+          },
+          {
+            "nme": "isDebugEnabled",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;)Z"
+          },
+          {
+            "nme": "isInfoEnabled",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;)Z"
+          },
+          {
+            "nme": "isWarnEnabled",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;)Z"
+          },
+          {
+            "nme": "isErrorEnabled",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;)Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": -7041884104854048950
+          }
+        ]
+      },
+      "org/slf4j/helpers/BasicMarkerFactory.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/slf4j/helpers/BasicMarkerFactory",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getMarker",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Lorg/slf4j/Marker;"
+          },
+          {
+            "nme": "exists",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "detachMarker",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "getDetachedMarker",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Lorg/slf4j/Marker;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "markerMap",
+            "dsc": "Ljava/util/concurrent/ConcurrentMap;",
+            "sig": "Ljava/util/concurrent/ConcurrentMap<Ljava/lang/String;Lorg/slf4j/Marker;>;"
+          }
+        ]
+      },
+      "org/slf4j/spi/MarkerFactoryBinder.class": {
+        "ver": 52,
+        "acc": 132609,
+        "nme": "org/slf4j/spi/MarkerFactoryBinder",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getMarkerFactory",
+            "acc": 1025,
+            "dsc": "()Lorg/slf4j/IMarkerFactory;"
+          },
+          {
+            "nme": "getMarkerFactoryClassStr",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": []
+      },
+      "org/slf4j/event/DefaultLoggingEvent.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/slf4j/event/DefaultLoggingEvent",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/event/Level;Lorg/slf4j/Logger;)V"
+          },
+          {
+            "nme": "addMarker",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;)V"
+          },
+          {
+            "nme": "getMarkers",
+            "acc": 1,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lorg/slf4j/Marker;>;"
+          },
+          {
+            "nme": "addArgument",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "addArguments",
+            "acc": 129,
+            "dsc": "([Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "getNonNullArguments",
+            "acc": 2,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Ljava/lang/Object;>;"
+          },
+          {
+            "nme": "getArguments",
+            "acc": 1,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Ljava/lang/Object;>;"
+          },
+          {
+            "nme": "getArgumentArray",
+            "acc": 1,
+            "dsc": "()[Ljava/lang/Object;"
+          },
+          {
+            "nme": "addKeyValue",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "getNonnullKeyValuePairs",
+            "acc": 2,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lorg/slf4j/event/KeyValuePair;>;"
+          },
+          {
+            "nme": "getKeyValuePairs",
+            "acc": 1,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lorg/slf4j/event/KeyValuePair;>;"
+          },
+          {
+            "nme": "setThrowable",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "getLevel",
+            "acc": 1,
+            "dsc": "()Lorg/slf4j/event/Level;"
+          },
+          {
+            "nme": "getLoggerName",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getMessage",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "setMessage",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "getThrowable",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Throwable;"
+          },
+          {
+            "nme": "getThreadName",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getTimeStamp",
+            "acc": 1,
+            "dsc": "()J"
+          },
+          {
+            "nme": "setTimeStamp",
+            "acc": 1,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "setCallerBoundary",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "getCallerBoundary",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "logger",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 0,
+            "nme": "level",
+            "dsc": "Lorg/slf4j/event/Level;"
+          },
+          {
+            "acc": 0,
+            "nme": "message",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 0,
+            "nme": "markers",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/slf4j/Marker;>;"
+          },
+          {
+            "acc": 0,
+            "nme": "arguments",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Ljava/lang/Object;>;"
+          },
+          {
+            "acc": 0,
+            "nme": "keyValuePairs",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/slf4j/event/KeyValuePair;>;"
+          },
+          {
+            "acc": 0,
+            "nme": "throwable",
+            "dsc": "Ljava/lang/Throwable;"
+          },
+          {
+            "acc": 0,
+            "nme": "threadName",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 0,
+            "nme": "timeStamp",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "callerBoundary",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "org/slf4j/spi/NOPLoggingEventBuilder.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/slf4j/spi/NOPLoggingEventBuilder",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "singleton",
+            "acc": 9,
+            "dsc": "()Lorg/slf4j/spi/LoggingEventBuilder;"
+          },
+          {
+            "nme": "addMarker",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;)Lorg/slf4j/spi/LoggingEventBuilder;"
+          },
+          {
+            "nme": "addArgument",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Lorg/slf4j/spi/LoggingEventBuilder;"
+          },
+          {
+            "nme": "addArgument",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/Supplier;)Lorg/slf4j/spi/LoggingEventBuilder;",
+            "sig": "(Ljava/util/function/Supplier<*>;)Lorg/slf4j/spi/LoggingEventBuilder;"
+          },
+          {
+            "nme": "addKeyValue",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)Lorg/slf4j/spi/LoggingEventBuilder;"
+          },
+          {
+            "nme": "addKeyValue",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/util/function/Supplier;)Lorg/slf4j/spi/LoggingEventBuilder;",
+            "sig": "(Ljava/lang/String;Ljava/util/function/Supplier<Ljava/lang/Object;>;)Lorg/slf4j/spi/LoggingEventBuilder;"
+          },
+          {
+            "nme": "setCause",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Throwable;)Lorg/slf4j/spi/LoggingEventBuilder;"
+          },
+          {
+            "nme": "log",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setMessage",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Lorg/slf4j/spi/LoggingEventBuilder;"
+          },
+          {
+            "nme": "setMessage",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/Supplier;)Lorg/slf4j/spi/LoggingEventBuilder;",
+            "sig": "(Ljava/util/function/Supplier<Ljava/lang/String;>;)Lorg/slf4j/spi/LoggingEventBuilder;"
+          },
+          {
+            "nme": "log",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "log",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/Supplier;)V",
+            "sig": "(Ljava/util/function/Supplier<Ljava/lang/String;>;)V"
+          },
+          {
+            "nme": "log",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "log",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "log",
+            "acc": 129,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 24,
+            "nme": "SINGLETON",
+            "dsc": "Lorg/slf4j/spi/NOPLoggingEventBuilder;"
+          }
+        ]
+      },
+      "org/slf4j/helpers/NOPMDCAdapter.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/slf4j/helpers/NOPMDCAdapter",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "clear",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "get",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "put",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "remove",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "getCopyOfContextMap",
+            "acc": 1,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+          },
+          {
+            "nme": "setContextMap",
+            "acc": 1,
+            "dsc": "(Ljava/util/Map;)V",
+            "sig": "(Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;)V"
+          },
+          {
+            "nme": "pushByKey",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "popByKey",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "getCopyOfDequeByKey",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Ljava/util/Deque;",
+            "sig": "(Ljava/lang/String;)Ljava/util/Deque<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "clearDequeByKey",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "org/slf4j/MarkerFactory.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/slf4j/MarkerFactory",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getMarker",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lorg/slf4j/Marker;"
+          },
+          {
+            "nme": "getDetachedMarker",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lorg/slf4j/Marker;"
+          },
+          {
+            "nme": "getIMarkerFactory",
+            "acc": 9,
+            "dsc": "()Lorg/slf4j/IMarkerFactory;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 8,
+            "nme": "MARKER_FACTORY",
+            "dsc": "Lorg/slf4j/IMarkerFactory;"
+          }
+        ]
+      },
+      "org/slf4j/helpers/SubstituteServiceProvider.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/slf4j/helpers/SubstituteServiceProvider",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getLoggerFactory",
+            "acc": 1,
+            "dsc": "()Lorg/slf4j/ILoggerFactory;"
+          },
+          {
+            "nme": "getSubstituteLoggerFactory",
+            "acc": 1,
+            "dsc": "()Lorg/slf4j/helpers/SubstituteLoggerFactory;"
+          },
+          {
+            "nme": "getMarkerFactory",
+            "acc": 1,
+            "dsc": "()Lorg/slf4j/IMarkerFactory;"
+          },
+          {
+            "nme": "getMDCAdapter",
+            "acc": 1,
+            "dsc": "()Lorg/slf4j/spi/MDCAdapter;"
+          },
+          {
+            "nme": "getRequestedApiVersion",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "initialize",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "loggerFactory",
+            "dsc": "Lorg/slf4j/helpers/SubstituteLoggerFactory;"
+          },
+          {
+            "acc": 18,
+            "nme": "markerFactory",
+            "dsc": "Lorg/slf4j/IMarkerFactory;"
+          },
+          {
+            "acc": 18,
+            "nme": "mdcAdapter",
+            "dsc": "Lorg/slf4j/spi/MDCAdapter;"
+          }
+        ]
+      },
+      "org/slf4j/helpers/BasicMarker.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/slf4j/helpers/BasicMarker",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "getName",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "add",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;)V"
+          },
+          {
+            "nme": "hasReferences",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "hasChildren",
+            "acc": 131073,
+            "dsc": "()Z",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "iterator",
+            "acc": 1,
+            "dsc": "()Ljava/util/Iterator;",
+            "sig": "()Ljava/util/Iterator<Lorg/slf4j/Marker;>;"
+          },
+          {
+            "nme": "remove",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;)Z"
+          },
+          {
+            "nme": "contains",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;)Z"
+          },
+          {
+            "nme": "contains",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": -2849567615646933777
+          },
+          {
+            "acc": 18,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "referenceList",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/slf4j/Marker;>;"
+          },
+          {
+            "acc": 26,
+            "nme": "OPEN",
+            "dsc": "Ljava/lang/String;",
+            "val": "[ "
+          },
+          {
+            "acc": 26,
+            "nme": "CLOSE",
+            "dsc": "Ljava/lang/String;",
+            "val": " ]"
+          },
+          {
+            "acc": 26,
+            "nme": "SEP",
+            "dsc": "Ljava/lang/String;",
+            "val": ", "
+          }
+        ]
+      },
+      "org/slf4j/spi/LoggerFactoryBinder.class": {
+        "ver": 52,
+        "acc": 132609,
+        "nme": "org/slf4j/spi/LoggerFactoryBinder",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getLoggerFactory",
+            "acc": 1025,
+            "dsc": "()Lorg/slf4j/ILoggerFactory;"
+          },
+          {
+            "nme": "getLoggerFactoryClassStr",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": []
+      },
+      "org/slf4j/MDC$MDCCloseable.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/slf4j/MDC$MDCCloseable",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "close",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4096,
+            "dsc": "(Ljava/lang/String;Lorg/slf4j/MDC$1;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "key",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "org/slf4j/helpers/Slf4jEnvUtil.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/slf4j/helpers/Slf4jEnvUtil",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "slf4jVersion",
+            "acc": 9,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": []
+      },
+      "org/slf4j/ILoggerFactory.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "org/slf4j/ILoggerFactory",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getLogger",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)Lorg/slf4j/Logger;"
+          }
+        ],
+        "flds": []
+      },
+      "org/slf4j/helpers/BasicMDCAdapter$1.class": {
+        "ver": 52,
+        "acc": 32,
+        "nme": "org/slf4j/helpers/BasicMDCAdapter$1",
+        "super": "java/lang/InheritableThreadLocal",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lorg/slf4j/helpers/BasicMDCAdapter;)V"
+          },
+          {
+            "nme": "childValue",
+            "acc": 4,
+            "dsc": "(Ljava/util/Map;)Ljava/util/Map;",
+            "sig": "(Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;)Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+          },
+          {
+            "nme": "childValue",
+            "acc": 4164,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lorg/slf4j/helpers/BasicMDCAdapter;"
+          }
+        ]
+      },
+      "org/slf4j/helpers/BasicMDCAdapter.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/slf4j/helpers/BasicMDCAdapter",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "put",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "get",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "remove",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "clear",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getKeys",
+            "acc": 1,
+            "dsc": "()Ljava/util/Set;",
+            "sig": "()Ljava/util/Set<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "getCopyOfContextMap",
+            "acc": 1,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+          },
+          {
+            "nme": "setContextMap",
+            "acc": 1,
+            "dsc": "(Ljava/util/Map;)V",
+            "sig": "(Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;)V"
+          },
+          {
+            "nme": "pushByKey",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "popByKey",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "getCopyOfDequeByKey",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Ljava/util/Deque;",
+            "sig": "(Ljava/lang/String;)Ljava/util/Deque<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "clearDequeByKey",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "threadLocalMapOfDeques",
+            "dsc": "Lorg/slf4j/helpers/ThreadLocalMapOfStacks;"
+          },
+          {
+            "acc": 18,
+            "nme": "inheritableThreadLocalMap",
+            "dsc": "Ljava/lang/InheritableThreadLocal;",
+            "sig": "Ljava/lang/InheritableThreadLocal<Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;>;"
+          }
+        ]
+      },
+      "org/slf4j/LoggerFactory.class": {
+        "ver": 52,
+        "acc": 49,
+        "nme": "org/slf4j/LoggerFactory",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "findServiceProviders",
+            "acc": 8,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lorg/slf4j/spi/SLF4JServiceProvider;>;"
+          },
+          {
+            "nme": "getServiceLoader",
+            "acc": 10,
+            "dsc": "(Ljava/lang/ClassLoader;)Ljava/util/ServiceLoader;",
+            "sig": "(Ljava/lang/ClassLoader;)Ljava/util/ServiceLoader<Lorg/slf4j/spi/SLF4JServiceProvider;>;"
+          },
+          {
+            "nme": "safelyInstantiate",
+            "acc": 10,
+            "dsc": "(Ljava/util/List;Ljava/util/Iterator;)V",
+            "sig": "(Ljava/util/List<Lorg/slf4j/spi/SLF4JServiceProvider;>;Ljava/util/Iterator<Lorg/slf4j/spi/SLF4JServiceProvider;>;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "reset",
+            "acc": 8,
+            "dsc": "()V"
+          },
+          {
+            "nme": "performInitialization",
+            "acc": 26,
+            "dsc": "()V"
+          },
+          {
+            "nme": "bind",
+            "acc": 26,
+            "dsc": "()V"
+          },
+          {
+            "nme": "loadExplicitlySpecified",
+            "acc": 8,
+            "dsc": "(Ljava/lang/ClassLoader;)Lorg/slf4j/spi/SLF4JServiceProvider;"
+          },
+          {
+            "nme": "reportIgnoredStaticLoggerBinders",
+            "acc": 10,
+            "dsc": "(Ljava/util/Set;)V",
+            "sig": "(Ljava/util/Set<Ljava/net/URL;>;)V"
+          },
+          {
+            "nme": "findPossibleStaticLoggerBinderPathSet",
+            "acc": 8,
+            "dsc": "()Ljava/util/Set;",
+            "sig": "()Ljava/util/Set<Ljava/net/URL;>;"
+          },
+          {
+            "nme": "postBindCleanUp",
+            "acc": 10,
+            "dsc": "()V"
+          },
+          {
+            "nme": "fixSubstituteLoggers",
+            "acc": 10,
+            "dsc": "()V"
+          },
+          {
+            "nme": "failedBinding",
+            "acc": 8,
+            "dsc": "(Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "replayEvents",
+            "acc": 10,
+            "dsc": "()V"
+          },
+          {
+            "nme": "emitReplayOrSubstituionWarning",
+            "acc": 10,
+            "dsc": "(Lorg/slf4j/event/SubstituteLoggingEvent;I)V"
+          },
+          {
+            "nme": "replaySingleEvent",
+            "acc": 10,
+            "dsc": "(Lorg/slf4j/event/SubstituteLoggingEvent;)V"
+          },
+          {
+            "nme": "emitSubstitutionWarning",
+            "acc": 10,
+            "dsc": "()V"
+          },
+          {
+            "nme": "emitReplayWarning",
+            "acc": 10,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "versionSanityCheck",
+            "acc": 26,
+            "dsc": "()V"
+          },
+          {
+            "nme": "isAmbiguousProviderList",
+            "acc": 10,
+            "dsc": "(Ljava/util/List;)Z",
+            "sig": "(Ljava/util/List<Lorg/slf4j/spi/SLF4JServiceProvider;>;)Z"
+          },
+          {
+            "nme": "reportMultipleBindingAmbiguity",
+            "acc": 10,
+            "dsc": "(Ljava/util/List;)V",
+            "sig": "(Ljava/util/List<Lorg/slf4j/spi/SLF4JServiceProvider;>;)V"
+          },
+          {
+            "nme": "reportActualBinding",
+            "acc": 10,
+            "dsc": "(Ljava/util/List;)V",
+            "sig": "(Ljava/util/List<Lorg/slf4j/spi/SLF4JServiceProvider;>;)V"
+          },
+          {
+            "nme": "getLogger",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lorg/slf4j/Logger;"
+          },
+          {
+            "nme": "getLogger",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Class;)Lorg/slf4j/Logger;",
+            "sig": "(Ljava/lang/Class<*>;)Lorg/slf4j/Logger;"
+          },
+          {
+            "nme": "nonMatchingClasses",
+            "acc": 10,
+            "dsc": "(Ljava/lang/Class;Ljava/lang/Class;)Z",
+            "sig": "(Ljava/lang/Class<*>;Ljava/lang/Class<*>;)Z"
+          },
+          {
+            "nme": "getILoggerFactory",
+            "acc": 9,
+            "dsc": "()Lorg/slf4j/ILoggerFactory;"
+          },
+          {
+            "nme": "getProvider",
+            "acc": 8,
+            "dsc": "()Lorg/slf4j/spi/SLF4JServiceProvider;"
+          },
+          {
+            "nme": "lambda$getServiceLoader$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/ClassLoader;)Ljava/util/ServiceLoader;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 24,
+            "nme": "CODES_PREFIX",
+            "dsc": "Ljava/lang/String;",
+            "val": "https://www.slf4j.org/codes.html"
+          },
+          {
+            "acc": 24,
+            "nme": "NO_PROVIDERS_URL",
+            "dsc": "Ljava/lang/String;",
+            "val": "https://www.slf4j.org/codes.html#noProviders"
+          },
+          {
+            "acc": 24,
+            "nme": "IGNORED_BINDINGS_URL",
+            "dsc": "Ljava/lang/String;",
+            "val": "https://www.slf4j.org/codes.html#ignoredBindings"
+          },
+          {
+            "acc": 24,
+            "nme": "MULTIPLE_BINDINGS_URL",
+            "dsc": "Ljava/lang/String;",
+            "val": "https://www.slf4j.org/codes.html#multiple_bindings"
+          },
+          {
+            "acc": 24,
+            "nme": "VERSION_MISMATCH",
+            "dsc": "Ljava/lang/String;",
+            "val": "https://www.slf4j.org/codes.html#version_mismatch"
+          },
+          {
+            "acc": 24,
+            "nme": "SUBSTITUTE_LOGGER_URL",
+            "dsc": "Ljava/lang/String;",
+            "val": "https://www.slf4j.org/codes.html#substituteLogger"
+          },
+          {
+            "acc": 24,
+            "nme": "LOGGER_NAME_MISMATCH_URL",
+            "dsc": "Ljava/lang/String;",
+            "val": "https://www.slf4j.org/codes.html#loggerNameMismatch"
+          },
+          {
+            "acc": 24,
+            "nme": "REPLAY_URL",
+            "dsc": "Ljava/lang/String;",
+            "val": "https://www.slf4j.org/codes.html#replay"
+          },
+          {
+            "acc": 24,
+            "nme": "UNSUCCESSFUL_INIT_URL",
+            "dsc": "Ljava/lang/String;",
+            "val": "https://www.slf4j.org/codes.html#unsuccessfulInit"
+          },
+          {
+            "acc": 24,
+            "nme": "UNSUCCESSFUL_INIT_MSG",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.slf4j.LoggerFactory in failed state. Original exception was thrown EARLIER. See also https://www.slf4j.org/codes.html#unsuccessfulInit"
+          },
+          {
+            "acc": 24,
+            "nme": "CONNECTED_WITH_MSG",
+            "dsc": "Ljava/lang/String;",
+            "val": "Connected with provider of type ["
+          },
+          {
+            "acc": 25,
+            "nme": "PROVIDER_PROPERTY_KEY",
+            "dsc": "Ljava/lang/String;",
+            "val": "slf4j.provider"
+          },
+          {
+            "acc": 24,
+            "nme": "UNINITIALIZED",
+            "dsc": "I",
+            "val": 0
+          },
+          {
+            "acc": 24,
+            "nme": "ONGOING_INITIALIZATION",
+            "dsc": "I",
+            "val": 1
+          },
+          {
+            "acc": 24,
+            "nme": "FAILED_INITIALIZATION",
+            "dsc": "I",
+            "val": 2
+          },
+          {
+            "acc": 24,
+            "nme": "SUCCESSFUL_INITIALIZATION",
+            "dsc": "I",
+            "val": 3
+          },
+          {
+            "acc": 24,
+            "nme": "NOP_FALLBACK_INITIALIZATION",
+            "dsc": "I",
+            "val": 4
+          },
+          {
+            "acc": 72,
+            "nme": "INITIALIZATION_STATE",
+            "dsc": "I"
+          },
+          {
+            "acc": 24,
+            "nme": "SUBST_PROVIDER",
+            "dsc": "Lorg/slf4j/helpers/SubstituteServiceProvider;"
+          },
+          {
+            "acc": 24,
+            "nme": "NOP_FALLBACK_SERVICE_PROVIDER",
+            "dsc": "Lorg/slf4j/helpers/NOP_FallbackServiceProvider;"
+          },
+          {
+            "acc": 24,
+            "nme": "DETECT_LOGGER_NAME_MISMATCH_PROPERTY",
+            "dsc": "Ljava/lang/String;",
+            "val": "slf4j.detectLoggerNameMismatch"
+          },
+          {
+            "acc": 24,
+            "nme": "JAVA_VENDOR_PROPERTY",
+            "dsc": "Ljava/lang/String;",
+            "val": "java.vendor.url"
+          },
+          {
+            "acc": 8,
+            "nme": "DETECT_LOGGER_NAME_MISMATCH",
+            "dsc": "Z"
+          },
+          {
+            "acc": 72,
+            "nme": "PROVIDER",
+            "dsc": "Lorg/slf4j/spi/SLF4JServiceProvider;"
+          },
+          {
+            "acc": 26,
+            "nme": "API_COMPATIBILITY_LIST",
+            "dsc": "[Ljava/lang/String;"
+          },
+          {
+            "acc": 26,
+            "nme": "STATIC_LOGGER_BINDER_PATH",
+            "dsc": "Ljava/lang/String;",
+            "val": "org/slf4j/impl/StaticLoggerBinder.class"
+          }
+        ]
+      },
+      "org/slf4j/spi/MDCAdapter.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "org/slf4j/spi/MDCAdapter",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "put",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "get",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "remove",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "clear",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getCopyOfContextMap",
+            "acc": 1025,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+          },
+          {
+            "nme": "setContextMap",
+            "acc": 1025,
+            "dsc": "(Ljava/util/Map;)V",
+            "sig": "(Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;)V"
+          },
+          {
+            "nme": "pushByKey",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "popByKey",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "getCopyOfDequeByKey",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)Ljava/util/Deque;",
+            "sig": "(Ljava/lang/String;)Ljava/util/Deque<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "clearDequeByKey",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "org/slf4j/helpers/Util.class": {
+        "ver": 52,
+        "acc": 49,
+        "nme": "org/slf4j/helpers/Util",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "safeGetSystemProperty",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "safeGetBooleanSystemProperty",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "getSecurityManager",
+            "acc": 10,
+            "dsc": "()Lorg/slf4j/helpers/Util$ClassContextSecurityManager;"
+          },
+          {
+            "nme": "safeCreateSecurityManager",
+            "acc": 10,
+            "dsc": "()Lorg/slf4j/helpers/Util$ClassContextSecurityManager;"
+          },
+          {
+            "nme": "getCallingClass",
+            "acc": 9,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<*>;"
+          },
+          {
+            "nme": "report",
+            "acc": 131097,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "report",
+            "acc": 131097,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 10,
+            "nme": "SECURITY_MANAGER",
+            "dsc": "Lorg/slf4j/helpers/Util$ClassContextSecurityManager;"
+          },
+          {
+            "acc": 10,
+            "nme": "SECURITY_MANAGER_CREATION_ALREADY_ATTEMPTED",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "org/slf4j/helpers/AbstractLogger.class": {
+        "ver": 52,
+        "acc": 1057,
+        "nme": "org/slf4j/helpers/AbstractLogger",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getName",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "readResolve",
+            "acc": 4,
+            "dsc": "()Ljava/lang/Object;",
+            "exs": [
+              "java/io/ObjectStreamException"
+            ]
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 129,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 129,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 129,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 129,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 129,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 129,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 129,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 129,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 129,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 129,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "handle_0ArgsCall",
+            "acc": 2,
+            "dsc": "(Lorg/slf4j/event/Level;Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "handle_1ArgsCall",
+            "acc": 2,
+            "dsc": "(Lorg/slf4j/event/Level;Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "handle2ArgsCall",
+            "acc": 2,
+            "dsc": "(Lorg/slf4j/event/Level;Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "handleArgArrayCall",
+            "acc": 2,
+            "dsc": "(Lorg/slf4j/event/Level;Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "getFullyQualifiedCallerName",
+            "acc": 1028,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "handleNormalizedLoggingCall",
+            "acc": 1028,
+            "dsc": "(Lorg/slf4j/event/Level;Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": -2529255052481744503
+          },
+          {
+            "acc": 4,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "org/slf4j/spi/DefaultLoggingEventBuilder$1.class": {
+        "ver": 52,
+        "acc": 4128,
+        "nme": "org/slf4j/spi/DefaultLoggingEventBuilder$1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4120,
+            "nme": "$SwitchMap$org$slf4j$event$Level",
+            "dsc": "[I"
+          }
+        ]
+      },
+      "org/slf4j/spi/SLF4JServiceProvider.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "org/slf4j/spi/SLF4JServiceProvider",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getLoggerFactory",
+            "acc": 1025,
+            "dsc": "()Lorg/slf4j/ILoggerFactory;"
+          },
+          {
+            "nme": "getMarkerFactory",
+            "acc": 1025,
+            "dsc": "()Lorg/slf4j/IMarkerFactory;"
+          },
+          {
+            "nme": "getMDCAdapter",
+            "acc": 1025,
+            "dsc": "()Lorg/slf4j/spi/MDCAdapter;"
+          },
+          {
+            "nme": "getRequestedApiVersion",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "initialize",
+            "acc": 1025,
+            "dsc": "()V"
+          }
+        ],
+        "flds": []
+      },
+      "org/slf4j/helpers/NOPLogger.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/slf4j/helpers/NOPLogger",
+        "super": "org/slf4j/helpers/NamedLoggerBase",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getName",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "isTraceEnabled",
+            "acc": 17,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "trace",
+            "acc": 17,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 17,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 17,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 145,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 17,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isDebugEnabled",
+            "acc": 17,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "debug",
+            "acc": 17,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 17,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 17,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 145,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 17,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isInfoEnabled",
+            "acc": 17,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "info",
+            "acc": 17,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 17,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 17,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 145,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 17,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isWarnEnabled",
+            "acc": 17,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "warn",
+            "acc": 17,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 17,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 17,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 145,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 17,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isErrorEnabled",
+            "acc": 17,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "error",
+            "acc": 17,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 17,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 17,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 145,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 17,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isTraceEnabled",
+            "acc": 17,
+            "dsc": "(Lorg/slf4j/Marker;)Z"
+          },
+          {
+            "nme": "trace",
+            "acc": 17,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 17,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 17,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 145,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 17,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isDebugEnabled",
+            "acc": 17,
+            "dsc": "(Lorg/slf4j/Marker;)Z"
+          },
+          {
+            "nme": "debug",
+            "acc": 17,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 17,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 17,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 145,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 17,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isInfoEnabled",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;)Z"
+          },
+          {
+            "nme": "info",
+            "acc": 17,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 17,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 17,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 145,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 17,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isWarnEnabled",
+            "acc": 17,
+            "dsc": "(Lorg/slf4j/Marker;)Z"
+          },
+          {
+            "nme": "warn",
+            "acc": 17,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 17,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 17,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 145,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 17,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isErrorEnabled",
+            "acc": 17,
+            "dsc": "(Lorg/slf4j/Marker;)Z"
+          },
+          {
+            "nme": "error",
+            "acc": 17,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 17,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 17,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 145,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 17,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": -517220405410904473
+          },
+          {
+            "acc": 25,
+            "nme": "NOP_LOGGER",
+            "dsc": "Lorg/slf4j/helpers/NOPLogger;"
+          }
+        ]
+      },
+      "org/slf4j/helpers/Reporter$TargetChoice.class": {
+        "ver": 52,
+        "acc": 16432,
+        "nme": "org/slf4j/helpers/Reporter$TargetChoice",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lorg/slf4j/helpers/Reporter$TargetChoice;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lorg/slf4j/helpers/Reporter$TargetChoice;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "$values",
+            "acc": 4106,
+            "dsc": "()[Lorg/slf4j/helpers/Reporter$TargetChoice;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "Stderr",
+            "dsc": "Lorg/slf4j/helpers/Reporter$TargetChoice;"
+          },
+          {
+            "acc": 16409,
+            "nme": "Stdout",
+            "dsc": "Lorg/slf4j/helpers/Reporter$TargetChoice;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lorg/slf4j/helpers/Reporter$TargetChoice;"
+          }
+        ]
+      },
+      "META-INF/versions/9/module-info.class": {
+        "ver": 53,
+        "acc": 32768,
+        "nme": "module-info",
+        "mthds": [],
+        "flds": []
+      },
+      "org/slf4j/helpers/NOPLoggerFactory.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/slf4j/helpers/NOPLoggerFactory",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getLogger",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Lorg/slf4j/Logger;"
+          }
+        ],
+        "flds": []
+      },
+      "org/slf4j/helpers/ThreadLocalMapOfStacks.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/slf4j/helpers/ThreadLocalMapOfStacks",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "pushByKey",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "popByKey",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "getCopyOfDequeByKey",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Ljava/util/Deque;",
+            "sig": "(Ljava/lang/String;)Ljava/util/Deque<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "clearDequeByKey",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16,
+            "nme": "tlMapOfStacks",
+            "dsc": "Ljava/lang/ThreadLocal;",
+            "sig": "Ljava/lang/ThreadLocal<Ljava/util/Map<Ljava/lang/String;Ljava/util/Deque<Ljava/lang/String;>;>;>;"
+          }
+        ]
+      },
+      "org/slf4j/LoggerFactoryFriend.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/slf4j/LoggerFactoryFriend",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "reset",
+            "acc": 9,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setDetectLoggerNameMismatch",
+            "acc": 9,
+            "dsc": "(Z)V"
+          }
+        ],
+        "flds": []
+      },
+      "org/slf4j/event/SubstituteLoggingEvent.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/slf4j/event/SubstituteLoggingEvent",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getLevel",
+            "acc": 1,
+            "dsc": "()Lorg/slf4j/event/Level;"
+          },
+          {
+            "nme": "setLevel",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/event/Level;)V"
+          },
+          {
+            "nme": "getMarkers",
+            "acc": 1,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lorg/slf4j/Marker;>;"
+          },
+          {
+            "nme": "addMarker",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;)V"
+          },
+          {
+            "nme": "getLoggerName",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "setLoggerName",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "getLogger",
+            "acc": 1,
+            "dsc": "()Lorg/slf4j/helpers/SubstituteLogger;"
+          },
+          {
+            "nme": "setLogger",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/helpers/SubstituteLogger;)V"
+          },
+          {
+            "nme": "getMessage",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "setMessage",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "getArgumentArray",
+            "acc": 1,
+            "dsc": "()[Ljava/lang/Object;"
+          },
+          {
+            "nme": "setArgumentArray",
+            "acc": 1,
+            "dsc": "([Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "getArguments",
+            "acc": 1,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Ljava/lang/Object;>;"
+          },
+          {
+            "nme": "getTimeStamp",
+            "acc": 1,
+            "dsc": "()J"
+          },
+          {
+            "nme": "setTimeStamp",
+            "acc": 1,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "getThreadName",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "setThreadName",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "getThrowable",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Throwable;"
+          },
+          {
+            "nme": "setThrowable",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "getKeyValuePairs",
+            "acc": 1,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lorg/slf4j/event/KeyValuePair;>;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "level",
+            "dsc": "Lorg/slf4j/event/Level;"
+          },
+          {
+            "acc": 0,
+            "nme": "markers",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/slf4j/Marker;>;"
+          },
+          {
+            "acc": 0,
+            "nme": "loggerName",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 0,
+            "nme": "logger",
+            "dsc": "Lorg/slf4j/helpers/SubstituteLogger;"
+          },
+          {
+            "acc": 0,
+            "nme": "threadName",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 0,
+            "nme": "message",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 0,
+            "nme": "argArray",
+            "dsc": "[Ljava/lang/Object;"
+          },
+          {
+            "acc": 0,
+            "nme": "keyValuePairList",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/slf4j/event/KeyValuePair;>;"
+          },
+          {
+            "acc": 0,
+            "nme": "timeStamp",
+            "dsc": "J"
+          },
+          {
+            "acc": 0,
+            "nme": "throwable",
+            "dsc": "Ljava/lang/Throwable;"
+          }
+        ]
+      },
+      "org/slf4j/helpers/Util$1.class": {
+        "ver": 52,
+        "acc": 4128,
+        "nme": "org/slf4j/helpers/Util$1",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "org/slf4j/Logger.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "org/slf4j/Logger",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getName",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "makeLoggingEventBuilder",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/event/Level;)Lorg/slf4j/spi/LoggingEventBuilder;"
+          },
+          {
+            "nme": "atLevel",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/event/Level;)Lorg/slf4j/spi/LoggingEventBuilder;",
+            "vanns": [
+              {
+                "dsc": "Lorg/slf4j/helpers/CheckReturnValue;"
+              }
+            ]
+          },
+          {
+            "nme": "isEnabledForLevel",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/event/Level;)Z"
+          },
+          {
+            "nme": "isTraceEnabled",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "trace",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1153,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isTraceEnabled",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;)Z"
+          },
+          {
+            "nme": "atTrace",
+            "acc": 1,
+            "dsc": "()Lorg/slf4j/spi/LoggingEventBuilder;",
+            "vanns": [
+              {
+                "dsc": "Lorg/slf4j/helpers/CheckReturnValue;"
+              }
+            ]
+          },
+          {
+            "nme": "trace",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1153,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isDebugEnabled",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "debug",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1153,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isDebugEnabled",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;)Z"
+          },
+          {
+            "nme": "debug",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1153,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "atDebug",
+            "acc": 1,
+            "dsc": "()Lorg/slf4j/spi/LoggingEventBuilder;",
+            "vanns": [
+              {
+                "dsc": "Lorg/slf4j/helpers/CheckReturnValue;"
+              }
+            ]
+          },
+          {
+            "nme": "isInfoEnabled",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "info",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1153,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isInfoEnabled",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;)Z"
+          },
+          {
+            "nme": "info",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1153,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "atInfo",
+            "acc": 1,
+            "dsc": "()Lorg/slf4j/spi/LoggingEventBuilder;",
+            "vanns": [
+              {
+                "dsc": "Lorg/slf4j/helpers/CheckReturnValue;"
+              }
+            ]
+          },
+          {
+            "nme": "isWarnEnabled",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "warn",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1153,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isWarnEnabled",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;)Z"
+          },
+          {
+            "nme": "warn",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1153,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "atWarn",
+            "acc": 1,
+            "dsc": "()Lorg/slf4j/spi/LoggingEventBuilder;",
+            "vanns": [
+              {
+                "dsc": "Lorg/slf4j/helpers/CheckReturnValue;"
+              }
+            ]
+          },
+          {
+            "nme": "isErrorEnabled",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "error",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1153,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isErrorEnabled",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;)Z"
+          },
+          {
+            "nme": "error",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1153,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "atError",
+            "acc": 1,
+            "dsc": "()Lorg/slf4j/spi/LoggingEventBuilder;",
+            "vanns": [
+              {
+                "dsc": "Lorg/slf4j/helpers/CheckReturnValue;"
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "ROOT_LOGGER_NAME",
+            "dsc": "Ljava/lang/String;",
+            "val": "ROOT"
+          }
+        ]
+      },
+      "org/slf4j/Marker.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "org/slf4j/Marker",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getName",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "add",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;)V"
+          },
+          {
+            "nme": "remove",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;)Z"
+          },
+          {
+            "nme": "hasChildren",
+            "acc": 132097,
+            "dsc": "()Z",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "hasReferences",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "iterator",
+            "acc": 1025,
+            "dsc": "()Ljava/util/Iterator;",
+            "sig": "()Ljava/util/Iterator<Lorg/slf4j/Marker;>;"
+          },
+          {
+            "nme": "contains",
+            "acc": 1025,
+            "dsc": "(Lorg/slf4j/Marker;)Z"
+          },
+          {
+            "nme": "contains",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "equals",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1025,
+            "dsc": "()I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "ANY_MARKER",
+            "dsc": "Ljava/lang/String;",
+            "val": "*"
+          },
+          {
+            "acc": 25,
+            "nme": "ANY_NON_NULL_MARKER",
+            "dsc": "Ljava/lang/String;",
+            "val": "+"
+          }
+        ]
+      },
+      "org/slf4j/MDC$1.class": {
+        "ver": 52,
+        "acc": 4128,
+        "nme": "org/slf4j/MDC$1",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "org/slf4j/event/EventConstants.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/slf4j/event/EventConstants",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "ERROR_INT",
+            "dsc": "I",
+            "val": 40
+          },
+          {
+            "acc": 25,
+            "nme": "WARN_INT",
+            "dsc": "I",
+            "val": 30
+          },
+          {
+            "acc": 25,
+            "nme": "INFO_INT",
+            "dsc": "I",
+            "val": 20
+          },
+          {
+            "acc": 25,
+            "nme": "DEBUG_INT",
+            "dsc": "I",
+            "val": 10
+          },
+          {
+            "acc": 25,
+            "nme": "TRACE_INT",
+            "dsc": "I",
+            "val": 0
+          },
+          {
+            "acc": 25,
+            "nme": "NA_SUBST",
+            "dsc": "Ljava/lang/String;",
+            "val": "NA/SubstituteLogger"
+          }
+        ]
+      },
+      "org/slf4j/event/EventRecordingLogger.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/slf4j/event/EventRecordingLogger",
+        "super": "org/slf4j/helpers/LegacyAbstractLogger",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/helpers/SubstituteLogger;Ljava/util/Queue;)V",
+            "sig": "(Lorg/slf4j/helpers/SubstituteLogger;Ljava/util/Queue<Lorg/slf4j/event/SubstituteLoggingEvent;>;)V"
+          },
+          {
+            "nme": "getName",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "isTraceEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isDebugEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isInfoEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isWarnEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isErrorEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "handleNormalizedLoggingCall",
+            "acc": 4,
+            "dsc": "(Lorg/slf4j/event/Level;Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "getFullyQualifiedCallerName",
+            "acc": 4,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": -176083308134819629
+          },
+          {
+            "acc": 0,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 0,
+            "nme": "logger",
+            "dsc": "Lorg/slf4j/helpers/SubstituteLogger;"
+          },
+          {
+            "acc": 0,
+            "nme": "eventQueue",
+            "dsc": "Ljava/util/Queue;",
+            "sig": "Ljava/util/Queue<Lorg/slf4j/event/SubstituteLoggingEvent;>;"
+          },
+          {
+            "acc": 24,
+            "nme": "RECORD_ALL_EVENTS",
+            "dsc": "Z",
+            "val": 1
+          }
+        ]
+      },
+      "org/slf4j/helpers/CheckReturnValue.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/slf4j/helpers/CheckReturnValue",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ]
+      },
+      "org/slf4j/helpers/MarkerIgnoringBase.class": {
+        "ver": 52,
+        "acc": 132129,
+        "nme": "org/slf4j/helpers/MarkerIgnoringBase",
+        "super": "org/slf4j/helpers/NamedLoggerBase",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "isTraceEnabled",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;)Z"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 129,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isDebugEnabled",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;)Z"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 129,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isInfoEnabled",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;)Z"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 129,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isWarnEnabled",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;)Z"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 129,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isErrorEnabled",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;)Z"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 129,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getName",
+            "acc": 4161,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": 9044267456635152283
+          }
+        ]
+      },
+      "org/slf4j/event/KeyValuePair.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/slf4j/event/KeyValuePair",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 17,
+            "nme": "key",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 17,
+            "nme": "value",
+            "dsc": "Ljava/lang/Object;"
+          }
+        ]
+      },
+      "org/slf4j/event/Level.class": {
+        "ver": 52,
+        "acc": 16433,
+        "nme": "org/slf4j/event/Level",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lorg/slf4j/event/Level;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lorg/slf4j/event/Level;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;IILjava/lang/String;)V",
+            "sig": "(ILjava/lang/String;)V"
+          },
+          {
+            "nme": "toInt",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "intToLevel",
+            "acc": 9,
+            "dsc": "(I)Lorg/slf4j/event/Level;"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "$values",
+            "acc": 4106,
+            "dsc": "()[Lorg/slf4j/event/Level;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "ERROR",
+            "dsc": "Lorg/slf4j/event/Level;"
+          },
+          {
+            "acc": 16409,
+            "nme": "WARN",
+            "dsc": "Lorg/slf4j/event/Level;"
+          },
+          {
+            "acc": 16409,
+            "nme": "INFO",
+            "dsc": "Lorg/slf4j/event/Level;"
+          },
+          {
+            "acc": 16409,
+            "nme": "DEBUG",
+            "dsc": "Lorg/slf4j/event/Level;"
+          },
+          {
+            "acc": 16409,
+            "nme": "TRACE",
+            "dsc": "Lorg/slf4j/event/Level;"
+          },
+          {
+            "acc": 18,
+            "nme": "levelInt",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "levelStr",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lorg/slf4j/event/Level;"
+          }
+        ]
+      }
+    }
+  }
+}

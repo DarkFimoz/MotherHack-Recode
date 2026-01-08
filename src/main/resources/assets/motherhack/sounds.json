@@ -1,0 +1,42 @@
+{
+  "gui.on": {
+    "sounds": [
+      {
+        "name": "motherhack:on",
+        "stream": false
+      }
+    ]
+  },
+  "gui.off": {
+    "sounds": [
+      {
+        "name": "motherhack:off",
+        "stream": false
+      }
+    ]
+  },
+  "gui.reverse": {
+    "sounds": [
+      {
+        "name": "motherhack:reverse",
+        "stream": false
+      }
+    ]
+  },
+  "gui.open": {
+    "sounds": [
+      {
+        "name": "motherhack:open",
+        "stream": false
+      }
+    ]
+  },
+  "gui.close": {
+    "sounds": [
+      {
+        "name": "motherhack:close",
+        "stream": false
+      }
+    ]
+  }
+}

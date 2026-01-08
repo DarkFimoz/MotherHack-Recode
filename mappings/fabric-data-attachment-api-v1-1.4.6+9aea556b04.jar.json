@@ -1,0 +1,3195 @@
+{
+  "md5": "8a37a9c0cc767ffb336b175c148fc6c0",
+  "sha2": "265df88b4b4b883cb4ddcbe91547029671387624",
+  "sha256": "b6e644851c1065482d11fc8d4c131f3a98b6f701fac98c64e1cfb468510be17f",
+  "contents": {
+    "classes": {
+      "net/fabricmc/fabric/mixin/attachment/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/mixin/attachment/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/attachment/sync/s2c/RequestAcceptedAttachmentsPayloadS2C.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/attachment/sync/s2c/RequestAcceptedAttachmentsPayloadS2C",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getId",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/network/packet/CustomPayload$Id;",
+            "sig": "()Lnet/minecraft/network/packet/CustomPayload$Id<+Lnet/minecraft/network/packet/CustomPayload;>;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/fabricmc/fabric/impl/attachment/sync/s2c/RequestAcceptedAttachmentsPayloadS2C;"
+          },
+          {
+            "acc": 25,
+            "nme": "PACKET_ID",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "acc": 25,
+            "nme": "ID",
+            "dsc": "Lnet/minecraft/network/packet/CustomPayload$Id;",
+            "sig": "Lnet/minecraft/network/packet/CustomPayload$Id<Lnet/fabricmc/fabric/impl/attachment/sync/s2c/RequestAcceptedAttachmentsPayloadS2C;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CODEC",
+            "dsc": "Lnet/minecraft/network/codec/PacketCodec;",
+            "sig": "Lnet/minecraft/network/codec/PacketCodec<Lnet/minecraft/network/PacketByteBuf;Lnet/fabricmc/fabric/impl/attachment/sync/s2c/RequestAcceptedAttachmentsPayloadS2C;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/attachment/ServerWorldMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/attachment/ServerWorldMixin",
+        "super": "net/minecraft/world/World",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(Lnet/minecraft/world/MutableWorldProperties;Lnet/minecraft/registry/RegistryKey;Lnet/minecraft/registry/DynamicRegistryManager;Lnet/minecraft/registry/entry/RegistryEntry;ZZJI)V",
+            "sig": "(Lnet/minecraft/world/MutableWorldProperties;Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/World;>;Lnet/minecraft/registry/DynamicRegistryManager;Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/dimension/DimensionType;>;ZZJI)V"
+          },
+          {
+            "nme": "createAttachmentsPersistentState",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "TAIL"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "method",
+                  [
+                    "<init>"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "fabric_syncChange",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;Lnet/fabricmc/fabric/impl/attachment/sync/s2c/AttachmentSyncPayloadS2C;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<*>;Lnet/fabricmc/fabric/impl/attachment/sync/s2c/AttachmentSyncPayloadS2C;)V"
+          },
+          {
+            "nme": "fabric_getSyncTargetInfo",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo;",
+            "sig": "()Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo<*>;"
+          },
+          {
+            "nme": "fabric_getDynamicRegistryManager",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/registry/DynamicRegistryManager;"
+          },
+          {
+            "nme": "getChunk",
+            "acc": 4161,
+            "dsc": "(II)Lnet/minecraft/world/chunk/Chunk;"
+          },
+          {
+            "nme": "lambda$fabric_syncChange$2",
+            "acc": 4098,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;Lnet/fabricmc/fabric/impl/attachment/sync/s2c/AttachmentSyncPayloadS2C;Lnet/minecraft/server/network/ServerPlayerEntity;)V"
+          },
+          {
+            "nme": "lambda$createAttachmentsPersistentState$1",
+            "acc": 4098,
+            "dsc": "(Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/nbt/NbtCompound;Lnet/minecraft/registry/RegistryWrapper$WrapperLookup;)Lnet/fabricmc/fabric/impl/attachment/AttachmentPersistentState;"
+          },
+          {
+            "nme": "lambda$createAttachmentsPersistentState$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/server/world/ServerWorld;)Lnet/fabricmc/fabric/impl/attachment/AttachmentPersistentState;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "field_13959",
+            "dsc": "Lnet/minecraft/server/MinecraftServer;"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/server/world/ServerWorld"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/attachment/sync/AttachmentSync$AttachmentSyncTask.class": {
+        "ver": 65,
+        "acc": 65584,
+        "nme": "net/fabricmc/fabric/impl/attachment/sync/AttachmentSync$AttachmentSyncTask",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "sendPacket",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/Consumer;)V",
+            "sig": "(Ljava/util/function/Consumer<Lnet/minecraft/network/packet/Packet<*>;>;)V"
+          },
+          {
+            "nme": "getKey",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/server/network/ServerPlayerConfigurationTask$Key;"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "KEY",
+            "dsc": "Lnet/minecraft/server/network/ServerPlayerConfigurationTask$Key;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/attachment/AttachmentRegistryImpl.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/attachment/AttachmentRegistryImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "register",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/util/Identifier;Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;)V",
+            "sig": "<A:Ljava/lang/Object;>(Lnet/minecraft/util/Identifier;Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<TA;>;)V"
+          },
+          {
+            "nme": "get",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/util/Identifier;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;",
+            "sig": "(Lnet/minecraft/util/Identifier;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<*>;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "getSyncableAttachments",
+            "acc": 9,
+            "dsc": "()Ljava/util/Set;",
+            "sig": "()Ljava/util/Set<Lnet/minecraft/util/Identifier;>;"
+          },
+          {
+            "nme": "builder",
+            "acc": 9,
+            "dsc": "()Lnet/fabricmc/fabric/api/attachment/v1/AttachmentRegistry$Builder;",
+            "sig": "<A:Ljava/lang/Object;>()Lnet/fabricmc/fabric/api/attachment/v1/AttachmentRegistry$Builder<TA;>;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 26,
+            "nme": "attachmentRegistry",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/util/Identifier;Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<*>;>;"
+          },
+          {
+            "acc": 26,
+            "nme": "syncableAttachments",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Lnet/minecraft/util/Identifier;>;"
+          },
+          {
+            "acc": 26,
+            "nme": "syncableView",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Lnet/minecraft/util/Identifier;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$BlockEntityTarget.class": {
+        "ver": 65,
+        "acc": 65585,
+        "nme": "net/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$BlockEntityTarget",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/math/BlockPos;)V"
+          },
+          {
+            "nme": "getType",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$Type;",
+            "sig": "()Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$Type<Lnet/minecraft/block/entity/BlockEntity;>;"
+          },
+          {
+            "nme": "getTarget",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/world/World;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentTarget;"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "pos",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/util/math/BlockPos;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "pos",
+            "dsc": "Lnet/minecraft/util/math/BlockPos;"
+          },
+          {
+            "acc": 24,
+            "nme": "PACKET_CODEC",
+            "dsc": "Lnet/minecraft/network/codec/PacketCodec;",
+            "sig": "Lnet/minecraft/network/codec/PacketCodec<Lio/netty/buffer/ByteBuf;Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$BlockEntityTarget;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/attachment/sync/AttachmentSync.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/attachment/sync/AttachmentSync",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "createResponsePayload",
+            "acc": 9,
+            "dsc": "()Lnet/fabricmc/fabric/impl/attachment/sync/c2s/AcceptedAttachmentsPayloadC2S;"
+          },
+          {
+            "nme": "trySync",
+            "acc": 9,
+            "dsc": "(Lnet/fabricmc/fabric/impl/attachment/sync/s2c/AttachmentSyncPayloadS2C;Lnet/minecraft/server/network/ServerPlayerEntity;)V"
+          },
+          {
+            "nme": "decodeResponsePayload",
+            "acc": 10,
+            "dsc": "(Lnet/fabricmc/fabric/impl/attachment/sync/c2s/AcceptedAttachmentsPayloadC2S;)Ljava/util/Set;",
+            "sig": "(Lnet/fabricmc/fabric/impl/attachment/sync/c2s/AcceptedAttachmentsPayloadC2S;)Ljava/util/Set<Lnet/minecraft/util/Identifier;>;"
+          },
+          {
+            "nme": "onInitialize",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lambda$onInitialize$3",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/server/network/ServerPlayNetworkHandler;Lnet/fabricmc/fabric/api/networking/v1/PacketSender;Lnet/minecraft/server/MinecraftServer;)V"
+          },
+          {
+            "nme": "lambda$onInitialize$2",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/impl/attachment/sync/c2s/AcceptedAttachmentsPayloadC2S;Lnet/fabricmc/fabric/api/networking/v1/ServerConfigurationNetworking$Context;)V"
+          },
+          {
+            "nme": "lambda$onInitialize$1",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/server/network/ServerConfigurationNetworkHandler;Lnet/minecraft/server/MinecraftServer;)V"
+          },
+          {
+            "nme": "lambda$decodeResponsePayload$0",
+            "acc": 4106,
+            "dsc": "(Ljava/util/Set;Lnet/minecraft/util/Identifier;)Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "MAX_IDENTIFIER_SIZE",
+            "dsc": "I",
+            "val": 256
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/attachment/sync/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/attachment/sync/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$ChunkTarget.class": {
+        "ver": 65,
+        "acc": 65585,
+        "nme": "net/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$ChunkTarget",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/math/ChunkPos;)V"
+          },
+          {
+            "nme": "getType",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$Type;",
+            "sig": "()Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$Type<Lnet/minecraft/world/chunk/Chunk;>;"
+          },
+          {
+            "nme": "getTarget",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/world/World;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentTarget;"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "pos",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/util/math/ChunkPos;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "pos",
+            "dsc": "Lnet/minecraft/util/math/ChunkPos;"
+          },
+          {
+            "acc": 24,
+            "nme": "PACKET_CODEC",
+            "dsc": "Lnet/minecraft/network/codec/PacketCodec;",
+            "sig": "Lnet/minecraft/network/codec/PacketCodec<Lio/netty/buffer/ByteBuf;Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$ChunkTarget;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/attachment/sync/s2c/AttachmentSyncPayloadS2C.class": {
+        "ver": 65,
+        "acc": 65585,
+        "nme": "net/fabricmc/fabric/impl/attachment/sync/s2c/AttachmentSyncPayloadS2C",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/util/List;)V",
+            "sig": "(Ljava/util/List<Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentChange;>;)V"
+          },
+          {
+            "nme": "getId",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/network/packet/CustomPayload$Id;",
+            "sig": "()Lnet/minecraft/network/packet/CustomPayload$Id<+Lnet/minecraft/network/packet/CustomPayload;>;"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "attachments",
+            "acc": 1,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentChange;>;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "attachments",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentChange;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CODEC",
+            "dsc": "Lnet/minecraft/network/codec/PacketCodec;",
+            "sig": "Lnet/minecraft/network/codec/PacketCodec<Lnet/minecraft/network/PacketByteBuf;Lnet/fabricmc/fabric/impl/attachment/sync/s2c/AttachmentSyncPayloadS2C;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "PACKET_ID",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "acc": 25,
+            "nme": "ID",
+            "dsc": "Lnet/minecraft/network/packet/CustomPayload$Id;",
+            "sig": "Lnet/minecraft/network/packet/CustomPayload$Id<Lnet/fabricmc/fabric/impl/attachment/sync/s2c/AttachmentSyncPayloadS2C;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/attachment/AttachmentTypeImpl.class": {
+        "ver": 65,
+        "acc": 65585,
+        "nme": "net/fabricmc/fabric/impl/attachment/AttachmentTypeImpl",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/Identifier;Ljava/util/function/Supplier;Lcom/mojang/serialization/Codec;Lnet/minecraft/network/codec/PacketCodec;Lnet/fabricmc/fabric/api/attachment/v1/AttachmentSyncPredicate;Z)V",
+            "sig": "(Lnet/minecraft/util/Identifier;Ljava/util/function/Supplier<TA;>;Lcom/mojang/serialization/Codec<TA;>;Lnet/minecraft/network/codec/PacketCodec<-Lnet/minecraft/network/RegistryByteBuf;TA;>;Lnet/fabricmc/fabric/api/attachment/v1/AttachmentSyncPredicate;Z)V"
+          },
+          {
+            "nme": "isSynced",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "identifier",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "nme": "initializer",
+            "acc": 1,
+            "dsc": "()Ljava/util/function/Supplier;",
+            "sig": "()Ljava/util/function/Supplier<TA;>;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "persistenceCodec",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/serialization/Codec;",
+            "sig": "()Lcom/mojang/serialization/Codec<TA;>;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "packetCodec",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/network/codec/PacketCodec;",
+            "sig": "()Lnet/minecraft/network/codec/PacketCodec<-Lnet/minecraft/network/RegistryByteBuf;TA;>;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "syncPredicate",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/attachment/v1/AttachmentSyncPredicate;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "copyOnDeath",
+            "acc": 1,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "identifier",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "acc": 18,
+            "nme": "initializer",
+            "dsc": "Ljava/util/function/Supplier;",
+            "sig": "Ljava/util/function/Supplier<TA;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "persistenceCodec",
+            "dsc": "Lcom/mojang/serialization/Codec;",
+            "sig": "Lcom/mojang/serialization/Codec<TA;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "packetCodec",
+            "dsc": "Lnet/minecraft/network/codec/PacketCodec;",
+            "sig": "Lnet/minecraft/network/codec/PacketCodec<-Lnet/minecraft/network/RegistryByteBuf;TA;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "syncPredicate",
+            "dsc": "Lnet/fabricmc/fabric/api/attachment/v1/AttachmentSyncPredicate;"
+          },
+          {
+            "acc": 18,
+            "nme": "copyOnDeath",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/attachment/client/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/attachment/client/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/attachment/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/attachment/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/attachment/EntityMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/attachment/EntityMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "method_37908",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/world/World;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Shadow;"
+              }
+            ]
+          },
+          {
+            "nme": "readEntityAttachments",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/nbt/NbtCompound;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "net/minecraft/entity/Entity.readCustomDataFromNbt(Lnet/minecraft/nbt/NbtCompound;)V"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "method",
+                  [
+                    "readNbt"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "writeEntityAttachments",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/nbt/NbtCompound;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lnet/minecraft/nbt/NbtCompound;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Lnet/minecraft/nbt/NbtCompound;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "net/minecraft/entity/Entity.writeCustomDataToNbt(Lnet/minecraft/nbt/NbtCompound;)V"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "method",
+                  [
+                    "writeNbt"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "fabric_getSyncTargetInfo",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo;",
+            "sig": "()Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo<*>;"
+          },
+          {
+            "nme": "fabric_syncChange",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;Lnet/fabricmc/fabric/impl/attachment/sync/s2c/AttachmentSyncPayloadS2C;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<*>;Lnet/fabricmc/fabric/impl/attachment/sync/s2c/AttachmentSyncPayloadS2C;)V"
+          },
+          {
+            "nme": "fabric_shouldTryToSync",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "fabric_getDynamicRegistryManager",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/registry/DynamicRegistryManager;"
+          },
+          {
+            "nme": "lambda$fabric_syncChange$0",
+            "acc": 4098,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentSyncPredicate;Lnet/fabricmc/fabric/impl/attachment/sync/s2c/AttachmentSyncPayloadS2C;Lnet/minecraft/server/network/ServerPlayerEntity;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "field_5986",
+            "dsc": "I"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/entity/Entity"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/attachment/AttachmentRegistryImpl$BuilderImpl.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/attachment/AttachmentRegistryImpl$BuilderImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "persistent",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/serialization/Codec;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentRegistry$Builder;",
+            "sig": "(Lcom/mojang/serialization/Codec<TA;>;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentRegistry$Builder<TA;>;"
+          },
+          {
+            "nme": "copyOnDeath",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/attachment/v1/AttachmentRegistry$Builder;",
+            "sig": "()Lnet/fabricmc/fabric/api/attachment/v1/AttachmentRegistry$Builder<TA;>;"
+          },
+          {
+            "nme": "initializer",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/Supplier;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentRegistry$Builder;",
+            "sig": "(Ljava/util/function/Supplier<TA;>;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentRegistry$Builder<TA;>;"
+          },
+          {
+            "nme": "syncWith",
+            "acc": 131073,
+            "dsc": "(Lnet/minecraft/network/codec/PacketCodec;Lnet/fabricmc/fabric/api/attachment/v1/AttachmentSyncPredicate;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentRegistry$Builder;",
+            "sig": "(Lnet/minecraft/network/codec/PacketCodec<-Lnet/minecraft/network/RegistryByteBuf;TA;>;Lnet/fabricmc/fabric/api/attachment/v1/AttachmentSyncPredicate;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentRegistry$Builder<TA;>;",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "buildAndRegister",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/Identifier;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;",
+            "sig": "(Lnet/minecraft/util/Identifier;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<TA;>;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "defaultInitializer",
+            "dsc": "Ljava/util/function/Supplier;",
+            "sig": "Ljava/util/function/Supplier<TA;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "persistenceCodec",
+            "dsc": "Lcom/mojang/serialization/Codec;",
+            "sig": "Lcom/mojang/serialization/Codec<TA;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "packetCodec",
+            "dsc": "Lnet/minecraft/network/codec/PacketCodec;",
+            "sig": "Lnet/minecraft/network/codec/PacketCodec<-Lnet/minecraft/network/RegistryByteBuf;TA;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "syncPredicate",
+            "dsc": "Lnet/fabricmc/fabric/api/attachment/v1/AttachmentSyncPredicate;"
+          },
+          {
+            "acc": 2,
+            "nme": "copyOnDeath",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/attachment/BannerBlockEntityMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/attachment/BannerBlockEntityMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "removeAttachments",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/nbt/NbtCompound;)Lnet/minecraft/nbt/NbtCompound;",
+            "vanns": [
+              {
+                "dsc": "Lcom/llamalad7/mixinextras/injector/ModifyExpressionValue;",
+                "vals": [
+                  "method",
+                  [
+                    "toInitialChunkDataNbt"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/block/entity/BannerBlockEntity;createNbt(Lnet/minecraft/registry/RegistryWrapper$WrapperLookup;)Lnet/minecraft/nbt/NbtCompound;"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/block/entity/BannerBlockEntity"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$WorldTarget.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$WorldTarget",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getType",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$Type;",
+            "sig": "()Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$Type<Lnet/minecraft/world/World;>;"
+          },
+          {
+            "nme": "getTarget",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/world/World;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentTarget;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$WorldTarget;"
+          },
+          {
+            "acc": 24,
+            "nme": "PACKET_CODEC",
+            "dsc": "Lnet/minecraft/network/codec/PacketCodec;",
+            "sig": "Lnet/minecraft/network/codec/PacketCodec<Lio/netty/buffer/ByteBuf;Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$WorldTarget;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/attachment/sync/c2s/AcceptedAttachmentsPayloadC2S.class": {
+        "ver": 65,
+        "acc": 65585,
+        "nme": "net/fabricmc/fabric/impl/attachment/sync/c2s/AcceptedAttachmentsPayloadC2S",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/util/Set;)V",
+            "sig": "(Ljava/util/Set<Lnet/minecraft/util/Identifier;>;)V"
+          },
+          {
+            "nme": "getId",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/network/packet/CustomPayload$Id;",
+            "sig": "()Lnet/minecraft/network/packet/CustomPayload$Id<+Lnet/minecraft/network/packet/CustomPayload;>;"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "acceptedAttachments",
+            "acc": 1,
+            "dsc": "()Ljava/util/Set;",
+            "sig": "()Ljava/util/Set<Lnet/minecraft/util/Identifier;>;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "acceptedAttachments",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Lnet/minecraft/util/Identifier;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CODEC",
+            "dsc": "Lnet/minecraft/network/codec/PacketCodec;",
+            "sig": "Lnet/minecraft/network/codec/PacketCodec<Lnet/minecraft/network/PacketByteBuf;Lnet/fabricmc/fabric/impl/attachment/sync/c2s/AcceptedAttachmentsPayloadC2S;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "PACKET_ID",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "acc": 25,
+            "nme": "ID",
+            "dsc": "Lnet/minecraft/network/packet/CustomPayload$Id;",
+            "sig": "Lnet/minecraft/network/packet/CustomPayload$Id<Lnet/fabricmc/fabric/impl/attachment/sync/c2s/AcceptedAttachmentsPayloadC2S;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/attachment/AttachmentTargetImpl.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/impl/attachment/AttachmentTargetImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "transfer",
+            "acc": 9,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentTarget;Lnet/fabricmc/fabric/api/attachment/v1/AttachmentTarget;Z)V"
+          },
+          {
+            "nme": "fabric_getAttachments",
+            "acc": 1,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<*>;*>;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "fabric_writeAttachmentsToNbt",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/nbt/NbtCompound;Lnet/minecraft/registry/RegistryWrapper$WrapperLookup;)V"
+          },
+          {
+            "nme": "fabric_readAttachmentsFromNbt",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/nbt/NbtCompound;Lnet/minecraft/registry/RegistryWrapper$WrapperLookup;)V"
+          },
+          {
+            "nme": "fabric_hasPersistentAttachments",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "fabric_getSyncTargetInfo",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo;",
+            "sig": "()Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo<*>;"
+          },
+          {
+            "nme": "fabric_computeInitialSyncChanges",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/server/network/ServerPlayerEntity;Ljava/util/function/Consumer;)V",
+            "sig": "(Lnet/minecraft/server/network/ServerPlayerEntity;Ljava/util/function/Consumer<Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentChange;>;)V"
+          },
+          {
+            "nme": "fabric_syncChange",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;Lnet/fabricmc/fabric/impl/attachment/sync/s2c/AttachmentSyncPayloadS2C;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<*>;Lnet/fabricmc/fabric/impl/attachment/sync/s2c/AttachmentSyncPayloadS2C;)V"
+          },
+          {
+            "nme": "fabric_markChanged",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<*>;)V"
+          },
+          {
+            "nme": "fabric_shouldTryToSync",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "fabric_getDynamicRegistryManager",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/registry/DynamicRegistryManager;"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/impl/attachment/AttachmentPersistentState.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/attachment/AttachmentPersistentState",
+        "super": "net/minecraft/world/PersistentState",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/server/world/ServerWorld;)V"
+          },
+          {
+            "nme": "read",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/nbt/NbtCompound;Lnet/minecraft/registry/RegistryWrapper$WrapperLookup;)Lnet/fabricmc/fabric/impl/attachment/AttachmentPersistentState;"
+          },
+          {
+            "nme": "isDirty",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "writeNbt",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/nbt/NbtCompound;Lnet/minecraft/registry/RegistryWrapper$WrapperLookup;)Lnet/minecraft/nbt/NbtCompound;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "ID",
+            "dsc": "Ljava/lang/String;",
+            "val": "fabric_attachments"
+          },
+          {
+            "acc": 18,
+            "nme": "worldTarget",
+            "dsc": "Lnet/fabricmc/fabric/impl/attachment/AttachmentTargetImpl;"
+          },
+          {
+            "acc": 18,
+            "nme": "wasSerialized",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/attachment/v1/AttachmentType.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/attachment/v1/AttachmentType",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "identifier",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "nme": "persistenceCodec",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/serialization/Codec;",
+            "sig": "()Lcom/mojang/serialization/Codec<TA;>;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "isPersistent",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "initializer",
+            "acc": 1025,
+            "dsc": "()Ljava/util/function/Supplier;",
+            "sig": "()Ljava/util/function/Supplier<TA;>;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "isSynced",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "copyOnDeath",
+            "acc": 1025,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          },
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Experimental;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/attachment/v1/AttachmentRegistry$Builder.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/attachment/v1/AttachmentRegistry$Builder",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "persistent",
+            "acc": 1025,
+            "dsc": "(Lcom/mojang/serialization/Codec;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentRegistry$Builder;",
+            "sig": "(Lcom/mojang/serialization/Codec<TA;>;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentRegistry$Builder<TA;>;"
+          },
+          {
+            "nme": "copyOnDeath",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/attachment/v1/AttachmentRegistry$Builder;",
+            "sig": "()Lnet/fabricmc/fabric/api/attachment/v1/AttachmentRegistry$Builder<TA;>;"
+          },
+          {
+            "nme": "initializer",
+            "acc": 1025,
+            "dsc": "(Ljava/util/function/Supplier;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentRegistry$Builder;",
+            "sig": "(Ljava/util/function/Supplier<TA;>;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentRegistry$Builder<TA;>;"
+          },
+          {
+            "nme": "syncWith",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/network/codec/PacketCodec;Lnet/fabricmc/fabric/api/attachment/v1/AttachmentSyncPredicate;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentRegistry$Builder;",
+            "sig": "(Lnet/minecraft/network/codec/PacketCodec<-Lnet/minecraft/network/RegistryByteBuf;TA;>;Lnet/fabricmc/fabric/api/attachment/v1/AttachmentSyncPredicate;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentRegistry$Builder<TA;>;"
+          },
+          {
+            "nme": "buildAndRegister",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/util/Identifier;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;",
+            "sig": "(Lnet/minecraft/util/Identifier;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<TA;>;"
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/attachment/client/AttachmentSyncClient.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/attachment/client/AttachmentSyncClient",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "onInitializeClient",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lambda$onInitializeClient$2",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/impl/attachment/sync/s2c/AttachmentSyncPayloadS2C;Lnet/fabricmc/fabric/api/client/networking/v1/ClientPlayNetworking$Context;)V"
+          },
+          {
+            "nme": "lambda$onInitializeClient$1",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/networking/v1/ClientPlayNetworking$Context;Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentChange;)V"
+          },
+          {
+            "nme": "lambda$onInitializeClient$0",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/impl/attachment/sync/s2c/RequestAcceptedAttachmentsPayloadS2C;Lnet/fabricmc/fabric/api/client/networking/v1/ClientConfigurationNetworking$Context;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/attachment/v1/AttachmentTarget.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/attachment/v1/AttachmentTarget",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getAttached",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;)Ljava/lang/Object;",
+            "sig": "<A:Ljava/lang/Object;>(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<TA;>;)TA;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "getAttachedOrThrow",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;)Ljava/lang/Object;",
+            "sig": "<A:Ljava/lang/Object;>(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<TA;>;)TA;"
+          },
+          {
+            "nme": "getAttachedOrSet",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "<A:Ljava/lang/Object;>(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<TA;>;TA;)TA;"
+          },
+          {
+            "nme": "getAttachedOrCreate",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;Ljava/util/function/Supplier;)Ljava/lang/Object;",
+            "sig": "<A:Ljava/lang/Object;>(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<TA;>;Ljava/util/function/Supplier<TA;>;)TA;"
+          },
+          {
+            "nme": "getAttachedOrCreate",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;)Ljava/lang/Object;",
+            "sig": "<A:Ljava/lang/Object;>(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<TA;>;)TA;"
+          },
+          {
+            "nme": "getAttachedOrElse",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "<A:Ljava/lang/Object;>(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<TA;>;TA;)TA;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Contract;",
+                "vals": [
+                  "value",
+                  "_, !null -> !null"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "getAttachedOrGet",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;Ljava/util/function/Supplier;)Ljava/lang/Object;",
+            "sig": "<A:Ljava/lang/Object;>(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<TA;>;Ljava/util/function/Supplier<TA;>;)TA;"
+          },
+          {
+            "nme": "setAttached",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "<A:Ljava/lang/Object;>(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<TA;>;TA;)TA;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "hasAttached",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;)Z",
+            "sig": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<*>;)Z"
+          },
+          {
+            "nme": "removeAttached",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;)Ljava/lang/Object;",
+            "sig": "<A:Ljava/lang/Object;>(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<TA;>;)TA;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "modifyAttached",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;Ljava/util/function/UnaryOperator;)Ljava/lang/Object;",
+            "sig": "<A:Ljava/lang/Object;>(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<TA;>;Ljava/util/function/UnaryOperator<TA;>;)TA;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "NBT_ATTACHMENT_KEY",
+            "dsc": "Ljava/lang/String;",
+            "val": "fabric:attachments"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Experimental;"
+          },
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/attachment/WorldChunkMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/attachment/WorldChunkMixin",
+        "super": "net/fabricmc/fabric/mixin/attachment/AttachmentTargetsMixin",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "method_12214",
+            "acc": 1025,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/entity/BlockEntity;>;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Shadow;"
+              }
+            ]
+          },
+          {
+            "nme": "transferProtoChunkAttachement",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/world/chunk/ProtoChunk;Lnet/minecraft/world/chunk/WorldChunk$EntityLoader;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "<init>(Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/world/chunk/ProtoChunk;Lnet/minecraft/world/chunk/WorldChunk$EntityLoader;)V"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "TAIL"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "fabric_computeInitialSyncChanges",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/server/network/ServerPlayerEntity;Ljava/util/function/Consumer;)V",
+            "sig": "(Lnet/minecraft/server/network/ServerPlayerEntity;Ljava/util/function/Consumer<Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentChange;>;)V"
+          },
+          {
+            "nme": "fabric_syncChange",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;Lnet/fabricmc/fabric/impl/attachment/sync/s2c/AttachmentSyncPayloadS2C;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<*>;Lnet/fabricmc/fabric/impl/attachment/sync/s2c/AttachmentSyncPayloadS2C;)V"
+          },
+          {
+            "nme": "fabric_shouldTryToSync",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "fabric_getDynamicRegistryManager",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/registry/DynamicRegistryManager;"
+          },
+          {
+            "nme": "lambda$fabric_syncChange$0",
+            "acc": 4098,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;Lnet/fabricmc/fabric/impl/attachment/sync/s2c/AttachmentSyncPayloadS2C;Lnet/minecraft/server/network/ServerPlayerEntity;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "field_12858",
+            "dsc": "Lnet/minecraft/world/World;"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/world/chunk/WorldChunk"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$EntityTarget.class": {
+        "ver": 65,
+        "acc": 65585,
+        "nme": "net/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$EntityTarget",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "getType",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$Type;",
+            "sig": "()Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$Type<Lnet/minecraft/entity/Entity;>;"
+          },
+          {
+            "nme": "getTarget",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/world/World;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentTarget;"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "networkId",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "networkId",
+            "dsc": "I"
+          },
+          {
+            "acc": 24,
+            "nme": "PACKET_CODEC",
+            "dsc": "Lnet/minecraft/network/codec/PacketCodec;",
+            "sig": "Lnet/minecraft/network/codec/PacketCodec<Lio/netty/buffer/ByteBuf;Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$EntityTarget;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/attachment/sync/s2c/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/attachment/sync/s2c/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/attachment/client/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/mixin/attachment/client/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/attachment/ChunkDataSenderMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/attachment/ChunkDataSenderMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "sendInitialAttachmentData",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/server/network/ServerPlayNetworkHandler;Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/world/chunk/WorldChunk;Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation;Lnet/minecraft/server/network/ServerPlayerEntity;)V",
+            "sig": "(Lnet/minecraft/server/network/ServerPlayNetworkHandler;Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/world/chunk/WorldChunk;Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation<Ljava/lang/Void;>;Lnet/minecraft/server/network/ServerPlayerEntity;)V",
+            "vanns": [
+              {
+                "dsc": "Lcom/llamalad7/mixinextras/injector/wrapoperation/WrapOperation;",
+                "vals": [
+                  "method",
+                  [
+                    "sendChunkBatches"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/server/network/ChunkDataSender;sendChunkData(Lnet/minecraft/server/network/ServerPlayNetworkHandler;Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/world/chunk/WorldChunk;)V"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/server/network/ChunkDataSender"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getType",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$Type;",
+            "sig": "()Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$Type<TT;>;"
+          },
+          {
+            "nme": "getId",
+            "acc": 1,
+            "dsc": "()B"
+          },
+          {
+            "nme": "getTarget",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/world/World;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentTarget;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "MAX_SIZE_IN_BYTES",
+            "dsc": "I",
+            "val": 9
+          },
+          {
+            "acc": 25,
+            "nme": "PACKET_CODEC",
+            "dsc": "Lnet/minecraft/network/codec/PacketCodec;",
+            "sig": "Lnet/minecraft/network/codec/PacketCodec<Lio/netty/buffer/ByteBuf;Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo<*>;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/attachment/v1/AttachmentRegistry.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/attachment/v1/AttachmentRegistry",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/util/Identifier;Ljava/util/function/Consumer;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;",
+            "sig": "<A:Ljava/lang/Object;>(Lnet/minecraft/util/Identifier;Ljava/util/function/Consumer<Lnet/fabricmc/fabric/api/attachment/v1/AttachmentRegistry$Builder<TA;>;>;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<TA;>;"
+          },
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/util/Identifier;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;",
+            "sig": "<A:Ljava/lang/Object;>(Lnet/minecraft/util/Identifier;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<TA;>;"
+          },
+          {
+            "nme": "createDefaulted",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/util/Identifier;Ljava/util/function/Supplier;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;",
+            "sig": "<A:Ljava/lang/Object;>(Lnet/minecraft/util/Identifier;Ljava/util/function/Supplier<TA;>;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<TA;>;"
+          },
+          {
+            "nme": "createPersistent",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/util/Identifier;Lcom/mojang/serialization/Codec;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;",
+            "sig": "<A:Ljava/lang/Object;>(Lnet/minecraft/util/Identifier;Lcom/mojang/serialization/Codec<TA;>;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<TA;>;"
+          },
+          {
+            "nme": "builder",
+            "acc": 131081,
+            "dsc": "()Lnet/fabricmc/fabric/api/attachment/v1/AttachmentRegistry$Builder;",
+            "sig": "<A:Ljava/lang/Object;>()Lnet/fabricmc/fabric/api/attachment/v1/AttachmentRegistry$Builder<TA;>;",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "lambda$createPersistent$2",
+            "acc": 4106,
+            "dsc": "(Lcom/mojang/serialization/Codec;Lnet/fabricmc/fabric/api/attachment/v1/AttachmentRegistry$Builder;)V"
+          },
+          {
+            "nme": "lambda$createDefaulted$1",
+            "acc": 4106,
+            "dsc": "(Ljava/util/function/Supplier;Lnet/fabricmc/fabric/api/attachment/v1/AttachmentRegistry$Builder;)V"
+          },
+          {
+            "nme": "lambda$create$0",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentRegistry$Builder;)V"
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Experimental;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/attachment/sync/AttachmentChange.class": {
+        "ver": 65,
+        "acc": 65585,
+        "nme": "net/fabricmc/fabric/impl/attachment/sync/AttachmentChange",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo;Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;[B)V",
+            "sig": "(Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo<*>;Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<*>;[B)V"
+          },
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "(Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo;Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;Ljava/lang/Object;Lnet/minecraft/registry/DynamicRegistryManager;)Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentChange;",
+            "sig": "(Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo<*>;Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<*>;Ljava/lang/Object;Lnet/minecraft/registry/DynamicRegistryManager;)Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentChange;"
+          },
+          {
+            "nme": "partitionAndSendPackets",
+            "acc": 9,
+            "dsc": "(Ljava/util/List;Lnet/minecraft/server/network/ServerPlayerEntity;)V",
+            "sig": "(Ljava/util/List<Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentChange;>;Lnet/minecraft/server/network/ServerPlayerEntity;)V"
+          },
+          {
+            "nme": "decodeValue",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/registry/DynamicRegistryManager;)Ljava/lang/Object;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "apply",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/world/World;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "targetInfo",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo;",
+            "sig": "()Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo<*>;"
+          },
+          {
+            "nme": "type",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;",
+            "sig": "()Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<*>;"
+          },
+          {
+            "nme": "data",
+            "acc": 1,
+            "dsc": "()[B"
+          },
+          {
+            "nme": "lambda$partitionAndSendPackets$1",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentChange;)I"
+          },
+          {
+            "nme": "lambda$static$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/util/Identifier;)Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "targetInfo",
+            "dsc": "Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo;",
+            "sig": "Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo<*>;"
+          },
+          {
+            "acc": 18,
+            "nme": "type",
+            "dsc": "Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;",
+            "sig": "Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<*>;"
+          },
+          {
+            "acc": 18,
+            "nme": "data",
+            "dsc": "[B"
+          },
+          {
+            "acc": 25,
+            "nme": "PACKET_CODEC",
+            "dsc": "Lnet/minecraft/network/codec/PacketCodec;",
+            "sig": "Lnet/minecraft/network/codec/PacketCodec<Lnet/minecraft/network/PacketByteBuf;Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentChange;>;"
+          },
+          {
+            "acc": 26,
+            "nme": "MAX_PADDING_SIZE_IN_BYTES",
+            "dsc": "I",
+            "val": 265
+          },
+          {
+            "acc": 26,
+            "nme": "MAX_DATA_SIZE_IN_BYTES",
+            "dsc": "I"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/attachment/SerializedChunkMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/attachment/SerializedChunkMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "storeAttachmentNbtData",
+            "acc": 10,
+            "dsc": "(Lnet/minecraft/world/HeightLimitView;Lnet/minecraft/registry/DynamicRegistryManager;Lnet/minecraft/nbt/NbtCompound;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;Lcom/llamalad7/mixinextras/sugar/ref/LocalRef;)V",
+            "sig": "(Lnet/minecraft/world/HeightLimitView;Lnet/minecraft/registry/DynamicRegistryManager;Lnet/minecraft/nbt/NbtCompound;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Lnet/minecraft/world/chunk/SerializedChunk;>;Lcom/llamalad7/mixinextras/sugar/ref/LocalRef<Lnet/minecraft/nbt/NbtCompound;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "fromNbt"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "setAttachmentDataInChunk",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/world/poi/PointOfInterestStorage;Lnet/minecraft/world/storage/StorageKey;Lnet/minecraft/util/math/ChunkPos;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/world/poi/PointOfInterestStorage;Lnet/minecraft/world/storage/StorageKey;Lnet/minecraft/util/math/ChunkPos;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Lnet/minecraft/world/chunk/ProtoChunk;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "convert"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "storeAttachmentNbtData",
+            "acc": 10,
+            "dsc": "(Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/world/chunk/Chunk;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/world/chunk/Chunk;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Lnet/minecraft/world/chunk/SerializedChunk;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "fromChunk"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "writeChunkAttachments",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Lnet/minecraft/nbt/NbtCompound;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "serialize"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "attachmentNbtData",
+            "dsc": "Lnet/minecraft/nbt/NbtCompound;"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/world/chunk/SerializedChunk"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/attachment/ChunkMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/attachment/ChunkMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "method_12009",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/world/chunk/ChunkStatus;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Shadow;"
+              }
+            ]
+          },
+          {
+            "nme": "method_12004",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/util/math/ChunkPos;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Shadow;"
+              }
+            ]
+          },
+          {
+            "nme": "method_12044",
+            "acc": 1025,
+            "dsc": "()Z",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Shadow;"
+              }
+            ]
+          },
+          {
+            "nme": "fabric_getSyncTargetInfo",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo;",
+            "sig": "()Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo<*>;"
+          },
+          {
+            "nme": "fabric_markChanged",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<*>;)V"
+          },
+          {
+            "nme": "fabric_shouldTryToSync",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "fabric_getDynamicRegistryManager",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/registry/DynamicRegistryManager;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4,
+            "nme": "field_34538",
+            "dsc": "Lnet/minecraft/util/math/ChunkPos;"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/world/chunk/Chunk"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/attachment/EntityTrackerEntryMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/attachment/EntityTrackerEntryMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "syncAttachmentsAfterSpawn",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/server/network/ServerPlayerEntity;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "startTracking"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/entity/Entity;onStartedTrackingBy(Lnet/minecraft/server/network/ServerPlayerEntity;)V"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "field_14049",
+            "dsc": "Lnet/minecraft/entity/Entity;"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/server/network/EntityTrackerEntry"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/attachment/client/ClientPlayNetworkHandlerMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/attachment/client/ClientPlayNetworkHandlerMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "copyAttachmentsOnClientRespawn",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/client/network/ClientPlayerEntity;Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation;Lnet/minecraft/network/packet/s2c/play/PlayerRespawnS2CPacket;Lnet/minecraft/client/network/ClientPlayerEntity;)V",
+            "sig": "(Lnet/minecraft/client/network/ClientPlayerEntity;Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation<Ljava/lang/Void;>;Lnet/minecraft/network/packet/s2c/play/PlayerRespawnS2CPacket;Lnet/minecraft/client/network/ClientPlayerEntity;)V",
+            "vanns": [
+              {
+                "dsc": "Lcom/llamalad7/mixinextras/injector/wrapoperation/WrapOperation;",
+                "vals": [
+                  "method",
+                  [
+                    "onPlayerRespawn"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/client/network/ClientPlayerEntity;init()V"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/network/ClientPlayNetworkHandler"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/attachment/WrapperProtoChunkMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/attachment/WrapperProtoChunkMixin",
+        "super": "net/fabricmc/fabric/mixin/attachment/AttachmentTargetsMixin",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getAttached",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;)Ljava/lang/Object;",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<TT;>;)TT;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "setAttached",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<TT;>;TT;)TT;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "hasAttached",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;)Z",
+            "sig": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<*>;)Z"
+          },
+          {
+            "nme": "fabric_writeAttachmentsToNbt",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/nbt/NbtCompound;Lnet/minecraft/registry/RegistryWrapper$WrapperLookup;)V"
+          },
+          {
+            "nme": "fabric_readAttachmentsFromNbt",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/nbt/NbtCompound;Lnet/minecraft/registry/RegistryWrapper$WrapperLookup;)V"
+          },
+          {
+            "nme": "fabric_hasPersistentAttachments",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "fabric_getAttachments",
+            "acc": 1,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<*>;*>;"
+          },
+          {
+            "nme": "fabric_shouldTryToSync",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "fabric_computeInitialSyncChanges",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/server/network/ServerPlayerEntity;Ljava/util/function/Consumer;)V",
+            "sig": "(Lnet/minecraft/server/network/ServerPlayerEntity;Ljava/util/function/Consumer<Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentChange;>;)V"
+          },
+          {
+            "nme": "fabric_getSyncTargetInfo",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo;",
+            "sig": "()Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo<*>;"
+          },
+          {
+            "nme": "fabric_syncChange",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;Lnet/fabricmc/fabric/impl/attachment/sync/s2c/AttachmentSyncPayloadS2C;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<*>;Lnet/fabricmc/fabric/impl/attachment/sync/s2c/AttachmentSyncPayloadS2C;)V"
+          },
+          {
+            "nme": "fabric_markChanged",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<*>;)V"
+          },
+          {
+            "nme": "fabric_getDynamicRegistryManager",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/registry/DynamicRegistryManager;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "field_12866",
+            "dsc": "Lnet/minecraft/world/chunk/WorldChunk;"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/world/chunk/WrapperProtoChunk"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/attachment/CustomPayloadS2CPacketAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/attachment/CustomPayloadS2CPacketAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getMaxPayloadSize",
+            "acc": 9,
+            "dsc": "()I",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;",
+                "vals": [
+                  "value",
+                  "MAX_PAYLOAD_SIZE"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/network/packet/c2s/common/CustomPayloadC2SPacket"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/attachment/AttachmentEntrypoint.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/attachment/AttachmentEntrypoint",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "onInitialize",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lambda$onInitialize$2",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/entity/mob/MobEntity;Lnet/minecraft/entity/mob/MobEntity;Lnet/minecraft/entity/conversion/EntityConversionContext;)V"
+          },
+          {
+            "nme": "lambda$onInitialize$1",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/entity/Entity;Lnet/minecraft/entity/Entity;Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/server/world/ServerWorld;)V"
+          },
+          {
+            "nme": "lambda$onInitialize$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/server/network/ServerPlayerEntity;Lnet/minecraft/server/network/ServerPlayerEntity;Z)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/attachment/AttachmentTargetsMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/attachment/AttachmentTargetsMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getAttached",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;)Ljava/lang/Object;",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<TT;>;)TT;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "setAttached",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<TT;>;TT;)TT;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "hasAttached",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;)Z",
+            "sig": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<*>;)Z"
+          },
+          {
+            "nme": "fabric_writeAttachmentsToNbt",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/nbt/NbtCompound;Lnet/minecraft/registry/RegistryWrapper$WrapperLookup;)V"
+          },
+          {
+            "nme": "fabric_readAttachmentsFromNbt",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/nbt/NbtCompound;Lnet/minecraft/registry/RegistryWrapper$WrapperLookup;)V"
+          },
+          {
+            "nme": "fabric_hasPersistentAttachments",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "fabric_getAttachments",
+            "acc": 1,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<*>;*>;"
+          },
+          {
+            "nme": "acknowledgeSynced",
+            "acc": 2,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;Ljava/lang/Object;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<*>;Ljava/lang/Object;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Unique;"
+              }
+            ]
+          },
+          {
+            "nme": "acknowledgeSyncedEntry",
+            "acc": 2,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentChange;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<*>;Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentChange;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Unique;"
+              }
+            ]
+          },
+          {
+            "nme": "fabric_computeInitialSyncChanges",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/server/network/ServerPlayerEntity;Ljava/util/function/Consumer;)V",
+            "sig": "(Lnet/minecraft/server/network/ServerPlayerEntity;Ljava/util/function/Consumer<Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentChange;>;)V"
+          },
+          {
+            "nme": "lambda$fabric_readAttachmentsFromNbt$0",
+            "acc": 4098,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;Ljava/lang/Object;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "fabric_dataAttachments",
+            "dsc": "Ljava/util/IdentityHashMap;",
+            "sig": "Ljava/util/IdentityHashMap<Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<*>;Ljava/lang/Object;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "fabric_syncedAttachments",
+            "dsc": "Ljava/util/IdentityHashMap;",
+            "sig": "Ljava/util/IdentityHashMap<Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<*>;Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentChange;>;"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/block/entity/BlockEntity"
+                },
+                {
+                  "itrlNme": "net/minecraft/entity/Entity"
+                },
+                {
+                  "itrlNme": "net/minecraft/world/World"
+                },
+                {
+                  "itrlNme": "net/minecraft/world/chunk/Chunk"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/attachment/ClientConnectionMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/attachment/ClientConnectionMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "fabric_setSupportedAttachments",
+            "acc": 1,
+            "dsc": "(Ljava/util/Set;)V",
+            "sig": "(Ljava/util/Set<Lnet/minecraft/util/Identifier;>;)V"
+          },
+          {
+            "nme": "fabric_getSupportedAttachments",
+            "acc": 1,
+            "dsc": "()Ljava/util/Set;",
+            "sig": "()Ljava/util/Set<Lnet/minecraft/util/Identifier;>;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "fabric_supportedAttachments",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Lnet/minecraft/util/Identifier;>;"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/network/ClientConnection"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/attachment/VarIntsAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/attachment/VarIntsAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getMaxByteSize",
+            "acc": 9,
+            "dsc": "()I",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;",
+                "vals": [
+                  "value",
+                  "MAX_BYTES"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/network/encoding/VarInts"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/attachment/BlockEntityMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/attachment/BlockEntityMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "method_5431",
+            "acc": 1025,
+            "dsc": "()V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Shadow;"
+              }
+            ]
+          },
+          {
+            "nme": "method_11002",
+            "acc": 1025,
+            "dsc": "()Z",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Shadow;"
+              }
+            ]
+          },
+          {
+            "nme": "readBlockEntityAttachments",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/nbt/NbtCompound;Lnet/minecraft/registry/RegistryWrapper$WrapperLookup;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "read"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "writeBlockEntityAttachments",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/registry/RegistryWrapper$WrapperLookup;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lnet/minecraft/registry/RegistryWrapper$WrapperLookup;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Lnet/minecraft/nbt/NbtCompound;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "createNbt"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "fabric_markChanged",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<*>;)V"
+          },
+          {
+            "nme": "fabric_getSyncTargetInfo",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo;",
+            "sig": "()Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo<*>;"
+          },
+          {
+            "nme": "fabric_syncChange",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;Lnet/fabricmc/fabric/impl/attachment/sync/s2c/AttachmentSyncPayloadS2C;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<*>;Lnet/fabricmc/fabric/impl/attachment/sync/s2c/AttachmentSyncPayloadS2C;)V"
+          },
+          {
+            "nme": "fabric_shouldTryToSync",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "fabric_getDynamicRegistryManager",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/registry/DynamicRegistryManager;"
+          },
+          {
+            "nme": "lambda$fabric_syncChange$0",
+            "acc": 4098,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;Lnet/fabricmc/fabric/impl/attachment/sync/s2c/AttachmentSyncPayloadS2C;Lnet/minecraft/server/network/ServerPlayerEntity;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4,
+            "nme": "field_11867",
+            "dsc": "Lnet/minecraft/util/math/BlockPos;"
+          },
+          {
+            "acc": 4,
+            "nme": "field_11863",
+            "dsc": "Lnet/minecraft/world/World;"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/block/entity/BlockEntity"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/attachment/sync/SupportedAttachmentsClientConnection.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/impl/attachment/sync/SupportedAttachmentsClientConnection",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "fabric_setSupportedAttachments",
+            "acc": 1025,
+            "dsc": "(Ljava/util/Set;)V",
+            "sig": "(Ljava/util/Set<Lnet/minecraft/util/Identifier;>;)V"
+          },
+          {
+            "nme": "fabric_getSupportedAttachments",
+            "acc": 1025,
+            "dsc": "()Ljava/util/Set;",
+            "sig": "()Ljava/util/Set<Lnet/minecraft/util/Identifier;>;"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/api/attachment/v1/AttachmentSyncPredicate.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/attachment/v1/AttachmentSyncPredicate",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "all",
+            "acc": 9,
+            "dsc": "()Lnet/fabricmc/fabric/api/attachment/v1/AttachmentSyncPredicate;"
+          },
+          {
+            "nme": "targetOnly",
+            "acc": 9,
+            "dsc": "()Lnet/fabricmc/fabric/api/attachment/v1/AttachmentSyncPredicate;"
+          },
+          {
+            "nme": "allButTarget",
+            "acc": 9,
+            "dsc": "()Lnet/fabricmc/fabric/api/attachment/v1/AttachmentSyncPredicate;"
+          },
+          {
+            "nme": "lambda$allButTarget$2",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentTarget;Lnet/minecraft/server/network/ServerPlayerEntity;)Z"
+          },
+          {
+            "nme": "lambda$targetOnly$1",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentTarget;Lnet/minecraft/server/network/ServerPlayerEntity;)Z"
+          },
+          {
+            "nme": "lambda$all$0",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentTarget;Lnet/minecraft/server/network/ServerPlayerEntity;)Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/attachment/AttachmentSerializingImpl.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/attachment/AttachmentSerializingImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "serializeAttachmentData",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/nbt/NbtCompound;Lnet/minecraft/registry/RegistryWrapper$WrapperLookup;Ljava/util/IdentityHashMap;)V",
+            "sig": "(Lnet/minecraft/nbt/NbtCompound;Lnet/minecraft/registry/RegistryWrapper$WrapperLookup;Ljava/util/IdentityHashMap<Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<*>;*>;)V"
+          },
+          {
+            "nme": "deserializeAttachmentData",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/nbt/NbtCompound;Lnet/minecraft/registry/RegistryWrapper$WrapperLookup;)Ljava/util/IdentityHashMap;",
+            "sig": "(Lnet/minecraft/nbt/NbtCompound;Lnet/minecraft/registry/RegistryWrapper$WrapperLookup;)Ljava/util/IdentityHashMap<Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<*>;Ljava/lang/Object;>;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "hasPersistentAttachments",
+            "acc": 9,
+            "dsc": "(Ljava/util/IdentityHashMap;)Z",
+            "sig": "(Ljava/util/IdentityHashMap<Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType<*>;*>;)Z"
+          },
+          {
+            "nme": "lambda$deserializeAttachmentData$3",
+            "acc": 4106,
+            "dsc": "(Ljava/util/IdentityHashMap;Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "lambda$deserializeAttachmentData$2",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;Lcom/mojang/serialization/DataResult$Error;)V"
+          },
+          {
+            "nme": "lambda$serializeAttachmentData$1",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/nbt/NbtCompound;Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;Lnet/minecraft/nbt/NbtElement;)V"
+          },
+          {
+            "nme": "lambda$serializeAttachmentData$0",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/api/attachment/v1/AttachmentType;Lcom/mojang/serialization/DataResult$Error;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/attachment/WorldMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/attachment/WorldMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "method_8608",
+            "acc": 1025,
+            "dsc": "()Z",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Shadow;"
+              }
+            ]
+          },
+          {
+            "nme": "method_30349",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/registry/DynamicRegistryManager;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Shadow;"
+              }
+            ]
+          },
+          {
+            "nme": "fabric_shouldTryToSync",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "fabric_getDynamicRegistryManager",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/registry/DynamicRegistryManager;"
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/world/World"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/attachment/sync/c2s/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/attachment/sync/c2s/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$Type.class": {
+        "ver": 65,
+        "acc": 65585,
+        "nme": "net/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$Type",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(BLnet/minecraft/network/codec/PacketCodec;)V",
+            "sig": "(BLnet/minecraft/network/codec/PacketCodec<Lio/netty/buffer/ByteBuf;+Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo<TT;>;>;)V"
+          },
+          {
+            "nme": "packetCodecFromId",
+            "acc": 8,
+            "dsc": "(B)Lnet/minecraft/network/codec/PacketCodec;",
+            "sig": "(B)Lnet/minecraft/network/codec/PacketCodec<Lio/netty/buffer/ByteBuf;+Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo<*>;>;"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "id",
+            "acc": 1,
+            "dsc": "()B"
+          },
+          {
+            "nme": "packetCodec",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/network/codec/PacketCodec;",
+            "sig": "()Lnet/minecraft/network/codec/PacketCodec<Lio/netty/buffer/ByteBuf;+Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo<TT;>;>;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "id",
+            "dsc": "B"
+          },
+          {
+            "acc": 18,
+            "nme": "packetCodec",
+            "dsc": "Lnet/minecraft/network/codec/PacketCodec;",
+            "sig": "Lnet/minecraft/network/codec/PacketCodec<Lio/netty/buffer/ByteBuf;+Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo<TT;>;>;"
+          },
+          {
+            "acc": 8,
+            "nme": "TYPES",
+            "dsc": "Lit/unimi/dsi/fastutil/bytes/Byte2ObjectMap;",
+            "sig": "Lit/unimi/dsi/fastutil/bytes/Byte2ObjectMap<Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$Type<*>;>;"
+          },
+          {
+            "acc": 8,
+            "nme": "BLOCK_ENTITY",
+            "dsc": "Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$Type;",
+            "sig": "Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$Type<Lnet/minecraft/block/entity/BlockEntity;>;"
+          },
+          {
+            "acc": 8,
+            "nme": "ENTITY",
+            "dsc": "Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$Type;",
+            "sig": "Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$Type<Lnet/minecraft/entity/Entity;>;"
+          },
+          {
+            "acc": 8,
+            "nme": "CHUNK",
+            "dsc": "Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$Type;",
+            "sig": "Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$Type<Lnet/minecraft/world/chunk/Chunk;>;"
+          },
+          {
+            "acc": 8,
+            "nme": "WORLD",
+            "dsc": "Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$Type;",
+            "sig": "Lnet/fabricmc/fabric/impl/attachment/sync/AttachmentTargetInfo$Type<Lnet/minecraft/world/World;>;"
+          }
+        ]
+      }
+    }
+  }
+}

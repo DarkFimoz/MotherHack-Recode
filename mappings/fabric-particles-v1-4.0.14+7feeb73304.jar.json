@@ -1,0 +1,897 @@
+{
+  "md5": "dc3bc672e638fd3dc5d51ffd2307facb",
+  "sha2": "fd178064155886023e782b0e0b73a9f08297b407",
+  "sha256": "c24384ba4369a5805fed9e6fd07bb90d2b9b99df7708b7e66754da890b25c99e",
+  "contents": {
+    "classes": {
+      "net/fabricmc/fabric/mixin/client/particle/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/mixin/client/particle/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/particle/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/client/particle/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/particle/v1/FabricSpriteProvider.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/particle/v1/FabricSpriteProvider",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getAtlas",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/client/texture/SpriteAtlasTexture;"
+          },
+          {
+            "nme": "getSprites",
+            "acc": 1025,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lnet/minecraft/client/texture/Sprite;>;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/particle/ParticleManagerAccessor$SimpleSpriteProviderAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/client/particle/ParticleManagerAccessor$SimpleSpriteProviderAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getSprites",
+            "acc": 1025,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lnet/minecraft/client/texture/Sprite;>;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;",
+                "vals": [
+                  "value",
+                  "sprites"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/particle/ParticleManager$SimpleSpriteProvider"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/particle/v1/FabricParticleTypes$2.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "net/fabricmc/fabric/api/particle/v1/FabricParticleTypes$2",
+        "super": "net/minecraft/particle/ParticleType",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(ZLcom/mojang/serialization/MapCodec;Lnet/minecraft/network/codec/PacketCodec;)V"
+          },
+          {
+            "nme": "getCodec",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/serialization/MapCodec;",
+            "sig": "()Lcom/mojang/serialization/MapCodec<TT;>;"
+          },
+          {
+            "nme": "getPacketCodec",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/network/codec/PacketCodec;",
+            "sig": "()Lnet/minecraft/network/codec/PacketCodec<-Lnet/minecraft/network/RegistryByteBuf;TT;>;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4112,
+            "nme": "val$codec",
+            "dsc": "Lcom/mojang/serialization/MapCodec;"
+          },
+          {
+            "acc": 4112,
+            "nme": "val$packetCodec",
+            "dsc": "Lnet/minecraft/network/codec/PacketCodec;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/particle/ParticleManagerMixin.class": {
+        "ver": 65,
+        "acc": 1057,
+        "nme": "net/fabricmc/fabric/mixin/client/particle/ParticleManagerMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "onRegisterDefaultFactories",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "registerDefaultFactories()V"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/particle/ParticleManager"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/particle/v1/FabricParticleTypes$1.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "net/fabricmc/fabric/api/particle/v1/FabricParticleTypes$1",
+        "super": "net/minecraft/particle/SimpleParticleType",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Z)V"
+          },
+          {
+            "nme": "getType",
+            "acc": 4161,
+            "dsc": "()Lnet/minecraft/particle/ParticleType;"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/api/client/particle/v1/ParticleRenderEvents$AllowBlockDustTint.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/particle/v1/ParticleRenderEvents$AllowBlockDustTint",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "allowBlockDustTint",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/block/BlockState;Lnet/minecraft/client/world/ClientWorld;Lnet/minecraft/util/math/BlockPos;)Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/particle/v1/ParticleFactoryRegistry.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/particle/v1/ParticleFactoryRegistry",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getInstance",
+            "acc": 9,
+            "dsc": "()Lnet/fabricmc/fabric/api/client/particle/v1/ParticleFactoryRegistry;"
+          },
+          {
+            "nme": "register",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/particle/ParticleType;Lnet/minecraft/client/particle/ParticleFactory;)V",
+            "sig": "<T::Lnet/minecraft/particle/ParticleEffect;>(Lnet/minecraft/particle/ParticleType<TT;>;Lnet/minecraft/client/particle/ParticleFactory<TT;>;)V"
+          },
+          {
+            "nme": "register",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/particle/ParticleType;Lnet/fabricmc/fabric/api/client/particle/v1/ParticleFactoryRegistry$PendingParticleFactory;)V",
+            "sig": "<T::Lnet/minecraft/particle/ParticleEffect;>(Lnet/minecraft/particle/ParticleType<TT;>;Lnet/fabricmc/fabric/api/client/particle/v1/ParticleFactoryRegistry$PendingParticleFactory<TT;>;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/particle/v1/ParticleFactoryRegistry$PendingParticleFactory.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/particle/v1/ParticleFactoryRegistry$PendingParticleFactory",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "create",
+            "acc": 1025,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/particle/v1/FabricSpriteProvider;)Lnet/minecraft/client/particle/ParticleFactory;",
+            "sig": "(Lnet/fabricmc/fabric/api/client/particle/v1/FabricSpriteProvider;)Lnet/minecraft/client/particle/ParticleFactory<TT;>;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/particle/BlockDustParticleMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/client/particle/BlockDustParticleMixin",
+        "super": "net/minecraft/client/particle/SpriteBillboardParticle",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "removeUntintableParticles",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/block/BlockState;)Lnet/minecraft/block/BlockState;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/ModifyVariable;",
+                "vals": [
+                  "method",
+                  [
+                    "<init>(Lnet/minecraft/client/world/ClientWorld;DDDDDDLnet/minecraft/block/BlockState;Lnet/minecraft/util/math/BlockPos;)V"
+                  ],
+                  "at",
+                  {
+                    "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                    "values": [
+                      "value",
+                      "LOAD"
+                    ],
+                    "api": 589824
+                  },
+                  "argsOnly",
+                  true,
+                  "slice",
+                  {
+                    "desc": "Lorg/spongepowered/asm/mixin/injection/Slice;",
+                    "values": [
+                      "from",
+                      {
+                        "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                        "values": [
+                          "value",
+                          "FIELD",
+                          "target",
+                          "Lnet/minecraft/client/particle/BlockDustParticle;blue:F",
+                          "ordinal",
+                          0
+                        ],
+                        "api": 589824
+                      },
+                      "to",
+                      {
+                        "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                        "values": [
+                          "value",
+                          "INVOKE",
+                          "target",
+                          "Lnet/minecraft/block/BlockState;isOf(Lnet/minecraft/block/Block;)Z"
+                        ],
+                        "api": 589824
+                      }
+                    ],
+                    "api": 589824
+                  },
+                  "allow",
+                  1
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "field_3891",
+            "dsc": "Lnet/minecraft/util/math/BlockPos;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/particle/BlockDustParticle"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/particle/v1/FabricParticleTypes.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/particle/v1/FabricParticleTypes",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "simple",
+            "acc": 9,
+            "dsc": "()Lnet/minecraft/particle/SimpleParticleType;"
+          },
+          {
+            "nme": "simple",
+            "acc": 9,
+            "dsc": "(Z)Lnet/minecraft/particle/SimpleParticleType;"
+          },
+          {
+            "nme": "complex",
+            "acc": 9,
+            "dsc": "(Lcom/mojang/serialization/MapCodec;Lnet/minecraft/network/codec/PacketCodec;)Lnet/minecraft/particle/ParticleType;",
+            "sig": "<T::Lnet/minecraft/particle/ParticleEffect;>(Lcom/mojang/serialization/MapCodec<TT;>;Lnet/minecraft/network/codec/PacketCodec<-Lnet/minecraft/network/RegistryByteBuf;TT;>;)Lnet/minecraft/particle/ParticleType<TT;>;"
+          },
+          {
+            "nme": "complex",
+            "acc": 9,
+            "dsc": "(ZLcom/mojang/serialization/MapCodec;Lnet/minecraft/network/codec/PacketCodec;)Lnet/minecraft/particle/ParticleType;",
+            "sig": "<T::Lnet/minecraft/particle/ParticleEffect;>(ZLcom/mojang/serialization/MapCodec<TT;>;Lnet/minecraft/network/codec/PacketCodec<-Lnet/minecraft/network/RegistryByteBuf;TT;>;)Lnet/minecraft/particle/ParticleType<TT;>;"
+          },
+          {
+            "nme": "complex",
+            "acc": 9,
+            "dsc": "(Ljava/util/function/Function;Ljava/util/function/Function;)Lnet/minecraft/particle/ParticleType;",
+            "sig": "<T::Lnet/minecraft/particle/ParticleEffect;>(Ljava/util/function/Function<Lnet/minecraft/particle/ParticleType<TT;>;Lcom/mojang/serialization/MapCodec<TT;>;>;Ljava/util/function/Function<Lnet/minecraft/particle/ParticleType<TT;>;Lnet/minecraft/network/codec/PacketCodec<-Lnet/minecraft/network/RegistryByteBuf;TT;>;>;)Lnet/minecraft/particle/ParticleType<TT;>;"
+          },
+          {
+            "nme": "complex",
+            "acc": 9,
+            "dsc": "(ZLjava/util/function/Function;Ljava/util/function/Function;)Lnet/minecraft/particle/ParticleType;",
+            "sig": "<T::Lnet/minecraft/particle/ParticleEffect;>(ZLjava/util/function/Function<Lnet/minecraft/particle/ParticleType<TT;>;Lcom/mojang/serialization/MapCodec<TT;>;>;Ljava/util/function/Function<Lnet/minecraft/particle/ParticleType<TT;>;Lnet/minecraft/network/codec/PacketCodec<-Lnet/minecraft/network/RegistryByteBuf;TT;>;>;)Lnet/minecraft/particle/ParticleType<TT;>;"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/impl/client/particle/ParticleFactoryRegistryImpl.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/client/particle/ParticleFactoryRegistryImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "register",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/particle/ParticleType;Lnet/minecraft/client/particle/ParticleFactory;)V",
+            "sig": "<T::Lnet/minecraft/particle/ParticleEffect;>(Lnet/minecraft/particle/ParticleType<TT;>;Lnet/minecraft/client/particle/ParticleFactory<TT;>;)V"
+          },
+          {
+            "nme": "register",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/particle/ParticleType;Lnet/fabricmc/fabric/api/client/particle/v1/ParticleFactoryRegistry$PendingParticleFactory;)V",
+            "sig": "<T::Lnet/minecraft/particle/ParticleEffect;>(Lnet/minecraft/particle/ParticleType<TT;>;Lnet/fabricmc/fabric/api/client/particle/v1/ParticleFactoryRegistry$PendingParticleFactory<TT;>;)V"
+          },
+          {
+            "nme": "initialize",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/particle/ParticleManager;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/fabricmc/fabric/impl/client/particle/ParticleFactoryRegistryImpl;"
+          },
+          {
+            "acc": 0,
+            "nme": "internalRegistry",
+            "dsc": "Lnet/fabricmc/fabric/api/client/particle/v1/ParticleFactoryRegistry;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/particle/FabricSpriteProviderImpl.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/client/particle/FabricSpriteProviderImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lnet/minecraft/client/particle/ParticleManager;Lnet/minecraft/client/particle/SpriteProvider;)V"
+          },
+          {
+            "nme": "getAtlas",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/client/texture/SpriteAtlasTexture;"
+          },
+          {
+            "nme": "getSprites",
+            "acc": 1,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lnet/minecraft/client/texture/Sprite;>;"
+          },
+          {
+            "nme": "getSprite",
+            "acc": 1,
+            "dsc": "(II)Lnet/minecraft/client/texture/Sprite;"
+          },
+          {
+            "nme": "getSprite",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/math/random/Random;)Lnet/minecraft/client/texture/Sprite;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "particleManager",
+            "dsc": "Lnet/minecraft/client/particle/ParticleManager;"
+          },
+          {
+            "acc": 18,
+            "nme": "delegate",
+            "dsc": "Lnet/minecraft/client/particle/SpriteProvider;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/particle/ParticleFactoryRegistryImpl$DeferredParticleFactoryRegistry.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "net/fabricmc/fabric/impl/client/particle/ParticleFactoryRegistryImpl$DeferredParticleFactoryRegistry",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "register",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/particle/ParticleType;Lnet/minecraft/client/particle/ParticleFactory;)V",
+            "sig": "<T::Lnet/minecraft/particle/ParticleEffect;>(Lnet/minecraft/particle/ParticleType<TT;>;Lnet/minecraft/client/particle/ParticleFactory<TT;>;)V"
+          },
+          {
+            "nme": "register",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/particle/ParticleType;Lnet/fabricmc/fabric/api/client/particle/v1/ParticleFactoryRegistry$PendingParticleFactory;)V",
+            "sig": "<T::Lnet/minecraft/particle/ParticleEffect;>(Lnet/minecraft/particle/ParticleType<TT;>;Lnet/fabricmc/fabric/api/client/particle/v1/ParticleFactoryRegistry$PendingParticleFactory<TT;>;)V"
+          },
+          {
+            "nme": "applyTo",
+            "acc": 0,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/particle/v1/ParticleFactoryRegistry;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "factories",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/particle/ParticleType<*>;Lnet/minecraft/client/particle/ParticleFactory<*>;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "constructors",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/particle/ParticleType<*>;Lnet/fabricmc/fabric/api/client/particle/v1/ParticleFactoryRegistry$PendingParticleFactory<*>;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/particle/ParticleManagerAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/client/particle/ParticleManagerAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getParticleAtlasTexture",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/client/texture/SpriteAtlasTexture;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;",
+                "vals": [
+                  "value",
+                  "particleAtlasTexture"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "getFactories",
+            "acc": 1025,
+            "dsc": "()Lit/unimi/dsi/fastutil/ints/Int2ObjectMap;",
+            "sig": "()Lit/unimi/dsi/fastutil/ints/Int2ObjectMap<Lnet/minecraft/client/particle/ParticleFactory<*>;>;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;",
+                "vals": [
+                  "value",
+                  "factories"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "getSpriteAwareFactories",
+            "acc": 1025,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<Lnet/minecraft/util/Identifier;Lnet/minecraft/client/particle/SpriteProvider;>;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;",
+                "vals": [
+                  "value",
+                  "spriteAwareFactories"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/particle/ParticleManager"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/particle/ParticleFactoryRegistryImpl$DirectParticleFactoryRegistry.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "net/fabricmc/fabric/impl/client/particle/ParticleFactoryRegistryImpl$DirectParticleFactoryRegistry",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lnet/minecraft/client/particle/ParticleManager;)V"
+          },
+          {
+            "nme": "register",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/particle/ParticleType;Lnet/minecraft/client/particle/ParticleFactory;)V",
+            "sig": "<T::Lnet/minecraft/particle/ParticleEffect;>(Lnet/minecraft/particle/ParticleType<TT;>;Lnet/minecraft/client/particle/ParticleFactory<TT;>;)V"
+          },
+          {
+            "nme": "register",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/particle/ParticleType;Lnet/fabricmc/fabric/api/client/particle/v1/ParticleFactoryRegistry$PendingParticleFactory;)V",
+            "sig": "<T::Lnet/minecraft/particle/ParticleEffect;>(Lnet/minecraft/particle/ParticleType<TT;>;Lnet/fabricmc/fabric/api/client/particle/v1/ParticleFactoryRegistry$PendingParticleFactory<TT;>;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "particleManager",
+            "dsc": "Lnet/minecraft/client/particle/ParticleManager;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/particle/v1/ParticleRenderEvents.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/client/particle/v1/ParticleRenderEvents",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lambda$static$1",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/particle/v1/ParticleRenderEvents$AllowBlockDustTint;)Lnet/fabricmc/fabric/api/client/particle/v1/ParticleRenderEvents$AllowBlockDustTint;"
+          },
+          {
+            "nme": "lambda$static$0",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/particle/v1/ParticleRenderEvents$AllowBlockDustTint;Lnet/minecraft/block/BlockState;Lnet/minecraft/client/world/ClientWorld;Lnet/minecraft/util/math/BlockPos;)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "ALLOW_BLOCK_DUST_TINT",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/particle/v1/ParticleRenderEvents$AllowBlockDustTint;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/particle/v1/FabricParticleTypes$3.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "net/fabricmc/fabric/api/particle/v1/FabricParticleTypes$3",
+        "super": "net/minecraft/particle/ParticleType",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(ZLjava/util/function/Function;Ljava/util/function/Function;)V"
+          },
+          {
+            "nme": "getCodec",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/serialization/MapCodec;",
+            "sig": "()Lcom/mojang/serialization/MapCodec<TT;>;"
+          },
+          {
+            "nme": "getPacketCodec",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/network/codec/PacketCodec;",
+            "sig": "()Lnet/minecraft/network/codec/PacketCodec<-Lnet/minecraft/network/RegistryByteBuf;TT;>;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4112,
+            "nme": "val$codecGetter",
+            "dsc": "Ljava/util/function/Function;"
+          },
+          {
+            "acc": 4112,
+            "nme": "val$packetCodecGetter",
+            "dsc": "Ljava/util/function/Function;"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "motherhack-recode-fabric",
+  "version": "1.1-recode",
+  "name": "MotherHack",
+  "description": "",
+  "authors": ["Dmitriy Fimozov"],
+  "contact": {},
+  "license": "GPL-3.0",
+  "icon": "assets/motherhack/logo.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "fun.motherhack.MotherHack"
+    ]
+  },
+  "mixins": [
+    "motherhack-recode.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.10",
+    "minecraft": "1.21.4"
+  }
+}

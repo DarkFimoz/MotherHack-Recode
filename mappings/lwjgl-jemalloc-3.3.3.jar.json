@@ -1,0 +1,2437 @@
+{
+  "md5": "a8ffc7d8a0d54981f1d7b5c2a40acf01",
+  "sha2": "b543467b7ff3c6920539a88ee602d34098628be5",
+  "sha256": "e99e31269e6678a4bfc62ef24c50a481c01cbdd004861ece9a59ba12768c6516",
+  "contents": {
+    "classes": {
+      "org/lwjgl/system/jemalloc/package-info.class": {
+        "ver": 52,
+        "acc": 5632,
+        "nme": "org/lwjgl/system/jemalloc/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lorg/lwjgl/system/NonnullDefault;"
+          }
+        ]
+      },
+      "org/lwjgl/system/jemalloc/ExtentDestroy.class": {
+        "ver": 52,
+        "acc": 1057,
+        "nme": "org/lwjgl/system/jemalloc/ExtentDestroy",
+        "super": "org/lwjgl/system/Callback",
+        "mthds": [
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "(J)Lorg/lwjgl/system/jemalloc/ExtentDestroy;"
+          },
+          {
+            "nme": "createSafe",
+            "acc": 9,
+            "dsc": "(J)Lorg/lwjgl/system/jemalloc/ExtentDestroy;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "(Lorg/lwjgl/system/jemalloc/ExtentDestroyI;)Lorg/lwjgl/system/jemalloc/ExtentDestroy;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(J)V"
+          }
+        ],
+        "flds": []
+      },
+      "org/lwjgl/system/jemalloc/ExtentSplitI.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "org/lwjgl/system/jemalloc/ExtentSplitI",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getCallInterface",
+            "acc": 1,
+            "dsc": "()Lorg/lwjgl/system/libffi/FFICIF;"
+          },
+          {
+            "nme": "callback",
+            "acc": 1,
+            "dsc": "(JJ)V"
+          },
+          {
+            "nme": "invoke",
+            "acc": 1025,
+            "dsc": "(JJJJJZI)Z",
+            "vanns": [
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "bool"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "CIF",
+            "dsc": "Lorg/lwjgl/system/libffi/FFICIF;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lorg/lwjgl/system/NativeType;",
+            "vals": [
+              "value",
+              "extent_split_t"
+            ]
+          }
+        ]
+      },
+      "org/lwjgl/system/jemalloc/ExtentDecommit.class": {
+        "ver": 52,
+        "acc": 1057,
+        "nme": "org/lwjgl/system/jemalloc/ExtentDecommit",
+        "super": "org/lwjgl/system/Callback",
+        "mthds": [
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "(J)Lorg/lwjgl/system/jemalloc/ExtentDecommit;"
+          },
+          {
+            "nme": "createSafe",
+            "acc": 9,
+            "dsc": "(J)Lorg/lwjgl/system/jemalloc/ExtentDecommit;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "(Lorg/lwjgl/system/jemalloc/ExtentDecommitI;)Lorg/lwjgl/system/jemalloc/ExtentDecommit;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(J)V"
+          }
+        ],
+        "flds": []
+      },
+      "org/lwjgl/system/jemalloc/JEmalloc$Functions.class": {
+        "ver": 52,
+        "acc": 49,
+        "nme": "org/lwjgl/system/jemalloc/JEmalloc$Functions",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "malloc_message",
+            "dsc": "J"
+          },
+          {
+            "acc": 25,
+            "nme": "malloc",
+            "dsc": "J"
+          },
+          {
+            "acc": 25,
+            "nme": "calloc",
+            "dsc": "J"
+          },
+          {
+            "acc": 25,
+            "nme": "posix_memalign",
+            "dsc": "J"
+          },
+          {
+            "acc": 25,
+            "nme": "aligned_alloc",
+            "dsc": "J"
+          },
+          {
+            "acc": 25,
+            "nme": "realloc",
+            "dsc": "J"
+          },
+          {
+            "acc": 25,
+            "nme": "free",
+            "dsc": "J"
+          },
+          {
+            "acc": 25,
+            "nme": "free_sized",
+            "dsc": "J"
+          },
+          {
+            "acc": 25,
+            "nme": "free_aligned_sized",
+            "dsc": "J"
+          },
+          {
+            "acc": 25,
+            "nme": "mallocx",
+            "dsc": "J"
+          },
+          {
+            "acc": 25,
+            "nme": "rallocx",
+            "dsc": "J"
+          },
+          {
+            "acc": 25,
+            "nme": "xallocx",
+            "dsc": "J"
+          },
+          {
+            "acc": 25,
+            "nme": "sallocx",
+            "dsc": "J"
+          },
+          {
+            "acc": 25,
+            "nme": "dallocx",
+            "dsc": "J"
+          },
+          {
+            "acc": 25,
+            "nme": "sdallocx",
+            "dsc": "J"
+          },
+          {
+            "acc": 25,
+            "nme": "nallocx",
+            "dsc": "J"
+          },
+          {
+            "acc": 25,
+            "nme": "mallctl",
+            "dsc": "J"
+          },
+          {
+            "acc": 25,
+            "nme": "mallctlnametomib",
+            "dsc": "J"
+          },
+          {
+            "acc": 25,
+            "nme": "mallctlbymib",
+            "dsc": "J"
+          },
+          {
+            "acc": 25,
+            "nme": "malloc_stats_print",
+            "dsc": "J"
+          },
+          {
+            "acc": 25,
+            "nme": "malloc_usable_size",
+            "dsc": "J"
+          }
+        ]
+      },
+      "org/lwjgl/system/jemalloc/ExtentAlloc.class": {
+        "ver": 52,
+        "acc": 1057,
+        "nme": "org/lwjgl/system/jemalloc/ExtentAlloc",
+        "super": "org/lwjgl/system/Callback",
+        "mthds": [
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "(J)Lorg/lwjgl/system/jemalloc/ExtentAlloc;"
+          },
+          {
+            "nme": "createSafe",
+            "acc": 9,
+            "dsc": "(J)Lorg/lwjgl/system/jemalloc/ExtentAlloc;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "(Lorg/lwjgl/system/jemalloc/ExtentAllocI;)Lorg/lwjgl/system/jemalloc/ExtentAlloc;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(J)V"
+          }
+        ],
+        "flds": []
+      },
+      "org/lwjgl/system/jemalloc/ExtentCommit$Container.class": {
+        "ver": 52,
+        "acc": 48,
+        "nme": "org/lwjgl/system/jemalloc/ExtentCommit$Container",
+        "super": "org/lwjgl/system/jemalloc/ExtentCommit",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(JLorg/lwjgl/system/jemalloc/ExtentCommitI;)V"
+          },
+          {
+            "nme": "invoke",
+            "acc": 1,
+            "dsc": "(JJJJJI)Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "delegate",
+            "dsc": "Lorg/lwjgl/system/jemalloc/ExtentCommitI;"
+          }
+        ]
+      },
+      "org/lwjgl/system/jemalloc/ExtentCommit.class": {
+        "ver": 52,
+        "acc": 1057,
+        "nme": "org/lwjgl/system/jemalloc/ExtentCommit",
+        "super": "org/lwjgl/system/Callback",
+        "mthds": [
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "(J)Lorg/lwjgl/system/jemalloc/ExtentCommit;"
+          },
+          {
+            "nme": "createSafe",
+            "acc": 9,
+            "dsc": "(J)Lorg/lwjgl/system/jemalloc/ExtentCommit;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "(Lorg/lwjgl/system/jemalloc/ExtentCommitI;)Lorg/lwjgl/system/jemalloc/ExtentCommit;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(J)V"
+          }
+        ],
+        "flds": []
+      },
+      "org/lwjgl/system/jemalloc/ExtentDalloc.class": {
+        "ver": 52,
+        "acc": 1057,
+        "nme": "org/lwjgl/system/jemalloc/ExtentDalloc",
+        "super": "org/lwjgl/system/Callback",
+        "mthds": [
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "(J)Lorg/lwjgl/system/jemalloc/ExtentDalloc;"
+          },
+          {
+            "nme": "createSafe",
+            "acc": 9,
+            "dsc": "(J)Lorg/lwjgl/system/jemalloc/ExtentDalloc;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "(Lorg/lwjgl/system/jemalloc/ExtentDallocI;)Lorg/lwjgl/system/jemalloc/ExtentDalloc;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(J)V"
+          }
+        ],
+        "flds": []
+      },
+      "org/lwjgl/system/jemalloc/ExtentDestroyI.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "org/lwjgl/system/jemalloc/ExtentDestroyI",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getCallInterface",
+            "acc": 1,
+            "dsc": "()Lorg/lwjgl/system/libffi/FFICIF;"
+          },
+          {
+            "nme": "callback",
+            "acc": 1,
+            "dsc": "(JJ)V"
+          },
+          {
+            "nme": "invoke",
+            "acc": 1025,
+            "dsc": "(JJJZI)Z",
+            "vanns": [
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "bool"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "CIF",
+            "dsc": "Lorg/lwjgl/system/libffi/FFICIF;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lorg/lwjgl/system/NativeType;",
+            "vals": [
+              "value",
+              "extent_destroy_t"
+            ]
+          }
+        ]
+      },
+      "org/lwjgl/system/jemalloc/ExtentAllocI.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "org/lwjgl/system/jemalloc/ExtentAllocI",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getCallInterface",
+            "acc": 1,
+            "dsc": "()Lorg/lwjgl/system/libffi/FFICIF;"
+          },
+          {
+            "nme": "callback",
+            "acc": 1,
+            "dsc": "(JJ)V"
+          },
+          {
+            "nme": "invoke",
+            "acc": 1025,
+            "dsc": "(JJJJJJI)J",
+            "vanns": [
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "void *"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "CIF",
+            "dsc": "Lorg/lwjgl/system/libffi/FFICIF;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lorg/lwjgl/system/NativeType;",
+            "vals": [
+              "value",
+              "extent_alloc_t"
+            ]
+          }
+        ]
+      },
+      "org/lwjgl/system/jemalloc/ExtentDalloc$Container.class": {
+        "ver": 52,
+        "acc": 48,
+        "nme": "org/lwjgl/system/jemalloc/ExtentDalloc$Container",
+        "super": "org/lwjgl/system/jemalloc/ExtentDalloc",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(JLorg/lwjgl/system/jemalloc/ExtentDallocI;)V"
+          },
+          {
+            "nme": "invoke",
+            "acc": 1,
+            "dsc": "(JJJZI)Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "delegate",
+            "dsc": "Lorg/lwjgl/system/jemalloc/ExtentDallocI;"
+          }
+        ]
+      },
+      "org/lwjgl/system/jemalloc/MallocMessageCallback$Container.class": {
+        "ver": 52,
+        "acc": 48,
+        "nme": "org/lwjgl/system/jemalloc/MallocMessageCallback$Container",
+        "super": "org/lwjgl/system/jemalloc/MallocMessageCallback",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(JLorg/lwjgl/system/jemalloc/MallocMessageCallbackI;)V"
+          },
+          {
+            "nme": "invoke",
+            "acc": 1,
+            "dsc": "(JJ)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "delegate",
+            "dsc": "Lorg/lwjgl/system/jemalloc/MallocMessageCallbackI;"
+          }
+        ]
+      },
+      "org/lwjgl/system/jemalloc/ExtentDecommit$Container.class": {
+        "ver": 52,
+        "acc": 48,
+        "nme": "org/lwjgl/system/jemalloc/ExtentDecommit$Container",
+        "super": "org/lwjgl/system/jemalloc/ExtentDecommit",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(JLorg/lwjgl/system/jemalloc/ExtentDecommitI;)V"
+          },
+          {
+            "nme": "invoke",
+            "acc": 1,
+            "dsc": "(JJJJJI)Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "delegate",
+            "dsc": "Lorg/lwjgl/system/jemalloc/ExtentDecommitI;"
+          }
+        ]
+      },
+      "org/lwjgl/system/jemalloc/ExtentMergeI.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "org/lwjgl/system/jemalloc/ExtentMergeI",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getCallInterface",
+            "acc": 1,
+            "dsc": "()Lorg/lwjgl/system/libffi/FFICIF;"
+          },
+          {
+            "nme": "callback",
+            "acc": 1,
+            "dsc": "(JJ)V"
+          },
+          {
+            "nme": "invoke",
+            "acc": 1025,
+            "dsc": "(JJJJJZI)Z",
+            "vanns": [
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "bool"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "CIF",
+            "dsc": "Lorg/lwjgl/system/libffi/FFICIF;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lorg/lwjgl/system/NativeType;",
+            "vals": [
+              "value",
+              "extent_merge_t"
+            ]
+          }
+        ]
+      },
+      "org/lwjgl/system/jemalloc/ExtentPurge$Container.class": {
+        "ver": 52,
+        "acc": 48,
+        "nme": "org/lwjgl/system/jemalloc/ExtentPurge$Container",
+        "super": "org/lwjgl/system/jemalloc/ExtentPurge",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(JLorg/lwjgl/system/jemalloc/ExtentPurgeI;)V"
+          },
+          {
+            "nme": "invoke",
+            "acc": 1,
+            "dsc": "(JJJJJI)Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "delegate",
+            "dsc": "Lorg/lwjgl/system/jemalloc/ExtentPurgeI;"
+          }
+        ]
+      },
+      "META-INF/versions/9/module-info.class": {
+        "ver": 53,
+        "acc": 32768,
+        "nme": "module-info",
+        "mthds": [],
+        "flds": []
+      },
+      "org/lwjgl/system/jemalloc/ExtentMerge$Container.class": {
+        "ver": 52,
+        "acc": 48,
+        "nme": "org/lwjgl/system/jemalloc/ExtentMerge$Container",
+        "super": "org/lwjgl/system/jemalloc/ExtentMerge",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(JLorg/lwjgl/system/jemalloc/ExtentMergeI;)V"
+          },
+          {
+            "nme": "invoke",
+            "acc": 1,
+            "dsc": "(JJJJJZI)Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "delegate",
+            "dsc": "Lorg/lwjgl/system/jemalloc/ExtentMergeI;"
+          }
+        ]
+      },
+      "org/lwjgl/system/jemalloc/ExtentAlloc$Container.class": {
+        "ver": 52,
+        "acc": 48,
+        "nme": "org/lwjgl/system/jemalloc/ExtentAlloc$Container",
+        "super": "org/lwjgl/system/jemalloc/ExtentAlloc",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(JLorg/lwjgl/system/jemalloc/ExtentAllocI;)V"
+          },
+          {
+            "nme": "invoke",
+            "acc": 1,
+            "dsc": "(JJJJJJI)J"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "delegate",
+            "dsc": "Lorg/lwjgl/system/jemalloc/ExtentAllocI;"
+          }
+        ]
+      },
+      "org/lwjgl/system/jemalloc/ExtentSplit$Container.class": {
+        "ver": 52,
+        "acc": 48,
+        "nme": "org/lwjgl/system/jemalloc/ExtentSplit$Container",
+        "super": "org/lwjgl/system/jemalloc/ExtentSplit",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(JLorg/lwjgl/system/jemalloc/ExtentSplitI;)V"
+          },
+          {
+            "nme": "invoke",
+            "acc": 1,
+            "dsc": "(JJJJJZI)Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "delegate",
+            "dsc": "Lorg/lwjgl/system/jemalloc/ExtentSplitI;"
+          }
+        ]
+      },
+      "org/lwjgl/system/jemalloc/JEmalloc.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/lwjgl/system/jemalloc/JEmalloc",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getLibrary",
+            "acc": 9,
+            "dsc": "()Lorg/lwjgl/system/SharedLibrary;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "je_malloc_message",
+            "acc": 9,
+            "dsc": "()Lorg/lwjgl/PointerBuffer;",
+            "vanns": [
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "void (*) (void *, char const *) *"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "nje_malloc",
+            "acc": 9,
+            "dsc": "(J)J"
+          },
+          {
+            "nme": "je_malloc",
+            "acc": 9,
+            "dsc": "(J)Ljava/nio/ByteBuffer;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              },
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "void *"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "nje_calloc",
+            "acc": 9,
+            "dsc": "(JJ)J"
+          },
+          {
+            "nme": "je_calloc",
+            "acc": 9,
+            "dsc": "(JJ)Ljava/nio/ByteBuffer;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              },
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "void *"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "nje_posix_memalign",
+            "acc": 9,
+            "dsc": "(JJJ)I"
+          },
+          {
+            "nme": "je_posix_memalign",
+            "acc": 9,
+            "dsc": "(Lorg/lwjgl/PointerBuffer;JJ)I"
+          },
+          {
+            "nme": "nje_aligned_alloc",
+            "acc": 9,
+            "dsc": "(JJ)J"
+          },
+          {
+            "nme": "je_aligned_alloc",
+            "acc": 9,
+            "dsc": "(JJ)Ljava/nio/ByteBuffer;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              },
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "void *"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "nje_realloc",
+            "acc": 9,
+            "dsc": "(JJ)J"
+          },
+          {
+            "nme": "je_realloc",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;J)Ljava/nio/ByteBuffer;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              },
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "void *"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "nje_free",
+            "acc": 9,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "je_free",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;)V"
+          },
+          {
+            "nme": "je_free",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ShortBuffer;)V"
+          },
+          {
+            "nme": "je_free",
+            "acc": 9,
+            "dsc": "(Ljava/nio/IntBuffer;)V"
+          },
+          {
+            "nme": "je_free",
+            "acc": 9,
+            "dsc": "(Ljava/nio/LongBuffer;)V"
+          },
+          {
+            "nme": "je_free",
+            "acc": 9,
+            "dsc": "(Ljava/nio/FloatBuffer;)V"
+          },
+          {
+            "nme": "je_free",
+            "acc": 9,
+            "dsc": "(Ljava/nio/DoubleBuffer;)V"
+          },
+          {
+            "nme": "je_free",
+            "acc": 9,
+            "dsc": "(Lorg/lwjgl/PointerBuffer;)V"
+          },
+          {
+            "nme": "nje_free_sized",
+            "acc": 9,
+            "dsc": "(JJ)V"
+          },
+          {
+            "nme": "je_free_sized",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;)V"
+          },
+          {
+            "nme": "je_free_sized",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ShortBuffer;)V"
+          },
+          {
+            "nme": "je_free_sized",
+            "acc": 9,
+            "dsc": "(Ljava/nio/IntBuffer;)V"
+          },
+          {
+            "nme": "je_free_sized",
+            "acc": 9,
+            "dsc": "(Ljava/nio/LongBuffer;)V"
+          },
+          {
+            "nme": "je_free_sized",
+            "acc": 9,
+            "dsc": "(Ljava/nio/FloatBuffer;)V"
+          },
+          {
+            "nme": "je_free_sized",
+            "acc": 9,
+            "dsc": "(Ljava/nio/DoubleBuffer;)V"
+          },
+          {
+            "nme": "je_free_sized",
+            "acc": 9,
+            "dsc": "(Lorg/lwjgl/PointerBuffer;)V"
+          },
+          {
+            "nme": "nje_free_aligned_sized",
+            "acc": 9,
+            "dsc": "(JJJ)V"
+          },
+          {
+            "nme": "je_free_aligned_sized",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;J)V"
+          },
+          {
+            "nme": "je_free_aligned_sized",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ShortBuffer;J)V"
+          },
+          {
+            "nme": "je_free_aligned_sized",
+            "acc": 9,
+            "dsc": "(Ljava/nio/IntBuffer;J)V"
+          },
+          {
+            "nme": "je_free_aligned_sized",
+            "acc": 9,
+            "dsc": "(Ljava/nio/LongBuffer;J)V"
+          },
+          {
+            "nme": "je_free_aligned_sized",
+            "acc": 9,
+            "dsc": "(Ljava/nio/FloatBuffer;J)V"
+          },
+          {
+            "nme": "je_free_aligned_sized",
+            "acc": 9,
+            "dsc": "(Ljava/nio/DoubleBuffer;J)V"
+          },
+          {
+            "nme": "je_free_aligned_sized",
+            "acc": 9,
+            "dsc": "(Lorg/lwjgl/PointerBuffer;J)V"
+          },
+          {
+            "nme": "nje_mallocx",
+            "acc": 9,
+            "dsc": "(JI)J"
+          },
+          {
+            "nme": "je_mallocx",
+            "acc": 9,
+            "dsc": "(JI)Ljava/nio/ByteBuffer;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              },
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "void *"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "nje_rallocx",
+            "acc": 9,
+            "dsc": "(JJI)J"
+          },
+          {
+            "nme": "je_rallocx",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;JI)Ljava/nio/ByteBuffer;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              },
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "void *"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "nje_xallocx",
+            "acc": 9,
+            "dsc": "(JJJI)J"
+          },
+          {
+            "nme": "je_xallocx",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;JJI)J",
+            "vanns": [
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "size_t"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "nje_sallocx",
+            "acc": 9,
+            "dsc": "(JI)J"
+          },
+          {
+            "nme": "je_sallocx",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;I)J",
+            "vanns": [
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "size_t"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "nje_dallocx",
+            "acc": 9,
+            "dsc": "(JI)V"
+          },
+          {
+            "nme": "je_dallocx",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;I)V"
+          },
+          {
+            "nme": "je_dallocx",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ShortBuffer;I)V"
+          },
+          {
+            "nme": "je_dallocx",
+            "acc": 9,
+            "dsc": "(Ljava/nio/IntBuffer;I)V"
+          },
+          {
+            "nme": "je_dallocx",
+            "acc": 9,
+            "dsc": "(Ljava/nio/LongBuffer;I)V"
+          },
+          {
+            "nme": "je_dallocx",
+            "acc": 9,
+            "dsc": "(Ljava/nio/FloatBuffer;I)V"
+          },
+          {
+            "nme": "je_dallocx",
+            "acc": 9,
+            "dsc": "(Ljava/nio/DoubleBuffer;I)V"
+          },
+          {
+            "nme": "je_dallocx",
+            "acc": 9,
+            "dsc": "(Lorg/lwjgl/PointerBuffer;I)V"
+          },
+          {
+            "nme": "nje_sdallocx",
+            "acc": 9,
+            "dsc": "(JJI)V"
+          },
+          {
+            "nme": "je_sdallocx",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;I)V"
+          },
+          {
+            "nme": "je_sdallocx",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ShortBuffer;I)V"
+          },
+          {
+            "nme": "je_sdallocx",
+            "acc": 9,
+            "dsc": "(Ljava/nio/IntBuffer;I)V"
+          },
+          {
+            "nme": "je_sdallocx",
+            "acc": 9,
+            "dsc": "(Ljava/nio/LongBuffer;I)V"
+          },
+          {
+            "nme": "je_sdallocx",
+            "acc": 9,
+            "dsc": "(Ljava/nio/FloatBuffer;I)V"
+          },
+          {
+            "nme": "je_sdallocx",
+            "acc": 9,
+            "dsc": "(Ljava/nio/DoubleBuffer;I)V"
+          },
+          {
+            "nme": "je_sdallocx",
+            "acc": 9,
+            "dsc": "(Lorg/lwjgl/PointerBuffer;I)V"
+          },
+          {
+            "nme": "nje_nallocx",
+            "acc": 9,
+            "dsc": "(JI)J"
+          },
+          {
+            "nme": "je_nallocx",
+            "acc": 9,
+            "dsc": "(JI)Ljava/nio/ByteBuffer;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              },
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "void *"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "nje_mallctl",
+            "acc": 9,
+            "dsc": "(JJJJJ)I"
+          },
+          {
+            "nme": "je_mallctl",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;Lorg/lwjgl/PointerBuffer;Ljava/nio/ByteBuffer;)I"
+          },
+          {
+            "nme": "je_mallctl",
+            "acc": 9,
+            "dsc": "(Ljava/lang/CharSequence;Ljava/nio/ByteBuffer;Lorg/lwjgl/PointerBuffer;Ljava/nio/ByteBuffer;)I"
+          },
+          {
+            "nme": "nje_mallctlnametomib",
+            "acc": 9,
+            "dsc": "(JJJ)I"
+          },
+          {
+            "nme": "je_mallctlnametomib",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;Lorg/lwjgl/PointerBuffer;Lorg/lwjgl/PointerBuffer;)I"
+          },
+          {
+            "nme": "je_mallctlnametomib",
+            "acc": 9,
+            "dsc": "(Ljava/lang/CharSequence;Lorg/lwjgl/PointerBuffer;Lorg/lwjgl/PointerBuffer;)I"
+          },
+          {
+            "nme": "nje_mallctlbymib",
+            "acc": 9,
+            "dsc": "(JJJJJJ)I"
+          },
+          {
+            "nme": "je_mallctlbymib",
+            "acc": 9,
+            "dsc": "(Lorg/lwjgl/PointerBuffer;Ljava/nio/ByteBuffer;Lorg/lwjgl/PointerBuffer;Ljava/nio/ByteBuffer;)I"
+          },
+          {
+            "nme": "nje_malloc_stats_print",
+            "acc": 9,
+            "dsc": "(JJJ)V"
+          },
+          {
+            "nme": "je_malloc_stats_print",
+            "acc": 9,
+            "dsc": "(Lorg/lwjgl/system/jemalloc/MallocMessageCallbackI;JLjava/nio/ByteBuffer;)V"
+          },
+          {
+            "nme": "je_malloc_stats_print",
+            "acc": 9,
+            "dsc": "(Lorg/lwjgl/system/jemalloc/MallocMessageCallbackI;JLjava/lang/CharSequence;)V"
+          },
+          {
+            "nme": "nje_malloc_usable_size",
+            "acc": 9,
+            "dsc": "(J)J"
+          },
+          {
+            "nme": "je_malloc_usable_size",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;)J",
+            "vanns": [
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "size_t"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "MALLOCX_LG_ALIGN",
+            "acc": 9,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "MALLOCX_ALIGN",
+            "acc": 9,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "MALLOCX_TCACHE",
+            "acc": 9,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "MALLOCX_ARENA",
+            "acc": 9,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "access$000",
+            "acc": 4104,
+            "dsc": "()Lorg/lwjgl/system/SharedLibrary;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "JEMALLOC",
+            "dsc": "Lorg/lwjgl/system/SharedLibrary;"
+          },
+          {
+            "acc": 25,
+            "nme": "JEMALLOC_VERSION_MAJOR",
+            "dsc": "I",
+            "val": 5
+          },
+          {
+            "acc": 25,
+            "nme": "JEMALLOC_VERSION_MINOR",
+            "dsc": "I",
+            "val": 2
+          },
+          {
+            "acc": 25,
+            "nme": "JEMALLOC_VERSION_BUGFIX",
+            "dsc": "I",
+            "val": 1
+          },
+          {
+            "acc": 25,
+            "nme": "JEMALLOC_VERSION_NREV",
+            "dsc": "I",
+            "val": 0
+          },
+          {
+            "acc": 25,
+            "nme": "JEMALLOC_VERSION_GID",
+            "dsc": "Ljava/lang/String;",
+            "val": "ea6b3e973b477b8061e0076bb257dbd7f3faa756"
+          },
+          {
+            "acc": 25,
+            "nme": "JEMALLOC_VERSION",
+            "dsc": "Ljava/lang/String;",
+            "val": "5.2.1-0-gea6b3e973b477b8061e0076bb257dbd7f3faa756"
+          },
+          {
+            "acc": 25,
+            "nme": "MALLOCX_ZERO",
+            "dsc": "I",
+            "val": 64
+          },
+          {
+            "acc": 25,
+            "nme": "MALLOCX_TCACHE_NONE",
+            "dsc": "I"
+          },
+          {
+            "acc": 25,
+            "nme": "MALLCTL_ARENAS_ALL",
+            "dsc": "I",
+            "val": 4096
+          },
+          {
+            "acc": 25,
+            "nme": "MALLCTL_ARENAS_DESTROYED",
+            "dsc": "I",
+            "val": 4097
+          }
+        ]
+      },
+      "org/lwjgl/system/jemalloc/ExtentHooks.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/lwjgl/system/jemalloc/ExtentHooks",
+        "super": "org/lwjgl/system/Struct",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(JLjava/nio/ByteBuffer;)V"
+          },
+          {
+            "nme": "create",
+            "acc": 4,
+            "dsc": "(JLjava/nio/ByteBuffer;)Lorg/lwjgl/system/jemalloc/ExtentHooks;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;)V"
+          },
+          {
+            "nme": "sizeof",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "alloc",
+            "acc": 1,
+            "dsc": "()Lorg/lwjgl/system/jemalloc/ExtentAlloc;",
+            "vanns": [
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "extent_alloc_t"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "dalloc",
+            "acc": 1,
+            "dsc": "()Lorg/lwjgl/system/jemalloc/ExtentDalloc;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              },
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "extent_dalloc_t"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "destroy",
+            "acc": 1,
+            "dsc": "()Lorg/lwjgl/system/jemalloc/ExtentDestroy;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              },
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "extent_destroy_t"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "commit",
+            "acc": 1,
+            "dsc": "()Lorg/lwjgl/system/jemalloc/ExtentCommit;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              },
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "extent_commit_t"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "decommit",
+            "acc": 1,
+            "dsc": "()Lorg/lwjgl/system/jemalloc/ExtentDecommit;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              },
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "extent_decommit_t"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "purge_lazy",
+            "acc": 1,
+            "dsc": "()Lorg/lwjgl/system/jemalloc/ExtentPurge;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              },
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "extent_purge_t"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "purge_forced",
+            "acc": 1,
+            "dsc": "()Lorg/lwjgl/system/jemalloc/ExtentPurge;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              },
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "extent_purge_t"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "split",
+            "acc": 1,
+            "dsc": "()Lorg/lwjgl/system/jemalloc/ExtentSplit;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              },
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "extent_split_t"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "merge",
+            "acc": 1,
+            "dsc": "()Lorg/lwjgl/system/jemalloc/ExtentMerge;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              },
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "extent_merge_t"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "alloc",
+            "acc": 1,
+            "dsc": "(Lorg/lwjgl/system/jemalloc/ExtentAllocI;)Lorg/lwjgl/system/jemalloc/ExtentHooks;"
+          },
+          {
+            "nme": "dalloc",
+            "acc": 1,
+            "dsc": "(Lorg/lwjgl/system/jemalloc/ExtentDallocI;)Lorg/lwjgl/system/jemalloc/ExtentHooks;"
+          },
+          {
+            "nme": "destroy",
+            "acc": 1,
+            "dsc": "(Lorg/lwjgl/system/jemalloc/ExtentDestroyI;)Lorg/lwjgl/system/jemalloc/ExtentHooks;"
+          },
+          {
+            "nme": "commit",
+            "acc": 1,
+            "dsc": "(Lorg/lwjgl/system/jemalloc/ExtentCommitI;)Lorg/lwjgl/system/jemalloc/ExtentHooks;"
+          },
+          {
+            "nme": "decommit",
+            "acc": 1,
+            "dsc": "(Lorg/lwjgl/system/jemalloc/ExtentDecommitI;)Lorg/lwjgl/system/jemalloc/ExtentHooks;"
+          },
+          {
+            "nme": "purge_lazy",
+            "acc": 1,
+            "dsc": "(Lorg/lwjgl/system/jemalloc/ExtentPurgeI;)Lorg/lwjgl/system/jemalloc/ExtentHooks;"
+          },
+          {
+            "nme": "purge_forced",
+            "acc": 1,
+            "dsc": "(Lorg/lwjgl/system/jemalloc/ExtentPurgeI;)Lorg/lwjgl/system/jemalloc/ExtentHooks;"
+          },
+          {
+            "nme": "split",
+            "acc": 1,
+            "dsc": "(Lorg/lwjgl/system/jemalloc/ExtentSplitI;)Lorg/lwjgl/system/jemalloc/ExtentHooks;"
+          },
+          {
+            "nme": "merge",
+            "acc": 1,
+            "dsc": "(Lorg/lwjgl/system/jemalloc/ExtentMergeI;)Lorg/lwjgl/system/jemalloc/ExtentHooks;"
+          },
+          {
+            "nme": "set",
+            "acc": 1,
+            "dsc": "(Lorg/lwjgl/system/jemalloc/ExtentAllocI;Lorg/lwjgl/system/jemalloc/ExtentDallocI;Lorg/lwjgl/system/jemalloc/ExtentDestroyI;Lorg/lwjgl/system/jemalloc/ExtentCommitI;Lorg/lwjgl/system/jemalloc/ExtentDecommitI;Lorg/lwjgl/system/jemalloc/ExtentPurgeI;Lorg/lwjgl/system/jemalloc/ExtentPurgeI;Lorg/lwjgl/system/jemalloc/ExtentSplitI;Lorg/lwjgl/system/jemalloc/ExtentMergeI;)Lorg/lwjgl/system/jemalloc/ExtentHooks;"
+          },
+          {
+            "nme": "set",
+            "acc": 1,
+            "dsc": "(Lorg/lwjgl/system/jemalloc/ExtentHooks;)Lorg/lwjgl/system/jemalloc/ExtentHooks;"
+          },
+          {
+            "nme": "malloc",
+            "acc": 9,
+            "dsc": "()Lorg/lwjgl/system/jemalloc/ExtentHooks;"
+          },
+          {
+            "nme": "calloc",
+            "acc": 9,
+            "dsc": "()Lorg/lwjgl/system/jemalloc/ExtentHooks;"
+          },
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "()Lorg/lwjgl/system/jemalloc/ExtentHooks;"
+          },
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "(J)Lorg/lwjgl/system/jemalloc/ExtentHooks;"
+          },
+          {
+            "nme": "createSafe",
+            "acc": 9,
+            "dsc": "(J)Lorg/lwjgl/system/jemalloc/ExtentHooks;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "mallocStack",
+            "acc": 131081,
+            "dsc": "()Lorg/lwjgl/system/jemalloc/ExtentHooks;",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "callocStack",
+            "acc": 131081,
+            "dsc": "()Lorg/lwjgl/system/jemalloc/ExtentHooks;",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "mallocStack",
+            "acc": 131081,
+            "dsc": "(Lorg/lwjgl/system/MemoryStack;)Lorg/lwjgl/system/jemalloc/ExtentHooks;",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "callocStack",
+            "acc": 131081,
+            "dsc": "(Lorg/lwjgl/system/MemoryStack;)Lorg/lwjgl/system/jemalloc/ExtentHooks;",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "malloc",
+            "acc": 9,
+            "dsc": "(Lorg/lwjgl/system/MemoryStack;)Lorg/lwjgl/system/jemalloc/ExtentHooks;"
+          },
+          {
+            "nme": "calloc",
+            "acc": 9,
+            "dsc": "(Lorg/lwjgl/system/MemoryStack;)Lorg/lwjgl/system/jemalloc/ExtentHooks;"
+          },
+          {
+            "nme": "nalloc",
+            "acc": 9,
+            "dsc": "(J)Lorg/lwjgl/system/jemalloc/ExtentAlloc;"
+          },
+          {
+            "nme": "ndalloc",
+            "acc": 9,
+            "dsc": "(J)Lorg/lwjgl/system/jemalloc/ExtentDalloc;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "ndestroy",
+            "acc": 9,
+            "dsc": "(J)Lorg/lwjgl/system/jemalloc/ExtentDestroy;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "ncommit",
+            "acc": 9,
+            "dsc": "(J)Lorg/lwjgl/system/jemalloc/ExtentCommit;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "ndecommit",
+            "acc": 9,
+            "dsc": "(J)Lorg/lwjgl/system/jemalloc/ExtentDecommit;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "npurge_lazy",
+            "acc": 9,
+            "dsc": "(J)Lorg/lwjgl/system/jemalloc/ExtentPurge;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "npurge_forced",
+            "acc": 9,
+            "dsc": "(J)Lorg/lwjgl/system/jemalloc/ExtentPurge;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "nsplit",
+            "acc": 9,
+            "dsc": "(J)Lorg/lwjgl/system/jemalloc/ExtentSplit;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "nmerge",
+            "acc": 9,
+            "dsc": "(J)Lorg/lwjgl/system/jemalloc/ExtentMerge;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "nalloc",
+            "acc": 9,
+            "dsc": "(JLorg/lwjgl/system/jemalloc/ExtentAllocI;)V"
+          },
+          {
+            "nme": "ndalloc",
+            "acc": 9,
+            "dsc": "(JLorg/lwjgl/system/jemalloc/ExtentDallocI;)V"
+          },
+          {
+            "nme": "ndestroy",
+            "acc": 9,
+            "dsc": "(JLorg/lwjgl/system/jemalloc/ExtentDestroyI;)V"
+          },
+          {
+            "nme": "ncommit",
+            "acc": 9,
+            "dsc": "(JLorg/lwjgl/system/jemalloc/ExtentCommitI;)V"
+          },
+          {
+            "nme": "ndecommit",
+            "acc": 9,
+            "dsc": "(JLorg/lwjgl/system/jemalloc/ExtentDecommitI;)V"
+          },
+          {
+            "nme": "npurge_lazy",
+            "acc": 9,
+            "dsc": "(JLorg/lwjgl/system/jemalloc/ExtentPurgeI;)V"
+          },
+          {
+            "nme": "npurge_forced",
+            "acc": 9,
+            "dsc": "(JLorg/lwjgl/system/jemalloc/ExtentPurgeI;)V"
+          },
+          {
+            "nme": "nsplit",
+            "acc": 9,
+            "dsc": "(JLorg/lwjgl/system/jemalloc/ExtentSplitI;)V"
+          },
+          {
+            "nme": "nmerge",
+            "acc": 9,
+            "dsc": "(JLorg/lwjgl/system/jemalloc/ExtentMergeI;)V"
+          },
+          {
+            "nme": "validate",
+            "acc": 9,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "create",
+            "acc": 4164,
+            "dsc": "(JLjava/nio/ByteBuffer;)Lorg/lwjgl/system/Struct;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "SIZEOF",
+            "dsc": "I"
+          },
+          {
+            "acc": 25,
+            "nme": "ALIGNOF",
+            "dsc": "I"
+          },
+          {
+            "acc": 25,
+            "nme": "ALLOC",
+            "dsc": "I"
+          },
+          {
+            "acc": 25,
+            "nme": "DALLOC",
+            "dsc": "I"
+          },
+          {
+            "acc": 25,
+            "nme": "DESTROY",
+            "dsc": "I"
+          },
+          {
+            "acc": 25,
+            "nme": "COMMIT",
+            "dsc": "I"
+          },
+          {
+            "acc": 25,
+            "nme": "DECOMMIT",
+            "dsc": "I"
+          },
+          {
+            "acc": 25,
+            "nme": "PURGE_LAZY",
+            "dsc": "I"
+          },
+          {
+            "acc": 25,
+            "nme": "PURGE_FORCED",
+            "dsc": "I"
+          },
+          {
+            "acc": 25,
+            "nme": "SPLIT",
+            "dsc": "I"
+          },
+          {
+            "acc": 25,
+            "nme": "MERGE",
+            "dsc": "I"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lorg/lwjgl/system/NativeType;",
+            "vals": [
+              "value",
+              "struct extent_hooks_t"
+            ]
+          }
+        ]
+      },
+      "org/lwjgl/system/jemalloc/ExtentCommitI.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "org/lwjgl/system/jemalloc/ExtentCommitI",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getCallInterface",
+            "acc": 1,
+            "dsc": "()Lorg/lwjgl/system/libffi/FFICIF;"
+          },
+          {
+            "nme": "callback",
+            "acc": 1,
+            "dsc": "(JJ)V"
+          },
+          {
+            "nme": "invoke",
+            "acc": 1025,
+            "dsc": "(JJJJJI)Z",
+            "vanns": [
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "bool"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "CIF",
+            "dsc": "Lorg/lwjgl/system/libffi/FFICIF;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lorg/lwjgl/system/NativeType;",
+            "vals": [
+              "value",
+              "extent_commit_t"
+            ]
+          }
+        ]
+      },
+      "org/lwjgl/system/jemalloc/ExtentSplit.class": {
+        "ver": 52,
+        "acc": 1057,
+        "nme": "org/lwjgl/system/jemalloc/ExtentSplit",
+        "super": "org/lwjgl/system/Callback",
+        "mthds": [
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "(J)Lorg/lwjgl/system/jemalloc/ExtentSplit;"
+          },
+          {
+            "nme": "createSafe",
+            "acc": 9,
+            "dsc": "(J)Lorg/lwjgl/system/jemalloc/ExtentSplit;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "(Lorg/lwjgl/system/jemalloc/ExtentSplitI;)Lorg/lwjgl/system/jemalloc/ExtentSplit;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(J)V"
+          }
+        ],
+        "flds": []
+      },
+      "org/lwjgl/system/jemalloc/MallocMessageCallbackI.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "org/lwjgl/system/jemalloc/MallocMessageCallbackI",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getCallInterface",
+            "acc": 1,
+            "dsc": "()Lorg/lwjgl/system/libffi/FFICIF;"
+          },
+          {
+            "nme": "callback",
+            "acc": 1,
+            "dsc": "(JJ)V"
+          },
+          {
+            "nme": "invoke",
+            "acc": 1025,
+            "dsc": "(JJ)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "CIF",
+            "dsc": "Lorg/lwjgl/system/libffi/FFICIF;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lorg/lwjgl/system/NativeType;",
+            "vals": [
+              "value",
+              "void (*) (void *, char const *)"
+            ]
+          }
+        ]
+      },
+      "org/lwjgl/system/jemalloc/ExtentDallocI.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "org/lwjgl/system/jemalloc/ExtentDallocI",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getCallInterface",
+            "acc": 1,
+            "dsc": "()Lorg/lwjgl/system/libffi/FFICIF;"
+          },
+          {
+            "nme": "callback",
+            "acc": 1,
+            "dsc": "(JJ)V"
+          },
+          {
+            "nme": "invoke",
+            "acc": 1025,
+            "dsc": "(JJJZI)Z",
+            "vanns": [
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "bool"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "CIF",
+            "dsc": "Lorg/lwjgl/system/libffi/FFICIF;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lorg/lwjgl/system/NativeType;",
+            "vals": [
+              "value",
+              "extent_dalloc_t"
+            ]
+          }
+        ]
+      },
+      "org/lwjgl/system/jemalloc/ExtentPurgeI.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "org/lwjgl/system/jemalloc/ExtentPurgeI",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getCallInterface",
+            "acc": 1,
+            "dsc": "()Lorg/lwjgl/system/libffi/FFICIF;"
+          },
+          {
+            "nme": "callback",
+            "acc": 1,
+            "dsc": "(JJ)V"
+          },
+          {
+            "nme": "invoke",
+            "acc": 1025,
+            "dsc": "(JJJJJI)Z",
+            "vanns": [
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "bool"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "CIF",
+            "dsc": "Lorg/lwjgl/system/libffi/FFICIF;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lorg/lwjgl/system/NativeType;",
+            "vals": [
+              "value",
+              "extent_purge_t"
+            ]
+          }
+        ]
+      },
+      "org/lwjgl/system/jemalloc/ExtentDestroy$Container.class": {
+        "ver": 52,
+        "acc": 48,
+        "nme": "org/lwjgl/system/jemalloc/ExtentDestroy$Container",
+        "super": "org/lwjgl/system/jemalloc/ExtentDestroy",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(JLorg/lwjgl/system/jemalloc/ExtentDestroyI;)V"
+          },
+          {
+            "nme": "invoke",
+            "acc": 1,
+            "dsc": "(JJJZI)Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "delegate",
+            "dsc": "Lorg/lwjgl/system/jemalloc/ExtentDestroyI;"
+          }
+        ]
+      },
+      "org/lwjgl/system/jemalloc/ExtentDecommitI.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "org/lwjgl/system/jemalloc/ExtentDecommitI",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getCallInterface",
+            "acc": 1,
+            "dsc": "()Lorg/lwjgl/system/libffi/FFICIF;"
+          },
+          {
+            "nme": "callback",
+            "acc": 1,
+            "dsc": "(JJ)V"
+          },
+          {
+            "nme": "invoke",
+            "acc": 1025,
+            "dsc": "(JJJJJI)Z",
+            "vanns": [
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "bool"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "CIF",
+            "dsc": "Lorg/lwjgl/system/libffi/FFICIF;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lorg/lwjgl/system/NativeType;",
+            "vals": [
+              "value",
+              "extent_decommit_t"
+            ]
+          }
+        ]
+      },
+      "org/lwjgl/system/jemalloc/ExtentMerge.class": {
+        "ver": 52,
+        "acc": 1057,
+        "nme": "org/lwjgl/system/jemalloc/ExtentMerge",
+        "super": "org/lwjgl/system/Callback",
+        "mthds": [
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "(J)Lorg/lwjgl/system/jemalloc/ExtentMerge;"
+          },
+          {
+            "nme": "createSafe",
+            "acc": 9,
+            "dsc": "(J)Lorg/lwjgl/system/jemalloc/ExtentMerge;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "(Lorg/lwjgl/system/jemalloc/ExtentMergeI;)Lorg/lwjgl/system/jemalloc/ExtentMerge;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(J)V"
+          }
+        ],
+        "flds": []
+      },
+      "org/lwjgl/system/jemalloc/ExtentPurge.class": {
+        "ver": 52,
+        "acc": 1057,
+        "nme": "org/lwjgl/system/jemalloc/ExtentPurge",
+        "super": "org/lwjgl/system/Callback",
+        "mthds": [
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "(J)Lorg/lwjgl/system/jemalloc/ExtentPurge;"
+          },
+          {
+            "nme": "createSafe",
+            "acc": 9,
+            "dsc": "(J)Lorg/lwjgl/system/jemalloc/ExtentPurge;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "(Lorg/lwjgl/system/jemalloc/ExtentPurgeI;)Lorg/lwjgl/system/jemalloc/ExtentPurge;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(J)V"
+          }
+        ],
+        "flds": []
+      },
+      "org/lwjgl/system/jemalloc/JEmallocAllocator.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/lwjgl/system/jemalloc/JEmallocAllocator",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getMalloc",
+            "acc": 1,
+            "dsc": "()J"
+          },
+          {
+            "nme": "getCalloc",
+            "acc": 1,
+            "dsc": "()J"
+          },
+          {
+            "nme": "getRealloc",
+            "acc": 1,
+            "dsc": "()J"
+          },
+          {
+            "nme": "getFree",
+            "acc": 1,
+            "dsc": "()J"
+          },
+          {
+            "nme": "getAlignedAlloc",
+            "acc": 1,
+            "dsc": "()J"
+          },
+          {
+            "nme": "getAlignedFree",
+            "acc": 1,
+            "dsc": "()J"
+          },
+          {
+            "nme": "malloc",
+            "acc": 1,
+            "dsc": "(J)J"
+          },
+          {
+            "nme": "calloc",
+            "acc": 1,
+            "dsc": "(JJ)J"
+          },
+          {
+            "nme": "realloc",
+            "acc": 1,
+            "dsc": "(JJ)J"
+          },
+          {
+            "nme": "free",
+            "acc": 1,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "aligned_alloc",
+            "acc": 1,
+            "dsc": "(JJ)J"
+          },
+          {
+            "nme": "aligned_free",
+            "acc": 1,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": []
+      },
+      "org/lwjgl/system/jemalloc/MallocMessageCallback.class": {
+        "ver": 52,
+        "acc": 1057,
+        "nme": "org/lwjgl/system/jemalloc/MallocMessageCallback",
+        "super": "org/lwjgl/system/Callback",
+        "mthds": [
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "(J)Lorg/lwjgl/system/jemalloc/MallocMessageCallback;"
+          },
+          {
+            "nme": "createSafe",
+            "acc": 9,
+            "dsc": "(J)Lorg/lwjgl/system/jemalloc/MallocMessageCallback;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "(Lorg/lwjgl/system/jemalloc/MallocMessageCallbackI;)Lorg/lwjgl/system/jemalloc/MallocMessageCallback;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "getMessage",
+            "acc": 9,
+            "dsc": "(J)Ljava/lang/String;"
+          }
+        ],
+        "flds": []
+      }
+    }
+  }
+}

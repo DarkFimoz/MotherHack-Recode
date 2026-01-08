@@ -1,0 +1,3759 @@
+{
+  "md5": "243f94f77c84274c13a7c8b475326785",
+  "sha2": "e9d32652644b4b585ec3e390f8db43595b370c0c",
+  "sha256": "f8ab6d7ff364275149daa3be9d147b72d15926a602fd1f53fcca6f52e974a665",
+  "contents": {
+    "classes": {
+      "net/fabricmc/fabric/mixin/registry/sync/IdListMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/registry/sync/IdListMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "fabric_clear",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "fabric_removeInner",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;)V",
+            "sig": "(TT;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Unique;"
+              }
+            ]
+          },
+          {
+            "nme": "fabric_remove",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V",
+            "sig": "(TT;)V"
+          },
+          {
+            "nme": "fabric_removeId",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "fabric_remapId",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "fabric_remapIds",
+            "acc": 1,
+            "dsc": "(Lit/unimi/dsi/fastutil/ints/Int2IntMap;)V"
+          },
+          {
+            "nme": "lambda$fabric_remapIds$0",
+            "acc": 4106,
+            "dsc": "(Lit/unimi/dsi/fastutil/ints/Int2IntMap;Ljava/lang/Object;Ljava/lang/Integer;)Ljava/lang/Integer;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "field_11099",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "field_11100",
+            "dsc": "Lit/unimi/dsi/fastutil/objects/Reference2IntMap;",
+            "sig": "Lit/unimi/dsi/fastutil/objects/Reference2IntMap<TT;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "field_11098",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<TT;>;"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/util/collection/IdList"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/event/registry/RegistryAttributeHolder.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/event/registry/RegistryAttributeHolder",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "get",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Lnet/fabricmc/fabric/api/event/registry/RegistryAttributeHolder;",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<*>;)Lnet/fabricmc/fabric/api/event/registry/RegistryAttributeHolder;"
+          },
+          {
+            "nme": "get",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/Registry;)Lnet/fabricmc/fabric/api/event/registry/RegistryAttributeHolder;",
+            "sig": "(Lnet/minecraft/registry/Registry<*>;)Lnet/fabricmc/fabric/api/event/registry/RegistryAttributeHolder;"
+          },
+          {
+            "nme": "addAttribute",
+            "acc": 1025,
+            "dsc": "(Lnet/fabricmc/fabric/api/event/registry/RegistryAttribute;)Lnet/fabricmc/fabric/api/event/registry/RegistryAttributeHolder;"
+          },
+          {
+            "nme": "hasAttribute",
+            "acc": 1025,
+            "dsc": "(Lnet/fabricmc/fabric/api/event/registry/RegistryAttribute;)Z"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/impl/registry/sync/trackers/IdListTracker.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/registry/sync/trackers/IdListTracker",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;Lnet/minecraft/util/collection/IdList;)V",
+            "sig": "(Ljava/lang/String;Lnet/minecraft/util/collection/IdList<TOV;>;)V"
+          },
+          {
+            "nme": "register",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/Registry;Ljava/lang/String;Lnet/minecraft/util/collection/IdList;)V",
+            "sig": "<V:Ljava/lang/Object;OV:Ljava/lang/Object;>(Lnet/minecraft/registry/Registry<TV;>;Ljava/lang/String;Lnet/minecraft/util/collection/IdList<TOV;>;)V"
+          },
+          {
+            "nme": "onEntryAdded",
+            "acc": 1,
+            "dsc": "(ILnet/minecraft/util/Identifier;Ljava/lang/Object;)V",
+            "sig": "(ILnet/minecraft/util/Identifier;TV;)V"
+          },
+          {
+            "nme": "onRemap",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/event/registry/RegistryIdRemapCallback$RemapState;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/event/registry/RegistryIdRemapCallback$RemapState<TV;>;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "mappers",
+            "dsc": "Lnet/minecraft/util/collection/IdList;",
+            "sig": "Lnet/minecraft/util/collection/IdList<TOV;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "removedMapperCache",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/util/Identifier;TOV;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/event/registry/RegistryIdRemapCallback$RemapState.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/event/registry/RegistryIdRemapCallback$RemapState",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getRawIdChangeMap",
+            "acc": 1025,
+            "dsc": "()Lit/unimi/dsi/fastutil/ints/Int2IntMap;"
+          },
+          {
+            "nme": "getIdFromOld",
+            "acc": 1025,
+            "dsc": "(I)Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "nme": "getIdFromNew",
+            "acc": 1025,
+            "dsc": "(I)Lnet/minecraft/util/Identifier;"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/impl/client/registry/sync/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/client/registry/sync/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/event/registry/FabricRegistryBuilder.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/event/registry/FabricRegistryBuilder",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "from",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/MutableRegistry;)Lnet/fabricmc/fabric/api/event/registry/FabricRegistryBuilder;",
+            "sig": "<T:Ljava/lang/Object;R::Lnet/minecraft/registry/MutableRegistry<TT;>;>(TR;)Lnet/fabricmc/fabric/api/event/registry/FabricRegistryBuilder<TT;TR;>;"
+          },
+          {
+            "nme": "createSimple",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Lnet/fabricmc/fabric/api/event/registry/FabricRegistryBuilder;",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/registry/Registry<TT;>;>;)Lnet/fabricmc/fabric/api/event/registry/FabricRegistryBuilder<TT;Lnet/minecraft/registry/SimpleRegistry<TT;>;>;"
+          },
+          {
+            "nme": "createDefaulted",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;Lnet/minecraft/util/Identifier;)Lnet/fabricmc/fabric/api/event/registry/FabricRegistryBuilder;",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/registry/Registry<TT;>;>;Lnet/minecraft/util/Identifier;)Lnet/fabricmc/fabric/api/event/registry/FabricRegistryBuilder<TT;Lnet/minecraft/registry/SimpleDefaultedRegistry<TT;>;>;"
+          },
+          {
+            "nme": "createSimple",
+            "acc": 131081,
+            "dsc": "(Ljava/lang/Class;Lnet/minecraft/util/Identifier;)Lnet/fabricmc/fabric/api/event/registry/FabricRegistryBuilder;",
+            "sig": "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;Lnet/minecraft/util/Identifier;)Lnet/fabricmc/fabric/api/event/registry/FabricRegistryBuilder<TT;Lnet/minecraft/registry/SimpleRegistry<TT;>;>;",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "createDefaulted",
+            "acc": 131081,
+            "dsc": "(Ljava/lang/Class;Lnet/minecraft/util/Identifier;Lnet/minecraft/util/Identifier;)Lnet/fabricmc/fabric/api/event/registry/FabricRegistryBuilder;",
+            "sig": "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;Lnet/minecraft/util/Identifier;Lnet/minecraft/util/Identifier;)Lnet/fabricmc/fabric/api/event/registry/FabricRegistryBuilder<TT;Lnet/minecraft/registry/SimpleDefaultedRegistry<TT;>;>;",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/registry/MutableRegistry;)V",
+            "sig": "(TR;)V"
+          },
+          {
+            "nme": "attribute",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/event/registry/RegistryAttribute;)Lnet/fabricmc/fabric/api/event/registry/FabricRegistryBuilder;",
+            "sig": "(Lnet/fabricmc/fabric/api/event/registry/RegistryAttribute;)Lnet/fabricmc/fabric/api/event/registry/FabricRegistryBuilder<TT;TR;>;"
+          },
+          {
+            "nme": "buildAndRegister",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/registry/MutableRegistry;",
+            "sig": "()TR;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "registry",
+            "dsc": "Lnet/minecraft/registry/MutableRegistry;",
+            "sig": "TR;"
+          },
+          {
+            "acc": 18,
+            "nme": "attributes",
+            "dsc": "Ljava/util/EnumSet;",
+            "sig": "Ljava/util/EnumSet<Lnet/fabricmc/fabric/api/event/registry/RegistryAttribute;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/event/registry/DynamicRegistrySetupCallback.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/event/registry/DynamicRegistrySetupCallback",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "onRegistrySetup",
+            "acc": 1025,
+            "dsc": "(Lnet/fabricmc/fabric/api/event/registry/DynamicRegistryView;)V"
+          },
+          {
+            "nme": "lambda$static$1",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/registry/DynamicRegistrySetupCallback;)Lnet/fabricmc/fabric/api/event/registry/DynamicRegistrySetupCallback;"
+          },
+          {
+            "nme": "lambda$static$0",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/registry/DynamicRegistrySetupCallback;Lnet/fabricmc/fabric/api/event/registry/DynamicRegistryView;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "EVENT",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/event/registry/DynamicRegistrySetupCallback;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/registry/sync/trackers/vanilla/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/registry/sync/trackers/vanilla/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/registry/sync/RemovableIdList.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/impl/registry/sync/RemovableIdList",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "fabric_clear",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "fabric_remove",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)V",
+            "sig": "(TT;)V"
+          },
+          {
+            "nme": "fabric_removeId",
+            "acc": 1025,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "fabric_remapId",
+            "acc": 1025,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "fabric_remapIds",
+            "acc": 1025,
+            "dsc": "(Lit/unimi/dsi/fastutil/ints/Int2IntMap;)V"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/impl/registry/sync/RemapException.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/registry/sync/RemapException",
+        "super": "java/lang/Exception",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/text/Text;)V"
+          },
+          {
+            "nme": "getText",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/text/Text;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "text",
+            "dsc": "Lnet/minecraft/text/Text;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/event/registry/FabricRegistry.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/event/registry/FabricRegistry",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "addAlias",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/Identifier;Lnet/minecraft/util/Identifier;)V"
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/registry/sync/DebugChunkGeneratorAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/registry/sync/DebugChunkGeneratorAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "setBLOCK_STATES",
+            "acc": 9,
+            "dsc": "(Ljava/util/List;)V",
+            "sig": "(Ljava/util/List<Lnet/minecraft/block/BlockState;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;"
+              },
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Mutable;"
+              }
+            ]
+          },
+          {
+            "nme": "setX_SIDE_LENGTH",
+            "acc": 9,
+            "dsc": "(I)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;"
+              },
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Mutable;"
+              }
+            ]
+          },
+          {
+            "nme": "setZ_SIDE_LENGTH",
+            "acc": 9,
+            "dsc": "(I)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;"
+              },
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Mutable;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/world/gen/chunk/DebugChunkGenerator"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/registry/sync/RegistryLoaderMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/registry/sync/RegistryLoaderMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "wrapIsServerCall",
+            "acc": 10,
+            "dsc": "(Ljava/lang/Object;Ljava/util/List;Ljava/util/List;Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation;)Lnet/minecraft/registry/DynamicRegistryManager$Immutable;",
+            "sig": "(Ljava/lang/Object;Ljava/util/List<Lnet/minecraft/registry/RegistryWrapper$Impl<*>;>;Ljava/util/List<Lnet/minecraft/registry/RegistryLoader$Entry<*>;>;Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation<Lnet/minecraft/registry/DynamicRegistryManager$Immutable;>;)Lnet/minecraft/registry/DynamicRegistryManager$Immutable;",
+            "vanns": [
+              {
+                "dsc": "Lcom/llamalad7/mixinextras/injector/wrapoperation/WrapOperation;",
+                "vals": [
+                  "method",
+                  [
+                    "loadFromResource(Lnet/minecraft/resource/ResourceManager;Ljava/util/List;Ljava/util/List;)Lnet/minecraft/registry/DynamicRegistryManager$Immutable;"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/registry/RegistryLoader;load(Lnet/minecraft/registry/RegistryLoader$RegistryLoadable;Ljava/util/List;Ljava/util/List;)Lnet/minecraft/registry/DynamicRegistryManager$Immutable;"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "beforeLoad",
+            "acc": 10,
+            "dsc": "(Ljava/lang/Object;Ljava/util/List;Ljava/util/List;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;Ljava/util/List;)V",
+            "sig": "(Ljava/lang/Object;Ljava/util/List<Lnet/minecraft/registry/RegistryWrapper$Impl<*>;>;Ljava/util/List<Lnet/minecraft/registry/RegistryLoader$Entry<*>;>;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Lnet/minecraft/registry/DynamicRegistryManager$Immutable;>;Ljava/util/List<Lnet/minecraft/registry/RegistryLoader$Loader<*>;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "load(Lnet/minecraft/registry/RegistryLoader$RegistryLoadable;Ljava/util/List;Ljava/util/List;)Lnet/minecraft/registry/DynamicRegistryManager$Immutable;"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Ljava/util/List;forEach(Ljava/util/function/Consumer;)V",
+                        "ordinal",
+                        0
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "lambda$static$0",
+            "acc": 4106,
+            "dsc": "()Ljava/lang/Boolean;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "IS_SERVER",
+            "dsc": "Ljava/lang/ThreadLocal;",
+            "sig": "Ljava/lang/ThreadLocal<Ljava/lang/Boolean;>;"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/registry/RegistryLoader"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/registry/sync/DynamicRegistriesImpl.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/registry/sync/DynamicRegistriesImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getDynamicRegistries",
+            "acc": 9,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lnet/minecraft/registry/RegistryLoader$Entry<*>;>;"
+          },
+          {
+            "nme": "register",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;Lcom/mojang/serialization/Codec;)Lnet/minecraft/registry/RegistryLoader$Entry;",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/minecraft/registry/RegistryKey<+Lnet/minecraft/registry/Registry<TT;>;>;Lcom/mojang/serialization/Codec<TT;>;)Lnet/minecraft/registry/RegistryLoader$Entry<TT;>;"
+          },
+          {
+            "nme": "addSyncedRegistry",
+            "acc": 137,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;Lcom/mojang/serialization/Codec;[Lnet/fabricmc/fabric/api/event/registry/DynamicRegistries$SyncOption;)V",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/minecraft/registry/RegistryKey<+Lnet/minecraft/registry/Registry<TT;>;>;Lcom/mojang/serialization/Codec<TT;>;[Lnet/fabricmc/fabric/api/event/registry/DynamicRegistries$SyncOption;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "DYNAMIC_REGISTRIES",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lnet/minecraft/registry/RegistryLoader$Entry<*>;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "FABRIC_DYNAMIC_REGISTRY_KEYS",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Lnet/minecraft/registry/RegistryKey<*>;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "DYNAMIC_REGISTRY_KEYS",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Lnet/minecraft/registry/RegistryKey<+Lnet/minecraft/registry/Registry<*>;>;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "SKIP_EMPTY_SYNC_REGISTRIES",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Lnet/minecraft/registry/RegistryKey<+Lnet/minecraft/registry/Registry<*>;>;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/registry/sync/trackers/vanilla/BlockInitTracker.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/registry/sync/trackers/vanilla/BlockInitTracker",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "postFreeze",
+            "acc": 9,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lambda$postFreeze$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/block/Block;)Ljava/util/stream/Stream;"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/impl/registry/sync/SyncCompletePayload.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/registry/sync/SyncCompletePayload",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getId",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/network/packet/CustomPayload$Id;",
+            "sig": "()Lnet/minecraft/network/packet/CustomPayload$Id<+Lnet/minecraft/network/packet/CustomPayload;>;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/fabricmc/fabric/impl/registry/sync/SyncCompletePayload;"
+          },
+          {
+            "acc": 25,
+            "nme": "ID",
+            "dsc": "Lnet/minecraft/network/packet/CustomPayload$Id;",
+            "sig": "Lnet/minecraft/network/packet/CustomPayload$Id<Lnet/fabricmc/fabric/impl/registry/sync/SyncCompletePayload;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CODEC",
+            "dsc": "Lnet/minecraft/network/codec/PacketCodec;",
+            "sig": "Lnet/minecraft/network/codec/PacketCodec<Lnet/minecraft/network/PacketByteBuf;Lnet/fabricmc/fabric/impl/registry/sync/SyncCompletePayload;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/registry/sync/DynamicRegistryViewImpl.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/registry/sync/DynamicRegistryViewImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/util/Map;)V",
+            "sig": "(Ljava/util/Map<Lnet/minecraft/registry/RegistryKey<+Lnet/minecraft/registry/Registry<*>;>;Lnet/minecraft/registry/Registry<*>;>;)V"
+          },
+          {
+            "nme": "asDynamicRegistryManager",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/registry/DynamicRegistryManager;"
+          },
+          {
+            "nme": "stream",
+            "acc": 1,
+            "dsc": "()Ljava/util/stream/Stream;",
+            "sig": "()Ljava/util/stream/Stream<Lnet/minecraft/registry/Registry<*>;>;"
+          },
+          {
+            "nme": "getOptional",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Ljava/util/Optional;",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/minecraft/registry/RegistryKey<+Lnet/minecraft/registry/Registry<+TT;>;>;)Ljava/util/Optional<Lnet/minecraft/registry/Registry<TT;>;>;"
+          },
+          {
+            "nme": "registerEntryAdded",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;Lnet/fabricmc/fabric/api/event/registry/RegistryEntryAddedCallback;)V",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/minecraft/registry/RegistryKey<+Lnet/minecraft/registry/Registry<+TT;>;>;Lnet/fabricmc/fabric/api/event/registry/RegistryEntryAddedCallback<TT;>;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "registries",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/registry/RegistryKey<+Lnet/minecraft/registry/Registry<*>;>;Lnet/minecraft/registry/Registry<*>;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/registry/sync/RegistrySyncManager$SyncConfigurationTask.class": {
+        "ver": 65,
+        "acc": 65585,
+        "nme": "net/fabricmc/fabric/impl/registry/sync/RegistrySyncManager$SyncConfigurationTask",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/server/network/ServerConfigurationNetworkHandler;Ljava/util/Map;)V",
+            "sig": "(Lnet/minecraft/server/network/ServerConfigurationNetworkHandler;Ljava/util/Map<Lnet/minecraft/util/Identifier;Lit/unimi/dsi/fastutil/objects/Object2IntMap<Lnet/minecraft/util/Identifier;>;>;)V"
+          },
+          {
+            "nme": "sendPacket",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/Consumer;)V",
+            "sig": "(Ljava/util/function/Consumer<Lnet/minecraft/network/packet/Packet<*>;>;)V"
+          },
+          {
+            "nme": "getKey",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/server/network/ServerPlayerConfigurationTask$Key;"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "handler",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/server/network/ServerConfigurationNetworkHandler;"
+          },
+          {
+            "nme": "map",
+            "acc": 1,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<Lnet/minecraft/util/Identifier;Lit/unimi/dsi/fastutil/objects/Object2IntMap<Lnet/minecraft/util/Identifier;>;>;"
+          },
+          {
+            "nme": "lambda$sendPacket$0",
+            "acc": 4098,
+            "dsc": "(Lnet/fabricmc/fabric/impl/registry/sync/packet/DirectRegistryPacketHandler$Payload;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "handler",
+            "dsc": "Lnet/minecraft/server/network/ServerConfigurationNetworkHandler;"
+          },
+          {
+            "acc": 18,
+            "nme": "map",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/util/Identifier;Lit/unimi/dsi/fastutil/objects/Object2IntMap<Lnet/minecraft/util/Identifier;>;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "KEY",
+            "dsc": "Lnet/minecraft/server/network/ServerPlayerConfigurationTask$Key;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/registry/sync/RemapStateImpl.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/registry/sync/RemapStateImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/registry/Registry;Lit/unimi/dsi/fastutil/ints/Int2ObjectMap;Lit/unimi/dsi/fastutil/ints/Int2IntMap;)V",
+            "sig": "(Lnet/minecraft/registry/Registry<TT;>;Lit/unimi/dsi/fastutil/ints/Int2ObjectMap<Lnet/minecraft/util/Identifier;>;Lit/unimi/dsi/fastutil/ints/Int2IntMap;)V"
+          },
+          {
+            "nme": "getRawIdChangeMap",
+            "acc": 1,
+            "dsc": "()Lit/unimi/dsi/fastutil/ints/Int2IntMap;"
+          },
+          {
+            "nme": "getIdFromOld",
+            "acc": 1,
+            "dsc": "(I)Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "nme": "getIdFromNew",
+            "acc": 1,
+            "dsc": "(I)Lnet/minecraft/util/Identifier;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "rawIdChangeMap",
+            "dsc": "Lit/unimi/dsi/fastutil/ints/Int2IntMap;"
+          },
+          {
+            "acc": 18,
+            "nme": "oldIdMap",
+            "dsc": "Lit/unimi/dsi/fastutil/ints/Int2ObjectMap;",
+            "sig": "Lit/unimi/dsi/fastutil/ints/Int2ObjectMap<Lnet/minecraft/util/Identifier;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "newIdMap",
+            "dsc": "Lit/unimi/dsi/fastutil/ints/Int2ObjectMap;",
+            "sig": "Lit/unimi/dsi/fastutil/ints/Int2ObjectMap<Lnet/minecraft/util/Identifier;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/registry/sync/ExperimentalRegistriesValidatorMixin.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "net/fabricmc/fabric/mixin/registry/sync/ExperimentalRegistriesValidatorMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getDynamicRegistries",
+            "acc": 10,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lnet/minecraft/registry/RegistryLoader$Entry<*>;>;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Redirect;",
+                "vals": [
+                  "at",
+                  {
+                    "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                    "values": [
+                      "value",
+                      "FIELD",
+                      "target",
+                      "Lnet/minecraft/registry/RegistryLoader;DYNAMIC_REGISTRIES:Ljava/util/List;"
+                    ],
+                    "api": 589824
+                  },
+                  "method",
+                  [
+                    "method_54839"
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/registry/ExperimentalRegistriesValidator"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/registry/sync/RegistryKeysMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/registry/sync/RegistryKeysMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "prependDirectoryWithNamespace",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;Lnet/minecraft/registry/RegistryKey;)Ljava/lang/String;",
+            "sig": "(Ljava/lang/String;Lnet/minecraft/registry/RegistryKey<+Lnet/minecraft/registry/Registry<*>;>;)Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lcom/llamalad7/mixinextras/injector/ModifyReturnValue;",
+                "vals": [
+                  "method",
+                  [
+                    "getPath"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "prependTagDirectoryWithNamespace",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;Lnet/minecraft/registry/RegistryKey;)Ljava/lang/String;",
+            "sig": "(Ljava/lang/String;Lnet/minecraft/registry/RegistryKey<+Lnet/minecraft/registry/Registry<*>;>;)Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lcom/llamalad7/mixinextras/injector/ModifyReturnValue;",
+                "vals": [
+                  "method",
+                  [
+                    "getTagPath"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/registry/RegistryKeys"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/registry/sync/trackers/vanilla/BlockItemTracker.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/registry/sync/trackers/vanilla/BlockItemTracker",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "register",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/Registry;)V",
+            "sig": "(Lnet/minecraft/registry/Registry<Lnet/minecraft/item/Item;>;)V"
+          },
+          {
+            "nme": "onEntryAdded",
+            "acc": 1,
+            "dsc": "(ILnet/minecraft/util/Identifier;Lnet/minecraft/item/Item;)V"
+          },
+          {
+            "nme": "onEntryAdded",
+            "acc": 4161,
+            "dsc": "(ILnet/minecraft/util/Identifier;Ljava/lang/Object;)V"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/impl/client/registry/sync/ClientRegistrySyncHandler.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/client/registry/sync/ClientRegistrySyncHandler",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "receivePacket",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/util/thread/ThreadExecutor;Lnet/fabricmc/fabric/impl/registry/sync/packet/RegistryPacketHandler;Lnet/fabricmc/fabric/impl/registry/sync/packet/RegistryPacketHandler$RegistrySyncPayload;Z)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "<T::Lnet/fabricmc/fabric/impl/registry/sync/packet/RegistryPacketHandler$RegistrySyncPayload;>(Lnet/minecraft/util/thread/ThreadExecutor<*>;Lnet/fabricmc/fabric/impl/registry/sync/packet/RegistryPacketHandler<TT;>;TT;Z)Ljava/util/concurrent/CompletableFuture<Ljava/lang/Boolean;>;"
+          },
+          {
+            "nme": "apply",
+            "acc": 9,
+            "dsc": "(Lnet/fabricmc/fabric/impl/registry/sync/packet/RegistryPacketHandler$SyncedPacketData;)V",
+            "exs": [
+              "net/fabricmc/fabric/impl/registry/sync/RemapException"
+            ]
+          },
+          {
+            "nme": "checkRemoteRemap",
+            "acc": 9,
+            "dsc": "(Lnet/fabricmc/fabric/impl/registry/sync/packet/RegistryPacketHandler$SyncedPacketData;)V",
+            "exs": [
+              "net/fabricmc/fabric/impl/registry/sync/RemapException"
+            ],
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/VisibleForTesting;"
+              }
+            ]
+          },
+          {
+            "nme": "missingRegistriesError",
+            "acc": 10,
+            "dsc": "(Ljava/util/List;)Lnet/minecraft/text/Text;",
+            "sig": "(Ljava/util/List<Lnet/minecraft/util/Identifier;>;)Lnet/minecraft/text/Text;"
+          },
+          {
+            "nme": "missingEntriesError",
+            "acc": 10,
+            "dsc": "(Ljava/util/Map;)Lnet/minecraft/text/Text;",
+            "sig": "(Ljava/util/Map<Lnet/minecraft/util/Identifier;Ljava/util/List<Lnet/minecraft/util/Identifier;>;>;)Lnet/minecraft/text/Text;"
+          },
+          {
+            "nme": "isRegistryOptional",
+            "acc": 10,
+            "dsc": "(Lnet/minecraft/util/Identifier;Lnet/fabricmc/fabric/impl/registry/sync/packet/RegistryPacketHandler$SyncedPacketData;)Z"
+          },
+          {
+            "nme": "lambda$checkRemoteRemap$1",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/util/Identifier;)Ljava/util/List;"
+          },
+          {
+            "nme": "lambda$receivePacket$0",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/impl/registry/sync/packet/RegistryPacketHandler$SyncedPacketData;)Ljava/lang/Boolean;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/registry/sync/SimpleRegistryMixin$1.class": {
+        "ver": 65,
+        "acc": 4128,
+        "nme": "net/fabricmc/fabric/mixin/registry/sync/SimpleRegistryMixin$1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4120,
+            "nme": "$SwitchMap$net$fabricmc$fabric$impl$registry$sync$RemappableRegistry$RemapMode",
+            "dsc": "[I"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/registry/sync/FabricRegistryInit.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/registry/sync/FabricRegistryInit",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "onInitialize",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lambda$onInitialize$0",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/impl/registry/sync/SyncCompletePayload;Lnet/fabricmc/fabric/api/networking/v1/ServerConfigurationNetworking$Context;)V"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/impl/registry/sync/ListenableRegistry.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/impl/registry/sync/ListenableRegistry",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "fabric_getAddObjectEvent",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/event/registry/RegistryEntryAddedCallback<TT;>;>;"
+          },
+          {
+            "nme": "fabric_getRemapEvent",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/event/registry/RegistryIdRemapCallback<TT;>;>;"
+          },
+          {
+            "nme": "get",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/Registry;)Lnet/fabricmc/fabric/impl/registry/sync/ListenableRegistry;",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/minecraft/registry/Registry<TT;>;)Lnet/fabricmc/fabric/impl/registry/sync/ListenableRegistry<TT;>;"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/impl/registry/sync/trackers/Int2ObjectMapTracker.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/registry/sync/trackers/Int2ObjectMapTracker",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;Lit/unimi/dsi/fastutil/ints/Int2ObjectMap;)V",
+            "sig": "(Ljava/lang/String;Lit/unimi/dsi/fastutil/ints/Int2ObjectMap<TOV;>;)V"
+          },
+          {
+            "nme": "register",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/Registry;Ljava/lang/String;Lit/unimi/dsi/fastutil/ints/Int2ObjectMap;)V",
+            "sig": "<V:Ljava/lang/Object;OV:Ljava/lang/Object;>(Lnet/minecraft/registry/Registry<TV;>;Ljava/lang/String;Lit/unimi/dsi/fastutil/ints/Int2ObjectMap<TOV;>;)V"
+          },
+          {
+            "nme": "onEntryAdded",
+            "acc": 1,
+            "dsc": "(ILnet/minecraft/util/Identifier;Ljava/lang/Object;)V",
+            "sig": "(ILnet/minecraft/util/Identifier;TV;)V"
+          },
+          {
+            "nme": "onRemap",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/event/registry/RegistryIdRemapCallback$RemapState;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/event/registry/RegistryIdRemapCallback$RemapState<TV;>;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 18,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "mappers",
+            "dsc": "Lit/unimi/dsi/fastutil/ints/Int2ObjectMap;",
+            "sig": "Lit/unimi/dsi/fastutil/ints/Int2ObjectMap<TOV;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "removedMapperCache",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/util/Identifier;TOV;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/registry/sync/RegistryAttributeImpl.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/registry/sync/RegistryAttributeImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getHolder",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Lnet/fabricmc/fabric/api/event/registry/RegistryAttributeHolder;",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<*>;)Lnet/fabricmc/fabric/api/event/registry/RegistryAttributeHolder;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "addAttribute",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/event/registry/RegistryAttribute;)Lnet/fabricmc/fabric/api/event/registry/RegistryAttributeHolder;"
+          },
+          {
+            "nme": "removeAttribute",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/event/registry/RegistryAttribute;)V",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/VisibleForTesting;"
+              }
+            ]
+          },
+          {
+            "nme": "hasAttribute",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/event/registry/RegistryAttribute;)Z"
+          },
+          {
+            "nme": "lambda$getHolder$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Lnet/fabricmc/fabric/api/event/registry/RegistryAttributeHolder;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "HOLDER_MAP",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/registry/RegistryKey<*>;Lnet/fabricmc/fabric/api/event/registry/RegistryAttributeHolder;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "attributes",
+            "dsc": "Ljava/util/EnumSet;",
+            "sig": "Ljava/util/EnumSet<Lnet/fabricmc/fabric/api/event/registry/RegistryAttribute;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/registry/sync/client/ClientRegistriesMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/registry/sync/client/ClientRegistriesMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "skipEmptyRegistries",
+            "acc": 2,
+            "dsc": "(Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation;Lnet/minecraft/resource/ResourceFactory;Lnet/fabricmc/fabric/mixin/registry/sync/client/ClientRegistriesDynamicRegistriesAccessor;Z)Ljava/util/List;",
+            "sig": "(Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation<Ljava/util/List<Lnet/minecraft/registry/RegistryLoader$Entry<*>;>;>;Lnet/minecraft/resource/ResourceFactory;Lnet/fabricmc/fabric/mixin/registry/sync/client/ClientRegistriesDynamicRegistriesAccessor;Z)Ljava/util/List<Lnet/minecraft/registry/RegistryLoader$Entry<*>;>;",
+            "vanns": [
+              {
+                "dsc": "Lcom/llamalad7/mixinextras/injector/wrapoperation/WrapOperation;",
+                "vals": [
+                  "method",
+                  [
+                    "createRegistryManager"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "FIELD",
+                        "target",
+                        "Lnet/minecraft/registry/RegistryLoader;SYNCED_REGISTRIES:Ljava/util/List;",
+                        "opcode",
+                        178
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "lambda$skipEmptyRegistries$0",
+            "acc": 4106,
+            "dsc": "(Ljava/util/Map;Lnet/minecraft/registry/RegistryLoader$Entry;)Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/network/ClientRegistries"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/registry/sync/client/MinecraftClientMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/registry/sync/client/MinecraftClientMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "disconnectAfter",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;ZLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "method",
+                  [
+                    "disconnect(Lnet/minecraft/client/gui/screen/Screen;Z)V"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "afterModInit",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "<init>"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Ljava/lang/Thread;currentThread()Ljava/lang/Thread;"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "unmap",
+            "acc": 10,
+            "dsc": "()V",
+            "exs": [
+              "net/fabricmc/fabric/impl/registry/sync/RemapException"
+            ],
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Unique;"
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 10,
+            "nme": "field_1762",
+            "dsc": "Lorg/slf4j/Logger;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/MinecraftClient"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/registry/sync/client/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/mixin/registry/sync/client/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/event/registry/DynamicRegistryView.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/event/registry/DynamicRegistryView",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "asDynamicRegistryManager",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/registry/DynamicRegistryManager;"
+          },
+          {
+            "nme": "stream",
+            "acc": 1025,
+            "dsc": "()Ljava/util/stream/Stream;",
+            "sig": "()Ljava/util/stream/Stream<Lnet/minecraft/registry/Registry<*>;>;"
+          },
+          {
+            "nme": "getOptional",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Ljava/util/Optional;",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/minecraft/registry/RegistryKey<+Lnet/minecraft/registry/Registry<+TT;>;>;)Ljava/util/Optional<Lnet/minecraft/registry/Registry<TT;>;>;"
+          },
+          {
+            "nme": "registerEntryAdded",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;Lnet/fabricmc/fabric/api/event/registry/RegistryEntryAddedCallback;)V",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/minecraft/registry/RegistryKey<+Lnet/minecraft/registry/Registry<+TT;>;>;Lnet/fabricmc/fabric/api/event/registry/RegistryEntryAddedCallback<TT;>;)V"
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/event/registry/DynamicRegistries.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/event/registry/DynamicRegistries",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getDynamicRegistries",
+            "acc": 9,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lnet/minecraft/registry/RegistryLoader$Entry<*>;>;"
+          },
+          {
+            "nme": "register",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;Lcom/mojang/serialization/Codec;)V",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/minecraft/registry/RegistryKey<+Lnet/minecraft/registry/Registry<TT;>;>;Lcom/mojang/serialization/Codec<TT;>;)V"
+          },
+          {
+            "nme": "registerSynced",
+            "acc": 137,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;Lcom/mojang/serialization/Codec;[Lnet/fabricmc/fabric/api/event/registry/DynamicRegistries$SyncOption;)V",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/minecraft/registry/RegistryKey<+Lnet/minecraft/registry/Registry<TT;>;>;Lcom/mojang/serialization/Codec<TT;>;[Lnet/fabricmc/fabric/api/event/registry/DynamicRegistries$SyncOption;)V"
+          },
+          {
+            "nme": "registerSynced",
+            "acc": 137,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;Lcom/mojang/serialization/Codec;Lcom/mojang/serialization/Codec;[Lnet/fabricmc/fabric/api/event/registry/DynamicRegistries$SyncOption;)V",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/minecraft/registry/RegistryKey<+Lnet/minecraft/registry/Registry<TT;>;>;Lcom/mojang/serialization/Codec<TT;>;Lcom/mojang/serialization/Codec<TT;>;[Lnet/fabricmc/fabric/api/event/registry/DynamicRegistries$SyncOption;)V"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/mixin/registry/sync/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/mixin/registry/sync/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/registry/sync/BootstrapMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/registry/sync/BootstrapMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "initialize",
+            "acc": 10,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "setOutputStreams"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "initialize",
+            "acc": 10,
+            "dsc": "()V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Redirect;",
+                "vals": [
+                  "method",
+                  [
+                    "initialize"
+                  ],
+                  "at",
+                  {
+                    "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                    "values": [
+                      "value",
+                      "INVOKE",
+                      "target",
+                      "Lnet/minecraft/registry/Registries;bootstrap()V"
+                    ],
+                    "api": 589824
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "lambda$initialize$1",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/fluid/Fluid;)Ljava/util/Collection;"
+          },
+          {
+            "nme": "lambda$initialize$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/block/Block;)Ljava/util/Collection;"
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/Bootstrap"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/registry/sync/SimpleRegistryMixin.class": {
+        "ver": 65,
+        "acc": 1057,
+        "nme": "net/fabricmc/fabric/mixin/registry/sync/SimpleRegistryMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getKey",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)Ljava/util/Optional;",
+            "sig": "(TT;)Ljava/util/Optional<Lnet/minecraft/registry/RegistryKey<TT;>;>;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Shadow;"
+              }
+            ]
+          },
+          {
+            "nme": "get",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/util/Identifier;)Ljava/lang/Object;",
+            "sig": "(Lnet/minecraft/util/Identifier;)TT;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Shadow;"
+              }
+            ],
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "getKey",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/registry/RegistryKey;",
+            "sig": "()Lnet/minecraft/registry/RegistryKey<+Lnet/minecraft/registry/Registry<TT;>;>;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Shadow;"
+              }
+            ]
+          },
+          {
+            "nme": "containsId",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/util/Identifier;)Z",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Shadow;"
+              }
+            ]
+          },
+          {
+            "nme": "toString",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Shadow;"
+              }
+            ]
+          },
+          {
+            "nme": "method_45939",
+            "acc": 1028,
+            "dsc": "()V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Shadow;"
+              }
+            ]
+          },
+          {
+            "nme": "fabric_getAddObjectEvent",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/event/registry/RegistryEntryAddedCallback<TT;>;>;"
+          },
+          {
+            "nme": "fabric_getRemapEvent",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/event/registry/RegistryIdRemapCallback<TT;>;>;"
+          },
+          {
+            "nme": "init",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;Lcom/mojang/serialization/Lifecycle;ZLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<*>;Lcom/mojang/serialization/Lifecycle;ZLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "<init>(Lnet/minecraft/registry/RegistryKey;Lcom/mojang/serialization/Lifecycle;Z)V"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "onChange",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)V",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<TT;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Unique;"
+              }
+            ]
+          },
+          {
+            "nme": "set",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;Ljava/lang/Object;Lnet/minecraft/registry/entry/RegistryEntryInfo;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<TT;>;TT;Lnet/minecraft/registry/entry/RegistryEntryInfo;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Lnet/minecraft/registry/entry/RegistryEntry$Reference<TT;>;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "add"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "remap",
+            "acc": 1,
+            "dsc": "(Lit/unimi/dsi/fastutil/objects/Object2IntMap;Lnet/fabricmc/fabric/impl/registry/sync/RemappableRegistry$RemapMode;)V",
+            "sig": "(Lit/unimi/dsi/fastutil/objects/Object2IntMap<Lnet/minecraft/util/Identifier;>;Lnet/fabricmc/fabric/impl/registry/sync/RemappableRegistry$RemapMode;)V",
+            "exs": [
+              "net/fabricmc/fabric/impl/registry/sync/RemapException"
+            ]
+          },
+          {
+            "nme": "unmap",
+            "acc": 1,
+            "dsc": "()V",
+            "exs": [
+              "net/fabricmc/fabric/impl/registry/sync/RemapException"
+            ]
+          },
+          {
+            "nme": "addAlias",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/Identifier;Lnet/minecraft/util/Identifier;)V"
+          },
+          {
+            "nme": "aliasIdentifierParameter",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/util/Identifier;)Lnet/minecraft/util/Identifier;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/ModifyVariable;",
+                "vals": [
+                  "method",
+                  [
+                    "getEntry(Lnet/minecraft/util/Identifier;)Ljava/util/Optional;",
+                    "get(Lnet/minecraft/util/Identifier;)Ljava/lang/Object;",
+                    "containsId"
+                  ],
+                  "at",
+                  {
+                    "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                    "values": [
+                      "value",
+                      "HEAD"
+                    ],
+                    "api": 589824
+                  },
+                  "argsOnly",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "aliasRegistryKeyParameter",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Lnet/minecraft/registry/RegistryKey;",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<TT;>;)Lnet/minecraft/registry/RegistryKey<TT;>;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/ModifyVariable;",
+                "vals": [
+                  "method",
+                  [
+                    "get(Lnet/minecraft/registry/RegistryKey;)Ljava/lang/Object;",
+                    "getOptional(Lnet/minecraft/registry/RegistryKey;)Ljava/util/Optional;",
+                    "getOrCreateEntry",
+                    "contains",
+                    "getEntryInfo"
+                  ],
+                  "at",
+                  {
+                    "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                    "values": [
+                      "value",
+                      "HEAD"
+                    ],
+                    "api": 589824
+                  },
+                  "argsOnly",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "lambda$init$4",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/registry/RegistryIdRemapCallback;)Lnet/fabricmc/fabric/api/event/registry/RegistryIdRemapCallback;"
+          },
+          {
+            "nme": "lambda$init$3",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/registry/RegistryIdRemapCallback;Lnet/fabricmc/fabric/api/event/registry/RegistryIdRemapCallback$RemapState;)V"
+          },
+          {
+            "nme": "lambda$init$2",
+            "acc": 4098,
+            "dsc": "(ILnet/minecraft/util/Identifier;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "lambda$init$1",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/registry/RegistryEntryAddedCallback;)Lnet/fabricmc/fabric/api/event/registry/RegistryEntryAddedCallback;"
+          },
+          {
+            "nme": "lambda$init$0",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/registry/RegistryEntryAddedCallback;ILnet/minecraft/util/Identifier;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "VANILLA_NAMESPACES",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Ljava/lang/String;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "field_26682",
+            "dsc": "Lit/unimi/dsi/fastutil/objects/ObjectList;",
+            "sig": "Lit/unimi/dsi/fastutil/objects/ObjectList<Lnet/minecraft/registry/entry/RegistryEntry$Reference<TT;>;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "field_26683",
+            "dsc": "Lit/unimi/dsi/fastutil/objects/Reference2IntMap;",
+            "sig": "Lit/unimi/dsi/fastutil/objects/Reference2IntMap<TT;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "field_11107",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/util/Identifier;Lnet/minecraft/registry/entry/RegistryEntry$Reference<TT;>;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "field_25067",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/registry/RegistryKey<TT;>;Lnet/minecraft/registry/entry/RegistryEntry$Reference<TT;>;>;"
+          },
+          {
+            "acc": 26,
+            "nme": "FABRIC_LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 2,
+            "nme": "fabric_addObjectEvent",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/event/registry/RegistryEntryAddedCallback<TT;>;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "fabric_postRemapEvent",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/event/registry/RegistryIdRemapCallback<TT;>;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "fabric_prevIndexedEntries",
+            "dsc": "Lit/unimi/dsi/fastutil/objects/Object2IntMap;",
+            "sig": "Lit/unimi/dsi/fastutil/objects/Object2IntMap<Lnet/minecraft/util/Identifier;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "fabric_prevEntries",
+            "dsc": "Lcom/google/common/collect/BiMap;",
+            "sig": "Lcom/google/common/collect/BiMap<Lnet/minecraft/util/Identifier;Lnet/minecraft/registry/entry/RegistryEntry$Reference<TT;>;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "aliases",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/util/Identifier;Lnet/minecraft/util/Identifier;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "field_41126",
+            "dsc": "Lnet/minecraft/registry/RegistryKey;",
+            "sig": "Lnet/minecraft/registry/RegistryKey<+Lnet/minecraft/registry/Registry<TT;>;>;"
+          },
+          {
+            "acc": 4120,
+            "nme": "$assertionsDisabled",
+            "dsc": "Z"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/registry/SimpleRegistry"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/registry/sync/client/BlockColorsMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/registry/sync/client/BlockColorsMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "create",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "<init>"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "field_1995",
+            "dsc": "Lnet/minecraft/util/collection/IdList;",
+            "sig": "Lnet/minecraft/util/collection/IdList<Lnet/minecraft/client/color/block/BlockColorProvider;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/color/block/BlockColors"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/registry/sync/BlocksMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/registry/sync/BlocksMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "initShapeCache",
+            "acc": 10,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "<clinit>"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "TAIL"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "lambda$initShapeCache$0",
+            "acc": 4106,
+            "dsc": "(ILnet/minecraft/util/Identifier;Lnet/minecraft/block/Block;)V"
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/block/Blocks"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/registry/sync/RegistriesMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/registry/sync/RegistriesMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "init",
+            "acc": 10,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "init"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 10,
+            "nme": "hasInitialised",
+            "dsc": "Z"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/registry/Registries"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/registry/sync/FabricRegistryClientInit.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/client/registry/sync/FabricRegistryClientInit",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "onInitializeClient",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "registerSyncPacketReceiver",
+            "acc": 2,
+            "dsc": "(Lnet/fabricmc/fabric/impl/registry/sync/packet/RegistryPacketHandler;)V",
+            "sig": "<T::Lnet/fabricmc/fabric/impl/registry/sync/packet/RegistryPacketHandler$RegistrySyncPayload;>(Lnet/fabricmc/fabric/impl/registry/sync/packet/RegistryPacketHandler<TT;>;)V"
+          },
+          {
+            "nme": "getText",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Throwable;)Lnet/minecraft/text/Text;"
+          },
+          {
+            "nme": "lambda$registerSyncPacketReceiver$2",
+            "acc": 4098,
+            "dsc": "(Lnet/fabricmc/fabric/impl/registry/sync/packet/RegistryPacketHandler;Lnet/fabricmc/fabric/impl/registry/sync/packet/RegistryPacketHandler$RegistrySyncPayload;Lnet/fabricmc/fabric/api/client/networking/v1/ClientConfigurationNetworking$Context;)V"
+          },
+          {
+            "nme": "lambda$registerSyncPacketReceiver$1",
+            "acc": 4098,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/networking/v1/ClientConfigurationNetworking$Context;Ljava/lang/Boolean;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "lambda$registerSyncPacketReceiver$0",
+            "acc": 4098,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/networking/v1/ClientConfigurationNetworking$Context;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/registry/sync/packet/RegistryPacketHandler.class": {
+        "ver": 65,
+        "acc": 1057,
+        "nme": "net/fabricmc/fabric/impl/registry/sync/packet/RegistryPacketHandler",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getPacketId",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/network/packet/CustomPayload$Id;",
+            "sig": "()Lnet/minecraft/network/packet/CustomPayload$Id<TT;>;"
+          },
+          {
+            "nme": "sendPacket",
+            "acc": 1025,
+            "dsc": "(Ljava/util/function/Consumer;Ljava/util/Map;)V",
+            "sig": "(Ljava/util/function/Consumer<TT;>;Ljava/util/Map<Lnet/minecraft/util/Identifier;Lit/unimi/dsi/fastutil/objects/Object2IntMap<Lnet/minecraft/util/Identifier;>;>;)V"
+          },
+          {
+            "nme": "receivePayload",
+            "acc": 1025,
+            "dsc": "(Lnet/fabricmc/fabric/impl/registry/sync/packet/RegistryPacketHandler$RegistrySyncPayload;)V",
+            "sig": "(TT;)V"
+          },
+          {
+            "nme": "getTotalPacketReceived",
+            "acc": 1025,
+            "dsc": "()I"
+          },
+          {
+            "nme": "isPacketFinished",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getSyncedPacketData",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/impl/registry/sync/packet/RegistryPacketHandler$SyncedPacketData;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "computeBufSize",
+            "acc": 20,
+            "dsc": "(Lnet/minecraft/network/PacketByteBuf;)V"
+          },
+          {
+            "nme": "getRawBufSize",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getDeflatedBufSize",
+            "acc": 17,
+            "dsc": "()I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "rawBufSize",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "deflatedBufSize",
+            "dsc": "I"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/event/registry/DynamicRegistries$SyncOption.class": {
+        "ver": 65,
+        "acc": 16433,
+        "nme": "net/fabricmc/fabric/api/event/registry/DynamicRegistries$SyncOption",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lnet/fabricmc/fabric/api/event/registry/DynamicRegistries$SyncOption;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lnet/fabricmc/fabric/api/event/registry/DynamicRegistries$SyncOption;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "$values",
+            "acc": 4106,
+            "dsc": "()[Lnet/fabricmc/fabric/api/event/registry/DynamicRegistries$SyncOption;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "SKIP_WHEN_EMPTY",
+            "dsc": "Lnet/fabricmc/fabric/api/event/registry/DynamicRegistries$SyncOption;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lnet/fabricmc/fabric/api/event/registry/DynamicRegistries$SyncOption;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/event/registry/RegistryIdRemapCallback.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/event/registry/RegistryIdRemapCallback",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "onRemap",
+            "acc": 1025,
+            "dsc": "(Lnet/fabricmc/fabric/api/event/registry/RegistryIdRemapCallback$RemapState;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/event/registry/RegistryIdRemapCallback$RemapState<TT;>;)V"
+          },
+          {
+            "nme": "event",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/Registry;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/minecraft/registry/Registry<TT;>;)Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/event/registry/RegistryIdRemapCallback<TT;>;>;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/registry/sync/packet/RegistryPacketHandler$RegistrySyncPayload.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/impl/registry/sync/packet/RegistryPacketHandler$RegistrySyncPayload",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "net/fabricmc/fabric/mixin/registry/sync/RegistriesAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/registry/sync/RegistriesAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getROOT",
+            "acc": 9,
+            "dsc": "()Lnet/minecraft/registry/MutableRegistry;",
+            "sig": "()Lnet/minecraft/registry/MutableRegistry<Lnet/minecraft/registry/MutableRegistry<*>;>;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/registry/Registries"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/registry/sync/RegistryMixin.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/registry/sync/RegistryMixin",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/registry/Registry"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/registry/sync/RemappableRegistry.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/impl/registry/sync/RemappableRegistry",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "remap",
+            "acc": 1025,
+            "dsc": "(Lit/unimi/dsi/fastutil/objects/Object2IntMap;Lnet/fabricmc/fabric/impl/registry/sync/RemappableRegistry$RemapMode;)V",
+            "sig": "(Lit/unimi/dsi/fastutil/objects/Object2IntMap<Lnet/minecraft/util/Identifier;>;Lnet/fabricmc/fabric/impl/registry/sync/RemappableRegistry$RemapMode;)V",
+            "exs": [
+              "net/fabricmc/fabric/impl/registry/sync/RemapException"
+            ]
+          },
+          {
+            "nme": "unmap",
+            "acc": 1025,
+            "dsc": "()V",
+            "exs": [
+              "net/fabricmc/fabric/impl/registry/sync/RemapException"
+            ]
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/impl/registry/sync/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/registry/sync/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/registry/sync/packet/DirectRegistryPacketHandler$Payload.class": {
+        "ver": 65,
+        "acc": 65585,
+        "nme": "net/fabricmc/fabric/impl/registry/sync/packet/DirectRegistryPacketHandler$Payload",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lnet/minecraft/network/PacketByteBuf;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "([B)V"
+          },
+          {
+            "nme": "write",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/network/PacketByteBuf;)V"
+          },
+          {
+            "nme": "readAllBytes",
+            "acc": 10,
+            "dsc": "(Lnet/minecraft/network/PacketByteBuf;)[B"
+          },
+          {
+            "nme": "getId",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/network/packet/CustomPayload$Id;",
+            "sig": "()Lnet/minecraft/network/packet/CustomPayload$Id<+Lnet/minecraft/network/packet/CustomPayload;>;"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "data",
+            "acc": 1,
+            "dsc": "()[B"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "data",
+            "dsc": "[B"
+          },
+          {
+            "acc": 9,
+            "nme": "ID",
+            "dsc": "Lnet/minecraft/network/packet/CustomPayload$Id;",
+            "sig": "Lnet/minecraft/network/packet/CustomPayload$Id<Lnet/fabricmc/fabric/impl/registry/sync/packet/DirectRegistryPacketHandler$Payload;>;"
+          },
+          {
+            "acc": 9,
+            "nme": "CODEC",
+            "dsc": "Lnet/minecraft/network/codec/PacketCodec;",
+            "sig": "Lnet/minecraft/network/codec/PacketCodec<Lnet/minecraft/network/PacketByteBuf;Lnet/fabricmc/fabric/impl/registry/sync/packet/DirectRegistryPacketHandler$Payload;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/registry/sync/RegistrySyncManager.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/registry/sync/RegistrySyncManager",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "configureClient",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/server/network/ServerConfigurationNetworkHandler;Lnet/minecraft/server/MinecraftServer;)V"
+          },
+          {
+            "nme": "getIncompatibleClientText",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;Ljava/util/Map;)Lnet/minecraft/text/Text;",
+            "sig": "(Ljava/lang/String;Ljava/util/Map<Lnet/minecraft/util/Identifier;Lit/unimi/dsi/fastutil/objects/Object2IntMap<Lnet/minecraft/util/Identifier;>;>;)Lnet/minecraft/text/Text;"
+          },
+          {
+            "nme": "areAllRegistriesOptional",
+            "acc": 10,
+            "dsc": "(Ljava/util/Map;)Z",
+            "sig": "(Ljava/util/Map<Lnet/minecraft/util/Identifier;Lit/unimi/dsi/fastutil/objects/Object2IntMap<Lnet/minecraft/util/Identifier;>;>;)Z"
+          },
+          {
+            "nme": "createAndPopulateRegistryMap",
+            "acc": 9,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<Lnet/minecraft/util/Identifier;Lit/unimi/dsi/fastutil/objects/Object2IntMap<Lnet/minecraft/util/Identifier;>;>;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "bootstrapRegistries",
+            "acc": 9,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lambda$areAllRegistriesOptional$1",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/api/event/registry/RegistryAttributeHolder;)Z"
+          },
+          {
+            "nme": "lambda$getIncompatibleClientText$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "DEBUG",
+            "dsc": "Z"
+          },
+          {
+            "acc": 25,
+            "nme": "DIRECT_PACKET_HANDLER",
+            "dsc": "Lnet/fabricmc/fabric/impl/registry/sync/packet/DirectRegistryPacketHandler;"
+          },
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 26,
+            "nme": "DEBUG_WRITE_REGISTRY_DATA",
+            "dsc": "Z"
+          },
+          {
+            "acc": 9,
+            "nme": "postBootstrap",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/registry/sync/SerializedChunkMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/registry/sync/SerializedChunkMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "log",
+            "acc": 10,
+            "dsc": "(Lorg/slf4j/Logger;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Redirect;",
+                "vals": [
+                  "method",
+                  [
+                    "readStructureReferences"
+                  ],
+                  "at",
+                  {
+                    "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                    "values": [
+                      "value",
+                      "INVOKE",
+                      "target",
+                      "Lorg/slf4j/Logger;warn(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V",
+                      "remap",
+                      false
+                    ],
+                    "api": 589824
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/world/chunk/SerializedChunk"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/registry/sync/client/ParticleManagerMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/registry/sync/client/ParticleManagerMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "onInit",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/world/ClientWorld;Lnet/minecraft/client/texture/TextureManager;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "<init>"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "field_3835",
+            "dsc": "Lit/unimi/dsi/fastutil/ints/Int2ObjectMap;",
+            "sig": "Lit/unimi/dsi/fastutil/ints/Int2ObjectMap<Lnet/minecraft/client/particle/ParticleFactory<*>;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/particle/ParticleManager"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/registry/sync/SerializableRegistriesMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/registry/sync/SerializableRegistriesMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "filterNonSyncedEntries",
+            "acc": 10,
+            "dsc": "(Lnet/minecraft/registry/DynamicRegistryManager$Entry;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lnet/minecraft/registry/DynamicRegistryManager$Entry<*>;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/lang/Boolean;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "method_56601"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ],
+            "invanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Dynamic;",
+                "vals": [
+                  "value",
+                  "method_45961: Stream.filter in stream"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "filterNonSyncedEntriesAgain",
+            "acc": 10,
+            "dsc": "(Ljava/util/Set;Lnet/minecraft/registry/RegistryLoader$Entry;Lcom/mojang/serialization/DynamicOps;Ljava/util/function/BiConsumer;Lnet/minecraft/registry/Registry;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "method_56596"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ],
+            "invanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Dynamic;",
+                "vals": [
+                  "value",
+                  "method_56597: Optional.ifPresent in serialize"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/registry/SerializableRegistries"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/registry/sync/packet/DirectRegistryPacketHandler.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/registry/sync/packet/DirectRegistryPacketHandler",
+        "super": "net/fabricmc/fabric/impl/registry/sync/packet/RegistryPacketHandler",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getPacketId",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/network/packet/CustomPayload$Id;",
+            "sig": "()Lnet/minecraft/network/packet/CustomPayload$Id<Lnet/fabricmc/fabric/impl/registry/sync/packet/DirectRegistryPacketHandler$Payload;>;"
+          },
+          {
+            "nme": "sendPacket",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/Consumer;Ljava/util/Map;)V",
+            "sig": "(Ljava/util/function/Consumer<Lnet/fabricmc/fabric/impl/registry/sync/packet/DirectRegistryPacketHandler$Payload;>;Ljava/util/Map<Lnet/minecraft/util/Identifier;Lit/unimi/dsi/fastutil/objects/Object2IntMap<Lnet/minecraft/util/Identifier;>;>;)V"
+          },
+          {
+            "nme": "receivePayload",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/impl/registry/sync/packet/DirectRegistryPacketHandler$Payload;)V"
+          },
+          {
+            "nme": "isPacketFinished",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getTotalPacketReceived",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getSyncedPacketData",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/impl/registry/sync/packet/RegistryPacketHandler$SyncedPacketData;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "createPayload",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/network/PacketByteBuf;)Lnet/fabricmc/fabric/impl/registry/sync/packet/DirectRegistryPacketHandler$Payload;"
+          },
+          {
+            "nme": "optimizeNamespace",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "unoptimizeNamespace",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "encodeRegistryAttributes",
+            "acc": 10,
+            "dsc": "(Lnet/minecraft/util/Identifier;)B"
+          },
+          {
+            "nme": "decodeRegistryAttributes",
+            "acc": 10,
+            "dsc": "(B)Ljava/util/EnumSet;",
+            "sig": "(B)Ljava/util/EnumSet<Lnet/fabricmc/fabric/api/event/registry/RegistryAttribute;>;"
+          },
+          {
+            "nme": "receivePayload",
+            "acc": 4161,
+            "dsc": "(Lnet/fabricmc/fabric/impl/registry/sync/packet/RegistryPacketHandler$RegistrySyncPayload;)V"
+          },
+          {
+            "nme": "lambda$sendPacket$1",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/network/PacketByteBuf;Ljava/util/Map;Ljava/lang/String;Ljava/util/List;)V"
+          },
+          {
+            "nme": "lambda$sendPacket$0",
+            "acc": 4106,
+            "dsc": "(Lit/unimi/dsi/fastutil/objects/Object2IntMap$Entry;)Ljava/lang/String;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "MAX_PAYLOAD_SIZE",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "combinedBuf",
+            "dsc": "Lnet/minecraft/network/PacketByteBuf;"
+          },
+          {
+            "acc": 2,
+            "nme": "syncedRegistryMap",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/util/Identifier;Lit/unimi/dsi/fastutil/objects/Object2IntMap<Lnet/minecraft/util/Identifier;>;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "syncedRegistryAttributes",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/util/Identifier;Ljava/util/EnumSet<Lnet/fabricmc/fabric/api/event/registry/RegistryAttribute;>;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "isPacketFinished",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "totalPacketReceived",
+            "dsc": "I"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/event/registry/RegistryAttribute.class": {
+        "ver": 65,
+        "acc": 16433,
+        "nme": "net/fabricmc/fabric/api/event/registry/RegistryAttribute",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lnet/fabricmc/fabric/api/event/registry/RegistryAttribute;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lnet/fabricmc/fabric/api/event/registry/RegistryAttribute;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "$values",
+            "acc": 4106,
+            "dsc": "()[Lnet/fabricmc/fabric/api/event/registry/RegistryAttribute;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "SYNCED",
+            "dsc": "Lnet/fabricmc/fabric/api/event/registry/RegistryAttribute;"
+          },
+          {
+            "acc": 16409,
+            "nme": "MODDED",
+            "dsc": "Lnet/fabricmc/fabric/api/event/registry/RegistryAttribute;"
+          },
+          {
+            "acc": 16409,
+            "nme": "OPTIONAL",
+            "dsc": "Lnet/fabricmc/fabric/api/event/registry/RegistryAttribute;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lnet/fabricmc/fabric/api/event/registry/RegistryAttribute;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/registry/sync/RemappableRegistry$RemapMode.class": {
+        "ver": 65,
+        "acc": 16433,
+        "nme": "net/fabricmc/fabric/impl/registry/sync/RemappableRegistry$RemapMode",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lnet/fabricmc/fabric/impl/registry/sync/RemappableRegistry$RemapMode;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lnet/fabricmc/fabric/impl/registry/sync/RemappableRegistry$RemapMode;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "$values",
+            "acc": 4106,
+            "dsc": "()[Lnet/fabricmc/fabric/impl/registry/sync/RemappableRegistry$RemapMode;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "AUTHORITATIVE",
+            "dsc": "Lnet/fabricmc/fabric/impl/registry/sync/RemappableRegistry$RemapMode;"
+          },
+          {
+            "acc": 16409,
+            "nme": "REMOTE",
+            "dsc": "Lnet/fabricmc/fabric/impl/registry/sync/RemappableRegistry$RemapMode;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lnet/fabricmc/fabric/impl/registry/sync/RemappableRegistry$RemapMode;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/registry/sync/RegistryMapSerializer.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/registry/sync/RegistryMapSerializer",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "fromNbt",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/nbt/NbtCompound;)Ljava/util/Map;",
+            "sig": "(Lnet/minecraft/nbt/NbtCompound;)Ljava/util/Map<Lnet/minecraft/util/Identifier;Lit/unimi/dsi/fastutil/objects/Object2IntMap<Lnet/minecraft/util/Identifier;>;>;"
+          },
+          {
+            "nme": "toNbt",
+            "acc": 9,
+            "dsc": "(Ljava/util/Map;)Lnet/minecraft/nbt/NbtCompound;",
+            "sig": "(Ljava/util/Map<Lnet/minecraft/util/Identifier;Lit/unimi/dsi/fastutil/objects/Object2IntMap<Lnet/minecraft/util/Identifier;>;>;)Lnet/minecraft/nbt/NbtCompound;"
+          },
+          {
+            "nme": "lambda$toNbt$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/nbt/NbtCompound;Lnet/minecraft/util/Identifier;Lit/unimi/dsi/fastutil/objects/Object2IntMap;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "VERSION",
+            "dsc": "I",
+            "val": 1
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/registry/sync/packet/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/registry/sync/packet/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/registry/sync/SaveLoadingMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/registry/sync/SaveLoadingMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "modifyLoadedEntries",
+            "acc": 10,
+            "dsc": "(Ljava/util/List;)Ljava/util/List;",
+            "sig": "(Ljava/util/List<Lnet/minecraft/registry/RegistryLoader$Entry<*>;>;)Ljava/util/List<Lnet/minecraft/registry/RegistryLoader$Entry<*>;>;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/ModifyArg;",
+                "vals": [
+                  "method",
+                  [
+                    "load"
+                  ],
+                  "at",
+                  {
+                    "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                    "values": [
+                      "value",
+                      "INVOKE",
+                      "target",
+                      "Lnet/minecraft/registry/RegistryLoader;loadFromResource(Lnet/minecraft/resource/ResourceManager;Ljava/util/List;Ljava/util/List;)Lnet/minecraft/registry/DynamicRegistryManager$Immutable;",
+                      "ordinal",
+                      0
+                    ],
+                    "api": 589824
+                  },
+                  "index",
+                  2,
+                  "allow",
+                  1
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/server/SaveLoading"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/registry/sync/MainMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/registry/sync/MainMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "afterModInit",
+            "acc": 10,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/util/Util;startTimerHack()V"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "method",
+                  [
+                    "main"
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 10,
+            "nme": "field_24625",
+            "dsc": "Lorg/slf4j/Logger;"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/server/Main"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/registry/sync/trackers/StateIdTracker.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/registry/sync/trackers/StateIdTracker",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "register",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/Registry;Lnet/minecraft/util/collection/IdList;Ljava/util/function/Function;)V",
+            "sig": "<T:Ljava/lang/Object;S:Ljava/lang/Object;>(Lnet/minecraft/registry/Registry<TT;>;Lnet/minecraft/util/collection/IdList<TS;>;Ljava/util/function/Function<TT;Ljava/util/Collection<TS;>;>;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/registry/Registry;Lnet/minecraft/util/collection/IdList;Ljava/util/function/Function;)V",
+            "sig": "(Lnet/minecraft/registry/Registry<TT;>;Lnet/minecraft/util/collection/IdList<TS;>;Ljava/util/function/Function<TT;Ljava/util/Collection<TS;>;>;)V"
+          },
+          {
+            "nme": "onEntryAdded",
+            "acc": 1,
+            "dsc": "(ILnet/minecraft/util/Identifier;Ljava/lang/Object;)V",
+            "sig": "(ILnet/minecraft/util/Identifier;TT;)V"
+          },
+          {
+            "nme": "onRemap",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/event/registry/RegistryIdRemapCallback$RemapState;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/event/registry/RegistryIdRemapCallback$RemapState<TT;>;)V"
+          },
+          {
+            "nme": "recalcStateMap",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "recalcHighestId",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lambda$recalcStateMap$0",
+            "acc": 4098,
+            "dsc": "(Lit/unimi/dsi/fastutil/ints/Int2ObjectMap;Ljava/lang/Object;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "logger",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 18,
+            "nme": "registry",
+            "dsc": "Lnet/minecraft/registry/Registry;",
+            "sig": "Lnet/minecraft/registry/Registry<TT;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "stateList",
+            "dsc": "Lnet/minecraft/util/collection/IdList;",
+            "sig": "Lnet/minecraft/util/collection/IdList<TS;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "stateGetter",
+            "dsc": "Ljava/util/function/Function;",
+            "sig": "Ljava/util/function/Function<TT;Ljava/util/Collection<TS;>;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "currentHighestId",
+            "dsc": "I"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/registry/sync/DynamicRegistryViewImpl$1.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "net/fabricmc/fabric/impl/registry/sync/DynamicRegistryViewImpl$1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lnet/fabricmc/fabric/impl/registry/sync/DynamicRegistryViewImpl;)V"
+          },
+          {
+            "nme": "getOptional",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Ljava/util/Optional;",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/minecraft/registry/RegistryKey<+Lnet/minecraft/registry/Registry<+TT;>;>;)Ljava/util/Optional<Lnet/minecraft/registry/Registry<TT;>;>;"
+          },
+          {
+            "nme": "streamAllRegistries",
+            "acc": 1,
+            "dsc": "()Ljava/util/stream/Stream;",
+            "sig": "()Ljava/util/stream/Stream<Lnet/minecraft/registry/DynamicRegistryManager$Entry<*>;>;"
+          },
+          {
+            "nme": "entry",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/registry/Registry;)Lnet/minecraft/registry/DynamicRegistryManager$Entry;",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/minecraft/registry/Registry<TT;>;)Lnet/minecraft/registry/DynamicRegistryManager$Entry<TT;>;"
+          },
+          {
+            "nme": "toImmutable",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/registry/DynamicRegistryManager$Immutable;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lnet/fabricmc/fabric/impl/registry/sync/DynamicRegistryViewImpl;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/registry/sync/client/ClientRegistriesDynamicRegistriesAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/registry/sync/client/ClientRegistriesDynamicRegistriesAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getDynamicRegistries",
+            "acc": 1025,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<Lnet/minecraft/registry/RegistryKey<+Lnet/minecraft/registry/Registry<*>;>;Ljava/util/List<Lnet/minecraft/registry/SerializableRegistries$SerializedRegistryEntry;>;>;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "targets",
+              [
+                "net/minecraft/client/network/ClientRegistries$DynamicRegistries"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/registry/sync/packet/RegistryPacketHandler$SyncedPacketData.class": {
+        "ver": 65,
+        "acc": 65585,
+        "nme": "net/fabricmc/fabric/impl/registry/sync/packet/RegistryPacketHandler$SyncedPacketData",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/util/Map;Ljava/util/Map;)V",
+            "sig": "(Ljava/util/Map<Lnet/minecraft/util/Identifier;Lit/unimi/dsi/fastutil/objects/Object2IntMap<Lnet/minecraft/util/Identifier;>;>;Ljava/util/Map<Lnet/minecraft/util/Identifier;Ljava/util/EnumSet<Lnet/fabricmc/fabric/api/event/registry/RegistryAttribute;>;>;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "idMap",
+            "acc": 1,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<Lnet/minecraft/util/Identifier;Lit/unimi/dsi/fastutil/objects/Object2IntMap<Lnet/minecraft/util/Identifier;>;>;"
+          },
+          {
+            "nme": "attributes",
+            "acc": 1,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<Lnet/minecraft/util/Identifier;Ljava/util/EnumSet<Lnet/fabricmc/fabric/api/event/registry/RegistryAttribute;>;>;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "idMap",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/util/Identifier;Lit/unimi/dsi/fastutil/objects/Object2IntMap<Lnet/minecraft/util/Identifier;>;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "attributes",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/util/Identifier;Ljava/util/EnumSet<Lnet/fabricmc/fabric/api/event/registry/RegistryAttribute;>;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/registry/sync/trackers/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/registry/sync/trackers/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/registry/sync/SimpleRegistryAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/registry/sync/SimpleRegistryAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "isFrozen",
+            "acc": 1025,
+            "dsc": "()Z",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/registry/SimpleRegistry"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/event/registry/RegistryEntryAddedCallback.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/event/registry/RegistryEntryAddedCallback",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "onEntryAdded",
+            "acc": 1025,
+            "dsc": "(ILnet/minecraft/util/Identifier;Ljava/lang/Object;)V",
+            "sig": "(ILnet/minecraft/util/Identifier;TT;)V"
+          },
+          {
+            "nme": "event",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/Registry;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/minecraft/registry/Registry<TT;>;)Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/event/registry/RegistryEntryAddedCallback<TT;>;>;"
+          },
+          {
+            "nme": "allEntries",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/Registry;Ljava/util/function/Consumer;)V",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/minecraft/registry/Registry<TT;>;Ljava/util/function/Consumer<Lnet/minecraft/registry/entry/RegistryEntry$Reference<TT;>;>;)V"
+          },
+          {
+            "nme": "lambda$allEntries$0",
+            "acc": 4106,
+            "dsc": "(Ljava/util/function/Consumer;Lnet/minecraft/registry/Registry;ILnet/minecraft/util/Identifier;Ljava/lang/Object;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          }
+        ]
+      }
+    }
+  }
+}

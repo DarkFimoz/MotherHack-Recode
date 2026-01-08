@@ -1,0 +1,6500 @@
+{
+  "md5": "789cacd8d3969e9d23e6e6baec747f70",
+  "sha2": "57f8f5e02e92a30fd21b80cbd426a4172b5f8e29",
+  "sha256": "1e1e427c36ff63c44fd30ef292d9e773ea3154460ab6265d3fed7e6f5bc50fb9",
+  "contents": {
+    "classes": {
+      "lombok/experimental/FieldNameConstants$Exclude.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/experimental/FieldNameConstants$Exclude",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/Value.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/Value",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "staticConstructor",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/launch/PatchFixesHider$Javadoc.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "lombok/launch/PatchFixesHider$Javadoc",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getHTMLContentFromSource",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Lorg/eclipse/jdt/core/IJavaElement;)Ljava/lang/String;"
+          },
+          {
+            "nme": "getHTMLContentFromSource",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;Lorg/eclipse/jdt/core/IJavaElement;)Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "GET_HTML",
+            "dsc": "Ljava/lang/reflect/Method;"
+          }
+        ]
+      },
+      "lombok/EqualsAndHashCode$Include.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/EqualsAndHashCode$Include",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "replaces",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "rank",
+            "acc": 1025,
+            "dsc": "()I"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/ToString$Include.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/ToString$Include",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "rank",
+            "acc": 1025,
+            "dsc": "()I"
+          },
+          {
+            "nme": "name",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$17.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$17",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$27.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$27",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/AllArgsConstructor$AnyAnnotation.class": {
+        "ver": 50,
+        "acc": 140801,
+        "nme": "lombok/AllArgsConstructor$AnyAnnotation",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/Deprecated;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              []
+            ]
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$37.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$37",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/extern/slf4j/Slf4j.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/extern/slf4j/Slf4j",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "topic",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/launch/AnnotationProcessorHider.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/launch/AnnotationProcessorHider",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$57.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$57",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/experimental/WithBy.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/experimental/WithBy",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Llombok/AccessLevel;"
+          },
+          {
+            "nme": "onMethod",
+            "acc": 1025,
+            "dsc": "()[Llombok/experimental/WithBy$AnyAnnotation;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/launch/PatchFixesHider$Transform.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "lombok/launch/PatchFixesHider$Transform",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "init",
+            "acc": 42,
+            "dsc": "(Ljava/lang/ClassLoader;)V"
+          },
+          {
+            "nme": "transform",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "transform_swapped",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 10,
+            "nme": "TRANSFORM",
+            "dsc": "Ljava/lang/reflect/Method;"
+          },
+          {
+            "acc": 10,
+            "nme": "TRANSFORM_SWAPPED",
+            "dsc": "Ljava/lang/reflect/Method;"
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$47.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$47",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$67.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$67",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/Locked$Write.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/Locked$Write",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/experimental/Delegate.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/experimental/Delegate",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "types",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/Class;",
+            "sig": "()[Ljava/lang/Class<*>;"
+          },
+          {
+            "nme": "excludes",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/Class;",
+            "sig": "()[Ljava/lang/Class<*>;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/experimental/Helper.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/experimental/Helper",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$24.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$24",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$14.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$14",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/experimental/SuperBuilder.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/experimental/SuperBuilder",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "builderMethodName",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "buildMethodName",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "toBuilder",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "setterPrefix",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$34.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$34",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$54.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$54",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/experimental/NonFinal.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/experimental/NonFinal",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "LOCAL_VARIABLE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/experimental/package-info.class": {
+        "ver": 50,
+        "acc": 5632,
+        "nme": "lombok/experimental/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "lombok/RequiredArgsConstructor$AnyAnnotation.class": {
+        "ver": 50,
+        "acc": 140801,
+        "nme": "lombok/RequiredArgsConstructor$AnyAnnotation",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/Deprecated;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              []
+            ]
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "lombok/ConfigurationKeys",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "LOMBOK_DISABLE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Ljava/lang/Boolean;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "ADD_GENERATED_ANNOTATIONS",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Ljava/lang/Boolean;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ADD_JAVAX_GENERATED_ANNOTATIONS",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Ljava/lang/Boolean;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ADD_JAKARTA_GENERATED_ANNOTATIONS",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Ljava/lang/Boolean;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ADD_LOMBOK_GENERATED_ANNOTATIONS",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Ljava/lang/Boolean;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ADD_FINDBUGS_SUPPRESSWARNINGS_ANNOTATIONS",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Ljava/lang/Boolean;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ADD_SUPPRESSWARNINGS_ANNOTATIONS",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Ljava/lang/Boolean;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ADD_NULL_ANNOTATIONS",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/NullAnnotationLibrary;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ANY_CONSTRUCTOR_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "ANY_CONSTRUCTOR_SUPPRESS_CONSTRUCTOR_PROPERTIES",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Ljava/lang/Boolean;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ANY_CONSTRUCTOR_ADD_CONSTRUCTOR_PROPERTIES",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Ljava/lang/Boolean;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ALL_ARGS_CONSTRUCTOR_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "NO_ARGS_CONSTRUCTOR_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "NO_ARGS_CONSTRUCTOR_EXTRA_PRIVATE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Ljava/lang/Boolean;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "REQUIRED_ARGS_CONSTRUCTOR_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "DATA_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "VALUE_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GETTER_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GETTER_LAZY_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GETTER_CONSEQUENT_BOOLEAN",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Ljava/lang/Boolean;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "SETTER_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "EQUALS_AND_HASH_CODE_DO_NOT_USE_GETTERS",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Ljava/lang/Boolean;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "EQUALS_AND_HASH_CODE_CALL_SUPER",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/CallSuperType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "EQUALS_AND_HASH_CODE_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "TO_STRING_DO_NOT_USE_GETTERS",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Ljava/lang/Boolean;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "TO_STRING_CALL_SUPER",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/CallSuperType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "TO_STRING_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "TO_STRING_INCLUDE_FIELD_NAMES",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Ljava/lang/Boolean;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "TO_STRING_ONLY_EXPLICITLY_INCLUDED",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Ljava/lang/Boolean;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BUILDER_CLASS_NAME",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Ljava/lang/String;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BUILDER_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "SINGULAR_USE_GUAVA",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Ljava/lang/Boolean;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "SINGULAR_AUTO",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Ljava/lang/Boolean;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CLEANUP_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "DELEGATE_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "NON_NULL_EXCEPTION_TYPE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/NullCheckExceptionType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "NON_NULL_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "SNEAKY_THROWS_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "SYNCHRONIZED_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "VAL_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "VAR_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "WITH_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "LOG_ANY_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "LOG_COMMONS_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "LOG_JUL_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "LOG_LOG4J_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "LOG_LOG4J2_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "LOG_SLF4J_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "LOG_XSLF4J_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "LOG_JBOSSLOG_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "LOG_FLOGGER_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "LOG_ANY_FIELD_NAME",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/IdentifierName;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "LOG_ANY_FIELD_IS_STATIC",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Ljava/lang/Boolean;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "LOG_CUSTOM_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "LOG_CUSTOM_DECLARATION",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/LogDeclaration;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "EXPERIMENTAL_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ACCESSORS_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ACCESSORS_PREFIX",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Ljava/util/List<Ljava/lang/String;>;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ACCESSORS_CHAIN",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Ljava/lang/Boolean;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ACCESSORS_FLUENT",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Ljava/lang/Boolean;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ACCESSORS_MAKE_FINAL",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Ljava/lang/Boolean;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ACCESSORS_JAVA_BEANS_SPEC_CAPITALIZATION",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/CapitalizationStrategy;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "EXTENSION_METHOD_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "FIELD_DEFAULTS_PRIVATE_EVERYWHERE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Ljava/lang/Boolean;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "FIELD_DEFAULTS_FINAL_EVERYWHERE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Ljava/lang/Boolean;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "FIELD_DEFAULTS_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "HELPER_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "LOCKED_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ON_X_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "UTILITY_CLASS_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "FIELD_NAME_CONSTANTS_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "FIELD_NAME_CONSTANTS_INNER_TYPE_NAME",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/IdentifierName;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "FIELD_NAME_CONSTANTS_UPPERCASE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Ljava/lang/Boolean;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "SUPERBUILDER_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "WITHBY_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "JACKSONIZED_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STOP_BUBBLING",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Ljava/lang/Boolean;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "COPYABLE_ANNOTATIONS",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Ljava/util/List<Llombok/core/configuration/TypeName;>;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CHECKER_FRAMEWORK",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/CheckerFrameworkVersion;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STANDARD_EXCEPTION_FLAG_USAGE",
+            "dsc": "Llombok/core/configuration/ConfigurationKey;",
+            "sig": "Llombok/core/configuration/ConfigurationKey<Llombok/core/configuration/FlagUsageType;>;"
+          }
+        ]
+      },
+      "lombok/Setter$AnyAnnotation.class": {
+        "ver": 50,
+        "acc": 140801,
+        "nme": "lombok/Setter$AnyAnnotation",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/Deprecated;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              []
+            ]
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$62.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$62",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/extern/java/Log.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/extern/java/Log",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "topic",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$5.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$5",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$77.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$77",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$42.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$42",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/Data.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/Data",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "staticConstructor",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/With.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/With",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Llombok/AccessLevel;"
+          },
+          {
+            "nme": "onMethod",
+            "acc": 1025,
+            "dsc": "()[Llombok/With$AnyAnnotation;"
+          },
+          {
+            "nme": "onParam",
+            "acc": 1025,
+            "dsc": "()[Llombok/With$AnyAnnotation;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/val.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/val",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$22.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$22",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/var.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/var",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$2.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$2",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/experimental/Wither$AnyAnnotation.class": {
+        "ver": 50,
+        "acc": 140801,
+        "nme": "lombok/experimental/Wither$AnyAnnotation",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/Deprecated;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              []
+            ]
+          }
+        ]
+      },
+      "lombok/launch/AnnotationProcessorHider$AstModificationNotifierData.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "lombok/launch/AnnotationProcessorHider$AstModificationNotifierData",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 73,
+            "nme": "lombokInvoked",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "lombok/launch/ClassFileMetaData.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/launch/ClassFileMetaData",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "([B)V"
+          },
+          {
+            "nme": "decodeString",
+            "acc": 2,
+            "dsc": "(II)Ljava/lang/String;"
+          },
+          {
+            "nme": "getOffsets",
+            "acc": 1,
+            "dsc": "(B)[I"
+          },
+          {
+            "nme": "containsUtf8",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "usesClass",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "usesField",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "usesMethod",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "usesMethod",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "containsStringConstant",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "containsLong",
+            "acc": 1,
+            "dsc": "(J)Z"
+          },
+          {
+            "nme": "containsDouble",
+            "acc": 1,
+            "dsc": "(D)Z"
+          },
+          {
+            "nme": "containsInteger",
+            "acc": 1,
+            "dsc": "(I)Z"
+          },
+          {
+            "nme": "containsFloat",
+            "acc": 1,
+            "dsc": "(F)Z"
+          },
+          {
+            "nme": "readLong",
+            "acc": 2,
+            "dsc": "(I)J"
+          },
+          {
+            "nme": "readDouble",
+            "acc": 2,
+            "dsc": "(I)D"
+          },
+          {
+            "nme": "readInteger",
+            "acc": 2,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "readFloat",
+            "acc": 2,
+            "dsc": "(I)F"
+          },
+          {
+            "nme": "read32",
+            "acc": 2,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "getClassName",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getSuperClassName",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getInterfaces",
+            "acc": 1,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "poolContent",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "appendAccess",
+            "acc": 2,
+            "dsc": "(Ljava/lang/StringBuilder;I)V"
+          },
+          {
+            "nme": "appendNameAndType",
+            "acc": 2,
+            "dsc": "(Ljava/lang/StringBuilder;I)V"
+          },
+          {
+            "nme": "getClassName",
+            "acc": 2,
+            "dsc": "(I)Ljava/lang/String;"
+          },
+          {
+            "nme": "isMethod",
+            "acc": 2,
+            "dsc": "(I)Z"
+          },
+          {
+            "nme": "findNameAndType",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)I"
+          },
+          {
+            "nme": "findUtf8",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;)I"
+          },
+          {
+            "nme": "findClass",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;)I"
+          },
+          {
+            "nme": "readValue",
+            "acc": 2,
+            "dsc": "(I)I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "UTF8",
+            "dsc": "B",
+            "val": 1
+          },
+          {
+            "acc": 26,
+            "nme": "INTEGER",
+            "dsc": "B",
+            "val": 3
+          },
+          {
+            "acc": 26,
+            "nme": "FLOAT",
+            "dsc": "B",
+            "val": 4
+          },
+          {
+            "acc": 26,
+            "nme": "LONG",
+            "dsc": "B",
+            "val": 5
+          },
+          {
+            "acc": 26,
+            "nme": "DOUBLE",
+            "dsc": "B",
+            "val": 6
+          },
+          {
+            "acc": 26,
+            "nme": "CLASS",
+            "dsc": "B",
+            "val": 7
+          },
+          {
+            "acc": 26,
+            "nme": "STRING",
+            "dsc": "B",
+            "val": 8
+          },
+          {
+            "acc": 26,
+            "nme": "FIELD",
+            "dsc": "B",
+            "val": 9
+          },
+          {
+            "acc": 26,
+            "nme": "METHOD",
+            "dsc": "B",
+            "val": 10
+          },
+          {
+            "acc": 26,
+            "nme": "INTERFACE_METHOD",
+            "dsc": "B",
+            "val": 11
+          },
+          {
+            "acc": 26,
+            "nme": "NAME_TYPE",
+            "dsc": "B",
+            "val": 12
+          },
+          {
+            "acc": 26,
+            "nme": "METHOD_HANDLE",
+            "dsc": "B",
+            "val": 15
+          },
+          {
+            "acc": 26,
+            "nme": "METHOD_TYPE",
+            "dsc": "B",
+            "val": 16
+          },
+          {
+            "acc": 26,
+            "nme": "DYNAMIC",
+            "dsc": "B",
+            "val": 17
+          },
+          {
+            "acc": 26,
+            "nme": "INVOKE_DYNAMIC",
+            "dsc": "B",
+            "val": 18
+          },
+          {
+            "acc": 26,
+            "nme": "MODULE",
+            "dsc": "B",
+            "val": 19
+          },
+          {
+            "acc": 26,
+            "nme": "PACKAGE",
+            "dsc": "B",
+            "val": 20
+          },
+          {
+            "acc": 26,
+            "nme": "NOT_FOUND",
+            "dsc": "I",
+            "val": -1
+          },
+          {
+            "acc": 26,
+            "nme": "START_OF_CONSTANT_POOL",
+            "dsc": "I",
+            "val": 8
+          },
+          {
+            "acc": 18,
+            "nme": "byteCode",
+            "dsc": "[B"
+          },
+          {
+            "acc": 18,
+            "nme": "maxPoolSize",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "offsets",
+            "dsc": "[I"
+          },
+          {
+            "acc": 18,
+            "nme": "types",
+            "dsc": "[B"
+          },
+          {
+            "acc": 18,
+            "nme": "utf8s",
+            "dsc": "[Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "endOfPool",
+            "dsc": "I"
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$65.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$65",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/extern/jbosslog/JBossLog.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/extern/jbosslog/JBossLog",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "topic",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$15.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$15",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$25.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$25",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/launch/AnnotationProcessorHider$AnnotationProcessor.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "lombok/launch/AnnotationProcessorHider$AnnotationProcessor",
+        "super": "javax/annotation/processing/AbstractProcessor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getSupportedOptions",
+            "acc": 1,
+            "dsc": "()Ljava/util/Set;",
+            "sig": "()Ljava/util/Set<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "getSupportedAnnotationTypes",
+            "acc": 1,
+            "dsc": "()Ljava/util/Set;",
+            "sig": "()Ljava/util/Set<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "getSupportedSourceVersion",
+            "acc": 1,
+            "dsc": "()Ljavax/lang/model/SourceVersion;"
+          },
+          {
+            "nme": "init",
+            "acc": 1,
+            "dsc": "(Ljavax/annotation/processing/ProcessingEnvironment;)V"
+          },
+          {
+            "nme": "disableJava9SillyWarning",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "process",
+            "acc": 1,
+            "dsc": "(Ljava/util/Set;Ljavax/annotation/processing/RoundEnvironment;)Z",
+            "sig": "(Ljava/util/Set<+Ljavax/lang/model/element/TypeElement;>;Ljavax/annotation/processing/RoundEnvironment;)Z"
+          },
+          {
+            "nme": "getCompletions",
+            "acc": 1,
+            "dsc": "(Ljavax/lang/model/element/Element;Ljavax/lang/model/element/AnnotationMirror;Ljavax/lang/model/element/ExecutableElement;Ljava/lang/String;)Ljava/lang/Iterable;",
+            "sig": "(Ljavax/lang/model/element/Element;Ljavax/lang/model/element/AnnotationMirror;Ljavax/lang/model/element/ExecutableElement;Ljava/lang/String;)Ljava/lang/Iterable<+Ljavax/annotation/processing/Completion;>;"
+          },
+          {
+            "nme": "createWrappedInstance",
+            "acc": 10,
+            "dsc": "()Ljavax/annotation/processing/AbstractProcessor;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "instance",
+            "dsc": "Ljavax/annotation/processing/AbstractProcessor;"
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$1.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$1",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Z)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/experimental/Tolerate.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/experimental/Tolerate",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/NoArgsConstructor.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/NoArgsConstructor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "staticName",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "onConstructor",
+            "acc": 1025,
+            "dsc": "()[Llombok/NoArgsConstructor$AnyAnnotation;"
+          },
+          {
+            "nme": "access",
+            "acc": 1025,
+            "dsc": "()Llombok/AccessLevel;"
+          },
+          {
+            "nme": "force",
+            "acc": 1025,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/launch/PatchFixesHider$Delegate.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "lombok/launch/PatchFixesHider$Delegate",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "handleDelegateForType",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "addGeneratedDelegateMethods",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)[Ljava/lang/Object;"
+          },
+          {
+            "nme": "isDelegateSourceMethod",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "returnElementInfo",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "HANDLE_DELEGATE_FOR_TYPE",
+            "dsc": "Ljava/lang/reflect/Method;"
+          },
+          {
+            "acc": 26,
+            "nme": "ADD_GENERATED_DELEGATE_METHODS",
+            "dsc": "Ljava/lang/reflect/Method;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_DELEGATE_SOURCE_METHOD",
+            "dsc": "Ljava/lang/reflect/Method;"
+          },
+          {
+            "acc": 25,
+            "nme": "RETURN_ELEMENT_INFO",
+            "dsc": "Ljava/lang/reflect/Method;"
+          }
+        ]
+      },
+      "lombok/extern/flogger/Flogger.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/extern/flogger/Flogger",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$31.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$31",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$8.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$8",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "module-info.class": {
+        "ver": 53,
+        "acc": 32768,
+        "nme": "module-info",
+        "mthds": [],
+        "flds": []
+      },
+      "lombok/experimental/FieldNameConstants$Include.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/experimental/FieldNameConstants$Include",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$21.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$21",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/Singular.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/Singular",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "ignoreNullCollections",
+            "acc": 1025,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$61.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$61",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$71.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$71",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$49.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$49",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/launch/PatchFixesHider$Tests.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "lombok/launch/PatchFixesHider$Tests",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "printMethod",
+            "acc": 9,
+            "dsc": "(Lorg/eclipse/jdt/internal/compiler/ast/AbstractMethodDeclaration;ILjava/lang/StringBuffer;Lorg/eclipse/jdt/internal/compiler/ast/TypeDeclaration;)Ljava/lang/StringBuffer;"
+          },
+          {
+            "nme": "printMethod",
+            "acc": 9,
+            "dsc": "(Lorg/eclipse/jdt/internal/compiler/ast/AbstractMethodDeclaration;ILjava/lang/StringBuilder;Lorg/eclipse/jdt/internal/compiler/ast/TypeDeclaration;)Ljava/lang/StringBuilder;"
+          },
+          {
+            "nme": "printMethod",
+            "acc": 9,
+            "dsc": "(Lorg/eclipse/jdt/internal/compiler/ast/AbstractMethodDeclaration;ILjava/lang/Object;Lorg/eclipse/jdt/internal/compiler/ast/TypeDeclaration;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "getBundle",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;",
+            "sig": "(Ljava/lang/Object;Ljava/lang/Class<*>;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "isImplicitCanonicalConstructor",
+            "acc": 9,
+            "dsc": "(Lorg/eclipse/jdt/internal/compiler/ast/AbstractMethodDeclaration;Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "returnStringBuffer",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/StringBuffer;)Ljava/lang/StringBuffer;"
+          },
+          {
+            "nme": "returnStringBuilder",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/NonNull.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/NonNull",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "LOCAL_VARIABLE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE_USE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          }
+        ]
+      },
+      "lombok/Builder.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/Builder",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "builderMethodName",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "buildMethodName",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "builderClassName",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "toBuilder",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "access",
+            "acc": 1025,
+            "dsc": "()Llombok/AccessLevel;"
+          },
+          {
+            "nme": "setterPrefix",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$39.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$39",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/EqualsAndHashCode$Exclude.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/EqualsAndHashCode$Exclude",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/javac/apt/Processor.class": {
+        "ver": 50,
+        "acc": 131105,
+        "nme": "lombok/javac/apt/Processor",
+        "super": "javax/annotation/processing/AbstractProcessor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "init",
+            "acc": 1,
+            "dsc": "(Ljavax/annotation/processing/ProcessingEnvironment;)V"
+          },
+          {
+            "nme": "report",
+            "acc": 2,
+            "dsc": "(Ljavax/annotation/processing/ProcessingEnvironment;)Ljava/lang/String;"
+          },
+          {
+            "nme": "writeFile",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "collectData",
+            "acc": 2,
+            "dsc": "(Ljavax/annotation/processing/ProcessingEnvironment;)Ljava/lang/String;"
+          },
+          {
+            "nme": "listOptions",
+            "acc": 2,
+            "dsc": "(Ljava/lang/StringBuilder;Ljavax/annotation/processing/ProcessingEnvironment;)V"
+          },
+          {
+            "nme": "findServices",
+            "acc": 2,
+            "dsc": "(Ljava/lang/StringBuilder;Ljavax/annotation/processing/Filer;)V"
+          },
+          {
+            "nme": "addStacktrace",
+            "acc": 2,
+            "dsc": "(Ljava/lang/StringBuilder;)V"
+          },
+          {
+            "nme": "listProperties",
+            "acc": 2,
+            "dsc": "(Ljava/lang/StringBuilder;)V"
+          },
+          {
+            "nme": "string",
+            "acc": 10,
+            "dsc": "(Ljava/lang/StringBuilder;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "escape",
+            "acc": 10,
+            "dsc": "(C)Ljava/lang/String;"
+          },
+          {
+            "nme": "getSupportedSourceVersion",
+            "acc": 1,
+            "dsc": "()Ljavax/lang/model/SourceVersion;"
+          },
+          {
+            "nme": "process",
+            "acc": 1,
+            "dsc": "(Ljava/util/Set;Ljavax/annotation/processing/RoundEnvironment;)Z",
+            "sig": "(Ljava/util/Set<+Ljavax/lang/model/element/TypeElement;>;Ljavax/annotation/processing/RoundEnvironment;)Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/Deprecated;"
+          },
+          {
+            "dsc": "Ljavax/annotation/processing/SupportedAnnotationTypes;",
+            "vals": [
+              "value",
+              [
+                "*"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$44.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$44",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/Generated.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/Generated",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$26.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$26",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/launch/Agent.class": {
+        "ver": 50,
+        "acc": 48,
+        "nme": "lombok/launch/Agent",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "agentmain",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Ljava/lang/instrument/Instrumentation;)V",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          },
+          {
+            "nme": "premain",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Ljava/lang/instrument/Instrumentation;)V",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          },
+          {
+            "nme": "runLauncher",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;Ljava/lang/instrument/Instrumentation;Z)V",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          }
+        ],
+        "flds": []
+      },
+      "lombok/Delegate.class": {
+        "ver": 50,
+        "acc": 140801,
+        "nme": "lombok/Delegate",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "types",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/Class;",
+            "sig": "()[Ljava/lang/Class<*>;"
+          },
+          {
+            "nme": "excludes",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/Class;",
+            "sig": "()[Ljava/lang/Class<*>;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/Deprecated;"
+          }
+        ]
+      },
+      "lombok/launch/AnnotationProcessorHider$ClaimingProcessor.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "lombok/launch/AnnotationProcessorHider$ClaimingProcessor",
+        "super": "javax/annotation/processing/AbstractProcessor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "process",
+            "acc": 1,
+            "dsc": "(Ljava/util/Set;Ljavax/annotation/processing/RoundEnvironment;)Z",
+            "sig": "(Ljava/util/Set<+Ljavax/lang/model/element/TypeElement;>;Ljavax/annotation/processing/RoundEnvironment;)Z"
+          },
+          {
+            "nme": "getSupportedSourceVersion",
+            "acc": 1,
+            "dsc": "()Ljavax/lang/model/SourceVersion;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljavax/annotation/processing/SupportedAnnotationTypes;",
+            "vals": [
+              "value",
+              [
+                "lombok.*"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$72.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$72",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$32.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$32",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$38.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$38",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/RequiredArgsConstructor.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/RequiredArgsConstructor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "staticName",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "onConstructor",
+            "acc": 1025,
+            "dsc": "()[Llombok/RequiredArgsConstructor$AnyAnnotation;"
+          },
+          {
+            "nme": "access",
+            "acc": 1025,
+            "dsc": "()Llombok/AccessLevel;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/launch/Main.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/launch/Main",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getShadowClassLoader",
+            "acc": 40,
+            "dsc": "()Ljava/lang/ClassLoader;"
+          },
+          {
+            "nme": "prependClassLoader",
+            "acc": 40,
+            "dsc": "(Ljava/lang/ClassLoader;)V"
+          },
+          {
+            "nme": "main",
+            "acc": 9,
+            "dsc": "([Ljava/lang/String;)V",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 10,
+            "nme": "classLoader",
+            "dsc": "Llombok/launch/ShadowClassLoader;"
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$78.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$78",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$55.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$55",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$7.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$7",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$20.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$20",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$60.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$60",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/Cleanup.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/Cleanup",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "LOCAL_VARIABLE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$73.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$73",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/launch/PatchFixesHider.class": {
+        "ver": 50,
+        "acc": 48,
+        "nme": "lombok/launch/PatchFixesHider",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/launch/PatchFixesHider$Val.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "lombok/launch/PatchFixesHider$Val",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "handleValForLocalDeclaration",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "handleValForForEach",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "skipResolveInitializerIfAlreadyCalled",
+            "acc": 9,
+            "dsc": "(Lorg/eclipse/jdt/internal/compiler/ast/Expression;Lorg/eclipse/jdt/internal/compiler/lookup/BlockScope;)Lorg/eclipse/jdt/internal/compiler/lookup/TypeBinding;"
+          },
+          {
+            "nme": "skipResolveInitializerIfAlreadyCalled2",
+            "acc": 9,
+            "dsc": "(Lorg/eclipse/jdt/internal/compiler/ast/Expression;Lorg/eclipse/jdt/internal/compiler/lookup/BlockScope;Lorg/eclipse/jdt/internal/compiler/ast/LocalDeclaration;)Lorg/eclipse/jdt/internal/compiler/lookup/TypeBinding;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "BLOCK_SCOPE_SIG",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.eclipse.jdt.internal.compiler.lookup.BlockScope"
+          },
+          {
+            "acc": 26,
+            "nme": "LOCAL_DECLARATION_SIG",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.eclipse.jdt.internal.compiler.ast.LocalDeclaration"
+          },
+          {
+            "acc": 26,
+            "nme": "FOREACH_STATEMENT_SIG",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.eclipse.jdt.internal.compiler.ast.ForeachStatement"
+          },
+          {
+            "acc": 26,
+            "nme": "HANDLE_VAL_FOR_LOCAL_DECLARATION",
+            "dsc": "Ljava/lang/reflect/Method;"
+          },
+          {
+            "acc": 26,
+            "nme": "HANDLE_VAL_FOR_FOR_EACH",
+            "dsc": "Ljava/lang/reflect/Method;"
+          }
+        ]
+      },
+      "lombok/Builder$ObtainVia.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/Builder$ObtainVia",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "field",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "method",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "isStatic",
+            "acc": 1025,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$53.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$53",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$63.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$63",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/extern/log4j/Log4j2.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/extern/log4j/Log4j2",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "topic",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/EqualsAndHashCode$AnyAnnotation.class": {
+        "ver": 50,
+        "acc": 140801,
+        "nme": "lombok/EqualsAndHashCode$AnyAnnotation",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/Deprecated;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              []
+            ]
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$6.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$6",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$33.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$33",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$43.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$43",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/Getter.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/Getter",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Llombok/AccessLevel;"
+          },
+          {
+            "nme": "onMethod",
+            "acc": 1025,
+            "dsc": "()[Llombok/Getter$AnyAnnotation;"
+          },
+          {
+            "nme": "lazy",
+            "acc": 1025,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$3.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$3",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$66.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$66",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$76.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$76",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/With$AnyAnnotation.class": {
+        "ver": 50,
+        "acc": 140801,
+        "nme": "lombok/With$AnyAnnotation",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/Deprecated;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              []
+            ]
+          }
+        ]
+      },
+      "lombok/launch/ShadowClassLoader.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/launch/ShadowClassLoader",
+        "super": "java/lang/ClassLoader",
+        "mthds": [
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          },
+          {
+            "nme": "prependParent",
+            "acc": 1,
+            "dsc": "(Ljava/lang/ClassLoader;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/ClassLoader;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;)V",
+            "sig": "(Ljava/lang/ClassLoader;Ljava/lang/String;Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;Ljava/util/List<Ljava/lang/String;>;)V"
+          },
+          {
+            "nme": "getOrMakeJarListing",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;)Ljava/util/Set;",
+            "sig": "(Ljava/lang/String;)Ljava/util/Set<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "getJarMemberSet",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;)Ljava/util/Set;",
+            "sig": "(Ljava/lang/String;)Ljava/util/Set<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "getResourceFromLocation",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)Ljava/net/URL;"
+          },
+          {
+            "nme": "partOfShadow",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "inOwnBase",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "sclFileContainsSuffix",
+            "acc": 10,
+            "dsc": "(Ljava/io/InputStream;Ljava/lang/String;)Z",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "urlDecode",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "isPartOfShadowSuffixFileBased",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "isPartOfShadowSuffixJarBased",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "isPartOfShadowSuffix",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "toSclResourceName",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "getResources",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Ljava/util/Enumeration;",
+            "sig": "(Ljava/lang/String;)Ljava/util/Enumeration<Ljava/net/URL;>;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "getResource",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Ljava/net/URL;"
+          },
+          {
+            "nme": "getResource_",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;Z)Ljava/net/URL;"
+          },
+          {
+            "nme": "exclusionListMatch",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "getResourceSkippingSelf",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;)Ljava/net/URL;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "loadClass",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Z)Ljava/lang/Class;",
+            "sig": "(Ljava/lang/String;Z)Ljava/lang/Class<*>;",
+            "exs": [
+              "java/lang/ClassNotFoundException"
+            ]
+          },
+          {
+            "nme": "urlToDefineClass",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;Ljava/net/URL;Z)Ljava/lang/Class;",
+            "sig": "(Ljava/lang/String;Ljava/net/URL;Z)Ljava/lang/Class<*>;",
+            "exs": [
+              "java/lang/ClassNotFoundException"
+            ]
+          },
+          {
+            "nme": "addOverrideJarDir",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "addOverrideClasspathEntry",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "SELF_NAME",
+            "dsc": "Ljava/lang/String;",
+            "val": "lombok/launch/ShadowClassLoader.class"
+          },
+          {
+            "acc": 26,
+            "nme": "highlanderMap",
+            "dsc": "Ljava/util/concurrent/ConcurrentMap;",
+            "sig": "Ljava/util/concurrent/ConcurrentMap<Ljava/lang/String;Ljava/lang/Class<*>;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "SELF_BASE",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "SELF_BASE_FILE",
+            "dsc": "Ljava/io/File;"
+          },
+          {
+            "acc": 18,
+            "nme": "SELF_BASE_LENGTH",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "override",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Ljava/io/File;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "sclSuffix",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "parentExclusion",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Ljava/lang/String;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "highlanders",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Ljava/lang/String;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "prependedParentLoaders",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Ljava/lang/ClassLoader;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "shader",
+            "dsc": "Llombok/launch/PackageShader;"
+          },
+          {
+            "acc": 18,
+            "nme": "mapJarPathToTracker",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+          },
+          {
+            "acc": 26,
+            "nme": "mapTrackerToJarPath",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/Object;Ljava/lang/String;>;"
+          },
+          {
+            "acc": 26,
+            "nme": "mapTrackerToJarContents",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/Object;Ljava/util/Set<Ljava/lang/String;>;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "fileRootCache",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Boolean;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "jarLocCache",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Boolean;>;"
+          }
+        ]
+      },
+      "lombok/experimental/FieldDefaults.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/experimental/FieldDefaults",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "level",
+            "acc": 1025,
+            "dsc": "()Llombok/AccessLevel;"
+          },
+          {
+            "nme": "makeFinal",
+            "acc": 1025,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/launch/PatchFixesHider$Util.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "lombok/launch/PatchFixesHider$Util",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getShadowLoader",
+            "acc": 9,
+            "dsc": "()Ljava/lang/ClassLoader;"
+          },
+          {
+            "nme": "shadowLoadClass",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/Class;",
+            "sig": "(Ljava/lang/String;)Ljava/lang/Class<*>;"
+          },
+          {
+            "nme": "findMethod",
+            "acc": 137,
+            "dsc": "(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;",
+            "sig": "(Ljava/lang/Class<*>;Ljava/lang/String;[Ljava/lang/Class<*>;)Ljava/lang/reflect/Method;"
+          },
+          {
+            "nme": "findMethod",
+            "acc": 137,
+            "dsc": "(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/reflect/Method;",
+            "sig": "(Ljava/lang/Class<*>;Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/reflect/Method;"
+          },
+          {
+            "nme": "findMethodAnyArgs",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Method;",
+            "sig": "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/reflect/Method;"
+          },
+          {
+            "nme": "invokeMethod",
+            "acc": 137,
+            "dsc": "(Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "sneakyThrow",
+            "acc": 10,
+            "dsc": "(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
+          },
+          {
+            "nme": "sneakyThrow0",
+            "acc": 10,
+            "dsc": "(Ljava/lang/Throwable;)V",
+            "sig": "<T:Ljava/lang/Throwable;>(Ljava/lang/Throwable;)V^TT;",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          },
+          {
+            "nme": "sameTypes",
+            "acc": 10,
+            "dsc": "([Ljava/lang/Class;[Ljava/lang/String;)Z",
+            "sig": "([Ljava/lang/Class<*>;[Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "prependToClassLoader",
+            "acc": 10,
+            "dsc": "(Ljava/lang/ClassLoader;Ljava/lang/ClassLoader;)V"
+          },
+          {
+            "nme": "findJdtCoreClassLoader",
+            "acc": 10,
+            "dsc": "(Ljava/lang/ClassLoader;)Ljava/lang/ClassLoader;"
+          },
+          {
+            "nme": "access$0",
+            "acc": 4104,
+            "dsc": "(Ljava/lang/ClassLoader;)Ljava/lang/ClassLoader;"
+          },
+          {
+            "nme": "access$1",
+            "acc": 4104,
+            "dsc": "(Ljava/lang/ClassLoader;Ljava/lang/ClassLoader;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 10,
+            "nme": "shadowLoader",
+            "dsc": "Ljava/lang/ClassLoader;"
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$79.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$79",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$16.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$16",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/extern/slf4j/XSlf4j.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/extern/slf4j/XSlf4j",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "topic",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/AllArgsConstructor.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/AllArgsConstructor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "staticName",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "onConstructor",
+            "acc": 1025,
+            "dsc": "()[Llombok/AllArgsConstructor$AnyAnnotation;"
+          },
+          {
+            "nme": "access",
+            "acc": 1025,
+            "dsc": "()Llombok/AccessLevel;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/AccessLevel.class": {
+        "ver": 50,
+        "acc": 16433,
+        "nme": "lombok/AccessLevel",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Llombok/AccessLevel;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Llombok/AccessLevel;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "PUBLIC",
+            "dsc": "Llombok/AccessLevel;"
+          },
+          {
+            "acc": 16409,
+            "nme": "MODULE",
+            "dsc": "Llombok/AccessLevel;"
+          },
+          {
+            "acc": 16409,
+            "nme": "PROTECTED",
+            "dsc": "Llombok/AccessLevel;"
+          },
+          {
+            "acc": 16409,
+            "nme": "PACKAGE",
+            "dsc": "Llombok/AccessLevel;"
+          },
+          {
+            "acc": 16409,
+            "nme": "PRIVATE",
+            "dsc": "Llombok/AccessLevel;"
+          },
+          {
+            "acc": 16409,
+            "nme": "NONE",
+            "dsc": "Llombok/AccessLevel;"
+          },
+          {
+            "acc": 4122,
+            "nme": "ENUM$VALUES",
+            "dsc": "[Llombok/AccessLevel;"
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$36.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$36",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$56.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$56",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/Getter$AnyAnnotation.class": {
+        "ver": 50,
+        "acc": 140801,
+        "nme": "lombok/Getter$AnyAnnotation",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/Deprecated;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              []
+            ]
+          }
+        ]
+      },
+      "lombok/Setter.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/Setter",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Llombok/AccessLevel;"
+          },
+          {
+            "nme": "onMethod",
+            "acc": 1025,
+            "dsc": "()[Llombok/Setter$AnyAnnotation;"
+          },
+          {
+            "nme": "onParam",
+            "acc": 1025,
+            "dsc": "()[Llombok/Setter$AnyAnnotation;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/Locked.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/Locked",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/experimental/FieldNameConstants.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/experimental/FieldNameConstants",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "level",
+            "acc": 1025,
+            "dsc": "()Llombok/AccessLevel;"
+          },
+          {
+            "nme": "asEnum",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "innerTypeName",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "onlyExplicitlyIncluded",
+            "acc": 1025,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$70.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$70",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/experimental/UtilityClass.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/experimental/UtilityClass",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/launch/PatchFixesHider$LombokDeps.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "lombok/launch/PatchFixesHider$LombokDeps",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "addLombokNotesToEclipseAboutDialog",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "runPostCompiler",
+            "acc": 9,
+            "dsc": "([BLjava/lang/String;)[B"
+          },
+          {
+            "nme": "runPostCompiler",
+            "acc": 9,
+            "dsc": "(Ljava/io/OutputStream;)Ljava/io/OutputStream;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "runPostCompiler",
+            "acc": 9,
+            "dsc": "(Ljava/io/BufferedOutputStream;Ljava/lang/String;Ljava/lang/String;)Ljava/io/BufferedOutputStream;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "ADD_LOMBOK_NOTES",
+            "dsc": "Ljava/lang/reflect/Method;"
+          },
+          {
+            "acc": 25,
+            "nme": "POST_COMPILER_BYTES_STRING",
+            "dsc": "Ljava/lang/reflect/Method;"
+          },
+          {
+            "acc": 25,
+            "nme": "POST_COMPILER_OUTPUTSTREAM",
+            "dsc": "Ljava/lang/reflect/Method;"
+          },
+          {
+            "acc": 25,
+            "nme": "POST_COMPILER_BUFFEREDOUTPUTSTREAM_STRING_STRING",
+            "dsc": "Ljava/lang/reflect/Method;"
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$9.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$9",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$13.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$13",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$48.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$48",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$28.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$28",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/launch/PatchFixesHider$ModuleClassLoading.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "lombok/launch/PatchFixesHider$ModuleClassLoading",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "parserClinit",
+            "acc": 9,
+            "dsc": "()V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$68.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$68",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/launch/PackageShader.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/launch/PackageShader",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 129,
+            "dsc": "([Ljava/lang/String;)V"
+          },
+          {
+            "nme": "apply",
+            "acc": 1,
+            "dsc": "([B)Z"
+          },
+          {
+            "nme": "readValue",
+            "acc": 10,
+            "dsc": "([BI)I"
+          },
+          {
+            "nme": "reverseResourceName",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "froms",
+            "dsc": "[[B"
+          },
+          {
+            "acc": 18,
+            "nme": "tos",
+            "dsc": "[[B"
+          },
+          {
+            "acc": 26,
+            "nme": "CONSTANTPOOLTYPE_UTF8",
+            "dsc": "B",
+            "val": 1
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$10.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$10",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$30.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$30",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$50.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$50",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/experimental/var.class": {
+        "ver": 50,
+        "acc": 140801,
+        "nme": "lombok/experimental/var",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/Deprecated;"
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$35.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$35",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$45.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$45",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ToString$Exclude.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/ToString$Exclude",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/Lombok.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "lombok/Lombok",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "sneakyThrow",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
+          },
+          {
+            "nme": "sneakyThrow0",
+            "acc": 10,
+            "dsc": "(Ljava/lang/Throwable;)Ljava/lang/Throwable;",
+            "sig": "<T:Ljava/lang/Throwable;>(Ljava/lang/Throwable;)TT;^TT;",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          },
+          {
+            "nme": "preventNullAnalysis",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "<T:Ljava/lang/Object;>(TT;)TT;"
+          },
+          {
+            "nme": "checkNotNull",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;",
+            "sig": "<T:Ljava/lang/Object;>(TT;Ljava/lang/String;)TT;"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/launch/PatchFixesHider$FieldInitializer.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "lombok/launch/PatchFixesHider$FieldInitializer",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "storeFieldInfo",
+            "acc": 9,
+            "dsc": "(Lorg/eclipse/jdt/internal/core/CompilationUnitStructureRequestor;)Z"
+          },
+          {
+            "nme": "storeSourceFieldElementInfo",
+            "acc": 9,
+            "dsc": "(Lorg/eclipse/jdt/internal/core/SourceFieldElementInfo;Lorg/eclipse/jdt/internal/core/CompilationUnitStructureRequestor;)V"
+          },
+          {
+            "nme": "overwriteInitializer",
+            "acc": 9,
+            "dsc": "(Lorg/eclipse/jdt/internal/core/CompilationUnitStructureRequestor;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INFO_STACK",
+            "dsc": "Ljava/lang/reflect/Field;"
+          },
+          {
+            "acc": 25,
+            "nme": "FIELD_INFO",
+            "dsc": "Ljava/lang/reflect/Field;"
+          },
+          {
+            "acc": 25,
+            "nme": "SOURCE_FIELD_ELEMENT_INFO",
+            "dsc": "Ljava/lang/reflect/Field;"
+          },
+          {
+            "acc": 25,
+            "nme": "INITIALIZATION_SOURCE",
+            "dsc": "Ljava/lang/reflect/Field;"
+          },
+          {
+            "acc": 25,
+            "nme": "NODE",
+            "dsc": "Ljava/lang/reflect/Field;"
+          },
+          {
+            "acc": 25,
+            "nme": "INITIALIZED",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$4.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$4",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/NoArgsConstructor$AnyAnnotation.class": {
+        "ver": 50,
+        "acc": 140801,
+        "nme": "lombok/NoArgsConstructor$AnyAnnotation",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/Deprecated;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              []
+            ]
+          }
+        ]
+      },
+      "lombok/experimental/Wither.class": {
+        "ver": 50,
+        "acc": 140801,
+        "nme": "lombok/experimental/Wither",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Llombok/AccessLevel;"
+          },
+          {
+            "nme": "onMethod",
+            "acc": 1025,
+            "dsc": "()[Llombok/experimental/Wither$AnyAnnotation;"
+          },
+          {
+            "nme": "onParam",
+            "acc": 1025,
+            "dsc": "()[Llombok/experimental/Wither$AnyAnnotation;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$12.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$12",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ToString.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/ToString",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "includeFieldNames",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "exclude",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/String;"
+          },
+          {
+            "nme": "of",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/String;"
+          },
+          {
+            "nme": "callSuper",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "doNotUseGetters",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "onlyExplicitlyIncluded",
+            "acc": 1025,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/experimental/StandardException.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/experimental/StandardException",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "access",
+            "acc": 1025,
+            "dsc": "()Llombok/AccessLevel;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/launch/PatchFixesHider$PatchFixes.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "lombok/launch/PatchFixesHider$PatchFixes",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "isGenerated",
+            "acc": 9,
+            "dsc": "(Lorg/eclipse/jdt/core/dom/ASTNode;)Z"
+          },
+          {
+            "nme": "isGenerated",
+            "acc": 9,
+            "dsc": "(Lorg/eclipse/jdt/internal/compiler/ast/ASTNode;)Z"
+          },
+          {
+            "nme": "isGenerated",
+            "acc": 9,
+            "dsc": "(Lorg/eclipse/jdt/core/IMember;)Z"
+          },
+          {
+            "nme": "isBlockedVisitorAndGenerated",
+            "acc": 9,
+            "dsc": "(Lorg/eclipse/jdt/core/dom/ASTNode;Lorg/eclipse/jdt/core/dom/ASTVisitor;)Z"
+          },
+          {
+            "nme": "isListRewriteOnGeneratedNode",
+            "acc": 9,
+            "dsc": "(Lorg/eclipse/jdt/core/dom/rewrite/ListRewrite;)Z"
+          },
+          {
+            "nme": "returnFalse",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "returnTrue",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "removeGeneratedNodes",
+            "acc": 9,
+            "dsc": "(Ljava/util/List;)Ljava/util/List;"
+          },
+          {
+            "nme": "getRealMethodDeclarationSource",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;Lorg/eclipse/jdt/core/dom/MethodDeclaration;)Ljava/lang/String;",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "addAnnotations",
+            "acc": 9,
+            "dsc": "(Ljava/util/List;Ljava/lang/StringBuilder;)V",
+            "sig": "(Ljava/util/List<Lorg/eclipse/jdt/core/dom/Annotation;>;Ljava/lang/StringBuilder;)V"
+          },
+          {
+            "nme": "getRealMethodDeclarationNode",
+            "acc": 9,
+            "dsc": "(Lorg/eclipse/jdt/core/dom/MethodDeclaration;Lorg/eclipse/jdt/core/IMethod;Lorg/eclipse/jdt/core/dom/CompilationUnit;)Lorg/eclipse/jdt/core/dom/MethodDeclaration;",
+            "exs": [
+              "org/eclipse/jdt/core/JavaModelException"
+            ]
+          },
+          {
+            "nme": "findTypeDeclaration",
+            "acc": 9,
+            "dsc": "(Lorg/eclipse/jdt/core/IType;Ljava/util/List;)Lorg/eclipse/jdt/core/dom/AbstractTypeDeclaration;",
+            "sig": "(Lorg/eclipse/jdt/core/IType;Ljava/util/List<*>;)Lorg/eclipse/jdt/core/dom/AbstractTypeDeclaration;"
+          },
+          {
+            "nme": "getSourceEndFixed",
+            "acc": 9,
+            "dsc": "(ILorg/eclipse/jdt/internal/compiler/ast/ASTNode;)I",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "fixRetrieveStartingCatchPosition",
+            "acc": 9,
+            "dsc": "(II)I"
+          },
+          {
+            "nme": "fixRetrieveIdentifierEndPosition",
+            "acc": 9,
+            "dsc": "(III)I"
+          },
+          {
+            "nme": "fixRetrieveEllipsisStartPosition",
+            "acc": 9,
+            "dsc": "(II)I"
+          },
+          {
+            "nme": "fixRetrieveStartBlockPosition",
+            "acc": 9,
+            "dsc": "(II)I"
+          },
+          {
+            "nme": "fixRetrieveRightBraceOrSemiColonPosition",
+            "acc": 9,
+            "dsc": "(II)I"
+          },
+          {
+            "nme": "fixRetrieveRightBraceOrSemiColonPosition",
+            "acc": 9,
+            "dsc": "(ILorg/eclipse/jdt/internal/compiler/ast/AbstractMethodDeclaration;)I"
+          },
+          {
+            "nme": "fixRetrieveRightBraceOrSemiColonPosition",
+            "acc": 9,
+            "dsc": "(ILorg/eclipse/jdt/internal/compiler/ast/FieldDeclaration;)I"
+          },
+          {
+            "nme": "fixRetrieveProperRightBracketPosition",
+            "acc": 9,
+            "dsc": "(ILorg/eclipse/jdt/core/dom/Type;)I"
+          },
+          {
+            "nme": "checkBit24",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)Z",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "skipRewritingGeneratedNodes",
+            "acc": 9,
+            "dsc": "(Lorg/eclipse/jdt/core/dom/ASTNode;)Z",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "setIsGeneratedFlag",
+            "acc": 9,
+            "dsc": "(Lorg/eclipse/jdt/core/dom/ASTNode;Lorg/eclipse/jdt/internal/compiler/ast/ASTNode;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "setIsGeneratedFlagForName",
+            "acc": 9,
+            "dsc": "(Lorg/eclipse/jdt/core/dom/Name;Ljava/lang/Object;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "listRewriteHandleGeneratedMethods",
+            "acc": 9,
+            "dsc": "(Lorg/eclipse/jdt/internal/core/dom/rewrite/RewriteEvent;)[Lorg/eclipse/jdt/internal/core/dom/rewrite/RewriteEvent;"
+          },
+          {
+            "nme": "getTokenEndOffsetFixed",
+            "acc": 9,
+            "dsc": "(Lorg/eclipse/jdt/internal/core/dom/rewrite/TokenScanner;IILjava/lang/Object;)I",
+            "exs": [
+              "org/eclipse/core/runtime/CoreException"
+            ]
+          },
+          {
+            "nme": "removeGeneratedMethods",
+            "acc": 9,
+            "dsc": "([Lorg/eclipse/jdt/core/IMethod;)[Lorg/eclipse/jdt/core/IMethod;",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "createFakeSearchResult",
+            "acc": 9,
+            "dsc": "([Lorg/eclipse/jdt/internal/corext/refactoring/SearchResultGroup;Ljava/lang/Object;)[Lorg/eclipse/jdt/internal/corext/refactoring/SearchResultGroup;",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "removeGeneratedSimpleNames",
+            "acc": 9,
+            "dsc": "([Lorg/eclipse/jdt/core/dom/SimpleName;)[Lorg/eclipse/jdt/core/dom/SimpleName;",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "removeGeneratedNames",
+            "acc": 9,
+            "dsc": "([Lorg/eclipse/jdt/core/dom/Name;)[Lorg/eclipse/jdt/core/dom/Name;",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "convertAnnotations",
+            "acc": 9,
+            "dsc": "([Lorg/eclipse/jdt/internal/compiler/ast/Annotation;Lorg/eclipse/jdt/core/IAnnotatable;)[Lorg/eclipse/jdt/internal/compiler/ast/Annotation;"
+          },
+          {
+            "nme": "isEmpty",
+            "acc": 9,
+            "dsc": "([C)Z"
+          },
+          {
+            "nme": "returnNullExpression",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)Lorg/eclipse/jdt/internal/compiler/ast/Expression;"
+          },
+          {
+            "nme": "getRealNodeSource",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Lorg/eclipse/jdt/internal/compiler/ast/ASTNode;)Ljava/lang/String;"
+          },
+          {
+            "nme": "getRealNodeSource",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Lorg/eclipse/jdt/core/dom/ASTNode;)Ljava/lang/String;",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "skipRewriteVisibility",
+            "acc": 9,
+            "dsc": "(Lorg/eclipse/jdt/internal/corext/refactoring/structure/MemberVisibilityAdjustor$IncomingMemberVisibilityAdjustment;)Z"
+          },
+          {
+            "nme": "getRealCodeBlocks",
+            "acc": 9,
+            "dsc": "([Ljava/lang/String;Lorg/eclipse/jdt/internal/corext/refactoring/code/SourceProvider;Lorg/eclipse/jdt/internal/corext/refactoring/code/CallContext;)[Ljava/lang/String;"
+          },
+          {
+            "nme": "findGeneratedNode",
+            "acc": 9,
+            "dsc": "(Lorg/eclipse/jdt/core/dom/ASTNode;Lorg/eclipse/jdt/core/ISourceRange;Lorg/eclipse/jdt/core/dom/IMethodBinding;)Lorg/eclipse/jdt/core/dom/ASTNode;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "ALREADY_PROCESSED_FLAG",
+            "dsc": "I",
+            "val": 8388608
+          }
+        ]
+      },
+      "lombok/experimental/ExtensionMethod.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/experimental/ExtensionMethod",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/Class;",
+            "sig": "()[Ljava/lang/Class<*>;"
+          },
+          {
+            "nme": "suppressBaseMethods",
+            "acc": 1025,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$51.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$51",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$41.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$41",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/CustomLog.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/CustomLog",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "topic",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/experimental/WithBy$AnyAnnotation.class": {
+        "ver": 50,
+        "acc": 140801,
+        "nme": "lombok/experimental/WithBy$AnyAnnotation",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/Deprecated;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              []
+            ]
+          }
+        ]
+      },
+      "lombok/delombok/ant/Tasks$Delombok.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "lombok/delombok/ant/Tasks$Delombok",
+        "super": "org/apache/tools/ant/Task",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setClasspath",
+            "acc": 1,
+            "dsc": "(Lorg/apache/tools/ant/types/Path;)V"
+          },
+          {
+            "nme": "createClasspath",
+            "acc": 1,
+            "dsc": "()Lorg/apache/tools/ant/types/Path;"
+          },
+          {
+            "nme": "setClasspathRef",
+            "acc": 1,
+            "dsc": "(Lorg/apache/tools/ant/types/Reference;)V"
+          },
+          {
+            "nme": "setSourcepath",
+            "acc": 1,
+            "dsc": "(Lorg/apache/tools/ant/types/Path;)V"
+          },
+          {
+            "nme": "createSourcepath",
+            "acc": 1,
+            "dsc": "()Lorg/apache/tools/ant/types/Path;"
+          },
+          {
+            "nme": "setSourcepathRef",
+            "acc": 1,
+            "dsc": "(Lorg/apache/tools/ant/types/Reference;)V"
+          },
+          {
+            "nme": "setModulepath",
+            "acc": 1,
+            "dsc": "(Lorg/apache/tools/ant/types/Path;)V"
+          },
+          {
+            "nme": "createModulepath",
+            "acc": 1,
+            "dsc": "()Lorg/apache/tools/ant/types/Path;"
+          },
+          {
+            "nme": "setModulepathRef",
+            "acc": 1,
+            "dsc": "(Lorg/apache/tools/ant/types/Reference;)V"
+          },
+          {
+            "nme": "setFrom",
+            "acc": 1,
+            "dsc": "(Ljava/io/File;)V"
+          },
+          {
+            "nme": "setTo",
+            "acc": 1,
+            "dsc": "(Ljava/io/File;)V"
+          },
+          {
+            "nme": "setVerbose",
+            "acc": 1,
+            "dsc": "(Z)V"
+          },
+          {
+            "nme": "setEncoding",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "addFileset",
+            "acc": 1,
+            "dsc": "(Lorg/apache/tools/ant/types/FileSet;)V"
+          },
+          {
+            "nme": "addFormat",
+            "acc": 1,
+            "dsc": "(Llombok/delombok/ant/Tasks$Format;)V"
+          },
+          {
+            "nme": "shadowLoadClass",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/Class;",
+            "sig": "(Ljava/lang/String;)Ljava/lang/Class<*>;"
+          },
+          {
+            "nme": "execute",
+            "acc": 1,
+            "dsc": "()V",
+            "exs": [
+              "org/apache/tools/ant/BuildException"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "fromDir",
+            "dsc": "Ljava/io/File;"
+          },
+          {
+            "acc": 2,
+            "nme": "toDir",
+            "dsc": "Ljava/io/File;"
+          },
+          {
+            "acc": 2,
+            "nme": "classpath",
+            "dsc": "Lorg/apache/tools/ant/types/Path;"
+          },
+          {
+            "acc": 2,
+            "nme": "sourcepath",
+            "dsc": "Lorg/apache/tools/ant/types/Path;"
+          },
+          {
+            "acc": 2,
+            "nme": "modulepath",
+            "dsc": "Lorg/apache/tools/ant/types/Path;"
+          },
+          {
+            "acc": 2,
+            "nme": "verbose",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "encoding",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 2,
+            "nme": "path",
+            "dsc": "Lorg/apache/tools/ant/types/Path;"
+          },
+          {
+            "acc": 2,
+            "nme": "formatOptions",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Llombok/delombok/ant/Tasks$Format;>;"
+          },
+          {
+            "acc": 10,
+            "nme": "shadowLoader",
+            "dsc": "Ljava/lang/ClassLoader;"
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$11.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$11",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/launch/PatchFixesHider$ExtensionMethod.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "lombok/launch/PatchFixesHider$ExtensionMethod",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "resolveType",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "errorNoMethodFor",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "invalidMethod",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "invalidMethod",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "nonStaticAccessToStaticMethod",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "modifyMethodPattern",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "MESSAGE_SEND_SIG",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.eclipse.jdt.internal.compiler.ast.MessageSend"
+          },
+          {
+            "acc": 26,
+            "nme": "TYPE_BINDING_SIG",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.eclipse.jdt.internal.compiler.lookup.TypeBinding"
+          },
+          {
+            "acc": 26,
+            "nme": "SCOPE_SIG",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.eclipse.jdt.internal.compiler.lookup.Scope"
+          },
+          {
+            "acc": 26,
+            "nme": "BLOCK_SCOPE_SIG",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.eclipse.jdt.internal.compiler.lookup.BlockScope"
+          },
+          {
+            "acc": 26,
+            "nme": "TYPE_BINDINGS_SIG",
+            "dsc": "Ljava/lang/String;",
+            "val": "[Lorg.eclipse.jdt.internal.compiler.lookup.TypeBinding;"
+          },
+          {
+            "acc": 26,
+            "nme": "PROBLEM_REPORTER_SIG",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.eclipse.jdt.internal.compiler.problem.ProblemReporter"
+          },
+          {
+            "acc": 26,
+            "nme": "METHOD_BINDING_SIG",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.eclipse.jdt.internal.compiler.lookup.MethodBinding"
+          },
+          {
+            "acc": 26,
+            "nme": "AST_NODE_SIG",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.eclipse.jdt.internal.compiler.ast.ASTNode"
+          },
+          {
+            "acc": 26,
+            "nme": "RESOLVE_TYPE",
+            "dsc": "Ljava/lang/reflect/Method;"
+          },
+          {
+            "acc": 26,
+            "nme": "ERROR_NO_METHOD_FOR",
+            "dsc": "Ljava/lang/reflect/Method;"
+          },
+          {
+            "acc": 26,
+            "nme": "INVALID_METHOD",
+            "dsc": "Ljava/lang/reflect/Method;"
+          },
+          {
+            "acc": 26,
+            "nme": "INVALID_METHOD2",
+            "dsc": "Ljava/lang/reflect/Method;"
+          },
+          {
+            "acc": 26,
+            "nme": "NON_STATIC_ACCESS_TO_STATIC_METHOD",
+            "dsc": "Ljava/lang/reflect/Method;"
+          },
+          {
+            "acc": 26,
+            "nme": "MODIFY_METHOD_PATTERN",
+            "dsc": "Ljava/lang/reflect/Method;"
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$29.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$29",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$69.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$69",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$74.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$74",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/extern/jackson/Jacksonized.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/extern/jackson/Jacksonized",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$19.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$19",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$59.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$59",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/experimental/PackagePrivate.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/experimental/PackagePrivate",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/Builder$Default.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/Builder$Default",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$64.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$64",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/extern/apachecommons/CommonsLog.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/extern/apachecommons/CommonsLog",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "topic",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/Locked$Read.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/Locked$Read",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/Synchronized.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/Synchronized",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/experimental/Accessors.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/experimental/Accessors",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "fluent",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "chain",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "makeFinal",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "prefix",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$46.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$46",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$52.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$52",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/SneakyThrows.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/SneakyThrows",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/Class;",
+            "sig": "()[Ljava/lang/Class<+Ljava/lang/Throwable;>;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/delombok/ant/Tasks.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/delombok/ant/Tasks",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$18.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$18",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$23.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$23",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$58.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$58",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/EqualsAndHashCode$CacheStrategy.class": {
+        "ver": 50,
+        "acc": 16433,
+        "nme": "lombok/EqualsAndHashCode$CacheStrategy",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Llombok/EqualsAndHashCode$CacheStrategy;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Llombok/EqualsAndHashCode$CacheStrategy;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "NEVER",
+            "dsc": "Llombok/EqualsAndHashCode$CacheStrategy;"
+          },
+          {
+            "acc": 16409,
+            "nme": "LAZY",
+            "dsc": "Llombok/EqualsAndHashCode$CacheStrategy;"
+          },
+          {
+            "acc": 4122,
+            "nme": "ENUM$VALUES",
+            "dsc": "[Llombok/EqualsAndHashCode$CacheStrategy;"
+          }
+        ]
+      },
+      "lombok/EqualsAndHashCode.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/EqualsAndHashCode",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "exclude",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/String;"
+          },
+          {
+            "nme": "of",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/String;"
+          },
+          {
+            "nme": "callSuper",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "doNotUseGetters",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "cacheStrategy",
+            "acc": 1025,
+            "dsc": "()Llombok/EqualsAndHashCode$CacheStrategy;"
+          },
+          {
+            "nme": "onParam",
+            "acc": 1025,
+            "dsc": "()[Llombok/EqualsAndHashCode$AnyAnnotation;"
+          },
+          {
+            "nme": "onlyExplicitlyIncluded",
+            "acc": 1025,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/package-info.class": {
+        "ver": 50,
+        "acc": 5632,
+        "nme": "lombok/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "lombok/extern/log4j/Log4j.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "lombok/extern/log4j/Log4j",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "topic",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "lombok/launch/PatchFixesHider$ValPortal.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "lombok/launch/PatchFixesHider$ValPortal",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "copyInitializationOfForEachIterable",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "copyInitializationOfLocalDeclaration",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "addFinalAndValAnnotationToVariableDeclarationStatement",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "addFinalAndValAnnotationToSingleVariableDeclaration",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "COPY_INITIALIZATION_OF_FOR_EACH_ITERABLE",
+            "dsc": "Ljava/lang/reflect/Method;"
+          },
+          {
+            "acc": 26,
+            "nme": "COPY_INITIALIZATION_OF_LOCAL_DECLARATION",
+            "dsc": "Ljava/lang/reflect/Method;"
+          },
+          {
+            "acc": 26,
+            "nme": "ADD_FINAL_AND_VAL_ANNOTATION_TO_VARIABLE_DECLARATION_STATEMENT",
+            "dsc": "Ljava/lang/reflect/Method;"
+          },
+          {
+            "acc": 26,
+            "nme": "ADD_FINAL_AND_VAL_ANNOTATION_TO_SINGLE_VARIABLE_DECLARATION",
+            "dsc": "Ljava/lang/reflect/Method;"
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$75.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$75",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/delombok/ant/Tasks$Format.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "lombok/delombok/ant/Tasks$Format",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getValue",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "setValue",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "value",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "lombok/ConfigurationKeys$80.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$80",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "lombok/ConfigurationKeys$40.class": {
+        "ver": 50,
+        "acc": 32,
+        "nme": "lombok/ConfigurationKeys$40",
+        "super": "lombok/core/configuration/ConfigurationKey",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,3283 @@
+{
+  "md5": "e7a1e7cb6a89241ed9bfec4c25b6c645",
+  "sha2": "b9fc14968d63a8b8a8a2c1885fe3e90564239708",
+  "sha256": "bc2dfe32f1ef06509e6a065144c1adf7b420eabf11a87f30bd127f8faa332016",
+  "contents": {
+    "classes": {
+      "org/apache/commons/logging/LogSource.class": {
+        "ver": 52,
+        "acc": 131105,
+        "nme": "org/apache/commons/logging/LogSource",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getInstance",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Class;)Lorg/apache/commons/logging/Log;",
+            "sig": "(Ljava/lang/Class<*>;)Lorg/apache/commons/logging/Log;"
+          },
+          {
+            "nme": "getInstance",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lorg/apache/commons/logging/Log;"
+          },
+          {
+            "nme": "getLogNames",
+            "acc": 9,
+            "dsc": "()[Ljava/lang/String;"
+          },
+          {
+            "nme": "isClassForName",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "makeNewLogInstance",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lorg/apache/commons/logging/Log;"
+          },
+          {
+            "nme": "setLogImplementation",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Class;)V",
+            "sig": "(Ljava/lang/Class<*>;)V",
+            "exs": [
+              "java/lang/LinkageError",
+              "java/lang/ExceptionInInitializerError",
+              "java/lang/NoSuchMethodException",
+              "java/lang/SecurityException"
+            ]
+          },
+          {
+            "nme": "setLogImplementation",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)V",
+            "exs": [
+              "java/lang/LinkageError",
+              "java/lang/SecurityException"
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lambda$getInstance$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Lorg/apache/commons/logging/Log;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 12,
+            "nme": "logs",
+            "dsc": "Ljava/util/Hashtable;",
+            "sig": "Ljava/util/Hashtable<Ljava/lang/String;Lorg/apache/commons/logging/Log;>;"
+          },
+          {
+            "acc": 12,
+            "nme": "log4jIsAvailable",
+            "dsc": "Z"
+          },
+          {
+            "acc": 131084,
+            "nme": "jdk14IsAvailable",
+            "dsc": "Z"
+          },
+          {
+            "acc": 12,
+            "nme": "logImplctor",
+            "dsc": "Ljava/lang/reflect/Constructor;",
+            "sig": "Ljava/lang/reflect/Constructor<*>;"
+          },
+          {
+            "acc": 26,
+            "nme": "EMPTY_STRING_ARRAY",
+            "dsc": "[Ljava/lang/String;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/Deprecated;"
+          }
+        ]
+      },
+      "org/apache/commons/logging/impl/Slf4jLogFactory$Slf4jLog.class": {
+        "ver": 52,
+        "acc": 32,
+        "nme": "org/apache/commons/logging/impl/Slf4jLogFactory$Slf4jLog",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/Logger;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "fatal",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "fatal",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isDebugEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isErrorEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isFatalEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isInfoEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isTraceEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isWarnEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "logger",
+            "dsc": "Lorg/slf4j/Logger;"
+          }
+        ]
+      },
+      "org/apache/commons/logging/impl/ServletContextCleaner.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/apache/commons/logging/impl/ServletContextCleaner",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "contextDestroyed",
+            "acc": 1,
+            "dsc": "(Ljavax/servlet/ServletContextEvent;)V"
+          },
+          {
+            "nme": "contextInitialized",
+            "acc": 1,
+            "dsc": "(Ljavax/servlet/ServletContextEvent;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "RELEASE_SIGNATURE",
+            "dsc": "[Ljava/lang/Class;",
+            "sig": "[Ljava/lang/Class<*>;"
+          }
+        ]
+      },
+      "org/apache/commons/logging/Log.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "org/apache/commons/logging/Log",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "debug",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "fatal",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "fatal",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isDebugEnabled",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isErrorEnabled",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isFatalEnabled",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isInfoEnabled",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isTraceEnabled",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isWarnEnabled",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "trace",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          }
+        ],
+        "flds": []
+      },
+      "org/apache/commons/logging/impl/Slf4jLogFactory$Slf4jLocationAwareLog.class": {
+        "ver": 52,
+        "acc": 48,
+        "nme": "org/apache/commons/logging/impl/Slf4jLogFactory$Slf4jLocationAwareLog",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/slf4j/spi/LocationAwareLogger;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "fatal",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "fatal",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isDebugEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isErrorEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isFatalEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isInfoEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isTraceEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isWarnEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "log",
+            "acc": 2,
+            "dsc": "(ILjava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "FQCN",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "logger",
+            "dsc": "Lorg/slf4j/spi/LocationAwareLogger;"
+          }
+        ]
+      },
+      "org/apache/commons/logging/impl/Log4jApiLogFactory.class": {
+        "ver": 52,
+        "acc": 49,
+        "nme": "org/apache/commons/logging/impl/Log4jApiLogFactory",
+        "super": "org/apache/commons/logging/LogFactory",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getAttribute",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "getAttributeNames",
+            "acc": 1,
+            "dsc": "()[Ljava/lang/String;"
+          },
+          {
+            "nme": "getInstance",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Class;)Lorg/apache/commons/logging/Log;",
+            "sig": "(Ljava/lang/Class<*>;)Lorg/apache/commons/logging/Log;"
+          },
+          {
+            "nme": "getInstance",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Lorg/apache/commons/logging/Log;"
+          },
+          {
+            "nme": "release",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "removeAttribute",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "setAttribute",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "access$000",
+            "acc": 4104,
+            "dsc": "()Lorg/apache/logging/log4j/Marker;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "EMPTY_ARRAY",
+            "dsc": "[Ljava/lang/String;"
+          },
+          {
+            "acc": 26,
+            "nme": "MARKER",
+            "dsc": "Lorg/apache/logging/log4j/Marker;"
+          },
+          {
+            "acc": 18,
+            "nme": "adapter",
+            "dsc": "Lorg/apache/logging/log4j/spi/LoggerAdapter;",
+            "sig": "Lorg/apache/logging/log4j/spi/LoggerAdapter<Lorg/apache/commons/logging/Log;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "attributes",
+            "dsc": "Ljava/util/concurrent/ConcurrentMap;",
+            "sig": "Ljava/util/concurrent/ConcurrentMap<Ljava/lang/String;Ljava/lang/Object;>;"
+          }
+        ]
+      },
+      "org/apache/commons/logging/impl/LogKitLogger.class": {
+        "ver": 52,
+        "acc": 131105,
+        "nme": "org/apache/commons/logging/impl/LogKitLogger",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "fatal",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "fatal",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "getLogger",
+            "acc": 1,
+            "dsc": "()Lorg/apache/log/Logger;"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isDebugEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isErrorEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isFatalEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isInfoEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isTraceEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isWarnEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": 3768538055836059519
+          },
+          {
+            "acc": 196,
+            "nme": "logger",
+            "dsc": "Lorg/apache/log/Logger;"
+          },
+          {
+            "acc": 4,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/Deprecated;"
+          }
+        ]
+      },
+      "org/apache/commons/logging/package-info.class": {
+        "ver": 52,
+        "acc": 5632,
+        "nme": "org/apache/commons/logging/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "org/apache/commons/logging/LogConfigurationException.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/apache/commons/logging/LogConfigurationException",
+        "super": "java/lang/RuntimeException",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Throwable;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": 8486587136871052495
+          },
+          {
+            "acc": 131076,
+            "nme": "cause",
+            "dsc": "Ljava/lang/Throwable;"
+          }
+        ]
+      },
+      "org/apache/commons/logging/impl/Jdk14Logger.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/apache/commons/logging/impl/Jdk14Logger",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "fatal",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "fatal",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "getLogger",
+            "acc": 1,
+            "dsc": "()Ljava/util/logging/Logger;"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isDebugEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isErrorEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isFatalEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isInfoEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isTraceEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isWarnEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "log",
+            "acc": 4,
+            "dsc": "(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": 4784713551416303804
+          },
+          {
+            "acc": 28,
+            "nme": "dummyLevel",
+            "dsc": "Ljava/util/logging/Level;"
+          },
+          {
+            "acc": 132,
+            "nme": "logger",
+            "dsc": "Ljava/util/logging/Logger;"
+          },
+          {
+            "acc": 4,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "org/apache/commons/logging/impl/WeakHashtable$Referenced.class": {
+        "ver": 52,
+        "acc": 48,
+        "nme": "org/apache/commons/logging/impl/WeakHashtable$Referenced",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "getValue",
+            "acc": 2,
+            "dsc": "()Ljava/lang/Object;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4096,
+            "dsc": "(Ljava/lang/Object;Lorg/apache/commons/logging/impl/WeakHashtable$1;)V"
+          },
+          {
+            "nme": "access$200",
+            "acc": 4104,
+            "dsc": "(Lorg/apache/commons/logging/impl/WeakHashtable$Referenced;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4096,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;Lorg/apache/commons/logging/impl/WeakHashtable$1;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "reference",
+            "dsc": "Ljava/lang/ref/WeakReference;"
+          },
+          {
+            "acc": 18,
+            "nme": "hashCode",
+            "dsc": "I"
+          }
+        ]
+      },
+      "org/apache/commons/logging/impl/WeakHashtable$WeakKey.class": {
+        "ver": 52,
+        "acc": 48,
+        "nme": "org/apache/commons/logging/impl/WeakHashtable$WeakKey",
+        "super": "java/lang/ref/WeakReference",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;Lorg/apache/commons/logging/impl/WeakHashtable$Referenced;)V"
+          },
+          {
+            "nme": "getReferenced",
+            "acc": 2,
+            "dsc": "()Lorg/apache/commons/logging/impl/WeakHashtable$Referenced;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4096,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;Lorg/apache/commons/logging/impl/WeakHashtable$Referenced;Lorg/apache/commons/logging/impl/WeakHashtable$1;)V"
+          },
+          {
+            "nme": "access$400",
+            "acc": 4104,
+            "dsc": "(Lorg/apache/commons/logging/impl/WeakHashtable$WeakKey;)Lorg/apache/commons/logging/impl/WeakHashtable$Referenced;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "referenced",
+            "dsc": "Lorg/apache/commons/logging/impl/WeakHashtable$Referenced;"
+          }
+        ]
+      },
+      "org/apache/commons/logging/impl/LogFactoryImpl.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/apache/commons/logging/impl/LogFactoryImpl",
+        "super": "org/apache/commons/logging/LogFactory",
+        "mthds": [
+          {
+            "nme": "getClassLoader",
+            "acc": 12,
+            "dsc": "(Ljava/lang/Class;)Ljava/lang/ClassLoader;",
+            "sig": "(Ljava/lang/Class<*>;)Ljava/lang/ClassLoader;"
+          },
+          {
+            "nme": "getContextClassLoader",
+            "acc": 12,
+            "dsc": "()Ljava/lang/ClassLoader;",
+            "exs": [
+              "org/apache/commons/logging/LogConfigurationException"
+            ]
+          },
+          {
+            "nme": "getContextClassLoaderInternal",
+            "acc": 10,
+            "dsc": "()Ljava/lang/ClassLoader;",
+            "exs": [
+              "org/apache/commons/logging/LogConfigurationException"
+            ]
+          },
+          {
+            "nme": "getSystemProperty",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;",
+            "exs": [
+              "java/lang/SecurityException"
+            ]
+          },
+          {
+            "nme": "isDiagnosticsEnabled",
+            "acc": 12,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "trim",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "createLogFromClass",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Z)Lorg/apache/commons/logging/Log;",
+            "exs": [
+              "org/apache/commons/logging/LogConfigurationException"
+            ]
+          },
+          {
+            "nme": "discoverLogImplementation",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;)Lorg/apache/commons/logging/Log;",
+            "exs": [
+              "org/apache/commons/logging/LogConfigurationException"
+            ]
+          },
+          {
+            "nme": "findUserSpecifiedLogClassName",
+            "acc": 2,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getAttribute",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "getAttributeNames",
+            "acc": 1,
+            "dsc": "()[Ljava/lang/String;"
+          },
+          {
+            "nme": "getBaseClassLoader",
+            "acc": 2,
+            "dsc": "()Ljava/lang/ClassLoader;",
+            "exs": [
+              "org/apache/commons/logging/LogConfigurationException"
+            ]
+          },
+          {
+            "nme": "getBooleanConfiguration",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;Z)Z"
+          },
+          {
+            "nme": "getConfigurationValue",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "getInstance",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Class;)Lorg/apache/commons/logging/Log;",
+            "sig": "(Ljava/lang/Class<*>;)Lorg/apache/commons/logging/Log;",
+            "exs": [
+              "org/apache/commons/logging/LogConfigurationException"
+            ]
+          },
+          {
+            "nme": "getInstance",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Lorg/apache/commons/logging/Log;",
+            "exs": [
+              "org/apache/commons/logging/LogConfigurationException"
+            ]
+          },
+          {
+            "nme": "getLogClassName",
+            "acc": 131076,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "getLogConstructor",
+            "acc": 131076,
+            "dsc": "()Ljava/lang/reflect/Constructor;",
+            "sig": "()Ljava/lang/reflect/Constructor<*>;",
+            "exs": [
+              "org/apache/commons/logging/LogConfigurationException"
+            ],
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "getLowestClassLoader",
+            "acc": 2,
+            "dsc": "(Ljava/lang/ClassLoader;Ljava/lang/ClassLoader;)Ljava/lang/ClassLoader;"
+          },
+          {
+            "nme": "getParentClassLoader",
+            "acc": 2,
+            "dsc": "(Ljava/lang/ClassLoader;)Ljava/lang/ClassLoader;"
+          },
+          {
+            "nme": "handleFlawedDiscovery",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "handleFlawedHierarchy",
+            "acc": 2,
+            "dsc": "(Ljava/lang/ClassLoader;Ljava/lang/Class;)V",
+            "sig": "(Ljava/lang/ClassLoader;Ljava/lang/Class<*>;)V",
+            "exs": [
+              "org/apache/commons/logging/LogConfigurationException"
+            ]
+          },
+          {
+            "nme": "informUponSimilarName",
+            "acc": 2,
+            "dsc": "(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "initConfiguration",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "initDiagnostics",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "isJdk13LumberjackAvailable",
+            "acc": 131076,
+            "dsc": "()Z",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "isJdk14Available",
+            "acc": 131076,
+            "dsc": "()Z",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "isLog4JAvailable",
+            "acc": 131076,
+            "dsc": "()Z",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "isLogLibraryAvailable",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "logDiagnostic",
+            "acc": 4,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "newInstance",
+            "acc": 4,
+            "dsc": "(Ljava/lang/String;)Lorg/apache/commons/logging/Log;",
+            "exs": [
+              "org/apache/commons/logging/LogConfigurationException"
+            ]
+          },
+          {
+            "nme": "release",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "removeAttribute",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "setAttribute",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "lambda$getParentClassLoader$2",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/ClassLoader;)Ljava/lang/ClassLoader;"
+          },
+          {
+            "nme": "lambda$getSystemProperty$1",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$getContextClassLoaderInternal$0",
+            "acc": 4106,
+            "dsc": "()Ljava/lang/ClassLoader;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGING_IMPL_LOG4J_LOGGER",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.apache.commons.logging.impl.Log4JLogger"
+          },
+          {
+            "acc": 26,
+            "nme": "LOGGING_IMPL_JDK14_LOGGER",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.apache.commons.logging.impl.Jdk14Logger"
+          },
+          {
+            "acc": 26,
+            "nme": "LOGGING_IMPL_LUMBERJACK_LOGGER",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.apache.commons.logging.impl.Jdk13LumberjackLogger"
+          },
+          {
+            "acc": 26,
+            "nme": "LOGGING_IMPL_SIMPLE_LOGGER",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.apache.commons.logging.impl.SimpleLog"
+          },
+          {
+            "acc": 26,
+            "nme": "PKG_IMPL",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.apache.commons.logging.impl."
+          },
+          {
+            "acc": 26,
+            "nme": "PKG_LEN",
+            "dsc": "I"
+          },
+          {
+            "acc": 26,
+            "nme": "EMPTY_STRING_ARRAY",
+            "dsc": "[Ljava/lang/String;"
+          },
+          {
+            "acc": 25,
+            "nme": "LOG_PROPERTY",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.apache.commons.logging.Log"
+          },
+          {
+            "acc": 28,
+            "nme": "LOG_PROPERTY_OLD",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.apache.commons.logging.log"
+          },
+          {
+            "acc": 25,
+            "nme": "ALLOW_FLAWED_CONTEXT_PROPERTY",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.apache.commons.logging.Log.allowFlawedContext"
+          },
+          {
+            "acc": 25,
+            "nme": "ALLOW_FLAWED_DISCOVERY_PROPERTY",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.apache.commons.logging.Log.allowFlawedDiscovery"
+          },
+          {
+            "acc": 25,
+            "nme": "ALLOW_FLAWED_HIERARCHY_PROPERTY",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.apache.commons.logging.Log.allowFlawedHierarchy"
+          },
+          {
+            "acc": 26,
+            "nme": "classesToDiscover",
+            "dsc": "[Ljava/lang/String;"
+          },
+          {
+            "acc": 2,
+            "nme": "useTCCL",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "diagnosticPrefix",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 4,
+            "nme": "attributes",
+            "dsc": "Ljava/util/Hashtable;",
+            "sig": "Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/Object;>;"
+          },
+          {
+            "acc": 4,
+            "nme": "instances",
+            "dsc": "Ljava/util/Hashtable;",
+            "sig": "Ljava/util/Hashtable<Ljava/lang/String;Lorg/apache/commons/logging/Log;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "logClassName",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 4,
+            "nme": "logConstructor",
+            "dsc": "Ljava/lang/reflect/Constructor;",
+            "sig": "Ljava/lang/reflect/Constructor<*>;"
+          },
+          {
+            "acc": 4,
+            "nme": "logConstructorSignature",
+            "dsc": "[Ljava/lang/Class;",
+            "sig": "[Ljava/lang/Class<*>;"
+          },
+          {
+            "acc": 4,
+            "nme": "logMethod",
+            "dsc": "Ljava/lang/reflect/Method;"
+          },
+          {
+            "acc": 4,
+            "nme": "logMethodSignature",
+            "dsc": "[Ljava/lang/Class;",
+            "sig": "[Ljava/lang/Class<*>;"
+          },
+          {
+            "acc": 2,
+            "nme": "allowFlawedContext",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "allowFlawedDiscovery",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "allowFlawedHierarchy",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "org/apache/commons/logging/impl/WeakHashtable.class": {
+        "ver": 52,
+        "acc": 131121,
+        "nme": "org/apache/commons/logging/impl/WeakHashtable",
+        "super": "java/util/Hashtable",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "containsKey",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "elements",
+            "acc": 1,
+            "dsc": "()Ljava/util/Enumeration;"
+          },
+          {
+            "nme": "entrySet",
+            "acc": 1,
+            "dsc": "()Ljava/util/Set;"
+          },
+          {
+            "nme": "get",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "isEmpty",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "keys",
+            "acc": 1,
+            "dsc": "()Ljava/util/Enumeration;"
+          },
+          {
+            "nme": "keySet",
+            "acc": 1,
+            "dsc": "()Ljava/util/Set;"
+          },
+          {
+            "nme": "purge",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "purgeOne",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "put",
+            "acc": 33,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "putAll",
+            "acc": 1,
+            "dsc": "(Ljava/util/Map;)V"
+          },
+          {
+            "nme": "rehash",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "remove",
+            "acc": 33,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "size",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "values",
+            "acc": 1,
+            "dsc": "()Ljava/util/Collection;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": -1546036869799732453
+          },
+          {
+            "acc": 26,
+            "nme": "MAX_CHANGES_BEFORE_PURGE",
+            "dsc": "I",
+            "val": 100
+          },
+          {
+            "acc": 26,
+            "nme": "PARTIAL_PURGE_COUNT",
+            "dsc": "I",
+            "val": 10
+          },
+          {
+            "acc": 146,
+            "nme": "queue",
+            "dsc": "Ljava/lang/ref/ReferenceQueue;"
+          },
+          {
+            "acc": 2,
+            "nme": "changeCount",
+            "dsc": "I"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/Deprecated;"
+          }
+        ]
+      },
+      "org/apache/commons/logging/LogFactory.class": {
+        "ver": 52,
+        "acc": 1057,
+        "nme": "org/apache/commons/logging/LogFactory",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "cacheFactory",
+            "acc": 10,
+            "dsc": "(Ljava/lang/ClassLoader;Lorg/apache/commons/logging/LogFactory;)V"
+          },
+          {
+            "nme": "createFactory",
+            "acc": 12,
+            "dsc": "(Ljava/lang/String;Ljava/lang/ClassLoader;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "createFactoryStore",
+            "acc": 10,
+            "dsc": "()Ljava/util/Hashtable;",
+            "sig": "()Ljava/util/Hashtable<Ljava/lang/ClassLoader;Lorg/apache/commons/logging/LogFactory;>;"
+          },
+          {
+            "nme": "directGetContextClassLoader",
+            "acc": 12,
+            "dsc": "()Ljava/lang/ClassLoader;",
+            "exs": [
+              "org/apache/commons/logging/LogConfigurationException"
+            ]
+          },
+          {
+            "nme": "getCachedFactory",
+            "acc": 10,
+            "dsc": "(Ljava/lang/ClassLoader;)Lorg/apache/commons/logging/LogFactory;"
+          },
+          {
+            "nme": "getClassLoader",
+            "acc": 12,
+            "dsc": "(Ljava/lang/Class;)Ljava/lang/ClassLoader;",
+            "sig": "(Ljava/lang/Class<*>;)Ljava/lang/ClassLoader;"
+          },
+          {
+            "nme": "getConfigurationFile",
+            "acc": 10,
+            "dsc": "(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/util/Properties;"
+          },
+          {
+            "nme": "getContextClassLoader",
+            "acc": 12,
+            "dsc": "()Ljava/lang/ClassLoader;",
+            "exs": [
+              "org/apache/commons/logging/LogConfigurationException"
+            ]
+          },
+          {
+            "nme": "getContextClassLoaderInternal",
+            "acc": 10,
+            "dsc": "()Ljava/lang/ClassLoader;",
+            "exs": [
+              "org/apache/commons/logging/LogConfigurationException"
+            ]
+          },
+          {
+            "nme": "getFactory",
+            "acc": 9,
+            "dsc": "()Lorg/apache/commons/logging/LogFactory;",
+            "exs": [
+              "org/apache/commons/logging/LogConfigurationException"
+            ]
+          },
+          {
+            "nme": "getLog",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Class;)Lorg/apache/commons/logging/Log;",
+            "sig": "(Ljava/lang/Class<*>;)Lorg/apache/commons/logging/Log;",
+            "exs": [
+              "org/apache/commons/logging/LogConfigurationException"
+            ]
+          },
+          {
+            "nme": "getLog",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lorg/apache/commons/logging/Log;",
+            "exs": [
+              "org/apache/commons/logging/LogConfigurationException"
+            ]
+          },
+          {
+            "nme": "getProperties",
+            "acc": 10,
+            "dsc": "(Ljava/net/URL;)Ljava/util/Properties;"
+          },
+          {
+            "nme": "getResources",
+            "acc": 10,
+            "dsc": "(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/util/Enumeration;",
+            "sig": "(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/util/Enumeration<Ljava/net/URL;>;"
+          },
+          {
+            "nme": "getSystemProperty",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;",
+            "exs": [
+              "java/lang/SecurityException"
+            ]
+          },
+          {
+            "nme": "handleThrowable",
+            "acc": 12,
+            "dsc": "(Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "implementsLogFactory",
+            "acc": 10,
+            "dsc": "(Ljava/lang/Class;)Z",
+            "sig": "(Ljava/lang/Class<*>;)Z"
+          },
+          {
+            "nme": "initDiagnostics",
+            "acc": 10,
+            "dsc": "()Ljava/io/PrintStream;"
+          },
+          {
+            "nme": "isClassAvailable",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;Ljava/lang/ClassLoader;)Z"
+          },
+          {
+            "nme": "isDiagnosticsEnabled",
+            "acc": 12,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "logClassLoaderEnvironment",
+            "acc": 10,
+            "dsc": "(Ljava/lang/Class;)V",
+            "sig": "(Ljava/lang/Class<*>;)V"
+          },
+          {
+            "nme": "logDiagnostic",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "logDiagnostic",
+            "acc": 10,
+            "dsc": "(Ljava/util/function/Supplier;)V",
+            "sig": "(Ljava/util/function/Supplier<Ljava/lang/String;>;)V"
+          },
+          {
+            "nme": "logDiagnosticDirect",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "logHierarchy",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;Ljava/lang/ClassLoader;)V"
+          },
+          {
+            "nme": "logRawDiagnostic",
+            "acc": 28,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "newFactory",
+            "acc": 12,
+            "dsc": "(Ljava/lang/String;Ljava/lang/ClassLoader;)Lorg/apache/commons/logging/LogFactory;"
+          },
+          {
+            "nme": "newFactory",
+            "acc": 12,
+            "dsc": "(Ljava/lang/String;Ljava/lang/ClassLoader;Ljava/lang/ClassLoader;)Lorg/apache/commons/logging/LogFactory;",
+            "exs": [
+              "org/apache/commons/logging/LogConfigurationException"
+            ]
+          },
+          {
+            "nme": "newStandardFactory",
+            "acc": 10,
+            "dsc": "(Ljava/lang/ClassLoader;)Lorg/apache/commons/logging/LogFactory;"
+          },
+          {
+            "nme": "objectId",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/String;"
+          },
+          {
+            "nme": "release",
+            "acc": 9,
+            "dsc": "(Ljava/lang/ClassLoader;)V"
+          },
+          {
+            "nme": "releaseAll",
+            "acc": 9,
+            "dsc": "()V"
+          },
+          {
+            "nme": "trim",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getAttribute",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "getAttributeNames",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/String;"
+          },
+          {
+            "nme": "getInstance",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Class;)Lorg/apache/commons/logging/Log;",
+            "sig": "(Ljava/lang/Class<*>;)Lorg/apache/commons/logging/Log;",
+            "exs": [
+              "org/apache/commons/logging/LogConfigurationException"
+            ]
+          },
+          {
+            "nme": "getInstance",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)Lorg/apache/commons/logging/Log;",
+            "exs": [
+              "org/apache/commons/logging/LogConfigurationException"
+            ]
+          },
+          {
+            "nme": "release",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "removeAttribute",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "setAttribute",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "lambda$release$33",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/ClassLoader;)Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$newStandardFactory$32",
+            "acc": 4106,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$newStandardFactory$31",
+            "acc": 4106,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$newStandardFactory$30",
+            "acc": 4106,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$newStandardFactory$29",
+            "acc": 4106,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$newFactory$28",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/ClassLoader;)Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$newFactory$27",
+            "acc": 4106,
+            "dsc": "(Lorg/apache/commons/logging/LogConfigurationException;)Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$newFactory$26",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;Ljava/lang/ClassLoader;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "lambda$isClassAvailable$25",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;Ljava/lang/ClassLoader;Ljava/lang/Throwable;)Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$isClassAvailable$24",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;Ljava/lang/ClassLoader;)Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$implementsLogFactory$23",
+            "acc": 4106,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$implementsLogFactory$22",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/LinkageError;)Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$implementsLogFactory$21",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/SecurityException;)Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$implementsLogFactory$20",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$implementsLogFactory$19",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$getSystemProperty$18",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$getResources$17",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/util/Enumeration;"
+          },
+          {
+            "nme": "lambda$getResources$16",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;Ljava/io/IOException;)Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$getProperties$15",
+            "acc": 4106,
+            "dsc": "(Ljava/net/URL;)Ljava/util/Properties;"
+          },
+          {
+            "nme": "lambda$getProperties$14",
+            "acc": 4106,
+            "dsc": "(Ljava/net/URL;)Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$getProperties$13",
+            "acc": 4106,
+            "dsc": "(Ljava/net/URL;)Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$getFactory$12",
+            "acc": 4106,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$getFactory$11",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$getFactory$10",
+            "acc": 4106,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$getFactory$9",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Exception;)Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$getFactory$8",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Error;)Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$getFactory$7",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/RuntimeException;)Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$getFactory$6",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/SecurityException;)Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$getFactory$5",
+            "acc": 4106,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$getFactory$4",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$getFactory$3",
+            "acc": 4106,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$getFactory$2",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/ClassLoader;)Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$getFactory$1",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/ClassLoader;)Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$getClassLoader$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Class;Ljava/lang/SecurityException;)Ljava/lang/String;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "PRIORITY_KEY",
+            "dsc": "Ljava/lang/String;",
+            "val": "priority"
+          },
+          {
+            "acc": 25,
+            "nme": "TCCL_KEY",
+            "dsc": "Ljava/lang/String;",
+            "val": "use_tccl"
+          },
+          {
+            "acc": 25,
+            "nme": "FACTORY_PROPERTY",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.apache.commons.logging.LogFactory"
+          },
+          {
+            "acc": 26,
+            "nme": "FACTORY_LOG4J_API",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.apache.commons.logging.impl.Log4jApiLogFactory"
+          },
+          {
+            "acc": 26,
+            "nme": "LOG4J_TO_SLF4J_BRIDGE",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.apache.logging.slf4j.SLF4JProvider"
+          },
+          {
+            "acc": 26,
+            "nme": "FACTORY_SLF4J",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.apache.commons.logging.impl.Slf4jLogFactory"
+          },
+          {
+            "acc": 25,
+            "nme": "FACTORY_DEFAULT",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.apache.commons.logging.impl.LogFactoryImpl"
+          },
+          {
+            "acc": 25,
+            "nme": "FACTORY_PROPERTIES",
+            "dsc": "Ljava/lang/String;",
+            "val": "commons-logging.properties"
+          },
+          {
+            "acc": 28,
+            "nme": "SERVICE_ID",
+            "dsc": "Ljava/lang/String;",
+            "val": "META-INF/services/org.apache.commons.logging.LogFactory"
+          },
+          {
+            "acc": 25,
+            "nme": "DIAGNOSTICS_DEST_PROPERTY",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.apache.commons.logging.diagnostics.dest"
+          },
+          {
+            "acc": 26,
+            "nme": "DIAGNOSTICS_STREAM",
+            "dsc": "Ljava/io/PrintStream;"
+          },
+          {
+            "acc": 26,
+            "nme": "DIAGNOSTICS_PREFIX",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 25,
+            "nme": "HASHTABLE_IMPLEMENTATION_PROPERTY",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.apache.commons.logging.LogFactory.HashtableImpl"
+          },
+          {
+            "acc": 26,
+            "nme": "WEAK_HASHTABLE_CLASSNAME",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.apache.commons.logging.impl.WeakHashtable"
+          },
+          {
+            "acc": 26,
+            "nme": "thisClassLoaderRef",
+            "dsc": "Ljava/lang/ref/WeakReference;",
+            "sig": "Ljava/lang/ref/WeakReference<Ljava/lang/ClassLoader;>;"
+          },
+          {
+            "acc": 26,
+            "nme": "MAX_BROKEN_SERVICES",
+            "dsc": "I",
+            "val": 3
+          },
+          {
+            "acc": 12,
+            "nme": "factories",
+            "dsc": "Ljava/util/Hashtable;",
+            "sig": "Ljava/util/Hashtable<Ljava/lang/ClassLoader;Lorg/apache/commons/logging/LogFactory;>;"
+          },
+          {
+            "acc": 131148,
+            "nme": "nullClassLoaderFactory",
+            "dsc": "Lorg/apache/commons/logging/LogFactory;"
+          }
+        ]
+      },
+      "org/apache/commons/logging/impl/WeakHashtable$1.class": {
+        "ver": 52,
+        "acc": 32,
+        "nme": "org/apache/commons/logging/impl/WeakHashtable$1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lorg/apache/commons/logging/impl/WeakHashtable;Ljava/util/Enumeration;)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "hasMoreElements",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "nextElement",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Object;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4112,
+            "nme": "val$enumer",
+            "dsc": "Ljava/util/Enumeration;"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lorg/apache/commons/logging/impl/WeakHashtable;"
+          }
+        ]
+      },
+      "org/apache/commons/logging/impl/Log4jApiLogFactory$LogAdapter.class": {
+        "ver": 52,
+        "acc": 48,
+        "nme": "org/apache/commons/logging/impl/Log4jApiLogFactory$LogAdapter",
+        "super": "org/apache/logging/log4j/spi/AbstractLoggerAdapter",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getContext",
+            "acc": 4,
+            "dsc": "()Lorg/apache/logging/log4j/spi/LoggerContext;"
+          },
+          {
+            "nme": "newLogger",
+            "acc": 4,
+            "dsc": "(Ljava/lang/String;Lorg/apache/logging/log4j/spi/LoggerContext;)Lorg/apache/commons/logging/Log;"
+          },
+          {
+            "nme": "newLogger",
+            "acc": 4164,
+            "dsc": "(Ljava/lang/String;Lorg/apache/logging/log4j/spi/LoggerContext;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4096,
+            "dsc": "(Lorg/apache/commons/logging/impl/Log4jApiLogFactory$1;)V"
+          }
+        ],
+        "flds": []
+      },
+      "META-INF/versions/9/module-info.class": {
+        "ver": 53,
+        "acc": 32768,
+        "nme": "module-info",
+        "mthds": [],
+        "flds": []
+      },
+      "org/apache/commons/logging/impl/Log4jApiLogFactory$1.class": {
+        "ver": 52,
+        "acc": 4128,
+        "nme": "org/apache/commons/logging/impl/Log4jApiLogFactory$1",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "org/apache/commons/logging/impl/Slf4jLogFactory.class": {
+        "ver": 52,
+        "acc": 49,
+        "nme": "org/apache/commons/logging/impl/Slf4jLogFactory",
+        "super": "org/apache/commons/logging/LogFactory",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getAttribute",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "getAttributeNames",
+            "acc": 1,
+            "dsc": "()[Ljava/lang/String;"
+          },
+          {
+            "nme": "getInstance",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Class;)Lorg/apache/commons/logging/Log;",
+            "sig": "(Ljava/lang/Class<*>;)Lorg/apache/commons/logging/Log;",
+            "exs": [
+              "org/apache/commons/logging/LogConfigurationException"
+            ]
+          },
+          {
+            "nme": "getInstance",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Lorg/apache/commons/logging/Log;"
+          },
+          {
+            "nme": "release",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "removeAttribute",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "setAttribute",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "lambda$getInstance$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;)Lorg/apache/commons/logging/Log;"
+          },
+          {
+            "nme": "access$000",
+            "acc": 4104,
+            "dsc": "()Lorg/slf4j/Marker;"
+          },
+          {
+            "nme": "access$100",
+            "acc": 4104,
+            "dsc": "()[Ljava/lang/Object;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "EMPTY_OBJECT_ARRAY",
+            "dsc": "[Ljava/lang/Object;"
+          },
+          {
+            "acc": 26,
+            "nme": "EMPTY_STRING_ARRAY",
+            "dsc": "[Ljava/lang/String;"
+          },
+          {
+            "acc": 26,
+            "nme": "MARKER",
+            "dsc": "Lorg/slf4j/Marker;"
+          },
+          {
+            "acc": 18,
+            "nme": "loggers",
+            "dsc": "Ljava/util/concurrent/ConcurrentMap;",
+            "sig": "Ljava/util/concurrent/ConcurrentMap<Ljava/lang/String;Lorg/apache/commons/logging/Log;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "attributes",
+            "dsc": "Ljava/util/concurrent/ConcurrentMap;",
+            "sig": "Ljava/util/concurrent/ConcurrentMap<Ljava/lang/String;Ljava/lang/Object;>;"
+          }
+        ]
+      },
+      "org/apache/commons/logging/impl/SimpleLog.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/apache/commons/logging/impl/SimpleLog",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getBooleanProperty",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;Z)Z"
+          },
+          {
+            "nme": "getContextClassLoader",
+            "acc": 10,
+            "dsc": "()Ljava/lang/ClassLoader;"
+          },
+          {
+            "nme": "getResourceAsStream",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Ljava/io/InputStream;"
+          },
+          {
+            "nme": "getStringProperty",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "getStringProperty",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "fatal",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "fatal",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "getLevel",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "info",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isDebugEnabled",
+            "acc": 17,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isErrorEnabled",
+            "acc": 17,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isFatalEnabled",
+            "acc": 17,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isInfoEnabled",
+            "acc": 17,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isLevelEnabled",
+            "acc": 4,
+            "dsc": "(I)Z"
+          },
+          {
+            "nme": "isTraceEnabled",
+            "acc": 17,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isWarnEnabled",
+            "acc": 17,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "log",
+            "acc": 4,
+            "dsc": "(ILjava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "setLevel",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "write",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "write",
+            "acc": 4,
+            "dsc": "(Ljava/lang/StringBuffer;)V"
+          },
+          {
+            "nme": "lambda$getResourceAsStream$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;)Ljava/io/InputStream;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": 136942970684951178
+          },
+          {
+            "acc": 28,
+            "nme": "systemPrefix",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.apache.commons.logging.simplelog."
+          },
+          {
+            "acc": 28,
+            "nme": "simpleLogProps",
+            "dsc": "Ljava/util/Properties;"
+          },
+          {
+            "acc": 28,
+            "nme": "DEFAULT_DATE_TIME_FORMAT",
+            "dsc": "Ljava/lang/String;",
+            "val": "yyyy/MM/dd HH:mm:ss:SSS zzz"
+          },
+          {
+            "acc": 76,
+            "nme": "showLogName",
+            "dsc": "Z"
+          },
+          {
+            "acc": 76,
+            "nme": "showShortName",
+            "dsc": "Z"
+          },
+          {
+            "acc": 76,
+            "nme": "showDateTime",
+            "dsc": "Z"
+          },
+          {
+            "acc": 76,
+            "nme": "dateTimeFormat",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 12,
+            "nme": "dateFormatter",
+            "dsc": "Ljava/text/DateFormat;"
+          },
+          {
+            "acc": 25,
+            "nme": "LOG_LEVEL_TRACE",
+            "dsc": "I",
+            "val": 1
+          },
+          {
+            "acc": 25,
+            "nme": "LOG_LEVEL_DEBUG",
+            "dsc": "I",
+            "val": 2
+          },
+          {
+            "acc": 25,
+            "nme": "LOG_LEVEL_INFO",
+            "dsc": "I",
+            "val": 3
+          },
+          {
+            "acc": 25,
+            "nme": "LOG_LEVEL_WARN",
+            "dsc": "I",
+            "val": 4
+          },
+          {
+            "acc": 25,
+            "nme": "LOG_LEVEL_ERROR",
+            "dsc": "I",
+            "val": 5
+          },
+          {
+            "acc": 25,
+            "nme": "LOG_LEVEL_FATAL",
+            "dsc": "I",
+            "val": 6
+          },
+          {
+            "acc": 25,
+            "nme": "LOG_LEVEL_ALL",
+            "dsc": "I",
+            "val": 0
+          },
+          {
+            "acc": 25,
+            "nme": "LOG_LEVEL_OFF",
+            "dsc": "I",
+            "val": 7
+          },
+          {
+            "acc": 68,
+            "nme": "logName",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 68,
+            "nme": "currentLogLevel",
+            "dsc": "I"
+          },
+          {
+            "acc": 66,
+            "nme": "shortLogName",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "org/apache/commons/logging/impl/package-info.class": {
+        "ver": 52,
+        "acc": 5632,
+        "nme": "org/apache/commons/logging/impl/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "org/apache/commons/logging/impl/Log4jApiLogFactory$Log4j2Log.class": {
+        "ver": 52,
+        "acc": 48,
+        "nme": "org/apache/commons/logging/impl/Log4jApiLogFactory$Log4j2Log",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/apache/logging/log4j/spi/ExtendedLogger;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "fatal",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "fatal",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isDebugEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isEnabled",
+            "acc": 2,
+            "dsc": "(Lorg/apache/logging/log4j/Level;)Z"
+          },
+          {
+            "nme": "isErrorEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isFatalEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isInfoEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isTraceEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isWarnEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "logIfEnabled",
+            "acc": 2,
+            "dsc": "(Lorg/apache/logging/log4j/Level;Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "FQCN",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "logger",
+            "dsc": "Lorg/apache/logging/log4j/spi/ExtendedLogger;"
+          }
+        ]
+      },
+      "org/apache/commons/logging/impl/WeakHashtable$Entry.class": {
+        "ver": 52,
+        "acc": 48,
+        "nme": "org/apache/commons/logging/impl/WeakHashtable$Entry",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "getKey",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Object;"
+          },
+          {
+            "nme": "getValue",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Object;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "setValue",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4096,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;Lorg/apache/commons/logging/impl/WeakHashtable$1;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "key",
+            "dsc": "Ljava/lang/Object;"
+          },
+          {
+            "acc": 18,
+            "nme": "value",
+            "dsc": "Ljava/lang/Object;"
+          }
+        ]
+      },
+      "org/apache/commons/logging/impl/Log4JLogger.class": {
+        "ver": 52,
+        "acc": 131105,
+        "nme": "org/apache/commons/logging/impl/Log4JLogger",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/apache/log4j/Logger;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "fatal",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "fatal",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "getLogger",
+            "acc": 1,
+            "dsc": "()Lorg/apache/log4j/Logger;"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isDebugEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isErrorEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isFatalEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isInfoEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isTraceEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isWarnEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": 5160705895411730424
+          },
+          {
+            "acc": 26,
+            "nme": "FQCN",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 26,
+            "nme": "traceLevel",
+            "dsc": "Lorg/apache/log4j/Priority;"
+          },
+          {
+            "acc": 194,
+            "nme": "logger",
+            "dsc": "Lorg/apache/log4j/Logger;"
+          },
+          {
+            "acc": 18,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/Deprecated;"
+          }
+        ]
+      },
+      "org/apache/commons/logging/impl/AvalonLogger.class": {
+        "ver": 52,
+        "acc": 131105,
+        "nme": "org/apache/commons/logging/impl/AvalonLogger",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "setDefaultLogger",
+            "acc": 9,
+            "dsc": "(Lorg/apache/avalon/framework/logger/Logger;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/apache/avalon/framework/logger/Logger;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "fatal",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "fatal",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "getLogger",
+            "acc": 1,
+            "dsc": "()Lorg/apache/avalon/framework/logger/Logger;"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isDebugEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isErrorEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isFatalEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isInfoEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isTraceEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isWarnEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 74,
+            "nme": "defaultLogger",
+            "dsc": "Lorg/apache/avalon/framework/logger/Logger;"
+          },
+          {
+            "acc": 146,
+            "nme": "logger",
+            "dsc": "Lorg/apache/avalon/framework/logger/Logger;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/Deprecated;"
+          }
+        ]
+      },
+      "org/apache/commons/logging/impl/NoOpLog.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/apache/commons/logging/impl/NoOpLog",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "fatal",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "fatal",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isDebugEnabled",
+            "acc": 17,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isErrorEnabled",
+            "acc": 17,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isFatalEnabled",
+            "acc": 17,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isInfoEnabled",
+            "acc": 17,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isTraceEnabled",
+            "acc": 17,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isWarnEnabled",
+            "acc": 17,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": 561423906191706148
+          }
+        ]
+      },
+      "org/apache/commons/logging/impl/Jdk13LumberjackLogger.class": {
+        "ver": 52,
+        "acc": 131105,
+        "nme": "org/apache/commons/logging/impl/Jdk13LumberjackLogger",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "debug",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "fatal",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "fatal",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "getClassAndMethod",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getLogger",
+            "acc": 1,
+            "dsc": "()Ljava/util/logging/Logger;"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "info",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "isDebugEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isErrorEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isFatalEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isInfoEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isTraceEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isWarnEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "log",
+            "acc": 2,
+            "dsc": "(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "trace",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "warn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": -8649807923527610591
+          },
+          {
+            "acc": 131100,
+            "nme": "dummyLevel",
+            "dsc": "Ljava/util/logging/Level;"
+          },
+          {
+            "acc": 132,
+            "nme": "logger",
+            "dsc": "Ljava/util/logging/Logger;"
+          },
+          {
+            "acc": 4,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 2,
+            "nme": "sourceClassName",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 2,
+            "nme": "sourceMethodName",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 2,
+            "nme": "classAndMethodFound",
+            "dsc": "Z"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/Deprecated;"
+          }
+        ]
+      }
+    }
+  }
+}

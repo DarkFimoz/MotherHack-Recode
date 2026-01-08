@@ -1,0 +1,1950 @@
+{
+  "md5": "c091ff67a1b755c0b722208e7da07324",
+  "sha2": "fc8c46b43829a42bc7b179f5df3e3805d91db7db",
+  "sha256": "2c80bb35e8ac4eb7f75779e97e77a593e386e37ab4e992ec7d11734f4f93b9bc",
+  "contents": {
+    "classes": {
+      "net/fabricmc/fabric/api/entity/FakePlayer.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/api/entity/FakePlayer",
+        "super": "net/minecraft/server/network/ServerPlayerEntity",
+        "mthds": [
+          {
+            "nme": "get",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/server/world/ServerWorld;)Lnet/fabricmc/fabric/api/entity/FakePlayer;"
+          },
+          {
+            "nme": "get",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/server/world/ServerWorld;Lcom/mojang/authlib/GameProfile;)Lnet/fabricmc/fabric/api/entity/FakePlayer;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(Lnet/minecraft/server/world/ServerWorld;Lcom/mojang/authlib/GameProfile;)V"
+          },
+          {
+            "nme": "tick",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setClientOptions",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/network/packet/c2s/common/SyncedClientOptions;)V"
+          },
+          {
+            "nme": "increaseStat",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/stat/Stat;I)V",
+            "sig": "(Lnet/minecraft/stat/Stat<*>;I)V"
+          },
+          {
+            "nme": "resetStat",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/stat/Stat;)V",
+            "sig": "(Lnet/minecraft/stat/Stat<*>;)V"
+          },
+          {
+            "nme": "isInvulnerableTo",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/entity/damage/DamageSource;)Z"
+          },
+          {
+            "nme": "getScoreboardTeam",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/scoreboard/Team;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "sleep",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/math/BlockPos;)V"
+          },
+          {
+            "nme": "startRiding",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/entity/Entity;Z)Z"
+          },
+          {
+            "nme": "openEditSignScreen",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/block/entity/SignBlockEntity;Z)V"
+          },
+          {
+            "nme": "openHandledScreen",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/screen/NamedScreenHandlerFactory;)Ljava/util/OptionalInt;"
+          },
+          {
+            "nme": "openHorseInventory",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/entity/passive/AbstractHorseEntity;Lnet/minecraft/inventory/Inventory;)V"
+          },
+          {
+            "nme": "teleportTo",
+            "acc": 4161,
+            "dsc": "(Lnet/minecraft/world/TeleportTarget;)Lnet/minecraft/entity/Entity;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "lambda$get$0",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/api/entity/FakePlayer$FakePlayerKey;)Lnet/fabricmc/fabric/api/entity/FakePlayer;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "DEFAULT_UUID",
+            "dsc": "Ljava/util/UUID;"
+          },
+          {
+            "acc": 26,
+            "nme": "DEFAULT_PROFILE",
+            "dsc": "Lcom/mojang/authlib/GameProfile;"
+          },
+          {
+            "acc": 26,
+            "nme": "FAKE_PLAYER_MAP",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/fabricmc/fabric/api/entity/FakePlayer$FakePlayerKey;Lnet/fabricmc/fabric/api/entity/FakePlayer;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/event/interaction/client/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/mixin/event/interaction/client/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/event/player/PlayerBlockBreakEvents$Canceled.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/event/player/PlayerBlockBreakEvents$Canceled",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "onBlockBreakCanceled",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Lnet/minecraft/block/entity/BlockEntity;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/event/interaction/client/ClientPlayerInteractionManagerMixin.class": {
+        "ver": 65,
+        "acc": 1057,
+        "nme": "net/fabricmc/fabric/mixin/event/interaction/client/ClientPlayerInteractionManagerMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "attackBlock",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/Direction;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/Direction;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/lang/Boolean;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/world/GameMode;isCreative()Z",
+                        "ordinal",
+                        0
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "method",
+                  [
+                    "attackBlock"
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "method_2902",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/Direction;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/Direction;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/lang/Boolean;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/world/GameMode;isCreative()Z",
+                        "ordinal",
+                        0
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "method",
+                  [
+                    "updateBlockBreakingProgress"
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "fabric_fireAttackBlockCallback",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/Direction;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/Direction;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/lang/Boolean;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Unique;"
+              }
+            ]
+          },
+          {
+            "nme": "fabric$onBlockBroken",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/util/math/BlockPos;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;Lnet/minecraft/world/World;Lnet/minecraft/block/BlockState;)V",
+            "sig": "(Lnet/minecraft/util/math/BlockPos;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/lang/Boolean;>;Lnet/minecraft/world/World;Lnet/minecraft/block/BlockState;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "breakBlock"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/block/Block;onBroken(Lnet/minecraft/world/WorldAccess;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;)V"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "locals",
+                  [
+                    "Lorg/spongepowered/asm/mixin/injection/callback/LocalCapture;",
+                    "CAPTURE_FAILHARD"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "interactBlock",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/network/ClientPlayerEntity;Lnet/minecraft/util/Hand;Lnet/minecraft/util/hit/BlockHitResult;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lnet/minecraft/client/network/ClientPlayerEntity;Lnet/minecraft/util/Hand;Lnet/minecraft/util/hit/BlockHitResult;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Lnet/minecraft/util/ActionResult;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/client/network/ClientPlayerInteractionManager;sendSequencedPacket(Lnet/minecraft/client/world/ClientWorld;Lnet/minecraft/client/network/SequencedPacketCreator;)V"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "method",
+                  [
+                    "interactBlock"
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "interactItem",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/Hand;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/Hand;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Lnet/minecraft/util/ActionResult;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/client/network/ClientPlayerInteractionManager;syncSelectedSlot()V",
+                        "ordinal",
+                        0
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "method",
+                  [
+                    "interactItem"
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "attackEntity",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/entity/Entity;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/client/network/ClientPlayNetworkHandler;sendPacket(Lnet/minecraft/network/packet/Packet;)V",
+                        "ordinal",
+                        0
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "method",
+                  [
+                    "attackEntity"
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "method_41931",
+            "acc": 1028,
+            "dsc": "(Lnet/minecraft/client/world/ClientWorld;Lnet/minecraft/client/network/SequencedPacketCreator;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Shadow;"
+              }
+            ]
+          },
+          {
+            "nme": "lambda$interactItem$2",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/util/Hand;Lnet/minecraft/entity/player/PlayerEntity;I)Lnet/minecraft/network/packet/Packet;"
+          },
+          {
+            "nme": "lambda$interactBlock$1",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/util/Hand;Lnet/minecraft/util/hit/BlockHitResult;I)Lnet/minecraft/network/packet/Packet;"
+          },
+          {
+            "nme": "lambda$fabric_fireAttackBlockCallback$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/Direction;I)Lnet/minecraft/network/packet/Packet;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "field_3712",
+            "dsc": "Lnet/minecraft/client/MinecraftClient;"
+          },
+          {
+            "acc": 2,
+            "nme": "field_3720",
+            "dsc": "Lnet/minecraft/client/network/ClientPlayNetworkHandler;"
+          },
+          {
+            "acc": 2,
+            "nme": "field_3719",
+            "dsc": "Lnet/minecraft/world/GameMode;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/network/ClientPlayerInteractionManager"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/event/interaction/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/mixin/event/interaction/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/event/interaction/ServerPlayerInteractionManagerMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/event/interaction/ServerPlayerInteractionManagerMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "startBlockBreak",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/network/packet/c2s/play/PlayerActionC2SPacket$Action;Lnet/minecraft/util/math/Direction;IILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "method",
+                  [
+                    "processBlockBreakingAction"
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "interactBlock",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/server/network/ServerPlayerEntity;Lnet/minecraft/world/World;Lnet/minecraft/item/ItemStack;Lnet/minecraft/util/Hand;Lnet/minecraft/util/hit/BlockHitResult;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lnet/minecraft/server/network/ServerPlayerEntity;Lnet/minecraft/world/World;Lnet/minecraft/item/ItemStack;Lnet/minecraft/util/Hand;Lnet/minecraft/util/hit/BlockHitResult;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Lnet/minecraft/util/ActionResult;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "method",
+                  [
+                    "interactBlock"
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "interactItem",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/server/network/ServerPlayerEntity;Lnet/minecraft/world/World;Lnet/minecraft/item/ItemStack;Lnet/minecraft/util/Hand;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lnet/minecraft/server/network/ServerPlayerEntity;Lnet/minecraft/world/World;Lnet/minecraft/item/ItemStack;Lnet/minecraft/util/Hand;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Lnet/minecraft/util/ActionResult;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "method",
+                  [
+                    "interactItem"
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "breakBlock",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/util/math/BlockPos;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;Lnet/minecraft/block/entity/BlockEntity;Lnet/minecraft/block/Block;Lnet/minecraft/block/BlockState;)V",
+            "sig": "(Lnet/minecraft/util/math/BlockPos;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/lang/Boolean;>;Lnet/minecraft/block/entity/BlockEntity;Lnet/minecraft/block/Block;Lnet/minecraft/block/BlockState;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/block/Block;onBreak(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Lnet/minecraft/entity/player/PlayerEntity;)Lnet/minecraft/block/BlockState;"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "method",
+                  [
+                    "tryBreakBlock"
+                  ],
+                  "locals",
+                  [
+                    "Lorg/spongepowered/asm/mixin/injection/callback/LocalCapture;",
+                    "CAPTURE_FAILHARD"
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "onBlockBroken",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/util/math/BlockPos;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;Lnet/minecraft/block/entity/BlockEntity;Lnet/minecraft/block/Block;Lnet/minecraft/block/BlockState;Z)V",
+            "sig": "(Lnet/minecraft/util/math/BlockPos;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/lang/Boolean;>;Lnet/minecraft/block/entity/BlockEntity;Lnet/minecraft/block/Block;Lnet/minecraft/block/BlockState;Z)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/block/Block;onBroken(Lnet/minecraft/world/WorldAccess;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;)V"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "method",
+                  [
+                    "tryBreakBlock"
+                  ],
+                  "locals",
+                  [
+                    "Lorg/spongepowered/asm/mixin/injection/callback/LocalCapture;",
+                    "CAPTURE_FAILHARD"
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4,
+            "nme": "field_14007",
+            "dsc": "Lnet/minecraft/server/world/ServerWorld;"
+          },
+          {
+            "acc": 4,
+            "nme": "field_14008",
+            "dsc": "Lnet/minecraft/server/network/ServerPlayerEntity;"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/server/network/ServerPlayerInteractionManager"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/event/client/player/ClientPreAttackCallback.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/event/client/player/ClientPreAttackCallback",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "onClientPlayerPreAttack",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;Lnet/minecraft/client/network/ClientPlayerEntity;I)Z"
+          },
+          {
+            "nme": "lambda$static$1",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/client/player/ClientPreAttackCallback;)Lnet/fabricmc/fabric/api/event/client/player/ClientPreAttackCallback;"
+          },
+          {
+            "nme": "lambda$static$0",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/client/player/ClientPreAttackCallback;Lnet/minecraft/client/MinecraftClient;Lnet/minecraft/client/network/ClientPlayerEntity;I)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "EVENT",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/event/client/player/ClientPreAttackCallback;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/event/interaction/ServerPlayNetworkHandlerInteractEntityHandlerMixin.class": {
+        "ver": 65,
+        "acc": 1057,
+        "nme": "net/fabricmc/fabric/mixin/event/interaction/ServerPlayNetworkHandlerInteractEntityHandlerMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "onPlayerInteractEntity",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/Hand;Lnet/minecraft/util/math/Vec3d;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "interactAt(Lnet/minecraft/util/Hand;Lnet/minecraft/util/math/Vec3d;)V"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "onPlayerInteractEntity",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/Hand;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "interact(Lnet/minecraft/util/Hand;)V"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "field_28963",
+            "dsc": "Lnet/minecraft/server/network/ServerPlayNetworkHandler;"
+          },
+          {
+            "acc": 0,
+            "nme": "field_28962",
+            "dsc": "Lnet/minecraft/entity/Entity;"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "targets",
+              [
+                "net/minecraft/server/network/ServerPlayNetworkHandler$1"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/event/interaction/ServerPlayerEntityMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/event/interaction/ServerPlayerEntityMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "onPlayerInteractEntity",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/entity/Entity;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "attack"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/server/network/ServerPlayerEntity"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/event/player/PlayerPickItemEvents$PickItemFromBlock.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/event/player/PlayerPickItemEvents$PickItemFromBlock",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "onPickItemFromBlock",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/server/network/ServerPlayerEntity;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Z)Lnet/minecraft/item/ItemStack;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/event/interaction/client/KeyBindingAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/event/interaction/client/KeyBindingAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "fabric_getTimesPressed",
+            "acc": 1025,
+            "dsc": "()I",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;",
+                "vals": [
+                  "value",
+                  "timesPressed"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/option/KeyBinding"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/event/player/PlayerBlockBreakEvents$After.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/event/player/PlayerBlockBreakEvents$After",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "afterBlockBreak",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Lnet/minecraft/block/entity/BlockEntity;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/event/player/UseEntityCallback.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/event/player/UseEntityCallback",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "interact",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/world/World;Lnet/minecraft/util/Hand;Lnet/minecraft/entity/Entity;Lnet/minecraft/util/hit/EntityHitResult;)Lnet/minecraft/util/ActionResult;"
+          },
+          {
+            "nme": "lambda$static$1",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/player/UseEntityCallback;)Lnet/fabricmc/fabric/api/event/player/UseEntityCallback;"
+          },
+          {
+            "nme": "lambda$static$0",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/player/UseEntityCallback;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/world/World;Lnet/minecraft/util/Hand;Lnet/minecraft/entity/Entity;Lnet/minecraft/util/hit/EntityHitResult;)Lnet/minecraft/util/ActionResult;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "EVENT",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/event/player/UseEntityCallback;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/block/BlockAttackInteractionAware.class": {
+        "ver": 65,
+        "acc": 132609,
+        "nme": "net/fabricmc/fabric/api/block/BlockAttackInteractionAware",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "onAttackInteraction",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/block/BlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/Hand;Lnet/minecraft/util/math/Direction;)Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/Deprecated;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/event/interaction/FakePlayerNetworkHandler$FakeClientConnection.class": {
+        "ver": 65,
+        "acc": 48,
+        "nme": "net/fabricmc/fabric/impl/event/interaction/FakePlayerNetworkHandler$FakeClientConnection",
+        "super": "net/minecraft/network/ClientConnection",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "channelRead0",
+            "acc": 4164,
+            "dsc": "(Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Object;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/api/event/player/PlayerPickItemEvents$PickItemFromEntity.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/event/player/PlayerPickItemEvents$PickItemFromEntity",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "onPickItemFromEntity",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/server/network/ServerPlayerEntity;Lnet/minecraft/entity/Entity;Z)Lnet/minecraft/item/ItemStack;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/event/interaction/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/event/interaction/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/entity/FakePlayer$FakePlayerKey.class": {
+        "ver": 65,
+        "acc": 65584,
+        "nme": "net/fabricmc/fabric/api/entity/FakePlayer$FakePlayerKey",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/server/world/ServerWorld;Lcom/mojang/authlib/GameProfile;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "world",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/server/world/ServerWorld;"
+          },
+          {
+            "nme": "profile",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/GameProfile;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "world",
+            "dsc": "Lnet/minecraft/server/world/ServerWorld;"
+          },
+          {
+            "acc": 18,
+            "nme": "profile",
+            "dsc": "Lcom/mojang/authlib/GameProfile;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/event/interaction/client/MinecraftClientMixin.class": {
+        "ver": 65,
+        "acc": 1057,
+        "nme": "net/fabricmc/fabric/mixin/event/interaction/client/MinecraftClientMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "method_1562",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/client/network/ClientPlayNetworkHandler;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Shadow;"
+              }
+            ]
+          },
+          {
+            "nme": "injectUseEntityCallback",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;[Lnet/minecraft/util/Hand;IILnet/minecraft/util/Hand;Lnet/minecraft/item/ItemStack;Lnet/minecraft/util/hit/EntityHitResult;Lnet/minecraft/entity/Entity;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "net/minecraft/client/network/ClientPlayerInteractionManager.interactEntityAtLocation(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/entity/Entity;Lnet/minecraft/util/hit/EntityHitResult;Lnet/minecraft/util/Hand;)Lnet/minecraft/util/ActionResult;"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "method",
+                  [
+                    "doItemUse"
+                  ],
+                  "cancellable",
+                  true,
+                  "locals",
+                  [
+                    "Lorg/spongepowered/asm/mixin/injection/callback/LocalCapture;",
+                    "CAPTURE_FAILHARD"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "injectHandleInputEventsForPreAttackCallback",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "handleInputEvents"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/client/network/ClientPlayerEntity;isUsingItem()Z",
+                        "ordinal",
+                        0
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "injectDoAttackForCancelling",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/lang/Boolean;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "doAttack"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "injectHandleBlockBreakingForCancelling",
+            "acc": 2,
+            "dsc": "(ZLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "handleBlockBreaking"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "fabric_attackCancelled",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "field_1724",
+            "dsc": "Lnet/minecraft/client/network/ClientPlayerEntity;"
+          },
+          {
+            "acc": 1,
+            "nme": "field_1690",
+            "dsc": "Lnet/minecraft/client/option/GameOptions;"
+          },
+          {
+            "acc": 1,
+            "nme": "field_1761",
+            "dsc": "Lnet/minecraft/client/network/ClientPlayerInteractionManager;"
+          },
+          {
+            "acc": 1,
+            "nme": "field_1687",
+            "dsc": "Lnet/minecraft/client/world/ClientWorld;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/MinecraftClient"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/event/player/UseBlockCallback.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/event/player/UseBlockCallback",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "interact",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/world/World;Lnet/minecraft/util/Hand;Lnet/minecraft/util/hit/BlockHitResult;)Lnet/minecraft/util/ActionResult;"
+          },
+          {
+            "nme": "lambda$static$1",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/player/UseBlockCallback;)Lnet/fabricmc/fabric/api/event/player/UseBlockCallback;"
+          },
+          {
+            "nme": "lambda$static$0",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/player/UseBlockCallback;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/world/World;Lnet/minecraft/util/Hand;Lnet/minecraft/util/hit/BlockHitResult;)Lnet/minecraft/util/ActionResult;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "EVENT",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/event/player/UseBlockCallback;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/event/player/PlayerPickItemEvents.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/event/player/PlayerPickItemEvents",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lambda$static$3",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/player/PlayerPickItemEvents$PickItemFromEntity;)Lnet/fabricmc/fabric/api/event/player/PlayerPickItemEvents$PickItemFromEntity;"
+          },
+          {
+            "nme": "lambda$static$2",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/player/PlayerPickItemEvents$PickItemFromEntity;Lnet/minecraft/server/network/ServerPlayerEntity;Lnet/minecraft/entity/Entity;Z)Lnet/minecraft/item/ItemStack;"
+          },
+          {
+            "nme": "lambda$static$1",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/player/PlayerPickItemEvents$PickItemFromBlock;)Lnet/fabricmc/fabric/api/event/player/PlayerPickItemEvents$PickItemFromBlock;"
+          },
+          {
+            "nme": "lambda$static$0",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/player/PlayerPickItemEvents$PickItemFromBlock;Lnet/minecraft/server/network/ServerPlayerEntity;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Z)Lnet/minecraft/item/ItemStack;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "BLOCK",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/event/player/PlayerPickItemEvents$PickItemFromBlock;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ENTITY",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/event/player/PlayerPickItemEvents$PickItemFromEntity;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/event/client/player/ClientPlayerBlockBreakEvents.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/event/client/player/ClientPlayerBlockBreakEvents",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lambda$static$1",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/client/player/ClientPlayerBlockBreakEvents$After;)Lnet/fabricmc/fabric/api/event/client/player/ClientPlayerBlockBreakEvents$After;"
+          },
+          {
+            "nme": "lambda$static$0",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/client/player/ClientPlayerBlockBreakEvents$After;Lnet/minecraft/client/world/ClientWorld;Lnet/minecraft/client/network/ClientPlayerEntity;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "AFTER",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/event/client/player/ClientPlayerBlockBreakEvents$After;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/event/client/player/ClientPlayerBlockBreakEvents$After.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/event/client/player/ClientPlayerBlockBreakEvents$After",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "afterBlockBreak",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/world/ClientWorld;Lnet/minecraft/client/network/ClientPlayerEntity;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/event/interaction/PlayerAdvancementTrackerMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/event/interaction/PlayerAdvancementTrackerMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "preventOwnerOverride",
+            "acc": 0,
+            "dsc": "(Lnet/minecraft/server/network/ServerPlayerEntity;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "setOwner"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "preventGrantCriterion",
+            "acc": 0,
+            "dsc": "(Lnet/minecraft/advancement/AdvancementEntry;Ljava/lang/String;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lnet/minecraft/advancement/AdvancementEntry;Ljava/lang/String;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/lang/Boolean;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "grantCriterion"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "field_13391",
+            "dsc": "Lnet/minecraft/server/network/ServerPlayerEntity;"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/advancement/PlayerAdvancementTracker"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/event/interaction/ServerPlayNetworkHandlerMixin.class": {
+        "ver": 65,
+        "acc": 1057,
+        "nme": "net/fabricmc/fabric/mixin/event/interaction/ServerPlayNetworkHandlerMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "method_65098",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/item/ItemStack;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Shadow;"
+              }
+            ]
+          },
+          {
+            "nme": "onPickItemFromBlock",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/block/BlockState;Lnet/minecraft/world/WorldView;Lnet/minecraft/util/math/BlockPos;ZLcom/llamalad7/mixinextras/injector/wrapoperation/Operation;Lnet/minecraft/network/packet/c2s/play/PickItemFromBlockC2SPacket;)Lnet/minecraft/item/ItemStack;",
+            "sig": "(Lnet/minecraft/block/BlockState;Lnet/minecraft/world/WorldView;Lnet/minecraft/util/math/BlockPos;ZLcom/llamalad7/mixinextras/injector/wrapoperation/Operation<Lnet/minecraft/item/ItemStack;>;Lnet/minecraft/network/packet/c2s/play/PickItemFromBlockC2SPacket;)Lnet/minecraft/item/ItemStack;",
+            "vanns": [
+              {
+                "dsc": "Lcom/llamalad7/mixinextras/injector/wrapoperation/WrapOperation;",
+                "vals": [
+                  "method",
+                  [
+                    "onPickItemFromBlock"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/block/BlockState;getPickStack(Lnet/minecraft/world/WorldView;Lnet/minecraft/util/math/BlockPos;Z)Lnet/minecraft/item/ItemStack;"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "onPickItemFromEntity",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/entity/Entity;Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation;Lnet/minecraft/network/packet/c2s/play/PickItemFromEntityC2SPacket;)Lnet/minecraft/item/ItemStack;",
+            "sig": "(Lnet/minecraft/entity/Entity;Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation<Lnet/minecraft/item/ItemStack;>;Lnet/minecraft/network/packet/c2s/play/PickItemFromEntityC2SPacket;)Lnet/minecraft/item/ItemStack;",
+            "vanns": [
+              {
+                "dsc": "Lcom/llamalad7/mixinextras/injector/wrapoperation/WrapOperation;",
+                "vals": [
+                  "method",
+                  [
+                    "onPickItemFromEntity"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/entity/Entity;getPickBlockStack()Lnet/minecraft/item/ItemStack;"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "field_14140",
+            "dsc": "Lnet/minecraft/server/network/ServerPlayerEntity;"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/server/network/ServerPlayNetworkHandler"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/event/player/UseItemCallback.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/event/player/UseItemCallback",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "interact",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/world/World;Lnet/minecraft/util/Hand;)Lnet/minecraft/util/ActionResult;"
+          },
+          {
+            "nme": "lambda$static$1",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/player/UseItemCallback;)Lnet/fabricmc/fabric/api/event/player/UseItemCallback;"
+          },
+          {
+            "nme": "lambda$static$0",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/player/UseItemCallback;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/world/World;Lnet/minecraft/util/Hand;)Lnet/minecraft/util/ActionResult;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "EVENT",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/event/player/UseItemCallback;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/event/player/PlayerBlockBreakEvents.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/event/player/PlayerBlockBreakEvents",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lambda$static$5",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/player/PlayerBlockBreakEvents$Canceled;)Lnet/fabricmc/fabric/api/event/player/PlayerBlockBreakEvents$Canceled;"
+          },
+          {
+            "nme": "lambda$static$4",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/player/PlayerBlockBreakEvents$Canceled;Lnet/minecraft/world/World;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Lnet/minecraft/block/entity/BlockEntity;)V"
+          },
+          {
+            "nme": "lambda$static$3",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/player/PlayerBlockBreakEvents$After;)Lnet/fabricmc/fabric/api/event/player/PlayerBlockBreakEvents$After;"
+          },
+          {
+            "nme": "lambda$static$2",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/player/PlayerBlockBreakEvents$After;Lnet/minecraft/world/World;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Lnet/minecraft/block/entity/BlockEntity;)V"
+          },
+          {
+            "nme": "lambda$static$1",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/player/PlayerBlockBreakEvents$Before;)Lnet/fabricmc/fabric/api/event/player/PlayerBlockBreakEvents$Before;"
+          },
+          {
+            "nme": "lambda$static$0",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/player/PlayerBlockBreakEvents$Before;Lnet/minecraft/world/World;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Lnet/minecraft/block/entity/BlockEntity;)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "BEFORE",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/event/player/PlayerBlockBreakEvents$Before;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "AFTER",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/event/player/PlayerBlockBreakEvents$After;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CANCELED",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/event/player/PlayerBlockBreakEvents$Canceled;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/event/interaction/FakePlayerNetworkHandler.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/event/interaction/FakePlayerNetworkHandler",
+        "super": "net/minecraft/server/network/ServerPlayNetworkHandler",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/server/network/ServerPlayerEntity;)V"
+          },
+          {
+            "nme": "send",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/network/packet/Packet;Lnet/minecraft/network/PacketCallbacks;)V",
+            "sig": "(Lnet/minecraft/network/packet/Packet<*>;Lnet/minecraft/network/PacketCallbacks;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "FAKE_CONNECTION",
+            "dsc": "Lnet/minecraft/network/ClientConnection;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/event/player/AttackBlockCallback.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/event/player/AttackBlockCallback",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "interact",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/world/World;Lnet/minecraft/util/Hand;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/Direction;)Lnet/minecraft/util/ActionResult;"
+          },
+          {
+            "nme": "lambda$static$1",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/player/AttackBlockCallback;)Lnet/fabricmc/fabric/api/event/player/AttackBlockCallback;"
+          },
+          {
+            "nme": "lambda$static$0",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/player/AttackBlockCallback;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/world/World;Lnet/minecraft/util/Hand;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/Direction;)Lnet/minecraft/util/ActionResult;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "EVENT",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/event/player/AttackBlockCallback;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/event/player/PlayerBlockBreakEvents$Before.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/event/player/PlayerBlockBreakEvents$Before",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "beforeBlockBreak",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Lnet/minecraft/block/entity/BlockEntity;)Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/event/interaction/InteractionEventsRouter.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/event/interaction/InteractionEventsRouter",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "onInitialize",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lambda$onInitialize$1",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Lnet/minecraft/block/entity/BlockEntity;)V"
+          },
+          {
+            "nme": "lambda$onInitialize$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/world/World;Lnet/minecraft/util/Hand;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/Direction;)Lnet/minecraft/util/ActionResult;"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/api/event/player/AttackEntityCallback.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/event/player/AttackEntityCallback",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "interact",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/world/World;Lnet/minecraft/util/Hand;Lnet/minecraft/entity/Entity;Lnet/minecraft/util/hit/EntityHitResult;)Lnet/minecraft/util/ActionResult;"
+          },
+          {
+            "nme": "lambda$static$1",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/player/AttackEntityCallback;)Lnet/fabricmc/fabric/api/event/player/AttackEntityCallback;"
+          },
+          {
+            "nme": "lambda$static$0",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/event/player/AttackEntityCallback;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/world/World;Lnet/minecraft/util/Hand;Lnet/minecraft/entity/Entity;Lnet/minecraft/util/hit/EntityHitResult;)Lnet/minecraft/util/ActionResult;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "EVENT",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/event/player/AttackEntityCallback;>;"
+          }
+        ]
+      }
+    }
+  }
+}

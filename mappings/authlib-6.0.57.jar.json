@@ -1,0 +1,5891 @@
+{
+  "md5": "f6c1f2b733258d1dc74533cbad0da8f6",
+  "sha2": "bded3161a7346de32213da750388ec6529fe4f6b",
+  "sha256": "e40ec0926a408aa05faf902f05dcde7e5f6255f6eeeb17f1e7ffb68b369d809a",
+  "contents": {
+    "classes": {
+      "com/mojang/authlib/yggdrasil/request/AbuseReportRequest$ClientInfo.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/yggdrasil/request/AbuseReportRequest$ClientInfo",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "clientVersion",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "clientVersion"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "locale",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "locale"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "clientVersion",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "locale",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/response/MinecraftTexturesPayload.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/yggdrasil/response/MinecraftTexturesPayload",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(JLjava/util/UUID;Ljava/lang/String;ZLjava/util/Map;)V",
+            "sig": "(JLjava/util/UUID;Ljava/lang/String;ZLjava/util/Map<Lcom/mojang/authlib/minecraft/MinecraftProfileTexture$Type;Lcom/mojang/authlib/minecraft/MinecraftProfileTexture;>;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "timestamp",
+            "acc": 1,
+            "dsc": "()J",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "timestamp"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "profileId",
+            "acc": 1,
+            "dsc": "()Ljava/util/UUID;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "profileId"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "profileName",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "profileName"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "isPublic",
+            "acc": 1,
+            "dsc": "()Z",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "isPublic"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "textures",
+            "acc": 1,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<Lcom/mojang/authlib/minecraft/MinecraftProfileTexture$Type;Lcom/mojang/authlib/minecraft/MinecraftProfileTexture;>;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "textures"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "timestamp",
+            "dsc": "J"
+          },
+          {
+            "acc": 18,
+            "nme": "profileId",
+            "dsc": "Ljava/util/UUID;"
+          },
+          {
+            "acc": 18,
+            "nme": "profileName",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "isPublic",
+            "dsc": "Z"
+          },
+          {
+            "acc": 18,
+            "nme": "textures",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lcom/mojang/authlib/minecraft/MinecraftProfileTexture$Type;Lcom/mojang/authlib/minecraft/MinecraftProfileTexture;>;"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/request/AbuseReportRequest.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/yggdrasil/request/AbuseReportRequest",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(ILjava/util/UUID;Lcom/mojang/authlib/minecraft/report/AbuseReport;Lcom/mojang/authlib/yggdrasil/request/AbuseReportRequest$ClientInfo;Lcom/mojang/authlib/yggdrasil/request/AbuseReportRequest$ThirdPartyServerInfo;Lcom/mojang/authlib/yggdrasil/request/AbuseReportRequest$RealmInfo;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "version",
+            "acc": 1,
+            "dsc": "()I",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "version"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "id",
+            "acc": 1,
+            "dsc": "()Ljava/util/UUID;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "id"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "report",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/minecraft/report/AbuseReport;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "report"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "clientInfo",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/yggdrasil/request/AbuseReportRequest$ClientInfo;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "clientInfo"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "thirdPartyServerInfo",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/yggdrasil/request/AbuseReportRequest$ThirdPartyServerInfo;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "thirdPartyServerInfo"
+                ]
+              },
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "realmInfo",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/yggdrasil/request/AbuseReportRequest$RealmInfo;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "realmInfo"
+                ]
+              },
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "reportType",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "reportType"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "version",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "id",
+            "dsc": "Ljava/util/UUID;"
+          },
+          {
+            "acc": 18,
+            "nme": "report",
+            "dsc": "Lcom/mojang/authlib/minecraft/report/AbuseReport;"
+          },
+          {
+            "acc": 18,
+            "nme": "clientInfo",
+            "dsc": "Lcom/mojang/authlib/yggdrasil/request/AbuseReportRequest$ClientInfo;"
+          },
+          {
+            "acc": 18,
+            "nme": "thirdPartyServerInfo",
+            "dsc": "Lcom/mojang/authlib/yggdrasil/request/AbuseReportRequest$ThirdPartyServerInfo;"
+          },
+          {
+            "acc": 18,
+            "nme": "realmInfo",
+            "dsc": "Lcom/mojang/authlib/yggdrasil/request/AbuseReportRequest$RealmInfo;"
+          },
+          {
+            "acc": 18,
+            "nme": "reportType",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/YggdrasilEnvironment.class": {
+        "ver": 61,
+        "acc": 16433,
+        "nme": "com/mojang/authlib/yggdrasil/YggdrasilEnvironment",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lcom/mojang/authlib/yggdrasil/YggdrasilEnvironment;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/mojang/authlib/yggdrasil/YggdrasilEnvironment;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V",
+            "sig": "(Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "getEnvironment",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/Environment;"
+          },
+          {
+            "nme": "fromString",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Ljava/util/Optional;",
+            "sig": "(Ljava/lang/String;)Ljava/util/Optional<Lcom/mojang/authlib/Environment;>;"
+          },
+          {
+            "nme": "lambda$fromString$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;Lcom/mojang/authlib/yggdrasil/YggdrasilEnvironment;)Z"
+          },
+          {
+            "nme": "$values",
+            "acc": 4106,
+            "dsc": "()[Lcom/mojang/authlib/yggdrasil/YggdrasilEnvironment;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "PROD",
+            "dsc": "Lcom/mojang/authlib/yggdrasil/YggdrasilEnvironment;"
+          },
+          {
+            "acc": 16409,
+            "nme": "STAGING",
+            "dsc": "Lcom/mojang/authlib/yggdrasil/YggdrasilEnvironment;"
+          },
+          {
+            "acc": 18,
+            "nme": "environment",
+            "dsc": "Lcom/mojang/authlib/Environment;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lcom/mojang/authlib/yggdrasil/YggdrasilEnvironment;"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/ProfileNotFoundException.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/authlib/yggdrasil/ProfileNotFoundException",
+        "super": "java/lang/RuntimeException",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Throwable;)V"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/authlib/yggdrasil/YggdrasilServicesKeyInfo$KeySetResponse.class": {
+        "ver": 61,
+        "acc": 65584,
+        "nme": "com/mojang/authlib/yggdrasil/YggdrasilServicesKeyInfo$KeySetResponse",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/util/List;Ljava/util/List;)V",
+            "sig": "(Ljava/util/List<Lcom/mojang/authlib/yggdrasil/YggdrasilServicesKeyInfo$KeyData;>;Ljava/util/List<Lcom/mojang/authlib/yggdrasil/YggdrasilServicesKeyInfo$KeyData;>;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "profilePropertyKeys",
+            "acc": 1,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lcom/mojang/authlib/yggdrasil/YggdrasilServicesKeyInfo$KeyData;>;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "profilePropertyKeys"
+                ]
+              },
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "playerCertificateKeys",
+            "acc": 1,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lcom/mojang/authlib/yggdrasil/YggdrasilServicesKeyInfo$KeyData;>;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "playerCertificateKeys"
+                ]
+              },
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "profilePropertyKeys",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lcom/mojang/authlib/yggdrasil/YggdrasilServicesKeyInfo$KeyData;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "playerCertificateKeys",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lcom/mojang/authlib/yggdrasil/YggdrasilServicesKeyInfo$KeyData;>;"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/response/HasJoinedMinecraftServerResponse.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/yggdrasil/response/HasJoinedMinecraftServerResponse",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/util/UUID;Lcom/mojang/authlib/properties/PropertyMap;Ljava/util/Set;)V",
+            "sig": "(Ljava/util/UUID;Lcom/mojang/authlib/properties/PropertyMap;Ljava/util/Set<Lcom/mojang/authlib/yggdrasil/response/ProfileAction;>;)V"
+          },
+          {
+            "nme": "profileActions",
+            "acc": 1,
+            "dsc": "()Ljava/util/Set;",
+            "sig": "()Ljava/util/Set<Lcom/mojang/authlib/yggdrasil/response/ProfileAction;>;"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "id",
+            "acc": 1,
+            "dsc": "()Ljava/util/UUID;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "id"
+                ]
+              },
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "properties",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/properties/PropertyMap;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "properties"
+                ]
+              },
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "id",
+            "dsc": "Ljava/util/UUID;"
+          },
+          {
+            "acc": 18,
+            "nme": "properties",
+            "dsc": "Lcom/mojang/authlib/properties/PropertyMap;"
+          },
+          {
+            "acc": 18,
+            "nme": "profileActions",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Lcom/mojang/authlib/yggdrasil/response/ProfileAction;>;"
+          }
+        ]
+      },
+      "com/mojang/util/UndashedUuid.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/util/UndashedUuid",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "fromString",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Ljava/util/UUID;"
+          },
+          {
+            "nme": "fromStringLenient",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Ljava/util/UUID;"
+          },
+          {
+            "nme": "toString",
+            "acc": 9,
+            "dsc": "(Ljava/util/UUID;)Ljava/lang/String;"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/authlib/GameProfile.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/authlib/GameProfile",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/util/UUID;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "getId",
+            "acc": 1,
+            "dsc": "()Ljava/util/UUID;"
+          },
+          {
+            "nme": "getName",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getProperties",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/properties/PropertyMap;"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "id",
+            "dsc": "Ljava/util/UUID;"
+          },
+          {
+            "acc": 18,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "properties",
+            "dsc": "Lcom/mojang/authlib/properties/PropertyMap;"
+          }
+        ]
+      },
+      "com/mojang/authlib/minecraft/TelemetrySession$1.class": {
+        "ver": 61,
+        "acc": 32,
+        "nme": "com/mojang/authlib/minecraft/TelemetrySession$1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "isEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "createNewEvent",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Lcom/mojang/authlib/minecraft/TelemetryEvent;"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/util/ByteBufferTypeAdapter.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/util/ByteBufferTypeAdapter",
+        "super": "com/google/gson/TypeAdapter",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "write",
+            "acc": 1,
+            "dsc": "(Lcom/google/gson/stream/JsonWriter;Ljava/nio/ByteBuffer;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "read",
+            "acc": 1,
+            "dsc": "(Lcom/google/gson/stream/JsonReader;)Ljava/nio/ByteBuffer;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "read",
+            "acc": 4161,
+            "dsc": "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "write",
+            "acc": 4161,
+            "dsc": "(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/authlib/yggdrasil/response/KeyPairResponse.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/yggdrasil/response/KeyPairResponse",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/authlib/yggdrasil/response/KeyPairResponse$KeyPair;Ljava/nio/ByteBuffer;Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "keyPair",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/yggdrasil/response/KeyPairResponse$KeyPair;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "keyPair"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "publicKeySignature",
+            "acc": 1,
+            "dsc": "()Ljava/nio/ByteBuffer;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "publicKeySignatureV2"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "expiresAt",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "expiresAt"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "refreshedAfter",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "refreshedAfter"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "keyPair",
+            "dsc": "Lcom/mojang/authlib/yggdrasil/response/KeyPairResponse$KeyPair;"
+          },
+          {
+            "acc": 18,
+            "nme": "publicKeySignature",
+            "dsc": "Ljava/nio/ByteBuffer;"
+          },
+          {
+            "acc": 18,
+            "nme": "expiresAt",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "refreshedAfter",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "com/mojang/authlib/minecraft/TelemetrySession.class": {
+        "ver": 61,
+        "acc": 1537,
+        "nme": "com/mojang/authlib/minecraft/TelemetrySession",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "isEnabled",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "createNewEvent",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)Lcom/mojang/authlib/minecraft/TelemetryEvent;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "DISABLED",
+            "dsc": "Lcom/mojang/authlib/minecraft/TelemetrySession;"
+          }
+        ]
+      },
+      "com/mojang/authlib/exceptions/MinecraftClientException.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/authlib/exceptions/MinecraftClientException",
+        "super": "java/lang/RuntimeException",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(Lcom/mojang/authlib/exceptions/MinecraftClientException$ErrorType;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/authlib/exceptions/MinecraftClientException$ErrorType;Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "getType",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/exceptions/MinecraftClientException$ErrorType;"
+          },
+          {
+            "nme": "toAuthenticationException",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/exceptions/AuthenticationException;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 20,
+            "nme": "type",
+            "dsc": "Lcom/mojang/authlib/exceptions/MinecraftClientException$ErrorType;"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/ServicesKeyInfo.class": {
+        "ver": 61,
+        "acc": 1537,
+        "nme": "com/mojang/authlib/yggdrasil/ServicesKeyInfo",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "keyBitCount",
+            "acc": 1025,
+            "dsc": "()I"
+          },
+          {
+            "nme": "signatureBitCount",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "signature",
+            "acc": 1025,
+            "dsc": "()Ljava/security/Signature;"
+          },
+          {
+            "nme": "validateProperty",
+            "acc": 1025,
+            "dsc": "(Lcom/mojang/authlib/properties/Property;)Z"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/authlib/yggdrasil/request/TelemetryEventsRequest$Event.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/yggdrasil/request/TelemetryEventsRequest$Event",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Lcom/google/gson/JsonObject;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;JLcom/google/gson/JsonObject;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "source",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "source"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "name",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "name"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "timestamp",
+            "acc": 1,
+            "dsc": "()J",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "timestamp"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "data",
+            "acc": 1,
+            "dsc": "()Lcom/google/gson/JsonObject;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "data"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "source",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "timestamp",
+            "dsc": "J"
+          },
+          {
+            "acc": 18,
+            "nme": "data",
+            "dsc": "Lcom/google/gson/JsonObject;"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/YggdrasilServicesKeyInfo$1.class": {
+        "ver": 61,
+        "acc": 32,
+        "nme": "com/mojang/authlib/yggdrasil/YggdrasilServicesKeyInfo$1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/net/URL;Lcom/mojang/authlib/minecraft/client/MinecraftClient;Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/CompletableFuture;)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "run",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "reschedule",
+            "acc": 2,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "failureCount",
+            "dsc": "Ljava/util/concurrent/atomic/AtomicInteger;"
+          },
+          {
+            "acc": 4112,
+            "nme": "val$url",
+            "dsc": "Ljava/net/URL;"
+          },
+          {
+            "acc": 4112,
+            "nme": "val$client",
+            "dsc": "Lcom/mojang/authlib/minecraft/client/MinecraftClient;"
+          },
+          {
+            "acc": 4112,
+            "nme": "val$keySet",
+            "dsc": "Ljava/util/concurrent/atomic/AtomicReference;"
+          },
+          {
+            "acc": 4112,
+            "nme": "val$ready",
+            "dsc": "Ljava/util/concurrent/CompletableFuture;"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/YggdrasilServicesKeyInfo$KeyData.class": {
+        "ver": 61,
+        "acc": 65584,
+        "nme": "com/mojang/authlib/yggdrasil/YggdrasilServicesKeyInfo$KeyData",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/nio/ByteBuffer;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "publicKey",
+            "acc": 1,
+            "dsc": "()Ljava/nio/ByteBuffer;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "publicKey"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "publicKey",
+            "dsc": "Ljava/nio/ByteBuffer;"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/request/JoinMinecraftServerRequest.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/yggdrasil/request/JoinMinecraftServerRequest",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/util/UUID;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "accessToken",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "accessToken"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "selectedProfile",
+            "acc": 1,
+            "dsc": "()Ljava/util/UUID;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "selectedProfile"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "serverId",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "serverId"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "accessToken",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "selectedProfile",
+            "dsc": "Ljava/util/UUID;"
+          },
+          {
+            "acc": 18,
+            "nme": "serverId",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "com/mojang/authlib/minecraft/InsecurePublicKeyException$InvalidException.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/authlib/minecraft/InsecurePublicKeyException$InvalidException",
+        "super": "com/mojang/authlib/minecraft/InsecurePublicKeyException",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/authlib/properties/PropertyMap.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/authlib/properties/PropertyMap",
+        "super": "com/google/common/collect/ForwardingMultimap",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "delegate",
+            "acc": 4,
+            "dsc": "()Lcom/google/common/collect/Multimap;",
+            "sig": "()Lcom/google/common/collect/Multimap<Ljava/lang/String;Lcom/mojang/authlib/properties/Property;>;"
+          },
+          {
+            "nme": "delegate",
+            "acc": 4164,
+            "dsc": "()Ljava/lang/Object;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "properties",
+            "dsc": "Lcom/google/common/collect/Multimap;",
+            "sig": "Lcom/google/common/collect/Multimap<Ljava/lang/String;Lcom/mojang/authlib/properties/Property;>;"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/YggdrassilTelemetryEvent.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/authlib/yggdrasil/YggdrassilTelemetryEvent",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lcom/mojang/authlib/yggdrasil/YggdrassilTelemetrySession;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "data",
+            "acc": 2,
+            "dsc": "()Lcom/google/gson/JsonObject;"
+          },
+          {
+            "nme": "addProperty",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "addProperty",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "addProperty",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;J)V"
+          },
+          {
+            "nme": "addProperty",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Z)V"
+          },
+          {
+            "nme": "addNullProperty",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "send",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "service",
+            "dsc": "Lcom/mojang/authlib/yggdrasil/YggdrassilTelemetrySession;"
+          },
+          {
+            "acc": 18,
+            "nme": "type",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 2,
+            "nme": "data",
+            "dsc": "Lcom/google/gson/JsonObject;"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/YggdrasilMinecraftSessionService$1.class": {
+        "ver": 61,
+        "acc": 32,
+        "nme": "com/mojang/authlib/yggdrasil/YggdrasilMinecraftSessionService$1",
+        "super": "com/google/common/cache/CacheLoader",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lcom/mojang/authlib/yggdrasil/YggdrasilMinecraftSessionService;)V"
+          },
+          {
+            "nme": "load",
+            "acc": 1,
+            "dsc": "(Ljava/util/UUID;)Ljava/util/Optional;",
+            "sig": "(Ljava/util/UUID;)Ljava/util/Optional<Lcom/mojang/authlib/yggdrasil/ProfileResult;>;"
+          },
+          {
+            "nme": "load",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lcom/mojang/authlib/yggdrasil/YggdrasilMinecraftSessionService;"
+          }
+        ]
+      },
+      "com/mojang/authlib/minecraft/report/ReportedEntity.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/minecraft/report/ReportedEntity",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/util/UUID;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "profileId",
+            "acc": 1,
+            "dsc": "()Ljava/util/UUID;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "profileId"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "profileId",
+            "dsc": "Ljava/util/UUID;"
+          }
+        ]
+      },
+      "com/mojang/authlib/minecraft/report/AbuseReport.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/minecraft/report/AbuseReport",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Lcom/mojang/authlib/minecraft/report/ReportEvidence;Ljava/lang/String;Lcom/mojang/authlib/minecraft/report/ReportedEntity;Ljava/time/Instant;)V"
+          },
+          {
+            "nme": "name",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Lcom/mojang/authlib/minecraft/report/ReportedEntity;Ljava/time/Instant;)Lcom/mojang/authlib/minecraft/report/AbuseReport;"
+          },
+          {
+            "nme": "skin",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/mojang/authlib/minecraft/report/ReportedEntity;Ljava/time/Instant;)Lcom/mojang/authlib/minecraft/report/AbuseReport;"
+          },
+          {
+            "nme": "chat",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Lcom/mojang/authlib/minecraft/report/ReportEvidence;Lcom/mojang/authlib/minecraft/report/ReportedEntity;Ljava/time/Instant;)Lcom/mojang/authlib/minecraft/report/AbuseReport;"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "opinionComments",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "opinionComments"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "reason",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "reason"
+                ]
+              },
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "evidence",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/minecraft/report/ReportEvidence;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "evidence"
+                ]
+              },
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "skinUrl",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "skinUrl"
+                ]
+              },
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "reportedEntity",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/minecraft/report/ReportedEntity;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "reportedEntity"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "createdTime",
+            "acc": 1,
+            "dsc": "()Ljava/time/Instant;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "createdTime"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "opinionComments",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "reason",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "evidence",
+            "dsc": "Lcom/mojang/authlib/minecraft/report/ReportEvidence;"
+          },
+          {
+            "acc": 18,
+            "nme": "skinUrl",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "reportedEntity",
+            "dsc": "Lcom/mojang/authlib/minecraft/report/ReportedEntity;"
+          },
+          {
+            "acc": 18,
+            "nme": "createdTime",
+            "dsc": "Ljava/time/Instant;"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/ServicesKeyType.class": {
+        "ver": 61,
+        "acc": 16433,
+        "nme": "com/mojang/authlib/yggdrasil/ServicesKeyType",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lcom/mojang/authlib/yggdrasil/ServicesKeyType;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/mojang/authlib/yggdrasil/ServicesKeyType;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "$values",
+            "acc": 4106,
+            "dsc": "()[Lcom/mojang/authlib/yggdrasil/ServicesKeyType;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "PROFILE_PROPERTY",
+            "dsc": "Lcom/mojang/authlib/yggdrasil/ServicesKeyType;"
+          },
+          {
+            "acc": 16409,
+            "nme": "PROFILE_KEY",
+            "dsc": "Lcom/mojang/authlib/yggdrasil/ServicesKeyType;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lcom/mojang/authlib/yggdrasil/ServicesKeyType;"
+          }
+        ]
+      },
+      "com/mojang/authlib/minecraft/TelemetryEvent.class": {
+        "ver": 61,
+        "acc": 1537,
+        "nme": "com/mojang/authlib/minecraft/TelemetryEvent",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "send",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "EMPTY",
+            "dsc": "Lcom/mojang/authlib/minecraft/TelemetryEvent;"
+          }
+        ]
+      },
+      "com/mojang/authlib/minecraft/UserApiService$1.class": {
+        "ver": 61,
+        "acc": 32,
+        "nme": "com/mojang/authlib/minecraft/UserApiService$1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "fetchProperties",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/minecraft/UserApiService$UserProperties;"
+          },
+          {
+            "nme": "isBlockedPlayer",
+            "acc": 1,
+            "dsc": "(Ljava/util/UUID;)Z"
+          },
+          {
+            "nme": "refreshBlockList",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "newTelemetrySession",
+            "acc": 1,
+            "dsc": "(Ljava/util/concurrent/Executor;)Lcom/mojang/authlib/minecraft/TelemetrySession;"
+          },
+          {
+            "nme": "getKeyPair",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/yggdrasil/response/KeyPairResponse;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "reportAbuse",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/authlib/yggdrasil/request/AbuseReportRequest;)V"
+          },
+          {
+            "nme": "canSendReports",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getAbuseReportLimits",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/minecraft/report/AbuseReportLimits;"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/authlib/yggdrasil/YggdrasilUserApiService.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/authlib/yggdrasil/YggdrasilUserApiService",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/net/Proxy;Lcom/mojang/authlib/Environment;)V"
+          },
+          {
+            "nme": "newTelemetrySession",
+            "acc": 1,
+            "dsc": "(Ljava/util/concurrent/Executor;)Lcom/mojang/authlib/minecraft/TelemetrySession;"
+          },
+          {
+            "nme": "getKeyPair",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/yggdrasil/response/KeyPairResponse;"
+          },
+          {
+            "nme": "isBlockedPlayer",
+            "acc": 1,
+            "dsc": "(Ljava/util/UUID;)Z"
+          },
+          {
+            "nme": "refreshBlockList",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "fetchBlockList",
+            "acc": 2,
+            "dsc": "()Ljava/util/Set;",
+            "sig": "()Ljava/util/Set<Ljava/util/UUID;>;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "canMakeBlockListRequest",
+            "acc": 2,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "forceFetchBlockList",
+            "acc": 2,
+            "dsc": "()Ljava/util/Set;",
+            "sig": "()Ljava/util/Set<Ljava/util/UUID;>;"
+          },
+          {
+            "nme": "fetchProperties",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/minecraft/UserApiService$UserProperties;",
+            "exs": [
+              "com/mojang/authlib/exceptions/AuthenticationException"
+            ]
+          },
+          {
+            "nme": "addFlagIfUserHasPrivilege",
+            "acc": 10,
+            "dsc": "(ZLcom/mojang/authlib/minecraft/UserApiService$UserFlag;Lcom/google/common/collect/ImmutableSet$Builder;)V",
+            "sig": "(ZLcom/mojang/authlib/minecraft/UserApiService$UserFlag;Lcom/google/common/collect/ImmutableSet$Builder<Lcom/mojang/authlib/minecraft/UserApiService$UserFlag;>;)V"
+          },
+          {
+            "nme": "reportAbuse",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/authlib/yggdrasil/request/AbuseReportRequest;)V"
+          },
+          {
+            "nme": "canSendReports",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getAbuseReportLimits",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/minecraft/report/AbuseReportLimits;"
+          },
+          {
+            "nme": "lambda$fetchProperties$0",
+            "acc": 4106,
+            "dsc": "(Lcom/google/common/collect/ImmutableMap$Builder;Ljava/lang/String;Lcom/mojang/authlib/yggdrasil/response/UserAttributesResponse$BanStatus$BannedScope;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "BLOCKLIST_REQUEST_COOLDOWN_SECONDS",
+            "dsc": "J",
+            "val": 120
+          },
+          {
+            "acc": 26,
+            "nme": "ZERO_UUID",
+            "dsc": "Ljava/util/UUID;"
+          },
+          {
+            "acc": 18,
+            "nme": "routePrivileges",
+            "dsc": "Ljava/net/URL;"
+          },
+          {
+            "acc": 18,
+            "nme": "routeBlocklist",
+            "dsc": "Ljava/net/URL;"
+          },
+          {
+            "acc": 18,
+            "nme": "routeKeyPair",
+            "dsc": "Ljava/net/URL;"
+          },
+          {
+            "acc": 18,
+            "nme": "routeAbuseReport",
+            "dsc": "Ljava/net/URL;"
+          },
+          {
+            "acc": 18,
+            "nme": "minecraftClient",
+            "dsc": "Lcom/mojang/authlib/minecraft/client/MinecraftClient;"
+          },
+          {
+            "acc": 18,
+            "nme": "environment",
+            "dsc": "Lcom/mojang/authlib/Environment;"
+          },
+          {
+            "acc": 2,
+            "nme": "nextAcceptableBlockRequest",
+            "dsc": "Ljava/time/Instant;"
+          },
+          {
+            "acc": 2,
+            "nme": "blockList",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Ljava/util/UUID;>;"
+          }
+        ]
+      },
+      "com/mojang/authlib/minecraft/MinecraftProfileTextures.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/minecraft/MinecraftProfileTextures",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/authlib/minecraft/MinecraftProfileTexture;Lcom/mojang/authlib/minecraft/MinecraftProfileTexture;Lcom/mojang/authlib/minecraft/MinecraftProfileTexture;Lcom/mojang/authlib/SignatureState;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "skin",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/minecraft/MinecraftProfileTexture;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "cape",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/minecraft/MinecraftProfileTexture;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "elytra",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/minecraft/MinecraftProfileTexture;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "signatureState",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/SignatureState;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "skin",
+            "dsc": "Lcom/mojang/authlib/minecraft/MinecraftProfileTexture;"
+          },
+          {
+            "acc": 18,
+            "nme": "cape",
+            "dsc": "Lcom/mojang/authlib/minecraft/MinecraftProfileTexture;"
+          },
+          {
+            "acc": 18,
+            "nme": "elytra",
+            "dsc": "Lcom/mojang/authlib/minecraft/MinecraftProfileTexture;"
+          },
+          {
+            "acc": 18,
+            "nme": "signatureState",
+            "dsc": "Lcom/mojang/authlib/SignatureState;"
+          },
+          {
+            "acc": 25,
+            "nme": "EMPTY",
+            "dsc": "Lcom/mojang/authlib/minecraft/MinecraftProfileTextures;"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/response/ProfileSearchResultsResponse.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/yggdrasil/response/ProfileSearchResultsResponse",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/util/List;)V",
+            "sig": "(Ljava/util/List<Lcom/mojang/authlib/GameProfile;>;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "profiles",
+            "acc": 1,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lcom/mojang/authlib/GameProfile;>;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "profiles",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lcom/mojang/authlib/GameProfile;>;"
+          }
+        ]
+      },
+      "com/mojang/util/InstantTypeAdapter.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/util/InstantTypeAdapter",
+        "super": "com/google/gson/TypeAdapter",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "write",
+            "acc": 1,
+            "dsc": "(Lcom/google/gson/stream/JsonWriter;Ljava/time/Instant;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "read",
+            "acc": 1,
+            "dsc": "(Lcom/google/gson/stream/JsonReader;)Ljava/time/Instant;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "read",
+            "acc": 4161,
+            "dsc": "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "write",
+            "acc": 4161,
+            "dsc": "(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "FORMATTER",
+            "dsc": "Ljava/time/format/DateTimeFormatter;"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/ProfileResult.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/yggdrasil/ProfileResult",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/authlib/GameProfile;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/authlib/GameProfile;Ljava/util/Set;)V",
+            "sig": "(Lcom/mojang/authlib/GameProfile;Ljava/util/Set<Lcom/mojang/authlib/yggdrasil/ProfileActionType;>;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "profile",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/GameProfile;"
+          },
+          {
+            "nme": "actions",
+            "acc": 1,
+            "dsc": "()Ljava/util/Set;",
+            "sig": "()Ljava/util/Set<Lcom/mojang/authlib/yggdrasil/ProfileActionType;>;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "profile",
+            "dsc": "Lcom/mojang/authlib/GameProfile;"
+          },
+          {
+            "acc": 18,
+            "nme": "actions",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Lcom/mojang/authlib/yggdrasil/ProfileActionType;>;"
+          }
+        ]
+      },
+      "com/mojang/util/UUIDTypeAdapter.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/util/UUIDTypeAdapter",
+        "super": "com/google/gson/TypeAdapter",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "write",
+            "acc": 1,
+            "dsc": "(Lcom/google/gson/stream/JsonWriter;Ljava/util/UUID;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "read",
+            "acc": 1,
+            "dsc": "(Lcom/google/gson/stream/JsonReader;)Ljava/util/UUID;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "read",
+            "acc": 4161,
+            "dsc": "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "write",
+            "acc": 4161,
+            "dsc": "(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/authlib/yggdrasil/request/TelemetryEventsRequest.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/yggdrasil/request/TelemetryEventsRequest",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/util/List;)V",
+            "sig": "(Ljava/util/List<Lcom/mojang/authlib/yggdrasil/request/TelemetryEventsRequest$Event;>;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "events",
+            "acc": 1,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lcom/mojang/authlib/yggdrasil/request/TelemetryEventsRequest$Event;>;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "events"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "events",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lcom/mojang/authlib/yggdrasil/request/TelemetryEventsRequest$Event;>;"
+          }
+        ]
+      },
+      "com/mojang/authlib/properties/Property.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/properties/Property",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "hasSignature",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isSignatureValid",
+            "acc": 131073,
+            "dsc": "(Ljava/security/PublicKey;)Z",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "name",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "name"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "value",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "value"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "signature",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "signature"
+                ]
+              },
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "value",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "signature",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "com/mojang/authlib/properties/PropertyMap$Serializer.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/authlib/properties/PropertyMap$Serializer",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "deserialize",
+            "acc": 1,
+            "dsc": "(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Lcom/mojang/authlib/properties/PropertyMap;",
+            "exs": [
+              "com/google/gson/JsonParseException"
+            ]
+          },
+          {
+            "nme": "serialize",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/authlib/properties/PropertyMap;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;"
+          },
+          {
+            "nme": "serialize",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;"
+          },
+          {
+            "nme": "deserialize",
+            "acc": 4161,
+            "dsc": "(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Ljava/lang/Object;",
+            "exs": [
+              "com/google/gson/JsonParseException"
+            ]
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/authlib/exceptions/MinecraftClientException$ErrorType.class": {
+        "ver": 61,
+        "acc": 16433,
+        "nme": "com/mojang/authlib/exceptions/MinecraftClientException$ErrorType",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lcom/mojang/authlib/exceptions/MinecraftClientException$ErrorType;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/mojang/authlib/exceptions/MinecraftClientException$ErrorType;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "$values",
+            "acc": 4106,
+            "dsc": "()[Lcom/mojang/authlib/exceptions/MinecraftClientException$ErrorType;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "SERVICE_UNAVAILABLE",
+            "dsc": "Lcom/mojang/authlib/exceptions/MinecraftClientException$ErrorType;"
+          },
+          {
+            "acc": 16409,
+            "nme": "HTTP_ERROR",
+            "dsc": "Lcom/mojang/authlib/exceptions/MinecraftClientException$ErrorType;"
+          },
+          {
+            "acc": 16409,
+            "nme": "JSON_ERROR",
+            "dsc": "Lcom/mojang/authlib/exceptions/MinecraftClientException$ErrorType;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lcom/mojang/authlib/exceptions/MinecraftClientException$ErrorType;"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/response/BlockListResponse.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/yggdrasil/response/BlockListResponse",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/util/Set;)V",
+            "sig": "(Ljava/util/Set<Ljava/util/UUID;>;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "blockedProfiles",
+            "acc": 1,
+            "dsc": "()Ljava/util/Set;",
+            "sig": "()Ljava/util/Set<Ljava/util/UUID;>;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "blockedProfiles"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "blockedProfiles",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Ljava/util/UUID;>;"
+          }
+        ]
+      },
+      "com/mojang/authlib/SignatureState.class": {
+        "ver": 61,
+        "acc": 16433,
+        "nme": "com/mojang/authlib/SignatureState",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lcom/mojang/authlib/SignatureState;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/mojang/authlib/SignatureState;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "$values",
+            "acc": 4106,
+            "dsc": "()[Lcom/mojang/authlib/SignatureState;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "UNSIGNED",
+            "dsc": "Lcom/mojang/authlib/SignatureState;"
+          },
+          {
+            "acc": 16409,
+            "nme": "INVALID",
+            "dsc": "Lcom/mojang/authlib/SignatureState;"
+          },
+          {
+            "acc": 16409,
+            "nme": "SIGNED",
+            "dsc": "Lcom/mojang/authlib/SignatureState;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lcom/mojang/authlib/SignatureState;"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/response/UserAttributesResponse$BanStatus.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/yggdrasil/response/UserAttributesResponse$BanStatus",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/util/Map;)V",
+            "sig": "(Ljava/util/Map<Ljava/lang/String;Lcom/mojang/authlib/yggdrasil/response/UserAttributesResponse$BanStatus$BannedScope;>;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "bannedScopes",
+            "acc": 1,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<Ljava/lang/String;Lcom/mojang/authlib/yggdrasil/response/UserAttributesResponse$BanStatus$BannedScope;>;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "bannedScopes"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "bannedScopes",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/String;Lcom/mojang/authlib/yggdrasil/response/UserAttributesResponse$BanStatus$BannedScope;>;"
+          }
+        ]
+      },
+      "com/mojang/authlib/minecraft/report/ReportChatMessage.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/minecraft/report/ReportChatMessage",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(ILjava/util/UUID;Ljava/util/UUID;Ljava/time/Instant;JLjava/util/List;Ljava/lang/String;Ljava/nio/ByteBuffer;Z)V",
+            "sig": "(ILjava/util/UUID;Ljava/util/UUID;Ljava/time/Instant;JLjava/util/List<Ljava/nio/ByteBuffer;>;Ljava/lang/String;Ljava/nio/ByteBuffer;Z)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "index",
+            "acc": 1,
+            "dsc": "()I",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "index"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "profileId",
+            "acc": 1,
+            "dsc": "()Ljava/util/UUID;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "profileId"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "sessionId",
+            "acc": 1,
+            "dsc": "()Ljava/util/UUID;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "sessionId"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "timestamp",
+            "acc": 1,
+            "dsc": "()Ljava/time/Instant;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "timestamp"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "salt",
+            "acc": 1,
+            "dsc": "()J",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "salt"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "lastSeen",
+            "acc": 1,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Ljava/nio/ByteBuffer;>;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "lastSeen"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "message",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "message"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "signature",
+            "acc": 1,
+            "dsc": "()Ljava/nio/ByteBuffer;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "signature"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "messageReported",
+            "acc": 1,
+            "dsc": "()Z",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "messageReported"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "index",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "profileId",
+            "dsc": "Ljava/util/UUID;"
+          },
+          {
+            "acc": 18,
+            "nme": "sessionId",
+            "dsc": "Ljava/util/UUID;"
+          },
+          {
+            "acc": 18,
+            "nme": "timestamp",
+            "dsc": "Ljava/time/Instant;"
+          },
+          {
+            "acc": 18,
+            "nme": "salt",
+            "dsc": "J"
+          },
+          {
+            "acc": 18,
+            "nme": "lastSeen",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Ljava/nio/ByteBuffer;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "message",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "signature",
+            "dsc": "Ljava/nio/ByteBuffer;"
+          },
+          {
+            "acc": 18,
+            "nme": "messageReported",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "com/mojang/authlib/exceptions/AuthenticationUnavailableException.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/authlib/exceptions/AuthenticationUnavailableException",
+        "super": "com/mojang/authlib/exceptions/AuthenticationException",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Throwable;)V"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/authlib/yggdrasil/response/ProfileSearchResultsResponse$Serializer.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/authlib/yggdrasil/response/ProfileSearchResultsResponse$Serializer",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "deserialize",
+            "acc": 1,
+            "dsc": "(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Lcom/mojang/authlib/yggdrasil/response/ProfileSearchResultsResponse;",
+            "exs": [
+              "com/google/gson/JsonParseException"
+            ]
+          },
+          {
+            "nme": "deserialize",
+            "acc": 4161,
+            "dsc": "(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Ljava/lang/Object;",
+            "exs": [
+              "com/google/gson/JsonParseException"
+            ]
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/authlib/yggdrasil/YggdrasilAuthenticationService.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/authlib/yggdrasil/YggdrasilAuthenticationService",
+        "super": "com/mojang/authlib/HttpAuthenticationService",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/net/Proxy;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/net/Proxy;Lcom/mojang/authlib/Environment;)V"
+          },
+          {
+            "nme": "determineEnvironment",
+            "acc": 10,
+            "dsc": "()Lcom/mojang/authlib/Environment;"
+          },
+          {
+            "nme": "createMinecraftSessionService",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/minecraft/MinecraftSessionService;"
+          },
+          {
+            "nme": "createProfileRepository",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/GameProfileRepository;"
+          },
+          {
+            "nme": "createUserApiService",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Lcom/mojang/authlib/minecraft/UserApiService;"
+          },
+          {
+            "nme": "getServicesKeySet",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/yggdrasil/ServicesKeySet;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 18,
+            "nme": "environment",
+            "dsc": "Lcom/mojang/authlib/Environment;"
+          },
+          {
+            "acc": 18,
+            "nme": "servicesKeySet",
+            "dsc": "Lcom/mojang/authlib/yggdrasil/ServicesKeySet;"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/response/ErrorResponse.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/yggdrasil/response/ErrorResponse",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V",
+            "sig": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "path",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "path"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "error",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "error"
+                ]
+              },
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "errorMessage",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "errorMessage"
+                ]
+              },
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "details",
+            "acc": 1,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "details"
+                ]
+              },
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "path",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "error",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "errorMessage",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "details",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+          }
+        ]
+      },
+      "com/mojang/authlib/minecraft/UserApiService.class": {
+        "ver": 61,
+        "acc": 1537,
+        "nme": "com/mojang/authlib/minecraft/UserApiService",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "fetchProperties",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/authlib/minecraft/UserApiService$UserProperties;",
+            "exs": [
+              "com/mojang/authlib/exceptions/AuthenticationException"
+            ]
+          },
+          {
+            "nme": "isBlockedPlayer",
+            "acc": 1025,
+            "dsc": "(Ljava/util/UUID;)Z"
+          },
+          {
+            "nme": "refreshBlockList",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "newTelemetrySession",
+            "acc": 1025,
+            "dsc": "(Ljava/util/concurrent/Executor;)Lcom/mojang/authlib/minecraft/TelemetrySession;"
+          },
+          {
+            "nme": "getKeyPair",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/authlib/yggdrasil/response/KeyPairResponse;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "reportAbuse",
+            "acc": 1025,
+            "dsc": "(Lcom/mojang/authlib/yggdrasil/request/AbuseReportRequest;)V"
+          },
+          {
+            "nme": "canSendReports",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getAbuseReportLimits",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/authlib/minecraft/report/AbuseReportLimits;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "OFFLINE_PROPERTIES",
+            "dsc": "Lcom/mojang/authlib/minecraft/UserApiService$UserProperties;"
+          },
+          {
+            "acc": 25,
+            "nme": "OFFLINE",
+            "dsc": "Lcom/mojang/authlib/minecraft/UserApiService;"
+          }
+        ]
+      },
+      "com/mojang/authlib/minecraft/report/AbuseReportLimits.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/minecraft/report/AbuseReportLimits",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(IIIII)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "maxOpinionCommentsLength",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "maxReportedMessageCount",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "maxEvidenceMessageCount",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "leadingContextMessageCount",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "trailingContextMessageCount",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "maxOpinionCommentsLength",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "maxReportedMessageCount",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "maxEvidenceMessageCount",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "leadingContextMessageCount",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "trailingContextMessageCount",
+            "dsc": "I"
+          },
+          {
+            "acc": 25,
+            "nme": "DEFAULTS",
+            "dsc": "Lcom/mojang/authlib/minecraft/report/AbuseReportLimits;"
+          }
+        ]
+      },
+      "com/mojang/authlib/HttpAuthenticationService.class": {
+        "ver": 61,
+        "acc": 1057,
+        "nme": "com/mojang/authlib/HttpAuthenticationService",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(Ljava/net/Proxy;)V"
+          },
+          {
+            "nme": "getProxy",
+            "acc": 1,
+            "dsc": "()Ljava/net/Proxy;"
+          },
+          {
+            "nme": "constantURL",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Ljava/net/URL;"
+          },
+          {
+            "nme": "buildQuery",
+            "acc": 9,
+            "dsc": "(Ljava/util/Map;)Ljava/lang/String;",
+            "sig": "(Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;)Ljava/lang/String;"
+          },
+          {
+            "nme": "concatenateURL",
+            "acc": 9,
+            "dsc": "(Ljava/net/URL;Ljava/lang/String;)Ljava/net/URL;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "proxy",
+            "dsc": "Ljava/net/Proxy;"
+          }
+        ]
+      },
+      "com/mojang/authlib/minecraft/report/ReportEvidence.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/minecraft/report/ReportEvidence",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/util/List;)V",
+            "sig": "(Ljava/util/List<Lcom/mojang/authlib/minecraft/report/ReportChatMessage;>;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "messages",
+            "acc": 1,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lcom/mojang/authlib/minecraft/report/ReportChatMessage;>;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "messages"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "messages",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lcom/mojang/authlib/minecraft/report/ReportChatMessage;>;"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/response/UserAttributesResponse$Privileges$Privilege.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/yggdrasil/response/UserAttributesResponse$Privileges$Privilege",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Z)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "enabled",
+            "acc": 1,
+            "dsc": "()Z",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "enabled"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "enabled",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "com/mojang/authlib/minecraft/MinecraftProfileTexture$Type.class": {
+        "ver": 61,
+        "acc": 16433,
+        "nme": "com/mojang/authlib/minecraft/MinecraftProfileTexture$Type",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lcom/mojang/authlib/minecraft/MinecraftProfileTexture$Type;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/mojang/authlib/minecraft/MinecraftProfileTexture$Type;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "$values",
+            "acc": 4106,
+            "dsc": "()[Lcom/mojang/authlib/minecraft/MinecraftProfileTexture$Type;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "SKIN",
+            "dsc": "Lcom/mojang/authlib/minecraft/MinecraftProfileTexture$Type;"
+          },
+          {
+            "acc": 16409,
+            "nme": "CAPE",
+            "dsc": "Lcom/mojang/authlib/minecraft/MinecraftProfileTexture$Type;"
+          },
+          {
+            "acc": 16409,
+            "nme": "ELYTRA",
+            "dsc": "Lcom/mojang/authlib/minecraft/MinecraftProfileTexture$Type;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lcom/mojang/authlib/minecraft/MinecraftProfileTexture$Type;"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/request/AbuseReportRequest$RealmInfo.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/yggdrasil/request/AbuseReportRequest$RealmInfo",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "realmId",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "realmId"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "slotId",
+            "acc": 1,
+            "dsc": "()I",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "slotId"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "realmId",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "slotId",
+            "dsc": "I"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/TextureUrlChecker.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/authlib/yggdrasil/TextureUrlChecker",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "isAllowedTextureDomain",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "isDomainOnList",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;Ljava/util/List;)Z",
+            "sig": "(Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "ALLOWED_SCHEMES",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Ljava/lang/String;>;"
+          },
+          {
+            "acc": 26,
+            "nme": "ALLOWED_DOMAINS",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Ljava/lang/String;>;"
+          },
+          {
+            "acc": 26,
+            "nme": "BLOCKED_DOMAINS",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Ljava/lang/String;>;"
+          }
+        ]
+      },
+      "com/mojang/authlib/minecraft/TelemetryPropertyContainer.class": {
+        "ver": 61,
+        "acc": 1537,
+        "nme": "com/mojang/authlib/minecraft/TelemetryPropertyContainer",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "addProperty",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "addProperty",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "addProperty",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;J)V"
+          },
+          {
+            "nme": "addProperty",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Z)V"
+          },
+          {
+            "nme": "addNullProperty",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "forJsonObject",
+            "acc": 9,
+            "dsc": "(Lcom/google/gson/JsonObject;)Lcom/mojang/authlib/minecraft/TelemetryPropertyContainer;"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/authlib/GameProfileRepository.class": {
+        "ver": 61,
+        "acc": 1537,
+        "nme": "com/mojang/authlib/GameProfileRepository",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "findProfilesByNames",
+            "acc": 1025,
+            "dsc": "([Ljava/lang/String;Lcom/mojang/authlib/ProfileLookupCallback;)V"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/authlib/yggdrasil/ProfileActionType.class": {
+        "ver": 61,
+        "acc": 16433,
+        "nme": "com/mojang/authlib/yggdrasil/ProfileActionType",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lcom/mojang/authlib/yggdrasil/ProfileActionType;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/mojang/authlib/yggdrasil/ProfileActionType;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "$values",
+            "acc": 4106,
+            "dsc": "()[Lcom/mojang/authlib/yggdrasil/ProfileActionType;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "FORCED_NAME_CHANGE",
+            "dsc": "Lcom/mojang/authlib/yggdrasil/ProfileActionType;"
+          },
+          {
+            "acc": 16409,
+            "nme": "USING_BANNED_SKIN",
+            "dsc": "Lcom/mojang/authlib/yggdrasil/ProfileActionType;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lcom/mojang/authlib/yggdrasil/ProfileActionType;"
+          }
+        ]
+      },
+      "com/mojang/authlib/minecraft/MinecraftProfileTexture.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/authlib/minecraft/MinecraftProfileTexture",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/util/Map;)V",
+            "sig": "(Ljava/lang/String;Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;)V"
+          },
+          {
+            "nme": "getUrl",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getMetadata",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "getHash",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "PROFILE_TEXTURE_COUNT",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "url",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "metadata",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+          }
+        ]
+      },
+      "com/mojang/authlib/Environment.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/Environment",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "sessionHost",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "servicesHost",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "name",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "sessionHost",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "servicesHost",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/response/UserAttributesResponse$Privileges.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/yggdrasil/response/UserAttributesResponse$Privileges",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/authlib/yggdrasil/response/UserAttributesResponse$Privileges$Privilege;Lcom/mojang/authlib/yggdrasil/response/UserAttributesResponse$Privileges$Privilege;Lcom/mojang/authlib/yggdrasil/response/UserAttributesResponse$Privileges$Privilege;Lcom/mojang/authlib/yggdrasil/response/UserAttributesResponse$Privileges$Privilege;Lcom/mojang/authlib/yggdrasil/response/UserAttributesResponse$Privileges$Privilege;)V"
+          },
+          {
+            "nme": "getOnlineChat",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getMultiplayerServer",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getMultiplayerRealms",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getTelemetry",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getOptionalTelemetry",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "onlineChat",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/yggdrasil/response/UserAttributesResponse$Privileges$Privilege;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "onlineChat"
+                ]
+              },
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "multiplayerServer",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/yggdrasil/response/UserAttributesResponse$Privileges$Privilege;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "multiplayerServer"
+                ]
+              },
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "multiplayerRealms",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/yggdrasil/response/UserAttributesResponse$Privileges$Privilege;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "multiplayerRealms"
+                ]
+              },
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "telemetry",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/yggdrasil/response/UserAttributesResponse$Privileges$Privilege;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "telemetry"
+                ]
+              },
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "optionalTelemetry",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/yggdrasil/response/UserAttributesResponse$Privileges$Privilege;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "optionalTelemetry"
+                ]
+              },
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "onlineChat",
+            "dsc": "Lcom/mojang/authlib/yggdrasil/response/UserAttributesResponse$Privileges$Privilege;"
+          },
+          {
+            "acc": 18,
+            "nme": "multiplayerServer",
+            "dsc": "Lcom/mojang/authlib/yggdrasil/response/UserAttributesResponse$Privileges$Privilege;"
+          },
+          {
+            "acc": 18,
+            "nme": "multiplayerRealms",
+            "dsc": "Lcom/mojang/authlib/yggdrasil/response/UserAttributesResponse$Privileges$Privilege;"
+          },
+          {
+            "acc": 18,
+            "nme": "telemetry",
+            "dsc": "Lcom/mojang/authlib/yggdrasil/response/UserAttributesResponse$Privileges$Privilege;"
+          },
+          {
+            "acc": 18,
+            "nme": "optionalTelemetry",
+            "dsc": "Lcom/mojang/authlib/yggdrasil/response/UserAttributesResponse$Privileges$Privilege;"
+          }
+        ]
+      },
+      "com/mojang/authlib/exceptions/UserBannedException.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/authlib/exceptions/UserBannedException",
+        "super": "com/mojang/authlib/exceptions/AuthenticationException",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/authlib/minecraft/MinecraftSessionService.class": {
+        "ver": 61,
+        "acc": 1537,
+        "nme": "com/mojang/authlib/minecraft/MinecraftSessionService",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "joinServer",
+            "acc": 1025,
+            "dsc": "(Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;)V",
+            "exs": [
+              "com/mojang/authlib/exceptions/AuthenticationException"
+            ]
+          },
+          {
+            "nme": "hasJoinedServer",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/net/InetAddress;)Lcom/mojang/authlib/yggdrasil/ProfileResult;",
+            "exs": [
+              "com/mojang/authlib/exceptions/AuthenticationUnavailableException"
+            ],
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "getPackedTextures",
+            "acc": 1025,
+            "dsc": "(Lcom/mojang/authlib/GameProfile;)Lcom/mojang/authlib/properties/Property;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "unpackTextures",
+            "acc": 1025,
+            "dsc": "(Lcom/mojang/authlib/properties/Property;)Lcom/mojang/authlib/minecraft/MinecraftProfileTextures;"
+          },
+          {
+            "nme": "getTextures",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/authlib/GameProfile;)Lcom/mojang/authlib/minecraft/MinecraftProfileTextures;"
+          },
+          {
+            "nme": "fetchProfile",
+            "acc": 1025,
+            "dsc": "(Ljava/util/UUID;Z)Lcom/mojang/authlib/yggdrasil/ProfileResult;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "getSecurePropertyValue",
+            "acc": 1025,
+            "dsc": "(Lcom/mojang/authlib/properties/Property;)Ljava/lang/String;",
+            "exs": [
+              "com/mojang/authlib/minecraft/InsecurePublicKeyException"
+            ]
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/authlib/yggdrasil/response/MinecraftProfilePropertiesResponse.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/yggdrasil/response/MinecraftProfilePropertiesResponse",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/util/UUID;Ljava/lang/String;Lcom/mojang/authlib/properties/PropertyMap;Ljava/util/Set;)V",
+            "sig": "(Ljava/util/UUID;Ljava/lang/String;Lcom/mojang/authlib/properties/PropertyMap;Ljava/util/Set<Lcom/mojang/authlib/yggdrasil/response/ProfileAction;>;)V"
+          },
+          {
+            "nme": "toProfile",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/GameProfile;"
+          },
+          {
+            "nme": "profileActions",
+            "acc": 1,
+            "dsc": "()Ljava/util/Set;",
+            "sig": "()Ljava/util/Set<Lcom/mojang/authlib/yggdrasil/response/ProfileAction;>;"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "id",
+            "acc": 1,
+            "dsc": "()Ljava/util/UUID;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "id"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "name",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "name"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "properties",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/properties/PropertyMap;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "properties"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "id",
+            "dsc": "Ljava/util/UUID;"
+          },
+          {
+            "acc": 18,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "properties",
+            "dsc": "Lcom/mojang/authlib/properties/PropertyMap;"
+          },
+          {
+            "acc": 18,
+            "nme": "profileActions",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Lcom/mojang/authlib/yggdrasil/response/ProfileAction;>;"
+          }
+        ]
+      },
+      "com/mojang/authlib/AuthenticationService.class": {
+        "ver": 61,
+        "acc": 1537,
+        "nme": "com/mojang/authlib/AuthenticationService",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "createMinecraftSessionService",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/authlib/minecraft/MinecraftSessionService;"
+          },
+          {
+            "nme": "createProfileRepository",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/authlib/GameProfileRepository;"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/authlib/exceptions/InvalidCredentialsException.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/authlib/exceptions/InvalidCredentialsException",
+        "super": "com/mojang/authlib/exceptions/AuthenticationException",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Throwable;)V"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/authlib/minecraft/InsecurePublicKeyException$MissingException.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/authlib/minecraft/InsecurePublicKeyException$MissingException",
+        "super": "com/mojang/authlib/minecraft/InsecurePublicKeyException",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/authlib/minecraft/TelemetryPropertyContainer$1.class": {
+        "ver": 61,
+        "acc": 32,
+        "nme": "com/mojang/authlib/minecraft/TelemetryPropertyContainer$1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lcom/google/gson/JsonObject;)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "addProperty",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "addProperty",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "addProperty",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;J)V"
+          },
+          {
+            "nme": "addProperty",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Z)V"
+          },
+          {
+            "nme": "addNullProperty",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4112,
+            "nme": "val$object",
+            "dsc": "Lcom/google/gson/JsonObject;"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/response/UserAttributesResponse$BanStatus$BannedScope.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/yggdrasil/response/UserAttributesResponse$BanStatus$BannedScope",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/util/UUID;Ljava/time/Instant;Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "banId",
+            "acc": 1,
+            "dsc": "()Ljava/util/UUID;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "banId"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "expires",
+            "acc": 1,
+            "dsc": "()Ljava/time/Instant;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "expires"
+                ]
+              },
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "reason",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "reason"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "reasonMessage",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "reasonMessage"
+                ]
+              },
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "banId",
+            "dsc": "Ljava/util/UUID;"
+          },
+          {
+            "acc": 18,
+            "nme": "expires",
+            "dsc": "Ljava/time/Instant;"
+          },
+          {
+            "acc": 18,
+            "nme": "reason",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "reasonMessage",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "com/mojang/authlib/minecraft/InsecurePublicKeyException.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/authlib/minecraft/InsecurePublicKeyException",
+        "super": "java/lang/RuntimeException",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/authlib/yggdrasil/request/AbuseReportRequest$ThirdPartyServerInfo.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/yggdrasil/request/AbuseReportRequest$ThirdPartyServerInfo",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "address",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "address"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "address",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "com/mojang/authlib/minecraft/BanDetails.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/minecraft/BanDetails",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/util/UUID;Ljava/time/Instant;Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "id",
+            "acc": 1,
+            "dsc": "()Ljava/util/UUID;"
+          },
+          {
+            "nme": "expires",
+            "acc": 1,
+            "dsc": "()Ljava/time/Instant;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "reason",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "reasonMessage",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "id",
+            "dsc": "Ljava/util/UUID;"
+          },
+          {
+            "acc": 18,
+            "nme": "expires",
+            "dsc": "Ljava/time/Instant;"
+          },
+          {
+            "acc": 18,
+            "nme": "reason",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "reasonMessage",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 25,
+            "nme": "MULTIPLAYER_SCOPE",
+            "dsc": "Ljava/lang/String;",
+            "val": "MULTIPLAYER"
+          }
+        ]
+      },
+      "com/mojang/authlib/exceptions/ForcedUsernameChangeException.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/authlib/exceptions/ForcedUsernameChangeException",
+        "super": "com/mojang/authlib/exceptions/AuthenticationException",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/authlib/minecraft/client/ObjectMapper.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/authlib/minecraft/client/ObjectMapper",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/google/gson/Gson;)V"
+          },
+          {
+            "nme": "readValue",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;",
+            "sig": "<T:Ljava/lang/Object;>(Ljava/lang/String;Ljava/lang/Class<TT;>;)TT;"
+          },
+          {
+            "nme": "writeValueAsString",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/String;"
+          },
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "()Lcom/mojang/authlib/minecraft/client/ObjectMapper;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "gson",
+            "dsc": "Lcom/google/gson/Gson;"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/response/UserAttributesResponse.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/yggdrasil/response/UserAttributesResponse",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/authlib/yggdrasil/response/UserAttributesResponse$Privileges;Lcom/mojang/authlib/yggdrasil/response/UserAttributesResponse$ProfanityFilterPreferences;Lcom/mojang/authlib/yggdrasil/response/UserAttributesResponse$BanStatus;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "privileges",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/yggdrasil/response/UserAttributesResponse$Privileges;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "privileges"
+                ]
+              },
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "profanityFilterPreferences",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/yggdrasil/response/UserAttributesResponse$ProfanityFilterPreferences;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "profanityFilterPreferences"
+                ]
+              },
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "banStatus",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/yggdrasil/response/UserAttributesResponse$BanStatus;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "banStatus"
+                ]
+              },
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "privileges",
+            "dsc": "Lcom/mojang/authlib/yggdrasil/response/UserAttributesResponse$Privileges;"
+          },
+          {
+            "acc": 18,
+            "nme": "profanityFilterPreferences",
+            "dsc": "Lcom/mojang/authlib/yggdrasil/response/UserAttributesResponse$ProfanityFilterPreferences;"
+          },
+          {
+            "acc": 18,
+            "nme": "banStatus",
+            "dsc": "Lcom/mojang/authlib/yggdrasil/response/UserAttributesResponse$BanStatus;"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/YggdrassilTelemetrySession.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/authlib/yggdrasil/YggdrassilTelemetrySession",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lcom/mojang/authlib/minecraft/client/MinecraftClient;Lcom/mojang/authlib/Environment;Ljava/util/concurrent/Executor;)V",
+            "invanns": [
+              {
+                "dsc": "Lcom/google/common/annotations/VisibleForTesting;"
+              }
+            ]
+          },
+          {
+            "nme": "isEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "createNewEvent",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Lcom/mojang/authlib/minecraft/TelemetryEvent;"
+          },
+          {
+            "nme": "sendEvent",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Lcom/google/gson/JsonObject;)V"
+          },
+          {
+            "nme": "lambda$sendEvent$0",
+            "acc": 4098,
+            "dsc": "(Lcom/mojang/authlib/yggdrasil/request/TelemetryEventsRequest$Event;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 26,
+            "nme": "SOURCE",
+            "dsc": "Ljava/lang/String;",
+            "val": "minecraft.java"
+          },
+          {
+            "acc": 18,
+            "nme": "minecraftClient",
+            "dsc": "Lcom/mojang/authlib/minecraft/client/MinecraftClient;"
+          },
+          {
+            "acc": 18,
+            "nme": "routeEvents",
+            "dsc": "Ljava/net/URL;"
+          },
+          {
+            "acc": 18,
+            "nme": "ioExecutor",
+            "dsc": "Ljava/util/concurrent/Executor;"
+          }
+        ]
+      },
+      "com/mojang/authlib/GameProfile$Serializer.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/authlib/GameProfile$Serializer",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "deserialize",
+            "acc": 1,
+            "dsc": "(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Lcom/mojang/authlib/GameProfile;",
+            "exs": [
+              "com/google/gson/JsonParseException"
+            ]
+          },
+          {
+            "nme": "serialize",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/authlib/GameProfile;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;"
+          },
+          {
+            "nme": "serialize",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;"
+          },
+          {
+            "nme": "deserialize",
+            "acc": 4161,
+            "dsc": "(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Ljava/lang/Object;",
+            "exs": [
+              "com/google/gson/JsonParseException"
+            ]
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/authlib/yggdrasil/response/UserAttributesResponse$ProfanityFilterPreferences.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/yggdrasil/response/UserAttributesResponse$ProfanityFilterPreferences",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Z)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "enabled",
+            "acc": 1,
+            "dsc": "()Z",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "profanityFilterOn"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "enabled",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "com/mojang/authlib/minecraft/UserApiService$UserProperties.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/minecraft/UserApiService$UserProperties",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/util/Set;Ljava/util/Map;)V",
+            "sig": "(Ljava/util/Set<Lcom/mojang/authlib/minecraft/UserApiService$UserFlag;>;Ljava/util/Map<Ljava/lang/String;Lcom/mojang/authlib/minecraft/BanDetails;>;)V"
+          },
+          {
+            "nme": "flag",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/authlib/minecraft/UserApiService$UserFlag;)Z"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "flags",
+            "acc": 1,
+            "dsc": "()Ljava/util/Set;",
+            "sig": "()Ljava/util/Set<Lcom/mojang/authlib/minecraft/UserApiService$UserFlag;>;"
+          },
+          {
+            "nme": "bannedScopes",
+            "acc": 1,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<Ljava/lang/String;Lcom/mojang/authlib/minecraft/BanDetails;>;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "flags",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Lcom/mojang/authlib/minecraft/UserApiService$UserFlag;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "bannedScopes",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/String;Lcom/mojang/authlib/minecraft/BanDetails;>;"
+          }
+        ]
+      },
+      "com/mojang/authlib/exceptions/InsufficientPrivilegesException.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/authlib/exceptions/InsufficientPrivilegesException",
+        "super": "com/mojang/authlib/exceptions/AuthenticationException",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Throwable;)V"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/authlib/minecraft/client/MinecraftClient.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/authlib/minecraft/client/MinecraftClient",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/net/Proxy;)V"
+          },
+          {
+            "nme": "unauthenticated",
+            "acc": 9,
+            "dsc": "(Ljava/net/Proxy;)Lcom/mojang/authlib/minecraft/client/MinecraftClient;"
+          },
+          {
+            "nme": "get",
+            "acc": 1,
+            "dsc": "(Ljava/net/URL;Ljava/lang/Class;)Ljava/lang/Object;",
+            "sig": "<T:Ljava/lang/Object;>(Ljava/net/URL;Ljava/lang/Class<TT;>;)TT;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "post",
+            "acc": 1,
+            "dsc": "(Ljava/net/URL;Ljava/lang/Class;)Ljava/lang/Object;",
+            "sig": "<T:Ljava/lang/Object;>(Ljava/net/URL;Ljava/lang/Class<TT;>;)TT;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "post",
+            "acc": 1,
+            "dsc": "(Ljava/net/URL;Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;",
+            "sig": "<T:Ljava/lang/Object;>(Ljava/net/URL;Ljava/lang/Object;Ljava/lang/Class<TT;>;)TT;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "readInputStream",
+            "acc": 2,
+            "dsc": "(Ljava/net/URL;Ljava/lang/Class;Ljava/net/HttpURLConnection;)Ljava/lang/Object;",
+            "sig": "<T:Ljava/lang/Object;>(Ljava/net/URL;Ljava/lang/Class<TT;>;Ljava/net/HttpURLConnection;)TT;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "postInternal",
+            "acc": 2,
+            "dsc": "(Ljava/net/URL;[B)Ljava/net/HttpURLConnection;"
+          },
+          {
+            "nme": "createUrlConnection",
+            "acc": 2,
+            "dsc": "(Ljava/net/URL;)Ljava/net/HttpURLConnection;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 25,
+            "nme": "CONNECT_TIMEOUT_MS",
+            "dsc": "I",
+            "val": 5000
+          },
+          {
+            "acc": 25,
+            "nme": "READ_TIMEOUT_MS",
+            "dsc": "I",
+            "val": 5000
+          },
+          {
+            "acc": 18,
+            "nme": "accessToken",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "proxy",
+            "dsc": "Ljava/net/Proxy;"
+          },
+          {
+            "acc": 18,
+            "nme": "objectMapper",
+            "dsc": "Lcom/mojang/authlib/minecraft/client/ObjectMapper;"
+          }
+        ]
+      },
+      "com/mojang/authlib/exceptions/AuthenticationException.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/authlib/exceptions/AuthenticationException",
+        "super": "java/lang/Exception",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Throwable;)V"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/authlib/yggdrasil/response/ProfileAction.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/yggdrasil/response/ProfileAction",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/authlib/yggdrasil/ProfileActionType;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "type",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/yggdrasil/ProfileActionType;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "action"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "type",
+            "dsc": "Lcom/mojang/authlib/yggdrasil/ProfileActionType;"
+          }
+        ]
+      },
+      "com/mojang/authlib/EnvironmentParser.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/authlib/EnvironmentParser",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setEnvironmentOverride",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "getEnvironmentFromProperties",
+            "acc": 9,
+            "dsc": "()Ljava/util/Optional;",
+            "sig": "()Ljava/util/Optional<Lcom/mojang/authlib/Environment;>;"
+          },
+          {
+            "nme": "fromHostNames",
+            "acc": 10,
+            "dsc": "()Ljava/util/Optional;",
+            "sig": "()Ljava/util/Optional<Lcom/mojang/authlib/Environment;>;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 10,
+            "nme": "environmentOverride",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 26,
+            "nme": "PROP_PREFIX",
+            "dsc": "Ljava/lang/String;",
+            "val": "minecraft.api."
+          },
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 25,
+            "nme": "PROP_ENV",
+            "dsc": "Ljava/lang/String;",
+            "val": "minecraft.api.env"
+          },
+          {
+            "acc": 25,
+            "nme": "PROP_SESSION_HOST",
+            "dsc": "Ljava/lang/String;",
+            "val": "minecraft.api.session.host"
+          },
+          {
+            "acc": 25,
+            "nme": "PROP_SERVICES_HOST",
+            "dsc": "Ljava/lang/String;",
+            "val": "minecraft.api.services.host"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/response/KeyPairResponse$KeyPair.class": {
+        "ver": 61,
+        "acc": 65585,
+        "nme": "com/mojang/authlib/yggdrasil/response/KeyPairResponse$KeyPair",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "privateKey",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "privateKey"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "publicKey",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lcom/google/gson/annotations/SerializedName;",
+                "vals": [
+                  "value",
+                  "publicKey"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "privateKey",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "publicKey",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/YggdrasilGameProfileRepository.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/authlib/yggdrasil/YggdrasilGameProfileRepository",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/net/Proxy;Lcom/mojang/authlib/Environment;)V"
+          },
+          {
+            "nme": "findProfilesByNames",
+            "acc": 1,
+            "dsc": "([Ljava/lang/String;Lcom/mojang/authlib/ProfileLookupCallback;)V"
+          },
+          {
+            "nme": "normalizeName",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$findProfilesByNames$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 26,
+            "nme": "ENTRIES_PER_PAGE",
+            "dsc": "I",
+            "val": 2
+          },
+          {
+            "acc": 26,
+            "nme": "MAX_FAIL_COUNT",
+            "dsc": "I",
+            "val": 3
+          },
+          {
+            "acc": 26,
+            "nme": "DELAY_BETWEEN_PAGES",
+            "dsc": "I",
+            "val": 100
+          },
+          {
+            "acc": 26,
+            "nme": "DELAY_BETWEEN_FAILURES",
+            "dsc": "I",
+            "val": 750
+          },
+          {
+            "acc": 18,
+            "nme": "client",
+            "dsc": "Lcom/mojang/authlib/minecraft/client/MinecraftClient;"
+          },
+          {
+            "acc": 18,
+            "nme": "searchPageUrl",
+            "dsc": "Ljava/net/URL;"
+          }
+        ]
+      },
+      "com/mojang/authlib/ProfileLookupCallback.class": {
+        "ver": 61,
+        "acc": 1537,
+        "nme": "com/mojang/authlib/ProfileLookupCallback",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "onProfileLookupSucceeded",
+            "acc": 1025,
+            "dsc": "(Lcom/mojang/authlib/GameProfile;)V"
+          },
+          {
+            "nme": "onProfileLookupFailed",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Exception;)V"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/authlib/yggdrasil/YggdrasilServicesKeyInfo$2.class": {
+        "ver": 61,
+        "acc": 4128,
+        "nme": "com/mojang/authlib/yggdrasil/YggdrasilServicesKeyInfo$2",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4120,
+            "nme": "$SwitchMap$com$mojang$authlib$yggdrasil$ServicesKeyType",
+            "dsc": "[I"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/YggdrasilMinecraftSessionService.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/authlib/yggdrasil/YggdrasilMinecraftSessionService",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(Lcom/mojang/authlib/yggdrasil/ServicesKeySet;Ljava/net/Proxy;Lcom/mojang/authlib/Environment;)V"
+          },
+          {
+            "nme": "joinServer",
+            "acc": 1,
+            "dsc": "(Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;)V",
+            "exs": [
+              "com/mojang/authlib/exceptions/AuthenticationException"
+            ]
+          },
+          {
+            "nme": "hasJoinedServer",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/net/InetAddress;)Lcom/mojang/authlib/yggdrasil/ProfileResult;",
+            "exs": [
+              "com/mojang/authlib/exceptions/AuthenticationUnavailableException"
+            ],
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "getPackedTextures",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/authlib/GameProfile;)Lcom/mojang/authlib/properties/Property;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "unpackTextures",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/authlib/properties/Property;)Lcom/mojang/authlib/minecraft/MinecraftProfileTextures;"
+          },
+          {
+            "nme": "fetchProfile",
+            "acc": 1,
+            "dsc": "(Ljava/util/UUID;Z)Lcom/mojang/authlib/yggdrasil/ProfileResult;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "getSecurePropertyValue",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/authlib/properties/Property;)Ljava/lang/String;",
+            "exs": [
+              "com/mojang/authlib/minecraft/InsecurePublicKeyException"
+            ]
+          },
+          {
+            "nme": "getPropertySignatureState",
+            "acc": 2,
+            "dsc": "(Lcom/mojang/authlib/properties/Property;)Lcom/mojang/authlib/SignatureState;"
+          },
+          {
+            "nme": "fetchProfileUncached",
+            "acc": 2,
+            "dsc": "(Ljava/util/UUID;Z)Lcom/mojang/authlib/yggdrasil/ProfileResult;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "lambda$getPropertySignatureState$0",
+            "acc": 4106,
+            "dsc": "(Lcom/mojang/authlib/properties/Property;Lcom/mojang/authlib/yggdrasil/ServicesKeyInfo;)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 18,
+            "nme": "client",
+            "dsc": "Lcom/mojang/authlib/minecraft/client/MinecraftClient;"
+          },
+          {
+            "acc": 18,
+            "nme": "servicesKeySet",
+            "dsc": "Lcom/mojang/authlib/yggdrasil/ServicesKeySet;"
+          },
+          {
+            "acc": 18,
+            "nme": "baseUrl",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "joinUrl",
+            "dsc": "Ljava/net/URL;"
+          },
+          {
+            "acc": 18,
+            "nme": "checkUrl",
+            "dsc": "Ljava/net/URL;"
+          },
+          {
+            "acc": 18,
+            "nme": "gson",
+            "dsc": "Lcom/google/gson/Gson;"
+          },
+          {
+            "acc": 18,
+            "nme": "insecureProfiles",
+            "dsc": "Lcom/google/common/cache/LoadingCache;",
+            "sig": "Lcom/google/common/cache/LoadingCache<Ljava/util/UUID;Ljava/util/Optional<Lcom/mojang/authlib/yggdrasil/ProfileResult;>;>;"
+          }
+        ]
+      },
+      "com/mojang/authlib/exceptions/MinecraftClientHttpException.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/authlib/exceptions/MinecraftClientHttpException",
+        "super": "com/mojang/authlib/exceptions/MinecraftClientException",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(ILcom/mojang/authlib/yggdrasil/response/ErrorResponse;)V"
+          },
+          {
+            "nme": "getStatus",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getResponse",
+            "acc": 1,
+            "dsc": "()Ljava/util/Optional;",
+            "sig": "()Ljava/util/Optional<Lcom/mojang/authlib/yggdrasil/response/ErrorResponse;>;"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "toAuthenticationException",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/authlib/exceptions/AuthenticationException;"
+          },
+          {
+            "nme": "getError",
+            "acc": 2,
+            "dsc": "()Ljava/util/Optional;",
+            "sig": "()Ljava/util/Optional<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "getErrorMessage",
+            "acc": 10,
+            "dsc": "(ILcom/mojang/authlib/yggdrasil/response/ErrorResponse;)Ljava/lang/String;"
+          },
+          {
+            "nme": "hasError",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "lambda$hasError$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "UNAUTHORIZED",
+            "dsc": "I",
+            "val": 401
+          },
+          {
+            "acc": 25,
+            "nme": "FORBIDDEN",
+            "dsc": "I",
+            "val": 403
+          },
+          {
+            "acc": 18,
+            "nme": "status",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "response",
+            "dsc": "Lcom/mojang/authlib/yggdrasil/response/ErrorResponse;"
+          }
+        ]
+      },
+      "com/mojang/authlib/minecraft/TelemetryEvent$1.class": {
+        "ver": 61,
+        "acc": 32,
+        "nme": "com/mojang/authlib/minecraft/TelemetryEvent$1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "addProperty",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "addProperty",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "addProperty",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;J)V"
+          },
+          {
+            "nme": "addProperty",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Z)V"
+          },
+          {
+            "nme": "addNullProperty",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "send",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/authlib/minecraft/UserApiService$UserFlag.class": {
+        "ver": 61,
+        "acc": 16433,
+        "nme": "com/mojang/authlib/minecraft/UserApiService$UserFlag",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lcom/mojang/authlib/minecraft/UserApiService$UserFlag;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/mojang/authlib/minecraft/UserApiService$UserFlag;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "$values",
+            "acc": 4106,
+            "dsc": "()[Lcom/mojang/authlib/minecraft/UserApiService$UserFlag;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "SERVERS_ALLOWED",
+            "dsc": "Lcom/mojang/authlib/minecraft/UserApiService$UserFlag;"
+          },
+          {
+            "acc": 16409,
+            "nme": "REALMS_ALLOWED",
+            "dsc": "Lcom/mojang/authlib/minecraft/UserApiService$UserFlag;"
+          },
+          {
+            "acc": 16409,
+            "nme": "CHAT_ALLOWED",
+            "dsc": "Lcom/mojang/authlib/minecraft/UserApiService$UserFlag;"
+          },
+          {
+            "acc": 16409,
+            "nme": "TELEMETRY_ENABLED",
+            "dsc": "Lcom/mojang/authlib/minecraft/UserApiService$UserFlag;"
+          },
+          {
+            "acc": 16409,
+            "nme": "PROFANITY_FILTER_ENABLED",
+            "dsc": "Lcom/mojang/authlib/minecraft/UserApiService$UserFlag;"
+          },
+          {
+            "acc": 16409,
+            "nme": "OPTIONAL_TELEMETRY_AVAILABLE",
+            "dsc": "Lcom/mojang/authlib/minecraft/UserApiService$UserFlag;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lcom/mojang/authlib/minecraft/UserApiService$UserFlag;"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/ServicesKeySet.class": {
+        "ver": 61,
+        "acc": 1537,
+        "nme": "com/mojang/authlib/yggdrasil/ServicesKeySet",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "lazy",
+            "acc": 9,
+            "dsc": "(Ljava/util/function/Supplier;)Lcom/mojang/authlib/yggdrasil/ServicesKeySet;",
+            "sig": "(Ljava/util/function/Supplier<Lcom/mojang/authlib/yggdrasil/ServicesKeySet;>;)Lcom/mojang/authlib/yggdrasil/ServicesKeySet;"
+          },
+          {
+            "nme": "keys",
+            "acc": 1025,
+            "dsc": "(Lcom/mojang/authlib/yggdrasil/ServicesKeyType;)Ljava/util/Collection;",
+            "sig": "(Lcom/mojang/authlib/yggdrasil/ServicesKeyType;)Ljava/util/Collection<Lcom/mojang/authlib/yggdrasil/ServicesKeyInfo;>;"
+          },
+          {
+            "nme": "lambda$lazy$1",
+            "acc": 4106,
+            "dsc": "(Ljava/util/function/Supplier;Lcom/mojang/authlib/yggdrasil/ServicesKeyType;)Ljava/util/Collection;"
+          },
+          {
+            "nme": "lambda$static$0",
+            "acc": 4106,
+            "dsc": "(Lcom/mojang/authlib/yggdrasil/ServicesKeyType;)Ljava/util/Collection;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "EMPTY",
+            "dsc": "Lcom/mojang/authlib/yggdrasil/ServicesKeySet;"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/YggdrasilServicesKeyInfo.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/authlib/yggdrasil/YggdrasilServicesKeyInfo",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/security/PublicKey;)V"
+          },
+          {
+            "nme": "parse",
+            "acc": 9,
+            "dsc": "([B)Lcom/mojang/authlib/yggdrasil/ServicesKeyInfo;"
+          },
+          {
+            "nme": "parseList",
+            "acc": 10,
+            "dsc": "(Ljava/util/List;)Ljava/util/List;",
+            "sig": "(Ljava/util/List<Lcom/mojang/authlib/yggdrasil/YggdrasilServicesKeyInfo$KeyData;>;)Ljava/util/List<Lcom/mojang/authlib/yggdrasil/ServicesKeyInfo;>;"
+          },
+          {
+            "nme": "get",
+            "acc": 9,
+            "dsc": "(Ljava/net/URL;Lcom/mojang/authlib/minecraft/client/MinecraftClient;)Lcom/mojang/authlib/yggdrasil/ServicesKeySet;"
+          },
+          {
+            "nme": "fetch",
+            "acc": 10,
+            "dsc": "(Ljava/net/URL;Lcom/mojang/authlib/minecraft/client/MinecraftClient;)Ljava/util/Optional;",
+            "sig": "(Ljava/net/URL;Lcom/mojang/authlib/minecraft/client/MinecraftClient;)Ljava/util/Optional<Lcom/mojang/authlib/yggdrasil/ServicesKeySet;>;"
+          },
+          {
+            "nme": "signature",
+            "acc": 1,
+            "dsc": "()Ljava/security/Signature;"
+          },
+          {
+            "nme": "keyBitCount",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "validateProperty",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/authlib/properties/Property;)Z"
+          },
+          {
+            "nme": "lambda$fetch$2",
+            "acc": 4106,
+            "dsc": "(Ljava/util/List;Ljava/util/List;Lcom/mojang/authlib/yggdrasil/ServicesKeyType;)Ljava/util/Collection;"
+          },
+          {
+            "nme": "lambda$get$1",
+            "acc": 4106,
+            "dsc": "(Ljava/util/concurrent/CompletableFuture;Ljava/util/concurrent/atomic/AtomicReference;)Lcom/mojang/authlib/yggdrasil/ServicesKeySet;"
+          },
+          {
+            "nme": "lambda$parseList$0",
+            "acc": 4106,
+            "dsc": "(Lcom/mojang/authlib/yggdrasil/YggdrasilServicesKeyInfo$KeyData;)Lcom/mojang/authlib/yggdrasil/ServicesKeyInfo;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 26,
+            "nme": "FETCHER_EXECUTOR",
+            "dsc": "Ljava/util/concurrent/ScheduledExecutorService;"
+          },
+          {
+            "acc": 26,
+            "nme": "KEY_SIZE_BITS",
+            "dsc": "I",
+            "val": 4096
+          },
+          {
+            "acc": 26,
+            "nme": "KEY_ALGORITHM",
+            "dsc": "Ljava/lang/String;",
+            "val": "RSA"
+          },
+          {
+            "acc": 26,
+            "nme": "SIGNATURE_ALGORITHM",
+            "dsc": "Ljava/lang/String;",
+            "val": "SHA1withRSA"
+          },
+          {
+            "acc": 26,
+            "nme": "REFRESH_INTERVAL_HOURS",
+            "dsc": "I",
+            "val": 24
+          },
+          {
+            "acc": 26,
+            "nme": "BASE_FAILURE_INTERVAL_MINUTES",
+            "dsc": "I",
+            "val": 5
+          },
+          {
+            "acc": 26,
+            "nme": "MAX_BACKOFF_EXPONENT",
+            "dsc": "I",
+            "val": 6
+          },
+          {
+            "acc": 18,
+            "nme": "publicKey",
+            "dsc": "Ljava/security/PublicKey;"
+          }
+        ]
+      },
+      "com/mojang/authlib/yggdrasil/YggdrasilMinecraftSessionService$2.class": {
+        "ver": 61,
+        "acc": 4128,
+        "nme": "com/mojang/authlib/yggdrasil/YggdrasilMinecraftSessionService$2",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4120,
+            "nme": "$SwitchMap$com$mojang$authlib$SignatureState",
+            "dsc": "[I"
+          }
+        ]
+      }
+    }
+  }
+}

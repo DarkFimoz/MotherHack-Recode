@@ -1,0 +1,952 @@
+{
+  "md5": "36757c7f68e5a859328e1d19a40c8e8a",
+  "sha2": "aae9f5f72428b328c79f6653dbb3a9ab4441fc6c",
+  "sha256": "c8bc1bb07a26d4a0bfd03f7b8852621837f1873e40973fc2909b40bd73d7cbbb",
+  "contents": {
+    "classes": {
+      "net/fabricmc/fabric/mixin/command/client/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/mixin/command/client/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/command/HelpCommandAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/command/HelpCommandAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getFailedException",
+            "acc": 9,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;",
+                "vals": [
+                  "value",
+                  "FAILED_EXCEPTION"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/server/command/HelpCommand"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/command/v2/FabricEntitySelectorReader.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/command/v2/FabricEntitySelectorReader",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "setCustomFlag",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/Identifier;Z)V"
+          },
+          {
+            "nme": "getCustomFlag",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/Identifier;)Z"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/mixin/command/EntitySelectorReaderMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/command/EntitySelectorReaderMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setCustomFlag",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/Identifier;Z)V"
+          },
+          {
+            "nme": "getCustomFlag",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/Identifier;)Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "flags",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Lnet/minecraft/util/Identifier;>;"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/command/EntitySelectorReader"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/command/client/ClientCommandSourceMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/command/client/ClientCommandSourceMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "sendFeedback",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/text/Text;)V"
+          },
+          {
+            "nme": "sendError",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/text/Text;)V"
+          },
+          {
+            "nme": "getClient",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/client/MinecraftClient;"
+          },
+          {
+            "nme": "getPlayer",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/client/network/ClientPlayerEntity;"
+          },
+          {
+            "nme": "getWorld",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/client/world/ClientWorld;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "field_3725",
+            "dsc": "Lnet/minecraft/client/MinecraftClient;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/network/ClientCommandSource"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/command/CommandManagerMixin.class": {
+        "ver": 65,
+        "acc": 1057,
+        "nme": "net/fabricmc/fabric/mixin/command/CommandManagerMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "fabric_addCommands",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/server/command/CommandManager$RegistrationEnvironment;Lnet/minecraft/command/CommandRegistryAccess;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lcom/mojang/brigadier/CommandDispatcher;setConsumer(Lcom/mojang/brigadier/ResultConsumer;)V",
+                        "remap",
+                        false
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "method",
+                  [
+                    "<init>"
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "field_9832",
+            "dsc": "Lcom/mojang/brigadier/CommandDispatcher;",
+            "sig": "Lcom/mojang/brigadier/CommandDispatcher<Lnet/minecraft/server/command/ServerCommandSource;>;"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/server/command/CommandManager"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/command/v2/FabricClientCommandSource.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/command/v2/FabricClientCommandSource",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "sendFeedback",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/text/Text;)V"
+          },
+          {
+            "nme": "sendError",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/text/Text;)V"
+          },
+          {
+            "nme": "getClient",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/client/MinecraftClient;"
+          },
+          {
+            "nme": "getPlayer",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/client/network/ClientPlayerEntity;"
+          },
+          {
+            "nme": "getEntity",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/entity/Entity;"
+          },
+          {
+            "nme": "getPosition",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/util/math/Vec3d;"
+          },
+          {
+            "nme": "getRotation",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/util/math/Vec2f;"
+          },
+          {
+            "nme": "getWorld",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/client/world/ClientWorld;"
+          },
+          {
+            "nme": "getMeta",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/Object;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/command/v2/ClientCommandManager.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/client/command/v2/ClientCommandManager",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getActiveDispatcher",
+            "acc": 9,
+            "dsc": "()Lcom/mojang/brigadier/CommandDispatcher;",
+            "sig": "()Lcom/mojang/brigadier/CommandDispatcher<Lnet/fabricmc/fabric/api/client/command/v2/FabricClientCommandSource;>;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "literal",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/mojang/brigadier/builder/LiteralArgumentBuilder;",
+            "sig": "(Ljava/lang/String;)Lcom/mojang/brigadier/builder/LiteralArgumentBuilder<Lnet/fabricmc/fabric/api/client/command/v2/FabricClientCommandSource;>;"
+          },
+          {
+            "nme": "argument",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Lcom/mojang/brigadier/arguments/ArgumentType;)Lcom/mojang/brigadier/builder/RequiredArgumentBuilder;",
+            "sig": "<T:Ljava/lang/Object;>(Ljava/lang/String;Lcom/mojang/brigadier/arguments/ArgumentType<TT;>;)Lcom/mojang/brigadier/builder/RequiredArgumentBuilder<Lnet/fabricmc/fabric/api/client/command/v2/FabricClientCommandSource;TT;>;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/command/client/ClientCommandInternals.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/command/client/ClientCommandInternals",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setActiveDispatcher",
+            "acc": 9,
+            "dsc": "(Lcom/mojang/brigadier/CommandDispatcher;)V",
+            "sig": "(Lcom/mojang/brigadier/CommandDispatcher<Lnet/fabricmc/fabric/api/client/command/v2/FabricClientCommandSource;>;)V"
+          },
+          {
+            "nme": "getActiveDispatcher",
+            "acc": 9,
+            "dsc": "()Lcom/mojang/brigadier/CommandDispatcher;",
+            "sig": "()Lcom/mojang/brigadier/CommandDispatcher<Lnet/fabricmc/fabric/api/client/command/v2/FabricClientCommandSource;>;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "executeCommand",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "isIgnoredException",
+            "acc": 10,
+            "dsc": "(Lcom/mojang/brigadier/exceptions/CommandExceptionType;)Z"
+          },
+          {
+            "nme": "getErrorMessage",
+            "acc": 10,
+            "dsc": "(Lcom/mojang/brigadier/exceptions/CommandSyntaxException;)Lnet/minecraft/text/Text;"
+          },
+          {
+            "nme": "finalizeInit",
+            "acc": 9,
+            "dsc": "()V"
+          },
+          {
+            "nme": "executeRootHelp",
+            "acc": 10,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContext;)I",
+            "sig": "(Lcom/mojang/brigadier/context/CommandContext<Lnet/fabricmc/fabric/api/client/command/v2/FabricClientCommandSource;>;)I"
+          },
+          {
+            "nme": "executeArgumentHelp",
+            "acc": 10,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContext;)I",
+            "sig": "(Lcom/mojang/brigadier/context/CommandContext<Lnet/fabricmc/fabric/api/client/command/v2/FabricClientCommandSource;>;)I",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "executeHelp",
+            "acc": 10,
+            "dsc": "(Lcom/mojang/brigadier/tree/CommandNode;Lcom/mojang/brigadier/context/CommandContext;)I",
+            "sig": "(Lcom/mojang/brigadier/tree/CommandNode<Lnet/fabricmc/fabric/api/client/command/v2/FabricClientCommandSource;>;Lcom/mojang/brigadier/context/CommandContext<Lnet/fabricmc/fabric/api/client/command/v2/FabricClientCommandSource;>;)I"
+          },
+          {
+            "nme": "addCommands",
+            "acc": 9,
+            "dsc": "(Lcom/mojang/brigadier/CommandDispatcher;Lnet/fabricmc/fabric/api/client/command/v2/FabricClientCommandSource;)V",
+            "sig": "(Lcom/mojang/brigadier/CommandDispatcher<Lnet/fabricmc/fabric/api/client/command/v2/FabricClientCommandSource;>;Lnet/fabricmc/fabric/api/client/command/v2/FabricClientCommandSource;)V"
+          },
+          {
+            "nme": "copyChildren",
+            "acc": 10,
+            "dsc": "(Lcom/mojang/brigadier/tree/CommandNode;Lcom/mojang/brigadier/tree/CommandNode;Lnet/fabricmc/fabric/api/client/command/v2/FabricClientCommandSource;Ljava/util/Map;)V",
+            "sig": "(Lcom/mojang/brigadier/tree/CommandNode<Lnet/fabricmc/fabric/api/client/command/v2/FabricClientCommandSource;>;Lcom/mojang/brigadier/tree/CommandNode<Lnet/fabricmc/fabric/api/client/command/v2/FabricClientCommandSource;>;Lnet/fabricmc/fabric/api/client/command/v2/FabricClientCommandSource;Ljava/util/Map<Lcom/mojang/brigadier/tree/CommandNode<Lnet/fabricmc/fabric/api/client/command/v2/FabricClientCommandSource;>;Lcom/mojang/brigadier/tree/CommandNode<Lnet/fabricmc/fabric/api/client/command/v2/FabricClientCommandSource;>;>;)V"
+          },
+          {
+            "nme": "lambda$copyChildren$2",
+            "acc": 4106,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContext;)I",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "lambda$copyChildren$1",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/command/v2/FabricClientCommandSource;)Z"
+          },
+          {
+            "nme": "lambda$finalizeInit$0",
+            "acc": 4106,
+            "dsc": "(Lcom/mojang/brigadier/tree/CommandNode;Lcom/mojang/brigadier/tree/CommandNode;Lcom/mojang/brigadier/tree/CommandNode;Ljava/util/Collection;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 26,
+            "nme": "API_COMMAND_NAME",
+            "dsc": "Ljava/lang/String;",
+            "val": "fabric-command-api-v2:client"
+          },
+          {
+            "acc": 26,
+            "nme": "SHORT_API_COMMAND_NAME",
+            "dsc": "Ljava/lang/String;",
+            "val": "fcc"
+          },
+          {
+            "acc": 10,
+            "nme": "activeDispatcher",
+            "dsc": "Lcom/mojang/brigadier/CommandDispatcher;",
+            "sig": "Lcom/mojang/brigadier/CommandDispatcher<Lnet/fabricmc/fabric/api/client/command/v2/FabricClientCommandSource;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/command/v2/ArgumentTypeRegistry.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/command/v2/ArgumentTypeRegistry",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "registerArgumentType",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/util/Identifier;Ljava/lang/Class;Lnet/minecraft/command/argument/serialize/ArgumentSerializer;)V",
+            "sig": "<A::Lcom/mojang/brigadier/arguments/ArgumentType<*>;T::Lnet/minecraft/command/argument/serialize/ArgumentSerializer$ArgumentTypeProperties<TA;>;>(Lnet/minecraft/util/Identifier;Ljava/lang/Class<+TA;>;Lnet/minecraft/command/argument/serialize/ArgumentSerializer<TA;TT;>;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/mixin/command/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/mixin/command/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/command/EntitySelectorOptionsAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/command/EntitySelectorOptionsAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "callPutOption",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Lnet/minecraft/command/EntitySelectorOptions$SelectorHandler;Ljava/util/function/Predicate;Lnet/minecraft/text/Text;)V",
+            "sig": "(Ljava/lang/String;Lnet/minecraft/command/EntitySelectorOptions$SelectorHandler;Ljava/util/function/Predicate<Lnet/minecraft/command/EntitySelectorReader;>;Lnet/minecraft/text/Text;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Invoker;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/command/EntitySelectorOptions"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/command/ArgumentTypesAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/command/ArgumentTypesAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "fabric_getClassMap",
+            "acc": 9,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<Ljava/lang/Class<*>;Lnet/minecraft/command/argument/serialize/ArgumentSerializer<**>;>;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;",
+                "vals": [
+                  "value",
+                  "CLASS_MAP"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/command/argument/ArgumentTypes"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/command/v2/EntitySelectorOptionRegistry.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/command/v2/EntitySelectorOptionRegistry",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "register",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/util/Identifier;Lnet/minecraft/text/Text;Lnet/minecraft/command/EntitySelectorOptions$SelectorHandler;Ljava/util/function/Predicate;)V",
+            "sig": "(Lnet/minecraft/util/Identifier;Lnet/minecraft/text/Text;Lnet/minecraft/command/EntitySelectorOptions$SelectorHandler;Ljava/util/function/Predicate<Lnet/minecraft/command/EntitySelectorReader;>;)V"
+          },
+          {
+            "nme": "registerNonRepeatable",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/util/Identifier;Lnet/minecraft/text/Text;Lnet/minecraft/command/EntitySelectorOptions$SelectorHandler;)V"
+          },
+          {
+            "nme": "lambda$registerNonRepeatable$1",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/util/Identifier;Lnet/minecraft/command/EntitySelectorReader;)Z"
+          },
+          {
+            "nme": "lambda$registerNonRepeatable$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/command/EntitySelectorOptions$SelectorHandler;Lnet/minecraft/util/Identifier;Lnet/minecraft/command/EntitySelectorReader;)V",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/api/command/v2/CommandRegistrationCallback.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/command/v2/CommandRegistrationCallback",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "register",
+            "acc": 1025,
+            "dsc": "(Lcom/mojang/brigadier/CommandDispatcher;Lnet/minecraft/command/CommandRegistryAccess;Lnet/minecraft/server/command/CommandManager$RegistrationEnvironment;)V",
+            "sig": "(Lcom/mojang/brigadier/CommandDispatcher<Lnet/minecraft/server/command/ServerCommandSource;>;Lnet/minecraft/command/CommandRegistryAccess;Lnet/minecraft/server/command/CommandManager$RegistrationEnvironment;)V"
+          },
+          {
+            "nme": "lambda$static$1",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/command/v2/CommandRegistrationCallback;)Lnet/fabricmc/fabric/api/command/v2/CommandRegistrationCallback;"
+          },
+          {
+            "nme": "lambda$static$0",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/command/v2/CommandRegistrationCallback;Lcom/mojang/brigadier/CommandDispatcher;Lnet/minecraft/command/CommandRegistryAccess;Lnet/minecraft/server/command/CommandManager$RegistrationEnvironment;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "EVENT",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/command/v2/CommandRegistrationCallback;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/command/client/ClientPlayNetworkHandlerMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/command/client/ClientPlayNetworkHandlerMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "onGameJoin",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/network/packet/s2c/play/GameJoinS2CPacket;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "onGameJoin"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "onOnCommandTree",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/network/packet/s2c/play/CommandTreeS2CPacket;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "onCommandTree"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "onSendCommand",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Ljava/lang/String;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/lang/Boolean;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "sendCommand"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "onSendCommand",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "sendChatCommand"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "field_3696",
+            "dsc": "Lcom/mojang/brigadier/CommandDispatcher;",
+            "sig": "Lcom/mojang/brigadier/CommandDispatcher<Lnet/minecraft/command/CommandSource;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "field_3691",
+            "dsc": "Lnet/minecraft/client/network/ClientCommandSource;"
+          },
+          {
+            "acc": 2,
+            "nme": "field_45600",
+            "dsc": "Lnet/minecraft/resource/featuretoggle/FeatureSet;"
+          },
+          {
+            "acc": 2,
+            "nme": "field_25063",
+            "dsc": "Lnet/minecraft/registry/DynamicRegistryManager$Immutable;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/network/ClientPlayNetworkHandler"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/command/client/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/command/client/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/command/v2/ClientCommandRegistrationCallback.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/command/v2/ClientCommandRegistrationCallback",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "register",
+            "acc": 1025,
+            "dsc": "(Lcom/mojang/brigadier/CommandDispatcher;Lnet/minecraft/command/CommandRegistryAccess;)V",
+            "sig": "(Lcom/mojang/brigadier/CommandDispatcher<Lnet/fabricmc/fabric/api/client/command/v2/FabricClientCommandSource;>;Lnet/minecraft/command/CommandRegistryAccess;)V"
+          },
+          {
+            "nme": "lambda$static$1",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/command/v2/ClientCommandRegistrationCallback;)Lnet/fabricmc/fabric/api/client/command/v2/ClientCommandRegistrationCallback;"
+          },
+          {
+            "nme": "lambda$static$0",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/command/v2/ClientCommandRegistrationCallback;Lcom/mojang/brigadier/CommandDispatcher;Lnet/minecraft/command/CommandRegistryAccess;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "EVENT",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/command/v2/ClientCommandRegistrationCallback;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

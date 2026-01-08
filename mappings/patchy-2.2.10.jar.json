@@ -1,0 +1,116 @@
+{
+  "md5": "ff905bf0aacf501149a13880a2d6742d",
+  "sha2": "da05971b07cbb379d002cf7eaec6a2048211fefc",
+  "sha256": "16d70e7968b45caffc81576268eb000f473fb60bf257182d3447dea8ec919d5a",
+  "contents": {
+    "classes": {
+      "com/mojang/patchy/MojangBlockListSupplier.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/patchy/MojangBlockListSupplier",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "createBlockList",
+            "acc": 1,
+            "dsc": "()Ljava/util/function/Predicate;",
+            "sig": "()Ljava/util/function/Predicate<Ljava/lang/String;>;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lcom/google/auto/service/AutoService;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "com/mojang/blocklist/BlockListSupplier"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "com/mojang/patchy/BlockedServers.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/patchy/BlockedServers",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/util/Collection;)V",
+            "sig": "(Ljava/util/Collection<Ljava/lang/String;>;)V"
+          },
+          {
+            "nme": "test",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "isIp",
+            "acc": 10,
+            "dsc": "(Ljava/util/List;)Z",
+            "sig": "(Ljava/util/List<Ljava/lang/String;>;)Z"
+          },
+          {
+            "nme": "isBlockedServerHostName",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "test",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "blockedServers",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Ljava/lang/String;>;"
+          },
+          {
+            "acc": 26,
+            "nme": "SRV_PREFIX",
+            "dsc": "Ljava/lang/String;",
+            "val": "_minecraft._tcp."
+          },
+          {
+            "acc": 26,
+            "nme": "DOT_JOINER",
+            "dsc": "Lcom/google/common/base/Joiner;"
+          },
+          {
+            "acc": 26,
+            "nme": "DOT_SPLITTER",
+            "dsc": "Lcom/google/common/base/Splitter;"
+          },
+          {
+            "acc": 25,
+            "nme": "HASH_CHARSET",
+            "dsc": "Ljava/nio/charset/Charset;"
+          }
+        ]
+      }
+    }
+  }
+}

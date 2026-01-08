@@ -1,0 +1,647 @@
+{
+  "md5": "59b2c2f9e99c5cab5fabdd63927d60fa",
+  "sha2": "cb36df2976623c8aa350c77d70ba0ddf55fe764f",
+  "sha256": "ff08cee9e27218e5127fec97e907dc54a1a98ceccc7b1cd98af75ee0f4ddc780",
+  "contents": {
+    "classes": {
+      "meteordevelopment/discordipc/RichPresence$Assets.class": {
+        "ver": 60,
+        "acc": 33,
+        "nme": "meteordevelopment/discordipc/RichPresence$Assets",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "large_image",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "large_text",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "small_image",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "small_text",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "meteordevelopment/discordipc/IPCUser.class": {
+        "ver": 60,
+        "acc": 33,
+        "nme": "meteordevelopment/discordipc/IPCUser",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "id",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "username",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "discriminator",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "avatar",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "bot",
+            "dsc": "Z"
+          },
+          {
+            "acc": 1,
+            "nme": "flags",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "premium_type",
+            "dsc": "I"
+          }
+        ]
+      },
+      "meteordevelopment/discordipc/connection/WinConnection.class": {
+        "ver": 60,
+        "acc": 33,
+        "nme": "meteordevelopment/discordipc/connection/WinConnection",
+        "super": "meteordevelopment/discordipc/connection/Connection",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;Ljava/util/function/Consumer;)V",
+            "sig": "(Ljava/lang/String;Ljava/util/function/Consumer<Lmeteordevelopment/discordipc/Packet;>;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "write",
+            "acc": 4,
+            "dsc": "(Ljava/nio/ByteBuffer;)V"
+          },
+          {
+            "nme": "run",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "readFully",
+            "acc": 2,
+            "dsc": "(Ljava/nio/ByteBuffer;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "close",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "raf",
+            "dsc": "Ljava/io/RandomAccessFile;"
+          },
+          {
+            "acc": 18,
+            "nme": "callback",
+            "dsc": "Ljava/util/function/Consumer;",
+            "sig": "Ljava/util/function/Consumer<Lmeteordevelopment/discordipc/Packet;>;"
+          }
+        ]
+      },
+      "meteordevelopment/discordipc/DiscordIPC.class": {
+        "ver": 60,
+        "acc": 33,
+        "nme": "meteordevelopment/discordipc/DiscordIPC",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setOnError",
+            "acc": 9,
+            "dsc": "(Ljava/util/function/BiConsumer;)V",
+            "sig": "(Ljava/util/function/BiConsumer<Ljava/lang/Integer;Ljava/lang/String;>;)V"
+          },
+          {
+            "nme": "start",
+            "acc": 9,
+            "dsc": "(JLjava/lang/Runnable;)Z"
+          },
+          {
+            "nme": "isConnected",
+            "acc": 9,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getUser",
+            "acc": 9,
+            "dsc": "()Lmeteordevelopment/discordipc/IPCUser;"
+          },
+          {
+            "nme": "setActivity",
+            "acc": 9,
+            "dsc": "(Lmeteordevelopment/discordipc/RichPresence;)V"
+          },
+          {
+            "nme": "stop",
+            "acc": 9,
+            "dsc": "()V"
+          },
+          {
+            "nme": "sendActivity",
+            "acc": 10,
+            "dsc": "()V"
+          },
+          {
+            "nme": "onPacket",
+            "acc": 10,
+            "dsc": "(Lmeteordevelopment/discordipc/Packet;)V"
+          },
+          {
+            "nme": "getPID",
+            "acc": 10,
+            "dsc": "()I"
+          },
+          {
+            "nme": "defaultErrorCallback",
+            "acc": 10,
+            "dsc": "(ILjava/lang/String;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "GSON",
+            "dsc": "Lcom/google/gson/Gson;"
+          },
+          {
+            "acc": 10,
+            "nme": "onError",
+            "dsc": "Ljava/util/function/BiConsumer;",
+            "sig": "Ljava/util/function/BiConsumer<Ljava/lang/Integer;Ljava/lang/String;>;"
+          },
+          {
+            "acc": 10,
+            "nme": "c",
+            "dsc": "Lmeteordevelopment/discordipc/connection/Connection;"
+          },
+          {
+            "acc": 10,
+            "nme": "onReady",
+            "dsc": "Ljava/lang/Runnable;"
+          },
+          {
+            "acc": 10,
+            "nme": "receivedDispatch",
+            "dsc": "Z"
+          },
+          {
+            "acc": 10,
+            "nme": "queuedActivity",
+            "dsc": "Lcom/google/gson/JsonObject;"
+          },
+          {
+            "acc": 10,
+            "nme": "user",
+            "dsc": "Lmeteordevelopment/discordipc/IPCUser;"
+          }
+        ]
+      },
+      "meteordevelopment/discordipc/Opcode.class": {
+        "ver": 60,
+        "acc": 16433,
+        "nme": "meteordevelopment/discordipc/Opcode",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lmeteordevelopment/discordipc/Opcode;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lmeteordevelopment/discordipc/Opcode;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(I)Lmeteordevelopment/discordipc/Opcode;"
+          },
+          {
+            "nme": "$values",
+            "acc": 4106,
+            "dsc": "()[Lmeteordevelopment/discordipc/Opcode;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "Handshake",
+            "dsc": "Lmeteordevelopment/discordipc/Opcode;"
+          },
+          {
+            "acc": 16409,
+            "nme": "Frame",
+            "dsc": "Lmeteordevelopment/discordipc/Opcode;"
+          },
+          {
+            "acc": 16409,
+            "nme": "Close",
+            "dsc": "Lmeteordevelopment/discordipc/Opcode;"
+          },
+          {
+            "acc": 16409,
+            "nme": "Ping",
+            "dsc": "Lmeteordevelopment/discordipc/Opcode;"
+          },
+          {
+            "acc": 16409,
+            "nme": "Pong",
+            "dsc": "Lmeteordevelopment/discordipc/Opcode;"
+          },
+          {
+            "acc": 26,
+            "nme": "VALUES",
+            "dsc": "[Lmeteordevelopment/discordipc/Opcode;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lmeteordevelopment/discordipc/Opcode;"
+          }
+        ]
+      },
+      "meteordevelopment/discordipc/connection/UnixConnection$1.class": {
+        "ver": 60,
+        "acc": 4128,
+        "nme": "meteordevelopment/discordipc/connection/UnixConnection$1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4120,
+            "nme": "$SwitchMap$meteordevelopment$discordipc$connection$UnixConnection$State",
+            "dsc": "[I"
+          }
+        ]
+      },
+      "meteordevelopment/discordipc/connection/Connection.class": {
+        "ver": 60,
+        "acc": 1057,
+        "nme": "meteordevelopment/discordipc/connection/Connection",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "open",
+            "acc": 9,
+            "dsc": "(Ljava/util/function/Consumer;)Lmeteordevelopment/discordipc/connection/Connection;",
+            "sig": "(Ljava/util/function/Consumer<Lmeteordevelopment/discordipc/Packet;>;)Lmeteordevelopment/discordipc/connection/Connection;"
+          },
+          {
+            "nme": "write",
+            "acc": 1,
+            "dsc": "(Lmeteordevelopment/discordipc/Opcode;Lcom/google/gson/JsonObject;)V"
+          },
+          {
+            "nme": "write",
+            "acc": 1028,
+            "dsc": "(Ljava/nio/ByteBuffer;)V"
+          },
+          {
+            "nme": "close",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "UNIX_TEMP_PATHS",
+            "dsc": "[Ljava/lang/String;"
+          }
+        ]
+      },
+      "meteordevelopment/discordipc/RichPresence.class": {
+        "ver": 60,
+        "acc": 33,
+        "nme": "meteordevelopment/discordipc/RichPresence",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setDetails",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "setState",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "setLargeImage",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "setSmallImage",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "setStart",
+            "acc": 1,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "setEnd",
+            "acc": 1,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "toJson",
+            "acc": 1,
+            "dsc": "()Lcom/google/gson/JsonObject;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "details",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 2,
+            "nme": "state",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 2,
+            "nme": "assets",
+            "dsc": "Lmeteordevelopment/discordipc/RichPresence$Assets;"
+          },
+          {
+            "acc": 2,
+            "nme": "timestamps",
+            "dsc": "Lmeteordevelopment/discordipc/RichPresence$Timestamps;"
+          }
+        ]
+      },
+      "meteordevelopment/discordipc/connection/UnixConnection.class": {
+        "ver": 60,
+        "acc": 33,
+        "nme": "meteordevelopment/discordipc/connection/UnixConnection",
+        "super": "meteordevelopment/discordipc/connection/Connection",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/util/function/Consumer;)V",
+            "sig": "(Ljava/lang/String;Ljava/util/function/Consumer<Lmeteordevelopment/discordipc/Packet;>;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "run",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "write",
+            "acc": 4,
+            "dsc": "(Ljava/nio/ByteBuffer;)V"
+          },
+          {
+            "nme": "close",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "s",
+            "dsc": "Ljava/nio/channels/Selector;"
+          },
+          {
+            "acc": 18,
+            "nme": "sc",
+            "dsc": "Ljava/nio/channels/SocketChannel;"
+          },
+          {
+            "acc": 18,
+            "nme": "callback",
+            "dsc": "Ljava/util/function/Consumer;",
+            "sig": "Ljava/util/function/Consumer<Lmeteordevelopment/discordipc/Packet;>;"
+          }
+        ]
+      },
+      "meteordevelopment/discordipc/Packet.class": {
+        "ver": 60,
+        "acc": 65585,
+        "nme": "meteordevelopment/discordipc/Packet",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lmeteordevelopment/discordipc/Opcode;Lcom/google/gson/JsonObject;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "opcode",
+            "acc": 1,
+            "dsc": "()Lmeteordevelopment/discordipc/Opcode;"
+          },
+          {
+            "nme": "data",
+            "acc": 1,
+            "dsc": "()Lcom/google/gson/JsonObject;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "opcode",
+            "dsc": "Lmeteordevelopment/discordipc/Opcode;"
+          },
+          {
+            "acc": 18,
+            "nme": "data",
+            "dsc": "Lcom/google/gson/JsonObject;"
+          }
+        ]
+      },
+      "meteordevelopment/discordipc/RichPresence$Timestamps.class": {
+        "ver": 60,
+        "acc": 33,
+        "nme": "meteordevelopment/discordipc/RichPresence$Timestamps",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "start",
+            "dsc": "Ljava/lang/Long;"
+          },
+          {
+            "acc": 1,
+            "nme": "end",
+            "dsc": "Ljava/lang/Long;"
+          }
+        ]
+      },
+      "meteordevelopment/discordipc/connection/UnixConnection$State.class": {
+        "ver": 60,
+        "acc": 16432,
+        "nme": "meteordevelopment/discordipc/connection/UnixConnection$State",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lmeteordevelopment/discordipc/connection/UnixConnection$State;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lmeteordevelopment/discordipc/connection/UnixConnection$State;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "$values",
+            "acc": 4106,
+            "dsc": "()[Lmeteordevelopment/discordipc/connection/UnixConnection$State;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "Opcode",
+            "dsc": "Lmeteordevelopment/discordipc/connection/UnixConnection$State;"
+          },
+          {
+            "acc": 16409,
+            "nme": "Length",
+            "dsc": "Lmeteordevelopment/discordipc/connection/UnixConnection$State;"
+          },
+          {
+            "acc": 16409,
+            "nme": "Data",
+            "dsc": "Lmeteordevelopment/discordipc/connection/UnixConnection$State;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lmeteordevelopment/discordipc/connection/UnixConnection$State;"
+          }
+        ]
+      }
+    }
+  }
+}

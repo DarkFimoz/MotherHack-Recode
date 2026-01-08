@@ -1,0 +1,272 @@
+{
+  "md5": "b277261cd89be842b6c8bf6aa97f3fa1",
+  "sha2": "4114cdc080ee54c1fdcd0933f1108300cb9554ab",
+  "sha256": "76b77682d4d8fa10245a6521f7f297b0f1d70bb37e87cb2f117a1910d476f994",
+  "contents": {
+    "classes": {
+      "net/fabricmc/fabric/api/blockrenderlayer/v1/BlockRenderLayerMap.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/blockrenderlayer/v1/BlockRenderLayerMap",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "putBlock",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/block/Block;Lnet/minecraft/client/render/RenderLayer;)V"
+          },
+          {
+            "nme": "putBlocks",
+            "acc": 1153,
+            "dsc": "(Lnet/minecraft/client/render/RenderLayer;[Lnet/minecraft/block/Block;)V"
+          },
+          {
+            "nme": "putFluid",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/fluid/Fluid;Lnet/minecraft/client/render/RenderLayer;)V"
+          },
+          {
+            "nme": "putFluids",
+            "acc": 1153,
+            "dsc": "(Lnet/minecraft/client/render/RenderLayer;[Lnet/minecraft/fluid/Fluid;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/fabricmc/fabric/api/blockrenderlayer/v1/BlockRenderLayerMap;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/blockrenderlayer/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/blockrenderlayer/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/blockrenderlayer/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/mixin/blockrenderlayer/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/blockrenderlayer/BlockRenderLayerMapImpl.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/blockrenderlayer/BlockRenderLayerMapImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "putBlock",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/block/Block;Lnet/minecraft/client/render/RenderLayer;)V"
+          },
+          {
+            "nme": "putBlocks",
+            "acc": 129,
+            "dsc": "(Lnet/minecraft/client/render/RenderLayer;[Lnet/minecraft/block/Block;)V"
+          },
+          {
+            "nme": "putFluid",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/fluid/Fluid;Lnet/minecraft/client/render/RenderLayer;)V"
+          },
+          {
+            "nme": "putFluids",
+            "acc": 129,
+            "dsc": "(Lnet/minecraft/client/render/RenderLayer;[Lnet/minecraft/fluid/Fluid;)V"
+          },
+          {
+            "nme": "initialize",
+            "acc": 9,
+            "dsc": "(Ljava/util/function/BiConsumer;Ljava/util/function/BiConsumer;)V",
+            "sig": "(Ljava/util/function/BiConsumer<Lnet/minecraft/block/Block;Lnet/minecraft/client/render/RenderLayer;>;Ljava/util/function/BiConsumer<Lnet/minecraft/fluid/Fluid;Lnet/minecraft/client/render/RenderLayer;>;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "BLOCK_RENDER_LAYER_MAP",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/block/Block;Lnet/minecraft/client/render/RenderLayer;>;"
+          },
+          {
+            "acc": 26,
+            "nme": "FLUID_RENDER_LAYER_MAP",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/fluid/Fluid;Lnet/minecraft/client/render/RenderLayer;>;"
+          },
+          {
+            "acc": 10,
+            "nme": "blockHandler",
+            "dsc": "Ljava/util/function/BiConsumer;",
+            "sig": "Ljava/util/function/BiConsumer<Lnet/minecraft/block/Block;Lnet/minecraft/client/render/RenderLayer;>;"
+          },
+          {
+            "acc": 10,
+            "nme": "fluidHandler",
+            "dsc": "Ljava/util/function/BiConsumer;",
+            "sig": "Ljava/util/function/BiConsumer<Lnet/minecraft/fluid/Fluid;Lnet/minecraft/client/render/RenderLayer;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/blockrenderlayer/RenderLayersMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/blockrenderlayer/RenderLayersMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "onInitialize",
+            "acc": 10,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "<clinit>*"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 10,
+            "nme": "field_21469",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/block/Block;Lnet/minecraft/client/render/RenderLayer;>;"
+          },
+          {
+            "acc": 10,
+            "nme": "field_21471",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/fluid/Fluid;Lnet/minecraft/client/render/RenderLayer;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/render/RenderLayers"
+                }
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

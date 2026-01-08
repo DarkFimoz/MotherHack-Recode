@@ -1,0 +1,1533 @@
+{
+  "md5": "017354101df2bcd53d0be8bb0ae803ce",
+  "sha2": "b3dc0e59219893c74d7538dbbec43b63b323f3d0",
+  "sha256": "50c6d7e9023efbbfb8ec6516c2612d3931f068ecddf664dd5fdecdeb548b4644",
+  "contents": {
+    "classes": {
+      "net/fabricmc/fabric/impl/gamerule/rule/BoundedIntRule.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/gamerule/rule/BoundedIntRule",
+        "super": "net/minecraft/world/GameRules$IntRule",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/world/GameRules$Type;III)V",
+            "sig": "(Lnet/minecraft/world/GameRules$Type<Lnet/minecraft/world/GameRules$IntRule;>;III)V"
+          },
+          {
+            "nme": "deserialize",
+            "acc": 4,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "validateAndSet",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "copy",
+            "acc": 4,
+            "dsc": "()Lnet/minecraft/world/GameRules$IntRule;"
+          },
+          {
+            "nme": "parseInt",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)I"
+          },
+          {
+            "nme": "copy",
+            "acc": 4164,
+            "dsc": "()Lnet/minecraft/world/GameRules$Rule;"
+          },
+          {
+            "nme": "getThis",
+            "acc": 4164,
+            "dsc": "()Lnet/minecraft/world/GameRules$Rule;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 18,
+            "nme": "minimumValue",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "maximumValue",
+            "dsc": "I"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/gamerule/client/EditGameRulesScreenRuleListWidgetMixin.class": {
+        "ver": 65,
+        "acc": 1057,
+        "nme": "net/fabricmc/fabric/mixin/gamerule/client/EditGameRulesScreenRuleListWidgetMixin",
+        "super": "net/minecraft/client/gui/widget/EntryListWidget",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;IIII)V"
+          },
+          {
+            "nme": "initializeFabricGameruleCategories",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/client/gui/screen/world/EditGameRulesScreen;Lnet/minecraft/world/GameRules;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "<init>(Lnet/minecraft/client/gui/screen/world/EditGameRulesScreen;Lnet/minecraft/world/GameRules;)V"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "TAIL"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "ignoreKeysWithCustomCategories",
+            "acc": 2,
+            "dsc": "(Ljava/util/Map$Entry;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "sig": "(Ljava/util/Map$Entry<Lnet/minecraft/world/GameRules$Key<*>;Lnet/minecraft/client/gui/screen/world/EditGameRulesScreen$AbstractRuleWidget;>;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "method_27638(Ljava/util/Map$Entry;)V"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "getFocused",
+            "acc": 4161,
+            "dsc": "()Lnet/minecraft/client/gui/Element;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "lambda$ignoreKeysWithCustomCategories$2",
+            "acc": 4098,
+            "dsc": "(Ljava/util/Map$Entry;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;Lnet/fabricmc/fabric/api/gamerule/v1/CustomGameRuleCategory;)V"
+          },
+          {
+            "nme": "lambda$ignoreKeysWithCustomCategories$1",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/api/gamerule/v1/CustomGameRuleCategory;)Ljava/util/List;"
+          },
+          {
+            "nme": "lambda$initializeFabricGameruleCategories$0",
+            "acc": 4098,
+            "dsc": "(Lnet/minecraft/client/gui/screen/world/EditGameRulesScreen;Lnet/fabricmc/fabric/api/gamerule/v1/CustomGameRuleCategory;Ljava/util/List;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "fabricCategories",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/fabricmc/fabric/api/gamerule/v1/CustomGameRuleCategory;Ljava/util/List<Lnet/minecraft/client/gui/screen/world/EditGameRulesScreen$AbstractRuleWidget;>;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/gui/screen/world/EditGameRulesScreen$RuleListWidget"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/gamerule/widget/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/gamerule/widget/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/gamerule/client/RuleListWidgetVisitorMixin.class": {
+        "ver": 65,
+        "acc": 1057,
+        "nme": "net/fabricmc/fabric/mixin/gamerule/client/RuleListWidgetVisitorMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "method_27640",
+            "acc": 1028,
+            "dsc": "(Lnet/minecraft/world/GameRules$Key;Lnet/minecraft/client/gui/screen/world/EditGameRulesScreen$RuleWidgetFactory;)V",
+            "sig": "<T:Lnet/minecraft/world/GameRules$Rule<TT;>;>(Lnet/minecraft/world/GameRules$Key<TT;>;Lnet/minecraft/client/gui/screen/world/EditGameRulesScreen$RuleWidgetFactory<TT;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Shadow;"
+              }
+            ]
+          },
+          {
+            "nme": "visitDouble",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/world/GameRules$Key;Lnet/minecraft/world/GameRules$Type;)V",
+            "sig": "(Lnet/minecraft/world/GameRules$Key<Lnet/fabricmc/fabric/api/gamerule/v1/rule/DoubleRule;>;Lnet/minecraft/world/GameRules$Type<Lnet/fabricmc/fabric/api/gamerule/v1/rule/DoubleRule;>;)V"
+          },
+          {
+            "nme": "visitEnum",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/world/GameRules$Key;Lnet/minecraft/world/GameRules$Type;)V",
+            "sig": "<E:Ljava/lang/Enum<TE;>;>(Lnet/minecraft/world/GameRules$Key<Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule<TE;>;>;Lnet/minecraft/world/GameRules$Type<Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule<TE;>;>;)V"
+          },
+          {
+            "nme": "displayProperEnumName",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/world/GameRules$Rule;Lnet/minecraft/world/GameRules$Key;Lnet/minecraft/client/gui/screen/world/EditGameRulesScreen$RuleWidgetFactory;)Ljava/lang/String;",
+            "sig": "<T:Lnet/minecraft/world/GameRules$Rule<TT;>;>(Lnet/minecraft/world/GameRules$Rule<TT;>;Lnet/minecraft/world/GameRules$Key<TT;>;Lnet/minecraft/client/gui/screen/world/EditGameRulesScreen$RuleWidgetFactory<TT;>;)Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Redirect;",
+                "vals": [
+                  "at",
+                  {
+                    "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                    "values": [
+                      "value",
+                      "INVOKE",
+                      "target",
+                      "Lnet/minecraft/world/GameRules$Rule;serialize()Ljava/lang/String;"
+                    ],
+                    "api": 589824
+                  },
+                  "method",
+                  [
+                    "net/minecraft/client/gui/screen/world/EditGameRulesScreen$RuleListWidget$1.createRuleWidget(Lnet/minecraft/world/GameRules$Key;Lnet/minecraft/client/gui/screen/world/EditGameRulesScreen$RuleWidgetFactory;)V"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "lambda$visitEnum$1",
+            "acc": 4098,
+            "dsc": "(Lnet/minecraft/world/GameRules$Key;Lnet/minecraft/text/Text;Ljava/util/List;Ljava/lang/String;Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule;)Lnet/minecraft/client/gui/screen/world/EditGameRulesScreen$AbstractRuleWidget;"
+          },
+          {
+            "nme": "lambda$visitDouble$0",
+            "acc": 4098,
+            "dsc": "(Lnet/minecraft/text/Text;Ljava/util/List;Ljava/lang/String;Lnet/fabricmc/fabric/api/gamerule/v1/rule/DoubleRule;)Lnet/minecraft/client/gui/screen/world/EditGameRulesScreen$AbstractRuleWidget;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "field_24314",
+            "dsc": "Lnet/minecraft/client/gui/screen/world/EditGameRulesScreen;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "targets",
+              [
+                "net/minecraft/client/gui/screen/world/EditGameRulesScreen$RuleListWidget$1"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/gamerule/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/gamerule/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/gamerule/GameRulesAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/gamerule/GameRulesAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "callRegister",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Lnet/minecraft/world/GameRules$Category;Lnet/minecraft/world/GameRules$Type;)Lnet/minecraft/world/GameRules$Key;",
+            "sig": "<T:Lnet/minecraft/world/GameRules$Rule<TT;>;>(Ljava/lang/String;Lnet/minecraft/world/GameRules$Category;Lnet/minecraft/world/GameRules$Type<TT;>;)Lnet/minecraft/world/GameRules$Key<TT;>;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Invoker;",
+                "vals": [
+                  "value",
+                  "register"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "getRuleTypes",
+            "acc": 9,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<Lnet/minecraft/world/GameRules$Key<*>;Lnet/minecraft/world/GameRules$Type<*>;>;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;",
+                "vals": [
+                  "value",
+                  "RULE_TYPES"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/world/GameRules"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/gamerule/EnumRuleCommand.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/gamerule/EnumRuleCommand",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "register",
+            "acc": 9,
+            "dsc": "(Lcom/mojang/brigadier/builder/LiteralArgumentBuilder;Lnet/minecraft/world/GameRules$Key;Lnet/fabricmc/fabric/impl/gamerule/EnumRuleType;)V",
+            "sig": "<E:Ljava/lang/Enum<TE;>;>(Lcom/mojang/brigadier/builder/LiteralArgumentBuilder<Lnet/minecraft/server/command/ServerCommandSource;>;Lnet/minecraft/world/GameRules$Key<Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule<TE;>;>;Lnet/fabricmc/fabric/impl/gamerule/EnumRuleType<TE;>;)V"
+          },
+          {
+            "nme": "executeAndSetEnum",
+            "acc": 9,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/Enum;Lnet/minecraft/world/GameRules$Key;)I",
+            "sig": "<E:Ljava/lang/Enum<TE;>;>(Lcom/mojang/brigadier/context/CommandContext<Lnet/minecraft/server/command/ServerCommandSource;>;TE;Lnet/minecraft/world/GameRules$Key<Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule<TE;>;>;)I",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "lambda$executeAndSetEnum$1",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/world/GameRules$Key;Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule;)Lnet/minecraft/text/Text;"
+          },
+          {
+            "nme": "lambda$register$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/world/GameRules$Key;Lcom/mojang/brigadier/context/CommandContext;)I",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/mixin/gamerule/client/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/mixin/gamerule/client/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/gamerule/v1/GameRuleFactory.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/gamerule/v1/GameRuleFactory",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "createBooleanRule",
+            "acc": 9,
+            "dsc": "(Z)Lnet/minecraft/world/GameRules$Type;",
+            "sig": "(Z)Lnet/minecraft/world/GameRules$Type<Lnet/minecraft/world/GameRules$BooleanRule;>;"
+          },
+          {
+            "nme": "createBooleanRule",
+            "acc": 9,
+            "dsc": "(ZLjava/util/function/BiConsumer;)Lnet/minecraft/world/GameRules$Type;",
+            "sig": "(ZLjava/util/function/BiConsumer<Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/world/GameRules$BooleanRule;>;)Lnet/minecraft/world/GameRules$Type<Lnet/minecraft/world/GameRules$BooleanRule;>;"
+          },
+          {
+            "nme": "createIntRule",
+            "acc": 9,
+            "dsc": "(I)Lnet/minecraft/world/GameRules$Type;",
+            "sig": "(I)Lnet/minecraft/world/GameRules$Type<Lnet/minecraft/world/GameRules$IntRule;>;"
+          },
+          {
+            "nme": "createIntRule",
+            "acc": 9,
+            "dsc": "(II)Lnet/minecraft/world/GameRules$Type;",
+            "sig": "(II)Lnet/minecraft/world/GameRules$Type<Lnet/minecraft/world/GameRules$IntRule;>;"
+          },
+          {
+            "nme": "createIntRule",
+            "acc": 9,
+            "dsc": "(IILjava/util/function/BiConsumer;)Lnet/minecraft/world/GameRules$Type;",
+            "sig": "(IILjava/util/function/BiConsumer<Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/world/GameRules$IntRule;>;)Lnet/minecraft/world/GameRules$Type<Lnet/minecraft/world/GameRules$IntRule;>;"
+          },
+          {
+            "nme": "createIntRule",
+            "acc": 9,
+            "dsc": "(III)Lnet/minecraft/world/GameRules$Type;",
+            "sig": "(III)Lnet/minecraft/world/GameRules$Type<Lnet/minecraft/world/GameRules$IntRule;>;"
+          },
+          {
+            "nme": "createIntRule",
+            "acc": 9,
+            "dsc": "(ILjava/util/function/BiConsumer;)Lnet/minecraft/world/GameRules$Type;",
+            "sig": "(ILjava/util/function/BiConsumer<Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/world/GameRules$IntRule;>;)Lnet/minecraft/world/GameRules$Type<Lnet/minecraft/world/GameRules$IntRule;>;"
+          },
+          {
+            "nme": "createIntRule",
+            "acc": 9,
+            "dsc": "(IIILjava/util/function/BiConsumer;)Lnet/minecraft/world/GameRules$Type;",
+            "sig": "(IIILjava/util/function/BiConsumer<Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/world/GameRules$IntRule;>;)Lnet/minecraft/world/GameRules$Type<Lnet/minecraft/world/GameRules$IntRule;>;"
+          },
+          {
+            "nme": "createDoubleRule",
+            "acc": 9,
+            "dsc": "(D)Lnet/minecraft/world/GameRules$Type;",
+            "sig": "(D)Lnet/minecraft/world/GameRules$Type<Lnet/fabricmc/fabric/api/gamerule/v1/rule/DoubleRule;>;"
+          },
+          {
+            "nme": "createDoubleRule",
+            "acc": 9,
+            "dsc": "(DD)Lnet/minecraft/world/GameRules$Type;",
+            "sig": "(DD)Lnet/minecraft/world/GameRules$Type<Lnet/fabricmc/fabric/api/gamerule/v1/rule/DoubleRule;>;"
+          },
+          {
+            "nme": "createDoubleRule",
+            "acc": 9,
+            "dsc": "(DDLjava/util/function/BiConsumer;)Lnet/minecraft/world/GameRules$Type;",
+            "sig": "(DDLjava/util/function/BiConsumer<Lnet/minecraft/server/MinecraftServer;Lnet/fabricmc/fabric/api/gamerule/v1/rule/DoubleRule;>;)Lnet/minecraft/world/GameRules$Type<Lnet/fabricmc/fabric/api/gamerule/v1/rule/DoubleRule;>;"
+          },
+          {
+            "nme": "createDoubleRule",
+            "acc": 9,
+            "dsc": "(DDD)Lnet/minecraft/world/GameRules$Type;",
+            "sig": "(DDD)Lnet/minecraft/world/GameRules$Type<Lnet/fabricmc/fabric/api/gamerule/v1/rule/DoubleRule;>;"
+          },
+          {
+            "nme": "createDoubleRule",
+            "acc": 9,
+            "dsc": "(DLjava/util/function/BiConsumer;)Lnet/minecraft/world/GameRules$Type;",
+            "sig": "(DLjava/util/function/BiConsumer<Lnet/minecraft/server/MinecraftServer;Lnet/fabricmc/fabric/api/gamerule/v1/rule/DoubleRule;>;)Lnet/minecraft/world/GameRules$Type<Lnet/fabricmc/fabric/api/gamerule/v1/rule/DoubleRule;>;"
+          },
+          {
+            "nme": "createDoubleRule",
+            "acc": 9,
+            "dsc": "(DDDLjava/util/function/BiConsumer;)Lnet/minecraft/world/GameRules$Type;",
+            "sig": "(DDDLjava/util/function/BiConsumer<Lnet/minecraft/server/MinecraftServer;Lnet/fabricmc/fabric/api/gamerule/v1/rule/DoubleRule;>;)Lnet/minecraft/world/GameRules$Type<Lnet/fabricmc/fabric/api/gamerule/v1/rule/DoubleRule;>;"
+          },
+          {
+            "nme": "createEnumRule",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Enum;)Lnet/minecraft/world/GameRules$Type;",
+            "sig": "<E:Ljava/lang/Enum<TE;>;>(TE;)Lnet/minecraft/world/GameRules$Type<Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule<TE;>;>;"
+          },
+          {
+            "nme": "createEnumRule",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Enum;Ljava/util/function/BiConsumer;)Lnet/minecraft/world/GameRules$Type;",
+            "sig": "<E:Ljava/lang/Enum<TE;>;>(TE;Ljava/util/function/BiConsumer<Lnet/minecraft/server/MinecraftServer;Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule<TE;>;>;)Lnet/minecraft/world/GameRules$Type<Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule<TE;>;>;"
+          },
+          {
+            "nme": "createEnumRule",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Enum;[Ljava/lang/Enum;)Lnet/minecraft/world/GameRules$Type;",
+            "sig": "<E:Ljava/lang/Enum<TE;>;>(TE;[TE;)Lnet/minecraft/world/GameRules$Type<Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule<TE;>;>;"
+          },
+          {
+            "nme": "createEnumRule",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Enum;[Ljava/lang/Enum;Ljava/util/function/BiConsumer;)Lnet/minecraft/world/GameRules$Type;",
+            "sig": "<E:Ljava/lang/Enum<TE;>;>(TE;[TE;Ljava/util/function/BiConsumer<Lnet/minecraft/server/MinecraftServer;Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule<TE;>;>;)Lnet/minecraft/world/GameRules$Type<Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule<TE;>;>;"
+          },
+          {
+            "nme": "visitDouble",
+            "acc": 10,
+            "dsc": "(Lnet/minecraft/world/GameRules$Visitor;Lnet/minecraft/world/GameRules$Key;Lnet/minecraft/world/GameRules$Type;)V",
+            "sig": "(Lnet/minecraft/world/GameRules$Visitor;Lnet/minecraft/world/GameRules$Key<Lnet/fabricmc/fabric/api/gamerule/v1/rule/DoubleRule;>;Lnet/minecraft/world/GameRules$Type<Lnet/fabricmc/fabric/api/gamerule/v1/rule/DoubleRule;>;)V"
+          },
+          {
+            "nme": "visitEnum",
+            "acc": 10,
+            "dsc": "(Lnet/minecraft/world/GameRules$Visitor;Lnet/minecraft/world/GameRules$Key;Lnet/minecraft/world/GameRules$Type;)V",
+            "sig": "<E:Ljava/lang/Enum<TE;>;>(Lnet/minecraft/world/GameRules$Visitor;Lnet/minecraft/world/GameRules$Key<Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule<TE;>;>;Lnet/minecraft/world/GameRules$Type<Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule<TE;>;>;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lambda$createEnumRule$13",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Enum;[Ljava/lang/Enum;Lnet/minecraft/world/GameRules$Type;)Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule;"
+          },
+          {
+            "nme": "lambda$createEnumRule$12",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/server/MinecraftServer;Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule;)V"
+          },
+          {
+            "nme": "lambda$createEnumRule$11",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/server/MinecraftServer;Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule;)V"
+          },
+          {
+            "nme": "lambda$createDoubleRule$10",
+            "acc": 4106,
+            "dsc": "(DDDLnet/minecraft/world/GameRules$Type;)Lnet/fabricmc/fabric/api/gamerule/v1/rule/DoubleRule;"
+          },
+          {
+            "nme": "lambda$createDoubleRule$9",
+            "acc": 4106,
+            "dsc": "(DD)Lcom/mojang/brigadier/arguments/ArgumentType;"
+          },
+          {
+            "nme": "lambda$createDoubleRule$8",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/server/MinecraftServer;Lnet/fabricmc/fabric/api/gamerule/v1/rule/DoubleRule;)V"
+          },
+          {
+            "nme": "lambda$createDoubleRule$7",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/server/MinecraftServer;Lnet/fabricmc/fabric/api/gamerule/v1/rule/DoubleRule;)V"
+          },
+          {
+            "nme": "lambda$createDoubleRule$6",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/server/MinecraftServer;Lnet/fabricmc/fabric/api/gamerule/v1/rule/DoubleRule;)V"
+          },
+          {
+            "nme": "lambda$createIntRule$5",
+            "acc": 4106,
+            "dsc": "(IIILnet/minecraft/world/GameRules$Type;)Lnet/minecraft/world/GameRules$IntRule;"
+          },
+          {
+            "nme": "lambda$createIntRule$4",
+            "acc": 4106,
+            "dsc": "(II)Lcom/mojang/brigadier/arguments/ArgumentType;"
+          },
+          {
+            "nme": "lambda$createIntRule$3",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/world/GameRules$IntRule;)V"
+          },
+          {
+            "nme": "lambda$createIntRule$2",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/world/GameRules$IntRule;)V"
+          },
+          {
+            "nme": "lambda$createIntRule$1",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/world/GameRules$IntRule;)V"
+          },
+          {
+            "nme": "lambda$createBooleanRule$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/world/GameRules$BooleanRule;)V"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/api/gamerule/v1/rule/EnumRule.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/gamerule/v1/rule/EnumRule",
+        "super": "net/minecraft/world/GameRules$Rule",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 131073,
+            "dsc": "(Lnet/minecraft/world/GameRules$Type;Ljava/lang/Enum;[Ljava/lang/Enum;)V",
+            "sig": "(Lnet/minecraft/world/GameRules$Type<Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule<TE;>;>;TE;[TE;)V",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 131073,
+            "dsc": "(Lnet/minecraft/world/GameRules$Type;Ljava/lang/Enum;Ljava/util/Collection;)V",
+            "sig": "(Lnet/minecraft/world/GameRules$Type<Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule<TE;>;>;TE;Ljava/util/Collection<TE;>;)V",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "setFromArgument",
+            "acc": 4,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)V",
+            "sig": "(Lcom/mojang/brigadier/context/CommandContext<Lnet/minecraft/server/command/ServerCommandSource;>;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "deserialize",
+            "acc": 4,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "serialize",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getCommandResult",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getThis",
+            "acc": 4,
+            "dsc": "()Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule;",
+            "sig": "()Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule<TE;>;"
+          },
+          {
+            "nme": "getEnumClass",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<TE;>;"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "copy",
+            "acc": 4,
+            "dsc": "()Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule;",
+            "sig": "()Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule<TE;>;"
+          },
+          {
+            "nme": "setValue",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule;Lnet/minecraft/server/MinecraftServer;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule<TE;>;Lnet/minecraft/server/MinecraftServer;)V"
+          },
+          {
+            "nme": "get",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Enum;",
+            "sig": "()TE;"
+          },
+          {
+            "nme": "cycle",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "supports",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Enum;)Z",
+            "sig": "(TE;)Z"
+          },
+          {
+            "nme": "set",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Enum;Lnet/minecraft/server/MinecraftServer;)V",
+            "sig": "(TE;Lnet/minecraft/server/MinecraftServer;)V",
+            "exs": [
+              "java/lang/IllegalArgumentException"
+            ]
+          },
+          {
+            "nme": "setValue",
+            "acc": 4161,
+            "dsc": "(Lnet/minecraft/world/GameRules$Rule;Lnet/minecraft/server/MinecraftServer;)V"
+          },
+          {
+            "nme": "copy",
+            "acc": 4164,
+            "dsc": "()Lnet/minecraft/world/GameRules$Rule;"
+          },
+          {
+            "nme": "getThis",
+            "acc": 4164,
+            "dsc": "()Lnet/minecraft/world/GameRules$Rule;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 18,
+            "nme": "classType",
+            "dsc": "Ljava/lang/Class;",
+            "sig": "Ljava/lang/Class<TE;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "supportedValues",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<TE;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "value",
+            "dsc": "Ljava/lang/Enum;",
+            "sig": "TE;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/gamerule/GameRuleCommandAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/gamerule/GameRuleCommandAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "invokeExecuteSet",
+            "acc": 9,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContext;Lnet/minecraft/world/GameRules$Key;)I",
+            "sig": "<T:Lnet/minecraft/world/GameRules$Rule<TT;>;>(Lcom/mojang/brigadier/context/CommandContext<Lnet/minecraft/server/command/ServerCommandSource;>;Lnet/minecraft/world/GameRules$Key<TT;>;)I",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Invoker;"
+              }
+            ]
+          },
+          {
+            "nme": "invokeExecuteQuery",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/server/command/ServerCommandSource;Lnet/minecraft/world/GameRules$Key;)I",
+            "sig": "<T:Lnet/minecraft/world/GameRules$Rule<TT;>;>(Lnet/minecraft/server/command/ServerCommandSource;Lnet/minecraft/world/GameRules$Key<TT;>;)I",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Invoker;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/server/command/GameRuleCommand"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/gamerule/v1/FabricGameRuleVisitor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/gamerule/v1/FabricGameRuleVisitor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "visitDouble",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/world/GameRules$Key;Lnet/minecraft/world/GameRules$Type;)V",
+            "sig": "(Lnet/minecraft/world/GameRules$Key<Lnet/fabricmc/fabric/api/gamerule/v1/rule/DoubleRule;>;Lnet/minecraft/world/GameRules$Type<Lnet/fabricmc/fabric/api/gamerule/v1/rule/DoubleRule;>;)V"
+          },
+          {
+            "nme": "visitEnum",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/world/GameRules$Key;Lnet/minecraft/world/GameRules$Type;)V",
+            "sig": "<E:Ljava/lang/Enum<TE;>;>(Lnet/minecraft/world/GameRules$Key<Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule<TE;>;>;Lnet/minecraft/world/GameRules$Type<Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule<TE;>;>;)V"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/impl/gamerule/RuleKeyExtensions.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/impl/gamerule/RuleKeyExtensions",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "fabric_getCustomCategory",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/gamerule/v1/CustomGameRuleCategory;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "fabric_setCustomCategory",
+            "acc": 1025,
+            "dsc": "(Lnet/fabricmc/fabric/api/gamerule/v1/CustomGameRuleCategory;)V"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/impl/gamerule/widget/DoubleRuleWidget.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/gamerule/widget/DoubleRuleWidget",
+        "super": "net/minecraft/client/gui/screen/world/EditGameRulesScreen$NamedRuleWidget",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/gui/screen/world/EditGameRulesScreen;Lnet/minecraft/text/Text;Ljava/util/List;Ljava/lang/String;Lnet/fabricmc/fabric/api/gamerule/v1/rule/DoubleRule;)V",
+            "sig": "(Lnet/minecraft/client/gui/screen/world/EditGameRulesScreen;Lnet/minecraft/text/Text;Ljava/util/List<Lnet/minecraft/text/OrderedText;>;Ljava/lang/String;Lnet/fabricmc/fabric/api/gamerule/v1/rule/DoubleRule;)V"
+          },
+          {
+            "nme": "render",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/gui/DrawContext;IIIIIIIZF)V"
+          },
+          {
+            "nme": "lambda$new$0",
+            "acc": 4098,
+            "dsc": "(Lnet/fabricmc/fabric/api/gamerule/v1/rule/DoubleRule;Lnet/fabricmc/fabric/mixin/gamerule/client/EditGameRulesScreenAccessor;Ljava/lang/String;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "textFieldWidget",
+            "dsc": "Lnet/minecraft/client/gui/widget/TextFieldWidget;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/gamerule/widget/EnumRuleWidget.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/gamerule/widget/EnumRuleWidget",
+        "super": "net/minecraft/client/gui/screen/world/EditGameRulesScreen$NamedRuleWidget",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/gui/screen/world/EditGameRulesScreen;Lnet/minecraft/text/Text;Ljava/util/List;Ljava/lang/String;Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule;Ljava/lang/String;)V",
+            "sig": "(Lnet/minecraft/client/gui/screen/world/EditGameRulesScreen;Lnet/minecraft/text/Text;Ljava/util/List<Lnet/minecraft/text/OrderedText;>;Ljava/lang/String;Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule<TE;>;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "getValueText",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Enum;)Lnet/minecraft/text/Text;",
+            "sig": "(TE;)Lnet/minecraft/text/Text;"
+          },
+          {
+            "nme": "render",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/gui/DrawContext;IIIIIIIZF)V"
+          },
+          {
+            "nme": "lambda$new$0",
+            "acc": 4098,
+            "dsc": "(Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule;Lnet/minecraft/client/gui/widget/ButtonWidget;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "buttonWidget",
+            "dsc": "Lnet/minecraft/client/gui/widget/ButtonWidget;"
+          },
+          {
+            "acc": 18,
+            "nme": "rootTranslationKey",
+            "dsc": "Ljava/lang/String;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/gamerule/v1/CustomGameRuleCategory.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/gamerule/v1/CustomGameRuleCategory",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/Identifier;Lnet/minecraft/text/Text;)V"
+          },
+          {
+            "nme": "getId",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "nme": "getName",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/text/Text;"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getCategory",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/world/GameRules$Key;)Ljava/util/Optional;",
+            "sig": "<T:Lnet/minecraft/world/GameRules$Rule<TT;>;>(Lnet/minecraft/world/GameRules$Key<TT;>;)Ljava/util/Optional<Lnet/fabricmc/fabric/api/gamerule/v1/CustomGameRuleCategory;>;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "id",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "acc": 18,
+            "nme": "name",
+            "dsc": "Lnet/minecraft/text/Text;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/gamerule/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/mixin/gamerule/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/gamerule/EnumRuleType.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/gamerule/EnumRuleType",
+        "super": "net/minecraft/world/GameRules$Type",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/Function;Ljava/util/function/BiConsumer;[Ljava/lang/Enum;Lnet/minecraft/world/GameRules$Acceptor;)V",
+            "sig": "(Ljava/util/function/Function<Lnet/minecraft/world/GameRules$Type<Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule<TE;>;>;Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule<TE;>;>;Ljava/util/function/BiConsumer<Lnet/minecraft/server/MinecraftServer;Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule<TE;>;>;[TE;Lnet/minecraft/world/GameRules$Acceptor<Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule<TE;>;>;)V"
+          },
+          {
+            "nme": "register",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/builder/LiteralArgumentBuilder;Lnet/minecraft/world/GameRules$Key;)V",
+            "sig": "(Lcom/mojang/brigadier/builder/LiteralArgumentBuilder<Lnet/minecraft/server/command/ServerCommandSource;>;Lnet/minecraft/world/GameRules$Key<Lnet/fabricmc/fabric/api/gamerule/v1/rule/EnumRule<TE;>;>;)V"
+          },
+          {
+            "nme": "argument",
+            "acc": 131073,
+            "dsc": "(Ljava/lang/String;)Lcom/mojang/brigadier/builder/RequiredArgumentBuilder;",
+            "sig": "(Ljava/lang/String;)Lcom/mojang/brigadier/builder/RequiredArgumentBuilder<Lnet/minecraft/server/command/ServerCommandSource;*>;",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "lambda$register$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Enum;Lnet/minecraft/world/GameRules$Key;Lcom/mojang/brigadier/context/CommandContext;)I",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "supportedValues",
+            "dsc": "[Ljava/lang/Enum;",
+            "sig": "[TE;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/gamerule/rule/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/gamerule/rule/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/gamerule/v1/GameRuleRegistry.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/gamerule/v1/GameRuleRegistry",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "register",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Lnet/minecraft/world/GameRules$Category;Lnet/minecraft/world/GameRules$Type;)Lnet/minecraft/world/GameRules$Key;",
+            "sig": "<T:Lnet/minecraft/world/GameRules$Rule<TT;>;>(Ljava/lang/String;Lnet/minecraft/world/GameRules$Category;Lnet/minecraft/world/GameRules$Type<TT;>;)Lnet/minecraft/world/GameRules$Key<TT;>;"
+          },
+          {
+            "nme": "register",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Lnet/fabricmc/fabric/api/gamerule/v1/CustomGameRuleCategory;Lnet/minecraft/world/GameRules$Type;)Lnet/minecraft/world/GameRules$Key;",
+            "sig": "<T:Lnet/minecraft/world/GameRules$Rule<TT;>;>(Ljava/lang/String;Lnet/fabricmc/fabric/api/gamerule/v1/CustomGameRuleCategory;Lnet/minecraft/world/GameRules$Type<TT;>;)Lnet/minecraft/world/GameRules$Key<TT;>;"
+          },
+          {
+            "nme": "hasRegistration",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "lambda$hasRegistration$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;Lnet/minecraft/world/GameRules$Key;)Z"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/mixin/gamerule/GameRuleCommandVisitorMixin.class": {
+        "ver": 65,
+        "acc": 1057,
+        "nme": "net/fabricmc/fabric/mixin/gamerule/GameRuleCommandVisitorMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "onRegisterCommand",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/world/GameRules$Key;Lnet/minecraft/world/GameRules$Type;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "sig": "<T:Lnet/minecraft/world/GameRules$Rule<TT;>;>(Lnet/minecraft/world/GameRules$Key<TT;>;Lnet/minecraft/world/GameRules$Type<TT;>;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "method",
+                  [
+                    "visit(Lnet/minecraft/world/GameRules$Key;Lnet/minecraft/world/GameRules$Type;)V"
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "field_19419",
+            "dsc": "Lcom/mojang/brigadier/builder/LiteralArgumentBuilder;",
+            "sig": "Lcom/mojang/brigadier/builder/LiteralArgumentBuilder<Lnet/minecraft/server/command/ServerCommandSource;>;"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "targets",
+              [
+                "net/minecraft/server/command/GameRuleCommand$1"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/gamerule/v1/rule/DoubleRule.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/gamerule/v1/rule/DoubleRule",
+        "super": "net/minecraft/world/GameRules$Rule",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 131073,
+            "dsc": "(Lnet/minecraft/world/GameRules$Type;DDD)V",
+            "sig": "(Lnet/minecraft/world/GameRules$Type<Lnet/fabricmc/fabric/api/gamerule/v1/rule/DoubleRule;>;DDD)V",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "setFromArgument",
+            "acc": 4,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)V",
+            "sig": "(Lcom/mojang/brigadier/context/CommandContext<Lnet/minecraft/server/command/ServerCommandSource;>;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "deserialize",
+            "acc": 4,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "serialize",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getCommandResult",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getThis",
+            "acc": 4,
+            "dsc": "()Lnet/fabricmc/fabric/api/gamerule/v1/rule/DoubleRule;"
+          },
+          {
+            "nme": "copy",
+            "acc": 4,
+            "dsc": "()Lnet/fabricmc/fabric/api/gamerule/v1/rule/DoubleRule;"
+          },
+          {
+            "nme": "setValue",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/gamerule/v1/rule/DoubleRule;Lnet/minecraft/server/MinecraftServer;)V"
+          },
+          {
+            "nme": "validate",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "get",
+            "acc": 1,
+            "dsc": "()D"
+          },
+          {
+            "nme": "inBounds",
+            "acc": 2,
+            "dsc": "(D)Z"
+          },
+          {
+            "nme": "setValue",
+            "acc": 4161,
+            "dsc": "(Lnet/minecraft/world/GameRules$Rule;Lnet/minecraft/server/MinecraftServer;)V"
+          },
+          {
+            "nme": "copy",
+            "acc": 4164,
+            "dsc": "()Lnet/minecraft/world/GameRules$Rule;"
+          },
+          {
+            "nme": "getThis",
+            "acc": 4164,
+            "dsc": "()Lnet/minecraft/world/GameRules$Rule;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 18,
+            "nme": "minimumValue",
+            "dsc": "D"
+          },
+          {
+            "acc": 18,
+            "nme": "maximumValue",
+            "dsc": "D"
+          },
+          {
+            "acc": 2,
+            "nme": "value",
+            "dsc": "D"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/gamerule/GameRulesBooleanRuleAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/gamerule/GameRulesBooleanRuleAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "invokeCreate",
+            "acc": 9,
+            "dsc": "(ZLjava/util/function/BiConsumer;)Lnet/minecraft/world/GameRules$Type;",
+            "sig": "(ZLjava/util/function/BiConsumer<Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/world/GameRules$BooleanRule;>;)Lnet/minecraft/world/GameRules$Type<Lnet/minecraft/world/GameRules$BooleanRule;>;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Invoker;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/world/GameRules$BooleanRule"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/gamerule/GameRulesIntRuleAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/gamerule/GameRulesIntRuleAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getValue",
+            "acc": 1025,
+            "dsc": "()I",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;"
+              }
+            ]
+          },
+          {
+            "nme": "setValue",
+            "acc": 1025,
+            "dsc": "(I)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/world/GameRules$IntRule"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/gamerule/GameRulesKeyMixin.class": {
+        "ver": 65,
+        "acc": 1057,
+        "nme": "net/fabricmc/fabric/mixin/gamerule/GameRulesKeyMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "fabric_getCustomCategory",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/gamerule/v1/CustomGameRuleCategory;"
+          },
+          {
+            "nme": "fabric_setCustomCategory",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/gamerule/v1/CustomGameRuleCategory;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "customCategory",
+            "dsc": "Lnet/fabricmc/fabric/api/gamerule/v1/CustomGameRuleCategory;"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/world/GameRules$Key"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/gamerule/client/EditGameRulesScreenAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/gamerule/client/EditGameRulesScreenAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "callMarkValid",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/gui/screen/world/EditGameRulesScreen$AbstractRuleWidget;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Invoker;",
+                "vals": [
+                  "value",
+                  "markValid"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "callMarkInvalid",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/gui/screen/world/EditGameRulesScreen$AbstractRuleWidget;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Invoker;",
+                "vals": [
+                  "value",
+                  "markInvalid"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/gui/screen/world/EditGameRulesScreen"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/gamerule/v1/rule/ValidateableRule.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/gamerule/v1/rule/ValidateableRule",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "validate",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)Z"
+          }
+        ],
+        "flds": []
+      }
+    }
+  }
+}

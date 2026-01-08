@@ -1,0 +1,1468 @@
+{
+  "md5": "0d626ccbb1e0ac40580fc71617a5a664",
+  "sha2": "81082738f125df8ec9753352b8fcd8a584983623",
+  "sha256": "5004a1fdde8400f00353fc65bee029f0eef1dab048fe4434e2029f0a7cabe690",
+  "contents": {
+    "classes": {
+      "net/fabricmc/fabric/impl/lookup/entity/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/lookup/entity/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup$BlockApiProvider.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup$BlockApiProvider",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "find",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Lnet/minecraft/block/entity/BlockEntity;Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Lnet/minecraft/block/entity/BlockEntity;TC;)TA;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/lookup/item/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/lookup/item/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup$BlockEntityApiProvider.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup$BlockEntityApiProvider",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "find",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/block/entity/BlockEntity;Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(Lnet/minecraft/block/entity/BlockEntity;TC;)TA;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/lookup/block/BlockApiCacheImpl.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/lookup/block/BlockApiCacheImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/impl/lookup/block/BlockApiLookupImpl;Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/util/math/BlockPos;)V",
+            "sig": "(Lnet/fabricmc/fabric/impl/lookup/block/BlockApiLookupImpl<TA;TC;>;Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/util/math/BlockPos;)V"
+          },
+          {
+            "nme": "invalidate",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "find",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/block/BlockState;Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(Lnet/minecraft/block/BlockState;TC;)TA;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "getBlockEntity",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/block/entity/BlockEntity;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "getLookup",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/impl/lookup/block/BlockApiLookupImpl;",
+            "sig": "()Lnet/fabricmc/fabric/impl/lookup/block/BlockApiLookupImpl<TA;TC;>;"
+          },
+          {
+            "nme": "getWorld",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/server/world/ServerWorld;"
+          },
+          {
+            "nme": "getPos",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/util/math/BlockPos;"
+          },
+          {
+            "nme": "getLookup",
+            "acc": 4161,
+            "dsc": "()Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup;"
+          },
+          {
+            "nme": "lambda$static$1",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/block/entity/BlockEntity;Lnet/minecraft/server/world/ServerWorld;)V"
+          },
+          {
+            "nme": "lambda$static$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/block/entity/BlockEntity;Lnet/minecraft/server/world/ServerWorld;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "lookup",
+            "dsc": "Lnet/fabricmc/fabric/impl/lookup/block/BlockApiLookupImpl;",
+            "sig": "Lnet/fabricmc/fabric/impl/lookup/block/BlockApiLookupImpl<TA;TC;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "world",
+            "dsc": "Lnet/minecraft/server/world/ServerWorld;"
+          },
+          {
+            "acc": 18,
+            "nme": "pos",
+            "dsc": "Lnet/minecraft/util/math/BlockPos;"
+          },
+          {
+            "acc": 2,
+            "nme": "blockEntityCacheValid",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "cachedBlockEntity",
+            "dsc": "Lnet/minecraft/block/entity/BlockEntity;"
+          },
+          {
+            "acc": 2,
+            "nme": "lastState",
+            "dsc": "Lnet/minecraft/block/BlockState;"
+          },
+          {
+            "acc": 2,
+            "nme": "cachedProvider",
+            "dsc": "Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup$BlockApiProvider;",
+            "sig": "Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup$BlockApiProvider<TA;TC;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/lookup/custom/ApiProviderHashMap.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/lookup/custom/ApiProviderHashMap",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "get",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(TK;)TV;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "putIfAbsent",
+            "acc": 33,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(TK;TV;)TV;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 66,
+            "nme": "lookups",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<TK;TV;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/lookup/custom/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/lookup/custom/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/lookup/v1/custom/ApiProviderMap.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/lookup/v1/custom/ApiProviderMap",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "()Lnet/fabricmc/fabric/api/lookup/v1/custom/ApiProviderMap;",
+            "sig": "<K:Ljava/lang/Object;V:Ljava/lang/Object;>()Lnet/fabricmc/fabric/api/lookup/v1/custom/ApiProviderMap<TK;TV;>;"
+          },
+          {
+            "nme": "get",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(TK;)TV;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "putIfAbsent",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(TK;TV;)TV;"
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/lookup/v1/item/ItemApiLookup.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/lookup/v1/item/ItemApiLookup",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "get",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/util/Identifier;Ljava/lang/Class;Ljava/lang/Class;)Lnet/fabricmc/fabric/api/lookup/v1/item/ItemApiLookup;",
+            "sig": "<A:Ljava/lang/Object;C:Ljava/lang/Object;>(Lnet/minecraft/util/Identifier;Ljava/lang/Class<TA;>;Ljava/lang/Class<TC;>;)Lnet/fabricmc/fabric/api/lookup/v1/item/ItemApiLookup<TA;TC;>;"
+          },
+          {
+            "nme": "find",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/item/ItemStack;Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(Lnet/minecraft/item/ItemStack;TC;)TA;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "registerSelf",
+            "acc": 1153,
+            "dsc": "([Lnet/minecraft/item/ItemConvertible;)V"
+          },
+          {
+            "nme": "registerForItems",
+            "acc": 1153,
+            "dsc": "(Lnet/fabricmc/fabric/api/lookup/v1/item/ItemApiLookup$ItemApiProvider;[Lnet/minecraft/item/ItemConvertible;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/lookup/v1/item/ItemApiLookup$ItemApiProvider<TA;TC;>;[Lnet/minecraft/item/ItemConvertible;)V"
+          },
+          {
+            "nme": "registerFallback",
+            "acc": 1025,
+            "dsc": "(Lnet/fabricmc/fabric/api/lookup/v1/item/ItemApiLookup$ItemApiProvider;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/lookup/v1/item/ItemApiLookup$ItemApiProvider<TA;TC;>;)V"
+          },
+          {
+            "nme": "getId",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "nme": "apiClass",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<TA;>;"
+          },
+          {
+            "nme": "contextClass",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<TC;>;"
+          },
+          {
+            "nme": "getProvider",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/item/Item;)Lnet/fabricmc/fabric/api/lookup/v1/item/ItemApiLookup$ItemApiProvider;",
+            "sig": "(Lnet/minecraft/item/Item;)Lnet/fabricmc/fabric/api/lookup/v1/item/ItemApiLookup$ItemApiProvider<TA;TC;>;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/lookup/BlockEntityTypeAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/lookup/BlockEntityTypeAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getBlocks",
+            "acc": 1025,
+            "dsc": "()Ljava/util/Set;",
+            "sig": "()Ljava/util/Set<Lnet/minecraft/block/Block;>;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;",
+                "vals": [
+                  "value",
+                  "blocks"
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/block/entity/BlockEntityType"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/lookup/entity/EntityApiLookupImpl.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/lookup/entity/EntityApiLookupImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/util/Identifier;Ljava/lang/Class;Ljava/lang/Class;)V",
+            "sig": "(Lnet/minecraft/util/Identifier;Ljava/lang/Class<TA;>;Ljava/lang/Class<TC;>;)V"
+          },
+          {
+            "nme": "get",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/util/Identifier;Ljava/lang/Class;Ljava/lang/Class;)Lnet/fabricmc/fabric/api/lookup/v1/entity/EntityApiLookup;",
+            "sig": "<A:Ljava/lang/Object;C:Ljava/lang/Object;>(Lnet/minecraft/util/Identifier;Ljava/lang/Class<TA;>;Ljava/lang/Class<TC;>;)Lnet/fabricmc/fabric/api/lookup/v1/entity/EntityApiLookup<TA;TC;>;"
+          },
+          {
+            "nme": "checkSelfImplementingTypes",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/server/MinecraftServer;)V"
+          },
+          {
+            "nme": "find",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/entity/Entity;Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(Lnet/minecraft/entity/Entity;TC;)TA;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "registerSelf",
+            "acc": 129,
+            "dsc": "([Lnet/minecraft/entity/EntityType;)V",
+            "sig": "([Lnet/minecraft/entity/EntityType<*>;)V"
+          },
+          {
+            "nme": "registerForTypes",
+            "acc": 129,
+            "dsc": "(Lnet/fabricmc/fabric/api/lookup/v1/entity/EntityApiLookup$EntityApiProvider;[Lnet/minecraft/entity/EntityType;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/lookup/v1/entity/EntityApiLookup$EntityApiProvider<TA;TC;>;[Lnet/minecraft/entity/EntityType<*>;)V"
+          },
+          {
+            "nme": "registerFallback",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/lookup/v1/entity/EntityApiLookup$EntityApiProvider;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/lookup/v1/entity/EntityApiLookup$EntityApiProvider<TA;TC;>;)V"
+          },
+          {
+            "nme": "getId",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "nme": "apiClass",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<TA;>;"
+          },
+          {
+            "nme": "contextClass",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<TC;>;"
+          },
+          {
+            "nme": "getProvider",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/entity/EntityType;)Lnet/fabricmc/fabric/api/lookup/v1/entity/EntityApiLookup$EntityApiProvider;",
+            "sig": "(Lnet/minecraft/entity/EntityType<*>;)Lnet/fabricmc/fabric/api/lookup/v1/entity/EntityApiLookup$EntityApiProvider<TA;TC;>;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "lambda$registerSelf$2",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/entity/Entity;Ljava/lang/Object;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "lambda$registerSelf$1",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Class;)Ljava/util/Set;"
+          },
+          {
+            "nme": "lambda$checkSelfImplementingTypes$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/server/MinecraftServer;Ljava/lang/Class;Ljava/util/Set;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 26,
+            "nme": "LOOKUPS",
+            "dsc": "Lnet/fabricmc/fabric/api/lookup/v1/custom/ApiLookupMap;",
+            "sig": "Lnet/fabricmc/fabric/api/lookup/v1/custom/ApiLookupMap<Lnet/fabricmc/fabric/api/lookup/v1/entity/EntityApiLookup<**>;>;"
+          },
+          {
+            "acc": 26,
+            "nme": "REGISTERED_SELVES",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/Class<*>;Ljava/util/Set<Lnet/minecraft/entity/EntityType<*>;>;>;"
+          },
+          {
+            "acc": 10,
+            "nme": "checkEntityLookup",
+            "dsc": "Z"
+          },
+          {
+            "acc": 18,
+            "nme": "identifier",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "acc": 18,
+            "nme": "apiClass",
+            "dsc": "Ljava/lang/Class;",
+            "sig": "Ljava/lang/Class<TA;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "contextClass",
+            "dsc": "Ljava/lang/Class;",
+            "sig": "Ljava/lang/Class<TC;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "providerMap",
+            "dsc": "Lnet/fabricmc/fabric/api/lookup/v1/custom/ApiProviderMap;",
+            "sig": "Lnet/fabricmc/fabric/api/lookup/v1/custom/ApiProviderMap<Lnet/minecraft/entity/EntityType<*>;Lnet/fabricmc/fabric/api/lookup/v1/entity/EntityApiLookup$EntityApiProvider<TA;TC;>;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "fallbackProviders",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lnet/fabricmc/fabric/api/lookup/v1/entity/EntityApiLookup$EntityApiProvider<TA;TC;>;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/lookup/custom/ApiLookupMapImpl.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/lookup/custom/ApiLookupMapImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/lookup/v1/custom/ApiLookupMap$LookupConstructor;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/lookup/v1/custom/ApiLookupMap$LookupConstructor<TL;>;)V"
+          },
+          {
+            "nme": "getLookup",
+            "acc": 33,
+            "dsc": "(Lnet/minecraft/util/Identifier;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/Object;",
+            "sig": "(Lnet/minecraft/util/Identifier;Ljava/lang/Class<*>;Ljava/lang/Class<*>;)TL;"
+          },
+          {
+            "nme": "iterator",
+            "acc": 33,
+            "dsc": "()Ljava/util/Iterator;",
+            "sig": "()Ljava/util/Iterator<TL;>;"
+          },
+          {
+            "nme": "lambda$iterator$1",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/impl/lookup/custom/ApiLookupMapImpl$StoredLookup;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "lambda$getLookup$0",
+            "acc": 4098,
+            "dsc": "(Ljava/lang/Class;Ljava/lang/Class;Lnet/minecraft/util/Identifier;)Lnet/fabricmc/fabric/impl/lookup/custom/ApiLookupMapImpl$StoredLookup;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "lookups",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/util/Identifier;Lnet/fabricmc/fabric/impl/lookup/custom/ApiLookupMapImpl$StoredLookup<TL;>;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "lookupConstructor",
+            "dsc": "Lnet/fabricmc/fabric/api/lookup/v1/custom/ApiLookupMap$LookupConstructor;",
+            "sig": "Lnet/fabricmc/fabric/api/lookup/v1/custom/ApiLookupMap$LookupConstructor<TL;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/lookup/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/mixin/lookup/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/lookup/block/BlockApiLookupImpl.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/lookup/block/BlockApiLookupImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "get",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/util/Identifier;Ljava/lang/Class;Ljava/lang/Class;)Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup;",
+            "sig": "<A:Ljava/lang/Object;C:Ljava/lang/Object;>(Lnet/minecraft/util/Identifier;Ljava/lang/Class<TA;>;Ljava/lang/Class<TC;>;)Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup<TA;TC;>;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/util/Identifier;Ljava/lang/Class;Ljava/lang/Class;)V",
+            "sig": "(Lnet/minecraft/util/Identifier;Ljava/lang/Class<*>;Ljava/lang/Class<*>;)V"
+          },
+          {
+            "nme": "find",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Lnet/minecraft/block/entity/BlockEntity;Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Lnet/minecraft/block/entity/BlockEntity;TC;)TA;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "registerSelf",
+            "acc": 129,
+            "dsc": "([Lnet/minecraft/block/entity/BlockEntityType;)V",
+            "sig": "([Lnet/minecraft/block/entity/BlockEntityType<*>;)V"
+          },
+          {
+            "nme": "registerForBlocks",
+            "acc": 129,
+            "dsc": "(Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup$BlockApiProvider;[Lnet/minecraft/block/Block;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup$BlockApiProvider<TA;TC;>;[Lnet/minecraft/block/Block;)V"
+          },
+          {
+            "nme": "registerForBlockEntities",
+            "acc": 129,
+            "dsc": "(Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup$BlockEntityApiProvider;[Lnet/minecraft/block/entity/BlockEntityType;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup$BlockEntityApiProvider<TA;TC;>;[Lnet/minecraft/block/entity/BlockEntityType<*>;)V"
+          },
+          {
+            "nme": "registerFallback",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup$BlockApiProvider;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup$BlockApiProvider<TA;TC;>;)V"
+          },
+          {
+            "nme": "getId",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "nme": "apiClass",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<TA;>;"
+          },
+          {
+            "nme": "contextClass",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<TC;>;"
+          },
+          {
+            "nme": "getProvider",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/block/Block;)Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup$BlockApiProvider;",
+            "sig": "(Lnet/minecraft/block/Block;)Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup$BlockApiProvider<TA;TC;>;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "getFallbackProviders",
+            "acc": 1,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup$BlockApiProvider<TA;TC;>;>;"
+          },
+          {
+            "nme": "lambda$registerForBlockEntities$1",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/block/entity/BlockEntityType;Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup$BlockEntityApiProvider;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Lnet/minecraft/block/entity/BlockEntity;Ljava/lang/Object;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "lambda$registerSelf$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/block/entity/BlockEntity;Ljava/lang/Object;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 26,
+            "nme": "LOOKUPS",
+            "dsc": "Lnet/fabricmc/fabric/api/lookup/v1/custom/ApiLookupMap;",
+            "sig": "Lnet/fabricmc/fabric/api/lookup/v1/custom/ApiLookupMap<Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup<**>;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "identifier",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "acc": 18,
+            "nme": "apiClass",
+            "dsc": "Ljava/lang/Class;",
+            "sig": "Ljava/lang/Class<TA;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "contextClass",
+            "dsc": "Ljava/lang/Class;",
+            "sig": "Ljava/lang/Class<TC;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "providerMap",
+            "dsc": "Lnet/fabricmc/fabric/api/lookup/v1/custom/ApiProviderMap;",
+            "sig": "Lnet/fabricmc/fabric/api/lookup/v1/custom/ApiProviderMap<Lnet/minecraft/block/Block;Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup$BlockApiProvider<TA;TC;>;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "fallbackProviders",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup$BlockApiProvider<TA;TC;>;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/lookup/ApiLookupImpl.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/lookup/ApiLookupImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "onInitialize",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/impl/lookup/item/ItemApiLookupImpl.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/lookup/item/ItemApiLookupImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "get",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/util/Identifier;Ljava/lang/Class;Ljava/lang/Class;)Lnet/fabricmc/fabric/api/lookup/v1/item/ItemApiLookup;",
+            "sig": "<A:Ljava/lang/Object;C:Ljava/lang/Object;>(Lnet/minecraft/util/Identifier;Ljava/lang/Class<TA;>;Ljava/lang/Class<TC;>;)Lnet/fabricmc/fabric/api/lookup/v1/item/ItemApiLookup<TA;TC;>;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/util/Identifier;Ljava/lang/Class;Ljava/lang/Class;)V",
+            "sig": "(Lnet/minecraft/util/Identifier;Ljava/lang/Class<*>;Ljava/lang/Class<*>;)V"
+          },
+          {
+            "nme": "find",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/item/ItemStack;Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(Lnet/minecraft/item/ItemStack;TC;)TA;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "registerSelf",
+            "acc": 129,
+            "dsc": "([Lnet/minecraft/item/ItemConvertible;)V"
+          },
+          {
+            "nme": "registerForItems",
+            "acc": 129,
+            "dsc": "(Lnet/fabricmc/fabric/api/lookup/v1/item/ItemApiLookup$ItemApiProvider;[Lnet/minecraft/item/ItemConvertible;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/lookup/v1/item/ItemApiLookup$ItemApiProvider<TA;TC;>;[Lnet/minecraft/item/ItemConvertible;)V"
+          },
+          {
+            "nme": "registerFallback",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/lookup/v1/item/ItemApiLookup$ItemApiProvider;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/lookup/v1/item/ItemApiLookup$ItemApiProvider<TA;TC;>;)V"
+          },
+          {
+            "nme": "getId",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "nme": "apiClass",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<TA;>;"
+          },
+          {
+            "nme": "contextClass",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<TC;>;"
+          },
+          {
+            "nme": "getProvider",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/item/Item;)Lnet/fabricmc/fabric/api/lookup/v1/item/ItemApiLookup$ItemApiProvider;",
+            "sig": "(Lnet/minecraft/item/Item;)Lnet/fabricmc/fabric/api/lookup/v1/item/ItemApiLookup$ItemApiProvider<TA;TC;>;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "lambda$registerSelf$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/item/ItemStack;Ljava/lang/Object;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 26,
+            "nme": "LOOKUPS",
+            "dsc": "Lnet/fabricmc/fabric/api/lookup/v1/custom/ApiLookupMap;",
+            "sig": "Lnet/fabricmc/fabric/api/lookup/v1/custom/ApiLookupMap<Lnet/fabricmc/fabric/api/lookup/v1/item/ItemApiLookup<**>;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "identifier",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "acc": 18,
+            "nme": "apiClass",
+            "dsc": "Ljava/lang/Class;",
+            "sig": "Ljava/lang/Class<TA;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "contextClass",
+            "dsc": "Ljava/lang/Class;",
+            "sig": "Ljava/lang/Class<TC;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "providerMap",
+            "dsc": "Lnet/fabricmc/fabric/api/lookup/v1/custom/ApiProviderMap;",
+            "sig": "Lnet/fabricmc/fabric/api/lookup/v1/custom/ApiProviderMap<Lnet/minecraft/item/Item;Lnet/fabricmc/fabric/api/lookup/v1/item/ItemApiLookup$ItemApiProvider<TA;TC;>;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "fallbackProviders",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lnet/fabricmc/fabric/api/lookup/v1/item/ItemApiLookup$ItemApiProvider<TA;TC;>;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/lookup/v1/custom/ApiLookupMap.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/lookup/v1/custom/ApiLookupMap",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "(Lnet/fabricmc/fabric/api/lookup/v1/custom/ApiLookupMap$LookupConstructor;)Lnet/fabricmc/fabric/api/lookup/v1/custom/ApiLookupMap;",
+            "sig": "<L:Ljava/lang/Object;>(Lnet/fabricmc/fabric/api/lookup/v1/custom/ApiLookupMap$LookupConstructor<TL;>;)Lnet/fabricmc/fabric/api/lookup/v1/custom/ApiLookupMap<TL;>;"
+          },
+          {
+            "nme": "getLookup",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/util/Identifier;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/Object;",
+            "sig": "(Lnet/minecraft/util/Identifier;Ljava/lang/Class<*>;Ljava/lang/Class<*>;)TL;"
+          },
+          {
+            "nme": "create",
+            "acc": 131081,
+            "dsc": "(Lnet/fabricmc/fabric/api/lookup/v1/custom/ApiLookupMap$LookupFactory;)Lnet/fabricmc/fabric/api/lookup/v1/custom/ApiLookupMap;",
+            "sig": "<L:Ljava/lang/Object;>(Lnet/fabricmc/fabric/api/lookup/v1/custom/ApiLookupMap$LookupFactory<TL;>;)Lnet/fabricmc/fabric/api/lookup/v1/custom/ApiLookupMap<TL;>;",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;",
+                "vals": [
+                  "forRemoval",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "lambda$create$0",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/api/lookup/v1/custom/ApiLookupMap$LookupFactory;Lnet/minecraft/util/Identifier;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/Object;"
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/lookup/v1/custom/ApiLookupMap$LookupFactory.class": {
+        "ver": 65,
+        "acc": 132609,
+        "nme": "net/fabricmc/fabric/api/lookup/v1/custom/ApiLookupMap$LookupFactory",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "get",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/Object;",
+            "sig": "(Ljava/lang/Class<*>;Ljava/lang/Class<*>;)TL;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/Deprecated;",
+            "vals": [
+              "forRemoval",
+              true
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/lookup/custom/ApiLookupMapImpl$StoredLookup.class": {
+        "ver": 65,
+        "acc": 48,
+        "nme": "net/fabricmc/fabric/impl/lookup/custom/ApiLookupMapImpl$StoredLookup",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/Class;)V",
+            "sig": "(TL;Ljava/lang/Class<*>;Ljava/lang/Class<*>;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16,
+            "nme": "lookup",
+            "dsc": "Ljava/lang/Object;",
+            "sig": "TL;"
+          },
+          {
+            "acc": 16,
+            "nme": "apiClass",
+            "dsc": "Ljava/lang/Class;",
+            "sig": "Ljava/lang/Class<*>;"
+          },
+          {
+            "acc": 16,
+            "nme": "contextClass",
+            "dsc": "Ljava/lang/Class;",
+            "sig": "Ljava/lang/Class<*>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/lookup/v1/block/BlockApiCache.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/lookup/v1/block/BlockApiCache",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "find",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(TC;)TA;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "find",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/block/BlockState;Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(Lnet/minecraft/block/BlockState;TC;)TA;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "getBlockEntity",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/block/entity/BlockEntity;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "getLookup",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup;",
+            "sig": "()Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup<TA;TC;>;"
+          },
+          {
+            "nme": "getWorld",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/server/world/ServerWorld;"
+          },
+          {
+            "nme": "getPos",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/util/math/BlockPos;"
+          },
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "(Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup;Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/util/math/BlockPos;)Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiCache;",
+            "sig": "<A:Ljava/lang/Object;C:Ljava/lang/Object;>(Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup<TA;TC;>;Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/util/math/BlockPos;)Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiCache<TA;TC;>;"
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/lookup/v1/entity/EntityApiLookup$EntityApiProvider.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/lookup/v1/entity/EntityApiLookup$EntityApiProvider",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "find",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/entity/Entity;Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(Lnet/minecraft/entity/Entity;TC;)TA;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/api/lookup/v1/entity/EntityApiLookup.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/lookup/v1/entity/EntityApiLookup",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "get",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/util/Identifier;Ljava/lang/Class;Ljava/lang/Class;)Lnet/fabricmc/fabric/api/lookup/v1/entity/EntityApiLookup;",
+            "sig": "<A:Ljava/lang/Object;C:Ljava/lang/Object;>(Lnet/minecraft/util/Identifier;Ljava/lang/Class<TA;>;Ljava/lang/Class<TC;>;)Lnet/fabricmc/fabric/api/lookup/v1/entity/EntityApiLookup<TA;TC;>;"
+          },
+          {
+            "nme": "find",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/entity/Entity;Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(Lnet/minecraft/entity/Entity;TC;)TA;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "registerSelf",
+            "acc": 1153,
+            "dsc": "([Lnet/minecraft/entity/EntityType;)V",
+            "sig": "([Lnet/minecraft/entity/EntityType<*>;)V"
+          },
+          {
+            "nme": "registerForType",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/BiFunction;Lnet/minecraft/entity/EntityType;)V",
+            "sig": "<T:Lnet/minecraft/entity/Entity;>(Ljava/util/function/BiFunction<TT;TC;TA;>;Lnet/minecraft/entity/EntityType<TT;>;)V"
+          },
+          {
+            "nme": "registerForTypes",
+            "acc": 1153,
+            "dsc": "(Lnet/fabricmc/fabric/api/lookup/v1/entity/EntityApiLookup$EntityApiProvider;[Lnet/minecraft/entity/EntityType;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/lookup/v1/entity/EntityApiLookup$EntityApiProvider<TA;TC;>;[Lnet/minecraft/entity/EntityType<*>;)V"
+          },
+          {
+            "nme": "registerFallback",
+            "acc": 1025,
+            "dsc": "(Lnet/fabricmc/fabric/api/lookup/v1/entity/EntityApiLookup$EntityApiProvider;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/lookup/v1/entity/EntityApiLookup$EntityApiProvider<TA;TC;>;)V"
+          },
+          {
+            "nme": "getId",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "nme": "apiClass",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<TA;>;"
+          },
+          {
+            "nme": "contextClass",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<TC;>;"
+          },
+          {
+            "nme": "getProvider",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/entity/EntityType;)Lnet/fabricmc/fabric/api/lookup/v1/entity/EntityApiLookup$EntityApiProvider;",
+            "sig": "(Lnet/minecraft/entity/EntityType<*>;)Lnet/fabricmc/fabric/api/lookup/v1/entity/EntityApiLookup$EntityApiProvider<TA;TC;>;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "lambda$registerForType$0",
+            "acc": 4106,
+            "dsc": "(Ljava/util/function/BiFunction;Lnet/minecraft/entity/Entity;Ljava/lang/Object;)Ljava/lang/Object;"
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/lookup/ServerWorldMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/lookup/ServerWorldMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "fabric_registerCache",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/math/BlockPos;Lnet/fabricmc/fabric/impl/lookup/block/BlockApiCacheImpl;)V",
+            "sig": "(Lnet/minecraft/util/math/BlockPos;Lnet/fabricmc/fabric/impl/lookup/block/BlockApiCacheImpl<**>;)V"
+          },
+          {
+            "nme": "fabric_invalidateCache",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/math/BlockPos;)V"
+          },
+          {
+            "nme": "lambda$fabric_invalidateCache$5",
+            "acc": 4106,
+            "dsc": "(Ljava/util/Map$Entry;)Z"
+          },
+          {
+            "nme": "lambda$fabric_invalidateCache$4",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/ref/WeakReference;)Z"
+          },
+          {
+            "nme": "lambda$fabric_invalidateCache$3",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/ref/WeakReference;)V"
+          },
+          {
+            "nme": "lambda$fabric_invalidateCache$2",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/ref/WeakReference;)Z"
+          },
+          {
+            "nme": "lambda$fabric_registerCache$1",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/ref/WeakReference;)Z"
+          },
+          {
+            "nme": "lambda$fabric_registerCache$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/util/math/BlockPos;)Ljava/util/List;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "apiLookupCaches",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/util/math/BlockPos;Ljava/util/List<Ljava/lang/ref/WeakReference<Lnet/fabricmc/fabric/impl/lookup/block/BlockApiCacheImpl<**>;>;>;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "apiLookupAccessesWithoutCleanup",
+            "dsc": "I"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/server/world/ServerWorld"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/lookup/v1/item/ItemApiLookup$ItemApiProvider.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/lookup/v1/item/ItemApiLookup$ItemApiProvider",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "find",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/item/ItemStack;Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(Lnet/minecraft/item/ItemStack;TC;)TA;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/lookup/block/ServerWorldCache.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/impl/lookup/block/ServerWorldCache",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "fabric_registerCache",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/util/math/BlockPos;Lnet/fabricmc/fabric/impl/lookup/block/BlockApiCacheImpl;)V",
+            "sig": "(Lnet/minecraft/util/math/BlockPos;Lnet/fabricmc/fabric/impl/lookup/block/BlockApiCacheImpl<**>;)V"
+          },
+          {
+            "nme": "fabric_invalidateCache",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/util/math/BlockPos;)V"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "get",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/util/Identifier;Ljava/lang/Class;Ljava/lang/Class;)Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup;",
+            "sig": "<A:Ljava/lang/Object;C:Ljava/lang/Object;>(Lnet/minecraft/util/Identifier;Ljava/lang/Class<TA;>;Ljava/lang/Class<TC;>;)Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup<TA;TC;>;"
+          },
+          {
+            "nme": "find",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;TC;)TA;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "find",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Lnet/minecraft/block/entity/BlockEntity;Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Lnet/minecraft/block/entity/BlockEntity;TC;)TA;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "registerSelf",
+            "acc": 1153,
+            "dsc": "([Lnet/minecraft/block/entity/BlockEntityType;)V",
+            "sig": "([Lnet/minecraft/block/entity/BlockEntityType<*>;)V"
+          },
+          {
+            "nme": "registerForBlocks",
+            "acc": 1153,
+            "dsc": "(Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup$BlockApiProvider;[Lnet/minecraft/block/Block;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup$BlockApiProvider<TA;TC;>;[Lnet/minecraft/block/Block;)V"
+          },
+          {
+            "nme": "registerForBlockEntity",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/BiFunction;Lnet/minecraft/block/entity/BlockEntityType;)V",
+            "sig": "<T:Lnet/minecraft/block/entity/BlockEntity;>(Ljava/util/function/BiFunction<-TT;TC;TA;>;Lnet/minecraft/block/entity/BlockEntityType<TT;>;)V"
+          },
+          {
+            "nme": "registerForBlockEntities",
+            "acc": 1153,
+            "dsc": "(Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup$BlockEntityApiProvider;[Lnet/minecraft/block/entity/BlockEntityType;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup$BlockEntityApiProvider<TA;TC;>;[Lnet/minecraft/block/entity/BlockEntityType<*>;)V"
+          },
+          {
+            "nme": "registerFallback",
+            "acc": 1025,
+            "dsc": "(Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup$BlockApiProvider;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup$BlockApiProvider<TA;TC;>;)V"
+          },
+          {
+            "nme": "getId",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "nme": "apiClass",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<TA;>;"
+          },
+          {
+            "nme": "contextClass",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<TC;>;"
+          },
+          {
+            "nme": "getProvider",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/block/Block;)Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup$BlockApiProvider;",
+            "sig": "(Lnet/minecraft/block/Block;)Lnet/fabricmc/fabric/api/lookup/v1/block/BlockApiLookup$BlockApiProvider<TA;TC;>;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "lambda$registerForBlockEntity$0",
+            "acc": 4106,
+            "dsc": "(Ljava/util/function/BiFunction;Lnet/minecraft/block/entity/BlockEntity;Ljava/lang/Object;)Ljava/lang/Object;"
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/lookup/block/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/lookup/block/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/lookup/v1/custom/ApiLookupMap$LookupConstructor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/lookup/v1/custom/ApiLookupMap$LookupConstructor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "get",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/util/Identifier;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/Object;",
+            "sig": "(Lnet/minecraft/util/Identifier;Ljava/lang/Class<*>;Ljava/lang/Class<*>;)TL;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/lookup/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/lookup/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      }
+    }
+  }
+}

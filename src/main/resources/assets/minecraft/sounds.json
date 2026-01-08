@@ -1,0 +1,83 @@
+{
+  "entity.ender_dragon.growl": {
+    "sounds": [
+      {
+        "name": "entity/enderdragon/growl1",
+        "volume": 2.5,
+        "pitch": 0.8
+      },
+      {
+        "name": "entity/enderdragon/growl2",
+        "volume": 2.5,
+        "pitch": 0.8
+      },
+      {
+        "name": "entity/enderdragon/growl3",
+        "volume": 2.5,
+        "pitch": 0.8
+      },
+      {
+        "name": "entity/enderdragon/growl4",
+        "volume": 2.5,
+        "pitch": 0.8
+      }
+    ],
+    "subtitle": "subtitles.entity.ender_dragon.growl"
+  },
+  "entity.ender_dragon.hurt": {
+    "sounds": [
+      {
+        "name": "entity/enderdragon/hurt1",
+        "volume": 2.5
+      },
+      {
+        "name": "entity/enderdragon/hurt2",
+        "volume": 2.5
+      },
+      {
+        "name": "entity/enderdragon/hurt3",
+        "volume": 2.5
+      }
+    ],
+    "subtitle": "subtitles.entity.ender_dragon.hurt"
+  },
+  "entity.ender_dragon.death": {
+    "sounds": [
+      {
+        "name": "entity/enderdragon/death",
+        "volume": 3.5,
+        "stream": true
+      },
+      {
+        "name": "entity/enderdragon/death",
+        "volume": 3.5,
+        "stream": true
+      },
+      {
+        "name": "entity/enderdragon/death",
+        "volume": 3.5,
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.entity.ender_dragon.death"
+  },
+  "entity.ender_dragon.shoot": {
+    "sounds": [
+      {
+        "name": "entity/enderdragon/shoot",
+        "volume": 2.5
+      }
+    ],
+    "subtitle": "subtitles.entity.ender_dragon.shoot"
+  },
+  "entity.ender_dragon.flap": {
+    "sounds": [
+      {
+        "name": "entity/enderdragon/flap",
+        "volume": 2.5,
+        "pitch": 0.8
+      }
+    ],
+    "subtitle": "subtitles.entity.ender_dragon.flap"
+  }
+}

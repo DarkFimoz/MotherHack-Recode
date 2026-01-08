@@ -1,0 +1,526 @@
+{
+  "md5": "f5b05e8db22e2e0668b786e11ac9d3ce",
+  "sha2": "3cad216e3a7f0c19b4b394388bc9ffc446f13b14",
+  "sha256": "c2a95b499e76fada7dd63e9b0ec797b678d411c2b0ee6f37f4dc674662bfb0af",
+  "contents": {
+    "classes": {
+      "com/mojang/text2speech/NarratorLinux.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/text2speech/NarratorLinux",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V",
+            "exs": [
+              "com/mojang/text2speech/Narrator$InitializeException"
+            ]
+          },
+          {
+            "nme": "say",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Z)V"
+          },
+          {
+            "nme": "clear",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "destroy",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lambda$say$2",
+            "acc": 4098,
+            "dsc": "(ILjava/lang/String;)V"
+          },
+          {
+            "nme": "lambda$say$1",
+            "acc": 4098,
+            "dsc": "(ILjava/lang/String;)V"
+          },
+          {
+            "nme": "lambda$say$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;)Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "executionBatch",
+            "dsc": "Ljava/util/concurrent/atomic/AtomicInteger;"
+          },
+          {
+            "acc": 18,
+            "nme": "voiceCmuUsKal16",
+            "dsc": "Lcom/sun/jna/Pointer;"
+          },
+          {
+            "acc": 18,
+            "nme": "executor",
+            "dsc": "Ljava/util/concurrent/ExecutorService;"
+          }
+        ]
+      },
+      "com/mojang/text2speech/Narrator$1.class": {
+        "ver": 61,
+        "acc": 32,
+        "nme": "com/mojang/text2speech/Narrator$1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "say",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Z)V"
+          },
+          {
+            "nme": "clear",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "active",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "destroy",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/text2speech/NarratorLinux$FliteLibrary.class": {
+        "ver": 61,
+        "acc": 32,
+        "nme": "com/mojang/text2speech/NarratorLinux$FliteLibrary",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "loadNative",
+            "acc": 9,
+            "dsc": "()V",
+            "exs": [
+              "com/mojang/text2speech/Narrator$InitializeException"
+            ]
+          },
+          {
+            "nme": "flite_init",
+            "acc": 266,
+            "dsc": "()I"
+          },
+          {
+            "nme": "flite_text_to_speech",
+            "acc": 266,
+            "dsc": "(Ljava/lang/String;Lcom/sun/jna/Pointer;Ljava/lang/String;)F"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "SUCCESS",
+            "dsc": "I",
+            "val": 0
+          },
+          {
+            "acc": 26,
+            "nme": "NATIVE_LIBRARY_NAME",
+            "dsc": "Ljava/lang/String;",
+            "val": "flite"
+          }
+        ]
+      },
+      "com/mojang/text2speech/NarratorMac.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/text2speech/NarratorMac",
+        "super": "ca/weblite/objc/NSObject",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "startSpeaking",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "didFinishSpeaking",
+            "acc": 1,
+            "dsc": "(Z)V",
+            "vanns": [
+              {
+                "dsc": "Lca/weblite/objc/annotations/Msg;",
+                "vals": [
+                  "selector",
+                  "speechSynthesizer:didFinishSpeaking:",
+                  "signature",
+                  "v@:B"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "say",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Z)V"
+          },
+          {
+            "nme": "clear",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "destroy",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 18,
+            "nme": "synth",
+            "dsc": "Lca/weblite/objc/Proxy;"
+          },
+          {
+            "acc": 2,
+            "nme": "speaking",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "crashed",
+            "dsc": "Z"
+          },
+          {
+            "acc": 18,
+            "nme": "queue",
+            "dsc": "Ljava/util/Queue;",
+            "sig": "Ljava/util/Queue<Ljava/lang/String;>;"
+          }
+        ]
+      },
+      "com/mojang/text2speech/OperatingSystem.class": {
+        "ver": 61,
+        "acc": 16433,
+        "nme": "com/mojang/text2speech/OperatingSystem",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lcom/mojang/text2speech/OperatingSystem;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/mojang/text2speech/OperatingSystem;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;ILjava/lang/String;)V",
+            "sig": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "get",
+            "acc": 9,
+            "dsc": "()Lcom/mojang/text2speech/OperatingSystem;"
+          },
+          {
+            "nme": "$values",
+            "acc": 4106,
+            "dsc": "()[Lcom/mojang/text2speech/OperatingSystem;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "LINUX",
+            "dsc": "Lcom/mojang/text2speech/OperatingSystem;"
+          },
+          {
+            "acc": 16409,
+            "nme": "WINDOWS",
+            "dsc": "Lcom/mojang/text2speech/OperatingSystem;"
+          },
+          {
+            "acc": 16409,
+            "nme": "MAC_OS",
+            "dsc": "Lcom/mojang/text2speech/OperatingSystem;"
+          },
+          {
+            "acc": 16409,
+            "nme": "UNSUPPORTED",
+            "dsc": "Lcom/mojang/text2speech/OperatingSystem;"
+          },
+          {
+            "acc": 18,
+            "nme": "detectWith",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lcom/mojang/text2speech/OperatingSystem;"
+          }
+        ]
+      },
+      "com/mojang/text2speech/NarratorLinux$FliteLibrary$CmuUsKal16.class": {
+        "ver": 61,
+        "acc": 32,
+        "nme": "com/mojang/text2speech/NarratorLinux$FliteLibrary$CmuUsKal16",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "loadNative",
+            "acc": 9,
+            "dsc": "()V",
+            "exs": [
+              "com/mojang/text2speech/Narrator$InitializeException"
+            ]
+          },
+          {
+            "nme": "register_cmu_us_kal16",
+            "acc": 266,
+            "dsc": "(Ljava/lang/String;)Lcom/sun/jna/Pointer;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "NATIVE_LIBRARY_NAME",
+            "dsc": "Ljava/lang/String;",
+            "val": "flite_cmu_us_kal16"
+          }
+        ]
+      },
+      "com/mojang/text2speech/Narrator$InitializeException.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/text2speech/Narrator$InitializeException",
+        "super": "java/lang/Exception",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/text2speech/Narrator.class": {
+        "ver": 61,
+        "acc": 1537,
+        "nme": "com/mojang/text2speech/Narrator",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "say",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Z)V"
+          },
+          {
+            "nme": "clear",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "active",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "destroy",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getNarrator",
+            "acc": 9,
+            "dsc": "()Lcom/mojang/text2speech/Narrator;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 25,
+            "nme": "EMPTY",
+            "dsc": "Lcom/mojang/text2speech/Narrator;"
+          }
+        ]
+      },
+      "com/mojang/text2speech/NarratorWindows.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/text2speech/NarratorWindows",
+        "super": "com/sun/jna/platform/win32/COM/Unknown",
+        "mthds": [
+          {
+            "nme": "initSAPI",
+            "acc": 10,
+            "dsc": "()Lcom/sun/jna/Pointer;",
+            "exs": [
+              "com/mojang/text2speech/Narrator$InitializeException"
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V",
+            "exs": [
+              "com/mojang/text2speech/Narrator$InitializeException"
+            ]
+          },
+          {
+            "nme": "say",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Z)V"
+          },
+          {
+            "nme": "clear",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "destroy",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "COM_CLASS_SP_VOICE",
+            "dsc": "Ljava/lang/String;",
+            "val": "96749377-3391-11D2-9EE3-00C04F797396"
+          },
+          {
+            "acc": 26,
+            "nme": "INTERFACE_SP_VOICE",
+            "dsc": "Ljava/lang/String;",
+            "val": "6C44DF74-72B9-4992-A1EC-EF996E0422D4"
+          },
+          {
+            "acc": 26,
+            "nme": "VTABLE_INDEX_SPEAK",
+            "dsc": "I",
+            "val": 20
+          },
+          {
+            "acc": 26,
+            "nme": "VTABLE_INDEX_SKIP",
+            "dsc": "I",
+            "val": 23
+          },
+          {
+            "acc": 26,
+            "nme": "SPF_ASYNC",
+            "dsc": "I",
+            "val": 1
+          },
+          {
+            "acc": 26,
+            "nme": "SPF_PURGEBEFORESPEAK",
+            "dsc": "I",
+            "val": 2
+          },
+          {
+            "acc": 26,
+            "nme": "SPF_IS_NOT_XML",
+            "dsc": "I",
+            "val": 16
+          },
+          {
+            "acc": 26,
+            "nme": "SKIP_TYPE",
+            "dsc": "Lcom/sun/jna/WString;"
+          },
+          {
+            "acc": 26,
+            "nme": "MAX_NUM_ITEMS",
+            "dsc": "I",
+            "val": 2147483647
+          }
+        ]
+      },
+      "com/mojang/text2speech/Narrator$2.class": {
+        "ver": 61,
+        "acc": 4128,
+        "nme": "com/mojang/text2speech/Narrator$2",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4120,
+            "nme": "$SwitchMap$com$mojang$text2speech$OperatingSystem",
+            "dsc": "[I"
+          }
+        ]
+      }
+    }
+  }
+}

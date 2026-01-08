@@ -1,0 +1,4777 @@
+{
+  "md5": "7e982dafcf25c24b365b5088eaf8a0a6",
+  "sha2": "858c6cc78e1f08a885b1613e1d817c829df70a6e",
+  "sha256": "ac5b27a634942391ca113850ee7db01df1499a240174021263501c05fc653b44",
+  "contents": {
+    "classes": {
+      "com/fasterxml/jackson/annotation/JsonAutoDetect.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonAutoDetect",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getterVisibility",
+            "acc": 1025,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"
+          },
+          {
+            "nme": "isGetterVisibility",
+            "acc": 1025,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"
+          },
+          {
+            "nme": "setterVisibility",
+            "acc": 1025,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"
+          },
+          {
+            "nme": "creatorVisibility",
+            "acc": 1025,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"
+          },
+          {
+            "nme": "fieldVisibility",
+            "acc": 1025,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonInclude.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonInclude",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonInclude$Include;"
+          },
+          {
+            "nme": "content",
+            "acc": 1025,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonInclude$Include;"
+          },
+          {
+            "nme": "valueFilter",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<*>;"
+          },
+          {
+            "nme": "contentFilter",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<*>;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/ObjectIdGenerators.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/fasterxml/jackson/annotation/ObjectIdGenerators",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": []
+      },
+      "com/fasterxml/jackson/annotation/JsonFormat$Features.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/fasterxml/jackson/annotation/JsonFormat$Features",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "empty",
+            "acc": 9,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonFormat$Features;"
+          },
+          {
+            "nme": "construct",
+            "acc": 9,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonFormat;)Lcom/fasterxml/jackson/annotation/JsonFormat$Features;"
+          },
+          {
+            "nme": "construct",
+            "acc": 9,
+            "dsc": "([Lcom/fasterxml/jackson/annotation/JsonFormat$Feature;[Lcom/fasterxml/jackson/annotation/JsonFormat$Feature;)Lcom/fasterxml/jackson/annotation/JsonFormat$Features;"
+          },
+          {
+            "nme": "withOverrides",
+            "acc": 1,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonFormat$Features;)Lcom/fasterxml/jackson/annotation/JsonFormat$Features;"
+          },
+          {
+            "nme": "with",
+            "acc": 129,
+            "dsc": "([Lcom/fasterxml/jackson/annotation/JsonFormat$Feature;)Lcom/fasterxml/jackson/annotation/JsonFormat$Features;"
+          },
+          {
+            "nme": "without",
+            "acc": 129,
+            "dsc": "([Lcom/fasterxml/jackson/annotation/JsonFormat$Feature;)Lcom/fasterxml/jackson/annotation/JsonFormat$Features;"
+          },
+          {
+            "nme": "get",
+            "acc": 1,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonFormat$Feature;)Ljava/lang/Boolean;"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "_enabled",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "_disabled",
+            "dsc": "I"
+          },
+          {
+            "acc": 26,
+            "nme": "EMPTY",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonFormat$Features;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonFormat$Feature.class": {
+        "ver": 50,
+        "acc": 16433,
+        "nme": "com/fasterxml/jackson/annotation/JsonFormat$Feature",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lcom/fasterxml/jackson/annotation/JsonFormat$Feature;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/fasterxml/jackson/annotation/JsonFormat$Feature;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "ACCEPT_SINGLE_VALUE_AS_ARRAY",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonFormat$Feature;"
+          },
+          {
+            "acc": 16409,
+            "nme": "ACCEPT_CASE_INSENSITIVE_PROPERTIES",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonFormat$Feature;"
+          },
+          {
+            "acc": 16409,
+            "nme": "ACCEPT_CASE_INSENSITIVE_VALUES",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonFormat$Feature;"
+          },
+          {
+            "acc": 16409,
+            "nme": "WRITE_DATE_TIMESTAMPS_AS_NANOSECONDS",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonFormat$Feature;"
+          },
+          {
+            "acc": 16409,
+            "nme": "WRITE_DATES_WITH_ZONE_ID",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonFormat$Feature;"
+          },
+          {
+            "acc": 16409,
+            "nme": "WRITE_SINGLE_ELEM_ARRAYS_UNWRAPPED",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonFormat$Feature;"
+          },
+          {
+            "acc": 16409,
+            "nme": "WRITE_SORTED_MAP_ENTRIES",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonFormat$Feature;"
+          },
+          {
+            "acc": 16409,
+            "nme": "ADJUST_DATES_TO_CONTEXT_TIME_ZONE",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonFormat$Feature;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lcom/fasterxml/jackson/annotation/JsonFormat$Feature;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonIgnore.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonIgnore",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonSetter.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonSetter",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "nulls",
+            "acc": 1025,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/Nulls;"
+          },
+          {
+            "nme": "contentNulls",
+            "acc": 1025,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/Nulls;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonTypeInfo$None.class": {
+        "ver": 50,
+        "acc": 132129,
+        "nme": "com/fasterxml/jackson/annotation/JsonTypeInfo$None",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/Deprecated;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonFormat$Shape.class": {
+        "ver": 50,
+        "acc": 16433,
+        "nme": "com/fasterxml/jackson/annotation/JsonFormat$Shape",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "isNumeric",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isStructured",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "ANY",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;"
+          },
+          {
+            "acc": 16409,
+            "nme": "NATURAL",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;"
+          },
+          {
+            "acc": 16409,
+            "nme": "SCALAR",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;"
+          },
+          {
+            "acc": 16409,
+            "nme": "ARRAY",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;"
+          },
+          {
+            "acc": 16409,
+            "nme": "OBJECT",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;"
+          },
+          {
+            "acc": 16409,
+            "nme": "NUMBER",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;"
+          },
+          {
+            "acc": 16409,
+            "nme": "NUMBER_FLOAT",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;"
+          },
+          {
+            "acc": 16409,
+            "nme": "NUMBER_INT",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;"
+          },
+          {
+            "acc": 16409,
+            "nme": "STRING",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;"
+          },
+          {
+            "acc": 16409,
+            "nme": "BOOLEAN",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;"
+          },
+          {
+            "acc": 16409,
+            "nme": "BINARY",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonManagedReference.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonManagedReference",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonSubTypes.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonSubTypes",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()[Lcom/fasterxml/jackson/annotation/JsonSubTypes$Type;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/ObjectIdGenerators$UUIDGenerator.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "com/fasterxml/jackson/annotation/ObjectIdGenerators$UUIDGenerator",
+        "super": "com/fasterxml/jackson/annotation/ObjectIdGenerators$Base",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Class;)V",
+            "sig": "(Ljava/lang/Class<*>;)V"
+          },
+          {
+            "nme": "forScope",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Class;)Lcom/fasterxml/jackson/annotation/ObjectIdGenerator;",
+            "sig": "(Ljava/lang/Class<*>;)Lcom/fasterxml/jackson/annotation/ObjectIdGenerator<Ljava/util/UUID;>;"
+          },
+          {
+            "nme": "newForSerialization",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Lcom/fasterxml/jackson/annotation/ObjectIdGenerator;",
+            "sig": "(Ljava/lang/Object;)Lcom/fasterxml/jackson/annotation/ObjectIdGenerator<Ljava/util/UUID;>;"
+          },
+          {
+            "nme": "generateId",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Ljava/util/UUID;"
+          },
+          {
+            "nme": "key",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Lcom/fasterxml/jackson/annotation/ObjectIdGenerator$IdKey;"
+          },
+          {
+            "nme": "canUseFor",
+            "acc": 1,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/ObjectIdGenerator;)Z",
+            "sig": "(Lcom/fasterxml/jackson/annotation/ObjectIdGenerator<*>;)Z"
+          },
+          {
+            "nme": "generateId",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": 1
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonSetter$Value.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/fasterxml/jackson/annotation/JsonSetter$Value",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/Nulls;Lcom/fasterxml/jackson/annotation/Nulls;)V"
+          },
+          {
+            "nme": "valueFor",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<Lcom/fasterxml/jackson/annotation/JsonSetter;>;"
+          },
+          {
+            "nme": "readResolve",
+            "acc": 4,
+            "dsc": "()Ljava/lang/Object;"
+          },
+          {
+            "nme": "from",
+            "acc": 9,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonSetter;)Lcom/fasterxml/jackson/annotation/JsonSetter$Value;"
+          },
+          {
+            "nme": "construct",
+            "acc": 9,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/Nulls;Lcom/fasterxml/jackson/annotation/Nulls;)Lcom/fasterxml/jackson/annotation/JsonSetter$Value;"
+          },
+          {
+            "nme": "empty",
+            "acc": 9,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonSetter$Value;"
+          },
+          {
+            "nme": "merge",
+            "acc": 9,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonSetter$Value;Lcom/fasterxml/jackson/annotation/JsonSetter$Value;)Lcom/fasterxml/jackson/annotation/JsonSetter$Value;"
+          },
+          {
+            "nme": "forValueNulls",
+            "acc": 9,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/Nulls;)Lcom/fasterxml/jackson/annotation/JsonSetter$Value;"
+          },
+          {
+            "nme": "forValueNulls",
+            "acc": 9,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/Nulls;Lcom/fasterxml/jackson/annotation/Nulls;)Lcom/fasterxml/jackson/annotation/JsonSetter$Value;"
+          },
+          {
+            "nme": "forContentNulls",
+            "acc": 9,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/Nulls;)Lcom/fasterxml/jackson/annotation/JsonSetter$Value;"
+          },
+          {
+            "nme": "withOverrides",
+            "acc": 1,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonSetter$Value;)Lcom/fasterxml/jackson/annotation/JsonSetter$Value;"
+          },
+          {
+            "nme": "withValueNulls",
+            "acc": 1,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/Nulls;)Lcom/fasterxml/jackson/annotation/JsonSetter$Value;"
+          },
+          {
+            "nme": "withValueNulls",
+            "acc": 1,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/Nulls;Lcom/fasterxml/jackson/annotation/Nulls;)Lcom/fasterxml/jackson/annotation/JsonSetter$Value;"
+          },
+          {
+            "nme": "withContentNulls",
+            "acc": 1,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/Nulls;)Lcom/fasterxml/jackson/annotation/JsonSetter$Value;"
+          },
+          {
+            "nme": "getValueNulls",
+            "acc": 1,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/Nulls;"
+          },
+          {
+            "nme": "getContentNulls",
+            "acc": 1,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/Nulls;"
+          },
+          {
+            "nme": "nonDefaultValueNulls",
+            "acc": 1,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/Nulls;"
+          },
+          {
+            "nme": "nonDefaultContentNulls",
+            "acc": 1,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/Nulls;"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "_empty",
+            "acc": 10,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/Nulls;Lcom/fasterxml/jackson/annotation/Nulls;)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": 1
+          },
+          {
+            "acc": 18,
+            "nme": "_nulls",
+            "dsc": "Lcom/fasterxml/jackson/annotation/Nulls;"
+          },
+          {
+            "acc": 18,
+            "nme": "_contentNulls",
+            "dsc": "Lcom/fasterxml/jackson/annotation/Nulls;"
+          },
+          {
+            "acc": 28,
+            "nme": "EMPTY",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonSetter$Value;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JacksonAnnotationsInside.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JacksonAnnotationsInside",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/PropertyAccessor.class": {
+        "ver": 50,
+        "acc": 16433,
+        "nme": "com/fasterxml/jackson/annotation/PropertyAccessor",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lcom/fasterxml/jackson/annotation/PropertyAccessor;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/fasterxml/jackson/annotation/PropertyAccessor;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "creatorEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getterEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isGetterEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "setterEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "fieldEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "GETTER",
+            "dsc": "Lcom/fasterxml/jackson/annotation/PropertyAccessor;"
+          },
+          {
+            "acc": 16409,
+            "nme": "SETTER",
+            "dsc": "Lcom/fasterxml/jackson/annotation/PropertyAccessor;"
+          },
+          {
+            "acc": 16409,
+            "nme": "CREATOR",
+            "dsc": "Lcom/fasterxml/jackson/annotation/PropertyAccessor;"
+          },
+          {
+            "acc": 16409,
+            "nme": "FIELD",
+            "dsc": "Lcom/fasterxml/jackson/annotation/PropertyAccessor;"
+          },
+          {
+            "acc": 16409,
+            "nme": "IS_GETTER",
+            "dsc": "Lcom/fasterxml/jackson/annotation/PropertyAccessor;"
+          },
+          {
+            "acc": 16409,
+            "nme": "NONE",
+            "dsc": "Lcom/fasterxml/jackson/annotation/PropertyAccessor;"
+          },
+          {
+            "acc": 16409,
+            "nme": "ALL",
+            "dsc": "Lcom/fasterxml/jackson/annotation/PropertyAccessor;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lcom/fasterxml/jackson/annotation/PropertyAccessor;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonCreator$Mode.class": {
+        "ver": 50,
+        "acc": 16433,
+        "nme": "com/fasterxml/jackson/annotation/JsonCreator$Mode",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lcom/fasterxml/jackson/annotation/JsonCreator$Mode;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/fasterxml/jackson/annotation/JsonCreator$Mode;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "DEFAULT",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonCreator$Mode;"
+          },
+          {
+            "acc": 16409,
+            "nme": "DELEGATING",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonCreator$Mode;"
+          },
+          {
+            "acc": 16409,
+            "nme": "PROPERTIES",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonCreator$Mode;"
+          },
+          {
+            "acc": 16409,
+            "nme": "DISABLED",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonCreator$Mode;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lcom/fasterxml/jackson/annotation/JsonCreator$Mode;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonUnwrapped.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonUnwrapped",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "enabled",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "prefix",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "suffix",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonCreator.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonCreator",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "mode",
+            "acc": 1025,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonCreator$Mode;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonIgnoreProperties$Value.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/fasterxml/jackson/annotation/JsonIgnoreProperties$Value",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(Ljava/util/Set;ZZZZ)V",
+            "sig": "(Ljava/util/Set<Ljava/lang/String;>;ZZZZ)V"
+          },
+          {
+            "nme": "from",
+            "acc": 9,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties;)Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;"
+          },
+          {
+            "nme": "construct",
+            "acc": 9,
+            "dsc": "(Ljava/util/Set;ZZZZ)Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;",
+            "sig": "(Ljava/util/Set<Ljava/lang/String;>;ZZZZ)Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;"
+          },
+          {
+            "nme": "empty",
+            "acc": 9,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;"
+          },
+          {
+            "nme": "merge",
+            "acc": 9,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;)Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;"
+          },
+          {
+            "nme": "mergeAll",
+            "acc": 137,
+            "dsc": "([Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;)Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;"
+          },
+          {
+            "nme": "forIgnoredProperties",
+            "acc": 9,
+            "dsc": "(Ljava/util/Set;)Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;",
+            "sig": "(Ljava/util/Set<Ljava/lang/String;>;)Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;"
+          },
+          {
+            "nme": "forIgnoredProperties",
+            "acc": 137,
+            "dsc": "([Ljava/lang/String;)Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;"
+          },
+          {
+            "nme": "forIgnoreUnknown",
+            "acc": 9,
+            "dsc": "(Z)Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;"
+          },
+          {
+            "nme": "withOverrides",
+            "acc": 1,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;)Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;"
+          },
+          {
+            "nme": "withIgnored",
+            "acc": 1,
+            "dsc": "(Ljava/util/Set;)Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;",
+            "sig": "(Ljava/util/Set<Ljava/lang/String;>;)Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;"
+          },
+          {
+            "nme": "withIgnored",
+            "acc": 129,
+            "dsc": "([Ljava/lang/String;)Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;"
+          },
+          {
+            "nme": "withoutIgnored",
+            "acc": 1,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;"
+          },
+          {
+            "nme": "withIgnoreUnknown",
+            "acc": 1,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;"
+          },
+          {
+            "nme": "withoutIgnoreUnknown",
+            "acc": 1,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;"
+          },
+          {
+            "nme": "withAllowGetters",
+            "acc": 1,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;"
+          },
+          {
+            "nme": "withoutAllowGetters",
+            "acc": 1,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;"
+          },
+          {
+            "nme": "withAllowSetters",
+            "acc": 1,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;"
+          },
+          {
+            "nme": "withoutAllowSetters",
+            "acc": 1,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;"
+          },
+          {
+            "nme": "withMerge",
+            "acc": 1,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;"
+          },
+          {
+            "nme": "withoutMerge",
+            "acc": 1,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;"
+          },
+          {
+            "nme": "valueFor",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties;>;"
+          },
+          {
+            "nme": "readResolve",
+            "acc": 4,
+            "dsc": "()Ljava/lang/Object;"
+          },
+          {
+            "nme": "getIgnored",
+            "acc": 1,
+            "dsc": "()Ljava/util/Set;",
+            "sig": "()Ljava/util/Set<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "findIgnoredForSerialization",
+            "acc": 1,
+            "dsc": "()Ljava/util/Set;",
+            "sig": "()Ljava/util/Set<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "findIgnoredForDeserialization",
+            "acc": 1,
+            "dsc": "()Ljava/util/Set;",
+            "sig": "()Ljava/util/Set<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "getIgnoreUnknown",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getAllowGetters",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getAllowSetters",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getMerge",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "_equals",
+            "acc": 10,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;)Z"
+          },
+          {
+            "nme": "_asSet",
+            "acc": 10,
+            "dsc": "([Ljava/lang/String;)Ljava/util/Set;",
+            "sig": "([Ljava/lang/String;)Ljava/util/Set<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "_merge",
+            "acc": 10,
+            "dsc": "(Ljava/util/Set;Ljava/util/Set;)Ljava/util/Set;",
+            "sig": "(Ljava/util/Set<Ljava/lang/String;>;Ljava/util/Set<Ljava/lang/String;>;)Ljava/util/Set<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "_empty",
+            "acc": 10,
+            "dsc": "(Ljava/util/Set;ZZZZ)Z",
+            "sig": "(Ljava/util/Set<Ljava/lang/String;>;ZZZZ)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": 1
+          },
+          {
+            "acc": 28,
+            "nme": "EMPTY",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;"
+          },
+          {
+            "acc": 20,
+            "nme": "_ignored",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Ljava/lang/String;>;"
+          },
+          {
+            "acc": 20,
+            "nme": "_ignoreUnknown",
+            "dsc": "Z"
+          },
+          {
+            "acc": 20,
+            "nme": "_allowGetters",
+            "dsc": "Z"
+          },
+          {
+            "acc": 20,
+            "nme": "_allowSetters",
+            "dsc": "Z"
+          },
+          {
+            "acc": 20,
+            "nme": "_merge",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/OptBoolean.class": {
+        "ver": 50,
+        "acc": 16433,
+        "nme": "com/fasterxml/jackson/annotation/OptBoolean",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lcom/fasterxml/jackson/annotation/OptBoolean;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/fasterxml/jackson/annotation/OptBoolean;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "asBoolean",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Boolean;"
+          },
+          {
+            "nme": "asPrimitive",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "fromBoolean",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Boolean;)Lcom/fasterxml/jackson/annotation/OptBoolean;"
+          },
+          {
+            "nme": "equals",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Boolean;Ljava/lang/Boolean;)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "TRUE",
+            "dsc": "Lcom/fasterxml/jackson/annotation/OptBoolean;"
+          },
+          {
+            "acc": 16409,
+            "nme": "FALSE",
+            "dsc": "Lcom/fasterxml/jackson/annotation/OptBoolean;"
+          },
+          {
+            "acc": 16409,
+            "nme": "DEFAULT",
+            "dsc": "Lcom/fasterxml/jackson/annotation/OptBoolean;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lcom/fasterxml/jackson/annotation/OptBoolean;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/Nulls.class": {
+        "ver": 50,
+        "acc": 16433,
+        "nme": "com/fasterxml/jackson/annotation/Nulls",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lcom/fasterxml/jackson/annotation/Nulls;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/fasterxml/jackson/annotation/Nulls;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "SET",
+            "dsc": "Lcom/fasterxml/jackson/annotation/Nulls;"
+          },
+          {
+            "acc": 16409,
+            "nme": "SKIP",
+            "dsc": "Lcom/fasterxml/jackson/annotation/Nulls;"
+          },
+          {
+            "acc": 16409,
+            "nme": "FAIL",
+            "dsc": "Lcom/fasterxml/jackson/annotation/Nulls;"
+          },
+          {
+            "acc": 16409,
+            "nme": "AS_EMPTY",
+            "dsc": "Lcom/fasterxml/jackson/annotation/Nulls;"
+          },
+          {
+            "acc": 16409,
+            "nme": "DEFAULT",
+            "dsc": "Lcom/fasterxml/jackson/annotation/Nulls;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lcom/fasterxml/jackson/annotation/Nulls;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JacksonInject.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JacksonInject",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "useInput",
+            "acc": 1025,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/OptBoolean;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/ObjectIdGenerators$IntSequenceGenerator.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "com/fasterxml/jackson/annotation/ObjectIdGenerators$IntSequenceGenerator",
+        "super": "com/fasterxml/jackson/annotation/ObjectIdGenerators$Base",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Class;I)V",
+            "sig": "(Ljava/lang/Class<*>;I)V"
+          },
+          {
+            "nme": "initialValue",
+            "acc": 4,
+            "dsc": "()I"
+          },
+          {
+            "nme": "forScope",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Class;)Lcom/fasterxml/jackson/annotation/ObjectIdGenerator;",
+            "sig": "(Ljava/lang/Class<*>;)Lcom/fasterxml/jackson/annotation/ObjectIdGenerator<Ljava/lang/Integer;>;"
+          },
+          {
+            "nme": "newForSerialization",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Lcom/fasterxml/jackson/annotation/ObjectIdGenerator;",
+            "sig": "(Ljava/lang/Object;)Lcom/fasterxml/jackson/annotation/ObjectIdGenerator<Ljava/lang/Integer;>;"
+          },
+          {
+            "nme": "key",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Lcom/fasterxml/jackson/annotation/ObjectIdGenerator$IdKey;"
+          },
+          {
+            "nme": "generateId",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Integer;"
+          },
+          {
+            "nme": "generateId",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "canUseFor",
+            "acc": 4161,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/ObjectIdGenerator;)Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": 1
+          },
+          {
+            "acc": 132,
+            "nme": "_nextValue",
+            "dsc": "I"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonAlias.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonAlias",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonIdentityInfo.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonIdentityInfo",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "property",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "generator",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<+Lcom/fasterxml/jackson/annotation/ObjectIdGenerator<*>;>;"
+          },
+          {
+            "nme": "resolver",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<+Lcom/fasterxml/jackson/annotation/ObjectIdResolver;>;"
+          },
+          {
+            "nme": "scope",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<*>;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonRootName.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonRootName",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "namespace",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonPropertyDescription.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonPropertyDescription",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonFilter.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonFilter",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonBackReference.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonBackReference",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/ObjectIdGenerators$Base.class": {
+        "ver": 50,
+        "acc": 1056,
+        "nme": "com/fasterxml/jackson/annotation/ObjectIdGenerators$Base",
+        "super": "com/fasterxml/jackson/annotation/ObjectIdGenerator",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(Ljava/lang/Class;)V",
+            "sig": "(Ljava/lang/Class<*>;)V"
+          },
+          {
+            "nme": "getScope",
+            "acc": 17,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<*>;"
+          },
+          {
+            "nme": "canUseFor",
+            "acc": 1,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/ObjectIdGenerator;)Z",
+            "sig": "(Lcom/fasterxml/jackson/annotation/ObjectIdGenerator<*>;)Z"
+          },
+          {
+            "nme": "generateId",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(Ljava/lang/Object;)TT;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 20,
+            "nme": "_scope",
+            "dsc": "Ljava/lang/Class;",
+            "sig": "Ljava/lang/Class<*>;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonEnumDefaultValue.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonEnumDefaultValue",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonIgnoreProperties.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonIgnoreProperties",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/String;"
+          },
+          {
+            "nme": "ignoreUnknown",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "allowGetters",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "allowSetters",
+            "acc": 1025,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonTypeInfo$Id.class": {
+        "ver": 50,
+        "acc": 16433,
+        "nme": "com/fasterxml/jackson/annotation/JsonTypeInfo$Id",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lcom/fasterxml/jackson/annotation/JsonTypeInfo$Id;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/fasterxml/jackson/annotation/JsonTypeInfo$Id;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;ILjava/lang/String;)V",
+            "sig": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "getDefaultPropertyName",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "NONE",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonTypeInfo$Id;"
+          },
+          {
+            "acc": 16409,
+            "nme": "CLASS",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonTypeInfo$Id;"
+          },
+          {
+            "acc": 16409,
+            "nme": "MINIMAL_CLASS",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonTypeInfo$Id;"
+          },
+          {
+            "acc": 16409,
+            "nme": "NAME",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonTypeInfo$Id;"
+          },
+          {
+            "acc": 16409,
+            "nme": "DEDUCTION",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonTypeInfo$Id;"
+          },
+          {
+            "acc": 16409,
+            "nme": "CUSTOM",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonTypeInfo$Id;"
+          },
+          {
+            "acc": 18,
+            "nme": "_defaultPropertyName",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lcom/fasterxml/jackson/annotation/JsonTypeInfo$Id;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/ObjectIdGenerators$StringIdGenerator.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "com/fasterxml/jackson/annotation/ObjectIdGenerators$StringIdGenerator",
+        "super": "com/fasterxml/jackson/annotation/ObjectIdGenerators$Base",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Class;)V",
+            "sig": "(Ljava/lang/Class<*>;)V"
+          },
+          {
+            "nme": "forScope",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Class;)Lcom/fasterxml/jackson/annotation/ObjectIdGenerator;",
+            "sig": "(Ljava/lang/Class<*>;)Lcom/fasterxml/jackson/annotation/ObjectIdGenerator<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "newForSerialization",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Lcom/fasterxml/jackson/annotation/ObjectIdGenerator;",
+            "sig": "(Ljava/lang/Object;)Lcom/fasterxml/jackson/annotation/ObjectIdGenerator<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "generateId",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/String;"
+          },
+          {
+            "nme": "key",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Lcom/fasterxml/jackson/annotation/ObjectIdGenerator$IdKey;"
+          },
+          {
+            "nme": "canUseFor",
+            "acc": 1,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/ObjectIdGenerator;)Z",
+            "sig": "(Lcom/fasterxml/jackson/annotation/ObjectIdGenerator<*>;)Z"
+          },
+          {
+            "nme": "generateId",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": 1
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonIncludeProperties.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonIncludeProperties",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonFormat$Value.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/fasterxml/jackson/annotation/JsonFormat$Value",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonFormat;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;Ljava/lang/String;Ljava/lang/String;Lcom/fasterxml/jackson/annotation/JsonFormat$Features;Ljava/lang/Boolean;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;Ljava/util/Locale;Ljava/util/TimeZone;Lcom/fasterxml/jackson/annotation/JsonFormat$Features;Ljava/lang/Boolean;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;Ljava/util/Locale;Ljava/lang/String;Ljava/util/TimeZone;Lcom/fasterxml/jackson/annotation/JsonFormat$Features;Ljava/lang/Boolean;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 131073,
+            "dsc": "(Ljava/lang/String;Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;Ljava/util/Locale;Ljava/lang/String;Ljava/util/TimeZone;Lcom/fasterxml/jackson/annotation/JsonFormat$Features;)V",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 131073,
+            "dsc": "(Ljava/lang/String;Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;Ljava/lang/String;Ljava/lang/String;Lcom/fasterxml/jackson/annotation/JsonFormat$Features;)V",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 131073,
+            "dsc": "(Ljava/lang/String;Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;Ljava/util/Locale;Ljava/util/TimeZone;Lcom/fasterxml/jackson/annotation/JsonFormat$Features;)V",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "empty",
+            "acc": 25,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonFormat$Value;"
+          },
+          {
+            "nme": "merge",
+            "acc": 9,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonFormat$Value;Lcom/fasterxml/jackson/annotation/JsonFormat$Value;)Lcom/fasterxml/jackson/annotation/JsonFormat$Value;"
+          },
+          {
+            "nme": "mergeAll",
+            "acc": 137,
+            "dsc": "([Lcom/fasterxml/jackson/annotation/JsonFormat$Value;)Lcom/fasterxml/jackson/annotation/JsonFormat$Value;"
+          },
+          {
+            "nme": "from",
+            "acc": 25,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonFormat;)Lcom/fasterxml/jackson/annotation/JsonFormat$Value;"
+          },
+          {
+            "nme": "withOverrides",
+            "acc": 17,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonFormat$Value;)Lcom/fasterxml/jackson/annotation/JsonFormat$Value;"
+          },
+          {
+            "nme": "forPattern",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/fasterxml/jackson/annotation/JsonFormat$Value;"
+          },
+          {
+            "nme": "forShape",
+            "acc": 9,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;)Lcom/fasterxml/jackson/annotation/JsonFormat$Value;"
+          },
+          {
+            "nme": "forLeniency",
+            "acc": 9,
+            "dsc": "(Z)Lcom/fasterxml/jackson/annotation/JsonFormat$Value;"
+          },
+          {
+            "nme": "withPattern",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Lcom/fasterxml/jackson/annotation/JsonFormat$Value;"
+          },
+          {
+            "nme": "withShape",
+            "acc": 1,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;)Lcom/fasterxml/jackson/annotation/JsonFormat$Value;"
+          },
+          {
+            "nme": "withLocale",
+            "acc": 1,
+            "dsc": "(Ljava/util/Locale;)Lcom/fasterxml/jackson/annotation/JsonFormat$Value;"
+          },
+          {
+            "nme": "withTimeZone",
+            "acc": 1,
+            "dsc": "(Ljava/util/TimeZone;)Lcom/fasterxml/jackson/annotation/JsonFormat$Value;"
+          },
+          {
+            "nme": "withLenient",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Boolean;)Lcom/fasterxml/jackson/annotation/JsonFormat$Value;"
+          },
+          {
+            "nme": "withFeature",
+            "acc": 1,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonFormat$Feature;)Lcom/fasterxml/jackson/annotation/JsonFormat$Value;"
+          },
+          {
+            "nme": "withoutFeature",
+            "acc": 1,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonFormat$Feature;)Lcom/fasterxml/jackson/annotation/JsonFormat$Value;"
+          },
+          {
+            "nme": "valueFor",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<Lcom/fasterxml/jackson/annotation/JsonFormat;>;"
+          },
+          {
+            "nme": "getPattern",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getShape",
+            "acc": 1,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;"
+          },
+          {
+            "nme": "getLocale",
+            "acc": 1,
+            "dsc": "()Ljava/util/Locale;"
+          },
+          {
+            "nme": "getLenient",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Boolean;"
+          },
+          {
+            "nme": "isLenient",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "timeZoneAsString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getTimeZone",
+            "acc": 1,
+            "dsc": "()Ljava/util/TimeZone;"
+          },
+          {
+            "nme": "hasShape",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "hasPattern",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "hasLocale",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "hasTimeZone",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "hasLenient",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getFeature",
+            "acc": 1,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonFormat$Feature;)Ljava/lang/Boolean;"
+          },
+          {
+            "nme": "getFeatures",
+            "acc": 1,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonFormat$Features;"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "_equal",
+            "acc": 10,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)Z",
+            "sig": "<T:Ljava/lang/Object;>(TT;TT;)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": 1
+          },
+          {
+            "acc": 26,
+            "nme": "EMPTY",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonFormat$Value;"
+          },
+          {
+            "acc": 18,
+            "nme": "_pattern",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "_shape",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;"
+          },
+          {
+            "acc": 18,
+            "nme": "_locale",
+            "dsc": "Ljava/util/Locale;"
+          },
+          {
+            "acc": 18,
+            "nme": "_timezoneStr",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "_lenient",
+            "dsc": "Ljava/lang/Boolean;"
+          },
+          {
+            "acc": 18,
+            "nme": "_features",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonFormat$Features;"
+          },
+          {
+            "acc": 130,
+            "nme": "_timezone",
+            "dsc": "Ljava/util/TimeZone;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonSubTypes$Type.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonSubTypes$Type",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<*>;"
+          },
+          {
+            "nme": "name",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "names",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/String;"
+          }
+        ],
+        "flds": []
+      },
+      "com/fasterxml/jackson/annotation/JacksonAnnotationValue.class": {
+        "ver": 50,
+        "acc": 1537,
+        "nme": "com/fasterxml/jackson/annotation/JacksonAnnotationValue",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "valueFor",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<TA;>;"
+          }
+        ],
+        "flds": []
+      },
+      "com/fasterxml/jackson/annotation/JsonTypeId.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonTypeId",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JacksonAnnotation.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JacksonAnnotation",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/SimpleObjectIdResolver.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/fasterxml/jackson/annotation/SimpleObjectIdResolver",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "bindItem",
+            "acc": 1,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/ObjectIdGenerator$IdKey;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "resolveId",
+            "acc": 1,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/ObjectIdGenerator$IdKey;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "canUseFor",
+            "acc": 1,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/ObjectIdResolver;)Z"
+          },
+          {
+            "nme": "newForDeserialization",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Lcom/fasterxml/jackson/annotation/ObjectIdResolver;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4,
+            "nme": "_items",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lcom/fasterxml/jackson/annotation/ObjectIdGenerator$IdKey;Ljava/lang/Object;>;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonTypeName.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonTypeName",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonView.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonView",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/Class;",
+            "sig": "()[Ljava/lang/Class<*>;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonTypeInfo.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonTypeInfo",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "use",
+            "acc": 1025,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonTypeInfo$Id;"
+          },
+          {
+            "nme": "include",
+            "acc": 1025,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonTypeInfo$As;"
+          },
+          {
+            "nme": "property",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "defaultImpl",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<*>;"
+          },
+          {
+            "nme": "visible",
+            "acc": 1025,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonRawValue.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonRawValue",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/ObjectIdResolver.class": {
+        "ver": 50,
+        "acc": 1537,
+        "nme": "com/fasterxml/jackson/annotation/ObjectIdResolver",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "bindItem",
+            "acc": 1025,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/ObjectIdGenerator$IdKey;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "resolveId",
+            "acc": 1025,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/ObjectIdGenerator$IdKey;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "newForDeserialization",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)Lcom/fasterxml/jackson/annotation/ObjectIdResolver;"
+          },
+          {
+            "nme": "canUseFor",
+            "acc": 1025,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/ObjectIdResolver;)Z"
+          }
+        ],
+        "flds": []
+      },
+      "com/fasterxml/jackson/annotation/JsonAnyGetter.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonAnyGetter",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "enabled",
+            "acc": 1025,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "module-info.class": {
+        "ver": 53,
+        "acc": 32768,
+        "nme": "module-info",
+        "mthds": [],
+        "flds": []
+      },
+      "com/fasterxml/jackson/annotation/ObjectIdGenerator.class": {
+        "ver": 50,
+        "acc": 1057,
+        "nme": "com/fasterxml/jackson/annotation/ObjectIdGenerator",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getScope",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<*>;"
+          },
+          {
+            "nme": "canUseFor",
+            "acc": 1025,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/ObjectIdGenerator;)Z",
+            "sig": "(Lcom/fasterxml/jackson/annotation/ObjectIdGenerator<*>;)Z"
+          },
+          {
+            "nme": "maySerializeAsObject",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isValidReferencePropertyName",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "forScope",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Class;)Lcom/fasterxml/jackson/annotation/ObjectIdGenerator;",
+            "sig": "(Ljava/lang/Class<*>;)Lcom/fasterxml/jackson/annotation/ObjectIdGenerator<TT;>;"
+          },
+          {
+            "nme": "newForSerialization",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)Lcom/fasterxml/jackson/annotation/ObjectIdGenerator;",
+            "sig": "(Ljava/lang/Object;)Lcom/fasterxml/jackson/annotation/ObjectIdGenerator<TT;>;"
+          },
+          {
+            "nme": "key",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)Lcom/fasterxml/jackson/annotation/ObjectIdGenerator$IdKey;"
+          },
+          {
+            "nme": "generateId",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(Ljava/lang/Object;)TT;"
+          }
+        ],
+        "flds": []
+      },
+      "com/fasterxml/jackson/annotation/JsonAutoDetect$1.class": {
+        "ver": 50,
+        "acc": 4128,
+        "nme": "com/fasterxml/jackson/annotation/JsonAutoDetect$1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4120,
+            "nme": "$SwitchMap$com$fasterxml$jackson$annotation$JsonAutoDetect$Visibility",
+            "dsc": "[I"
+          },
+          {
+            "acc": 4120,
+            "nme": "$SwitchMap$com$fasterxml$jackson$annotation$PropertyAccessor",
+            "dsc": "[I"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonProperty$Access.class": {
+        "ver": 50,
+        "acc": 16433,
+        "nme": "com/fasterxml/jackson/annotation/JsonProperty$Access",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lcom/fasterxml/jackson/annotation/JsonProperty$Access;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/fasterxml/jackson/annotation/JsonProperty$Access;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "AUTO",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonProperty$Access;"
+          },
+          {
+            "acc": 16409,
+            "nme": "READ_ONLY",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonProperty$Access;"
+          },
+          {
+            "acc": 16409,
+            "nme": "WRITE_ONLY",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonProperty$Access;"
+          },
+          {
+            "acc": 16409,
+            "nme": "READ_WRITE",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonProperty$Access;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lcom/fasterxml/jackson/annotation/JsonProperty$Access;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/ObjectIdGenerators$None.class": {
+        "ver": 50,
+        "acc": 1057,
+        "nme": "com/fasterxml/jackson/annotation/ObjectIdGenerators$None",
+        "super": "com/fasterxml/jackson/annotation/ObjectIdGenerator",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": []
+      },
+      "com/fasterxml/jackson/annotation/JsonInclude$Include.class": {
+        "ver": 50,
+        "acc": 16433,
+        "nme": "com/fasterxml/jackson/annotation/JsonInclude$Include",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lcom/fasterxml/jackson/annotation/JsonInclude$Include;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/fasterxml/jackson/annotation/JsonInclude$Include;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "ALWAYS",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonInclude$Include;"
+          },
+          {
+            "acc": 16409,
+            "nme": "NON_NULL",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonInclude$Include;"
+          },
+          {
+            "acc": 16409,
+            "nme": "NON_ABSENT",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonInclude$Include;"
+          },
+          {
+            "acc": 16409,
+            "nme": "NON_EMPTY",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonInclude$Include;"
+          },
+          {
+            "acc": 16409,
+            "nme": "NON_DEFAULT",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonInclude$Include;"
+          },
+          {
+            "acc": 16409,
+            "nme": "CUSTOM",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonInclude$Include;"
+          },
+          {
+            "acc": 16409,
+            "nme": "USE_DEFAULTS",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonInclude$Include;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lcom/fasterxml/jackson/annotation/JsonInclude$Include;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonAnySetter.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonAnySetter",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "enabled",
+            "acc": 1025,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonIdentityReference.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonIdentityReference",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "alwaysAsId",
+            "acc": 1025,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonProperty.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonProperty",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "namespace",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "required",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "index",
+            "acc": 1025,
+            "dsc": "()I"
+          },
+          {
+            "nme": "defaultValue",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "access",
+            "acc": 1025,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonProperty$Access;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "USE_DEFAULT_NAME",
+            "dsc": "Ljava/lang/String;",
+            "val": ""
+          },
+          {
+            "acc": 25,
+            "nme": "INDEX_UNKNOWN",
+            "dsc": "I",
+            "val": -1
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/ObjectIdGenerators$PropertyGenerator.class": {
+        "ver": 50,
+        "acc": 1057,
+        "nme": "com/fasterxml/jackson/annotation/ObjectIdGenerators$PropertyGenerator",
+        "super": "com/fasterxml/jackson/annotation/ObjectIdGenerators$Base",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(Ljava/lang/Class;)V",
+            "sig": "(Ljava/lang/Class<*>;)V"
+          },
+          {
+            "nme": "canUseFor",
+            "acc": 4161,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/ObjectIdGenerator;)Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": 1
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JacksonInject$Value.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/fasterxml/jackson/annotation/JacksonInject$Value",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Boolean;)V"
+          },
+          {
+            "nme": "valueFor",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<Lcom/fasterxml/jackson/annotation/JacksonInject;>;"
+          },
+          {
+            "nme": "empty",
+            "acc": 9,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JacksonInject$Value;"
+          },
+          {
+            "nme": "construct",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Boolean;)Lcom/fasterxml/jackson/annotation/JacksonInject$Value;"
+          },
+          {
+            "nme": "from",
+            "acc": 9,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JacksonInject;)Lcom/fasterxml/jackson/annotation/JacksonInject$Value;"
+          },
+          {
+            "nme": "forId",
+            "acc": 9,
+            "dsc": "(Ljava/lang/Object;)Lcom/fasterxml/jackson/annotation/JacksonInject$Value;"
+          },
+          {
+            "nme": "withId",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Lcom/fasterxml/jackson/annotation/JacksonInject$Value;"
+          },
+          {
+            "nme": "withUseInput",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Boolean;)Lcom/fasterxml/jackson/annotation/JacksonInject$Value;"
+          },
+          {
+            "nme": "getId",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Object;"
+          },
+          {
+            "nme": "getUseInput",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Boolean;"
+          },
+          {
+            "nme": "hasId",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "willUseInput",
+            "acc": 1,
+            "dsc": "(Z)Z"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "_empty",
+            "acc": 10,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Boolean;)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": 1
+          },
+          {
+            "acc": 28,
+            "nme": "EMPTY",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonInject$Value;"
+          },
+          {
+            "acc": 20,
+            "nme": "_id",
+            "dsc": "Ljava/lang/Object;"
+          },
+          {
+            "acc": 20,
+            "nme": "_useInput",
+            "dsc": "Ljava/lang/Boolean;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonAutoDetect$Visibility.class": {
+        "ver": 50,
+        "acc": 16433,
+        "nme": "com/fasterxml/jackson/annotation/JsonAutoDetect$Visibility",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "isVisible",
+            "acc": 1,
+            "dsc": "(Ljava/lang/reflect/Member;)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "ANY",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"
+          },
+          {
+            "acc": 16409,
+            "nme": "NON_PRIVATE",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"
+          },
+          {
+            "acc": 16409,
+            "nme": "PROTECTED_AND_PUBLIC",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"
+          },
+          {
+            "acc": 16409,
+            "nme": "PUBLIC_ONLY",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"
+          },
+          {
+            "acc": 16409,
+            "nme": "NONE",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"
+          },
+          {
+            "acc": 16409,
+            "nme": "DEFAULT",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonValue.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonValue",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/ObjectIdGenerator$IdKey.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "com/fasterxml/jackson/annotation/ObjectIdGenerator$IdKey",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Object;)V",
+            "sig": "(Ljava/lang/Class<*>;Ljava/lang/Class<*>;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": 1
+          },
+          {
+            "acc": 17,
+            "nme": "type",
+            "dsc": "Ljava/lang/Class;",
+            "sig": "Ljava/lang/Class<*>;"
+          },
+          {
+            "acc": 17,
+            "nme": "scope",
+            "dsc": "Ljava/lang/Class;",
+            "sig": "Ljava/lang/Class<*>;"
+          },
+          {
+            "acc": 17,
+            "nme": "key",
+            "dsc": "Ljava/lang/Object;"
+          },
+          {
+            "acc": 18,
+            "nme": "hashCode",
+            "dsc": "I"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonGetter.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonGetter",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonTypeInfo$As.class": {
+        "ver": 50,
+        "acc": 16433,
+        "nme": "com/fasterxml/jackson/annotation/JsonTypeInfo$As",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lcom/fasterxml/jackson/annotation/JsonTypeInfo$As;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/fasterxml/jackson/annotation/JsonTypeInfo$As;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "PROPERTY",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonTypeInfo$As;"
+          },
+          {
+            "acc": 16409,
+            "nme": "WRAPPER_OBJECT",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonTypeInfo$As;"
+          },
+          {
+            "acc": 16409,
+            "nme": "WRAPPER_ARRAY",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonTypeInfo$As;"
+          },
+          {
+            "acc": 16409,
+            "nme": "EXTERNAL_PROPERTY",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonTypeInfo$As;"
+          },
+          {
+            "acc": 16409,
+            "nme": "EXISTING_PROPERTY",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonTypeInfo$As;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lcom/fasterxml/jackson/annotation/JsonTypeInfo$As;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonInclude$Value.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/fasterxml/jackson/annotation/JsonInclude$Value",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonInclude;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonInclude$Include;Lcom/fasterxml/jackson/annotation/JsonInclude$Include;Ljava/lang/Class;Ljava/lang/Class;)V",
+            "sig": "(Lcom/fasterxml/jackson/annotation/JsonInclude$Include;Lcom/fasterxml/jackson/annotation/JsonInclude$Include;Ljava/lang/Class<*>;Ljava/lang/Class<*>;)V"
+          },
+          {
+            "nme": "empty",
+            "acc": 9,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonInclude$Value;"
+          },
+          {
+            "nme": "merge",
+            "acc": 9,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonInclude$Value;Lcom/fasterxml/jackson/annotation/JsonInclude$Value;)Lcom/fasterxml/jackson/annotation/JsonInclude$Value;"
+          },
+          {
+            "nme": "mergeAll",
+            "acc": 137,
+            "dsc": "([Lcom/fasterxml/jackson/annotation/JsonInclude$Value;)Lcom/fasterxml/jackson/annotation/JsonInclude$Value;"
+          },
+          {
+            "nme": "readResolve",
+            "acc": 4,
+            "dsc": "()Ljava/lang/Object;"
+          },
+          {
+            "nme": "withOverrides",
+            "acc": 1,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonInclude$Value;)Lcom/fasterxml/jackson/annotation/JsonInclude$Value;"
+          },
+          {
+            "nme": "construct",
+            "acc": 9,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonInclude$Include;Lcom/fasterxml/jackson/annotation/JsonInclude$Include;)Lcom/fasterxml/jackson/annotation/JsonInclude$Value;"
+          },
+          {
+            "nme": "construct",
+            "acc": 9,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonInclude$Include;Lcom/fasterxml/jackson/annotation/JsonInclude$Include;Ljava/lang/Class;Ljava/lang/Class;)Lcom/fasterxml/jackson/annotation/JsonInclude$Value;",
+            "sig": "(Lcom/fasterxml/jackson/annotation/JsonInclude$Include;Lcom/fasterxml/jackson/annotation/JsonInclude$Include;Ljava/lang/Class<*>;Ljava/lang/Class<*>;)Lcom/fasterxml/jackson/annotation/JsonInclude$Value;"
+          },
+          {
+            "nme": "from",
+            "acc": 9,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonInclude;)Lcom/fasterxml/jackson/annotation/JsonInclude$Value;"
+          },
+          {
+            "nme": "withValueInclusion",
+            "acc": 1,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonInclude$Include;)Lcom/fasterxml/jackson/annotation/JsonInclude$Value;"
+          },
+          {
+            "nme": "withValueFilter",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Class;)Lcom/fasterxml/jackson/annotation/JsonInclude$Value;",
+            "sig": "(Ljava/lang/Class<*>;)Lcom/fasterxml/jackson/annotation/JsonInclude$Value;"
+          },
+          {
+            "nme": "withContentFilter",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Class;)Lcom/fasterxml/jackson/annotation/JsonInclude$Value;",
+            "sig": "(Ljava/lang/Class<*>;)Lcom/fasterxml/jackson/annotation/JsonInclude$Value;"
+          },
+          {
+            "nme": "withContentInclusion",
+            "acc": 1,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonInclude$Include;)Lcom/fasterxml/jackson/annotation/JsonInclude$Value;"
+          },
+          {
+            "nme": "valueFor",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<Lcom/fasterxml/jackson/annotation/JsonInclude;>;"
+          },
+          {
+            "nme": "getValueInclusion",
+            "acc": 1,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonInclude$Include;"
+          },
+          {
+            "nme": "getContentInclusion",
+            "acc": 1,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonInclude$Include;"
+          },
+          {
+            "nme": "getValueFilter",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<*>;"
+          },
+          {
+            "nme": "getContentFilter",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<*>;"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": 1
+          },
+          {
+            "acc": 28,
+            "nme": "EMPTY",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonInclude$Value;"
+          },
+          {
+            "acc": 20,
+            "nme": "_valueInclusion",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonInclude$Include;"
+          },
+          {
+            "acc": 20,
+            "nme": "_contentInclusion",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonInclude$Include;"
+          },
+          {
+            "acc": 20,
+            "nme": "_valueFilter",
+            "dsc": "Ljava/lang/Class;",
+            "sig": "Ljava/lang/Class<*>;"
+          },
+          {
+            "acc": 20,
+            "nme": "_contentFilter",
+            "dsc": "Ljava/lang/Class;",
+            "sig": "Ljava/lang/Class<*>;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonIncludeProperties$Value.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/fasterxml/jackson/annotation/JsonIncludeProperties$Value",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(Ljava/util/Set;)V",
+            "sig": "(Ljava/util/Set<Ljava/lang/String;>;)V"
+          },
+          {
+            "nme": "from",
+            "acc": 9,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonIncludeProperties;)Lcom/fasterxml/jackson/annotation/JsonIncludeProperties$Value;"
+          },
+          {
+            "nme": "all",
+            "acc": 9,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonIncludeProperties$Value;"
+          },
+          {
+            "nme": "valueFor",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<Lcom/fasterxml/jackson/annotation/JsonIncludeProperties;>;"
+          },
+          {
+            "nme": "getIncluded",
+            "acc": 1,
+            "dsc": "()Ljava/util/Set;",
+            "sig": "()Ljava/util/Set<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "withOverrides",
+            "acc": 1,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonIncludeProperties$Value;)Lcom/fasterxml/jackson/annotation/JsonIncludeProperties$Value;"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "_equals",
+            "acc": 10,
+            "dsc": "(Ljava/util/Set;Ljava/util/Set;)Z",
+            "sig": "(Ljava/util/Set<Ljava/lang/String;>;Ljava/util/Set<Ljava/lang/String;>;)Z"
+          },
+          {
+            "nme": "_asSet",
+            "acc": 10,
+            "dsc": "([Ljava/lang/String;)Ljava/util/Set;",
+            "sig": "([Ljava/lang/String;)Ljava/util/Set<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": 1
+          },
+          {
+            "acc": 28,
+            "nme": "ALL",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonIncludeProperties$Value;"
+          },
+          {
+            "acc": 20,
+            "nme": "_included",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Ljava/lang/String;>;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonPropertyOrder.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonPropertyOrder",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/String;"
+          },
+          {
+            "nme": "alphabetic",
+            "acc": 1025,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonIgnoreType.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonIgnoreType",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonKey.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonKey",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonFormat.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonFormat",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "pattern",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "shape",
+            "acc": 1025,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;"
+          },
+          {
+            "nme": "locale",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "timezone",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "lenient",
+            "acc": 1025,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/OptBoolean;"
+          },
+          {
+            "nme": "with",
+            "acc": 1025,
+            "dsc": "()[Lcom/fasterxml/jackson/annotation/JsonFormat$Feature;"
+          },
+          {
+            "nme": "without",
+            "acc": 1025,
+            "dsc": "()[Lcom/fasterxml/jackson/annotation/JsonFormat$Feature;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "DEFAULT_LOCALE",
+            "dsc": "Ljava/lang/String;",
+            "val": "##default"
+          },
+          {
+            "acc": 25,
+            "nme": "DEFAULT_TIMEZONE",
+            "dsc": "Ljava/lang/String;",
+            "val": "##default"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonMerge.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonMerge",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/OptBoolean;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonClassDescription.class": {
+        "ver": 50,
+        "acc": 9729,
+        "nme": "com/fasterxml/jackson/annotation/JsonClassDescription",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Lcom/fasterxml/jackson/annotation/JacksonAnnotation;"
+          }
+        ]
+      },
+      "com/fasterxml/jackson/annotation/JsonAutoDetect$Value.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/fasterxml/jackson/annotation/JsonAutoDetect$Value",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;)V"
+          },
+          {
+            "nme": "defaultVisibility",
+            "acc": 9,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Value;"
+          },
+          {
+            "nme": "noOverrides",
+            "acc": 9,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Value;"
+          },
+          {
+            "nme": "from",
+            "acc": 9,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonAutoDetect;)Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Value;"
+          },
+          {
+            "nme": "construct",
+            "acc": 9,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/PropertyAccessor;Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;)Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Value;"
+          },
+          {
+            "nme": "construct",
+            "acc": 9,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;)Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Value;"
+          },
+          {
+            "nme": "withFieldVisibility",
+            "acc": 1,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;)Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Value;"
+          },
+          {
+            "nme": "withGetterVisibility",
+            "acc": 1,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;)Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Value;"
+          },
+          {
+            "nme": "withIsGetterVisibility",
+            "acc": 1,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;)Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Value;"
+          },
+          {
+            "nme": "withSetterVisibility",
+            "acc": 1,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;)Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Value;"
+          },
+          {
+            "nme": "withCreatorVisibility",
+            "acc": 1,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;)Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Value;"
+          },
+          {
+            "nme": "merge",
+            "acc": 9,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Value;Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Value;)Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Value;"
+          },
+          {
+            "nme": "withOverrides",
+            "acc": 1,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Value;)Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Value;"
+          },
+          {
+            "nme": "valueFor",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<Lcom/fasterxml/jackson/annotation/JsonAutoDetect;>;"
+          },
+          {
+            "nme": "getFieldVisibility",
+            "acc": 1,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"
+          },
+          {
+            "nme": "getGetterVisibility",
+            "acc": 1,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"
+          },
+          {
+            "nme": "getIsGetterVisibility",
+            "acc": 1,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"
+          },
+          {
+            "nme": "getSetterVisibility",
+            "acc": 1,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"
+          },
+          {
+            "nme": "getCreatorVisibility",
+            "acc": 1,
+            "dsc": "()Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"
+          },
+          {
+            "nme": "readResolve",
+            "acc": 4,
+            "dsc": "()Ljava/lang/Object;"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "_predefined",
+            "acc": 10,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;)Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Value;"
+          },
+          {
+            "nme": "_equals",
+            "acc": 10,
+            "dsc": "(Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Value;Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Value;)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": 1
+          },
+          {
+            "acc": 26,
+            "nme": "DEFAULT_FIELD_VISIBILITY",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"
+          },
+          {
+            "acc": 28,
+            "nme": "DEFAULT",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Value;"
+          },
+          {
+            "acc": 28,
+            "nme": "NO_OVERRIDES",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Value;"
+          },
+          {
+            "acc": 20,
+            "nme": "_fieldVisibility",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"
+          },
+          {
+            "acc": 20,
+            "nme": "_getterVisibility",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"
+          },
+          {
+            "acc": 20,
+            "nme": "_isGetterVisibility",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"
+          },
+          {
+            "acc": 20,
+            "nme": "_setterVisibility",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"
+          },
+          {
+            "acc": 20,
+            "nme": "_creatorVisibility",
+            "dsc": "Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;"
+          }
+        ]
+      }
+    }
+  }
+}

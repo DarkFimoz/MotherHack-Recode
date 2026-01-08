@@ -1,0 +1,1743 @@
+{
+  "md5": "5d12862dae12132bed843be32e0dec8e",
+  "sha2": "32aa3b264c4fd692636e6d35ca97dec2ee074994",
+  "sha256": "9d235d2b5b7f01d2102ec04b111348d48bd963e3cfd39f8075050046c86824c2",
+  "contents": {
+    "classes": {
+      "dev/redstones/mediaplayerinfo/impl/DummyMediaPlayerInfo.class": {
+        "ver": 61,
+        "acc": 49,
+        "nme": "dev/redstones/mediaplayerinfo/impl/DummyMediaPlayerInfo",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getMediaSessions",
+            "acc": 1,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Ldev/redstones/mediaplayerinfo/IMediaSession;>;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NotNull;"
+              }
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Ldev/redstones/mediaplayerinfo/impl/DummyMediaPlayerInfo;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lkotlin/Metadata;",
+            "vals": [
+              "mv",
+              [
+                1,
+                9,
+                0
+              ],
+              "k",
+              1,
+              "xi",
+              48,
+              "d1",
+              [
+                "\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\bÆ\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u000e\u0010\u0003\u001a\b\u0012\u0004\u0012\u00020\u00050\u0004H\u0016¨\u0006\u0006"
+              ],
+              "d2",
+              [
+                "Ldev/redstones/mediaplayerinfo/impl/DummyMediaPlayerInfo;",
+                "Ldev/redstones/mediaplayerinfo/MediaPlayerInfo;",
+                "()V",
+                "getMediaSessions",
+                "",
+                "Ldev/redstones/mediaplayerinfo/IMediaSession;",
+                "MediaPlayerInfo"
+              ]
+            ]
+          }
+        ]
+      },
+      "dev/redstones/mediaplayerinfo/MediaInfo$Companion.class": {
+        "ver": 61,
+        "acc": 49,
+        "nme": "dev/redstones/mediaplayerinfo/MediaInfo$Companion",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "serializer",
+            "acc": 17,
+            "dsc": "()Lkotlinx/serialization/KSerializer;",
+            "sig": "()Lkotlinx/serialization/KSerializer<Ldev/redstones/mediaplayerinfo/MediaInfo;>;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NotNull;"
+              }
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 4097,
+            "dsc": "(Lkotlin/jvm/internal/DefaultConstructorMarker;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lkotlin/Metadata;",
+            "vals": [
+              "mv",
+              [
+                1,
+                9,
+                0
+              ],
+              "k",
+              1,
+              "xi",
+              48,
+              "d1",
+              [
+                "\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u000f\u0010\u0003\u001a\b\u0012\u0004\u0012\u00020\u00050\u0004HÆ\u0001¨\u0006\u0006"
+              ],
+              "d2",
+              [
+                "Ldev/redstones/mediaplayerinfo/MediaInfo$Companion;",
+                "",
+                "()V",
+                "serializer",
+                "Lkotlinx/serialization/KSerializer;",
+                "Ldev/redstones/mediaplayerinfo/MediaInfo;",
+                "MediaPlayerInfo"
+              ]
+            ]
+          }
+        ]
+      },
+      "dev/redstones/mediaplayerinfo/impl/win/WindowsMediaPlayerInfo.class": {
+        "ver": 61,
+        "acc": 49,
+        "nme": "dev/redstones/mediaplayerinfo/impl/win/WindowsMediaPlayerInfo",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getMediaSessions",
+            "acc": 257,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Ldev/redstones/mediaplayerinfo/IMediaSession;>;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NotNull;"
+              }
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Ldev/redstones/mediaplayerinfo/impl/win/WindowsMediaPlayerInfo;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lkotlin/Metadata;",
+            "vals": [
+              "mv",
+              [
+                1,
+                9,
+                0
+              ],
+              "k",
+              1,
+              "xi",
+              48,
+              "d1",
+              [
+                "\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\bÆ\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u000f\u0010\u0003\u001a\b\u0012\u0004\u0012\u00020\u00050\u0004H ¨\u0006\u0006"
+              ],
+              "d2",
+              [
+                "Ldev/redstones/mediaplayerinfo/impl/win/WindowsMediaPlayerInfo;",
+                "Ldev/redstones/mediaplayerinfo/MediaPlayerInfo;",
+                "()V",
+                "getMediaSessions",
+                "",
+                "Ldev/redstones/mediaplayerinfo/IMediaSession;",
+                "MediaPlayerInfo"
+              ]
+            ]
+          }
+        ]
+      },
+      "dev/redstones/mediaplayerinfo/impl/linux/LinuxMediaPlayerInfo.class": {
+        "ver": 61,
+        "acc": 49,
+        "nme": "dev/redstones/mediaplayerinfo/impl/linux/LinuxMediaPlayerInfo",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getMediaSessions",
+            "acc": 1,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Ldev/redstones/mediaplayerinfo/IMediaSession;>;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NotNull;"
+              }
+            ]
+          },
+          {
+            "nme": "getProperty$MediaPlayerInfo",
+            "acc": 17,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;",
+            "sig": "<T:Ljava/lang/Object;>(Ljava/lang/String;Ljava/lang/String;)TT;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Ldev/redstones/mediaplayerinfo/impl/linux/LinuxMediaPlayerInfo;"
+          },
+          {
+            "acc": 26,
+            "nme": "conn",
+            "dsc": "Lorg/freedesktop/dbus/connections/impl/DBusConnection;"
+          },
+          {
+            "acc": 26,
+            "nme": "dbus",
+            "dsc": "Lorg/freedesktop/dbus/interfaces/DBus;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lkotlin/Metadata;",
+            "vals": [
+              "mv",
+              [
+                1,
+                9,
+                0
+              ],
+              "k",
+              1,
+              "xi",
+              48,
+              "d1",
+              [
+                "\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0004\bÆ\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u000e\u0010\b\u001a\b\u0012\u0004\u0012\u00020\n0\tH\u0016J%\u0010\u000b\u001a\u0002H\f\"\u0004\b\u0000\u0010\f2\u0006\u0010\r\u001a\u00020\u000e2\u0006\u0010\u000f\u001a\u00020\u000eH\u0000¢\u0006\u0004\b\u0010\u0010\u0011R\u0016\u0010\u0003\u001a\n \u0005*\u0004\u0018\u00010\u00040\u0004X\u0004¢\u0006\u0002\n\u0000R\u0016\u0010\u0006\u001a\n \u0005*\u0004\u0018\u00010\u00070\u0007X\u0004¢\u0006\u0002\n\u0000¨\u0006\u0012"
+              ],
+              "d2",
+              [
+                "Ldev/redstones/mediaplayerinfo/impl/linux/LinuxMediaPlayerInfo;",
+                "Ldev/redstones/mediaplayerinfo/MediaPlayerInfo;",
+                "()V",
+                "conn",
+                "Lorg/freedesktop/dbus/connections/impl/DBusConnection;",
+                "kotlin.jvm.PlatformType",
+                "dbus",
+                "Lorg/freedesktop/dbus/interfaces/DBus;",
+                "getMediaSessions",
+                "",
+                "Ldev/redstones/mediaplayerinfo/IMediaSession;",
+                "getProperty",
+                "T",
+                "owner",
+                "",
+                "property",
+                "getProperty$MediaPlayerInfo",
+                "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;",
+                "MediaPlayerInfo"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lkotlin/jvm/internal/SourceDebugExtension;",
+            "vals": [
+              "value",
+              [
+                "SMAP\nLinuxMediaPlayerInfo.kt\nKotlin\n*S Kotlin\n*F\n+ 1 LinuxMediaPlayerInfo.kt\ndev/redstones/mediaplayerinfo/impl/linux/LinuxMediaPlayerInfo\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,30:1\n3792#2:31\n4307#2,2:32\n1549#3:34\n1620#3,3:35\n766#3:38\n857#3,2:39\n*S KotlinDebug\n*F\n+ 1 LinuxMediaPlayerInfo.kt\ndev/redstones/mediaplayerinfo/impl/linux/LinuxMediaPlayerInfo\n*L\n19#1:31\n19#1:32,2\n20#1:34\n20#1:35,3\n21#1:38\n21#1:39,2\n*E\n"
+              ]
+            ]
+          }
+        ]
+      },
+      "dev/redstones/mediaplayerinfo/impl/linux/dbus/Player$PropertyMetadataType.class": {
+        "ver": 61,
+        "acc": 1537,
+        "nme": "dev/redstones/mediaplayerinfo/impl/linux/dbus/Player$PropertyMetadataType",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lkotlin/Metadata;",
+            "vals": [
+              "mv",
+              [
+                1,
+                9,
+                0
+              ],
+              "k",
+              1,
+              "xi",
+              48,
+              "d1",
+              [
+                "\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010$\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0000\bf\u0018\u00002\u001e\u0012\u001a\u0012\u0018\u0012\u0006\u0012\u0004\u0018\u00010\u0003\u0012\n\u0012\b\u0012\u0002\b\u0003\u0018\u00010\u0004\u0018\u00010\u00020\u0001¨\u0006\u0005"
+              ],
+              "d2",
+              [
+                "Ldev/redstones/mediaplayerinfo/impl/linux/dbus/Player$PropertyMetadataType;",
+                "Lorg/freedesktop/dbus/TypeRef;",
+                "",
+                "",
+                "Lorg/freedesktop/dbus/types/Variant;",
+                "MediaPlayerInfo"
+              ]
+            ]
+          }
+        ]
+      },
+      "dev/redstones/mediaplayerinfo/IMediaSession.class": {
+        "ver": 61,
+        "acc": 1537,
+        "nme": "dev/redstones/mediaplayerinfo/IMediaSession",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getOwner",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NotNull;"
+              }
+            ]
+          },
+          {
+            "nme": "getMedia",
+            "acc": 1025,
+            "dsc": "()Ldev/redstones/mediaplayerinfo/MediaInfo;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NotNull;"
+              }
+            ]
+          },
+          {
+            "nme": "play",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "pause",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "playPause",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "stop",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "next",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "previous",
+            "acc": 1025,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lkotlin/Metadata;",
+            "vals": [
+              "mv",
+              [
+                1,
+                9,
+                0
+              ],
+              "k",
+              1,
+              "xi",
+              48,
+              "d1",
+              [
+                "\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0006\bf\u0018\u00002\u00020\u0001J\b\u0010\n\u001a\u00020\u000bH&J\b\u0010\f\u001a\u00020\u000bH&J\b\u0010\r\u001a\u00020\u000bH&J\b\u0010\u000e\u001a\u00020\u000bH&J\b\u0010\u000f\u001a\u00020\u000bH&J\b\u0010\u0010\u001a\u00020\u000bH&R\u0012\u0010\u0002\u001a\u00020\u0003X¦\u0004¢\u0006\u0006\u001a\u0004\b\u0004\u0010\u0005R\u0012\u0010\u0006\u001a\u00020\u0007X¦\u0004¢\u0006\u0006\u001a\u0004\b\b\u0010\t¨\u0006\u0011"
+              ],
+              "d2",
+              [
+                "Ldev/redstones/mediaplayerinfo/IMediaSession;",
+                "",
+                "media",
+                "Ldev/redstones/mediaplayerinfo/MediaInfo;",
+                "getMedia",
+                "()Ldev/redstones/mediaplayerinfo/MediaInfo;",
+                "owner",
+                "",
+                "getOwner",
+                "()Ljava/lang/String;",
+                "next",
+                "",
+                "pause",
+                "play",
+                "playPause",
+                "previous",
+                "stop",
+                "MediaPlayerInfo"
+              ]
+            ]
+          }
+        ]
+      },
+      "dev/redstones/mediaplayerinfo/MediaPlayerInfoKt.class": {
+        "ver": 61,
+        "acc": 49,
+        "nme": "dev/redstones/mediaplayerinfo/MediaPlayerInfoKt",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getSystemMediaPlayerInfo",
+            "acc": 25,
+            "dsc": "()Ldev/redstones/mediaplayerinfo/MediaPlayerInfo;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NotNull;"
+              }
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "systemMediaPlayerInfo",
+            "dsc": "Ldev/redstones/mediaplayerinfo/MediaPlayerInfo;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lkotlin/Metadata;",
+            "vals": [
+              "mv",
+              [
+                1,
+                9,
+                0
+              ],
+              "k",
+              2,
+              "xi",
+              48,
+              "d1",
+              [
+                "\u0000\n\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\"\u0011\u0010\u0000\u001a\u00020\u0001¢\u0006\b\n\u0000\u001a\u0004\b\u0002\u0010\u0003¨\u0006\u0004"
+              ],
+              "d2",
+              [
+                "systemMediaPlayerInfo",
+                "Ldev/redstones/mediaplayerinfo/MediaPlayerInfo;",
+                "getSystemMediaPlayerInfo",
+                "()Ldev/redstones/mediaplayerinfo/MediaPlayerInfo;",
+                "MediaPlayerInfo"
+              ]
+            ]
+          }
+        ]
+      },
+      "dev/redstones/mediaplayerinfo/MediaInfo.class": {
+        "ver": 61,
+        "acc": 49,
+        "nme": "dev/redstones/mediaplayerinfo/MediaInfo",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;[BJJZ)V"
+          },
+          {
+            "nme": "getTitle",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NotNull;"
+              }
+            ]
+          },
+          {
+            "nme": "getArtist",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NotNull;"
+              }
+            ]
+          },
+          {
+            "nme": "getArtworkPng",
+            "acc": 17,
+            "dsc": "()[B",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NotNull;"
+              }
+            ]
+          },
+          {
+            "nme": "getPosition",
+            "acc": 17,
+            "dsc": "()J"
+          },
+          {
+            "nme": "getDuration",
+            "acc": 17,
+            "dsc": "()J"
+          },
+          {
+            "nme": "getPlaying",
+            "acc": 17,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getArtwork",
+            "acc": 17,
+            "dsc": "()Ljava/awt/image/BufferedImage;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NotNull;"
+              }
+            ]
+          },
+          {
+            "nme": "component1",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NotNull;"
+              }
+            ]
+          },
+          {
+            "nme": "component2",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NotNull;"
+              }
+            ]
+          },
+          {
+            "nme": "component3",
+            "acc": 17,
+            "dsc": "()[B",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NotNull;"
+              }
+            ]
+          },
+          {
+            "nme": "component4",
+            "acc": 17,
+            "dsc": "()J"
+          },
+          {
+            "nme": "component5",
+            "acc": 17,
+            "dsc": "()J"
+          },
+          {
+            "nme": "component6",
+            "acc": 17,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "copy",
+            "acc": 17,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;[BJJZ)Ldev/redstones/mediaplayerinfo/MediaInfo;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NotNull;"
+              }
+            ]
+          },
+          {
+            "nme": "copy$default",
+            "acc": 4105,
+            "dsc": "(Ldev/redstones/mediaplayerinfo/MediaInfo;Ljava/lang/String;Ljava/lang/String;[BJJZILjava/lang/Object;)Ldev/redstones/mediaplayerinfo/MediaInfo;"
+          },
+          {
+            "nme": "write$Self$MediaPlayerInfo",
+            "acc": 4121,
+            "dsc": "(Ldev/redstones/mediaplayerinfo/MediaInfo;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V",
+            "vanns": [
+              {
+                "dsc": "Lkotlin/jvm/JvmStatic;"
+              }
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 135169,
+            "dsc": "(ILjava/lang/String;Ljava/lang/String;[BJJZLkotlinx/serialization/internal/SerializationConstructorMarker;)V",
+            "vanns": [
+              {
+                "dsc": "Lkotlin/Deprecated;",
+                "vals": [
+                  "message",
+                  "This synthesized declaration should not be used directly",
+                  "replaceWith",
+                  {
+                    "desc": "Lkotlin/ReplaceWith;",
+                    "values": [
+                      "expression",
+                      "",
+                      "imports",
+                      []
+                    ],
+                    "api": 589824
+                  },
+                  "level",
+                  [
+                    "Lkotlin/DeprecationLevel;",
+                    "HIDDEN"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "Companion",
+            "dsc": "Ldev/redstones/mediaplayerinfo/MediaInfo$Companion;"
+          },
+          {
+            "acc": 18,
+            "nme": "title",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "artist",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "artworkPng",
+            "dsc": "[B"
+          },
+          {
+            "acc": 18,
+            "nme": "position",
+            "dsc": "J"
+          },
+          {
+            "acc": 18,
+            "nme": "duration",
+            "dsc": "J"
+          },
+          {
+            "acc": 18,
+            "nme": "playing",
+            "dsc": "Z"
+          },
+          {
+            "acc": 18,
+            "nme": "artwork$delegate",
+            "dsc": "Lkotlin/Lazy;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lkotlinx/serialization/Serializable;"
+          },
+          {
+            "dsc": "Lkotlin/Metadata;",
+            "vals": [
+              "mv",
+              [
+                1,
+                9,
+                0
+              ],
+              "k",
+              1,
+              "xi",
+              48,
+              "d1",
+              [
+                "\u0000R\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\t\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0018\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\b\b\u0018\u0000 62\u00020\u0001:\u000256BO\b\u0011\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\b\u0010\u0004\u001a\u0004\u0018\u00010\u0005\u0012\b\u0010\u0006\u001a\u0004\u0018\u00010\u0005\u0012\b\u0010\u0007\u001a\u0004\u0018\u00010\b\u0012\u0006\u0010\t\u001a\u00020\n\u0012\u0006\u0010\u000b\u001a\u00020\n\u0012\u0006\u0010\f\u001a\u00020\r\u0012\b\u0010\u000e\u001a\u0004\u0018\u00010\u000f¢\u0006\u0002\u0010\u0010B5\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\u0006\u0010\u0007\u001a\u00020\b\u0012\u0006\u0010\t\u001a\u00020\n\u0012\u0006\u0010\u000b\u001a\u00020\n\u0012\u0006\u0010\f\u001a\u00020\r¢\u0006\u0002\u0010\u0011J\t\u0010\"\u001a\u00020\u0005HÆ\u0003J\t\u0010#\u001a\u00020\u0005HÆ\u0003J\t\u0010$\u001a\u00020\bHÆ\u0003J\t\u0010%\u001a\u00020\nHÆ\u0003J\t\u0010&\u001a\u00020\nHÆ\u0003J\t\u0010'\u001a\u00020\rHÆ\u0003JE\u0010(\u001a\u00020\u00002\b\b\u0002\u0010\u0004\u001a\u00020\u00052\b\b\u0002\u0010\u0006\u001a\u00020\u00052\b\b\u0002\u0010\u0007\u001a\u00020\b2\b\b\u0002\u0010\t\u001a\u00020\n2\b\b\u0002\u0010\u000b\u001a\u00020\n2\b\b\u0002\u0010\f\u001a\u00020\rHÆ\u0001J\u0013\u0010)\u001a\u00020\r2\b\u0010*\u001a\u0004\u0018\u00010\u0001H\u0002J\b\u0010+\u001a\u00020\u0003H\u0016J\b\u0010,\u001a\u00020\u0005H\u0016J&\u0010-\u001a\u00020.2\u0006\u0010/\u001a\u00020\u00002\u0006\u00100\u001a\u0002012\u0006\u00102\u001a\u000203HÁ\u0001¢\u0006\u0002\b4R\u0011\u0010\u0006\u001a\u00020\u0005¢\u0006\b\n\u0000\u001a\u0004\b\u0012\u0010\u0013R\u001d\u0010\u0014\u001a\u0004\u0018\u00010\u00158FX\u0002¢\u0006\f\n\u0004\b\u0018\u0010\u0019\u001a\u0004\b\u0016\u0010\u0017R\u0011\u0010\u0007\u001a\u00020\b¢\u0006\b\n\u0000\u001a\u0004\b\u001a\u0010\u001bR\u0011\u0010\u000b\u001a\u00020\n¢\u0006\b\n\u0000\u001a\u0004\b\u001c\u0010\u001dR\u0011\u0010\f\u001a\u00020\r¢\u0006\b\n\u0000\u001a\u0004\b\u001e\u0010\u001fR\u0011\u0010\t\u001a\u00020\n¢\u0006\b\n\u0000\u001a\u0004\b \u0010\u001dR\u0011\u0010\u0004\u001a\u00020\u0005¢\u0006\b\n\u0000\u001a\u0004\b!\u0010\u0013¨\u00067"
+              ],
+              "d2",
+              [
+                "Ldev/redstones/mediaplayerinfo/MediaInfo;",
+                "",
+                "seen1",
+                "",
+                "title",
+                "",
+                "artist",
+                "artworkPng",
+                "",
+                "position",
+                "",
+                "duration",
+                "playing",
+                "",
+                "serializationConstructorMarker",
+                "Lkotlinx/serialization/internal/SerializationConstructorMarker;",
+                "(ILjava/lang/String;Ljava/lang/String;[BJJZLkotlinx/serialization/internal/SerializationConstructorMarker;)V",
+                "(Ljava/lang/String;Ljava/lang/String;[BJJZ)V",
+                "getArtist",
+                "()Ljava/lang/String;",
+                "artwork",
+                "Ljava/awt/image/BufferedImage;",
+                "getArtwork",
+                "()Ljava/awt/image/BufferedImage;",
+                "artwork$delegate",
+                "Lkotlin/Lazy;",
+                "getArtworkPng",
+                "()[B",
+                "getDuration",
+                "()J",
+                "getPlaying",
+                "()Z",
+                "getPosition",
+                "getTitle",
+                "component1",
+                "component2",
+                "component3",
+                "component4",
+                "component5",
+                "component6",
+                "copy",
+                "equals",
+                "other",
+                "hashCode",
+                "toString",
+                "write$Self",
+                "",
+                "self",
+                "output",
+                "Lkotlinx/serialization/encoding/CompositeEncoder;",
+                "serialDesc",
+                "Lkotlinx/serialization/descriptors/SerialDescriptor;",
+                "write$Self$MediaPlayerInfo",
+                "$serializer",
+                "Companion",
+                "MediaPlayerInfo"
+              ]
+            ]
+          }
+        ]
+      },
+      "dev/redstones/mediaplayerinfo/impl/linux/dbus/Player.class": {
+        "ver": 61,
+        "acc": 1537,
+        "nme": "dev/redstones/mediaplayerinfo/impl/linux/dbus/Player",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "Play",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "Pause",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "PlayPause",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "Stop",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "Next",
+            "acc": 1025,
+            "dsc": "()V"
+          },
+          {
+            "nme": "Previous",
+            "acc": 1025,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lorg/freedesktop/dbus/annotations/DBusInterfaceName;",
+            "vals": [
+              "value",
+              "org.mpris.MediaPlayer2.Player"
+            ]
+          },
+          {
+            "dsc": "Lorg/freedesktop/dbus/annotations/DBusProperties;",
+            "vals": [
+              "value",
+              [
+                {
+                  "desc": "Lorg/freedesktop/dbus/annotations/DBusProperty;",
+                  "values": [
+                    "name",
+                    "Metadata",
+                    "type",
+                    {
+                      "itrlNme": "dev/redstones/mediaplayerinfo/impl/linux/dbus/Player$PropertyMetadataType"
+                    },
+                    "access",
+                    [
+                      "Lorg/freedesktop/dbus/annotations/DBusProperty$Access;",
+                      "READ"
+                    ]
+                  ],
+                  "api": 589824
+                },
+                {
+                  "desc": "Lorg/freedesktop/dbus/annotations/DBusProperty;",
+                  "values": [
+                    "name",
+                    "PlaybackStatus",
+                    "type",
+                    {
+                      "itrlNme": "java/lang/String"
+                    },
+                    "access",
+                    [
+                      "Lorg/freedesktop/dbus/annotations/DBusProperty$Access;",
+                      "READ"
+                    ]
+                  ],
+                  "api": 589824
+                },
+                {
+                  "desc": "Lorg/freedesktop/dbus/annotations/DBusProperty;",
+                  "values": [
+                    "name",
+                    "LoopStatus",
+                    "type",
+                    {
+                      "itrlNme": "java/lang/String"
+                    },
+                    "access",
+                    [
+                      "Lorg/freedesktop/dbus/annotations/DBusProperty$Access;",
+                      "READ_WRITE"
+                    ]
+                  ],
+                  "api": 589824
+                },
+                {
+                  "desc": "Lorg/freedesktop/dbus/annotations/DBusProperty;",
+                  "values": [
+                    "name",
+                    "Volume",
+                    "type",
+                    {
+                      "itrlNme": "D"
+                    },
+                    "access",
+                    [
+                      "Lorg/freedesktop/dbus/annotations/DBusProperty$Access;",
+                      "READ_WRITE"
+                    ]
+                  ],
+                  "api": 589824
+                },
+                {
+                  "desc": "Lorg/freedesktop/dbus/annotations/DBusProperty;",
+                  "values": [
+                    "name",
+                    "Shuffle",
+                    "type",
+                    {
+                      "itrlNme": "D"
+                    },
+                    "access",
+                    [
+                      "Lorg/freedesktop/dbus/annotations/DBusProperty$Access;",
+                      "READ_WRITE"
+                    ]
+                  ],
+                  "api": 589824
+                },
+                {
+                  "desc": "Lorg/freedesktop/dbus/annotations/DBusProperty;",
+                  "values": [
+                    "name",
+                    "Position",
+                    "type",
+                    {
+                      "itrlNme": "java/lang/Integer"
+                    },
+                    "access",
+                    [
+                      "Lorg/freedesktop/dbus/annotations/DBusProperty$Access;",
+                      "READ"
+                    ]
+                  ],
+                  "api": 589824
+                },
+                {
+                  "desc": "Lorg/freedesktop/dbus/annotations/DBusProperty;",
+                  "values": [
+                    "name",
+                    "Rate",
+                    "type",
+                    {
+                      "itrlNme": "D"
+                    },
+                    "access",
+                    [
+                      "Lorg/freedesktop/dbus/annotations/DBusProperty$Access;",
+                      "READ_WRITE"
+                    ]
+                  ],
+                  "api": 589824
+                },
+                {
+                  "desc": "Lorg/freedesktop/dbus/annotations/DBusProperty;",
+                  "values": [
+                    "name",
+                    "MinimumRate",
+                    "type",
+                    {
+                      "itrlNme": "D"
+                    },
+                    "access",
+                    [
+                      "Lorg/freedesktop/dbus/annotations/DBusProperty$Access;",
+                      "READ_WRITE"
+                    ]
+                  ],
+                  "api": 589824
+                },
+                {
+                  "desc": "Lorg/freedesktop/dbus/annotations/DBusProperty;",
+                  "values": [
+                    "name",
+                    "MaximumRate",
+                    "type",
+                    {
+                      "itrlNme": "D"
+                    },
+                    "access",
+                    [
+                      "Lorg/freedesktop/dbus/annotations/DBusProperty$Access;",
+                      "READ_WRITE"
+                    ]
+                  ],
+                  "api": 589824
+                },
+                {
+                  "desc": "Lorg/freedesktop/dbus/annotations/DBusProperty;",
+                  "values": [
+                    "name",
+                    "CanControl",
+                    "type",
+                    {
+                      "itrlNme": "Z"
+                    },
+                    "access",
+                    [
+                      "Lorg/freedesktop/dbus/annotations/DBusProperty$Access;",
+                      "READ"
+                    ]
+                  ],
+                  "api": 589824
+                },
+                {
+                  "desc": "Lorg/freedesktop/dbus/annotations/DBusProperty;",
+                  "values": [
+                    "name",
+                    "CanPlay",
+                    "type",
+                    {
+                      "itrlNme": "Z"
+                    },
+                    "access",
+                    [
+                      "Lorg/freedesktop/dbus/annotations/DBusProperty$Access;",
+                      "READ"
+                    ]
+                  ],
+                  "api": 589824
+                },
+                {
+                  "desc": "Lorg/freedesktop/dbus/annotations/DBusProperty;",
+                  "values": [
+                    "name",
+                    "CanPause",
+                    "type",
+                    {
+                      "itrlNme": "Z"
+                    },
+                    "access",
+                    [
+                      "Lorg/freedesktop/dbus/annotations/DBusProperty$Access;",
+                      "READ"
+                    ]
+                  ],
+                  "api": 589824
+                },
+                {
+                  "desc": "Lorg/freedesktop/dbus/annotations/DBusProperty;",
+                  "values": [
+                    "name",
+                    "CanSeek",
+                    "type",
+                    {
+                      "itrlNme": "Z"
+                    },
+                    "access",
+                    [
+                      "Lorg/freedesktop/dbus/annotations/DBusProperty$Access;",
+                      "READ"
+                    ]
+                  ],
+                  "api": 589824
+                }
+              ]
+            ]
+          },
+          {
+            "dsc": "Lkotlin/Metadata;",
+            "vals": [
+              "mv",
+              [
+                1,
+                9,
+                0
+              ],
+              "k",
+              1,
+              "xi",
+              48,
+              "d1",
+              [
+                "\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0007\bg\u0018\u00002\u00020\u0001:\u0001\tJ\b\u0010\u0002\u001a\u00020\u0003H&J\b\u0010\u0004\u001a\u00020\u0003H&J\b\u0010\u0005\u001a\u00020\u0003H&J\b\u0010\u0006\u001a\u00020\u0003H&J\b\u0010\u0007\u001a\u00020\u0003H&J\b\u0010\b\u001a\u00020\u0003H&¨\u0006\n"
+              ],
+              "d2",
+              [
+                "Ldev/redstones/mediaplayerinfo/impl/linux/dbus/Player;",
+                "Lorg/freedesktop/dbus/interfaces/DBusInterface;",
+                "Next",
+                "",
+                "Pause",
+                "Play",
+                "PlayPause",
+                "Previous",
+                "Stop",
+                "PropertyMetadataType",
+                "MediaPlayerInfo"
+              ]
+            ]
+          }
+        ]
+      },
+      "dev/redstones/mediaplayerinfo/MediaPlayerInfo.class": {
+        "ver": 61,
+        "acc": 1537,
+        "nme": "dev/redstones/mediaplayerinfo/MediaPlayerInfo",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getMediaSessions",
+            "acc": 1025,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Ldev/redstones/mediaplayerinfo/IMediaSession;>;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NotNull;"
+              }
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "Instance",
+            "dsc": "Ldev/redstones/mediaplayerinfo/MediaPlayerInfo$Instance;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lkotlin/Metadata;",
+            "vals": [
+              "mv",
+              [
+                1,
+                9,
+                0
+              ],
+              "k",
+              1,
+              "xi",
+              48,
+              "d1",
+              [
+                "\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\bf\u0018\u0000 \u00052\u00020\u0001:\u0001\u0005J\u000e\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00040\u0003H&¨\u0006\u0006"
+              ],
+              "d2",
+              [
+                "Ldev/redstones/mediaplayerinfo/MediaPlayerInfo;",
+                "",
+                "getMediaSessions",
+                "",
+                "Ldev/redstones/mediaplayerinfo/IMediaSession;",
+                "Instance",
+                "MediaPlayerInfo"
+              ]
+            ]
+          }
+        ]
+      },
+      "dev/redstones/mediaplayerinfo/MediaInfo$1.class": {
+        "ver": 61,
+        "acc": 48,
+        "nme": "dev/redstones/mediaplayerinfo/MediaInfo$1",
+        "super": "kotlin/jvm/internal/Lambda",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ldev/redstones/mediaplayerinfo/MediaInfo;)V"
+          },
+          {
+            "nme": "invoke",
+            "acc": 17,
+            "dsc": "()Ljava/awt/image/BufferedImage;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "invoke",
+            "acc": 4161,
+            "dsc": "()Ljava/lang/Object;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Ldev/redstones/mediaplayerinfo/MediaInfo;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lkotlin/Metadata;",
+            "vals": [
+              "mv",
+              [
+                1,
+                9,
+                0
+              ],
+              "k",
+              3,
+              "xi",
+              48,
+              "d1",
+              [
+                "\u0000\b\n\u0000\n\u0002\u0018\u0002\n\u0000\u0010\u0000\u001a\u0004\u0018\u00010\u0001H\n¢\u0006\u0002\b\u0002"
+              ],
+              "d2",
+              [
+                "<anonymous>",
+                "Ljava/awt/image/BufferedImage;",
+                "invoke"
+              ]
+            ]
+          }
+        ]
+      },
+      "dev/redstones/mediaplayerinfo/MediaInfo$$serializer.class": {
+        "ver": 61,
+        "acc": 131121,
+        "nme": "dev/redstones/mediaplayerinfo/MediaInfo$$serializer",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "typeParametersSerializers",
+            "acc": 1,
+            "dsc": "()[Lkotlinx/serialization/KSerializer;",
+            "sig": "()[Lkotlinx/serialization/KSerializer<*>;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NotNull;"
+              }
+            ]
+          },
+          {
+            "nme": "getDescriptor",
+            "acc": 1,
+            "dsc": "()Lkotlinx/serialization/descriptors/SerialDescriptor;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NotNull;"
+              }
+            ]
+          },
+          {
+            "nme": "childSerializers",
+            "acc": 1,
+            "dsc": "()[Lkotlinx/serialization/KSerializer;",
+            "sig": "()[Lkotlinx/serialization/KSerializer<*>;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NotNull;"
+              }
+            ]
+          },
+          {
+            "nme": "deserialize",
+            "acc": 1,
+            "dsc": "(Lkotlinx/serialization/encoding/Decoder;)Ldev/redstones/mediaplayerinfo/MediaInfo;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NotNull;"
+              }
+            ]
+          },
+          {
+            "nme": "serialize",
+            "acc": 1,
+            "dsc": "(Lkotlinx/serialization/encoding/Encoder;Ldev/redstones/mediaplayerinfo/MediaInfo;)V"
+          },
+          {
+            "nme": "deserialize",
+            "acc": 4161,
+            "dsc": "(Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "serialize",
+            "acc": 4161,
+            "dsc": "(Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Ldev/redstones/mediaplayerinfo/MediaInfo$$serializer;"
+          },
+          {
+            "acc": 4122,
+            "nme": "descriptor",
+            "dsc": "Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lkotlin/Deprecated;",
+            "vals": [
+              "message",
+              "This synthesized declaration should not be used directly",
+              "replaceWith",
+              {
+                "desc": "Lkotlin/ReplaceWith;",
+                "values": [
+                  "expression",
+                  "",
+                  "imports",
+                  []
+                ],
+                "api": 589824
+              },
+              "level",
+              [
+                "Lkotlin/DeprecationLevel;",
+                "HIDDEN"
+              ]
+            ]
+          },
+          {
+            "dsc": "Lkotlin/Metadata;",
+            "vals": [
+              "mv",
+              [
+                1,
+                9,
+                0
+              ],
+              "k",
+              1,
+              "xi",
+              48,
+              "d1",
+              [
+                "\u00006\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0011\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\bÇ\u0002\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0003J\u0018\u0010\b\u001a\f\u0012\b\u0012\u0006\u0012\u0002\b\u00030\n0\tHÖ\u0001¢\u0006\u0002\u0010\u000bJ\u0011\u0010\f\u001a\u00020\u00022\u0006\u0010\r\u001a\u00020\u000eHÖ\u0001J\u0019\u0010\u000f\u001a\u00020\u00102\u0006\u0010\u0011\u001a\u00020\u00122\u0006\u0010\u0013\u001a\u00020\u0002HÖ\u0001R\u0014\u0010\u0004\u001a\u00020\u00058VXÖ\u0005¢\u0006\u0006\u001a\u0004\b\u0006\u0010\u0007¨\u0006\u0014"
+              ],
+              "d2",
+              [
+                "dev/redstones/mediaplayerinfo/MediaInfo.$serializer",
+                "Lkotlinx/serialization/internal/GeneratedSerializer;",
+                "Ldev/redstones/mediaplayerinfo/MediaInfo;",
+                "()V",
+                "descriptor",
+                "Lkotlinx/serialization/descriptors/SerialDescriptor;",
+                "getDescriptor",
+                "()Lkotlinx/serialization/descriptors/SerialDescriptor;",
+                "childSerializers",
+                "",
+                "Lkotlinx/serialization/KSerializer;",
+                "()[Lkotlinx/serialization/KSerializer;",
+                "deserialize",
+                "decoder",
+                "Lkotlinx/serialization/encoding/Decoder;",
+                "serialize",
+                "",
+                "encoder",
+                "Lkotlinx/serialization/encoding/Encoder;",
+                "value",
+                "MediaPlayerInfo"
+              ]
+            ]
+          }
+        ]
+      },
+      "dev/redstones/mediaplayerinfo/impl/win/WindowsMediaSession.class": {
+        "ver": 61,
+        "acc": 49,
+        "nme": "dev/redstones/mediaplayerinfo/impl/win/WindowsMediaSession",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ldev/redstones/mediaplayerinfo/MediaInfo;Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "getMedia",
+            "acc": 1,
+            "dsc": "()Ldev/redstones/mediaplayerinfo/MediaInfo;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NotNull;"
+              }
+            ]
+          },
+          {
+            "nme": "getOwner",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NotNull;"
+              }
+            ]
+          },
+          {
+            "nme": "play",
+            "acc": 257,
+            "dsc": "()V"
+          },
+          {
+            "nme": "pause",
+            "acc": 257,
+            "dsc": "()V"
+          },
+          {
+            "nme": "playPause",
+            "acc": 257,
+            "dsc": "()V"
+          },
+          {
+            "nme": "stop",
+            "acc": 257,
+            "dsc": "()V"
+          },
+          {
+            "nme": "next",
+            "acc": 257,
+            "dsc": "()V"
+          },
+          {
+            "nme": "previous",
+            "acc": 257,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "media",
+            "dsc": "Ldev/redstones/mediaplayerinfo/MediaInfo;"
+          },
+          {
+            "acc": 18,
+            "nme": "owner",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "index",
+            "dsc": "I"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lkotlin/Metadata;",
+            "vals": [
+              "mv",
+              [
+                1,
+                9,
+                0
+              ],
+              "k",
+              1,
+              "xi",
+              48,
+              "d1",
+              [
+                "\u0000&\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\b\n\u0002\b\u0006\n\u0002\u0010\u0002\n\u0002\b\u0006\u0018\u00002\u00020\u0001B\u001d\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007¢\u0006\u0002\u0010\bJ\t\u0010\r\u001a\u00020\u000eH J\t\u0010\u000f\u001a\u00020\u000eH J\t\u0010\u0010\u001a\u00020\u000eH J\t\u0010\u0011\u001a\u00020\u000eH J\t\u0010\u0012\u001a\u00020\u000eH J\t\u0010\u0013\u001a\u00020\u000eH R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\b\n\u0000\u001a\u0004\b\t\u0010\nR\u0014\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u000b\u0010\f¨\u0006\u0014"
+              ],
+              "d2",
+              [
+                "Ldev/redstones/mediaplayerinfo/impl/win/WindowsMediaSession;",
+                "Ldev/redstones/mediaplayerinfo/IMediaSession;",
+                "media",
+                "Ldev/redstones/mediaplayerinfo/MediaInfo;",
+                "owner",
+                "",
+                "index",
+                "",
+                "(Ldev/redstones/mediaplayerinfo/MediaInfo;Ljava/lang/String;I)V",
+                "getMedia",
+                "()Ldev/redstones/mediaplayerinfo/MediaInfo;",
+                "getOwner",
+                "()Ljava/lang/String;",
+                "next",
+                "",
+                "pause",
+                "play",
+                "playPause",
+                "previous",
+                "stop",
+                "MediaPlayerInfo"
+              ]
+            ]
+          }
+        ]
+      },
+      "dev/redstones/mediaplayerinfo/impl/linux/LinuxMediaSession.class": {
+        "ver": 61,
+        "acc": 49,
+        "nme": "dev/redstones/mediaplayerinfo/impl/linux/LinuxMediaSession",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ldev/redstones/mediaplayerinfo/impl/linux/dbus/Player;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "getOwner",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NotNull;"
+              }
+            ]
+          },
+          {
+            "nme": "getMedia",
+            "acc": 1,
+            "dsc": "()Ldev/redstones/mediaplayerinfo/MediaInfo;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NotNull;"
+              }
+            ]
+          },
+          {
+            "nme": "play",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "pause",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "playPause",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "stop",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "next",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "previous",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "generateMediaInfo",
+            "acc": 18,
+            "dsc": "()Ldev/redstones/mediaplayerinfo/MediaInfo;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "dbus",
+            "dsc": "Ldev/redstones/mediaplayerinfo/impl/linux/dbus/Player;"
+          },
+          {
+            "acc": 18,
+            "nme": "owner",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "media",
+            "dsc": "Ldev/redstones/mediaplayerinfo/MediaInfo;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lkotlin/Metadata;",
+            "vals": [
+              "mv",
+              [
+                1,
+                9,
+                0
+              ],
+              "k",
+              1,
+              "xi",
+              48,
+              "d1",
+              [
+                "\u0000(\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\u0002\n\u0002\b\u0006\u0018\u00002\u00020\u0001B\u0015\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005¢\u0006\u0002\u0010\u0006J\b\u0010\r\u001a\u00020\bH\u0002J\b\u0010\u000e\u001a\u00020\u000fH\u0016J\b\u0010\u0010\u001a\u00020\u000fH\u0016J\b\u0010\u0011\u001a\u00020\u000fH\u0016J\b\u0010\u0012\u001a\u00020\u000fH\u0016J\b\u0010\u0013\u001a\u00020\u000fH\u0016J\b\u0010\u0014\u001a\u00020\u000fH\u0016R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\b\n\u0000\u001a\u0004\b\t\u0010\nR\u0014\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u000b\u0010\f¨\u0006\u0015"
+              ],
+              "d2",
+              [
+                "Ldev/redstones/mediaplayerinfo/impl/linux/LinuxMediaSession;",
+                "Ldev/redstones/mediaplayerinfo/IMediaSession;",
+                "dbus",
+                "Ldev/redstones/mediaplayerinfo/impl/linux/dbus/Player;",
+                "owner",
+                "",
+                "(Ldev/redstones/mediaplayerinfo/impl/linux/dbus/Player;Ljava/lang/String;)V",
+                "media",
+                "Ldev/redstones/mediaplayerinfo/MediaInfo;",
+                "getMedia",
+                "()Ldev/redstones/mediaplayerinfo/MediaInfo;",
+                "getOwner",
+                "()Ljava/lang/String;",
+                "generateMediaInfo",
+                "next",
+                "",
+                "pause",
+                "play",
+                "playPause",
+                "previous",
+                "stop",
+                "MediaPlayerInfo"
+              ]
+            ]
+          }
+        ]
+      },
+      "dev/redstones/mediaplayerinfo/MediaPlayerInfo$Instance.class": {
+        "ver": 61,
+        "acc": 49,
+        "nme": "dev/redstones/mediaplayerinfo/MediaPlayerInfo$Instance",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getMediaSessions",
+            "acc": 1,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Ldev/redstones/mediaplayerinfo/IMediaSession;>;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NotNull;"
+              }
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4120,
+            "nme": "$$INSTANCE",
+            "dsc": "Ldev/redstones/mediaplayerinfo/MediaPlayerInfo$Instance;"
+          },
+          {
+            "acc": 4114,
+            "nme": "$$delegate_0",
+            "dsc": "Ldev/redstones/mediaplayerinfo/MediaPlayerInfo;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lkotlin/Metadata;",
+            "vals": [
+              "mv",
+              [
+                1,
+                9,
+                0
+              ],
+              "k",
+              1,
+              "xi",
+              48,
+              "d1",
+              [
+                "\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u000f\u0010\u0003\u001a\b\u0012\u0004\u0012\u00020\u00050\u0004H\u0001¨\u0006\u0006"
+              ],
+              "d2",
+              [
+                "Ldev/redstones/mediaplayerinfo/MediaPlayerInfo$Instance;",
+                "Ldev/redstones/mediaplayerinfo/MediaPlayerInfo;",
+                "()V",
+                "getMediaSessions",
+                "",
+                "Ldev/redstones/mediaplayerinfo/IMediaSession;",
+                "MediaPlayerInfo"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,4156 @@
+{
+  "md5": "a755b426eb7942bb74b46a95b02f1de4",
+  "sha2": "d15b53a14cf20fdcaa98f731af5dda654452c010",
+  "sha256": "c8ee4136e474ac7723ca2b432ec8d1a2bc88ef7d1ec57c314ba9e33cdc83dd75",
+  "contents": {
+    "classes": {
+      "com/mojang/brigadier/CommandDispatcher.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/CommandDispatcher",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/tree/RootCommandNode;)V",
+            "sig": "(Lcom/mojang/brigadier/tree/RootCommandNode<TS;>;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "register",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/builder/LiteralArgumentBuilder;)Lcom/mojang/brigadier/tree/LiteralCommandNode;",
+            "sig": "(Lcom/mojang/brigadier/builder/LiteralArgumentBuilder<TS;>;)Lcom/mojang/brigadier/tree/LiteralCommandNode<TS;>;"
+          },
+          {
+            "nme": "setConsumer",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/ResultConsumer;)V",
+            "sig": "(Lcom/mojang/brigadier/ResultConsumer<TS;>;)V"
+          },
+          {
+            "nme": "execute",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)I",
+            "sig": "(Ljava/lang/String;TS;)I",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "execute",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/StringReader;Ljava/lang/Object;)I",
+            "sig": "(Lcom/mojang/brigadier/StringReader;TS;)I",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "execute",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/ParseResults;)I",
+            "sig": "(Lcom/mojang/brigadier/ParseResults<TS;>;)I",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "parse",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)Lcom/mojang/brigadier/ParseResults;",
+            "sig": "(Ljava/lang/String;TS;)Lcom/mojang/brigadier/ParseResults<TS;>;"
+          },
+          {
+            "nme": "parse",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/StringReader;Ljava/lang/Object;)Lcom/mojang/brigadier/ParseResults;",
+            "sig": "(Lcom/mojang/brigadier/StringReader;TS;)Lcom/mojang/brigadier/ParseResults<TS;>;"
+          },
+          {
+            "nme": "parseNodes",
+            "acc": 2,
+            "dsc": "(Lcom/mojang/brigadier/tree/CommandNode;Lcom/mojang/brigadier/StringReader;Lcom/mojang/brigadier/context/CommandContextBuilder;)Lcom/mojang/brigadier/ParseResults;",
+            "sig": "(Lcom/mojang/brigadier/tree/CommandNode<TS;>;Lcom/mojang/brigadier/StringReader;Lcom/mojang/brigadier/context/CommandContextBuilder<TS;>;)Lcom/mojang/brigadier/ParseResults<TS;>;"
+          },
+          {
+            "nme": "getAllUsage",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/tree/CommandNode;Ljava/lang/Object;Z)[Ljava/lang/String;",
+            "sig": "(Lcom/mojang/brigadier/tree/CommandNode<TS;>;TS;Z)[Ljava/lang/String;"
+          },
+          {
+            "nme": "getAllUsage",
+            "acc": 2,
+            "dsc": "(Lcom/mojang/brigadier/tree/CommandNode;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/String;Z)V",
+            "sig": "(Lcom/mojang/brigadier/tree/CommandNode<TS;>;TS;Ljava/util/ArrayList<Ljava/lang/String;>;Ljava/lang/String;Z)V"
+          },
+          {
+            "nme": "getSmartUsage",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/tree/CommandNode;Ljava/lang/Object;)Ljava/util/Map;",
+            "sig": "(Lcom/mojang/brigadier/tree/CommandNode<TS;>;TS;)Ljava/util/Map<Lcom/mojang/brigadier/tree/CommandNode<TS;>;Ljava/lang/String;>;"
+          },
+          {
+            "nme": "getSmartUsage",
+            "acc": 2,
+            "dsc": "(Lcom/mojang/brigadier/tree/CommandNode;Ljava/lang/Object;ZZ)Ljava/lang/String;",
+            "sig": "(Lcom/mojang/brigadier/tree/CommandNode<TS;>;TS;ZZ)Ljava/lang/String;"
+          },
+          {
+            "nme": "getCompletionSuggestions",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/ParseResults;)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lcom/mojang/brigadier/ParseResults<TS;>;)Ljava/util/concurrent/CompletableFuture<Lcom/mojang/brigadier/suggestion/Suggestions;>;"
+          },
+          {
+            "nme": "getCompletionSuggestions",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/ParseResults;I)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lcom/mojang/brigadier/ParseResults<TS;>;I)Ljava/util/concurrent/CompletableFuture<Lcom/mojang/brigadier/suggestion/Suggestions;>;"
+          },
+          {
+            "nme": "getRoot",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/tree/RootCommandNode;",
+            "sig": "()Lcom/mojang/brigadier/tree/RootCommandNode<TS;>;"
+          },
+          {
+            "nme": "getPath",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/tree/CommandNode;)Ljava/util/Collection;",
+            "sig": "(Lcom/mojang/brigadier/tree/CommandNode<TS;>;)Ljava/util/Collection<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "findNode",
+            "acc": 1,
+            "dsc": "(Ljava/util/Collection;)Lcom/mojang/brigadier/tree/CommandNode;",
+            "sig": "(Ljava/util/Collection<Ljava/lang/String;>;)Lcom/mojang/brigadier/tree/CommandNode<TS;>;"
+          },
+          {
+            "nme": "findAmbiguities",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/AmbiguityConsumer;)V",
+            "sig": "(Lcom/mojang/brigadier/AmbiguityConsumer<TS;>;)V"
+          },
+          {
+            "nme": "addPaths",
+            "acc": 2,
+            "dsc": "(Lcom/mojang/brigadier/tree/CommandNode;Ljava/util/List;Ljava/util/List;)V",
+            "sig": "(Lcom/mojang/brigadier/tree/CommandNode<TS;>;Ljava/util/List<Ljava/util/List<Lcom/mojang/brigadier/tree/CommandNode<TS;>;>;>;Ljava/util/List<Lcom/mojang/brigadier/tree/CommandNode<TS;>;>;)V"
+          },
+          {
+            "nme": "lambda$getCompletionSuggestions$3",
+            "acc": 4106,
+            "dsc": "([Ljava/util/concurrent/CompletableFuture;Ljava/util/concurrent/CompletableFuture;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "lambda$getSmartUsage$2",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Object;Lcom/mojang/brigadier/tree/CommandNode;)Z"
+          },
+          {
+            "nme": "lambda$parseNodes$1",
+            "acc": 4106,
+            "dsc": "(Lcom/mojang/brigadier/ParseResults;Lcom/mojang/brigadier/ParseResults;)I"
+          },
+          {
+            "nme": "lambda$new$0",
+            "acc": 4106,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContext;ZI)V"
+          },
+          {
+            "nme": "access$000",
+            "acc": 4104,
+            "dsc": "(Lcom/mojang/brigadier/CommandDispatcher;)Ljava/util/function/Predicate;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "ARGUMENT_SEPARATOR",
+            "dsc": "Ljava/lang/String;",
+            "val": " "
+          },
+          {
+            "acc": 25,
+            "nme": "ARGUMENT_SEPARATOR_CHAR",
+            "dsc": "C",
+            "val": 32
+          },
+          {
+            "acc": 26,
+            "nme": "USAGE_OPTIONAL_OPEN",
+            "dsc": "Ljava/lang/String;",
+            "val": "["
+          },
+          {
+            "acc": 26,
+            "nme": "USAGE_OPTIONAL_CLOSE",
+            "dsc": "Ljava/lang/String;",
+            "val": "]"
+          },
+          {
+            "acc": 26,
+            "nme": "USAGE_REQUIRED_OPEN",
+            "dsc": "Ljava/lang/String;",
+            "val": "("
+          },
+          {
+            "acc": 26,
+            "nme": "USAGE_REQUIRED_CLOSE",
+            "dsc": "Ljava/lang/String;",
+            "val": ")"
+          },
+          {
+            "acc": 26,
+            "nme": "USAGE_OR",
+            "dsc": "Ljava/lang/String;",
+            "val": "|"
+          },
+          {
+            "acc": 18,
+            "nme": "root",
+            "dsc": "Lcom/mojang/brigadier/tree/RootCommandNode;",
+            "sig": "Lcom/mojang/brigadier/tree/RootCommandNode<TS;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "hasCommand",
+            "dsc": "Ljava/util/function/Predicate;",
+            "sig": "Ljava/util/function/Predicate<Lcom/mojang/brigadier/tree/CommandNode<TS;>;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "consumer",
+            "dsc": "Lcom/mojang/brigadier/ResultConsumer;",
+            "sig": "Lcom/mojang/brigadier/ResultConsumer<TS;>;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/suggestion/SuggestionsBuilder.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/suggestion/SuggestionsBuilder",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "getInput",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getStart",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getRemaining",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getRemainingLowerCase",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "build",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/suggestion/Suggestions;"
+          },
+          {
+            "nme": "buildFuture",
+            "acc": 1,
+            "dsc": "()Ljava/util/concurrent/CompletableFuture;",
+            "sig": "()Ljava/util/concurrent/CompletableFuture<Lcom/mojang/brigadier/suggestion/Suggestions;>;"
+          },
+          {
+            "nme": "suggest",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;"
+          },
+          {
+            "nme": "suggest",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Lcom/mojang/brigadier/Message;)Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;"
+          },
+          {
+            "nme": "suggest",
+            "acc": 1,
+            "dsc": "(I)Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;"
+          },
+          {
+            "nme": "suggest",
+            "acc": 1,
+            "dsc": "(ILcom/mojang/brigadier/Message;)Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;"
+          },
+          {
+            "nme": "add",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;"
+          },
+          {
+            "nme": "createOffset",
+            "acc": 1,
+            "dsc": "(I)Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;"
+          },
+          {
+            "nme": "restart",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "input",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "inputLowerCase",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "start",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "remaining",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "remainingLowerCase",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "result",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lcom/mojang/brigadier/suggestion/Suggestion;>;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/builder/RequiredArgumentBuilder.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/builder/RequiredArgumentBuilder",
+        "super": "com/mojang/brigadier/builder/ArgumentBuilder",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;Lcom/mojang/brigadier/arguments/ArgumentType;)V",
+            "sig": "(Ljava/lang/String;Lcom/mojang/brigadier/arguments/ArgumentType<TT;>;)V"
+          },
+          {
+            "nme": "argument",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Lcom/mojang/brigadier/arguments/ArgumentType;)Lcom/mojang/brigadier/builder/RequiredArgumentBuilder;",
+            "sig": "<S:Ljava/lang/Object;T:Ljava/lang/Object;>(Ljava/lang/String;Lcom/mojang/brigadier/arguments/ArgumentType<TT;>;)Lcom/mojang/brigadier/builder/RequiredArgumentBuilder<TS;TT;>;"
+          },
+          {
+            "nme": "suggests",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/suggestion/SuggestionProvider;)Lcom/mojang/brigadier/builder/RequiredArgumentBuilder;",
+            "sig": "(Lcom/mojang/brigadier/suggestion/SuggestionProvider<TS;>;)Lcom/mojang/brigadier/builder/RequiredArgumentBuilder<TS;TT;>;"
+          },
+          {
+            "nme": "getSuggestionsProvider",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/suggestion/SuggestionProvider;",
+            "sig": "()Lcom/mojang/brigadier/suggestion/SuggestionProvider<TS;>;"
+          },
+          {
+            "nme": "getThis",
+            "acc": 4,
+            "dsc": "()Lcom/mojang/brigadier/builder/RequiredArgumentBuilder;",
+            "sig": "()Lcom/mojang/brigadier/builder/RequiredArgumentBuilder<TS;TT;>;"
+          },
+          {
+            "nme": "getType",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/arguments/ArgumentType;",
+            "sig": "()Lcom/mojang/brigadier/arguments/ArgumentType<TT;>;"
+          },
+          {
+            "nme": "getName",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "build",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/tree/ArgumentCommandNode;",
+            "sig": "()Lcom/mojang/brigadier/tree/ArgumentCommandNode<TS;TT;>;"
+          },
+          {
+            "nme": "build",
+            "acc": 4161,
+            "dsc": "()Lcom/mojang/brigadier/tree/CommandNode;"
+          },
+          {
+            "nme": "getThis",
+            "acc": 4164,
+            "dsc": "()Lcom/mojang/brigadier/builder/ArgumentBuilder;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "type",
+            "dsc": "Lcom/mojang/brigadier/arguments/ArgumentType;",
+            "sig": "Lcom/mojang/brigadier/arguments/ArgumentType<TT;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "suggestionsProvider",
+            "dsc": "Lcom/mojang/brigadier/suggestion/SuggestionProvider;",
+            "sig": "Lcom/mojang/brigadier/suggestion/SuggestionProvider<TS;>;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/arguments/BoolArgumentType.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/arguments/BoolArgumentType",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "bool",
+            "acc": 9,
+            "dsc": "()Lcom/mojang/brigadier/arguments/BoolArgumentType;"
+          },
+          {
+            "nme": "getBool",
+            "acc": 9,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)Z",
+            "sig": "(Lcom/mojang/brigadier/context/CommandContext<*>;Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "parse",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/StringReader;)Ljava/lang/Boolean;",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "listSuggestions",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "<S:Ljava/lang/Object;>(Lcom/mojang/brigadier/context/CommandContext<TS;>;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture<Lcom/mojang/brigadier/suggestion/Suggestions;>;"
+          },
+          {
+            "nme": "getExamples",
+            "acc": 1,
+            "dsc": "()Ljava/util/Collection;",
+            "sig": "()Ljava/util/Collection<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "parse",
+            "acc": 4161,
+            "dsc": "(Lcom/mojang/brigadier/StringReader;)Ljava/lang/Object;",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "EXAMPLES",
+            "dsc": "Ljava/util/Collection;",
+            "sig": "Ljava/util/Collection<Ljava/lang/String;>;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/arguments/DoubleArgumentType.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/arguments/DoubleArgumentType",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(DD)V"
+          },
+          {
+            "nme": "doubleArg",
+            "acc": 9,
+            "dsc": "()Lcom/mojang/brigadier/arguments/DoubleArgumentType;"
+          },
+          {
+            "nme": "doubleArg",
+            "acc": 9,
+            "dsc": "(D)Lcom/mojang/brigadier/arguments/DoubleArgumentType;"
+          },
+          {
+            "nme": "doubleArg",
+            "acc": 9,
+            "dsc": "(DD)Lcom/mojang/brigadier/arguments/DoubleArgumentType;"
+          },
+          {
+            "nme": "getDouble",
+            "acc": 9,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)D",
+            "sig": "(Lcom/mojang/brigadier/context/CommandContext<*>;Ljava/lang/String;)D"
+          },
+          {
+            "nme": "getMinimum",
+            "acc": 1,
+            "dsc": "()D"
+          },
+          {
+            "nme": "getMaximum",
+            "acc": 1,
+            "dsc": "()D"
+          },
+          {
+            "nme": "parse",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/StringReader;)Ljava/lang/Double;",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getExamples",
+            "acc": 1,
+            "dsc": "()Ljava/util/Collection;",
+            "sig": "()Ljava/util/Collection<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "parse",
+            "acc": 4161,
+            "dsc": "(Lcom/mojang/brigadier/StringReader;)Ljava/lang/Object;",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "EXAMPLES",
+            "dsc": "Ljava/util/Collection;",
+            "sig": "Ljava/util/Collection<Ljava/lang/String;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "minimum",
+            "dsc": "D"
+          },
+          {
+            "acc": 18,
+            "nme": "maximum",
+            "dsc": "D"
+          }
+        ]
+      },
+      "com/mojang/brigadier/suggestion/Suggestion.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/suggestion/Suggestion",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/context/StringRange;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/context/StringRange;Ljava/lang/String;Lcom/mojang/brigadier/Message;)V"
+          },
+          {
+            "nme": "getRange",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/context/StringRange;"
+          },
+          {
+            "nme": "getText",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getTooltip",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/Message;"
+          },
+          {
+            "nme": "apply",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "compareTo",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/suggestion/Suggestion;)I"
+          },
+          {
+            "nme": "compareToIgnoreCase",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/suggestion/Suggestion;)I"
+          },
+          {
+            "nme": "expand",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Lcom/mojang/brigadier/context/StringRange;)Lcom/mojang/brigadier/suggestion/Suggestion;"
+          },
+          {
+            "nme": "compareTo",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/Object;)I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "range",
+            "dsc": "Lcom/mojang/brigadier/context/StringRange;"
+          },
+          {
+            "acc": 18,
+            "nme": "text",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "tooltip",
+            "dsc": "Lcom/mojang/brigadier/Message;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/arguments/StringArgumentType.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/arguments/StringArgumentType",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Lcom/mojang/brigadier/arguments/StringArgumentType$StringType;)V"
+          },
+          {
+            "nme": "word",
+            "acc": 9,
+            "dsc": "()Lcom/mojang/brigadier/arguments/StringArgumentType;"
+          },
+          {
+            "nme": "string",
+            "acc": 9,
+            "dsc": "()Lcom/mojang/brigadier/arguments/StringArgumentType;"
+          },
+          {
+            "nme": "greedyString",
+            "acc": 9,
+            "dsc": "()Lcom/mojang/brigadier/arguments/StringArgumentType;"
+          },
+          {
+            "nme": "getString",
+            "acc": 9,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)Ljava/lang/String;",
+            "sig": "(Lcom/mojang/brigadier/context/CommandContext<*>;Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "getType",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/arguments/StringArgumentType$StringType;"
+          },
+          {
+            "nme": "parse",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/StringReader;)Ljava/lang/String;",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getExamples",
+            "acc": 1,
+            "dsc": "()Ljava/util/Collection;",
+            "sig": "()Ljava/util/Collection<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "escapeIfRequired",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "escape",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "parse",
+            "acc": 4161,
+            "dsc": "(Lcom/mojang/brigadier/StringReader;)Ljava/lang/Object;",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "type",
+            "dsc": "Lcom/mojang/brigadier/arguments/StringArgumentType$StringType;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/CommandDispatcher$1.class": {
+        "ver": 52,
+        "acc": 32,
+        "nme": "com/mojang/brigadier/CommandDispatcher$1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lcom/mojang/brigadier/CommandDispatcher;)V"
+          },
+          {
+            "nme": "test",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/tree/CommandNode;)Z",
+            "sig": "(Lcom/mojang/brigadier/tree/CommandNode<TS;>;)Z"
+          },
+          {
+            "nme": "test",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/Object;)Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lcom/mojang/brigadier/CommandDispatcher;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/arguments/IntegerArgumentType.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/arguments/IntegerArgumentType",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "integer",
+            "acc": 9,
+            "dsc": "()Lcom/mojang/brigadier/arguments/IntegerArgumentType;"
+          },
+          {
+            "nme": "integer",
+            "acc": 9,
+            "dsc": "(I)Lcom/mojang/brigadier/arguments/IntegerArgumentType;"
+          },
+          {
+            "nme": "integer",
+            "acc": 9,
+            "dsc": "(II)Lcom/mojang/brigadier/arguments/IntegerArgumentType;"
+          },
+          {
+            "nme": "getInteger",
+            "acc": 9,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)I",
+            "sig": "(Lcom/mojang/brigadier/context/CommandContext<*>;Ljava/lang/String;)I"
+          },
+          {
+            "nme": "getMinimum",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getMaximum",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "parse",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/StringReader;)Ljava/lang/Integer;",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getExamples",
+            "acc": 1,
+            "dsc": "()Ljava/util/Collection;",
+            "sig": "()Ljava/util/Collection<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "parse",
+            "acc": 4161,
+            "dsc": "(Lcom/mojang/brigadier/StringReader;)Ljava/lang/Object;",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "EXAMPLES",
+            "dsc": "Ljava/util/Collection;",
+            "sig": "Ljava/util/Collection<Ljava/lang/String;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "minimum",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "maximum",
+            "dsc": "I"
+          }
+        ]
+      },
+      "com/mojang/brigadier/suggestion/IntegerSuggestion.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/suggestion/IntegerSuggestion",
+        "super": "com/mojang/brigadier/suggestion/Suggestion",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/context/StringRange;I)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/context/StringRange;ILcom/mojang/brigadier/Message;)V"
+          },
+          {
+            "nme": "getValue",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "compareTo",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/suggestion/Suggestion;)I"
+          },
+          {
+            "nme": "compareToIgnoreCase",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/suggestion/Suggestion;)I"
+          },
+          {
+            "nme": "compareTo",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/Object;)I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "value",
+            "dsc": "I"
+          }
+        ]
+      },
+      "com/mojang/brigadier/arguments/ArgumentType.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "com/mojang/brigadier/arguments/ArgumentType",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "parse",
+            "acc": 1025,
+            "dsc": "(Lcom/mojang/brigadier/StringReader;)Ljava/lang/Object;",
+            "sig": "(Lcom/mojang/brigadier/StringReader;)TT;",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "parse",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/StringReader;Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "<S:Ljava/lang/Object;>(Lcom/mojang/brigadier/StringReader;TS;)TT;",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "listSuggestions",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "<S:Ljava/lang/Object;>(Lcom/mojang/brigadier/context/CommandContext<TS;>;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture<Lcom/mojang/brigadier/suggestion/Suggestions;>;"
+          },
+          {
+            "nme": "getExamples",
+            "acc": 1,
+            "dsc": "()Ljava/util/Collection;",
+            "sig": "()Ljava/util/Collection<Ljava/lang/String;>;"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/brigadier/context/ContextChain$Stage.class": {
+        "ver": 52,
+        "acc": 16433,
+        "nme": "com/mojang/brigadier/context/ContextChain$Stage",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lcom/mojang/brigadier/context/ContextChain$Stage;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/mojang/brigadier/context/ContextChain$Stage;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "MODIFY",
+            "dsc": "Lcom/mojang/brigadier/context/ContextChain$Stage;"
+          },
+          {
+            "acc": 16409,
+            "nme": "EXECUTE",
+            "dsc": "Lcom/mojang/brigadier/context/ContextChain$Stage;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lcom/mojang/brigadier/context/ContextChain$Stage;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/context/ParsedCommandNode.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/context/ParsedCommandNode",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/tree/CommandNode;Lcom/mojang/brigadier/context/StringRange;)V",
+            "sig": "(Lcom/mojang/brigadier/tree/CommandNode<TS;>;Lcom/mojang/brigadier/context/StringRange;)V"
+          },
+          {
+            "nme": "getNode",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/tree/CommandNode;",
+            "sig": "()Lcom/mojang/brigadier/tree/CommandNode<TS;>;"
+          },
+          {
+            "nme": "getRange",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/context/StringRange;"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "node",
+            "dsc": "Lcom/mojang/brigadier/tree/CommandNode;",
+            "sig": "Lcom/mojang/brigadier/tree/CommandNode<TS;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "range",
+            "dsc": "Lcom/mojang/brigadier/context/StringRange;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/Message.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "com/mojang/brigadier/Message",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getString",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/brigadier/exceptions/Dynamic2CommandExceptionType.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/exceptions/Dynamic2CommandExceptionType",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/exceptions/Dynamic2CommandExceptionType$Function;)V"
+          },
+          {
+            "nme": "create",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)Lcom/mojang/brigadier/exceptions/CommandSyntaxException;"
+          },
+          {
+            "nme": "createWithContext",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/ImmutableStringReader;Ljava/lang/Object;Ljava/lang/Object;)Lcom/mojang/brigadier/exceptions/CommandSyntaxException;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "function",
+            "dsc": "Lcom/mojang/brigadier/exceptions/Dynamic2CommandExceptionType$Function;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/suggestion/SuggestionProvider.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "com/mojang/brigadier/suggestion/SuggestionProvider",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getSuggestions",
+            "acc": 1025,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lcom/mojang/brigadier/context/CommandContext<TS;>;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture<Lcom/mojang/brigadier/suggestion/Suggestions;>;",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/StringReader.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/StringReader",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/StringReader;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "getString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "setCursor",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "getRemainingLength",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getTotalLength",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getCursor",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getRead",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getRemaining",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "canRead",
+            "acc": 1,
+            "dsc": "(I)Z"
+          },
+          {
+            "nme": "canRead",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "peek",
+            "acc": 1,
+            "dsc": "()C"
+          },
+          {
+            "nme": "peek",
+            "acc": 1,
+            "dsc": "(I)C"
+          },
+          {
+            "nme": "read",
+            "acc": 1,
+            "dsc": "()C"
+          },
+          {
+            "nme": "skip",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "isAllowedNumber",
+            "acc": 9,
+            "dsc": "(C)Z"
+          },
+          {
+            "nme": "isQuotedStringStart",
+            "acc": 9,
+            "dsc": "(C)Z"
+          },
+          {
+            "nme": "skipWhitespace",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "readInt",
+            "acc": 1,
+            "dsc": "()I",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "readLong",
+            "acc": 1,
+            "dsc": "()J",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "readDouble",
+            "acc": 1,
+            "dsc": "()D",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "readFloat",
+            "acc": 1,
+            "dsc": "()F",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "isAllowedInUnquotedString",
+            "acc": 9,
+            "dsc": "(C)Z"
+          },
+          {
+            "nme": "readUnquotedString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "readQuotedString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "readStringUntil",
+            "acc": 1,
+            "dsc": "(C)Ljava/lang/String;",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "readString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "readBoolean",
+            "acc": 1,
+            "dsc": "()Z",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "expect",
+            "acc": 1,
+            "dsc": "(C)V",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "SYNTAX_ESCAPE",
+            "dsc": "C",
+            "val": 92
+          },
+          {
+            "acc": 26,
+            "nme": "SYNTAX_DOUBLE_QUOTE",
+            "dsc": "C",
+            "val": 34
+          },
+          {
+            "acc": 26,
+            "nme": "SYNTAX_SINGLE_QUOTE",
+            "dsc": "C",
+            "val": 39
+          },
+          {
+            "acc": 18,
+            "nme": "string",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 2,
+            "nme": "cursor",
+            "dsc": "I"
+          }
+        ]
+      },
+      "com/mojang/brigadier/exceptions/CommandSyntaxException.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/exceptions/CommandSyntaxException",
+        "super": "java/lang/Exception",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/exceptions/CommandExceptionType;Lcom/mojang/brigadier/Message;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/exceptions/CommandExceptionType;Lcom/mojang/brigadier/Message;Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "getMessage",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getRawMessage",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/Message;"
+          },
+          {
+            "nme": "getContext",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getType",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/CommandExceptionType;"
+          },
+          {
+            "nme": "getInput",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getCursor",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "CONTEXT_AMOUNT",
+            "dsc": "I",
+            "val": 10
+          },
+          {
+            "acc": 9,
+            "nme": "ENABLE_COMMAND_STACK_TRACES",
+            "dsc": "Z"
+          },
+          {
+            "acc": 9,
+            "nme": "BUILT_IN_EXCEPTIONS",
+            "dsc": "Lcom/mojang/brigadier/exceptions/BuiltInExceptionProvider;"
+          },
+          {
+            "acc": 18,
+            "nme": "type",
+            "dsc": "Lcom/mojang/brigadier/exceptions/CommandExceptionType;"
+          },
+          {
+            "acc": 18,
+            "nme": "message",
+            "dsc": "Lcom/mojang/brigadier/Message;"
+          },
+          {
+            "acc": 18,
+            "nme": "input",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "cursor",
+            "dsc": "I"
+          }
+        ]
+      },
+      "com/mojang/brigadier/SingleRedirectModifier.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "com/mojang/brigadier/SingleRedirectModifier",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "apply",
+            "acc": 1025,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContext;)Ljava/lang/Object;",
+            "sig": "(Lcom/mojang/brigadier/context/CommandContext<TS;>;)TS;",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/exceptions/Dynamic4CommandExceptionType$Function.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "com/mojang/brigadier/exceptions/Dynamic4CommandExceptionType$Function",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "apply",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/mojang/brigadier/Message;"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/brigadier/ImmutableStringReader.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "com/mojang/brigadier/ImmutableStringReader",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getString",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getRemainingLength",
+            "acc": 1025,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getTotalLength",
+            "acc": 1025,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getCursor",
+            "acc": 1025,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getRead",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getRemaining",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "canRead",
+            "acc": 1025,
+            "dsc": "(I)Z"
+          },
+          {
+            "nme": "canRead",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "peek",
+            "acc": 1025,
+            "dsc": "()C"
+          },
+          {
+            "nme": "peek",
+            "acc": 1025,
+            "dsc": "(I)C"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/brigadier/exceptions/DynamicNCommandExceptionType$Function.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "com/mojang/brigadier/exceptions/DynamicNCommandExceptionType$Function",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "apply",
+            "acc": 1025,
+            "dsc": "([Ljava/lang/Object;)Lcom/mojang/brigadier/Message;"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/brigadier/exceptions/BuiltInExceptionProvider.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "com/mojang/brigadier/exceptions/BuiltInExceptionProvider",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "doubleTooLow",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/Dynamic2CommandExceptionType;"
+          },
+          {
+            "nme": "doubleTooHigh",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/Dynamic2CommandExceptionType;"
+          },
+          {
+            "nme": "floatTooLow",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/Dynamic2CommandExceptionType;"
+          },
+          {
+            "nme": "floatTooHigh",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/Dynamic2CommandExceptionType;"
+          },
+          {
+            "nme": "integerTooLow",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/Dynamic2CommandExceptionType;"
+          },
+          {
+            "nme": "integerTooHigh",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/Dynamic2CommandExceptionType;"
+          },
+          {
+            "nme": "longTooLow",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/Dynamic2CommandExceptionType;"
+          },
+          {
+            "nme": "longTooHigh",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/Dynamic2CommandExceptionType;"
+          },
+          {
+            "nme": "literalIncorrect",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/DynamicCommandExceptionType;"
+          },
+          {
+            "nme": "readerExpectedStartOfQuote",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "nme": "readerExpectedEndOfQuote",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "nme": "readerInvalidEscape",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/DynamicCommandExceptionType;"
+          },
+          {
+            "nme": "readerInvalidBool",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/DynamicCommandExceptionType;"
+          },
+          {
+            "nme": "readerInvalidInt",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/DynamicCommandExceptionType;"
+          },
+          {
+            "nme": "readerExpectedInt",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "nme": "readerInvalidLong",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/DynamicCommandExceptionType;"
+          },
+          {
+            "nme": "readerExpectedLong",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "nme": "readerInvalidDouble",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/DynamicCommandExceptionType;"
+          },
+          {
+            "nme": "readerExpectedDouble",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "nme": "readerInvalidFloat",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/DynamicCommandExceptionType;"
+          },
+          {
+            "nme": "readerExpectedFloat",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "nme": "readerExpectedBool",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "nme": "readerExpectedSymbol",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/DynamicCommandExceptionType;"
+          },
+          {
+            "nme": "dispatcherUnknownCommand",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "nme": "dispatcherUnknownArgument",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "nme": "dispatcherExpectedArgumentSeparator",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "nme": "dispatcherParseException",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/DynamicCommandExceptionType;"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/brigadier/arguments/FloatArgumentType.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/arguments/FloatArgumentType",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(FF)V"
+          },
+          {
+            "nme": "floatArg",
+            "acc": 9,
+            "dsc": "()Lcom/mojang/brigadier/arguments/FloatArgumentType;"
+          },
+          {
+            "nme": "floatArg",
+            "acc": 9,
+            "dsc": "(F)Lcom/mojang/brigadier/arguments/FloatArgumentType;"
+          },
+          {
+            "nme": "floatArg",
+            "acc": 9,
+            "dsc": "(FF)Lcom/mojang/brigadier/arguments/FloatArgumentType;"
+          },
+          {
+            "nme": "getFloat",
+            "acc": 9,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)F",
+            "sig": "(Lcom/mojang/brigadier/context/CommandContext<*>;Ljava/lang/String;)F"
+          },
+          {
+            "nme": "getMinimum",
+            "acc": 1,
+            "dsc": "()F"
+          },
+          {
+            "nme": "getMaximum",
+            "acc": 1,
+            "dsc": "()F"
+          },
+          {
+            "nme": "parse",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/StringReader;)Ljava/lang/Float;",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getExamples",
+            "acc": 1,
+            "dsc": "()Ljava/util/Collection;",
+            "sig": "()Ljava/util/Collection<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "parse",
+            "acc": 4161,
+            "dsc": "(Lcom/mojang/brigadier/StringReader;)Ljava/lang/Object;",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "EXAMPLES",
+            "dsc": "Ljava/util/Collection;",
+            "sig": "Ljava/util/Collection<Ljava/lang/String;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "minimum",
+            "dsc": "F"
+          },
+          {
+            "acc": 18,
+            "nme": "maximum",
+            "dsc": "F"
+          }
+        ]
+      },
+      "com/mojang/brigadier/exceptions/BuiltInExceptions.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/exceptions/BuiltInExceptions",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "doubleTooLow",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/Dynamic2CommandExceptionType;"
+          },
+          {
+            "nme": "doubleTooHigh",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/Dynamic2CommandExceptionType;"
+          },
+          {
+            "nme": "floatTooLow",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/Dynamic2CommandExceptionType;"
+          },
+          {
+            "nme": "floatTooHigh",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/Dynamic2CommandExceptionType;"
+          },
+          {
+            "nme": "integerTooLow",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/Dynamic2CommandExceptionType;"
+          },
+          {
+            "nme": "integerTooHigh",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/Dynamic2CommandExceptionType;"
+          },
+          {
+            "nme": "longTooLow",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/Dynamic2CommandExceptionType;"
+          },
+          {
+            "nme": "longTooHigh",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/Dynamic2CommandExceptionType;"
+          },
+          {
+            "nme": "literalIncorrect",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/DynamicCommandExceptionType;"
+          },
+          {
+            "nme": "readerExpectedStartOfQuote",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "nme": "readerExpectedEndOfQuote",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "nme": "readerInvalidEscape",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/DynamicCommandExceptionType;"
+          },
+          {
+            "nme": "readerInvalidBool",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/DynamicCommandExceptionType;"
+          },
+          {
+            "nme": "readerInvalidInt",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/DynamicCommandExceptionType;"
+          },
+          {
+            "nme": "readerExpectedInt",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "nme": "readerInvalidLong",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/DynamicCommandExceptionType;"
+          },
+          {
+            "nme": "readerExpectedLong",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "nme": "readerInvalidDouble",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/DynamicCommandExceptionType;"
+          },
+          {
+            "nme": "readerExpectedDouble",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "nme": "readerInvalidFloat",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/DynamicCommandExceptionType;"
+          },
+          {
+            "nme": "readerExpectedFloat",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "nme": "readerExpectedBool",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "nme": "readerExpectedSymbol",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/DynamicCommandExceptionType;"
+          },
+          {
+            "nme": "dispatcherUnknownCommand",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "nme": "dispatcherUnknownArgument",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "nme": "dispatcherExpectedArgumentSeparator",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "nme": "dispatcherParseException",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/DynamicCommandExceptionType;"
+          },
+          {
+            "nme": "lambda$static$16",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Object;)Lcom/mojang/brigadier/Message;"
+          },
+          {
+            "nme": "lambda$static$15",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Object;)Lcom/mojang/brigadier/Message;"
+          },
+          {
+            "nme": "lambda$static$14",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Object;)Lcom/mojang/brigadier/Message;"
+          },
+          {
+            "nme": "lambda$static$13",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Object;)Lcom/mojang/brigadier/Message;"
+          },
+          {
+            "nme": "lambda$static$12",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Object;)Lcom/mojang/brigadier/Message;"
+          },
+          {
+            "nme": "lambda$static$11",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Object;)Lcom/mojang/brigadier/Message;"
+          },
+          {
+            "nme": "lambda$static$10",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Object;)Lcom/mojang/brigadier/Message;"
+          },
+          {
+            "nme": "lambda$static$9",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Object;)Lcom/mojang/brigadier/Message;"
+          },
+          {
+            "nme": "lambda$static$8",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Object;)Lcom/mojang/brigadier/Message;"
+          },
+          {
+            "nme": "lambda$static$7",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)Lcom/mojang/brigadier/Message;"
+          },
+          {
+            "nme": "lambda$static$6",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)Lcom/mojang/brigadier/Message;"
+          },
+          {
+            "nme": "lambda$static$5",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)Lcom/mojang/brigadier/Message;"
+          },
+          {
+            "nme": "lambda$static$4",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)Lcom/mojang/brigadier/Message;"
+          },
+          {
+            "nme": "lambda$static$3",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)Lcom/mojang/brigadier/Message;"
+          },
+          {
+            "nme": "lambda$static$2",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)Lcom/mojang/brigadier/Message;"
+          },
+          {
+            "nme": "lambda$static$1",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)Lcom/mojang/brigadier/Message;"
+          },
+          {
+            "nme": "lambda$static$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)Lcom/mojang/brigadier/Message;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "DOUBLE_TOO_SMALL",
+            "dsc": "Lcom/mojang/brigadier/exceptions/Dynamic2CommandExceptionType;"
+          },
+          {
+            "acc": 26,
+            "nme": "DOUBLE_TOO_BIG",
+            "dsc": "Lcom/mojang/brigadier/exceptions/Dynamic2CommandExceptionType;"
+          },
+          {
+            "acc": 26,
+            "nme": "FLOAT_TOO_SMALL",
+            "dsc": "Lcom/mojang/brigadier/exceptions/Dynamic2CommandExceptionType;"
+          },
+          {
+            "acc": 26,
+            "nme": "FLOAT_TOO_BIG",
+            "dsc": "Lcom/mojang/brigadier/exceptions/Dynamic2CommandExceptionType;"
+          },
+          {
+            "acc": 26,
+            "nme": "INTEGER_TOO_SMALL",
+            "dsc": "Lcom/mojang/brigadier/exceptions/Dynamic2CommandExceptionType;"
+          },
+          {
+            "acc": 26,
+            "nme": "INTEGER_TOO_BIG",
+            "dsc": "Lcom/mojang/brigadier/exceptions/Dynamic2CommandExceptionType;"
+          },
+          {
+            "acc": 26,
+            "nme": "LONG_TOO_SMALL",
+            "dsc": "Lcom/mojang/brigadier/exceptions/Dynamic2CommandExceptionType;"
+          },
+          {
+            "acc": 26,
+            "nme": "LONG_TOO_BIG",
+            "dsc": "Lcom/mojang/brigadier/exceptions/Dynamic2CommandExceptionType;"
+          },
+          {
+            "acc": 26,
+            "nme": "LITERAL_INCORRECT",
+            "dsc": "Lcom/mojang/brigadier/exceptions/DynamicCommandExceptionType;"
+          },
+          {
+            "acc": 26,
+            "nme": "READER_EXPECTED_START_OF_QUOTE",
+            "dsc": "Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "acc": 26,
+            "nme": "READER_EXPECTED_END_OF_QUOTE",
+            "dsc": "Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "acc": 26,
+            "nme": "READER_INVALID_ESCAPE",
+            "dsc": "Lcom/mojang/brigadier/exceptions/DynamicCommandExceptionType;"
+          },
+          {
+            "acc": 26,
+            "nme": "READER_INVALID_BOOL",
+            "dsc": "Lcom/mojang/brigadier/exceptions/DynamicCommandExceptionType;"
+          },
+          {
+            "acc": 26,
+            "nme": "READER_INVALID_INT",
+            "dsc": "Lcom/mojang/brigadier/exceptions/DynamicCommandExceptionType;"
+          },
+          {
+            "acc": 26,
+            "nme": "READER_EXPECTED_INT",
+            "dsc": "Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "acc": 26,
+            "nme": "READER_INVALID_LONG",
+            "dsc": "Lcom/mojang/brigadier/exceptions/DynamicCommandExceptionType;"
+          },
+          {
+            "acc": 26,
+            "nme": "READER_EXPECTED_LONG",
+            "dsc": "Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "acc": 26,
+            "nme": "READER_INVALID_DOUBLE",
+            "dsc": "Lcom/mojang/brigadier/exceptions/DynamicCommandExceptionType;"
+          },
+          {
+            "acc": 26,
+            "nme": "READER_EXPECTED_DOUBLE",
+            "dsc": "Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "acc": 26,
+            "nme": "READER_INVALID_FLOAT",
+            "dsc": "Lcom/mojang/brigadier/exceptions/DynamicCommandExceptionType;"
+          },
+          {
+            "acc": 26,
+            "nme": "READER_EXPECTED_FLOAT",
+            "dsc": "Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "acc": 26,
+            "nme": "READER_EXPECTED_BOOL",
+            "dsc": "Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "acc": 26,
+            "nme": "READER_EXPECTED_SYMBOL",
+            "dsc": "Lcom/mojang/brigadier/exceptions/DynamicCommandExceptionType;"
+          },
+          {
+            "acc": 26,
+            "nme": "DISPATCHER_UNKNOWN_COMMAND",
+            "dsc": "Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "acc": 26,
+            "nme": "DISPATCHER_UNKNOWN_ARGUMENT",
+            "dsc": "Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "acc": 26,
+            "nme": "DISPATCHER_EXPECTED_ARGUMENT_SEPARATOR",
+            "dsc": "Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;"
+          },
+          {
+            "acc": 26,
+            "nme": "DISPATCHER_PARSE_EXCEPTION",
+            "dsc": "Lcom/mojang/brigadier/exceptions/DynamicCommandExceptionType;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/exceptions/Dynamic3CommandExceptionType.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/exceptions/Dynamic3CommandExceptionType",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/exceptions/Dynamic3CommandExceptionType$Function;)V"
+          },
+          {
+            "nme": "create",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/mojang/brigadier/exceptions/CommandSyntaxException;"
+          },
+          {
+            "nme": "createWithContext",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/ImmutableStringReader;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/mojang/brigadier/exceptions/CommandSyntaxException;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "function",
+            "dsc": "Lcom/mojang/brigadier/exceptions/Dynamic3CommandExceptionType$Function;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/builder/LiteralArgumentBuilder.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/builder/LiteralArgumentBuilder",
+        "super": "com/mojang/brigadier/builder/ArgumentBuilder",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "literal",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/mojang/brigadier/builder/LiteralArgumentBuilder;",
+            "sig": "<S:Ljava/lang/Object;>(Ljava/lang/String;)Lcom/mojang/brigadier/builder/LiteralArgumentBuilder<TS;>;"
+          },
+          {
+            "nme": "getThis",
+            "acc": 4,
+            "dsc": "()Lcom/mojang/brigadier/builder/LiteralArgumentBuilder;",
+            "sig": "()Lcom/mojang/brigadier/builder/LiteralArgumentBuilder<TS;>;"
+          },
+          {
+            "nme": "getLiteral",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "build",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/tree/LiteralCommandNode;",
+            "sig": "()Lcom/mojang/brigadier/tree/LiteralCommandNode<TS;>;"
+          },
+          {
+            "nme": "build",
+            "acc": 4161,
+            "dsc": "()Lcom/mojang/brigadier/tree/CommandNode;"
+          },
+          {
+            "nme": "getThis",
+            "acc": 4164,
+            "dsc": "()Lcom/mojang/brigadier/builder/ArgumentBuilder;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "literal",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/tree/RootCommandNode.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/tree/RootCommandNode",
+        "super": "com/mojang/brigadier/tree/CommandNode",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getName",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getUsageText",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "parse",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/StringReader;Lcom/mojang/brigadier/context/CommandContextBuilder;)V",
+            "sig": "(Lcom/mojang/brigadier/StringReader;Lcom/mojang/brigadier/context/CommandContextBuilder<TS;>;)V",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "listSuggestions",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lcom/mojang/brigadier/context/CommandContext<TS;>;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture<Lcom/mojang/brigadier/suggestion/Suggestions;>;"
+          },
+          {
+            "nme": "isValidInput",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "createBuilder",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/builder/ArgumentBuilder;",
+            "sig": "()Lcom/mojang/brigadier/builder/ArgumentBuilder<TS;*>;"
+          },
+          {
+            "nme": "getSortedKey",
+            "acc": 4,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getExamples",
+            "acc": 1,
+            "dsc": "()Ljava/util/Collection;",
+            "sig": "()Ljava/util/Collection<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$new$1",
+            "acc": 4106,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContext;)Ljava/util/Collection;",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "lambda$new$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Object;)Z"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/brigadier/RedirectModifier.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "com/mojang/brigadier/RedirectModifier",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "apply",
+            "acc": 1025,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContext;)Ljava/util/Collection;",
+            "sig": "(Lcom/mojang/brigadier/context/CommandContext<TS;>;)Ljava/util/Collection<TS;>;",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/builder/ArgumentBuilder.class": {
+        "ver": 52,
+        "acc": 1057,
+        "nme": "com/mojang/brigadier/builder/ArgumentBuilder",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getThis",
+            "acc": 1028,
+            "dsc": "()Lcom/mojang/brigadier/builder/ArgumentBuilder;",
+            "sig": "()TT;"
+          },
+          {
+            "nme": "then",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/builder/ArgumentBuilder;)Lcom/mojang/brigadier/builder/ArgumentBuilder;",
+            "sig": "(Lcom/mojang/brigadier/builder/ArgumentBuilder<TS;*>;)TT;"
+          },
+          {
+            "nme": "then",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/tree/CommandNode;)Lcom/mojang/brigadier/builder/ArgumentBuilder;",
+            "sig": "(Lcom/mojang/brigadier/tree/CommandNode<TS;>;)TT;"
+          },
+          {
+            "nme": "getArguments",
+            "acc": 1,
+            "dsc": "()Ljava/util/Collection;",
+            "sig": "()Ljava/util/Collection<Lcom/mojang/brigadier/tree/CommandNode<TS;>;>;"
+          },
+          {
+            "nme": "executes",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/Command;)Lcom/mojang/brigadier/builder/ArgumentBuilder;",
+            "sig": "(Lcom/mojang/brigadier/Command<TS;>;)TT;"
+          },
+          {
+            "nme": "getCommand",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/Command;",
+            "sig": "()Lcom/mojang/brigadier/Command<TS;>;"
+          },
+          {
+            "nme": "requires",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/Predicate;)Lcom/mojang/brigadier/builder/ArgumentBuilder;",
+            "sig": "(Ljava/util/function/Predicate<TS;>;)TT;"
+          },
+          {
+            "nme": "getRequirement",
+            "acc": 1,
+            "dsc": "()Ljava/util/function/Predicate;",
+            "sig": "()Ljava/util/function/Predicate<TS;>;"
+          },
+          {
+            "nme": "redirect",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/tree/CommandNode;)Lcom/mojang/brigadier/builder/ArgumentBuilder;",
+            "sig": "(Lcom/mojang/brigadier/tree/CommandNode<TS;>;)TT;"
+          },
+          {
+            "nme": "redirect",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/tree/CommandNode;Lcom/mojang/brigadier/SingleRedirectModifier;)Lcom/mojang/brigadier/builder/ArgumentBuilder;",
+            "sig": "(Lcom/mojang/brigadier/tree/CommandNode<TS;>;Lcom/mojang/brigadier/SingleRedirectModifier<TS;>;)TT;"
+          },
+          {
+            "nme": "fork",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/tree/CommandNode;Lcom/mojang/brigadier/RedirectModifier;)Lcom/mojang/brigadier/builder/ArgumentBuilder;",
+            "sig": "(Lcom/mojang/brigadier/tree/CommandNode<TS;>;Lcom/mojang/brigadier/RedirectModifier<TS;>;)TT;"
+          },
+          {
+            "nme": "forward",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/tree/CommandNode;Lcom/mojang/brigadier/RedirectModifier;Z)Lcom/mojang/brigadier/builder/ArgumentBuilder;",
+            "sig": "(Lcom/mojang/brigadier/tree/CommandNode<TS;>;Lcom/mojang/brigadier/RedirectModifier<TS;>;Z)TT;"
+          },
+          {
+            "nme": "getRedirect",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/tree/CommandNode;",
+            "sig": "()Lcom/mojang/brigadier/tree/CommandNode<TS;>;"
+          },
+          {
+            "nme": "getRedirectModifier",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/RedirectModifier;",
+            "sig": "()Lcom/mojang/brigadier/RedirectModifier<TS;>;"
+          },
+          {
+            "nme": "isFork",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "build",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/brigadier/tree/CommandNode;",
+            "sig": "()Lcom/mojang/brigadier/tree/CommandNode<TS;>;"
+          },
+          {
+            "nme": "lambda$redirect$1",
+            "acc": 4106,
+            "dsc": "(Lcom/mojang/brigadier/SingleRedirectModifier;Lcom/mojang/brigadier/context/CommandContext;)Ljava/util/Collection;",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "lambda$new$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Object;)Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "arguments",
+            "dsc": "Lcom/mojang/brigadier/tree/RootCommandNode;",
+            "sig": "Lcom/mojang/brigadier/tree/RootCommandNode<TS;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "command",
+            "dsc": "Lcom/mojang/brigadier/Command;",
+            "sig": "Lcom/mojang/brigadier/Command<TS;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "requirement",
+            "dsc": "Ljava/util/function/Predicate;",
+            "sig": "Ljava/util/function/Predicate<TS;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "target",
+            "dsc": "Lcom/mojang/brigadier/tree/CommandNode;",
+            "sig": "Lcom/mojang/brigadier/tree/CommandNode<TS;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "modifier",
+            "dsc": "Lcom/mojang/brigadier/RedirectModifier;",
+            "sig": "Lcom/mojang/brigadier/RedirectModifier<TS;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "forks",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "com/mojang/brigadier/exceptions/CommandExceptionType.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "com/mojang/brigadier/exceptions/CommandExceptionType",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "com/mojang/brigadier/context/StringRange.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/context/StringRange",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "at",
+            "acc": 9,
+            "dsc": "(I)Lcom/mojang/brigadier/context/StringRange;"
+          },
+          {
+            "nme": "between",
+            "acc": 9,
+            "dsc": "(II)Lcom/mojang/brigadier/context/StringRange;"
+          },
+          {
+            "nme": "encompassing",
+            "acc": 9,
+            "dsc": "(Lcom/mojang/brigadier/context/StringRange;Lcom/mojang/brigadier/context/StringRange;)Lcom/mojang/brigadier/context/StringRange;"
+          },
+          {
+            "nme": "getStart",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getEnd",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "get",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/ImmutableStringReader;)Ljava/lang/String;"
+          },
+          {
+            "nme": "get",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "isEmpty",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getLength",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "start",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "end",
+            "dsc": "I"
+          }
+        ]
+      },
+      "com/mojang/brigadier/exceptions/Dynamic4CommandExceptionType.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/exceptions/Dynamic4CommandExceptionType",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/exceptions/Dynamic4CommandExceptionType$Function;)V"
+          },
+          {
+            "nme": "create",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/mojang/brigadier/exceptions/CommandSyntaxException;"
+          },
+          {
+            "nme": "createWithContext",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/ImmutableStringReader;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/mojang/brigadier/exceptions/CommandSyntaxException;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "function",
+            "dsc": "Lcom/mojang/brigadier/exceptions/Dynamic4CommandExceptionType$Function;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/arguments/StringArgumentType$StringType.class": {
+        "ver": 52,
+        "acc": 16433,
+        "nme": "com/mojang/brigadier/arguments/StringArgumentType$StringType",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lcom/mojang/brigadier/arguments/StringArgumentType$StringType;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/mojang/brigadier/arguments/StringArgumentType$StringType;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 130,
+            "dsc": "(Ljava/lang/String;I[Ljava/lang/String;)V",
+            "sig": "([Ljava/lang/String;)V"
+          },
+          {
+            "nme": "getExamples",
+            "acc": 1,
+            "dsc": "()Ljava/util/Collection;",
+            "sig": "()Ljava/util/Collection<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "SINGLE_WORD",
+            "dsc": "Lcom/mojang/brigadier/arguments/StringArgumentType$StringType;"
+          },
+          {
+            "acc": 16409,
+            "nme": "QUOTABLE_PHRASE",
+            "dsc": "Lcom/mojang/brigadier/arguments/StringArgumentType$StringType;"
+          },
+          {
+            "acc": 16409,
+            "nme": "GREEDY_PHRASE",
+            "dsc": "Lcom/mojang/brigadier/arguments/StringArgumentType$StringType;"
+          },
+          {
+            "acc": 18,
+            "nme": "examples",
+            "dsc": "Ljava/util/Collection;",
+            "sig": "Ljava/util/Collection<Ljava/lang/String;>;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lcom/mojang/brigadier/arguments/StringArgumentType$StringType;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/tree/LiteralCommandNode.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/tree/LiteralCommandNode",
+        "super": "com/mojang/brigadier/tree/CommandNode",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Lcom/mojang/brigadier/Command;Ljava/util/function/Predicate;Lcom/mojang/brigadier/tree/CommandNode;Lcom/mojang/brigadier/RedirectModifier;Z)V",
+            "sig": "(Ljava/lang/String;Lcom/mojang/brigadier/Command<TS;>;Ljava/util/function/Predicate<TS;>;Lcom/mojang/brigadier/tree/CommandNode<TS;>;Lcom/mojang/brigadier/RedirectModifier<TS;>;Z)V"
+          },
+          {
+            "nme": "getLiteral",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getName",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "parse",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/StringReader;Lcom/mojang/brigadier/context/CommandContextBuilder;)V",
+            "sig": "(Lcom/mojang/brigadier/StringReader;Lcom/mojang/brigadier/context/CommandContextBuilder<TS;>;)V",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "parse",
+            "acc": 2,
+            "dsc": "(Lcom/mojang/brigadier/StringReader;)I"
+          },
+          {
+            "nme": "listSuggestions",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lcom/mojang/brigadier/context/CommandContext<TS;>;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture<Lcom/mojang/brigadier/suggestion/Suggestions;>;"
+          },
+          {
+            "nme": "isValidInput",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "getUsageText",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "createBuilder",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/builder/LiteralArgumentBuilder;",
+            "sig": "()Lcom/mojang/brigadier/builder/LiteralArgumentBuilder<TS;>;"
+          },
+          {
+            "nme": "getSortedKey",
+            "acc": 4,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getExamples",
+            "acc": 1,
+            "dsc": "()Ljava/util/Collection;",
+            "sig": "()Ljava/util/Collection<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "createBuilder",
+            "acc": 4161,
+            "dsc": "()Lcom/mojang/brigadier/builder/ArgumentBuilder;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "literal",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "literalLowerCase",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/exceptions/Dynamic3CommandExceptionType$Function.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "com/mojang/brigadier/exceptions/Dynamic3CommandExceptionType$Function",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "apply",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/mojang/brigadier/Message;"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/brigadier/exceptions/DynamicNCommandExceptionType.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/exceptions/DynamicNCommandExceptionType",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/exceptions/DynamicNCommandExceptionType$Function;)V"
+          },
+          {
+            "nme": "create",
+            "acc": 129,
+            "dsc": "(Ljava/lang/Object;[Ljava/lang/Object;)Lcom/mojang/brigadier/exceptions/CommandSyntaxException;"
+          },
+          {
+            "nme": "createWithContext",
+            "acc": 129,
+            "dsc": "(Lcom/mojang/brigadier/ImmutableStringReader;[Ljava/lang/Object;)Lcom/mojang/brigadier/exceptions/CommandSyntaxException;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "function",
+            "dsc": "Lcom/mojang/brigadier/exceptions/DynamicNCommandExceptionType$Function;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/context/ParsedArgument.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/context/ParsedArgument",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(IILjava/lang/Object;)V",
+            "sig": "(IITT;)V"
+          },
+          {
+            "nme": "getRange",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/context/StringRange;"
+          },
+          {
+            "nme": "getResult",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Object;",
+            "sig": "()TT;"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "range",
+            "dsc": "Lcom/mojang/brigadier/context/StringRange;"
+          },
+          {
+            "acc": 18,
+            "nme": "result",
+            "dsc": "Ljava/lang/Object;",
+            "sig": "TT;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/context/SuggestionContext.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/context/SuggestionContext",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/tree/CommandNode;I)V",
+            "sig": "(Lcom/mojang/brigadier/tree/CommandNode<TS;>;I)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 17,
+            "nme": "parent",
+            "dsc": "Lcom/mojang/brigadier/tree/CommandNode;",
+            "sig": "Lcom/mojang/brigadier/tree/CommandNode<TS;>;"
+          },
+          {
+            "acc": 17,
+            "nme": "startPos",
+            "dsc": "I"
+          }
+        ]
+      },
+      "com/mojang/brigadier/tree/ArgumentCommandNode.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/tree/ArgumentCommandNode",
+        "super": "com/mojang/brigadier/tree/CommandNode",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Lcom/mojang/brigadier/arguments/ArgumentType;Lcom/mojang/brigadier/Command;Ljava/util/function/Predicate;Lcom/mojang/brigadier/tree/CommandNode;Lcom/mojang/brigadier/RedirectModifier;ZLcom/mojang/brigadier/suggestion/SuggestionProvider;)V",
+            "sig": "(Ljava/lang/String;Lcom/mojang/brigadier/arguments/ArgumentType<TT;>;Lcom/mojang/brigadier/Command<TS;>;Ljava/util/function/Predicate<TS;>;Lcom/mojang/brigadier/tree/CommandNode<TS;>;Lcom/mojang/brigadier/RedirectModifier<TS;>;ZLcom/mojang/brigadier/suggestion/SuggestionProvider<TS;>;)V"
+          },
+          {
+            "nme": "getType",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/arguments/ArgumentType;",
+            "sig": "()Lcom/mojang/brigadier/arguments/ArgumentType<TT;>;"
+          },
+          {
+            "nme": "getName",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getUsageText",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getCustomSuggestions",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/suggestion/SuggestionProvider;",
+            "sig": "()Lcom/mojang/brigadier/suggestion/SuggestionProvider<TS;>;"
+          },
+          {
+            "nme": "parse",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/StringReader;Lcom/mojang/brigadier/context/CommandContextBuilder;)V",
+            "sig": "(Lcom/mojang/brigadier/StringReader;Lcom/mojang/brigadier/context/CommandContextBuilder<TS;>;)V",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "listSuggestions",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lcom/mojang/brigadier/context/CommandContext<TS;>;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture<Lcom/mojang/brigadier/suggestion/Suggestions;>;",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "createBuilder",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/builder/RequiredArgumentBuilder;",
+            "sig": "()Lcom/mojang/brigadier/builder/RequiredArgumentBuilder<TS;TT;>;"
+          },
+          {
+            "nme": "isValidInput",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getSortedKey",
+            "acc": 4,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getExamples",
+            "acc": 1,
+            "dsc": "()Ljava/util/Collection;",
+            "sig": "()Ljava/util/Collection<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "createBuilder",
+            "acc": 4161,
+            "dsc": "()Lcom/mojang/brigadier/builder/ArgumentBuilder;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "USAGE_ARGUMENT_OPEN",
+            "dsc": "Ljava/lang/String;",
+            "val": "<"
+          },
+          {
+            "acc": 26,
+            "nme": "USAGE_ARGUMENT_CLOSE",
+            "dsc": "Ljava/lang/String;",
+            "val": ">"
+          },
+          {
+            "acc": 18,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "type",
+            "dsc": "Lcom/mojang/brigadier/arguments/ArgumentType;",
+            "sig": "Lcom/mojang/brigadier/arguments/ArgumentType<TT;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "customSuggestions",
+            "dsc": "Lcom/mojang/brigadier/suggestion/SuggestionProvider;",
+            "sig": "Lcom/mojang/brigadier/suggestion/SuggestionProvider<TS;>;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/context/CommandContext.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/context/CommandContext",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/String;Ljava/util/Map;Lcom/mojang/brigadier/Command;Lcom/mojang/brigadier/tree/CommandNode;Ljava/util/List;Lcom/mojang/brigadier/context/StringRange;Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/RedirectModifier;Z)V",
+            "sig": "(TS;Ljava/lang/String;Ljava/util/Map<Ljava/lang/String;Lcom/mojang/brigadier/context/ParsedArgument<TS;*>;>;Lcom/mojang/brigadier/Command<TS;>;Lcom/mojang/brigadier/tree/CommandNode<TS;>;Ljava/util/List<Lcom/mojang/brigadier/context/ParsedCommandNode<TS;>;>;Lcom/mojang/brigadier/context/StringRange;Lcom/mojang/brigadier/context/CommandContext<TS;>;Lcom/mojang/brigadier/RedirectModifier<TS;>;Z)V"
+          },
+          {
+            "nme": "copyFor",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Lcom/mojang/brigadier/context/CommandContext;",
+            "sig": "(TS;)Lcom/mojang/brigadier/context/CommandContext<TS;>;"
+          },
+          {
+            "nme": "getChild",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/context/CommandContext;",
+            "sig": "()Lcom/mojang/brigadier/context/CommandContext<TS;>;"
+          },
+          {
+            "nme": "getLastChild",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/context/CommandContext;",
+            "sig": "()Lcom/mojang/brigadier/context/CommandContext<TS;>;"
+          },
+          {
+            "nme": "getCommand",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/Command;",
+            "sig": "()Lcom/mojang/brigadier/Command<TS;>;"
+          },
+          {
+            "nme": "getSource",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Object;",
+            "sig": "()TS;"
+          },
+          {
+            "nme": "getArgument",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;",
+            "sig": "<V:Ljava/lang/Object;>(Ljava/lang/String;Ljava/lang/Class<TV;>;)TV;"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getRedirectModifier",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/RedirectModifier;",
+            "sig": "()Lcom/mojang/brigadier/RedirectModifier<TS;>;"
+          },
+          {
+            "nme": "getRange",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/context/StringRange;"
+          },
+          {
+            "nme": "getInput",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getRootNode",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/tree/CommandNode;",
+            "sig": "()Lcom/mojang/brigadier/tree/CommandNode<TS;>;"
+          },
+          {
+            "nme": "getNodes",
+            "acc": 1,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lcom/mojang/brigadier/context/ParsedCommandNode<TS;>;>;"
+          },
+          {
+            "nme": "hasNodes",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isForked",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "PRIMITIVE_TO_WRAPPER",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/Class<*>;Ljava/lang/Class<*>;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "source",
+            "dsc": "Ljava/lang/Object;",
+            "sig": "TS;"
+          },
+          {
+            "acc": 18,
+            "nme": "input",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "command",
+            "dsc": "Lcom/mojang/brigadier/Command;",
+            "sig": "Lcom/mojang/brigadier/Command<TS;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "arguments",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/String;Lcom/mojang/brigadier/context/ParsedArgument<TS;*>;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "rootNode",
+            "dsc": "Lcom/mojang/brigadier/tree/CommandNode;",
+            "sig": "Lcom/mojang/brigadier/tree/CommandNode<TS;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "nodes",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lcom/mojang/brigadier/context/ParsedCommandNode<TS;>;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "range",
+            "dsc": "Lcom/mojang/brigadier/context/StringRange;"
+          },
+          {
+            "acc": 18,
+            "nme": "child",
+            "dsc": "Lcom/mojang/brigadier/context/CommandContext;",
+            "sig": "Lcom/mojang/brigadier/context/CommandContext<TS;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "modifier",
+            "dsc": "Lcom/mojang/brigadier/RedirectModifier;",
+            "sig": "Lcom/mojang/brigadier/RedirectModifier<TS;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "forks",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "com/mojang/brigadier/exceptions/DynamicCommandExceptionType.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/exceptions/DynamicCommandExceptionType",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/Function;)V",
+            "sig": "(Ljava/util/function/Function<Ljava/lang/Object;Lcom/mojang/brigadier/Message;>;)V"
+          },
+          {
+            "nme": "create",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Lcom/mojang/brigadier/exceptions/CommandSyntaxException;"
+          },
+          {
+            "nme": "createWithContext",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/ImmutableStringReader;Ljava/lang/Object;)Lcom/mojang/brigadier/exceptions/CommandSyntaxException;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "function",
+            "dsc": "Ljava/util/function/Function;",
+            "sig": "Ljava/util/function/Function<Ljava/lang/Object;Lcom/mojang/brigadier/Message;>;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/tree/CommandNode.class": {
+        "ver": 52,
+        "acc": 1057,
+        "nme": "com/mojang/brigadier/tree/CommandNode",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(Lcom/mojang/brigadier/Command;Ljava/util/function/Predicate;Lcom/mojang/brigadier/tree/CommandNode;Lcom/mojang/brigadier/RedirectModifier;Z)V",
+            "sig": "(Lcom/mojang/brigadier/Command<TS;>;Ljava/util/function/Predicate<TS;>;Lcom/mojang/brigadier/tree/CommandNode<TS;>;Lcom/mojang/brigadier/RedirectModifier<TS;>;Z)V"
+          },
+          {
+            "nme": "getCommand",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/Command;",
+            "sig": "()Lcom/mojang/brigadier/Command<TS;>;"
+          },
+          {
+            "nme": "getChildren",
+            "acc": 1,
+            "dsc": "()Ljava/util/Collection;",
+            "sig": "()Ljava/util/Collection<Lcom/mojang/brigadier/tree/CommandNode<TS;>;>;"
+          },
+          {
+            "nme": "getChild",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Lcom/mojang/brigadier/tree/CommandNode;",
+            "sig": "(Ljava/lang/String;)Lcom/mojang/brigadier/tree/CommandNode<TS;>;"
+          },
+          {
+            "nme": "getRedirect",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/tree/CommandNode;",
+            "sig": "()Lcom/mojang/brigadier/tree/CommandNode<TS;>;"
+          },
+          {
+            "nme": "getRedirectModifier",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/RedirectModifier;",
+            "sig": "()Lcom/mojang/brigadier/RedirectModifier<TS;>;"
+          },
+          {
+            "nme": "canUse",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z",
+            "sig": "(TS;)Z"
+          },
+          {
+            "nme": "addChild",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/tree/CommandNode;)V",
+            "sig": "(Lcom/mojang/brigadier/tree/CommandNode<TS;>;)V"
+          },
+          {
+            "nme": "findAmbiguities",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/AmbiguityConsumer;)V",
+            "sig": "(Lcom/mojang/brigadier/AmbiguityConsumer<TS;>;)V"
+          },
+          {
+            "nme": "isValidInput",
+            "acc": 1028,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getRequirement",
+            "acc": 1,
+            "dsc": "()Ljava/util/function/Predicate;",
+            "sig": "()Ljava/util/function/Predicate<TS;>;"
+          },
+          {
+            "nme": "getName",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getUsageText",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "parse",
+            "acc": 1025,
+            "dsc": "(Lcom/mojang/brigadier/StringReader;Lcom/mojang/brigadier/context/CommandContextBuilder;)V",
+            "sig": "(Lcom/mojang/brigadier/StringReader;Lcom/mojang/brigadier/context/CommandContextBuilder<TS;>;)V",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "listSuggestions",
+            "acc": 1025,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lcom/mojang/brigadier/context/CommandContext<TS;>;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture<Lcom/mojang/brigadier/suggestion/Suggestions;>;",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "createBuilder",
+            "acc": 1025,
+            "dsc": "()Lcom/mojang/brigadier/builder/ArgumentBuilder;",
+            "sig": "()Lcom/mojang/brigadier/builder/ArgumentBuilder<TS;*>;"
+          },
+          {
+            "nme": "getSortedKey",
+            "acc": 1028,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getRelevantNodes",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/StringReader;)Ljava/util/Collection;",
+            "sig": "(Lcom/mojang/brigadier/StringReader;)Ljava/util/Collection<+Lcom/mojang/brigadier/tree/CommandNode<TS;>;>;"
+          },
+          {
+            "nme": "compareTo",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/tree/CommandNode;)I",
+            "sig": "(Lcom/mojang/brigadier/tree/CommandNode<TS;>;)I"
+          },
+          {
+            "nme": "isFork",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getExamples",
+            "acc": 1025,
+            "dsc": "()Ljava/util/Collection;",
+            "sig": "()Ljava/util/Collection<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "compareTo",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/Object;)I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "children",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/String;Lcom/mojang/brigadier/tree/CommandNode<TS;>;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "literals",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/String;Lcom/mojang/brigadier/tree/LiteralCommandNode<TS;>;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "arguments",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/String;Lcom/mojang/brigadier/tree/ArgumentCommandNode<TS;*>;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "requirement",
+            "dsc": "Ljava/util/function/Predicate;",
+            "sig": "Ljava/util/function/Predicate<TS;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "redirect",
+            "dsc": "Lcom/mojang/brigadier/tree/CommandNode;",
+            "sig": "Lcom/mojang/brigadier/tree/CommandNode<TS;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "modifier",
+            "dsc": "Lcom/mojang/brigadier/RedirectModifier;",
+            "sig": "Lcom/mojang/brigadier/RedirectModifier<TS;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "forks",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "command",
+            "dsc": "Lcom/mojang/brigadier/Command;",
+            "sig": "Lcom/mojang/brigadier/Command<TS;>;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/suggestion/Suggestions.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/suggestion/Suggestions",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/context/StringRange;Ljava/util/List;)V",
+            "sig": "(Lcom/mojang/brigadier/context/StringRange;Ljava/util/List<Lcom/mojang/brigadier/suggestion/Suggestion;>;)V"
+          },
+          {
+            "nme": "getRange",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/context/StringRange;"
+          },
+          {
+            "nme": "getList",
+            "acc": 1,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lcom/mojang/brigadier/suggestion/Suggestion;>;"
+          },
+          {
+            "nme": "isEmpty",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "empty",
+            "acc": 9,
+            "dsc": "()Ljava/util/concurrent/CompletableFuture;",
+            "sig": "()Ljava/util/concurrent/CompletableFuture<Lcom/mojang/brigadier/suggestion/Suggestions;>;"
+          },
+          {
+            "nme": "merge",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Ljava/util/Collection;)Lcom/mojang/brigadier/suggestion/Suggestions;",
+            "sig": "(Ljava/lang/String;Ljava/util/Collection<Lcom/mojang/brigadier/suggestion/Suggestions;>;)Lcom/mojang/brigadier/suggestion/Suggestions;"
+          },
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Ljava/util/Collection;)Lcom/mojang/brigadier/suggestion/Suggestions;",
+            "sig": "(Ljava/lang/String;Ljava/util/Collection<Lcom/mojang/brigadier/suggestion/Suggestion;>;)Lcom/mojang/brigadier/suggestion/Suggestions;"
+          },
+          {
+            "nme": "lambda$create$0",
+            "acc": 4106,
+            "dsc": "(Lcom/mojang/brigadier/suggestion/Suggestion;Lcom/mojang/brigadier/suggestion/Suggestion;)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "EMPTY",
+            "dsc": "Lcom/mojang/brigadier/suggestion/Suggestions;"
+          },
+          {
+            "acc": 18,
+            "nme": "range",
+            "dsc": "Lcom/mojang/brigadier/context/StringRange;"
+          },
+          {
+            "acc": 18,
+            "nme": "suggestions",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lcom/mojang/brigadier/suggestion/Suggestion;>;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/AmbiguityConsumer.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "com/mojang/brigadier/AmbiguityConsumer",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "ambiguous",
+            "acc": 1025,
+            "dsc": "(Lcom/mojang/brigadier/tree/CommandNode;Lcom/mojang/brigadier/tree/CommandNode;Lcom/mojang/brigadier/tree/CommandNode;Ljava/util/Collection;)V",
+            "sig": "(Lcom/mojang/brigadier/tree/CommandNode<TS;>;Lcom/mojang/brigadier/tree/CommandNode<TS;>;Lcom/mojang/brigadier/tree/CommandNode<TS;>;Ljava/util/Collection<Ljava/lang/String;>;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/Command.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "com/mojang/brigadier/Command",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "run",
+            "acc": 1025,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContext;)I",
+            "sig": "(Lcom/mojang/brigadier/context/CommandContext<TS;>;)I",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "SINGLE_SUCCESS",
+            "dsc": "I",
+            "val": 1
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/context/ContextChain.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/context/ContextChain",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/util/List;Lcom/mojang/brigadier/context/CommandContext;)V",
+            "sig": "(Ljava/util/List<Lcom/mojang/brigadier/context/CommandContext<TS;>;>;Lcom/mojang/brigadier/context/CommandContext<TS;>;)V"
+          },
+          {
+            "nme": "tryFlatten",
+            "acc": 9,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContext;)Ljava/util/Optional;",
+            "sig": "<S:Ljava/lang/Object;>(Lcom/mojang/brigadier/context/CommandContext<TS;>;)Ljava/util/Optional<Lcom/mojang/brigadier/context/ContextChain<TS;>;>;"
+          },
+          {
+            "nme": "runModifier",
+            "acc": 9,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/Object;Lcom/mojang/brigadier/ResultConsumer;Z)Ljava/util/Collection;",
+            "sig": "<S:Ljava/lang/Object;>(Lcom/mojang/brigadier/context/CommandContext<TS;>;TS;Lcom/mojang/brigadier/ResultConsumer<TS;>;Z)Ljava/util/Collection<TS;>;",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "runExecutable",
+            "acc": 9,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/Object;Lcom/mojang/brigadier/ResultConsumer;Z)I",
+            "sig": "<S:Ljava/lang/Object;>(Lcom/mojang/brigadier/context/CommandContext<TS;>;TS;Lcom/mojang/brigadier/ResultConsumer<TS;>;Z)I",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "executeAll",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Lcom/mojang/brigadier/ResultConsumer;)I",
+            "sig": "(TS;Lcom/mojang/brigadier/ResultConsumer<TS;>;)I",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "getStage",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/context/ContextChain$Stage;"
+          },
+          {
+            "nme": "getTopContext",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/context/CommandContext;",
+            "sig": "()Lcom/mojang/brigadier/context/CommandContext<TS;>;"
+          },
+          {
+            "nme": "nextStage",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/context/ContextChain;",
+            "sig": "()Lcom/mojang/brigadier/context/ContextChain<TS;>;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "modifiers",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lcom/mojang/brigadier/context/CommandContext<TS;>;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "executable",
+            "dsc": "Lcom/mojang/brigadier/context/CommandContext;",
+            "sig": "Lcom/mojang/brigadier/context/CommandContext<TS;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "nextStageCache",
+            "dsc": "Lcom/mojang/brigadier/context/ContextChain;",
+            "sig": "Lcom/mojang/brigadier/context/ContextChain<TS;>;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/exceptions/SimpleCommandExceptionType.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/exceptions/SimpleCommandExceptionType",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/Message;)V"
+          },
+          {
+            "nme": "create",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/exceptions/CommandSyntaxException;"
+          },
+          {
+            "nme": "createWithContext",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/ImmutableStringReader;)Lcom/mojang/brigadier/exceptions/CommandSyntaxException;"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "message",
+            "dsc": "Lcom/mojang/brigadier/Message;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/arguments/LongArgumentType.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/arguments/LongArgumentType",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(JJ)V"
+          },
+          {
+            "nme": "longArg",
+            "acc": 9,
+            "dsc": "()Lcom/mojang/brigadier/arguments/LongArgumentType;"
+          },
+          {
+            "nme": "longArg",
+            "acc": 9,
+            "dsc": "(J)Lcom/mojang/brigadier/arguments/LongArgumentType;"
+          },
+          {
+            "nme": "longArg",
+            "acc": 9,
+            "dsc": "(JJ)Lcom/mojang/brigadier/arguments/LongArgumentType;"
+          },
+          {
+            "nme": "getLong",
+            "acc": 9,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)J",
+            "sig": "(Lcom/mojang/brigadier/context/CommandContext<*>;Ljava/lang/String;)J"
+          },
+          {
+            "nme": "getMinimum",
+            "acc": 1,
+            "dsc": "()J"
+          },
+          {
+            "nme": "getMaximum",
+            "acc": 1,
+            "dsc": "()J"
+          },
+          {
+            "nme": "parse",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/StringReader;)Ljava/lang/Long;",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getExamples",
+            "acc": 1,
+            "dsc": "()Ljava/util/Collection;",
+            "sig": "()Ljava/util/Collection<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "parse",
+            "acc": 4161,
+            "dsc": "(Lcom/mojang/brigadier/StringReader;)Ljava/lang/Object;",
+            "exs": [
+              "com/mojang/brigadier/exceptions/CommandSyntaxException"
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "EXAMPLES",
+            "dsc": "Ljava/util/Collection;",
+            "sig": "Ljava/util/Collection<Ljava/lang/String;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "minimum",
+            "dsc": "J"
+          },
+          {
+            "acc": 18,
+            "nme": "maximum",
+            "dsc": "J"
+          }
+        ]
+      },
+      "com/mojang/brigadier/exceptions/Dynamic2CommandExceptionType$Function.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "com/mojang/brigadier/exceptions/Dynamic2CommandExceptionType$Function",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "apply",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)Lcom/mojang/brigadier/Message;"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/brigadier/ParseResults.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/ParseResults",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContextBuilder;Lcom/mojang/brigadier/ImmutableStringReader;Ljava/util/Map;)V",
+            "sig": "(Lcom/mojang/brigadier/context/CommandContextBuilder<TS;>;Lcom/mojang/brigadier/ImmutableStringReader;Ljava/util/Map<Lcom/mojang/brigadier/tree/CommandNode<TS;>;Lcom/mojang/brigadier/exceptions/CommandSyntaxException;>;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContextBuilder;)V",
+            "sig": "(Lcom/mojang/brigadier/context/CommandContextBuilder<TS;>;)V"
+          },
+          {
+            "nme": "getContext",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/context/CommandContextBuilder;",
+            "sig": "()Lcom/mojang/brigadier/context/CommandContextBuilder<TS;>;"
+          },
+          {
+            "nme": "getReader",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/ImmutableStringReader;"
+          },
+          {
+            "nme": "getExceptions",
+            "acc": 1,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<Lcom/mojang/brigadier/tree/CommandNode<TS;>;Lcom/mojang/brigadier/exceptions/CommandSyntaxException;>;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "context",
+            "dsc": "Lcom/mojang/brigadier/context/CommandContextBuilder;",
+            "sig": "Lcom/mojang/brigadier/context/CommandContextBuilder<TS;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "exceptions",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lcom/mojang/brigadier/tree/CommandNode<TS;>;Lcom/mojang/brigadier/exceptions/CommandSyntaxException;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "reader",
+            "dsc": "Lcom/mojang/brigadier/ImmutableStringReader;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/ResultConsumer.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "com/mojang/brigadier/ResultConsumer",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "onCommandComplete",
+            "acc": 1025,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContext;ZI)V",
+            "sig": "(Lcom/mojang/brigadier/context/CommandContext<TS;>;ZI)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/LiteralMessage.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/LiteralMessage",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "getString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "string",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "com/mojang/brigadier/context/CommandContextBuilder.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "com/mojang/brigadier/context/CommandContextBuilder",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/CommandDispatcher;Ljava/lang/Object;Lcom/mojang/brigadier/tree/CommandNode;I)V",
+            "sig": "(Lcom/mojang/brigadier/CommandDispatcher<TS;>;TS;Lcom/mojang/brigadier/tree/CommandNode<TS;>;I)V"
+          },
+          {
+            "nme": "withSource",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Lcom/mojang/brigadier/context/CommandContextBuilder;",
+            "sig": "(TS;)Lcom/mojang/brigadier/context/CommandContextBuilder<TS;>;"
+          },
+          {
+            "nme": "getSource",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Object;",
+            "sig": "()TS;"
+          },
+          {
+            "nme": "getRootNode",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/tree/CommandNode;",
+            "sig": "()Lcom/mojang/brigadier/tree/CommandNode<TS;>;"
+          },
+          {
+            "nme": "withArgument",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Lcom/mojang/brigadier/context/ParsedArgument;)Lcom/mojang/brigadier/context/CommandContextBuilder;",
+            "sig": "(Ljava/lang/String;Lcom/mojang/brigadier/context/ParsedArgument<TS;*>;)Lcom/mojang/brigadier/context/CommandContextBuilder<TS;>;"
+          },
+          {
+            "nme": "getArguments",
+            "acc": 1,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<Ljava/lang/String;Lcom/mojang/brigadier/context/ParsedArgument<TS;*>;>;"
+          },
+          {
+            "nme": "withCommand",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/Command;)Lcom/mojang/brigadier/context/CommandContextBuilder;",
+            "sig": "(Lcom/mojang/brigadier/Command<TS;>;)Lcom/mojang/brigadier/context/CommandContextBuilder<TS;>;"
+          },
+          {
+            "nme": "withNode",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/tree/CommandNode;Lcom/mojang/brigadier/context/StringRange;)Lcom/mojang/brigadier/context/CommandContextBuilder;",
+            "sig": "(Lcom/mojang/brigadier/tree/CommandNode<TS;>;Lcom/mojang/brigadier/context/StringRange;)Lcom/mojang/brigadier/context/CommandContextBuilder<TS;>;"
+          },
+          {
+            "nme": "copy",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/context/CommandContextBuilder;",
+            "sig": "()Lcom/mojang/brigadier/context/CommandContextBuilder<TS;>;"
+          },
+          {
+            "nme": "withChild",
+            "acc": 1,
+            "dsc": "(Lcom/mojang/brigadier/context/CommandContextBuilder;)Lcom/mojang/brigadier/context/CommandContextBuilder;",
+            "sig": "(Lcom/mojang/brigadier/context/CommandContextBuilder<TS;>;)Lcom/mojang/brigadier/context/CommandContextBuilder<TS;>;"
+          },
+          {
+            "nme": "getChild",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/context/CommandContextBuilder;",
+            "sig": "()Lcom/mojang/brigadier/context/CommandContextBuilder<TS;>;"
+          },
+          {
+            "nme": "getLastChild",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/context/CommandContextBuilder;",
+            "sig": "()Lcom/mojang/brigadier/context/CommandContextBuilder<TS;>;"
+          },
+          {
+            "nme": "getCommand",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/Command;",
+            "sig": "()Lcom/mojang/brigadier/Command<TS;>;"
+          },
+          {
+            "nme": "getNodes",
+            "acc": 1,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lcom/mojang/brigadier/context/ParsedCommandNode<TS;>;>;"
+          },
+          {
+            "nme": "build",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Lcom/mojang/brigadier/context/CommandContext;",
+            "sig": "(Ljava/lang/String;)Lcom/mojang/brigadier/context/CommandContext<TS;>;"
+          },
+          {
+            "nme": "getDispatcher",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/CommandDispatcher;",
+            "sig": "()Lcom/mojang/brigadier/CommandDispatcher<TS;>;"
+          },
+          {
+            "nme": "getRange",
+            "acc": 1,
+            "dsc": "()Lcom/mojang/brigadier/context/StringRange;"
+          },
+          {
+            "nme": "findSuggestionContext",
+            "acc": 1,
+            "dsc": "(I)Lcom/mojang/brigadier/context/SuggestionContext;",
+            "sig": "(I)Lcom/mojang/brigadier/context/SuggestionContext<TS;>;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "arguments",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/String;Lcom/mojang/brigadier/context/ParsedArgument<TS;*>;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "rootNode",
+            "dsc": "Lcom/mojang/brigadier/tree/CommandNode;",
+            "sig": "Lcom/mojang/brigadier/tree/CommandNode<TS;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "nodes",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lcom/mojang/brigadier/context/ParsedCommandNode<TS;>;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "dispatcher",
+            "dsc": "Lcom/mojang/brigadier/CommandDispatcher;",
+            "sig": "Lcom/mojang/brigadier/CommandDispatcher<TS;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "source",
+            "dsc": "Ljava/lang/Object;",
+            "sig": "TS;"
+          },
+          {
+            "acc": 2,
+            "nme": "command",
+            "dsc": "Lcom/mojang/brigadier/Command;",
+            "sig": "Lcom/mojang/brigadier/Command<TS;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "child",
+            "dsc": "Lcom/mojang/brigadier/context/CommandContextBuilder;",
+            "sig": "Lcom/mojang/brigadier/context/CommandContextBuilder<TS;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "range",
+            "dsc": "Lcom/mojang/brigadier/context/StringRange;"
+          },
+          {
+            "acc": 2,
+            "nme": "modifier",
+            "dsc": "Lcom/mojang/brigadier/RedirectModifier;",
+            "sig": "Lcom/mojang/brigadier/RedirectModifier<TS;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "forks",
+            "dsc": "Z"
+          }
+        ]
+      }
+    }
+  }
+}

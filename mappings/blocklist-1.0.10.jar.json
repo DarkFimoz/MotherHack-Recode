@@ -1,0 +1,29 @@
+{
+  "md5": "fc1420e3182dd32b4df9933f810ebebb",
+  "sha2": "5c685c5ffa94c4cd39496c7184c1d122e515ecef",
+  "sha256": "830bfd639c8db49236bbd8e45d3a2b8c96c56ff654a10118654958a6235d4c44",
+  "contents": {
+    "classes": {
+      "com/mojang/blocklist/BlockListSupplier.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "com/mojang/blocklist/BlockListSupplier",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "createBlockList",
+            "acc": 1025,
+            "dsc": "()Ljava/util/function/Predicate;",
+            "sig": "()Ljava/util/function/Predicate<Ljava/lang/String;>;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          }
+        ],
+        "flds": []
+      }
+    }
+  }
+}

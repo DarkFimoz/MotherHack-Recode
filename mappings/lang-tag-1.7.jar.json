@@ -1,0 +1,412 @@
+{
+  "md5": "31b8a4f76fdbf21f1d667f9d6618e0b2",
+  "sha2": "97c73ecd70bc7e8eefb26c5eea84f251a63f1031",
+  "sha256": "e8c1c594e2425bdbea2d860de55c69b69fc5d59454452449a0f0913c2a5b8a31",
+  "contents": {
+    "classes": {
+      "com/nimbusds/langtag/ReadOnlyLangTag.class": {
+        "ver": 50,
+        "acc": 1537,
+        "nme": "com/nimbusds/langtag/ReadOnlyLangTag",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getLanguage",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getPrimaryLanguage",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getExtendedLanguageSubtags",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/String;"
+          },
+          {
+            "nme": "getScript",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getRegion",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getVariants",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/String;"
+          },
+          {
+            "nme": "getExtensions",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/String;"
+          },
+          {
+            "nme": "getPrivateUse",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "toString",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": []
+      },
+      "com/nimbusds/langtag/LangTagException.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/nimbusds/langtag/LangTagException",
+        "super": "java/lang/Exception",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "com/nimbusds/langtag/LangTagUtils.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "com/nimbusds/langtag/LangTagUtils",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "strip",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "strip",
+            "acc": 9,
+            "dsc": "(Ljava/util/Set;)Ljava/util/Set;",
+            "sig": "(Ljava/util/Set<Ljava/lang/String;>;)Ljava/util/Set<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "strip",
+            "acc": 9,
+            "dsc": "(Ljava/util/List;)Ljava/util/List;",
+            "sig": "(Ljava/util/List<Ljava/lang/String;>;)Ljava/util/List<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "extract",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/nimbusds/langtag/LangTag;",
+            "exs": [
+              "com/nimbusds/langtag/LangTagException"
+            ]
+          },
+          {
+            "nme": "find",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Ljava/util/Map;)Ljava/util/Map;",
+            "sig": "<T:Ljava/lang/Object;>(Ljava/lang/String;Ljava/util/Map<Ljava/lang/String;TT;>;)Ljava/util/Map<Lcom/nimbusds/langtag/LangTag;TT;>;"
+          },
+          {
+            "nme": "toStringList",
+            "acc": 9,
+            "dsc": "(Ljava/util/Collection;)Ljava/util/List;",
+            "sig": "(Ljava/util/Collection<Lcom/nimbusds/langtag/LangTag;>;)Ljava/util/List<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "toStringArray",
+            "acc": 9,
+            "dsc": "(Ljava/util/Collection;)[Ljava/lang/String;",
+            "sig": "(Ljava/util/Collection<Lcom/nimbusds/langtag/LangTag;>;)[Ljava/lang/String;"
+          },
+          {
+            "nme": "parseLangTagList",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Ljava/util/List;",
+            "sig": "(Ljava/lang/String;)Ljava/util/List<Lcom/nimbusds/langtag/LangTag;>;",
+            "exs": [
+              "com/nimbusds/langtag/LangTagException"
+            ]
+          },
+          {
+            "nme": "parseLangTagList",
+            "acc": 9,
+            "dsc": "(Ljava/util/Collection;)Ljava/util/List;",
+            "sig": "(Ljava/util/Collection<Ljava/lang/String;>;)Ljava/util/List<Lcom/nimbusds/langtag/LangTag;>;",
+            "exs": [
+              "com/nimbusds/langtag/LangTagException"
+            ]
+          },
+          {
+            "nme": "parseLangTagList",
+            "acc": 137,
+            "dsc": "([Ljava/lang/String;)Ljava/util/List;",
+            "sig": "([Ljava/lang/String;)Ljava/util/List<Lcom/nimbusds/langtag/LangTag;>;",
+            "exs": [
+              "com/nimbusds/langtag/LangTagException"
+            ]
+          },
+          {
+            "nme": "parseLangTagArray",
+            "acc": 137,
+            "dsc": "([Ljava/lang/String;)[Lcom/nimbusds/langtag/LangTag;",
+            "exs": [
+              "com/nimbusds/langtag/LangTagException"
+            ]
+          },
+          {
+            "nme": "split",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Ljava/util/Map$Entry;",
+            "sig": "(Ljava/lang/String;)Ljava/util/Map$Entry<Ljava/lang/String;Lcom/nimbusds/langtag/LangTag;>;",
+            "exs": [
+              "com/nimbusds/langtag/LangTagException"
+            ]
+          },
+          {
+            "nme": "concat",
+            "acc": 9,
+            "dsc": "(Ljava/util/List;)Ljava/lang/String;",
+            "sig": "(Ljava/util/List<Lcom/nimbusds/langtag/LangTag;>;)Ljava/lang/String;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          }
+        ],
+        "flds": []
+      },
+      "com/nimbusds/langtag/LangTag.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/nimbusds/langtag/LangTag",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "ensureMaxLength",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)V",
+            "exs": [
+              "com/nimbusds/langtag/LangTagException"
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V",
+            "exs": [
+              "com/nimbusds/langtag/LangTagException"
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 129,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/String;)V",
+            "exs": [
+              "com/nimbusds/langtag/LangTagException"
+            ]
+          },
+          {
+            "nme": "getLanguage",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getPrimaryLanguage",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "isPrimaryLanguage",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "setPrimaryLanguage",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;)V",
+            "exs": [
+              "com/nimbusds/langtag/LangTagException"
+            ]
+          },
+          {
+            "nme": "getExtendedLanguageSubtags",
+            "acc": 1,
+            "dsc": "()[Ljava/lang/String;"
+          },
+          {
+            "nme": "isExtendedLanguageSubtag",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "setExtendedLanguageSubtags",
+            "acc": 130,
+            "dsc": "([Ljava/lang/String;)V",
+            "exs": [
+              "com/nimbusds/langtag/LangTagException"
+            ]
+          },
+          {
+            "nme": "getScript",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "isScript",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "setScript",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V",
+            "exs": [
+              "com/nimbusds/langtag/LangTagException"
+            ]
+          },
+          {
+            "nme": "getRegion",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "isRegion",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "setRegion",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V",
+            "exs": [
+              "com/nimbusds/langtag/LangTagException"
+            ]
+          },
+          {
+            "nme": "getVariants",
+            "acc": 1,
+            "dsc": "()[Ljava/lang/String;"
+          },
+          {
+            "nme": "isVariant",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "setVariants",
+            "acc": 129,
+            "dsc": "([Ljava/lang/String;)V",
+            "exs": [
+              "com/nimbusds/langtag/LangTagException"
+            ]
+          },
+          {
+            "nme": "getExtensions",
+            "acc": 1,
+            "dsc": "()[Ljava/lang/String;"
+          },
+          {
+            "nme": "isExtensionSingleton",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "isExtension",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "setExtensions",
+            "acc": 129,
+            "dsc": "([Ljava/lang/String;)V",
+            "exs": [
+              "com/nimbusds/langtag/LangTagException"
+            ]
+          },
+          {
+            "nme": "getPrivateUse",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "isPrivateUse",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "setPrivateUse",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V",
+            "exs": [
+              "com/nimbusds/langtag/LangTagException"
+            ]
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "parse",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/nimbusds/langtag/LangTag;",
+            "exs": [
+              "com/nimbusds/langtag/LangTagException"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "primaryLanguage",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 2,
+            "nme": "languageSubtags",
+            "dsc": "[Ljava/lang/String;"
+          },
+          {
+            "acc": 2,
+            "nme": "script",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 2,
+            "nme": "region",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 2,
+            "nme": "variants",
+            "dsc": "[Ljava/lang/String;"
+          },
+          {
+            "acc": 2,
+            "nme": "extensions",
+            "dsc": "[Ljava/lang/String;"
+          },
+          {
+            "acc": 2,
+            "nme": "privateUse",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      }
+    }
+  }
+}

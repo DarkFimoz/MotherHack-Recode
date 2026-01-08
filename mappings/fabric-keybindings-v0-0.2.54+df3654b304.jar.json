@@ -1,0 +1,179 @@
+{
+  "md5": "d3eb46aeb30e0fbdb5943ceb8eb0074d",
+  "sha2": "f194a6ff90473c5eb5515f9447dda3834bc1f364",
+  "sha256": "9de98aa7cb974d27f029d879829081bdd5f01cb4333430d07bc2b3e179949e82",
+  "contents": {
+    "classes": {
+      "net/fabricmc/fabric/api/client/keybinding/FabricKeyBinding.class": {
+        "ver": 65,
+        "acc": 131105,
+        "nme": "net/fabricmc/fabric/api/client/keybinding/FabricKeyBinding",
+        "super": "net/minecraft/client/option/KeyBinding",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(Lnet/minecraft/util/Identifier;Lnet/minecraft/client/util/InputUtil$Type;ILjava/lang/String;)V"
+          },
+          {
+            "nme": "getBoundKey",
+            "acc": 131073,
+            "dsc": "()Lnet/minecraft/client/util/InputUtil$Key;",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "compareTo",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/Object;)I"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/Deprecated;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/keybinding/KeyBindingRegistry.class": {
+        "ver": 65,
+        "acc": 132609,
+        "nme": "net/fabricmc/fabric/api/client/keybinding/KeyBindingRegistry",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "addCategory",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "register",
+            "acc": 1025,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/keybinding/FabricKeyBinding;)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/fabricmc/fabric/api/client/keybinding/KeyBindingRegistry;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/Deprecated;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/keybinding/FabricKeyBinding$Builder.class": {
+        "ver": 65,
+        "acc": 131105,
+        "nme": "net/fabricmc/fabric/api/client/keybinding/FabricKeyBinding$Builder",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/keybinding/FabricKeyBinding;)V"
+          },
+          {
+            "nme": "build",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/client/keybinding/FabricKeyBinding;"
+          },
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/util/Identifier;Lnet/minecraft/client/util/InputUtil$Type;ILjava/lang/String;)Lnet/fabricmc/fabric/api/client/keybinding/FabricKeyBinding$Builder;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 20,
+            "nme": "binding",
+            "dsc": "Lnet/fabricmc/fabric/api/client/keybinding/FabricKeyBinding;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/Deprecated;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/keybinding/KeyBindingRegistry$1.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "net/fabricmc/fabric/api/client/keybinding/KeyBindingRegistry$1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "addCategory",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "register",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/keybinding/FabricKeyBinding;)Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

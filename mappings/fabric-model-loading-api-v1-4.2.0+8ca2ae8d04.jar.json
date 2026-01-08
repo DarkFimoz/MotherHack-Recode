@@ -1,0 +1,2731 @@
+{
+  "md5": "54144637efbbe2e19425c7007986ac7c",
+  "sha2": "af2fa2432e343cf8afed4c84af1b47d0e7802285",
+  "sha256": "89199bd8c2581661b47a33a36880b4e162c5c47dfb31c8f91c135fee0b88a8bd",
+  "contents": {
+    "classes": {
+      "net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$OnLoadBlock.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$OnLoadBlock",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "modifyModelOnLoad",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/render/model/GroupableModel;Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$OnLoadBlock$Context;)Lnet/minecraft/client/render/model/GroupableModel;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$AfterBake$Context.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$AfterBake$Context",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "id",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "nme": "sourceModel",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/client/render/model/UnbakedModel;"
+          },
+          {
+            "nme": "settings",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/client/render/model/ModelBakeSettings;"
+          },
+          {
+            "nme": "baker",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/client/render/model/Baker;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher$OnLoadModifierContext.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "net/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher$OnLoadModifierContext",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "prepare",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/util/Identifier;)V"
+          },
+          {
+            "nme": "id",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/util/Identifier;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "id",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$OnLoad.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$OnLoad",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "modifyModelOnLoad",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/render/model/UnbakedModel;Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$OnLoad$Context;)Lnet/minecraft/client/render/model/UnbakedModel;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/model/loading/v1/UnwrappableBakedModel.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/model/loading/v1/UnwrappableBakedModel",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getWrappedModel",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/client/render/model/BakedModel;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "unwrap",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/client/render/model/BakedModel;Ljava/util/function/Predicate;)Lnet/minecraft/client/render/model/BakedModel;",
+            "sig": "(Lnet/minecraft/client/render/model/BakedModel;Ljava/util/function/Predicate<Lnet/minecraft/client/render/model/BakedModel;>;)Lnet/minecraft/client/render/model/BakedModel;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "unwrap",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/client/render/model/BakedModel;)Lnet/minecraft/client/render/model/BakedModel;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/model/loading/BakedModelManagerMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/client/model/loading/BakedModelManagerMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getModel",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/Identifier;)Lnet/minecraft/client/render/model/BakedModel;"
+          },
+          {
+            "nme": "onHeadReload",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/resource/ResourceReloader$Synchronizer;Lnet/minecraft/resource/ResourceManager;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lnet/minecraft/resource/ResourceReloader$Synchronizer;Lnet/minecraft/resource/ResourceManager;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/util/concurrent/CompletableFuture<Ljava/lang/Void;>;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "reload"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "resetEventDispatcherFuture",
+            "acc": 2,
+            "dsc": "(Ljava/util/concurrent/CompletableFuture;)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Ljava/util/concurrent/CompletableFuture<Ljava/lang/Void;>;)Ljava/util/concurrent/CompletableFuture<Ljava/lang/Void;>;",
+            "vanns": [
+              {
+                "dsc": "Lcom/llamalad7/mixinextras/injector/ModifyReturnValue;",
+                "vals": [
+                  "method",
+                  [
+                    "reload"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "hookBlockStateModels",
+            "acc": 2,
+            "dsc": "(Ljava/util/concurrent/CompletableFuture;)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Ljava/util/concurrent/CompletableFuture<Lnet/minecraft/client/render/model/BlockStatesLoader$BlockStateDefinition;>;)Ljava/util/concurrent/CompletableFuture<Lnet/minecraft/client/render/model/BlockStatesLoader$BlockStateDefinition;>;",
+            "vanns": [
+              {
+                "dsc": "Lcom/llamalad7/mixinextras/injector/ModifyExpressionValue;",
+                "vals": [
+                  "method",
+                  [
+                    "reload"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "net/minecraft/client/render/model/BlockStatesLoader.load(Lnet/minecraft/client/render/model/UnbakedModel;Lnet/minecraft/resource/ResourceManager;Ljava/util/concurrent/Executor;)Ljava/util/concurrent/CompletableFuture;"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "hookModelDiscovery",
+            "acc": 2,
+            "dsc": "(Ljava/util/function/Function;)Ljava/util/function/Function;",
+            "sig": "(Ljava/util/function/Function<Ljava/lang/Void;Lnet/minecraft/client/render/model/ReferencedModelsCollector;>;)Ljava/util/function/Function<Ljava/lang/Void;Lnet/minecraft/client/render/model/ReferencedModelsCollector;>;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/ModifyArg;",
+                "vals": [
+                  "method",
+                  [
+                    "reload"
+                  ],
+                  "at",
+                  {
+                    "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                    "values": [
+                      "value",
+                      "INVOKE",
+                      "target",
+                      "java/util/concurrent/CompletableFuture.thenApplyAsync(Ljava/util/function/Function;Ljava/util/concurrent/Executor;)Ljava/util/concurrent/CompletableFuture;",
+                      "ordinal",
+                      1
+                    ],
+                    "api": 589824
+                  },
+                  "index",
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "hookModelBaking",
+            "acc": 2,
+            "dsc": "(Ljava/util/function/Function;)Ljava/util/function/Function;",
+            "sig": "(Ljava/util/function/Function<Ljava/lang/Void;Ljava/lang/Object;>;)Ljava/util/function/Function<Ljava/lang/Void;Ljava/lang/Object;>;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/ModifyArg;",
+                "vals": [
+                  "method",
+                  [
+                    "reload"
+                  ],
+                  "at",
+                  {
+                    "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                    "values": [
+                      "value",
+                      "INVOKE",
+                      "target",
+                      "java/util/concurrent/CompletableFuture.thenApplyAsync(Ljava/util/function/Function;Ljava/util/concurrent/Executor;)Ljava/util/concurrent/CompletableFuture;",
+                      "ordinal",
+                      3
+                    ],
+                    "api": 589824
+                  },
+                  "index",
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "onUpload",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;Lnet/minecraft/client/render/model/ModelBaker$BakedModels;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "upload"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE_STRING",
+                        "target",
+                        "net/minecraft/util/profiler/Profiler.swap(Ljava/lang/String;)V",
+                        "args",
+                        [
+                          "ldc=cache"
+                        ]
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "lambda$hookModelBaking$3",
+            "acc": 4098,
+            "dsc": "(Ljava/util/function/Function;Ljava/lang/Void;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "lambda$hookModelDiscovery$2",
+            "acc": 4098,
+            "dsc": "(Ljava/util/function/Function;Ljava/lang/Void;)Lnet/minecraft/client/render/model/ReferencedModelsCollector;"
+          },
+          {
+            "nme": "lambda$hookBlockStateModels$1",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/client/render/model/BlockStatesLoader$BlockStateDefinition;Lnet/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher;)Lnet/minecraft/client/render/model/BlockStatesLoader$BlockStateDefinition;"
+          },
+          {
+            "nme": "lambda$resetEventDispatcherFuture$0",
+            "acc": 4098,
+            "dsc": "(Ljava/lang/Void;)Ljava/lang/Void;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "field_5407",
+            "dsc": "Lnet/minecraft/client/render/model/BakedModel;"
+          },
+          {
+            "acc": 66,
+            "nme": "eventDispatcherFuture",
+            "dsc": "Ljava/util/concurrent/CompletableFuture;",
+            "sig": "Ljava/util/concurrent/CompletableFuture<Lnet/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "extraModels",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/util/Identifier;Lnet/minecraft/client/render/model/BakedModel;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/render/model/BakedModelManager"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher$AfterBakeModifierContext.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "net/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher$AfterBakeModifierContext",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "prepare",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/util/Identifier;Lnet/minecraft/client/render/model/UnbakedModel;Lnet/minecraft/client/render/model/ModelBakeSettings;Lnet/minecraft/client/render/model/Baker;)V"
+          },
+          {
+            "nme": "id",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "nme": "sourceModel",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/client/render/model/UnbakedModel;"
+          },
+          {
+            "nme": "settings",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/client/render/model/ModelBakeSettings;"
+          },
+          {
+            "nme": "baker",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/client/render/model/Baker;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "id",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "acc": 2,
+            "nme": "sourceModel",
+            "dsc": "Lnet/minecraft/client/render/model/UnbakedModel;"
+          },
+          {
+            "acc": 2,
+            "nme": "settings",
+            "dsc": "Lnet/minecraft/client/render/model/ModelBakeSettings;"
+          },
+          {
+            "acc": 2,
+            "nme": "baker",
+            "dsc": "Lnet/minecraft/client/render/model/Baker;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$BeforeBake.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$BeforeBake",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "modifyModelBeforeBake",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/render/model/UnbakedModel;Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$BeforeBake$Context;)Lnet/minecraft/client/render/model/UnbakedModel;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "OVERRIDE_PHASE",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "acc": 25,
+            "nme": "DEFAULT_PHASE",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "acc": 25,
+            "nme": "WRAP_PHASE",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "acc": 25,
+            "nme": "WRAP_LAST_PHASE",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/model/loading/ModelBakerHooks.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/impl/client/model/loading/ModelBakerHooks",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "fabric_getDispatcher",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin$Holder.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin$Holder",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "loader",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin$DataLoader;",
+            "sig": "()Lnet/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin$DataLoader<TT;>;"
+          },
+          {
+            "nme": "plugin",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin;",
+            "sig": "()Lnet/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin<TT;>;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "register",
+            "acc": 9,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin$DataLoader;Lnet/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin;)V",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin$DataLoader<TT;>;Lnet/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin<TT;>;)V"
+          },
+          {
+            "nme": "getAll",
+            "acc": 9,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lnet/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin$Holder<*>;>;"
+          },
+          {
+            "nme": "initialize",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelLoadingPlugin$Context;)V",
+            "sig": "(TT;Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelLoadingPlugin$Context;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/model/loading/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/client/model/loading/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher$OnLoadBlockModifierContext.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "net/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher$OnLoadBlockModifierContext",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "prepare",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/client/util/ModelIdentifier;Lnet/minecraft/block/BlockState;)V"
+          },
+          {
+            "nme": "id",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/client/util/ModelIdentifier;"
+          },
+          {
+            "nme": "state",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/block/BlockState;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "id",
+            "dsc": "Lnet/minecraft/client/util/ModelIdentifier;"
+          },
+          {
+            "acc": 2,
+            "nme": "state",
+            "dsc": "Lnet/minecraft/block/BlockState;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$BeforeBakeBlock.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$BeforeBakeBlock",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "modifyModelBeforeBake",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/render/model/GroupableModel;Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$BeforeBakeBlock$Context;)Lnet/minecraft/client/render/model/GroupableModel;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/model/loading/v1/BlockStateResolver.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/model/loading/v1/BlockStateResolver",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "resolveBlockStates",
+            "acc": 1025,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/model/loading/v1/BlockStateResolver$Context;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher$BeforeBakeModifierContext.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "net/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher$BeforeBakeModifierContext",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "prepare",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/util/Identifier;Lnet/minecraft/client/render/model/ModelBakeSettings;Lnet/minecraft/client/render/model/Baker;)V"
+          },
+          {
+            "nme": "id",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "nme": "settings",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/client/render/model/ModelBakeSettings;"
+          },
+          {
+            "nme": "baker",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/client/render/model/Baker;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "id",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "acc": 2,
+            "nme": "settings",
+            "dsc": "Lnet/minecraft/client/render/model/ModelBakeSettings;"
+          },
+          {
+            "acc": 2,
+            "nme": "baker",
+            "dsc": "Lnet/minecraft/client/render/model/Baker;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin$DataLoader.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin$DataLoader",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "load",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/resource/ResourceManager;Ljava/util/concurrent/Executor;)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lnet/minecraft/resource/ResourceManager;Ljava/util/concurrent/Executor;)Ljava/util/concurrent/CompletableFuture<TT;>;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/model/loading/ModelBakerMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/client/model/loading/ModelBakerMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "onReturnInit",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "<init>"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "wrapBlockModelBake",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/client/render/model/GroupableModel;Lnet/minecraft/client/render/model/Baker;Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation;Lnet/minecraft/client/render/model/ModelBaker$ErrorCollectingSpriteGetter;Ljava/util/Map;Lnet/minecraft/client/util/ModelIdentifier;)Lnet/minecraft/client/render/model/BakedModel;",
+            "sig": "(Lnet/minecraft/client/render/model/GroupableModel;Lnet/minecraft/client/render/model/Baker;Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation<Lnet/minecraft/client/render/model/BakedModel;>;Lnet/minecraft/client/render/model/ModelBaker$ErrorCollectingSpriteGetter;Ljava/util/Map<Lnet/minecraft/client/util/ModelIdentifier;Lnet/minecraft/client/render/model/BakedModel;>;Lnet/minecraft/client/util/ModelIdentifier;)Lnet/minecraft/client/render/model/BakedModel;",
+            "vanns": [
+              {
+                "dsc": "Lcom/llamalad7/mixinextras/injector/wrapoperation/WrapOperation;",
+                "vals": [
+                  "method",
+                  [
+                    "method_65737"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "net/minecraft/client/render/model/GroupableModel.bake(Lnet/minecraft/client/render/model/Baker;)Lnet/minecraft/client/render/model/BakedModel;"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "onReturnBake",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/client/render/model/ModelBaker$ErrorCollectingSpriteGetter;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lnet/minecraft/client/render/model/ModelBaker$ErrorCollectingSpriteGetter;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Lnet/minecraft/client/render/model/ModelBaker$BakedModels;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "bake"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "fabric_getDispatcher",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "lambda$onReturnBake$0",
+            "acc": 4098,
+            "dsc": "(Lnet/minecraft/client/render/model/ModelBaker$ErrorCollectingSpriteGetter;Ljava/util/Map;Lnet/minecraft/util/Identifier;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 8,
+            "nme": "field_5380",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 2,
+            "nme": "fabric_eventDispatcher",
+            "dsc": "Lnet/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/render/model/ModelBaker"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher$AfterBakeBlockModifierContext.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "net/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher$AfterBakeBlockModifierContext",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "prepare",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/client/util/ModelIdentifier;Lnet/minecraft/client/render/model/GroupableModel;Lnet/minecraft/client/render/model/Baker;)V"
+          },
+          {
+            "nme": "id",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/client/util/ModelIdentifier;"
+          },
+          {
+            "nme": "sourceModel",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/client/render/model/GroupableModel;"
+          },
+          {
+            "nme": "baker",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/client/render/model/Baker;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "id",
+            "dsc": "Lnet/minecraft/client/util/ModelIdentifier;"
+          },
+          {
+            "acc": 2,
+            "nme": "sourceModel",
+            "dsc": "Lnet/minecraft/client/render/model/GroupableModel;"
+          },
+          {
+            "acc": 2,
+            "nme": "baker",
+            "dsc": "Lnet/minecraft/client/render/model/Baker;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/util/List;)V",
+            "sig": "(Ljava/util/List<Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelLoadingPlugin;>;)V"
+          },
+          {
+            "nme": "forEachExtraModel",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/Consumer;)V",
+            "sig": "(Ljava/util/function/Consumer<Lnet/minecraft/util/Identifier;>;)V"
+          },
+          {
+            "nme": "modifyModelOnLoad",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/render/model/UnbakedModel;Lnet/minecraft/util/Identifier;)Lnet/minecraft/client/render/model/UnbakedModel;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "modifyModelBeforeBake",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/render/model/UnbakedModel;Lnet/minecraft/util/Identifier;Lnet/minecraft/client/render/model/ModelBakeSettings;Lnet/minecraft/client/render/model/Baker;)Lnet/minecraft/client/render/model/UnbakedModel;"
+          },
+          {
+            "nme": "modifyModelAfterBake",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/render/model/BakedModel;Lnet/minecraft/util/Identifier;Lnet/minecraft/client/render/model/UnbakedModel;Lnet/minecraft/client/render/model/ModelBakeSettings;Lnet/minecraft/client/render/model/Baker;)Lnet/minecraft/client/render/model/BakedModel;"
+          },
+          {
+            "nme": "modifyBlockModelsOnLoad",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/render/model/BlockStatesLoader$BlockStateDefinition;)Lnet/minecraft/client/render/model/BlockStatesLoader$BlockStateDefinition;"
+          },
+          {
+            "nme": "putResolvedBlockStates",
+            "acc": 2,
+            "dsc": "(Ljava/util/Map;)V",
+            "sig": "(Ljava/util/Map<Lnet/minecraft/client/util/ModelIdentifier;Lnet/minecraft/client/render/model/BlockStatesLoader$BlockModel;>;)V"
+          },
+          {
+            "nme": "resolveBlockStates",
+            "acc": 2,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/model/loading/v1/BlockStateResolver;Lnet/minecraft/block/Block;Ljava/util/function/BiConsumer;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/client/model/loading/v1/BlockStateResolver;Lnet/minecraft/block/Block;Ljava/util/function/BiConsumer<Lnet/minecraft/block/BlockState;Lnet/minecraft/client/render/model/GroupableModel;>;)V"
+          },
+          {
+            "nme": "modifyBlockModelOnLoad",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/client/render/model/GroupableModel;Lnet/minecraft/client/util/ModelIdentifier;Lnet/minecraft/block/BlockState;)Lnet/minecraft/client/render/model/GroupableModel;"
+          },
+          {
+            "nme": "modifyBlockModelBeforeBake",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/render/model/GroupableModel;Lnet/minecraft/client/util/ModelIdentifier;Lnet/minecraft/client/render/model/Baker;)Lnet/minecraft/client/render/model/GroupableModel;"
+          },
+          {
+            "nme": "modifyBlockModelAfterBake",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/render/model/BakedModel;Lnet/minecraft/client/util/ModelIdentifier;Lnet/minecraft/client/render/model/GroupableModel;Lnet/minecraft/client/render/model/Baker;)Lnet/minecraft/client/render/model/BakedModel;"
+          },
+          {
+            "nme": "lambda$putResolvedBlockStates$2",
+            "acc": 4098,
+            "dsc": "(Ljava/util/Map;Lnet/minecraft/block/Block;Lnet/fabricmc/fabric/api/client/model/loading/v1/BlockStateResolver;)V"
+          },
+          {
+            "nme": "lambda$putResolvedBlockStates$1",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/util/Identifier;Ljava/util/Map;Lnet/minecraft/block/BlockState;Lnet/minecraft/client/render/model/GroupableModel;)V"
+          },
+          {
+            "nme": "lambda$modifyBlockModelsOnLoad$0",
+            "acc": 4098,
+            "dsc": "(Lnet/minecraft/client/util/ModelIdentifier;Lnet/minecraft/client/render/model/BlockStatesLoader$BlockModel;)Lnet/minecraft/client/render/model/BlockStatesLoader$BlockModel;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 25,
+            "nme": "CURRENT",
+            "dsc": "Ljava/lang/ThreadLocal;",
+            "sig": "Ljava/lang/ThreadLocal<Lnet/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "pluginContext",
+            "dsc": "Lnet/fabricmc/fabric/impl/client/model/loading/ModelLoadingPluginContextImpl;"
+          },
+          {
+            "acc": 18,
+            "nme": "blockStateResolverContext",
+            "dsc": "Lnet/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher$BlockStateResolverContext;"
+          },
+          {
+            "acc": 18,
+            "nme": "onLoadModifierContext",
+            "dsc": "Lnet/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher$OnLoadModifierContext;"
+          },
+          {
+            "acc": 18,
+            "nme": "beforeBakeModifierContextStack",
+            "dsc": "Lit/unimi/dsi/fastutil/objects/ObjectArrayList;",
+            "sig": "Lit/unimi/dsi/fastutil/objects/ObjectArrayList<Lnet/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher$BeforeBakeModifierContext;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "afterBakeModifierContextStack",
+            "dsc": "Lit/unimi/dsi/fastutil/objects/ObjectArrayList;",
+            "sig": "Lit/unimi/dsi/fastutil/objects/ObjectArrayList<Lnet/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher$AfterBakeModifierContext;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "onLoadBlockModifierContext",
+            "dsc": "Lnet/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher$OnLoadBlockModifierContext;"
+          },
+          {
+            "acc": 18,
+            "nme": "beforeBakeBlockModifierContext",
+            "dsc": "Lnet/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher$BeforeBakeBlockModifierContext;"
+          },
+          {
+            "acc": 18,
+            "nme": "afterBakeBlockModifierContext",
+            "dsc": "Lnet/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher$AfterBakeBlockModifierContext;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$BeforeBake$Context.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$BeforeBake$Context",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "id",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "nme": "settings",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/client/render/model/ModelBakeSettings;"
+          },
+          {
+            "nme": "baker",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/client/render/model/Baker;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/model/loading/ModelLoadingPluginManager.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/client/model/loading/ModelLoadingPluginManager",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "registerPlugin",
+            "acc": 9,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelLoadingPlugin;)V"
+          },
+          {
+            "nme": "registerPlugin",
+            "acc": 9,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin$DataLoader;Lnet/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin;)V",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin$DataLoader<TT;>;Lnet/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin<TT;>;)V"
+          },
+          {
+            "nme": "preparePlugins",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/resource/ResourceManager;Ljava/util/concurrent/Executor;)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lnet/minecraft/resource/ResourceManager;Ljava/util/concurrent/Executor;)Ljava/util/concurrent/CompletableFuture<Ljava/util/List<Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelLoadingPlugin;>;>;"
+          },
+          {
+            "nme": "preparePlugin",
+            "acc": 10,
+            "dsc": "(Lnet/fabricmc/fabric/impl/client/model/loading/ModelLoadingPluginManager$HolderImpl;Lnet/minecraft/resource/ResourceManager;Ljava/util/concurrent/Executor;)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/fabricmc/fabric/impl/client/model/loading/ModelLoadingPluginManager$HolderImpl<TT;>;Lnet/minecraft/resource/ResourceManager;Ljava/util/concurrent/Executor;)Ljava/util/concurrent/CompletableFuture<Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelLoadingPlugin;>;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lambda$preparePlugin$1",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/impl/client/model/loading/ModelLoadingPluginManager$HolderImpl;Ljava/lang/Object;)Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelLoadingPlugin;"
+          },
+          {
+            "nme": "lambda$preparePlugin$0",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/impl/client/model/loading/ModelLoadingPluginManager$HolderImpl;Ljava/lang/Object;Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelLoadingPlugin$Context;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "PLUGINS",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelLoadingPlugin;>;"
+          },
+          {
+            "acc": 26,
+            "nme": "PREPARABLE_PLUGINS",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lnet/fabricmc/fabric/impl/client/model/loading/ModelLoadingPluginManager$HolderImpl<*>;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "PLUGINS_VIEW",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelLoadingPlugin;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "PREPARABLE_PLUGINS_VIEW",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lnet/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin$Holder<*>;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$BeforeBakeBlock$Context.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$BeforeBakeBlock$Context",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "id",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/client/util/ModelIdentifier;"
+          },
+          {
+            "nme": "baker",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/client/render/model/Baker;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$AfterBakeBlock.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$AfterBakeBlock",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "modifyModelAfterBake",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/render/model/BakedModel;Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$AfterBakeBlock$Context;)Lnet/minecraft/client/render/model/BakedModel;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/model/loading/v1/ModelLoadingPlugin.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/model/loading/v1/ModelLoadingPlugin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "register",
+            "acc": 9,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelLoadingPlugin;)V"
+          },
+          {
+            "nme": "getAll",
+            "acc": 9,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelLoadingPlugin;>;"
+          },
+          {
+            "nme": "initialize",
+            "acc": 1025,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelLoadingPlugin$Context;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/model/loading/BakedModelsHooks.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/impl/client/model/loading/BakedModelsHooks",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "fabric_getExtraModels",
+            "acc": 1025,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<Lnet/minecraft/util/Identifier;Lnet/minecraft/client/render/model/BakedModel;>;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "fabric_setExtraModels",
+            "acc": 1025,
+            "dsc": "(Ljava/util/Map;)V",
+            "sig": "(Ljava/util/Map<Lnet/minecraft/util/Identifier;Lnet/minecraft/client/render/model/BakedModel;>;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/model/loading/v1/ModelLoadingPlugin$Context.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/model/loading/v1/ModelLoadingPlugin$Context",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "addModels",
+            "acc": 1153,
+            "dsc": "([Lnet/minecraft/util/Identifier;)V"
+          },
+          {
+            "nme": "addModels",
+            "acc": 1025,
+            "dsc": "(Ljava/util/Collection;)V",
+            "sig": "(Ljava/util/Collection<+Lnet/minecraft/util/Identifier;>;)V"
+          },
+          {
+            "nme": "registerBlockStateResolver",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/block/Block;Lnet/fabricmc/fabric/api/client/model/loading/v1/BlockStateResolver;)V"
+          },
+          {
+            "nme": "modifyModelOnLoad",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$OnLoad;>;"
+          },
+          {
+            "nme": "modifyModelBeforeBake",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$BeforeBake;>;"
+          },
+          {
+            "nme": "modifyModelAfterBake",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$AfterBake;>;"
+          },
+          {
+            "nme": "modifyBlockModelOnLoad",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$OnLoadBlock;>;"
+          },
+          {
+            "nme": "modifyBlockModelBeforeBake",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$BeforeBakeBlock;>;"
+          },
+          {
+            "nme": "modifyBlockModelAfterBake",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$AfterBakeBlock;>;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher$BlockStateResolverContext.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "net/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher$BlockStateResolverContext",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "prepare",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/block/Block;)V"
+          },
+          {
+            "nme": "block",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/block/Block;"
+          },
+          {
+            "nme": "setModel",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/block/BlockState;Lnet/minecraft/client/render/model/GroupableModel;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "block",
+            "dsc": "Lnet/minecraft/block/Block;"
+          },
+          {
+            "acc": 18,
+            "nme": "models",
+            "dsc": "Lit/unimi/dsi/fastutil/objects/Reference2ReferenceMap;",
+            "sig": "Lit/unimi/dsi/fastutil/objects/Reference2ReferenceMap<Lnet/minecraft/block/BlockState;Lnet/minecraft/client/render/model/GroupableModel;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/model/loading/ModelLoadingPluginContextImpl.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/client/model/loading/ModelLoadingPluginContextImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "addModels",
+            "acc": 129,
+            "dsc": "([Lnet/minecraft/util/Identifier;)V"
+          },
+          {
+            "nme": "addModels",
+            "acc": 1,
+            "dsc": "(Ljava/util/Collection;)V",
+            "sig": "(Ljava/util/Collection<+Lnet/minecraft/util/Identifier;>;)V"
+          },
+          {
+            "nme": "registerBlockStateResolver",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/block/Block;Lnet/fabricmc/fabric/api/client/model/loading/v1/BlockStateResolver;)V"
+          },
+          {
+            "nme": "modifyModelOnLoad",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$OnLoad;>;"
+          },
+          {
+            "nme": "modifyModelBeforeBake",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$BeforeBake;>;"
+          },
+          {
+            "nme": "modifyModelAfterBake",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$AfterBake;>;"
+          },
+          {
+            "nme": "modifyBlockModelOnLoad",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$OnLoadBlock;>;"
+          },
+          {
+            "nme": "modifyBlockModelBeforeBake",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$BeforeBakeBlock;>;"
+          },
+          {
+            "nme": "modifyBlockModelAfterBake",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$AfterBakeBlock;>;"
+          },
+          {
+            "nme": "lambda$new$11",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$AfterBakeBlock;)Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$AfterBakeBlock;"
+          },
+          {
+            "nme": "lambda$new$10",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$AfterBakeBlock;Lnet/minecraft/client/render/model/BakedModel;Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$AfterBakeBlock$Context;)Lnet/minecraft/client/render/model/BakedModel;"
+          },
+          {
+            "nme": "lambda$new$9",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$BeforeBakeBlock;)Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$BeforeBakeBlock;"
+          },
+          {
+            "nme": "lambda$new$8",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$BeforeBakeBlock;Lnet/minecraft/client/render/model/GroupableModel;Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$BeforeBakeBlock$Context;)Lnet/minecraft/client/render/model/GroupableModel;"
+          },
+          {
+            "nme": "lambda$new$7",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$OnLoadBlock;)Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$OnLoadBlock;"
+          },
+          {
+            "nme": "lambda$new$6",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$OnLoadBlock;Lnet/minecraft/client/render/model/GroupableModel;Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$OnLoadBlock$Context;)Lnet/minecraft/client/render/model/GroupableModel;"
+          },
+          {
+            "nme": "lambda$new$5",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$AfterBake;)Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$AfterBake;"
+          },
+          {
+            "nme": "lambda$new$4",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$AfterBake;Lnet/minecraft/client/render/model/BakedModel;Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$AfterBake$Context;)Lnet/minecraft/client/render/model/BakedModel;"
+          },
+          {
+            "nme": "lambda$new$3",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$BeforeBake;)Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$BeforeBake;"
+          },
+          {
+            "nme": "lambda$new$2",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$BeforeBake;Lnet/minecraft/client/render/model/UnbakedModel;Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$BeforeBake$Context;)Lnet/minecraft/client/render/model/UnbakedModel;"
+          },
+          {
+            "nme": "lambda$new$1",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$OnLoad;)Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$OnLoad;"
+          },
+          {
+            "nme": "lambda$new$0",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$OnLoad;Lnet/minecraft/client/render/model/UnbakedModel;Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$OnLoad$Context;)Lnet/minecraft/client/render/model/UnbakedModel;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 16,
+            "nme": "extraModels",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Lnet/minecraft/util/Identifier;>;"
+          },
+          {
+            "acc": 16,
+            "nme": "blockStateResolvers",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/block/Block;Lnet/fabricmc/fabric/api/client/model/loading/v1/BlockStateResolver;>;"
+          },
+          {
+            "acc": 26,
+            "nme": "MODEL_MODIFIER_PHASES",
+            "dsc": "[Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "acc": 18,
+            "nme": "onLoadModifiers",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$OnLoad;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "beforeBakeModifiers",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$BeforeBake;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "afterBakeModifiers",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$AfterBake;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "onLoadBlockModifiers",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$OnLoadBlock;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "beforeBakeBlockModifiers",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$BeforeBakeBlock;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "afterBakeBlockModifiers",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$AfterBakeBlock;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$OnLoadBlock$Context.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$OnLoadBlock$Context",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "id",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/client/util/ModelIdentifier;"
+          },
+          {
+            "nme": "state",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/block/BlockState;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/model/loading/ModelBakerBakerImplMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/client/model/loading/ModelBakerBakerImplMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "wrapModelBake",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/client/render/model/UnbakedModel;Lnet/minecraft/client/render/model/Baker;Lnet/minecraft/client/render/model/ModelBakeSettings;Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation;Lnet/minecraft/util/Identifier;)Lnet/minecraft/client/render/model/BakedModel;",
+            "sig": "(Lnet/minecraft/client/render/model/UnbakedModel;Lnet/minecraft/client/render/model/Baker;Lnet/minecraft/client/render/model/ModelBakeSettings;Lcom/llamalad7/mixinextras/injector/wrapoperation/Operation<Lnet/minecraft/client/render/model/BakedModel;>;Lnet/minecraft/util/Identifier;)Lnet/minecraft/client/render/model/BakedModel;",
+            "vanns": [
+              {
+                "dsc": "Lcom/llamalad7/mixinextras/injector/wrapoperation/WrapOperation;",
+                "vals": [
+                  "method",
+                  [
+                    "bake(Lnet/minecraft/util/Identifier;Lnet/minecraft/client/render/model/ModelBakeSettings;)Lnet/minecraft/client/render/model/BakedModel;"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "net/minecraft/client/render/model/UnbakedModel.bake(Lnet/minecraft/client/render/model/UnbakedModel;Lnet/minecraft/client/render/model/Baker;Lnet/minecraft/client/render/model/ModelBakeSettings;)Lnet/minecraft/client/render/model/BakedModel;"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "field_40571",
+            "dsc": "Lnet/minecraft/client/render/model/ModelBaker;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/render/model/ModelBaker$BakerImpl"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$AfterBakeBlock$Context.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$AfterBakeBlock$Context",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "id",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/client/util/ModelIdentifier;"
+          },
+          {
+            "nme": "sourceModel",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/client/render/model/GroupableModel;"
+          },
+          {
+            "nme": "baker",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/client/render/model/Baker;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/model/loading/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/mixin/client/model/loading/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/model/loading/WrapperBakedModelMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/client/model/loading/WrapperBakedModelMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getWrappedModel",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/client/render/model/BakedModel;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4,
+            "nme": "field_54188",
+            "dsc": "Lnet/minecraft/client/render/model/BakedModel;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/render/model/WrapperBakedModel"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/model/loading/v1/FabricBakedModelManager.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/model/loading/v1/FabricBakedModelManager",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getModel",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/Identifier;)Lnet/minecraft/client/render/model/BakedModel;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher$BeforeBakeBlockModifierContext.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "net/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher$BeforeBakeBlockModifierContext",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "prepare",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/client/util/ModelIdentifier;Lnet/minecraft/client/render/model/Baker;)V"
+          },
+          {
+            "nme": "id",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/client/util/ModelIdentifier;"
+          },
+          {
+            "nme": "baker",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/client/render/model/Baker;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "id",
+            "dsc": "Lnet/minecraft/client/util/ModelIdentifier;"
+          },
+          {
+            "acc": 2,
+            "nme": "baker",
+            "dsc": "Lnet/minecraft/client/render/model/Baker;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/model/loading/v1/BlockStateResolver$Context.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/model/loading/v1/BlockStateResolver$Context",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "block",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/block/Block;"
+          },
+          {
+            "nme": "setModel",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/block/BlockState;Lnet/minecraft/client/render/model/GroupableModel;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$AfterBake.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$AfterBake",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "modifyModelAfterBake",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/render/model/BakedModel;Lnet/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$AfterBake$Context;)Lnet/minecraft/client/render/model/BakedModel;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/model/loading/v1/WrapperUnbakedModel.class": {
+        "ver": 65,
+        "acc": 1057,
+        "nme": "net/fabricmc/fabric/api/client/model/loading/v1/WrapperUnbakedModel",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(Lnet/minecraft/client/render/model/UnbakedModel;)V"
+          },
+          {
+            "nme": "resolve",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/render/model/ResolvableModel$Resolver;)V"
+          },
+          {
+            "nme": "bake",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/render/model/ModelTextures;Lnet/minecraft/client/render/model/Baker;Lnet/minecraft/client/render/model/ModelBakeSettings;ZZLnet/minecraft/client/render/model/json/ModelTransformation;)Lnet/minecraft/client/render/model/BakedModel;"
+          },
+          {
+            "nme": "getAmbientOcclusion",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Boolean;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "getGuiLight",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/client/render/model/UnbakedModel$GuiLight;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "getTransformation",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/client/render/model/json/ModelTransformation;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "getTextures",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/client/render/model/ModelTextures$Textures;"
+          },
+          {
+            "nme": "getParent",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/client/render/model/UnbakedModel;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4,
+            "nme": "wrapped",
+            "dsc": "Lnet/minecraft/client/render/model/UnbakedModel;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/model/loading/ModelLoadingPluginManager$HolderImpl.class": {
+        "ver": 65,
+        "acc": 65584,
+        "nme": "net/fabricmc/fabric/impl/client/model/loading/ModelLoadingPluginManager$HolderImpl",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Lnet/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin$DataLoader;Lnet/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin$DataLoader<TT;>;Lnet/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin<TT;>;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "loader",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin$DataLoader;",
+            "sig": "()Lnet/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin$DataLoader<TT;>;"
+          },
+          {
+            "nme": "plugin",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin;",
+            "sig": "()Lnet/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin<TT;>;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "loader",
+            "dsc": "Lnet/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin$DataLoader;",
+            "sig": "Lnet/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin$DataLoader<TT;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "plugin",
+            "dsc": "Lnet/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin;",
+            "sig": "Lnet/fabricmc/fabric/api/client/model/loading/v1/PreparableModelLoadingPlugin<TT;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/model/loading/ModelBakerBakedModelsMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/client/model/loading/ModelBakerBakedModelsMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "fabric_getExtraModels",
+            "acc": 1,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<Lnet/minecraft/util/Identifier;Lnet/minecraft/client/render/model/BakedModel;>;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "fabric_setExtraModels",
+            "acc": 1,
+            "dsc": "(Ljava/util/Map;)V",
+            "sig": "(Ljava/util/Map<Lnet/minecraft/util/Identifier;Lnet/minecraft/client/render/model/BakedModel;>;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "extraModels",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/util/Identifier;Lnet/minecraft/client/render/model/BakedModel;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/render/model/ModelBaker$BakedModels"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/model/loading/v1/WrapperGroupableModel.class": {
+        "ver": 65,
+        "acc": 1057,
+        "nme": "net/fabricmc/fabric/api/client/model/loading/v1/WrapperGroupableModel",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(Lnet/minecraft/client/render/model/GroupableModel;)V"
+          },
+          {
+            "nme": "resolve",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/render/model/ResolvableModel$Resolver;)V"
+          },
+          {
+            "nme": "bake",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/client/render/model/Baker;)Lnet/minecraft/client/render/model/BakedModel;"
+          },
+          {
+            "nme": "getEqualityGroup",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/block/BlockState;)Ljava/lang/Object;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4,
+            "nme": "wrapped",
+            "dsc": "Lnet/minecraft/client/render/model/GroupableModel;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$OnLoad$Context.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/model/loading/v1/ModelModifier$OnLoad$Context",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "id",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/util/Identifier;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$NonExtendable;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/client/model/loading/ReferencedModelsCollectorMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/client/model/loading/ReferencedModelsCollectorMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "method_62638",
+            "acc": 1024,
+            "dsc": "(Lnet/minecraft/util/Identifier;)Lnet/minecraft/client/render/model/UnbakedModel;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Shadow;"
+              }
+            ]
+          },
+          {
+            "nme": "onReturnInit",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "<init>"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "onLoadModel",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/client/render/model/UnbakedModel;Lnet/minecraft/util/Identifier;)Lnet/minecraft/client/render/model/UnbakedModel;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/ModifyVariable;",
+                "vals": [
+                  "method",
+                  [
+                    "getModel"
+                  ],
+                  "at",
+                  {
+                    "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                    "values": [
+                      "value",
+                      "STORE",
+                      "ordinal",
+                      0
+                    ],
+                    "api": 589824
+                  },
+                  "ordinal",
+                  0
+                ]
+              }
+            ],
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "fabric_eventDispatcher",
+            "dsc": "Lnet/fabricmc/fabric/impl/client/model/loading/ModelLoadingEventDispatcher;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/render/model/ReferencedModelsCollector"
+                }
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,503 @@
+{
+  "md5": "1c06cd97d006339f58085cdfd8065000",
+  "sha2": "6f07dcb6a2e595c7ee2ca43b67e5d1c018ca0770",
+  "sha256": "017dfd1aa6f536cfcb8f643830f6f9f17028e8277417a4741a92c46e47424dda",
+  "contents": {
+    "classes": {
+      "com/mojang/jtracy/Zone.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "com/mojang/jtracy/Zone",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "addText",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Lcom/mojang/jtracy/Zone;"
+          },
+          {
+            "nme": "setColor",
+            "acc": 1,
+            "dsc": "(I)Lcom/mojang/jtracy/Zone;"
+          },
+          {
+            "nme": "addValue",
+            "acc": 1,
+            "dsc": "(J)Lcom/mojang/jtracy/Zone;"
+          },
+          {
+            "nme": "close",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 24,
+            "nme": "UNAVAILABLE",
+            "dsc": "Lcom/mojang/jtracy/Zone;"
+          },
+          {
+            "acc": 18,
+            "nme": "id",
+            "dsc": "I"
+          }
+        ]
+      },
+      "com/mojang/jtracy/ContinuousFrame.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "com/mojang/jtracy/ContinuousFrame",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "mark",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 24,
+            "nme": "UNAVAILABLE",
+            "dsc": "Lcom/mojang/jtracy/ContinuousFrame;"
+          },
+          {
+            "acc": 18,
+            "nme": "id",
+            "dsc": "J"
+          }
+        ]
+      },
+      "com/mojang/jtracy/Plot.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "com/mojang/jtracy/Plot",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "setValue",
+            "acc": 1,
+            "dsc": "(D)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 24,
+            "nme": "UNAVAILABLE",
+            "dsc": "Lcom/mojang/jtracy/Plot;"
+          },
+          {
+            "acc": 18,
+            "nme": "handle",
+            "dsc": "J"
+          }
+        ]
+      },
+      "com/mojang/jtracy/DiscontinuousFrame.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "com/mojang/jtracy/DiscontinuousFrame",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "start",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "end",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 24,
+            "nme": "UNAVAILABLE",
+            "dsc": "Lcom/mojang/jtracy/DiscontinuousFrame;"
+          },
+          {
+            "acc": 18,
+            "nme": "id",
+            "dsc": "J"
+          }
+        ]
+      },
+      "com/mojang/jtracy/TracyClient.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "com/mojang/jtracy/TracyClient",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "isAvailable",
+            "acc": 9,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "load",
+            "acc": 41,
+            "dsc": "()V",
+            "exs": [
+              "java/lang/UnsatisfiedLinkError"
+            ]
+          },
+          {
+            "nme": "markFrame",
+            "acc": 9,
+            "dsc": "()V"
+          },
+          {
+            "nme": "frameImage",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;IIIZ)V"
+          },
+          {
+            "nme": "beginZone",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Z)Lcom/mojang/jtracy/Zone;"
+          },
+          {
+            "nme": "beginZone",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Lcom/mojang/jtracy/Zone;"
+          },
+          {
+            "nme": "setThreadName",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "createPlot",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/mojang/jtracy/Plot;"
+          },
+          {
+            "nme": "createDiscontinuousFrame",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/mojang/jtracy/DiscontinuousFrame;"
+          },
+          {
+            "nme": "createContinuousFrame",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/mojang/jtracy/ContinuousFrame;"
+          },
+          {
+            "nme": "createMemoryPool",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/mojang/jtracy/MemoryPool;"
+          },
+          {
+            "nme": "reportAppInfo",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "message",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "message",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "message",
+            "acc": 9,
+            "dsc": "(Ljava/util/function/Supplier;)V",
+            "sig": "(Ljava/util/function/Supplier<Ljava/lang/String;>;)V"
+          },
+          {
+            "nme": "message",
+            "acc": 9,
+            "dsc": "(Ljava/util/function/Supplier;I)V",
+            "sig": "(Ljava/util/function/Supplier<Ljava/lang/String;>;I)V"
+          },
+          {
+            "nme": "lambda$beginZone$1",
+            "acc": 4106,
+            "dsc": "(Ljava/util/stream/Stream;)Ljava/util/Optional;"
+          },
+          {
+            "nme": "lambda$beginZone$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/StackWalker$StackFrame;)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 10,
+            "nme": "loaded",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "com/mojang/jtracy/Loader$1.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "com/mojang/jtracy/Loader$1",
+        "super": "java/nio/file/SimpleFileVisitor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lcom/mojang/jtracy/Loader;)V"
+          },
+          {
+            "nme": "visitFile",
+            "acc": 1,
+            "dsc": "(Ljava/nio/file/Path;Ljava/nio/file/attribute/BasicFileAttributes;)Ljava/nio/file/FileVisitResult;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "visitFile",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/Object;Ljava/nio/file/attribute/BasicFileAttributes;)Ljava/nio/file/FileVisitResult;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/jtracy/Loader.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "com/mojang/jtracy/Loader",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "createUnpackRoot",
+            "acc": 2,
+            "dsc": "()Ljava/nio/file/Path;"
+          },
+          {
+            "nme": "load",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "unpackLibrary",
+            "acc": 2,
+            "dsc": "(Ljava/nio/file/Path;)Ljava/nio/file/Path;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "com/mojang/jtracy/TracyBindings.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "com/mojang/jtracy/TracyBindings",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "startup",
+            "acc": 264,
+            "dsc": "()V"
+          },
+          {
+            "nme": "shutdown",
+            "acc": 264,
+            "dsc": "()V"
+          },
+          {
+            "nme": "markFrame",
+            "acc": 264,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "markFrameStart",
+            "acc": 264,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "markFrameEnd",
+            "acc": 264,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "beginZone",
+            "acc": 264,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)I"
+          },
+          {
+            "nme": "frameImage",
+            "acc": 264,
+            "dsc": "(Ljava/nio/ByteBuffer;IIIZ)I"
+          },
+          {
+            "nme": "endZone",
+            "acc": 264,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "addZoneText",
+            "acc": 264,
+            "dsc": "(ILjava/lang/String;)V"
+          },
+          {
+            "nme": "setZoneColor",
+            "acc": 264,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "addZoneValue",
+            "acc": 264,
+            "dsc": "(IJ)V"
+          },
+          {
+            "nme": "mallocNamed",
+            "acc": 264,
+            "dsc": "(JJI)J"
+          },
+          {
+            "nme": "freeNamed",
+            "acc": 264,
+            "dsc": "(JJ)J"
+          },
+          {
+            "nme": "setThreadName",
+            "acc": 264,
+            "dsc": "(Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "plotValue",
+            "acc": 264,
+            "dsc": "(JD)V"
+          },
+          {
+            "nme": "leakName",
+            "acc": 264,
+            "dsc": "(Ljava/lang/String;)J"
+          },
+          {
+            "nme": "appInfo",
+            "acc": 264,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "message",
+            "acc": 264,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "messageColored",
+            "acc": 264,
+            "dsc": "(Ljava/lang/String;I)V"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/jtracy/MemoryPool.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "com/mojang/jtracy/MemoryPool",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "malloc",
+            "acc": 1,
+            "dsc": "(JI)V"
+          },
+          {
+            "nme": "free",
+            "acc": 1,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 24,
+            "nme": "UNAVAILABLE",
+            "dsc": "Lcom/mojang/jtracy/MemoryPool;"
+          },
+          {
+            "acc": 18,
+            "nme": "id",
+            "dsc": "J"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,439 @@
+{
+  "md5": "0a7a8d99ad3a3ee33d768de73e6d7fb8",
+  "sha2": "54ca8467cb48f59d2d2ed101a1495e366ebfde13",
+  "sha256": "1ee689d627a3786ea636e969290f22bccd2c860d08ce3ef627fd01dad06177ef",
+  "contents": {
+    "classes": {
+      "net/fabricmc/fabric/impl/blockview/client/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/blockview/client/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/blockview/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/mixin/blockview/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/blockview/client/RenderDataMapConsumer.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/impl/blockview/client/RenderDataMapConsumer",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "fabric_acceptRenderDataMap",
+            "acc": 1025,
+            "dsc": "(Lit/unimi/dsi/fastutil/longs/Long2ObjectMap;)V",
+            "sig": "(Lit/unimi/dsi/fastutil/longs/Long2ObjectMap<Ljava/lang/Object;>;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/blockview/v2/FabricBlockView.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/blockview/v2/FabricBlockView",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getBlockEntityRenderData",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/math/BlockPos;)Ljava/lang/Object;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "hasBiomes",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getBiomeFabric",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/registry/entry/RegistryEntry;",
+            "sig": "(Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/mixin/blockview/BlockEntityMixin.class": {
+        "ver": 65,
+        "acc": 1057,
+        "nme": "net/fabricmc/fabric/mixin/blockview/BlockEntityMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/block/entity/BlockEntity"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/blockview/v2/RenderDataBlockEntity.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/blockview/v2/RenderDataBlockEntity",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getRenderData",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Object;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/mixin/blockview/client/ChunkRendererRegionBuilderMixin.class": {
+        "ver": 65,
+        "acc": 1057,
+        "nme": "net/fabricmc/fabric/mixin/blockview/client/ChunkRendererRegionBuilderMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "copyDataForChunk",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/world/World;Lnet/minecraft/util/math/ChunkSectionPos;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;Lnet/minecraft/client/render/chunk/ChunkRendererRegionBuilder$ClientChunk;Lcom/llamalad7/mixinextras/sugar/ref/LocalRef;)V",
+            "sig": "(Lnet/minecraft/world/World;Lnet/minecraft/util/math/ChunkSectionPos;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Lnet/minecraft/client/render/chunk/ChunkRendererRegion;>;Lnet/minecraft/client/render/chunk/ChunkRendererRegionBuilder$ClientChunk;Lcom/llamalad7/mixinextras/sugar/ref/LocalRef<Lit/unimi/dsi/fastutil/longs/Long2ObjectOpenHashMap<Ljava/lang/Object;>;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "build"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/client/render/chunk/ChunkRendererRegionBuilder$ClientChunk;getRenderedChunk()Lnet/minecraft/client/render/chunk/RenderedChunk;"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "createDataMap",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/world/World;Lnet/minecraft/util/math/ChunkSectionPos;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;Lcom/llamalad7/mixinextras/sugar/ref/LocalRef;)V",
+            "sig": "(Lnet/minecraft/world/World;Lnet/minecraft/util/math/ChunkSectionPos;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Lnet/minecraft/client/render/chunk/ChunkRendererRegion;>;Lcom/llamalad7/mixinextras/sugar/ref/LocalRef<Lit/unimi/dsi/fastutil/longs/Long2ObjectOpenHashMap<Ljava/lang/Object;>;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "build"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN",
+                        "ordinal",
+                        1
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "mapChunk",
+            "acc": 10,
+            "dsc": "(Lnet/minecraft/world/chunk/WorldChunk;Lnet/minecraft/util/math/ChunkSectionPos;Lit/unimi/dsi/fastutil/longs/Long2ObjectOpenHashMap;)Lit/unimi/dsi/fastutil/longs/Long2ObjectOpenHashMap;",
+            "sig": "(Lnet/minecraft/world/chunk/WorldChunk;Lnet/minecraft/util/math/ChunkSectionPos;Lit/unimi/dsi/fastutil/longs/Long2ObjectOpenHashMap<Ljava/lang/Object;>;)Lit/unimi/dsi/fastutil/longs/Long2ObjectOpenHashMap<Ljava/lang/Object;>;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Unique;"
+              }
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "ERROR_COUNTER",
+            "dsc": "Ljava/util/concurrent/atomic/AtomicInteger;"
+          },
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/render/chunk/ChunkRendererRegionBuilder"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/blockview/client/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/mixin/blockview/client/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/blockview/WorldViewMixin.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/blockview/WorldViewMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "method_23753",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/registry/entry/RegistryEntry;",
+            "sig": "(Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Shadow;"
+              }
+            ]
+          },
+          {
+            "nme": "hasBiomes",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getBiomeFabric",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/registry/entry/RegistryEntry;",
+            "sig": "(Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;"
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/world/WorldView"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/blockview/client/ChunkRendererRegionMixin.class": {
+        "ver": 65,
+        "acc": 1057,
+        "nme": "net/fabricmc/fabric/mixin/blockview/client/ChunkRendererRegionMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getBlockEntityRenderData",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/math/BlockPos;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "fabric_acceptRenderDataMap",
+            "acc": 1,
+            "dsc": "(Lit/unimi/dsi/fastutil/longs/Long2ObjectMap;)V",
+            "sig": "(Lit/unimi/dsi/fastutil/longs/Long2ObjectMap<Ljava/lang/Object;>;)V"
+          },
+          {
+            "nme": "hasBiomes",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getBiomeFabric",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/registry/entry/RegistryEntry;",
+            "sig": "(Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4,
+            "nme": "field_4490",
+            "dsc": "Lnet/minecraft/world/World;"
+          },
+          {
+            "acc": 2,
+            "nme": "fabric_renderDataMap",
+            "dsc": "Lit/unimi/dsi/fastutil/longs/Long2ObjectMap;",
+            "sig": "Lit/unimi/dsi/fastutil/longs/Long2ObjectMap<Ljava/lang/Object;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/render/chunk/ChunkRendererRegion"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/blockview/BlockViewMixin.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/blockview/BlockViewMixin",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/world/BlockView"
+                }
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

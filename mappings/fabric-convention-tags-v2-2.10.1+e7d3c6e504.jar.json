@@ -1,0 +1,3399 @@
+{
+  "md5": "5bb4d5af324b1ee144fac8091e696fac",
+  "sha2": "8cd05afeae8da2afd23aea116ca38e8101c6849d",
+  "sha256": "bb8f30a7a69e6114e1c196cda193c763dca45f8663a6c4e5fa0e40785f498041",
+  "contents": {
+    "classes": {
+      "net/fabricmc/fabric/api/tag/convention/v2/ConventionalEntityTypeTags.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/tag/convention/v2/ConventionalEntityTypeTags",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "register",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "(Ljava/lang/String;)Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/entity/EntityType<*>;>;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "BOSSES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/entity/EntityType<*>;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "MINECARTS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/entity/EntityType<*>;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BOATS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/entity/EntityType<*>;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CAPTURING_NOT_SUPPORTED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/entity/EntityType<*>;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "TELEPORTING_NOT_SUPPORTED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/entity/EntityType<*>;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/tag/FabricTagKey.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/tag/FabricTagKey",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getTranslationKey",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getName",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/text/Text;"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/api/tag/convention/v2/ConventionalEnchantmentTags.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/tag/convention/v2/ConventionalEnchantmentTags",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "register",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "(Ljava/lang/String;)Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/enchantment/Enchantment;>;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INCREASE_BLOCK_DROPS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/enchantment/Enchantment;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "INCREASE_ENTITY_DROPS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/enchantment/Enchantment;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "WEAPON_DAMAGE_ENHANCEMENTS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/enchantment/Enchantment;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ENTITY_SPEED_ENHANCEMENTS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/enchantment/Enchantment;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ENTITY_AUXILIARY_MOVEMENT_ENHANCEMENTS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/enchantment/Enchantment;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ENTITY_DEFENSE_ENHANCEMENTS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/enchantment/Enchantment;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/tag/convention/v2/TranslationConventionLogWarnings.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/tag/convention/v2/TranslationConventionLogWarnings",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setupLogWarningModeProperty",
+            "acc": 10,
+            "dsc": "()Lnet/fabricmc/fabric/impl/tag/convention/v2/TranslationConventionLogWarnings$LogWarningMode;"
+          },
+          {
+            "nme": "onInitialize",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setupUntranslatedItemTagWarning",
+            "acc": 10,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lambda$setupUntranslatedItemTagWarning$1",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/server/MinecraftServer;)V"
+          },
+          {
+            "nme": "lambda$setupUntranslatedItemTagWarning$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/util/Language;Ljava/util/List;Lnet/minecraft/registry/entry/RegistryEntryList$Named;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 26,
+            "nme": "LOG_UNTRANSLATED_WARNING_MODE",
+            "dsc": "Lnet/fabricmc/fabric/impl/tag/convention/v2/TranslationConventionLogWarnings$LogWarningMode;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/tag/convention/v2/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/tag/convention/v2/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/tag/convention/v2/ConventionalFluidTags.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/tag/convention/v2/ConventionalFluidTags",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "register",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "(Ljava/lang/String;)Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/fluid/Fluid;>;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "LAVA",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/fluid/Fluid;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "WATER",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/fluid/Fluid;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "MILK",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/fluid/Fluid;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "HONEY",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/fluid/Fluid;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GASEOUS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/fluid/Fluid;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "EXPERIENCE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/fluid/Fluid;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "POTION",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/fluid/Fluid;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "SUSPICIOUS_STEW",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/fluid/Fluid;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "MUSHROOM_STEW",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/fluid/Fluid;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "RABBIT_STEW",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/fluid/Fluid;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BEETROOT_SOUP",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/fluid/Fluid;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "HIDDEN_FROM_RECIPE_VIEWERS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/fluid/Fluid;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/tag/convention/v2/TagRegistration.class": {
+        "ver": 65,
+        "acc": 65585,
+        "nme": "net/fabricmc/fabric/impl/tag/convention/v2/TagRegistration",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)V",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/registry/Registry<TT;>;>;)V"
+          },
+          {
+            "nme": "registerFabric",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "(Ljava/lang/String;)Lnet/minecraft/registry/tag/TagKey<TT;>;"
+          },
+          {
+            "nme": "registerC",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "(Ljava/lang/String;)Lnet/minecraft/registry/tag/TagKey<TT;>;"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "registryKey",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/registry/RegistryKey;",
+            "sig": "()Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/registry/Registry<TT;>;>;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "registryKey",
+            "dsc": "Lnet/minecraft/registry/RegistryKey;",
+            "sig": "Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/registry/Registry<TT;>;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ITEM_TAG",
+            "dsc": "Lnet/fabricmc/fabric/impl/tag/convention/v2/TagRegistration;",
+            "sig": "Lnet/fabricmc/fabric/impl/tag/convention/v2/TagRegistration<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BLOCK_TAG",
+            "dsc": "Lnet/fabricmc/fabric/impl/tag/convention/v2/TagRegistration;",
+            "sig": "Lnet/fabricmc/fabric/impl/tag/convention/v2/TagRegistration<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BIOME_TAG",
+            "dsc": "Lnet/fabricmc/fabric/impl/tag/convention/v2/TagRegistration;",
+            "sig": "Lnet/fabricmc/fabric/impl/tag/convention/v2/TagRegistration<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STRUCTURE_TAG",
+            "dsc": "Lnet/fabricmc/fabric/impl/tag/convention/v2/TagRegistration;",
+            "sig": "Lnet/fabricmc/fabric/impl/tag/convention/v2/TagRegistration<Lnet/minecraft/world/gen/structure/Structure;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "FLUID_TAG",
+            "dsc": "Lnet/fabricmc/fabric/impl/tag/convention/v2/TagRegistration;",
+            "sig": "Lnet/fabricmc/fabric/impl/tag/convention/v2/TagRegistration<Lnet/minecraft/fluid/Fluid;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ENTITY_TYPE_TAG",
+            "dsc": "Lnet/fabricmc/fabric/impl/tag/convention/v2/TagRegistration;",
+            "sig": "Lnet/fabricmc/fabric/impl/tag/convention/v2/TagRegistration<Lnet/minecraft/entity/EntityType<*>;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ENCHANTMENT_TAG",
+            "dsc": "Lnet/fabricmc/fabric/impl/tag/convention/v2/TagRegistration;",
+            "sig": "Lnet/fabricmc/fabric/impl/tag/convention/v2/TagRegistration<Lnet/minecraft/enchantment/Enchantment;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/tag/convention/v2/ConventionalItemTags.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/tag/convention/v2/ConventionalItemTags",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "register",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "(Ljava/lang/String;)Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "STONES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "COBBLESTONES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "DEEPSLATE_COBBLESTONES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "INFESTED_COBBLESTONES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "MOSSY_COBBLESTONES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "NORMAL_COBBLESTONES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "NETHERRACKS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "END_STONES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GRAVELS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "OBSIDIANS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "NORMAL_OBSIDIANS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CRYING_OBSIDIANS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "TOOLS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "SHEAR_TOOLS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "SPEAR_TOOLS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BOW_TOOLS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CROSSBOW_TOOLS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "SHIELD_TOOLS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "FISHING_ROD_TOOLS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BRUSH_TOOLS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IGNITER_TOOLS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "MACE_TOOLS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "MELEE_WEAPON_TOOLS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "RANGED_WEAPON_TOOLS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "MINING_TOOL_TOOLS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ARMORS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ENCHANTABLES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BRICKS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "DUSTS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CLUMPS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GEMS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "INGOTS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "NUGGETS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ORES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "RAW_MATERIALS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IRON_RAW_MATERIALS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GOLD_RAW_MATERIALS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "COPPER_RAW_MATERIALS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "NORMAL_BRICKS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "NETHER_BRICKS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "RESIN_BRICKS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IRON_INGOTS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GOLD_INGOTS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "COPPER_INGOTS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "NETHERITE_INGOTS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "COAL_ORES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "COPPER_ORES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "DIAMOND_ORES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "EMERALD_ORES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GOLD_ORES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IRON_ORES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "LAPIS_ORES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "NETHERITE_SCRAP_ORES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "QUARTZ_ORES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "REDSTONE_ORES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "QUARTZ_GEMS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "LAPIS_GEMS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "DIAMOND_GEMS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "AMETHYST_GEMS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "EMERALD_GEMS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "PRISMARINE_GEMS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IRON_NUGGETS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GOLD_NUGGETS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "REDSTONE_DUSTS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GLOWSTONE_DUSTS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "RESIN_CLUMPS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "POTIONS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BOTTLE_POTIONS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "FOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ANIMAL_FOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "FRUIT_FOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "VEGETABLE_FOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BERRY_FOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BREAD_FOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "COOKIE_FOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "RAW_MEAT_FOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "COOKED_MEAT_FOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "RAW_FISH_FOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "COOKED_FISH_FOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "SOUP_FOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CANDY_FOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "PIE_FOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GOLDEN_FOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "EDIBLE_WHEN_PLACED_FOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "FOOD_POISONING_FOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BUCKETS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "EMPTY_BUCKETS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "WATER_BUCKETS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "LAVA_BUCKETS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "MILK_BUCKETS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "POWDER_SNOW_BUCKETS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ENTITY_WATER_BUCKETS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BARRELS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "WOODEN_BARRELS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BOOKSHELVES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CHESTS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "WOODEN_CHESTS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "TRAPPED_CHESTS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ENDER_CHESTS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GLASS_BLOCKS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GLASS_BLOCKS_COLORLESS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GLASS_BLOCKS_CHEAP",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GLASS_BLOCKS_TINTED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GLASS_PANES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GLASS_PANES_COLORLESS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "SHULKER_BOXES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GLAZED_TERRACOTTAS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CONCRETES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CONCRETE_POWDERS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BUDDING_BLOCKS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BUDS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CLUSTERS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "VILLAGER_JOB_SITES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "SANDS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "RED_SANDS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "COLORLESS_SANDS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "SANDSTONE_BLOCKS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "SANDSTONE_SLABS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "SANDSTONE_STAIRS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "RED_SANDSTONE_BLOCKS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "RED_SANDSTONE_SLABS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "RED_SANDSTONE_STAIRS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "UNCOLORED_SANDSTONE_BLOCKS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "UNCOLORED_SANDSTONE_SLABS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "UNCOLORED_SANDSTONE_STAIRS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "FENCES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "WOODEN_FENCES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "NETHER_BRICK_FENCES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "FENCE_GATES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "WOODEN_FENCE_GATES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "DYES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BLACK_DYES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BLUE_DYES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BROWN_DYES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CYAN_DYES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GRAY_DYES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GREEN_DYES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "LIGHT_BLUE_DYES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "LIGHT_GRAY_DYES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "LIME_DYES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "MAGENTA_DYES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ORANGE_DYES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "PINK_DYES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "PURPLE_DYES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "RED_DYES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "WHITE_DYES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "YELLOW_DYES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BLACK_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BLUE_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BROWN_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CYAN_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GRAY_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GREEN_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "LIGHT_BLUE_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "LIGHT_GRAY_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "LIME_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "MAGENTA_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ORANGE_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "PINK_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "PURPLE_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "RED_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "WHITE_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "YELLOW_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_BONE_MEAL",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_COAL",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_COPPER",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_DIAMOND",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_DRIED_KELP",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_EMERALD",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_GOLD",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_IRON",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_LAPIS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_NETHERITE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_RAW_COPPER",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_RAW_GOLD",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_RAW_IRON",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_REDSTONE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_RESIN",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_SLIME",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_WHEAT",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STRIPPED_LOGS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STRIPPED_WOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CROPS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BEETROOT_CROPS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CACTUS_CROPS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CARROT_CROPS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "COCOA_BEAN_CROPS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "MELON_CROPS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "NETHER_WART_CROPS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "POTATO_CROPS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "PUMPKIN_CROPS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "SUGAR_CANE_CROPS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "WHEAT_CROPS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "SEEDS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BEETROOT_SEEDS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "MELON_SEEDS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "PUMPKIN_SEEDS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "TORCHFLOWER_SEEDS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "WHEAT_SEEDS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "PLAYER_WORKSTATIONS_CRAFTING_TABLES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "PLAYER_WORKSTATIONS_FURNACES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STRINGS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "LEATHERS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BONES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "EGGS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "FEATHERS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GUNPOWDERS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "MUSHROOMS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "NETHER_STARS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "MUSIC_DISCS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "RODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "WOODEN_RODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BLAZE_RODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BREEZE_RODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ROPES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CHAINS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ENDER_PEARLS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "SLIME_BALLS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "FERTILIZERS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "HIDDEN_FROM_RECIPE_VIEWERS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ORE_BEARING_GROUND_DEEPSLATE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ORE_BEARING_GROUND_NETHERRACK",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ORE_BEARING_GROUND_STONE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ORE_RATES_DENSE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ORE_RATES_SINGULAR",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ORE_RATES_SPARSE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ORES_IN_GROUND_DEEPSLATE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ORES_IN_GROUND_NETHERRACK",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ORES_IN_GROUND_STONE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "RAW_BLOCKS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "IRON_RAW_BLOCKS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "GOLD_RAW_BLOCKS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "COPPER_RAW_BLOCKS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "COAL",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "SHEARS_TOOLS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "SPEARS_TOOLS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "BOWS_TOOLS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "CROSSBOWS_TOOLS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "SHIELDS_TOOLS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "FISHING_RODS_TOOLS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "BRUSHES_TOOLS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "MELEE_WEAPONS_TOOLS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "RANGED_WEAPONS_TOOLS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "MINING_TOOLS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "GLAZED_TERRACOTTA",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "CONCRETE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "CONCRETE_POWDER",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "FRUITS_FOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "VEGETABLES_FOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "BERRIES_FOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "BREADS_FOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "COOKIES_FOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "RAW_MEATS_FOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "COOKED_MEATS_FOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "RAW_FISHES_FOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "COOKED_FISHES_FOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "SOUPS_FOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "CANDIES_FOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/item/Item;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/tag/convention/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/mixin/tag/convention/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/tag/convention/v2/TagUtil.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/tag/convention/v2/TagUtil",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "isIn",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/tag/TagKey;Ljava/lang/Object;)Z",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/minecraft/registry/tag/TagKey<TT;>;TT;)Z"
+          },
+          {
+            "nme": "isIn",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/DynamicRegistryManager;Lnet/minecraft/registry/tag/TagKey;Ljava/lang/Object;)Z",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/minecraft/registry/DynamicRegistryManager;Lnet/minecraft/registry/tag/TagKey<TT;>;TT;)Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "C_TAG_NAMESPACE",
+            "dsc": "Ljava/lang/String;",
+            "val": "c"
+          },
+          {
+            "acc": 25,
+            "nme": "FABRIC_TAG_NAMESPACE",
+            "dsc": "Ljava/lang/String;",
+            "val": "fabric"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/tag/convention/v2/ConventionalStructureTags.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/tag/convention/v2/ConventionalStructureTags",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "register",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "(Ljava/lang/String;)Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/gen/structure/Structure;>;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "HIDDEN_FROM_DISPLAYERS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/gen/structure/Structure;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "HIDDEN_FROM_LOCATOR_SELECTION",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/gen/structure/Structure;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/tag/convention/v2/ConventionalBlockTags.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/tag/convention/v2/ConventionalBlockTags",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "register",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "(Ljava/lang/String;)Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "STONES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "COBBLESTONES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "DEEPSLATE_COBBLESTONES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "INFESTED_COBBLESTONES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "MOSSY_COBBLESTONES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "NORMAL_COBBLESTONES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "NETHERRACKS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "END_STONES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GRAVELS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "OBSIDIANS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "NORMAL_OBSIDIANS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CRYING_OBSIDIANS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ORES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "COAL_ORES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "COPPER_ORES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "DIAMOND_ORES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "EMERALD_ORES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GOLD_ORES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IRON_ORES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "LAPIS_ORES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "NETHERITE_SCRAP_ORES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "QUARTZ_ORES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "REDSTONE_ORES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BARRELS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "WOODEN_BARRELS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BOOKSHELVES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CHESTS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "WOODEN_CHESTS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "TRAPPED_CHESTS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ENDER_CHESTS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GLASS_BLOCKS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GLASS_BLOCKS_COLORLESS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GLASS_BLOCKS_CHEAP",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GLASS_BLOCKS_TINTED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GLASS_PANES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GLASS_PANES_COLORLESS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GLAZED_TERRACOTTAS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CONCRETES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BUDDING_BLOCKS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BUDS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CLUSTERS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "VILLAGER_JOB_SITES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "SANDS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "RED_SANDS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "COLORLESS_SANDS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "SANDSTONE_BLOCKS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "SANDSTONE_SLABS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "SANDSTONE_STAIRS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "RED_SANDSTONE_BLOCKS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "RED_SANDSTONE_SLABS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "RED_SANDSTONE_STAIRS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "UNCOLORED_SANDSTONE_BLOCKS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "UNCOLORED_SANDSTONE_SLABS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "UNCOLORED_SANDSTONE_STAIRS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "FENCES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "WOODEN_FENCES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "NETHER_BRICK_FENCES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "FENCE_GATES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "WOODEN_FENCE_GATES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BLACK_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BLUE_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "BROWN_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CYAN_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GRAY_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "GREEN_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "LIGHT_BLUE_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "LIGHT_GRAY_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "LIME_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "MAGENTA_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ORANGE_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "PINK_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "PURPLE_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "RED_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "WHITE_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "YELLOW_DYED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_BONE_MEAL",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_COAL",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_COPPER",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_DIAMOND",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_DRIED_KELP",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_EMERALD",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_GOLD",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_IRON",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_LAPIS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_NETHERITE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_RAW_COPPER",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_RAW_GOLD",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_RAW_IRON",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_REDSTONE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_RESIN",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_SLIME",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STORAGE_BLOCKS_WHEAT",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STRIPPED_LOGS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "STRIPPED_WOODS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "PLAYER_WORKSTATIONS_CRAFTING_TABLES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "PLAYER_WORKSTATIONS_FURNACES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "RELOCATION_NOT_SUPPORTED",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "SKULLS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ROPES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "CHAINS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "HIDDEN_FROM_RECIPE_VIEWERS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ORE_BEARING_GROUND_DEEPSLATE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ORE_BEARING_GROUND_NETHERRACK",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ORE_BEARING_GROUND_STONE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ORE_RATES_DENSE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ORE_RATES_SINGULAR",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ORE_RATES_SPARSE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ORES_IN_GROUND_DEEPSLATE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ORES_IN_GROUND_NETHERRACK",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ORES_IN_GROUND_STONE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "SHULKER_BOXES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "GLAZED_TERRACOTTA",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          },
+          {
+            "acc": 131097,
+            "nme": "CONCRETE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/block/Block;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/tag/convention/v2/ConventionalBiomeTags.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/tag/convention/v2/ConventionalBiomeTags",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "register",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "(Ljava/lang/String;)Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "NO_DEFAULT_MONSTERS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "HIDDEN_FROM_LOCATOR_SELECTION",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_VOID",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_OVERWORLD",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_HOT",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_HOT_OVERWORLD",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_HOT_NETHER",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_HOT_END",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_TEMPERATE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_TEMPERATE_OVERWORLD",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_TEMPERATE_NETHER",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_TEMPERATE_END",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_COLD",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_COLD_OVERWORLD",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_COLD_NETHER",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_COLD_END",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_WET",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_WET_OVERWORLD",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_WET_NETHER",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_WET_END",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_DRY",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_DRY_OVERWORLD",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_DRY_NETHER",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_DRY_END",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_VEGETATION_SPARSE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_VEGETATION_SPARSE_OVERWORLD",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_VEGETATION_SPARSE_NETHER",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_VEGETATION_SPARSE_END",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_VEGETATION_DENSE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_VEGETATION_DENSE_OVERWORLD",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_VEGETATION_DENSE_NETHER",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_VEGETATION_DENSE_END",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_CONIFEROUS_TREE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_SAVANNA_TREE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_JUNGLE_TREE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_DECIDUOUS_TREE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_MOUNTAIN",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_MOUNTAIN_PEAK",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_MOUNTAIN_SLOPE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_PLAINS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_SNOWY_PLAINS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_FOREST",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_BIRCH_FOREST",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_DARK_FOREST",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_FLOWER_FOREST",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_TAIGA",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_OLD_GROWTH",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_HILL",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_WINDSWEPT",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_JUNGLE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_SAVANNA",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_SWAMP",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_DESERT",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_BADLANDS",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_BEACH",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_STONY_SHORES",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_MUSHROOM",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_RIVER",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_OCEAN",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_DEEP_OCEAN",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_SHALLOW_OCEAN",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_UNDERGROUND",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_CAVE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_WASTELAND",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_DEAD",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_LUSH",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_MAGICAL",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_RARE",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_PLATEAU",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_SPOOKY",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_FLORAL",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_SANDY",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_SNOWY",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_ICY",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_AQUATIC",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_AQUATIC_ICY",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_NETHER",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_NETHER_FOREST",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_END",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "IS_OUTER_END_ISLAND",
+            "dsc": "Lnet/minecraft/registry/tag/TagKey;",
+            "sig": "Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/tag/convention/v2/TranslationConventionLogWarnings$LogWarningMode.class": {
+        "ver": 65,
+        "acc": 16432,
+        "nme": "net/fabricmc/fabric/impl/tag/convention/v2/TranslationConventionLogWarnings$LogWarningMode",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lnet/fabricmc/fabric/impl/tag/convention/v2/TranslationConventionLogWarnings$LogWarningMode;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lnet/fabricmc/fabric/impl/tag/convention/v2/TranslationConventionLogWarnings$LogWarningMode;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "verbose",
+            "acc": 0,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "$values",
+            "acc": 4106,
+            "dsc": "()[Lnet/fabricmc/fabric/impl/tag/convention/v2/TranslationConventionLogWarnings$LogWarningMode;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "SILENCED",
+            "dsc": "Lnet/fabricmc/fabric/impl/tag/convention/v2/TranslationConventionLogWarnings$LogWarningMode;"
+          },
+          {
+            "acc": 16409,
+            "nme": "SHORT",
+            "dsc": "Lnet/fabricmc/fabric/impl/tag/convention/v2/TranslationConventionLogWarnings$LogWarningMode;"
+          },
+          {
+            "acc": 16409,
+            "nme": "VERBOSE",
+            "dsc": "Lnet/fabricmc/fabric/impl/tag/convention/v2/TranslationConventionLogWarnings$LogWarningMode;"
+          },
+          {
+            "acc": 16409,
+            "nme": "FAIL",
+            "dsc": "Lnet/fabricmc/fabric/impl/tag/convention/v2/TranslationConventionLogWarnings$LogWarningMode;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lnet/fabricmc/fabric/impl/tag/convention/v2/TranslationConventionLogWarnings$LogWarningMode;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/tag/convention/TagKeyMixin.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/tag/convention/TagKeyMixin",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/registry/tag/TagKey"
+                }
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

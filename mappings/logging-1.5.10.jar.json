@@ -1,0 +1,657 @@
+{
+  "md5": "0b7da24cea4e840b91c13ed08657a6d3",
+  "sha2": "9ab1202793717af9df9c1704d0a02892067001eb",
+  "sha256": "de3031f2420d649b9a4152e4e160d50b87ce6e7b4d68163caf2b5ebbaf391f7e",
+  "contents": {
+    "classes": {
+      "com/mojang/logging/LogListeners.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/logging/LogListeners",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getOrCreateTarget",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/mojang/logging/LogListeners$Target;"
+          },
+          {
+            "nme": "addListener",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Lcom/mojang/logging/LogListeners$Listener;)V"
+          },
+          {
+            "nme": "lambda$getOrCreateTarget$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;)Lcom/mojang/logging/LogListeners$Target;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "TARGETS",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/String;Lcom/mojang/logging/LogListeners$Target;>;"
+          }
+        ]
+      },
+      "com/mojang/logging/plugins/ListenerLogAppender.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/logging/plugins/ListenerLogAppender",
+        "super": "org/apache/logging/log4j/core/appender/AbstractAppender",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Lorg/apache/logging/log4j/core/Filter;Lorg/apache/logging/log4j/core/Layout;ZLcom/mojang/logging/LogListeners$Target;)V",
+            "sig": "(Ljava/lang/String;Lorg/apache/logging/log4j/core/Filter;Lorg/apache/logging/log4j/core/Layout<+Ljava/io/Serializable;>;ZLcom/mojang/logging/LogListeners$Target;)V"
+          },
+          {
+            "nme": "append",
+            "acc": 1,
+            "dsc": "(Lorg/apache/logging/log4j/core/LogEvent;)V"
+          },
+          {
+            "nme": "createAppender",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Lorg/apache/logging/log4j/core/Layout;Lorg/apache/logging/log4j/core/Filter;Ljava/lang/String;)Lcom/mojang/logging/plugins/ListenerLogAppender;",
+            "sig": "(Ljava/lang/String;Ljava/lang/String;Lorg/apache/logging/log4j/core/Layout<+Ljava/io/Serializable;>;Lorg/apache/logging/log4j/core/Filter;Ljava/lang/String;)Lcom/mojang/logging/plugins/ListenerLogAppender;",
+            "vanns": [
+              {
+                "dsc": "Lorg/apache/logging/log4j/core/config/plugins/PluginFactory;"
+              },
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "output",
+            "dsc": "Lcom/mojang/logging/LogListeners$Target;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lorg/apache/logging/log4j/core/config/plugins/Plugin;",
+            "vals": [
+              "name",
+              "Listener",
+              "category",
+              "Core",
+              "elementType",
+              "appender",
+              "printObject",
+              true
+            ]
+          }
+        ]
+      },
+      "com/mojang/logging/LogUtils$1.class": {
+        "ver": 61,
+        "acc": 4128,
+        "nme": "com/mojang/logging/LogUtils$1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4120,
+            "nme": "$SwitchMap$org$slf4j$event$Level",
+            "dsc": "[I"
+          }
+        ]
+      },
+      "com/mojang/logging/annotations/FieldsAreNonnullByDefault.class": {
+        "ver": 61,
+        "acc": 9729,
+        "nme": "com/mojang/logging/annotations/FieldsAreNonnullByDefault",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljavax/annotation/Nonnull;"
+          },
+          {
+            "dsc": "Ljavax/annotation/meta/TypeQualifierDefault;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ]
+      },
+      "com/mojang/logging/package-info.class": {
+        "ver": 61,
+        "acc": 5632,
+        "nme": "com/mojang/logging/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljavax/annotation/ParametersAreNonnullByDefault;"
+          },
+          {
+            "dsc": "Lcom/mojang/logging/annotations/MethodsReturnNonnullByDefault;"
+          },
+          {
+            "dsc": "Lcom/mojang/logging/annotations/FieldsAreNonnullByDefault;"
+          }
+        ]
+      },
+      "com/mojang/logging/LogListeners$Target.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/logging/LogListeners$Target",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "addListener",
+            "acc": 34,
+            "dsc": "(Lcom/mojang/logging/LogListeners$Listener;)V"
+          },
+          {
+            "nme": "post",
+            "acc": 1,
+            "dsc": "(Lorg/apache/logging/log4j/core/Layout;Lorg/apache/logging/log4j/core/LogEvent;)V",
+            "sig": "(Lorg/apache/logging/log4j/core/Layout<+Ljava/io/Serializable;>;Lorg/apache/logging/log4j/core/LogEvent;)V"
+          },
+          {
+            "nme": "log4jToSlf4jLevel",
+            "acc": 10,
+            "dsc": "(Lorg/apache/logging/log4j/Level;)Lorg/slf4j/event/Level;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 66,
+            "nme": "listeners",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lcom/mojang/logging/LogListeners$Listener;>;"
+          }
+        ]
+      },
+      "com/mojang/logging/LogUtils$1ToString.class": {
+        "ver": 61,
+        "acc": 32,
+        "nme": "com/mojang/logging/LogUtils$1ToString",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/util/function/Supplier;)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4112,
+            "nme": "val$result",
+            "dsc": "Ljava/util/function/Supplier;"
+          }
+        ]
+      },
+      "com/mojang/logging/LogUtils.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/logging/LogUtils",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "isLoggerActive",
+            "acc": 9,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "configureRootLoggingLevel",
+            "acc": 9,
+            "dsc": "(Lorg/slf4j/event/Level;)V"
+          },
+          {
+            "nme": "convertLevel",
+            "acc": 10,
+            "dsc": "(Lorg/slf4j/event/Level;)Lorg/apache/logging/log4j/Level;"
+          },
+          {
+            "nme": "defer",
+            "acc": 9,
+            "dsc": "(Ljava/util/function/Supplier;)Ljava/lang/Object;",
+            "sig": "(Ljava/util/function/Supplier<Ljava/lang/Object;>;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "getLogger",
+            "acc": 9,
+            "dsc": "()Lorg/slf4j/Logger;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "FATAL_MARKER_ID",
+            "dsc": "Ljava/lang/String;",
+            "val": "FATAL"
+          },
+          {
+            "acc": 25,
+            "nme": "FATAL_MARKER",
+            "dsc": "Lorg/slf4j/Marker;"
+          },
+          {
+            "acc": 26,
+            "nme": "STACK_WALKER",
+            "dsc": "Ljava/lang/StackWalker;"
+          }
+        ]
+      },
+      "com/mojang/logging/plugins/package-info.class": {
+        "ver": 61,
+        "acc": 5632,
+        "nme": "com/mojang/logging/plugins/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljavax/annotation/ParametersAreNonnullByDefault;"
+          },
+          {
+            "dsc": "Lcom/mojang/logging/annotations/MethodsReturnNonnullByDefault;"
+          },
+          {
+            "dsc": "Lcom/mojang/logging/annotations/FieldsAreNonnullByDefault;"
+          }
+        ]
+      },
+      "com/mojang/logging/LogListeners$Listener.class": {
+        "ver": 61,
+        "acc": 1537,
+        "nme": "com/mojang/logging/LogListeners$Listener",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "accept",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/String;Lorg/slf4j/event/Level;)V"
+          }
+        ],
+        "flds": []
+      },
+      "com/mojang/logging/annotations/MethodsReturnNonnullByDefault.class": {
+        "ver": 61,
+        "acc": 9729,
+        "nme": "com/mojang/logging/annotations/MethodsReturnNonnullByDefault",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljavax/annotation/Nonnull;"
+          },
+          {
+            "dsc": "Ljavax/annotation/meta/TypeQualifierDefault;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ]
+      },
+      "com/mojang/logging/plugins/QueueLogAppender.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/logging/plugins/QueueLogAppender",
+        "super": "org/apache/logging/log4j/core/appender/AbstractAppender",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Lorg/apache/logging/log4j/core/Filter;Lorg/apache/logging/log4j/core/Layout;ZLjava/util/concurrent/BlockingQueue;)V",
+            "sig": "(Ljava/lang/String;Lorg/apache/logging/log4j/core/Filter;Lorg/apache/logging/log4j/core/Layout<+Ljava/io/Serializable;>;ZLjava/util/concurrent/BlockingQueue<Ljava/lang/String;>;)V"
+          },
+          {
+            "nme": "append",
+            "acc": 1,
+            "dsc": "(Lorg/apache/logging/log4j/core/LogEvent;)V"
+          },
+          {
+            "nme": "createAppender",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Lorg/apache/logging/log4j/core/Layout;Lorg/apache/logging/log4j/core/Filter;Ljava/lang/String;)Lcom/mojang/logging/plugins/QueueLogAppender;",
+            "sig": "(Ljava/lang/String;Ljava/lang/String;Lorg/apache/logging/log4j/core/Layout<+Ljava/io/Serializable;>;Lorg/apache/logging/log4j/core/Filter;Ljava/lang/String;)Lcom/mojang/logging/plugins/QueueLogAppender;",
+            "vanns": [
+              {
+                "dsc": "Lorg/apache/logging/log4j/core/config/plugins/PluginFactory;"
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "MAX_CAPACITY",
+            "dsc": "I",
+            "val": 250
+          },
+          {
+            "acc": 18,
+            "nme": "queue",
+            "dsc": "Ljava/util/concurrent/BlockingQueue;",
+            "sig": "Ljava/util/concurrent/BlockingQueue<Ljava/lang/String;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lorg/apache/logging/log4j/core/config/plugins/Plugin;",
+            "vals": [
+              "name",
+              "Queue",
+              "category",
+              "Core",
+              "elementType",
+              "appender",
+              "printObject",
+              true
+            ]
+          }
+        ]
+      },
+      "com/mojang/logging/LogQueues.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/logging/LogQueues",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getOrCreateQueue",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Ljava/util/concurrent/BlockingQueue;",
+            "sig": "(Ljava/lang/String;)Ljava/util/concurrent/BlockingQueue<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "getNextLogEvent",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "lambda$getOrCreateQueue$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;)Ljava/util/concurrent/BlockingQueue;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "QUEUES",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/String;Ljava/util/concurrent/BlockingQueue<Ljava/lang/String;>;>;"
+          },
+          {
+            "acc": 26,
+            "nme": "QUEUE_LOCK",
+            "dsc": "Ljava/util/concurrent/locks/ReentrantReadWriteLock;"
+          }
+        ]
+      },
+      "com/mojang/logging/plugins/LegacyXMLLayout.class": {
+        "ver": 61,
+        "acc": 33,
+        "nme": "com/mojang/logging/plugins/LegacyXMLLayout",
+        "super": "org/apache/logging/log4j/core/layout/AbstractStringLayout",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(ZZZZLjava/lang/String;Ljava/nio/charset/Charset;)V"
+          },
+          {
+            "nme": "toSerializable",
+            "acc": 1,
+            "dsc": "(Lorg/apache/logging/log4j/core/LogEvent;)Ljava/lang/String;"
+          },
+          {
+            "nme": "getHeader",
+            "acc": 1,
+            "dsc": "()[B"
+          },
+          {
+            "nme": "getFooter",
+            "acc": 1,
+            "dsc": "()[B"
+          },
+          {
+            "nme": "getContentFormat",
+            "acc": 1,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+          },
+          {
+            "nme": "getContentType",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getEventLevel",
+            "acc": 10,
+            "dsc": "(Lorg/apache/logging/log4j/core/LogEvent;)Ljava/lang/String;"
+          },
+          {
+            "nme": "createLayout",
+            "acc": 9,
+            "dsc": "(ZZZZLjava/lang/String;Ljava/nio/charset/Charset;)Lcom/mojang/logging/plugins/LegacyXMLLayout;",
+            "vanns": [
+              {
+                "dsc": "Lorg/apache/logging/log4j/core/config/plugins/PluginFactory;"
+              }
+            ]
+          },
+          {
+            "nme": "toSerializable",
+            "acc": 4161,
+            "dsc": "(Lorg/apache/logging/log4j/core/LogEvent;)Ljava/io/Serializable;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "XML_NAMESPACE",
+            "dsc": "Ljava/lang/String;",
+            "val": "http://logging.apache.org/log4j/2.0/events"
+          },
+          {
+            "acc": 26,
+            "nme": "ROOT_TAG",
+            "dsc": "Ljava/lang/String;",
+            "val": "Events"
+          },
+          {
+            "acc": 26,
+            "nme": "DEFAULT_SIZE",
+            "dsc": "I",
+            "val": 256
+          },
+          {
+            "acc": 26,
+            "nme": "DEFAULT_EOL",
+            "dsc": "Ljava/lang/String;",
+            "val": "\r\n"
+          },
+          {
+            "acc": 26,
+            "nme": "COMPACT_EOL",
+            "dsc": "Ljava/lang/String;",
+            "val": ""
+          },
+          {
+            "acc": 26,
+            "nme": "DEFAULT_INDENT",
+            "dsc": "Ljava/lang/String;",
+            "val": "  "
+          },
+          {
+            "acc": 26,
+            "nme": "COMPACT_INDENT",
+            "dsc": "Ljava/lang/String;",
+            "val": ""
+          },
+          {
+            "acc": 26,
+            "nme": "DEFAULT_NS_PREFIX",
+            "dsc": "Ljava/lang/String;",
+            "val": "log4j"
+          },
+          {
+            "acc": 26,
+            "nme": "FORMATS",
+            "dsc": "[Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "locationInfo",
+            "dsc": "Z"
+          },
+          {
+            "acc": 18,
+            "nme": "properties",
+            "dsc": "Z"
+          },
+          {
+            "acc": 18,
+            "nme": "complete",
+            "dsc": "Z"
+          },
+          {
+            "acc": 18,
+            "nme": "namespacePrefix",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "eol",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "indent1",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "indent2",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "indent3",
+            "dsc": "Ljava/lang/String;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lorg/apache/logging/log4j/core/config/plugins/Plugin;",
+            "vals": [
+              "name",
+              "LegacyXMLLayout",
+              "category",
+              "Core",
+              "elementType",
+              "layout",
+              "printObject",
+              true
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

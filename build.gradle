@@ -1,0 +1,124 @@
+plugins {
+    id 'fabric-loom' version '1.10-SNAPSHOT'
+    id 'maven-publish'
+    id 'com.gradleup.shadow' version '9.0.0-beta15'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+repositories {
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+    maven { url "https://maven.meteordev.org/releases" }
+    maven { url "https://maven.meteordev.org" }
+}
+
+dependencies {
+    minecraft("com.mojang:minecraft:${project.minecraft_version}")
+    mappings("net.fabricmc:yarn:${project.yarn_mappings}:v2")
+    modImplementation("net.fabricmc:fabric-loader:${project.loader_version}")
+    modImplementation("net.fabricmc.fabric-api:fabric-api:${project.fabric_version}") {
+        exclude(group: "net.fabricmc.fabric-api", module: "fabric-dimensions-v1")
+        exclude(group: "net.fabricmc.fabric-api", module: "fabric-crash-report-info-v1")
+    }
+    include implementation("meteordevelopment:discord-ipc:1.1")
+    include implementation("meteordevelopment:orbit:0.2.3")
+    implementation(shadow("dev.redstones.mediaplayerinfo:media-player-info:0.1.0"))
+    compileOnly("org.projectlombok:lombok:1.18.38")
+    annotationProcessor("org.projectlombok:lombok:1.18.38")
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.encoding = "UTF-8"
+    if (21 >= 10 || JavaVersion.current().isJava10Compatible()) it.options.release.set(21)
+}
+
+loom {
+    accessWidenerPath = file("src/main/resources/motherhack-recode.accesswidener")
+    
+    runs {
+        client {
+            vmArgs(
+                "-Dmixin.debug.export=true",
+                "-Dmixin.env.disableRefMap=true",
+                "-Dmixin.checks.interfaces=false",
+                "-Dmixin.checks.interfaces.strict=false"
+            )
+            property("fabric.log.disableAnsi", "false")
+            property("mixin.env.remapRefMap", "false")
+        }
+    }
+}
+
+java {
+    def javaVersion = JavaVersion.toVersion(21)
+    if (JavaVersion.current() < javaVersion) toolchain.languageVersion = JavaLanguageVersion.of(21)
+    withSourcesJar()
+}
+
+jar {
+    from("LICENSE") {
+        rename { "${it}_${project.archivesBaseName}" }
+    }
+}
+
+shadowJar {
+    exclude("org/objectweb/**")
+    configurations = [project.configurations.shadow]
+    archiveClassifier.set("dev")
+}
+
+remapJar {
+    dependsOn(shadowJar)
+    inputFile = tasks.shadowJar.archiveFile
+}
+
+// Добавляем ASM для обфускации
+configurations {
+    obfuscator
+}
+
+dependencies {
+    obfuscator 'org.ow2.asm:asm:9.6'
+    obfuscator 'org.ow2.asm:asm-tree:9.6'
+}
+
+// Компилируем обфускатор
+task compileObfuscator(type: JavaCompile) {
+    source = fileTree('tools') { include '*.java' }
+    destinationDirectory = file("${buildDir}/obfuscator")
+    classpath = configurations.obfuscator
+    sourceCompatibility = '21'
+    targetCompatibility = '21'
+}
+
+// Обфускация строк в JAR файле
+task obfuscateStrings(type: JavaExec, dependsOn: [remapJar, compileObfuscator]) {
+    group = 'build'
+    description = 'Obfuscate strings in module classes'
+    
+    mainClass = 'StringObfuscator'
+    classpath = files("${buildDir}/obfuscator") + configurations.obfuscator
+    
+    doFirst {
+        def inputJar = remapJar.archiveFile.get().asFile
+        def outputJar = file("${buildDir}/libs/${project.archives_base_name}-${project.version}-protected.jar")
+        args = [inputJar.absolutePath, outputJar.absolutePath]
+        println "Obfuscating strings in ${inputJar.name}..."
+    }
+}
+
+// Сборка защищённой версии
+task buildProtected(dependsOn: obfuscateStrings) {
+    group = 'build'
+    description = 'Build protected version with string obfuscation'
+    
+    doLast {
+        println "Protected JAR: build/libs/${project.archives_base_name}-${project.version}-protected.jar"
+    }
+}

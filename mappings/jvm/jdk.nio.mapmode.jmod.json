@@ -1,0 +1,46 @@
+{
+  "md5": "bb89dd22ec0c4297bd22866bd02bc276",
+  "sha2": "3eebcb04baf4584b045e83cb73b248b1a2168286",
+  "sha256": "a72ea628cf6cf7f2a360ddf088db34709114e2b5cb1fb8c25c9adf9afc63b15a",
+  "contents": {
+    "classes": {
+      "classes/module-info.class": {
+        "ver": 65,
+        "acc": 32768,
+        "nme": "module-info",
+        "mthds": [],
+        "flds": []
+      },
+      "classes/jdk/nio/mapmode/ExtendedMapMode.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "jdk/nio/mapmode/ExtendedMapMode",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "READ_ONLY_SYNC",
+            "dsc": "Ljava/nio/channels/FileChannel$MapMode;"
+          },
+          {
+            "acc": 25,
+            "nme": "READ_WRITE_SYNC",
+            "dsc": "Ljava/nio/channels/FileChannel$MapMode;"
+          }
+        ]
+      }
+    }
+  }
+}

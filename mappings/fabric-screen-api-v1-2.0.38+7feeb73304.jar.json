@@ -1,0 +1,2754 @@
+{
+  "md5": "2d07eaf6f685f158ff6e6a60e0195863",
+  "sha2": "7715269060cd594e38d7d79ed893e9fabf83eac2",
+  "sha256": "98d18d5f64a7e3f175613689cc492ce275c2bbe3bd99d06fdb9484c1d025e2c5",
+  "contents": {
+    "classes": {
+      "net/fabricmc/fabric/api/client/screen/v1/ScreenEvents$BeforeRender.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/screen/v1/ScreenEvents$BeforeRender",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "beforeRender",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;Lnet/minecraft/client/gui/DrawContext;IIF)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseScroll.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseScroll",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "allowMouseScroll",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;DDDD)Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseClick.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseClick",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "allowMouseClick",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;DDI)Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "allowKeyPress",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AllowKeyPress;>;"
+          },
+          {
+            "nme": "beforeKeyPress",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$BeforeKeyPress;>;"
+          },
+          {
+            "nme": "afterKeyPress",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AfterKeyPress;>;"
+          },
+          {
+            "nme": "allowKeyRelease",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AllowKeyRelease;>;"
+          },
+          {
+            "nme": "beforeKeyRelease",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$BeforeKeyRelease;>;"
+          },
+          {
+            "nme": "afterKeyRelease",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AfterKeyRelease;>;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseClick.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseClick",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "beforeMouseClick",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;DDI)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/screen/ScreenEventFactory.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/client/screen/ScreenEventFactory",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "createRemoveEvent",
+            "acc": 9,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$Remove;>;"
+          },
+          {
+            "nme": "createBeforeRenderEvent",
+            "acc": 9,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$BeforeRender;>;"
+          },
+          {
+            "nme": "createAfterRenderEvent",
+            "acc": 9,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$AfterRender;>;"
+          },
+          {
+            "nme": "createBeforeTickEvent",
+            "acc": 9,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$BeforeTick;>;"
+          },
+          {
+            "nme": "createAfterTickEvent",
+            "acc": 9,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$AfterTick;>;"
+          },
+          {
+            "nme": "createAllowKeyPressEvent",
+            "acc": 9,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AllowKeyPress;>;"
+          },
+          {
+            "nme": "createBeforeKeyPressEvent",
+            "acc": 9,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$BeforeKeyPress;>;"
+          },
+          {
+            "nme": "createAfterKeyPressEvent",
+            "acc": 9,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AfterKeyPress;>;"
+          },
+          {
+            "nme": "createAllowKeyReleaseEvent",
+            "acc": 9,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AllowKeyRelease;>;"
+          },
+          {
+            "nme": "createBeforeKeyReleaseEvent",
+            "acc": 9,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$BeforeKeyRelease;>;"
+          },
+          {
+            "nme": "createAfterKeyReleaseEvent",
+            "acc": 9,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AfterKeyRelease;>;"
+          },
+          {
+            "nme": "createAllowMouseClickEvent",
+            "acc": 9,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseClick;>;"
+          },
+          {
+            "nme": "createBeforeMouseClickEvent",
+            "acc": 9,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseClick;>;"
+          },
+          {
+            "nme": "createAfterMouseClickEvent",
+            "acc": 9,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseClick;>;"
+          },
+          {
+            "nme": "createAllowMouseReleaseEvent",
+            "acc": 9,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseRelease;>;"
+          },
+          {
+            "nme": "createBeforeMouseReleaseEvent",
+            "acc": 9,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseRelease;>;"
+          },
+          {
+            "nme": "createAfterMouseReleaseEvent",
+            "acc": 9,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseRelease;>;"
+          },
+          {
+            "nme": "createAllowMouseScrollEvent",
+            "acc": 9,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseScroll;>;"
+          },
+          {
+            "nme": "createBeforeMouseScrollEvent",
+            "acc": 9,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseScroll;>;"
+          },
+          {
+            "nme": "createAfterMouseScrollEvent",
+            "acc": 9,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseScroll;>;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lambda$createAfterMouseScrollEvent$39",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseScroll;)Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseScroll;"
+          },
+          {
+            "nme": "lambda$createAfterMouseScrollEvent$38",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseScroll;Lnet/minecraft/client/gui/screen/Screen;DDDD)V"
+          },
+          {
+            "nme": "lambda$createBeforeMouseScrollEvent$37",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseScroll;)Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseScroll;"
+          },
+          {
+            "nme": "lambda$createBeforeMouseScrollEvent$36",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseScroll;Lnet/minecraft/client/gui/screen/Screen;DDDD)V"
+          },
+          {
+            "nme": "lambda$createAllowMouseScrollEvent$35",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseScroll;)Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseScroll;"
+          },
+          {
+            "nme": "lambda$createAllowMouseScrollEvent$34",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseScroll;Lnet/minecraft/client/gui/screen/Screen;DDDD)Z"
+          },
+          {
+            "nme": "lambda$createAfterMouseReleaseEvent$33",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseRelease;)Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseRelease;"
+          },
+          {
+            "nme": "lambda$createAfterMouseReleaseEvent$32",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseRelease;Lnet/minecraft/client/gui/screen/Screen;DDI)V"
+          },
+          {
+            "nme": "lambda$createBeforeMouseReleaseEvent$31",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseRelease;)Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseRelease;"
+          },
+          {
+            "nme": "lambda$createBeforeMouseReleaseEvent$30",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseRelease;Lnet/minecraft/client/gui/screen/Screen;DDI)V"
+          },
+          {
+            "nme": "lambda$createAllowMouseReleaseEvent$29",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseRelease;)Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseRelease;"
+          },
+          {
+            "nme": "lambda$createAllowMouseReleaseEvent$28",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseRelease;Lnet/minecraft/client/gui/screen/Screen;DDI)Z"
+          },
+          {
+            "nme": "lambda$createAfterMouseClickEvent$27",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseClick;)Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseClick;"
+          },
+          {
+            "nme": "lambda$createAfterMouseClickEvent$26",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseClick;Lnet/minecraft/client/gui/screen/Screen;DDI)V"
+          },
+          {
+            "nme": "lambda$createBeforeMouseClickEvent$25",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseClick;)Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseClick;"
+          },
+          {
+            "nme": "lambda$createBeforeMouseClickEvent$24",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseClick;Lnet/minecraft/client/gui/screen/Screen;DDI)V"
+          },
+          {
+            "nme": "lambda$createAllowMouseClickEvent$23",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseClick;)Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseClick;"
+          },
+          {
+            "nme": "lambda$createAllowMouseClickEvent$22",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseClick;Lnet/minecraft/client/gui/screen/Screen;DDI)Z"
+          },
+          {
+            "nme": "lambda$createAfterKeyReleaseEvent$21",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AfterKeyRelease;)Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AfterKeyRelease;"
+          },
+          {
+            "nme": "lambda$createAfterKeyReleaseEvent$20",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AfterKeyRelease;Lnet/minecraft/client/gui/screen/Screen;III)V"
+          },
+          {
+            "nme": "lambda$createBeforeKeyReleaseEvent$19",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$BeforeKeyRelease;)Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$BeforeKeyRelease;"
+          },
+          {
+            "nme": "lambda$createBeforeKeyReleaseEvent$18",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$BeforeKeyRelease;Lnet/minecraft/client/gui/screen/Screen;III)V"
+          },
+          {
+            "nme": "lambda$createAllowKeyReleaseEvent$17",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AllowKeyRelease;)Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AllowKeyRelease;"
+          },
+          {
+            "nme": "lambda$createAllowKeyReleaseEvent$16",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AllowKeyRelease;Lnet/minecraft/client/gui/screen/Screen;III)Z"
+          },
+          {
+            "nme": "lambda$createAfterKeyPressEvent$15",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AfterKeyPress;)Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AfterKeyPress;"
+          },
+          {
+            "nme": "lambda$createAfterKeyPressEvent$14",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AfterKeyPress;Lnet/minecraft/client/gui/screen/Screen;III)V"
+          },
+          {
+            "nme": "lambda$createBeforeKeyPressEvent$13",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$BeforeKeyPress;)Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$BeforeKeyPress;"
+          },
+          {
+            "nme": "lambda$createBeforeKeyPressEvent$12",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$BeforeKeyPress;Lnet/minecraft/client/gui/screen/Screen;III)V"
+          },
+          {
+            "nme": "lambda$createAllowKeyPressEvent$11",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AllowKeyPress;)Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AllowKeyPress;"
+          },
+          {
+            "nme": "lambda$createAllowKeyPressEvent$10",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AllowKeyPress;Lnet/minecraft/client/gui/screen/Screen;III)Z"
+          },
+          {
+            "nme": "lambda$createAfterTickEvent$9",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$AfterTick;)Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$AfterTick;"
+          },
+          {
+            "nme": "lambda$createAfterTickEvent$8",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$AfterTick;Lnet/minecraft/client/gui/screen/Screen;)V"
+          },
+          {
+            "nme": "lambda$createBeforeTickEvent$7",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$BeforeTick;)Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$BeforeTick;"
+          },
+          {
+            "nme": "lambda$createBeforeTickEvent$6",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$BeforeTick;Lnet/minecraft/client/gui/screen/Screen;)V"
+          },
+          {
+            "nme": "lambda$createAfterRenderEvent$5",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$AfterRender;)Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$AfterRender;"
+          },
+          {
+            "nme": "lambda$createAfterRenderEvent$4",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$AfterRender;Lnet/minecraft/client/gui/screen/Screen;Lnet/minecraft/client/gui/DrawContext;IIF)V"
+          },
+          {
+            "nme": "lambda$createBeforeRenderEvent$3",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$BeforeRender;)Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$BeforeRender;"
+          },
+          {
+            "nme": "lambda$createBeforeRenderEvent$2",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$BeforeRender;Lnet/minecraft/client/gui/screen/Screen;Lnet/minecraft/client/gui/DrawContext;IIF)V"
+          },
+          {
+            "nme": "lambda$createRemoveEvent$1",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$Remove;)Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$Remove;"
+          },
+          {
+            "nme": "lambda$createRemoveEvent$0",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$Remove;Lnet/minecraft/client/gui/screen/Screen;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/screen/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/mixin/screen/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/screen/v1/ScreenEvents$BeforeTick.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/screen/v1/ScreenEvents$BeforeTick",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "beforeTick",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/screen/v1/ScreenEvents$BeforeInit.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/screen/v1/ScreenEvents$BeforeInit",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "beforeInit",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;Lnet/minecraft/client/gui/screen/Screen;II)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseClick.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseClick",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "afterMouseClick",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;DDI)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/screen/v1/ScreenEvents.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/client/screen/v1/ScreenEvents",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "remove",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$Remove;>;"
+          },
+          {
+            "nme": "beforeRender",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$BeforeRender;>;"
+          },
+          {
+            "nme": "afterRender",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$AfterRender;>;"
+          },
+          {
+            "nme": "beforeTick",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$BeforeTick;>;"
+          },
+          {
+            "nme": "afterTick",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$AfterTick;>;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lambda$static$3",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$AfterInit;)Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$AfterInit;"
+          },
+          {
+            "nme": "lambda$static$2",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$AfterInit;Lnet/minecraft/client/MinecraftClient;Lnet/minecraft/client/gui/screen/Screen;II)V"
+          },
+          {
+            "nme": "lambda$static$1",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$BeforeInit;)Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$BeforeInit;"
+          },
+          {
+            "nme": "lambda$static$0",
+            "acc": 4106,
+            "dsc": "([Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$BeforeInit;Lnet/minecraft/client/MinecraftClient;Lnet/minecraft/client/gui/screen/Screen;II)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "BEFORE_INIT",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$BeforeInit;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "AFTER_INIT",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$AfterInit;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/screen/v1/ScreenEvents$Remove.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/screen/v1/ScreenEvents$Remove",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "onRemove",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AllowKeyRelease.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AllowKeyRelease",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "allowKeyRelease",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;III)Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "allowMouseClick",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseClick;>;"
+          },
+          {
+            "nme": "beforeMouseClick",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseClick;>;"
+          },
+          {
+            "nme": "afterMouseClick",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseClick;>;"
+          },
+          {
+            "nme": "allowMouseRelease",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseRelease;>;"
+          },
+          {
+            "nme": "beforeMouseRelease",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseRelease;>;"
+          },
+          {
+            "nme": "afterMouseRelease",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseRelease;>;"
+          },
+          {
+            "nme": "allowMouseScroll",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseScroll;>;"
+          },
+          {
+            "nme": "beforeMouseScroll",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseScroll;>;"
+          },
+          {
+            "nme": "afterMouseScroll",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseScroll;>;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseRelease.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseRelease",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "allowMouseRelease",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;DDI)Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/screen/MouseMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/screen/MouseMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "invokeMouseClickedEvents",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;DDILcom/llamalad7/mixinextras/injector/wrapoperation/Operation;)Z",
+            "sig": "(Lnet/minecraft/client/gui/screen/Screen;DDILcom/llamalad7/mixinextras/injector/wrapoperation/Operation<Ljava/lang/Boolean;>;)Z",
+            "vanns": [
+              {
+                "dsc": "Lcom/llamalad7/mixinextras/injector/wrapoperation/WrapOperation;",
+                "vals": [
+                  "method",
+                  [
+                    "onMouseButton"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/client/gui/screen/Screen;mouseClicked(DDI)Z"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "invokeMousePressedEvents",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;DDILcom/llamalad7/mixinextras/injector/wrapoperation/Operation;)Z",
+            "sig": "(Lnet/minecraft/client/gui/screen/Screen;DDILcom/llamalad7/mixinextras/injector/wrapoperation/Operation<Ljava/lang/Boolean;>;)Z",
+            "vanns": [
+              {
+                "dsc": "Lcom/llamalad7/mixinextras/injector/wrapoperation/WrapOperation;",
+                "vals": [
+                  "method",
+                  [
+                    "onMouseButton"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/client/gui/screen/Screen;mouseReleased(DDI)Z"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "invokeMouseScrollEvents",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;DDDDLcom/llamalad7/mixinextras/injector/wrapoperation/Operation;)Z",
+            "sig": "(Lnet/minecraft/client/gui/screen/Screen;DDDDLcom/llamalad7/mixinextras/injector/wrapoperation/Operation<Ljava/lang/Boolean;>;)Z",
+            "vanns": [
+              {
+                "dsc": "Lcom/llamalad7/mixinextras/injector/wrapoperation/WrapOperation;",
+                "vals": [
+                  "method",
+                  [
+                    "onMouseScroll"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/client/gui/screen/Screen;mouseScrolled(DDDD)Z"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/Mouse"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AfterKeyRelease.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AfterKeyRelease",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "afterKeyRelease",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;III)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/screen/ScreenMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/screen/ScreenMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "beforeInitScreen",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;IILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "init(Lnet/minecraft/client/MinecraftClient;II)V"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "afterInitScreen",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;IILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "init(Lnet/minecraft/client/MinecraftClient;II)V"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "TAIL"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "beforeResizeScreen",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;IILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "resize"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "afterResizeScreen",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;IILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "resize"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "TAIL"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "beforeInit",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;II)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Unique;"
+              }
+            ]
+          },
+          {
+            "nme": "afterInit",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;II)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Unique;"
+              }
+            ]
+          },
+          {
+            "nme": "fabric_getButtons",
+            "acc": 1,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lnet/minecraft/client/gui/widget/ClickableWidget;>;"
+          },
+          {
+            "nme": "ensureEventsAreInitialized",
+            "acc": 2,
+            "dsc": "(Lnet/fabricmc/fabric/api/event/Event;)Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/fabricmc/fabric/api/event/Event<TT;>;)Lnet/fabricmc/fabric/api/event/Event<TT;>;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Unique;"
+              }
+            ]
+          },
+          {
+            "nme": "fabric_getRemoveEvent",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$Remove;>;"
+          },
+          {
+            "nme": "fabric_getBeforeTickEvent",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$BeforeTick;>;"
+          },
+          {
+            "nme": "fabric_getAfterTickEvent",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$AfterTick;>;"
+          },
+          {
+            "nme": "fabric_getBeforeRenderEvent",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$BeforeRender;>;"
+          },
+          {
+            "nme": "fabric_getAfterRenderEvent",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$AfterRender;>;"
+          },
+          {
+            "nme": "fabric_getAllowKeyPressEvent",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AllowKeyPress;>;"
+          },
+          {
+            "nme": "fabric_getBeforeKeyPressEvent",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$BeforeKeyPress;>;"
+          },
+          {
+            "nme": "fabric_getAfterKeyPressEvent",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AfterKeyPress;>;"
+          },
+          {
+            "nme": "fabric_getAllowKeyReleaseEvent",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AllowKeyRelease;>;"
+          },
+          {
+            "nme": "fabric_getBeforeKeyReleaseEvent",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$BeforeKeyRelease;>;"
+          },
+          {
+            "nme": "fabric_getAfterKeyReleaseEvent",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AfterKeyRelease;>;"
+          },
+          {
+            "nme": "fabric_getAllowMouseClickEvent",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseClick;>;"
+          },
+          {
+            "nme": "fabric_getBeforeMouseClickEvent",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseClick;>;"
+          },
+          {
+            "nme": "fabric_getAfterMouseClickEvent",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseClick;>;"
+          },
+          {
+            "nme": "fabric_getAllowMouseReleaseEvent",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseRelease;>;"
+          },
+          {
+            "nme": "fabric_getBeforeMouseReleaseEvent",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseRelease;>;"
+          },
+          {
+            "nme": "fabric_getAfterMouseReleaseEvent",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseRelease;>;"
+          },
+          {
+            "nme": "fabric_getAllowMouseScrollEvent",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseScroll;>;"
+          },
+          {
+            "nme": "fabric_getBeforeMouseScrollEvent",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseScroll;>;"
+          },
+          {
+            "nme": "fabric_getAfterMouseScrollEvent",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseScroll;>;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4,
+            "nme": "field_33815",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lnet/minecraft/client/gui/Selectable;>;"
+          },
+          {
+            "acc": 4,
+            "nme": "field_22786",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lnet/minecraft/client/gui/Element;>;"
+          },
+          {
+            "acc": 4,
+            "nme": "field_33816",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lnet/minecraft/client/gui/Drawable;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "fabricButtons",
+            "dsc": "Lnet/fabricmc/fabric/impl/client/screen/ButtonList;"
+          },
+          {
+            "acc": 2,
+            "nme": "removeEvent",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$Remove;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "beforeTickEvent",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$BeforeTick;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "afterTickEvent",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$AfterTick;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "beforeRenderEvent",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$BeforeRender;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "afterRenderEvent",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$AfterRender;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "allowKeyPressEvent",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AllowKeyPress;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "beforeKeyPressEvent",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$BeforeKeyPress;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "afterKeyPressEvent",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AfterKeyPress;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "allowKeyReleaseEvent",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AllowKeyRelease;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "beforeKeyReleaseEvent",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$BeforeKeyRelease;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "afterKeyReleaseEvent",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AfterKeyRelease;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "allowMouseClickEvent",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseClick;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "beforeMouseClickEvent",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseClick;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "afterMouseClickEvent",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseClick;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "allowMouseReleaseEvent",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseRelease;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "beforeMouseReleaseEvent",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseRelease;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "afterMouseReleaseEvent",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseRelease;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "allowMouseScrollEvent",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseScroll;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "beforeMouseScrollEvent",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseScroll;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "afterMouseScrollEvent",
+            "dsc": "Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseScroll;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/gui/screen/Screen"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/screen/ScreenExtensions.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/impl/client/screen/ScreenExtensions",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getExtensions",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/fabricmc/fabric/impl/client/screen/ScreenExtensions;"
+          },
+          {
+            "nme": "fabric_getButtons",
+            "acc": 1025,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lnet/minecraft/client/gui/widget/ClickableWidget;>;"
+          },
+          {
+            "nme": "fabric_getRemoveEvent",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$Remove;>;"
+          },
+          {
+            "nme": "fabric_getBeforeTickEvent",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$BeforeTick;>;"
+          },
+          {
+            "nme": "fabric_getAfterTickEvent",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$AfterTick;>;"
+          },
+          {
+            "nme": "fabric_getBeforeRenderEvent",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$BeforeRender;>;"
+          },
+          {
+            "nme": "fabric_getAfterRenderEvent",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenEvents$AfterRender;>;"
+          },
+          {
+            "nme": "fabric_getAllowKeyPressEvent",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AllowKeyPress;>;"
+          },
+          {
+            "nme": "fabric_getBeforeKeyPressEvent",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$BeforeKeyPress;>;"
+          },
+          {
+            "nme": "fabric_getAfterKeyPressEvent",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AfterKeyPress;>;"
+          },
+          {
+            "nme": "fabric_getAllowKeyReleaseEvent",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AllowKeyRelease;>;"
+          },
+          {
+            "nme": "fabric_getBeforeKeyReleaseEvent",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$BeforeKeyRelease;>;"
+          },
+          {
+            "nme": "fabric_getAfterKeyReleaseEvent",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AfterKeyRelease;>;"
+          },
+          {
+            "nme": "fabric_getAllowMouseClickEvent",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseClick;>;"
+          },
+          {
+            "nme": "fabric_getBeforeMouseClickEvent",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseClick;>;"
+          },
+          {
+            "nme": "fabric_getAfterMouseClickEvent",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseClick;>;"
+          },
+          {
+            "nme": "fabric_getAllowMouseReleaseEvent",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseRelease;>;"
+          },
+          {
+            "nme": "fabric_getBeforeMouseReleaseEvent",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseRelease;>;"
+          },
+          {
+            "nme": "fabric_getAfterMouseReleaseEvent",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseRelease;>;"
+          },
+          {
+            "nme": "fabric_getAllowMouseScrollEvent",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AllowMouseScroll;>;"
+          },
+          {
+            "nme": "fabric_getBeforeMouseScrollEvent",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseScroll;>;"
+          },
+          {
+            "nme": "fabric_getAfterMouseScrollEvent",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/event/Event;",
+            "sig": "()Lnet/fabricmc/fabric/api/event/Event<Lnet/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseScroll;>;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/screen/MinecraftClientMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/screen/MinecraftClientMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "checkThreadOnDev",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "setScreen"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "onScreenRemove",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "setScreen"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/client/gui/screen/Screen;removed()V",
+                        "shift",
+                        [
+                          "Lorg/spongepowered/asm/mixin/injection/At$Shift;",
+                          "AFTER"
+                        ]
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "onScreenRemoveBecauseStopping",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "stop"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/client/gui/screen/Screen;removed()V",
+                        "shift",
+                        [
+                          "Lorg/spongepowered/asm/mixin/injection/At$Shift;",
+                          "AFTER"
+                        ]
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "beforeScreenTick",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "tick"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/client/gui/screen/Screen;tick()V"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "afterScreenTick",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "tick"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/client/gui/screen/Screen;tick()V",
+                        "shift",
+                        [
+                          "Lorg/spongepowered/asm/mixin/injection/At$Shift;",
+                          "AFTER"
+                        ]
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "beforeLoadingScreenTick",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "startIntegratedServer"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/client/gui/screen/world/LevelLoadingScreen;tick()V"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "afterLoadingScreenTick",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "startIntegratedServer"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/client/MinecraftClient;render(Z)V"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 26,
+            "nme": "DEBUG_SCREEN",
+            "dsc": "Z"
+          },
+          {
+            "acc": 1,
+            "nme": "field_1755",
+            "dsc": "Lnet/minecraft/client/gui/screen/Screen;"
+          },
+          {
+            "acc": 2,
+            "nme": "field_1696",
+            "dsc": "Ljava/lang/Thread;"
+          },
+          {
+            "acc": 2,
+            "nme": "tickingScreen",
+            "dsc": "Lnet/minecraft/client/gui/screen/Screen;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/MinecraftClient"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseRelease.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseRelease",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "beforeMouseRelease",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;DDI)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/screen/GameRendererMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/screen/GameRendererMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "onRenderScreen",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;Lnet/minecraft/client/gui/DrawContext;IIFLcom/llamalad7/mixinextras/injector/wrapoperation/Operation;)V",
+            "sig": "(Lnet/minecraft/client/gui/screen/Screen;Lnet/minecraft/client/gui/DrawContext;IIFLcom/llamalad7/mixinextras/injector/wrapoperation/Operation<Ljava/lang/Void;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lcom/llamalad7/mixinextras/injector/wrapoperation/WrapOperation;",
+                "vals": [
+                  "method",
+                  [
+                    "render"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/client/gui/screen/Screen;renderWithTooltip(Lnet/minecraft/client/gui/DrawContext;IIF)V"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/render/GameRenderer"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseRelease.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseRelease",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "afterMouseRelease",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;DDI)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/screen/HandledScreenMixin.class": {
+        "ver": 65,
+        "acc": 1057,
+        "nme": "net/fabricmc/fabric/mixin/screen/HandledScreenMixin",
+        "super": "net/minecraft/client/gui/screen/Screen",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/text/Text;)V"
+          },
+          {
+            "nme": "callSuperMouseReleased",
+            "acc": 2,
+            "dsc": "(DDILorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(DDILorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/lang/Boolean;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "mouseReleased"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "callSuperMouseReleased",
+            "acc": 2,
+            "dsc": "(DDIDDLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(DDIDDLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/lang/Boolean;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "mouseDragged"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/gui/screen/ingame/HandledScreen"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/screen/KeyboardMixin.class": {
+        "ver": 65,
+        "acc": 1056,
+        "nme": "net/fabricmc/fabric/mixin/screen/KeyboardMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "invokeKeyPressedEvents",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;IIILcom/llamalad7/mixinextras/injector/wrapoperation/Operation;)Z",
+            "sig": "(Lnet/minecraft/client/gui/screen/Screen;IIILcom/llamalad7/mixinextras/injector/wrapoperation/Operation<Ljava/lang/Boolean;>;)Z",
+            "vanns": [
+              {
+                "dsc": "Lcom/llamalad7/mixinextras/injector/wrapoperation/WrapOperation;",
+                "vals": [
+                  "method",
+                  [
+                    "onKey"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/client/gui/screen/Screen;keyPressed(III)Z"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "invokeKeyReleasedEvents",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;IIILcom/llamalad7/mixinextras/injector/wrapoperation/Operation;)Z",
+            "sig": "(Lnet/minecraft/client/gui/screen/Screen;IIILcom/llamalad7/mixinextras/injector/wrapoperation/Operation<Ljava/lang/Boolean;>;)Z",
+            "vanns": [
+              {
+                "dsc": "Lcom/llamalad7/mixinextras/injector/wrapoperation/WrapOperation;",
+                "vals": [
+                  "method",
+                  [
+                    "onKey"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "INVOKE",
+                        "target",
+                        "Lnet/minecraft/client/gui/screen/Screen;keyReleased(III)Z"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/Keyboard"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/screen/v1/ScreenEvents$AfterInit.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/screen/v1/ScreenEvents$AfterInit",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "afterInit",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/MinecraftClient;Lnet/minecraft/client/gui/screen/Screen;II)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/screen/v1/ScreenEvents$AfterTick.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/screen/v1/ScreenEvents$AfterTick",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "afterTick",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseScroll.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$BeforeMouseScroll",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "beforeMouseScroll",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;DDDD)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/screen/ButtonList.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/client/screen/ButtonList",
+        "super": "java/util/AbstractList",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V",
+            "sig": "(Ljava/util/List<Lnet/minecraft/client/gui/Drawable;>;Ljava/util/List<Lnet/minecraft/client/gui/Selectable;>;Ljava/util/List<Lnet/minecraft/client/gui/Element;>;)V"
+          },
+          {
+            "nme": "get",
+            "acc": 1,
+            "dsc": "(I)Lnet/minecraft/client/gui/widget/ClickableWidget;"
+          },
+          {
+            "nme": "set",
+            "acc": 1,
+            "dsc": "(ILnet/minecraft/client/gui/widget/ClickableWidget;)Lnet/minecraft/client/gui/widget/ClickableWidget;"
+          },
+          {
+            "nme": "add",
+            "acc": 1,
+            "dsc": "(ILnet/minecraft/client/gui/widget/ClickableWidget;)V"
+          },
+          {
+            "nme": "remove",
+            "acc": 1,
+            "dsc": "(I)Lnet/minecraft/client/gui/widget/ClickableWidget;"
+          },
+          {
+            "nme": "size",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "translateIndex",
+            "acc": 2,
+            "dsc": "(Ljava/util/List;IZ)I",
+            "sig": "(Ljava/util/List<*>;IZ)I"
+          },
+          {
+            "nme": "remove",
+            "acc": 4161,
+            "dsc": "(I)Ljava/lang/Object;"
+          },
+          {
+            "nme": "add",
+            "acc": 4161,
+            "dsc": "(ILjava/lang/Object;)V"
+          },
+          {
+            "nme": "set",
+            "acc": 4161,
+            "dsc": "(ILjava/lang/Object;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "get",
+            "acc": 4161,
+            "dsc": "(I)Ljava/lang/Object;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "drawables",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lnet/minecraft/client/gui/Drawable;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "selectables",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lnet/minecraft/client/gui/Selectable;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "children",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lnet/minecraft/client/gui/Element;>;"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AfterKeyPress.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AfterKeyPress",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "afterKeyPress",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;III)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseScroll.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/screen/v1/ScreenMouseEvents$AfterMouseScroll",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "afterMouseScroll",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;DDDD)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/client/screen/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/client/screen/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/screen/ScreenAccessor.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/mixin/screen/ScreenAccessor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getTextRenderer",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/client/font/TextRenderer;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;"
+              }
+            ]
+          },
+          {
+            "nme": "getClient",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/client/MinecraftClient;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/gen/Accessor;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/client/gui/screen/Screen"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/screen/v1/ScreenEvents$AfterRender.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/screen/v1/ScreenEvents$AfterRender",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "afterRender",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;Lnet/minecraft/client/gui/DrawContext;IIF)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AllowKeyPress.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$AllowKeyPress",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "allowKeyPress",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;III)Z"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$BeforeKeyPress.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$BeforeKeyPress",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "beforeKeyPress",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;III)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$BeforeKeyRelease.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/client/screen/v1/ScreenKeyboardEvents$BeforeKeyRelease",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "beforeKeyRelease",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;III)V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/FunctionalInterface;"
+          },
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/client/screen/v1/Screens.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/client/screen/v1/Screens",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getButtons",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;)Ljava/util/List;",
+            "sig": "(Lnet/minecraft/client/gui/screen/Screen;)Ljava/util/List<Lnet/minecraft/client/gui/widget/ClickableWidget;>;"
+          },
+          {
+            "nme": "getTextRenderer",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/minecraft/client/font/TextRenderer;"
+          },
+          {
+            "nme": "getClient",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/client/gui/screen/Screen;)Lnet/minecraft/client/MinecraftClient;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lnet/fabricmc/api/Environment;",
+            "vals": [
+              "value",
+              [
+                "Lnet/fabricmc/api/EnvType;",
+                "CLIENT"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

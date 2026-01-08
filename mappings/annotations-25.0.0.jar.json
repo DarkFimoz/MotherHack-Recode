@@ -1,0 +1,2228 @@
+{
+  "md5": "07f6ac421f361ecd170c6bab6a7085c6",
+  "sha2": "c1e6b966db352094ac3bf7f88f3bdef332fe43f0",
+  "sha256": "9c0a1528240d1f732bfeac182e126e76ead2e6dfa157f1ad8e3c891b19281538",
+  "contents": {
+    "classes": {
+      "org/intellij/lang/annotations/JdkConstants$CalendarMonth.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/intellij/lang/annotations/JdkConstants$CalendarMonth",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "org/intellij/lang/annotations/JdkConstants$ListSelectionMode.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/intellij/lang/annotations/JdkConstants$ListSelectionMode",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "org/jetbrains/annotations/MustBeInvokedByOverriders.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/jetbrains/annotations/MustBeInvokedByOverriders",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          }
+        ]
+      },
+      "org/intellij/lang/annotations/JdkConstants$TitledBorderJustification.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/intellij/lang/annotations/JdkConstants$TitledBorderJustification",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "org/intellij/lang/annotations/Pattern.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/intellij/lang/annotations/Pattern",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;",
+            "invanns": [
+              {
+                "dsc": "Lorg/intellij/lang/annotations/Language;",
+                "vals": [
+                  "value",
+                  "RegExp"
+                ]
+              },
+              {
+                "dsc": "Lorg/jetbrains/annotations/NonNls;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "LOCAL_VARIABLE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/intellij/lang/annotations/JdkConstants$FlowLayoutAlignment.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/intellij/lang/annotations/JdkConstants$FlowLayoutAlignment",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "org/intellij/lang/annotations/JdkConstants$TreeSelectionMode.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/intellij/lang/annotations/JdkConstants$TreeSelectionMode",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "org/jetbrains/annotations/Async$Schedule.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/jetbrains/annotations/Async$Schedule",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/jetbrains/annotations/Debug.class": {
+        "ver": 52,
+        "acc": 49,
+        "nme": "org/jetbrains/annotations/Debug",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          }
+        ],
+        "flds": []
+      },
+      "org/jetbrains/annotations/CheckReturnValue.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/jetbrains/annotations/CheckReturnValue",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PACKAGE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/jetbrains/annotations/VisibleForTesting.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/jetbrains/annotations/VisibleForTesting",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/intellij/lang/annotations/JdkConstants$FontStyle.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/intellij/lang/annotations/JdkConstants$FontStyle",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "org/jetbrains/annotations/BlockingExecutor.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/jetbrains/annotations/BlockingExecutor",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE_USE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/jetbrains/annotations/NonNls.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/jetbrains/annotations/NonNls",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "LOCAL_VARIABLE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE_USE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PACKAGE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/intellij/lang/annotations/Subst.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/intellij/lang/annotations/Subst",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "LOCAL_VARIABLE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/intellij/lang/annotations/Language.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/intellij/lang/annotations/Language",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NonNls;"
+              }
+            ]
+          },
+          {
+            "nme": "prefix",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NonNls;"
+              }
+            ]
+          },
+          {
+            "nme": "suffix",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NonNls;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "LOCAL_VARIABLE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/intellij/lang/annotations/JdkConstants$HorizontalScrollBarPolicy.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/intellij/lang/annotations/JdkConstants$HorizontalScrollBarPolicy",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "org/jetbrains/annotations/ApiStatus$Obsolete.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/jetbrains/annotations/ApiStatus$Obsolete",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "since",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PACKAGE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/jetbrains/annotations/PropertyKey.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/jetbrains/annotations/PropertyKey",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "resourceBundle",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NonNls;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "LOCAL_VARIABLE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE_USE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/intellij/lang/annotations/JdkConstants$InputEventMask.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/intellij/lang/annotations/JdkConstants$InputEventMask",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "org/intellij/lang/annotations/JdkConstants$BoxLayoutAxis.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/intellij/lang/annotations/JdkConstants$BoxLayoutAxis",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "org/intellij/lang/annotations/JdkConstants$TabLayoutPolicy.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/intellij/lang/annotations/JdkConstants$TabLayoutPolicy",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "org/intellij/lang/annotations/JdkConstants$PatternFlags.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/intellij/lang/annotations/JdkConstants$PatternFlags",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "org/jetbrains/annotations/Range.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/jetbrains/annotations/Range",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "from",
+            "acc": 1025,
+            "dsc": "()J"
+          },
+          {
+            "nme": "to",
+            "acc": 1025,
+            "dsc": "()J"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE_USE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/jetbrains/annotations/Debug$Renderer.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/jetbrains/annotations/Debug$Renderer",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "text",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;",
+            "invanns": [
+              {
+                "dsc": "Lorg/intellij/lang/annotations/Language;",
+                "vals": [
+                  "value",
+                  "JAVA",
+                  "prefix",
+                  "class Renderer{String $text(){return ",
+                  "suffix",
+                  ";}}"
+                ]
+              },
+              {
+                "dsc": "Lorg/jetbrains/annotations/NonNls;"
+              }
+            ]
+          },
+          {
+            "nme": "childrenArray",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;",
+            "invanns": [
+              {
+                "dsc": "Lorg/intellij/lang/annotations/Language;",
+                "vals": [
+                  "value",
+                  "JAVA",
+                  "prefix",
+                  "class Renderer{Object[] $childrenArray(){return ",
+                  "suffix",
+                  ";}}"
+                ]
+              },
+              {
+                "dsc": "Lorg/jetbrains/annotations/NonNls;"
+              }
+            ]
+          },
+          {
+            "nme": "hasChildren",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;",
+            "invanns": [
+              {
+                "dsc": "Lorg/intellij/lang/annotations/Language;",
+                "vals": [
+                  "value",
+                  "JAVA",
+                  "prefix",
+                  "class Renderer{boolean $hasChildren(){return ",
+                  "suffix",
+                  ";}}"
+                ]
+              },
+              {
+                "dsc": "Lorg/jetbrains/annotations/NonNls;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          }
+        ]
+      },
+      "org/intellij/lang/annotations/MagicConstant.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/intellij/lang/annotations/MagicConstant",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "intValues",
+            "acc": 1025,
+            "dsc": "()[J"
+          },
+          {
+            "nme": "stringValues",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/String;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NonNls;"
+              }
+            ]
+          },
+          {
+            "nme": "flags",
+            "acc": 1025,
+            "dsc": "()[J"
+          },
+          {
+            "nme": "valuesFromClass",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<*>;"
+          },
+          {
+            "nme": "flagsFromClass",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<*>;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "LOCAL_VARIABLE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/jetbrains/annotations/ApiStatus$NonExtendable.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/jetbrains/annotations/ApiStatus$NonExtendable",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/jetbrains/annotations/ApiStatus.class": {
+        "ver": 52,
+        "acc": 49,
+        "nme": "org/jetbrains/annotations/ApiStatus",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          }
+        ],
+        "flds": []
+      },
+      "org/jetbrains/annotations/Contract.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/jetbrains/annotations/Contract",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NonNls;"
+              }
+            ]
+          },
+          {
+            "nme": "pure",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "mutates",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/ApiStatus$Experimental;"
+              },
+              {
+                "dsc": "Lorg/jetbrains/annotations/NonNls;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/jetbrains/annotations/NonBlocking.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/jetbrains/annotations/NonBlocking",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/jetbrains/annotations/ApiStatus$Experimental.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/jetbrains/annotations/ApiStatus$Experimental",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PACKAGE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/jetbrains/annotations/Nls.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/jetbrains/annotations/Nls",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "capitalization",
+            "acc": 1025,
+            "dsc": "()Lorg/jetbrains/annotations/Nls$Capitalization;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "LOCAL_VARIABLE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE_USE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PACKAGE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/jetbrains/annotations/NotNull.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/jetbrains/annotations/NotNull",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "exception",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<+Ljava/lang/Exception;>;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "LOCAL_VARIABLE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE_USE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/jetbrains/annotations/ApiStatus$Internal.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/jetbrains/annotations/ApiStatus$Internal",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PACKAGE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/jetbrains/annotations/ApiStatus$AvailableSince.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/jetbrains/annotations/ApiStatus$AvailableSince",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PACKAGE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/jetbrains/annotations/ApiStatus$OverrideOnly.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/jetbrains/annotations/ApiStatus$OverrideOnly",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/jetbrains/annotations/Nullable.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/jetbrains/annotations/Nullable",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NonNls;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "LOCAL_VARIABLE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE_USE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/jetbrains/annotations/Async$Execute.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/jetbrains/annotations/Async$Execute",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/intellij/lang/annotations/JdkConstants$VerticalScrollBarPolicy.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/intellij/lang/annotations/JdkConstants$VerticalScrollBarPolicy",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "org/intellij/lang/annotations/PrintFormat.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/intellij/lang/annotations/PrintFormat",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/intellij/lang/annotations/Pattern;",
+            "vals": [
+              "value",
+              "(?:[^%]|%%|(?:%(?:\\d+\\$)?(?:[-#+ 0,(<]*)?(?:\\d+)?(?:\\.\\d+)?(?:[tT])?(?:[a-zA-Z%])))*"
+            ]
+          }
+        ]
+      },
+      "org/jetbrains/annotations/UnknownNullability.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/jetbrains/annotations/UnknownNullability",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NonNls;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE_USE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/intellij/lang/annotations/PrintFormatPattern.class": {
+        "ver": 52,
+        "acc": 32,
+        "nme": "org/intellij/lang/annotations/PrintFormatPattern",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "ARG_INDEX",
+            "dsc": "Ljava/lang/String;",
+            "val": "(?:\\d+\\$)?"
+          },
+          {
+            "acc": 26,
+            "nme": "FLAGS",
+            "dsc": "Ljava/lang/String;",
+            "val": "(?:[-#+ 0,(<]*)?"
+          },
+          {
+            "acc": 26,
+            "nme": "WIDTH",
+            "dsc": "Ljava/lang/String;",
+            "val": "(?:\\d+)?"
+          },
+          {
+            "acc": 26,
+            "nme": "PRECISION",
+            "dsc": "Ljava/lang/String;",
+            "val": "(?:\\.\\d+)?"
+          },
+          {
+            "acc": 26,
+            "nme": "CONVERSION",
+            "dsc": "Ljava/lang/String;",
+            "val": "(?:[tT])?(?:[a-zA-Z%])"
+          },
+          {
+            "acc": 26,
+            "nme": "TEXT",
+            "dsc": "Ljava/lang/String;",
+            "val": "[^%]|%%"
+          },
+          {
+            "acc": 24,
+            "nme": "PRINT_FORMAT",
+            "dsc": "Ljava/lang/String;",
+            "val": "(?:[^%]|%%|(?:%(?:\\d+\\$)?(?:[-#+ 0,(<]*)?(?:\\d+)?(?:\\.\\d+)?(?:[tT])?(?:[a-zA-Z%])))*"
+          }
+        ]
+      },
+      "org/intellij/lang/annotations/JdkConstants$HorizontalAlignment.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/intellij/lang/annotations/JdkConstants$HorizontalAlignment",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "org/intellij/lang/annotations/JdkConstants$AdjustableOrientation.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/intellij/lang/annotations/JdkConstants$AdjustableOrientation",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "org/intellij/lang/annotations/JdkConstants$TitledBorderTitlePosition.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/intellij/lang/annotations/JdkConstants$TitledBorderTitlePosition",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "org/intellij/lang/annotations/RegExp.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/intellij/lang/annotations/RegExp",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "prefix",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NonNls;"
+              }
+            ]
+          },
+          {
+            "nme": "suffix",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/NonNls;"
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "LOCAL_VARIABLE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ]
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/intellij/lang/annotations/Language;",
+            "vals": [
+              "value",
+              "RegExp"
+            ]
+          }
+        ]
+      },
+      "org/jetbrains/annotations/Blocking.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/jetbrains/annotations/Blocking",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/jetbrains/annotations/NonBlockingExecutor.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/jetbrains/annotations/NonBlockingExecutor",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE_USE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/intellij/lang/annotations/Flow.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/intellij/lang/annotations/Flow",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "source",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "sourceIsContainer",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "target",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "targetIsContainer",
+            "acc": 1025,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "DEFAULT_SOURCE",
+            "dsc": "Ljava/lang/String;",
+            "val": "The method argument (if parameter was annotated) or this container (if instance method was annotated)"
+          },
+          {
+            "acc": 25,
+            "nme": "THIS_SOURCE",
+            "dsc": "Ljava/lang/String;",
+            "val": "this"
+          },
+          {
+            "acc": 25,
+            "nme": "DEFAULT_TARGET",
+            "dsc": "Ljava/lang/String;",
+            "val": "This container (if the parameter was annotated) or the return value (if instance method was annotated)"
+          },
+          {
+            "acc": 25,
+            "nme": "RETURN_METHOD_TARGET",
+            "dsc": "Ljava/lang/String;",
+            "val": "The return value of this method"
+          },
+          {
+            "acc": 25,
+            "nme": "THIS_TARGET",
+            "dsc": "Ljava/lang/String;",
+            "val": "this"
+          }
+        ],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/intellij/lang/annotations/JdkConstants$TabPlacement.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/intellij/lang/annotations/JdkConstants$TabPlacement",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "org/jetbrains/annotations/ApiStatus$ScheduledForRemoval.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/jetbrains/annotations/ApiStatus$ScheduledForRemoval",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "inVersion",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PACKAGE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/jetbrains/annotations/UnmodifiableView.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/jetbrains/annotations/UnmodifiableView",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE_USE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/jetbrains/annotations/Nls$Capitalization.class": {
+        "ver": 52,
+        "acc": 16433,
+        "nme": "org/jetbrains/annotations/Nls$Capitalization",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lorg/jetbrains/annotations/Nls$Capitalization;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lorg/jetbrains/annotations/Nls$Capitalization;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "NotSpecified",
+            "dsc": "Lorg/jetbrains/annotations/Nls$Capitalization;"
+          },
+          {
+            "acc": 16409,
+            "nme": "Title",
+            "dsc": "Lorg/jetbrains/annotations/Nls$Capitalization;"
+          },
+          {
+            "acc": 16409,
+            "nme": "Sentence",
+            "dsc": "Lorg/jetbrains/annotations/Nls$Capitalization;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lorg/jetbrains/annotations/Nls$Capitalization;"
+          }
+        ]
+      },
+      "META-INF/versions/9/module-info.class": {
+        "ver": 53,
+        "acc": 32768,
+        "nme": "module-info",
+        "mthds": [],
+        "flds": []
+      },
+      "org/intellij/lang/annotations/Identifier.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/intellij/lang/annotations/Identifier",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/intellij/lang/annotations/Pattern;",
+            "vals": [
+              "value",
+              "\\p{javaJavaIdentifierStart}\\p{javaJavaIdentifierPart}*"
+            ]
+          }
+        ]
+      },
+      "org/jetbrains/annotations/Async.class": {
+        "ver": 52,
+        "acc": 49,
+        "nme": "org/jetbrains/annotations/Async",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          }
+        ],
+        "flds": []
+      },
+      "org/jetbrains/annotations/TestOnly.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/jetbrains/annotations/TestOnly",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/jetbrains/annotations/Unmodifiable.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/jetbrains/annotations/Unmodifiable",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE_USE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "org/intellij/lang/annotations/JdkConstants$CursorType.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "org/intellij/lang/annotations/JdkConstants$CursorType",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "org/intellij/lang/annotations/JdkConstants.class": {
+        "ver": 52,
+        "acc": 131121,
+        "nme": "org/intellij/lang/annotations/JdkConstants",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/Deprecated;"
+          }
+        ]
+      }
+    }
+  }
+}

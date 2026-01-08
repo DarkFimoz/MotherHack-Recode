@@ -1,0 +1,420 @@
+{
+  "md5": "c687eaba9debbc609df72ab45f4e1164",
+  "sha2": "82d755ca94b102e9ca77283b9e2dc46d1b15fbe5",
+  "sha256": "ee0515054ee19a3f4088426fee9d879eb2ee657b07e5064e4e2c851f6adcf14b",
+  "contents": {
+    "classes": {
+      "org/lwjgl/util/tinyfd/package-info.class": {
+        "ver": 52,
+        "acc": 5632,
+        "nme": "org/lwjgl/util/tinyfd/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Lorg/lwjgl/system/NonnullDefault;"
+          }
+        ]
+      },
+      "org/lwjgl/util/tinyfd/TinyFileDialogs.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/lwjgl/util/tinyfd/TinyFileDialogs",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "ntinyfd_getGlobalChar",
+            "acc": 265,
+            "dsc": "(J)J"
+          },
+          {
+            "nme": "tinyfd_getGlobalChar",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;)Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              },
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "char const *"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "tinyfd_getGlobalChar",
+            "acc": 9,
+            "dsc": "(Ljava/lang/CharSequence;)Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              },
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "char const *"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "ntinyfd_getGlobalInt",
+            "acc": 265,
+            "dsc": "(J)I"
+          },
+          {
+            "nme": "tinyfd_getGlobalInt",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;)I"
+          },
+          {
+            "nme": "tinyfd_getGlobalInt",
+            "acc": 9,
+            "dsc": "(Ljava/lang/CharSequence;)I"
+          },
+          {
+            "nme": "ntinyfd_setGlobalInt",
+            "acc": 265,
+            "dsc": "(JI)I"
+          },
+          {
+            "nme": "tinyfd_setGlobalInt",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;I)I"
+          },
+          {
+            "nme": "tinyfd_setGlobalInt",
+            "acc": 9,
+            "dsc": "(Ljava/lang/CharSequence;I)I"
+          },
+          {
+            "nme": "tinyfd_beep",
+            "acc": 265,
+            "dsc": "()V"
+          },
+          {
+            "nme": "ntinyfd_notifyPopup",
+            "acc": 265,
+            "dsc": "(JJJ)I"
+          },
+          {
+            "nme": "tinyfd_notifyPopup",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)I"
+          },
+          {
+            "nme": "tinyfd_notifyPopup",
+            "acc": 9,
+            "dsc": "(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)I"
+          },
+          {
+            "nme": "ntinyfd_messageBox",
+            "acc": 265,
+            "dsc": "(JJJJI)I"
+          },
+          {
+            "nme": "tinyfd_messageBox",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;Z)Z",
+            "vanns": [
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "int"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "tinyfd_messageBox",
+            "acc": 9,
+            "dsc": "(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z",
+            "vanns": [
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "int"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "ntinyfd_inputBox",
+            "acc": 265,
+            "dsc": "(JJJ)J"
+          },
+          {
+            "nme": "tinyfd_inputBox",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              },
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "char const *"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "tinyfd_inputBox",
+            "acc": 9,
+            "dsc": "(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              },
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "char const *"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "ntinyfd_saveFileDialog",
+            "acc": 265,
+            "dsc": "(JJIJJ)J"
+          },
+          {
+            "nme": "tinyfd_saveFileDialog",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;Lorg/lwjgl/PointerBuffer;Ljava/nio/ByteBuffer;)Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              },
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "char const *"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "tinyfd_saveFileDialog",
+            "acc": 9,
+            "dsc": "(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Lorg/lwjgl/PointerBuffer;Ljava/lang/CharSequence;)Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              },
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "char const *"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "ntinyfd_openFileDialog",
+            "acc": 265,
+            "dsc": "(JJIJJI)J"
+          },
+          {
+            "nme": "tinyfd_openFileDialog",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;Lorg/lwjgl/PointerBuffer;Ljava/nio/ByteBuffer;Z)Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              },
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "char const *"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "tinyfd_openFileDialog",
+            "acc": 9,
+            "dsc": "(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Lorg/lwjgl/PointerBuffer;Ljava/lang/CharSequence;Z)Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              },
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "char const *"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "ntinyfd_selectFolderDialog",
+            "acc": 265,
+            "dsc": "(JJ)J"
+          },
+          {
+            "nme": "tinyfd_selectFolderDialog",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              },
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "char const *"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "tinyfd_selectFolderDialog",
+            "acc": 9,
+            "dsc": "(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              },
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "char const *"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "ntinyfd_colorChooser",
+            "acc": 265,
+            "dsc": "(JJJJ)J"
+          },
+          {
+            "nme": "tinyfd_colorChooser",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              },
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "char const *"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "tinyfd_colorChooser",
+            "acc": 9,
+            "dsc": "(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nullable;"
+              },
+              {
+                "dsc": "Lorg/lwjgl/system/NativeType;",
+                "vals": [
+                  "value",
+                  "char const *"
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "tinyfd_version",
+            "dsc": "Ljava/lang/String;",
+            "val": "tinyfd_version"
+          },
+          {
+            "acc": 25,
+            "nme": "tinyfd_needs",
+            "dsc": "Ljava/lang/String;",
+            "val": "tinyfd_needs"
+          },
+          {
+            "acc": 25,
+            "nme": "tinyfd_response",
+            "dsc": "Ljava/lang/String;",
+            "val": "tinyfd_response"
+          },
+          {
+            "acc": 25,
+            "nme": "tinyfd_verbose",
+            "dsc": "Ljava/lang/String;",
+            "val": "tinyfd_verbose"
+          },
+          {
+            "acc": 25,
+            "nme": "tinyfd_silent",
+            "dsc": "Ljava/lang/String;",
+            "val": "tinyfd_silent"
+          },
+          {
+            "acc": 25,
+            "nme": "tinyfd_allowCursesDialogs",
+            "dsc": "Ljava/lang/String;",
+            "val": "tinyfd_allowCursesDialogs"
+          },
+          {
+            "acc": 25,
+            "nme": "tinyfd_forceConsole",
+            "dsc": "Ljava/lang/String;",
+            "val": "tinyfd_forceConsole"
+          },
+          {
+            "acc": 25,
+            "nme": "tinyfd_assumeGraphicDisplay",
+            "dsc": "Ljava/lang/String;",
+            "val": "tinyfd_assumeGraphicDisplay"
+          },
+          {
+            "acc": 25,
+            "nme": "tinyfd_winUtf8",
+            "dsc": "Ljava/lang/String;",
+            "val": "tinyfd_winUtf8"
+          }
+        ]
+      },
+      "META-INF/versions/9/module-info.class": {
+        "ver": 53,
+        "acc": 32768,
+        "nme": "module-info",
+        "mthds": [],
+        "flds": []
+      }
+    }
+  }
+}

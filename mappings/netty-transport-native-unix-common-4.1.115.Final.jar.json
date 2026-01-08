@@ -1,0 +1,3074 @@
+{
+  "md5": "c5714e7bc9bbd800a52d8d6c145b19e2",
+  "sha2": "dc96c67d06cd6b5eb677f2728f27bf2e3d9a7284",
+  "sha256": "4b03e716272657c296b0204b57c140b2b2ca96b1a746c92da41f595892ec6d88",
+  "contents": {
+    "classes": {
+      "io/netty/channel/unix/DomainDatagramChannelConfig.class": {
+        "ver": 50,
+        "acc": 1537,
+        "nme": "io/netty/channel/unix/DomainDatagramChannelConfig",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "setAllocator",
+            "acc": 1025,
+            "dsc": "(Lio/netty/buffer/ByteBufAllocator;)Lio/netty/channel/unix/DomainDatagramChannelConfig;"
+          },
+          {
+            "nme": "setAutoClose",
+            "acc": 1025,
+            "dsc": "(Z)Lio/netty/channel/unix/DomainDatagramChannelConfig;"
+          },
+          {
+            "nme": "setAutoRead",
+            "acc": 1025,
+            "dsc": "(Z)Lio/netty/channel/unix/DomainDatagramChannelConfig;"
+          },
+          {
+            "nme": "setConnectTimeoutMillis",
+            "acc": 1025,
+            "dsc": "(I)Lio/netty/channel/unix/DomainDatagramChannelConfig;"
+          },
+          {
+            "nme": "setMaxMessagesPerRead",
+            "acc": 132097,
+            "dsc": "(I)Lio/netty/channel/unix/DomainDatagramChannelConfig;",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "setMessageSizeEstimator",
+            "acc": 1025,
+            "dsc": "(Lio/netty/channel/MessageSizeEstimator;)Lio/netty/channel/unix/DomainDatagramChannelConfig;"
+          },
+          {
+            "nme": "setRecvByteBufAllocator",
+            "acc": 1025,
+            "dsc": "(Lio/netty/channel/RecvByteBufAllocator;)Lio/netty/channel/unix/DomainDatagramChannelConfig;"
+          },
+          {
+            "nme": "setSendBufferSize",
+            "acc": 1025,
+            "dsc": "(I)Lio/netty/channel/unix/DomainDatagramChannelConfig;"
+          },
+          {
+            "nme": "getSendBufferSize",
+            "acc": 1025,
+            "dsc": "()I"
+          },
+          {
+            "nme": "setWriteBufferWaterMark",
+            "acc": 1025,
+            "dsc": "(Lio/netty/channel/WriteBufferWaterMark;)Lio/netty/channel/unix/DomainDatagramChannelConfig;"
+          },
+          {
+            "nme": "setWriteSpinCount",
+            "acc": 1025,
+            "dsc": "(I)Lio/netty/channel/unix/DomainDatagramChannelConfig;"
+          }
+        ],
+        "flds": []
+      },
+      "io/netty/channel/unix/GenericUnixChannelOption.class": {
+        "ver": 50,
+        "acc": 1057,
+        "nme": "io/netty/channel/unix/GenericUnixChannelOption",
+        "super": "io/netty/channel/unix/UnixChannelOption",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;II)V"
+          },
+          {
+            "nme": "level",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "optname",
+            "acc": 1,
+            "dsc": "()I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "level",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "optname",
+            "dsc": "I"
+          }
+        ]
+      },
+      "io/netty/channel/unix/RawUnixChannelOption.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "io/netty/channel/unix/RawUnixChannelOption",
+        "super": "io/netty/channel/unix/GenericUnixChannelOption",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;III)V"
+          },
+          {
+            "nme": "length",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "validate",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;)V"
+          },
+          {
+            "nme": "validate",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/Object;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "length",
+            "dsc": "I"
+          }
+        ]
+      },
+      "io/netty/channel/unix/IovArray.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "io/netty/channel/unix/IovArray",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lio/netty/buffer/ByteBuf;)V"
+          },
+          {
+            "nme": "clear",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "add",
+            "acc": 131073,
+            "dsc": "(Lio/netty/buffer/ByteBuf;)Z",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "add",
+            "acc": 1,
+            "dsc": "(Lio/netty/buffer/ByteBuf;II)Z"
+          },
+          {
+            "nme": "add",
+            "acc": 2,
+            "dsc": "(JJI)Z"
+          },
+          {
+            "nme": "count",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "size",
+            "acc": 1,
+            "dsc": "()J"
+          },
+          {
+            "nme": "maxBytes",
+            "acc": 1,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "maxBytes",
+            "acc": 1,
+            "dsc": "()J"
+          },
+          {
+            "nme": "memoryAddress",
+            "acc": 1,
+            "dsc": "(I)J"
+          },
+          {
+            "nme": "release",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "processMessage",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "idx",
+            "acc": 10,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "ADDRESS_SIZE",
+            "dsc": "I"
+          },
+          {
+            "acc": 25,
+            "nme": "IOV_SIZE",
+            "dsc": "I"
+          },
+          {
+            "acc": 26,
+            "nme": "MAX_CAPACITY",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "memoryAddress",
+            "dsc": "J"
+          },
+          {
+            "acc": 18,
+            "nme": "memory",
+            "dsc": "Lio/netty/buffer/ByteBuf;"
+          },
+          {
+            "acc": 2,
+            "nme": "count",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "size",
+            "dsc": "J"
+          },
+          {
+            "acc": 2,
+            "nme": "maxBytes",
+            "dsc": "J"
+          },
+          {
+            "acc": 4120,
+            "nme": "$assertionsDisabled",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "io/netty/channel/unix/Socket.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "io/netty/channel/unix/Socket",
+        "super": "io/netty/channel/unix/FileDescriptor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "useIpv6",
+            "acc": 2,
+            "dsc": "(Ljava/net/InetAddress;)Z"
+          },
+          {
+            "nme": "useIpv6",
+            "acc": 12,
+            "dsc": "(Lio/netty/channel/unix/Socket;Ljava/net/InetAddress;)Z"
+          },
+          {
+            "nme": "shutdown",
+            "acc": 17,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "shutdown",
+            "acc": 17,
+            "dsc": "(ZZ)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "isShutdown",
+            "acc": 17,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isInputShutdown",
+            "acc": 17,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isOutputShutdown",
+            "acc": 17,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "sendTo",
+            "acc": 17,
+            "dsc": "(Ljava/nio/ByteBuffer;IILjava/net/InetAddress;I)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "sendTo",
+            "acc": 17,
+            "dsc": "(Ljava/nio/ByteBuffer;IILjava/net/InetAddress;IZ)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "sendToDomainSocket",
+            "acc": 17,
+            "dsc": "(Ljava/nio/ByteBuffer;II[B)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "sendToAddress",
+            "acc": 17,
+            "dsc": "(JIILjava/net/InetAddress;I)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "sendToAddress",
+            "acc": 17,
+            "dsc": "(JIILjava/net/InetAddress;IZ)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "sendToAddressDomainSocket",
+            "acc": 17,
+            "dsc": "(JII[B)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "sendToAddresses",
+            "acc": 17,
+            "dsc": "(JILjava/net/InetAddress;I)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "sendToAddresses",
+            "acc": 17,
+            "dsc": "(JILjava/net/InetAddress;IZ)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "sendToAddressesDomainSocket",
+            "acc": 17,
+            "dsc": "(JI[B)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "recvFrom",
+            "acc": 17,
+            "dsc": "(Ljava/nio/ByteBuffer;II)Lio/netty/channel/unix/DatagramSocketAddress;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "recvFromAddress",
+            "acc": 17,
+            "dsc": "(JII)Lio/netty/channel/unix/DatagramSocketAddress;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "recvFromDomainSocket",
+            "acc": 17,
+            "dsc": "(Ljava/nio/ByteBuffer;II)Lio/netty/channel/unix/DomainDatagramSocketAddress;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "recvFromAddressDomainSocket",
+            "acc": 17,
+            "dsc": "(JII)Lio/netty/channel/unix/DomainDatagramSocketAddress;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "recv",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;II)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "recvAddress",
+            "acc": 1,
+            "dsc": "(JII)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "send",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;II)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "sendAddress",
+            "acc": 1,
+            "dsc": "(JII)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "recvFd",
+            "acc": 17,
+            "dsc": "()I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "sendFd",
+            "acc": 17,
+            "dsc": "(I)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "connect",
+            "acc": 17,
+            "dsc": "(Ljava/net/SocketAddress;)Z",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "finishConnect",
+            "acc": 17,
+            "dsc": "()Z",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "disconnect",
+            "acc": 17,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "bind",
+            "acc": 17,
+            "dsc": "(Ljava/net/SocketAddress;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "listen",
+            "acc": 17,
+            "dsc": "(I)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "accept",
+            "acc": 17,
+            "dsc": "([B)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "remoteAddress",
+            "acc": 17,
+            "dsc": "()Ljava/net/InetSocketAddress;"
+          },
+          {
+            "nme": "remoteDomainSocketAddress",
+            "acc": 17,
+            "dsc": "()Lio/netty/channel/unix/DomainSocketAddress;"
+          },
+          {
+            "nme": "localAddress",
+            "acc": 17,
+            "dsc": "()Ljava/net/InetSocketAddress;"
+          },
+          {
+            "nme": "localDomainSocketAddress",
+            "acc": 17,
+            "dsc": "()Lio/netty/channel/unix/DomainSocketAddress;"
+          },
+          {
+            "nme": "getReceiveBufferSize",
+            "acc": 17,
+            "dsc": "()I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "getSendBufferSize",
+            "acc": 17,
+            "dsc": "()I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "isKeepAlive",
+            "acc": 17,
+            "dsc": "()Z",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "isTcpNoDelay",
+            "acc": 17,
+            "dsc": "()Z",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "isReuseAddress",
+            "acc": 17,
+            "dsc": "()Z",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "isReusePort",
+            "acc": 17,
+            "dsc": "()Z",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "isBroadcast",
+            "acc": 17,
+            "dsc": "()Z",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "getSoLinger",
+            "acc": 17,
+            "dsc": "()I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "getSoError",
+            "acc": 17,
+            "dsc": "()I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "getTrafficClass",
+            "acc": 17,
+            "dsc": "()I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setKeepAlive",
+            "acc": 17,
+            "dsc": "(Z)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setReceiveBufferSize",
+            "acc": 17,
+            "dsc": "(I)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setSendBufferSize",
+            "acc": 17,
+            "dsc": "(I)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setTcpNoDelay",
+            "acc": 17,
+            "dsc": "(Z)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setSoLinger",
+            "acc": 17,
+            "dsc": "(I)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setReuseAddress",
+            "acc": 17,
+            "dsc": "(Z)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setReusePort",
+            "acc": 17,
+            "dsc": "(Z)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setBroadcast",
+            "acc": 17,
+            "dsc": "(Z)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setTrafficClass",
+            "acc": 17,
+            "dsc": "(I)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setIntOpt",
+            "acc": 1,
+            "dsc": "(III)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setRawOpt",
+            "acc": 1,
+            "dsc": "(IILjava/nio/ByteBuffer;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "getIntOpt",
+            "acc": 1,
+            "dsc": "(II)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "getRawOpt",
+            "acc": 1,
+            "dsc": "(IILjava/nio/ByteBuffer;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "isIPv6Preferred",
+            "acc": 9,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "shouldUseIpv6",
+            "acc": 9,
+            "dsc": "(Lio/netty/channel/socket/InternetProtocolFamily;)Z"
+          },
+          {
+            "nme": "isIPv6Preferred0",
+            "acc": 266,
+            "dsc": "(Z)Z"
+          },
+          {
+            "nme": "isIPv6",
+            "acc": 266,
+            "dsc": "(I)Z"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "newSocketStream",
+            "acc": 9,
+            "dsc": "()Lio/netty/channel/unix/Socket;"
+          },
+          {
+            "nme": "newSocketDgram",
+            "acc": 9,
+            "dsc": "()Lio/netty/channel/unix/Socket;"
+          },
+          {
+            "nme": "newSocketDomain",
+            "acc": 9,
+            "dsc": "()Lio/netty/channel/unix/Socket;"
+          },
+          {
+            "nme": "newSocketDomainDgram",
+            "acc": 9,
+            "dsc": "()Lio/netty/channel/unix/Socket;"
+          },
+          {
+            "nme": "initialize",
+            "acc": 9,
+            "dsc": "()V"
+          },
+          {
+            "nme": "newSocketStream0",
+            "acc": 12,
+            "dsc": "()I"
+          },
+          {
+            "nme": "newSocketStream0",
+            "acc": 12,
+            "dsc": "(Lio/netty/channel/socket/InternetProtocolFamily;)I"
+          },
+          {
+            "nme": "newSocketStream0",
+            "acc": 12,
+            "dsc": "(Z)I"
+          },
+          {
+            "nme": "newSocketDgram0",
+            "acc": 12,
+            "dsc": "()I"
+          },
+          {
+            "nme": "newSocketDgram0",
+            "acc": 12,
+            "dsc": "(Lio/netty/channel/socket/InternetProtocolFamily;)I"
+          },
+          {
+            "nme": "newSocketDgram0",
+            "acc": 12,
+            "dsc": "(Z)I"
+          },
+          {
+            "nme": "newSocketDomain0",
+            "acc": 12,
+            "dsc": "()I"
+          },
+          {
+            "nme": "newSocketDomainDgram0",
+            "acc": 12,
+            "dsc": "()I"
+          },
+          {
+            "nme": "shutdown",
+            "acc": 266,
+            "dsc": "(IZZ)I"
+          },
+          {
+            "nme": "connect",
+            "acc": 266,
+            "dsc": "(IZ[BII)I"
+          },
+          {
+            "nme": "connectDomainSocket",
+            "acc": 266,
+            "dsc": "(I[B)I"
+          },
+          {
+            "nme": "finishConnect",
+            "acc": 266,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "disconnect",
+            "acc": 266,
+            "dsc": "(IZ)I"
+          },
+          {
+            "nme": "bind",
+            "acc": 266,
+            "dsc": "(IZ[BII)I"
+          },
+          {
+            "nme": "bindDomainSocket",
+            "acc": 266,
+            "dsc": "(I[B)I"
+          },
+          {
+            "nme": "listen",
+            "acc": 266,
+            "dsc": "(II)I"
+          },
+          {
+            "nme": "accept",
+            "acc": 266,
+            "dsc": "(I[B)I"
+          },
+          {
+            "nme": "remoteAddress",
+            "acc": 266,
+            "dsc": "(I)[B"
+          },
+          {
+            "nme": "remoteDomainSocketAddress",
+            "acc": 266,
+            "dsc": "(I)[B"
+          },
+          {
+            "nme": "localAddress",
+            "acc": 266,
+            "dsc": "(I)[B"
+          },
+          {
+            "nme": "localDomainSocketAddress",
+            "acc": 266,
+            "dsc": "(I)[B"
+          },
+          {
+            "nme": "send",
+            "acc": 266,
+            "dsc": "(ILjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "sendAddress",
+            "acc": 266,
+            "dsc": "(IJII)I"
+          },
+          {
+            "nme": "recv",
+            "acc": 266,
+            "dsc": "(ILjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "recvAddress",
+            "acc": 266,
+            "dsc": "(IJII)I"
+          },
+          {
+            "nme": "sendTo",
+            "acc": 266,
+            "dsc": "(IZLjava/nio/ByteBuffer;II[BIII)I"
+          },
+          {
+            "nme": "sendToAddress",
+            "acc": 266,
+            "dsc": "(IZJII[BIII)I"
+          },
+          {
+            "nme": "sendToAddresses",
+            "acc": 266,
+            "dsc": "(IZJI[BIII)I"
+          },
+          {
+            "nme": "sendToDomainSocket",
+            "acc": 266,
+            "dsc": "(ILjava/nio/ByteBuffer;II[B)I"
+          },
+          {
+            "nme": "sendToAddressDomainSocket",
+            "acc": 266,
+            "dsc": "(IJII[B)I"
+          },
+          {
+            "nme": "sendToAddressesDomainSocket",
+            "acc": 266,
+            "dsc": "(IJI[B)I"
+          },
+          {
+            "nme": "recvFrom",
+            "acc": 266,
+            "dsc": "(ILjava/nio/ByteBuffer;II)Lio/netty/channel/unix/DatagramSocketAddress;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "recvFromAddress",
+            "acc": 266,
+            "dsc": "(IJII)Lio/netty/channel/unix/DatagramSocketAddress;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "recvFromDomainSocket",
+            "acc": 266,
+            "dsc": "(ILjava/nio/ByteBuffer;II)Lio/netty/channel/unix/DomainDatagramSocketAddress;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "recvFromAddressDomainSocket",
+            "acc": 266,
+            "dsc": "(IJII)Lio/netty/channel/unix/DomainDatagramSocketAddress;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "recvFd",
+            "acc": 266,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "sendFd",
+            "acc": 266,
+            "dsc": "(II)I"
+          },
+          {
+            "nme": "msgFastopen",
+            "acc": 266,
+            "dsc": "()I"
+          },
+          {
+            "nme": "newSocketStreamFd",
+            "acc": 266,
+            "dsc": "(Z)I"
+          },
+          {
+            "nme": "newSocketDgramFd",
+            "acc": 266,
+            "dsc": "(Z)I"
+          },
+          {
+            "nme": "newSocketDomainFd",
+            "acc": 266,
+            "dsc": "()I"
+          },
+          {
+            "nme": "newSocketDomainDgramFd",
+            "acc": 266,
+            "dsc": "()I"
+          },
+          {
+            "nme": "isReuseAddress",
+            "acc": 266,
+            "dsc": "(I)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "isReusePort",
+            "acc": 266,
+            "dsc": "(I)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "getReceiveBufferSize",
+            "acc": 266,
+            "dsc": "(I)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "getSendBufferSize",
+            "acc": 266,
+            "dsc": "(I)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "isKeepAlive",
+            "acc": 266,
+            "dsc": "(I)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "isTcpNoDelay",
+            "acc": 266,
+            "dsc": "(I)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "isBroadcast",
+            "acc": 266,
+            "dsc": "(I)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "getSoLinger",
+            "acc": 266,
+            "dsc": "(I)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "getSoError",
+            "acc": 266,
+            "dsc": "(I)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "getTrafficClass",
+            "acc": 266,
+            "dsc": "(IZ)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setReuseAddress",
+            "acc": 266,
+            "dsc": "(II)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setReusePort",
+            "acc": 266,
+            "dsc": "(II)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setKeepAlive",
+            "acc": 266,
+            "dsc": "(II)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setReceiveBufferSize",
+            "acc": 266,
+            "dsc": "(II)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setSendBufferSize",
+            "acc": 266,
+            "dsc": "(II)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setTcpNoDelay",
+            "acc": 266,
+            "dsc": "(II)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setSoLinger",
+            "acc": 266,
+            "dsc": "(II)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setBroadcast",
+            "acc": 266,
+            "dsc": "(II)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setTrafficClass",
+            "acc": 266,
+            "dsc": "(IZI)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setIntOpt",
+            "acc": 266,
+            "dsc": "(IIII)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setRawOptArray",
+            "acc": 266,
+            "dsc": "(III[BII)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setRawOptAddress",
+            "acc": 266,
+            "dsc": "(IIIJI)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "getIntOpt",
+            "acc": 266,
+            "dsc": "(III)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "getRawOptArray",
+            "acc": 266,
+            "dsc": "(III[BII)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "getRawOptAddress",
+            "acc": 266,
+            "dsc": "(IIIJI)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 74,
+            "nme": "isIpv6Preferred",
+            "dsc": "Z"
+          },
+          {
+            "acc": 131097,
+            "nme": "UDS_SUN_PATH_SIZE",
+            "dsc": "I",
+            "val": 100
+          },
+          {
+            "acc": 20,
+            "nme": "ipv6",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "io/netty/channel/unix/NativeInetAddress.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "io/netty/channel/unix/NativeInetAddress",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "newInstance",
+            "acc": 9,
+            "dsc": "(Ljava/net/InetAddress;)Lio/netty/channel/unix/NativeInetAddress;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "([BI)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "([B)V"
+          },
+          {
+            "nme": "address",
+            "acc": 1,
+            "dsc": "()[B"
+          },
+          {
+            "nme": "scopeId",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "ipv4MappedIpv6Address",
+            "acc": 9,
+            "dsc": "([B)[B"
+          },
+          {
+            "nme": "copyIpv4MappedIpv6Address",
+            "acc": 9,
+            "dsc": "([B[B)V"
+          },
+          {
+            "nme": "address",
+            "acc": 9,
+            "dsc": "([BII)Ljava/net/InetSocketAddress;"
+          },
+          {
+            "nme": "decodeInt",
+            "acc": 8,
+            "dsc": "([BI)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "IPV4_MAPPED_IPV6_PREFIX",
+            "dsc": "[B"
+          },
+          {
+            "acc": 16,
+            "nme": "address",
+            "dsc": "[B"
+          },
+          {
+            "acc": 16,
+            "nme": "scopeId",
+            "dsc": "I"
+          }
+        ]
+      },
+      "io/netty/channel/unix/DomainDatagramPacket.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "io/netty/channel/unix/DomainDatagramPacket",
+        "super": "io/netty/channel/DefaultAddressedEnvelope",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lio/netty/buffer/ByteBuf;Lio/netty/channel/unix/DomainSocketAddress;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lio/netty/buffer/ByteBuf;Lio/netty/channel/unix/DomainSocketAddress;Lio/netty/channel/unix/DomainSocketAddress;)V"
+          },
+          {
+            "nme": "copy",
+            "acc": 1,
+            "dsc": "()Lio/netty/channel/unix/DomainDatagramPacket;"
+          },
+          {
+            "nme": "duplicate",
+            "acc": 1,
+            "dsc": "()Lio/netty/channel/unix/DomainDatagramPacket;"
+          },
+          {
+            "nme": "replace",
+            "acc": 1,
+            "dsc": "(Lio/netty/buffer/ByteBuf;)Lio/netty/channel/unix/DomainDatagramPacket;"
+          },
+          {
+            "nme": "retain",
+            "acc": 1,
+            "dsc": "()Lio/netty/channel/unix/DomainDatagramPacket;"
+          },
+          {
+            "nme": "retain",
+            "acc": 1,
+            "dsc": "(I)Lio/netty/channel/unix/DomainDatagramPacket;"
+          },
+          {
+            "nme": "retainedDuplicate",
+            "acc": 1,
+            "dsc": "()Lio/netty/channel/unix/DomainDatagramPacket;"
+          },
+          {
+            "nme": "touch",
+            "acc": 1,
+            "dsc": "()Lio/netty/channel/unix/DomainDatagramPacket;"
+          },
+          {
+            "nme": "touch",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Lio/netty/channel/unix/DomainDatagramPacket;"
+          },
+          {
+            "nme": "touch",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/Object;)Lio/netty/channel/AddressedEnvelope;"
+          },
+          {
+            "nme": "touch",
+            "acc": 4161,
+            "dsc": "()Lio/netty/channel/AddressedEnvelope;"
+          },
+          {
+            "nme": "retain",
+            "acc": 4161,
+            "dsc": "(I)Lio/netty/channel/AddressedEnvelope;"
+          },
+          {
+            "nme": "retain",
+            "acc": 4161,
+            "dsc": "()Lio/netty/channel/AddressedEnvelope;"
+          },
+          {
+            "nme": "touch",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/Object;)Lio/netty/util/ReferenceCounted;"
+          },
+          {
+            "nme": "touch",
+            "acc": 4161,
+            "dsc": "()Lio/netty/util/ReferenceCounted;"
+          },
+          {
+            "nme": "retain",
+            "acc": 4161,
+            "dsc": "(I)Lio/netty/util/ReferenceCounted;"
+          },
+          {
+            "nme": "retain",
+            "acc": 4161,
+            "dsc": "()Lio/netty/util/ReferenceCounted;"
+          },
+          {
+            "nme": "touch",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/Object;)Lio/netty/buffer/ByteBufHolder;"
+          },
+          {
+            "nme": "touch",
+            "acc": 4161,
+            "dsc": "()Lio/netty/buffer/ByteBufHolder;"
+          },
+          {
+            "nme": "retain",
+            "acc": 4161,
+            "dsc": "(I)Lio/netty/buffer/ByteBufHolder;"
+          },
+          {
+            "nme": "retain",
+            "acc": 4161,
+            "dsc": "()Lio/netty/buffer/ByteBufHolder;"
+          },
+          {
+            "nme": "replace",
+            "acc": 4161,
+            "dsc": "(Lio/netty/buffer/ByteBuf;)Lio/netty/buffer/ByteBufHolder;"
+          },
+          {
+            "nme": "retainedDuplicate",
+            "acc": 4161,
+            "dsc": "()Lio/netty/buffer/ByteBufHolder;"
+          },
+          {
+            "nme": "duplicate",
+            "acc": 4161,
+            "dsc": "()Lio/netty/buffer/ByteBufHolder;"
+          },
+          {
+            "nme": "copy",
+            "acc": 4161,
+            "dsc": "()Lio/netty/buffer/ByteBufHolder;"
+          },
+          {
+            "nme": "content",
+            "acc": 4161,
+            "dsc": "()Lio/netty/buffer/ByteBuf;"
+          }
+        ],
+        "flds": []
+      },
+      "io/netty/channel/unix/LimitsStaticallyReferencedJniMethods.class": {
+        "ver": 50,
+        "acc": 48,
+        "nme": "io/netty/channel/unix/LimitsStaticallyReferencedJniMethods",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "ssizeMax",
+            "acc": 264,
+            "dsc": "()J"
+          },
+          {
+            "nme": "iovMax",
+            "acc": 264,
+            "dsc": "()I"
+          },
+          {
+            "nme": "uioMaxIov",
+            "acc": 264,
+            "dsc": "()I"
+          },
+          {
+            "nme": "sizeOfjlong",
+            "acc": 264,
+            "dsc": "()I"
+          },
+          {
+            "nme": "udsSunPathSize",
+            "acc": 264,
+            "dsc": "()I"
+          }
+        ],
+        "flds": []
+      },
+      "io/netty/channel/unix/ErrorsStaticallyReferencedJniMethods.class": {
+        "ver": 50,
+        "acc": 48,
+        "nme": "io/netty/channel/unix/ErrorsStaticallyReferencedJniMethods",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "errnoENOENT",
+            "acc": 264,
+            "dsc": "()I"
+          },
+          {
+            "nme": "errnoEBADF",
+            "acc": 264,
+            "dsc": "()I"
+          },
+          {
+            "nme": "errnoEPIPE",
+            "acc": 264,
+            "dsc": "()I"
+          },
+          {
+            "nme": "errnoECONNRESET",
+            "acc": 264,
+            "dsc": "()I"
+          },
+          {
+            "nme": "errnoENOTCONN",
+            "acc": 264,
+            "dsc": "()I"
+          },
+          {
+            "nme": "errnoEAGAIN",
+            "acc": 264,
+            "dsc": "()I"
+          },
+          {
+            "nme": "errnoEWOULDBLOCK",
+            "acc": 264,
+            "dsc": "()I"
+          },
+          {
+            "nme": "errnoEINPROGRESS",
+            "acc": 264,
+            "dsc": "()I"
+          },
+          {
+            "nme": "errorECONNREFUSED",
+            "acc": 264,
+            "dsc": "()I"
+          },
+          {
+            "nme": "errorEISCONN",
+            "acc": 264,
+            "dsc": "()I"
+          },
+          {
+            "nme": "errorEALREADY",
+            "acc": 264,
+            "dsc": "()I"
+          },
+          {
+            "nme": "errorENETUNREACH",
+            "acc": 264,
+            "dsc": "()I"
+          },
+          {
+            "nme": "errorEHOSTUNREACH",
+            "acc": 264,
+            "dsc": "()I"
+          },
+          {
+            "nme": "strError",
+            "acc": 264,
+            "dsc": "(I)Ljava/lang/String;"
+          }
+        ],
+        "flds": []
+      },
+      "io/netty/channel/unix/Limits.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "io/netty/channel/unix/Limits",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "IOV_MAX",
+            "dsc": "I"
+          },
+          {
+            "acc": 25,
+            "nme": "UIO_MAX_IOV",
+            "dsc": "I"
+          },
+          {
+            "acc": 25,
+            "nme": "SSIZE_MAX",
+            "dsc": "J"
+          },
+          {
+            "acc": 25,
+            "nme": "SIZEOF_JLONG",
+            "dsc": "I"
+          }
+        ]
+      },
+      "io/netty/channel/unix/UnixChannel.class": {
+        "ver": 50,
+        "acc": 1537,
+        "nme": "io/netty/channel/unix/UnixChannel",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "fd",
+            "acc": 1025,
+            "dsc": "()Lio/netty/channel/unix/FileDescriptor;"
+          }
+        ],
+        "flds": []
+      },
+      "io/netty/channel/unix/IntegerUnixChannelOption.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "io/netty/channel/unix/IntegerUnixChannelOption",
+        "super": "io/netty/channel/unix/GenericUnixChannelOption",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;II)V"
+          }
+        ],
+        "flds": []
+      },
+      "io/netty/channel/unix/UnixChannelOption.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "io/netty/channel/unix/UnixChannelOption",
+        "super": "io/netty/channel/ChannelOption",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "SO_REUSEPORT",
+            "dsc": "Lio/netty/channel/ChannelOption;",
+            "sig": "Lio/netty/channel/ChannelOption<Ljava/lang/Boolean;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "DOMAIN_SOCKET_READ_MODE",
+            "dsc": "Lio/netty/channel/ChannelOption;",
+            "sig": "Lio/netty/channel/ChannelOption<Lio/netty/channel/unix/DomainSocketReadMode;>;"
+          }
+        ]
+      },
+      "io/netty/channel/unix/Errors.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "io/netty/channel/unix/Errors",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "handleConnectErrno",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;I)Z",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "throwConnectException",
+            "acc": 131081,
+            "dsc": "(Ljava/lang/String;I)V",
+            "exs": [
+              "java/io/IOException"
+            ],
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "errnoString",
+            "acc": 10,
+            "dsc": "(I)Ljava/lang/String;"
+          },
+          {
+            "nme": "newConnectException0",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;I)Ljava/io/IOException;"
+          },
+          {
+            "nme": "newConnectionResetException",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;I)Lio/netty/channel/unix/Errors$NativeIoException;"
+          },
+          {
+            "nme": "newIOException",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;I)Lio/netty/channel/unix/Errors$NativeIoException;"
+          },
+          {
+            "nme": "ioResult",
+            "acc": 131081,
+            "dsc": "(Ljava/lang/String;ILio/netty/channel/unix/Errors$NativeIoException;Ljava/nio/channels/ClosedChannelException;)I",
+            "exs": [
+              "java/io/IOException"
+            ],
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "ioResult",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;I)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "access$000",
+            "acc": 4104,
+            "dsc": "(I)Ljava/lang/String;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "ERRNO_ENOENT_NEGATIVE",
+            "dsc": "I"
+          },
+          {
+            "acc": 25,
+            "nme": "ERRNO_ENOTCONN_NEGATIVE",
+            "dsc": "I"
+          },
+          {
+            "acc": 25,
+            "nme": "ERRNO_EBADF_NEGATIVE",
+            "dsc": "I"
+          },
+          {
+            "acc": 25,
+            "nme": "ERRNO_EPIPE_NEGATIVE",
+            "dsc": "I"
+          },
+          {
+            "acc": 25,
+            "nme": "ERRNO_ECONNRESET_NEGATIVE",
+            "dsc": "I"
+          },
+          {
+            "acc": 25,
+            "nme": "ERRNO_EAGAIN_NEGATIVE",
+            "dsc": "I"
+          },
+          {
+            "acc": 25,
+            "nme": "ERRNO_EWOULDBLOCK_NEGATIVE",
+            "dsc": "I"
+          },
+          {
+            "acc": 25,
+            "nme": "ERRNO_EINPROGRESS_NEGATIVE",
+            "dsc": "I"
+          },
+          {
+            "acc": 25,
+            "nme": "ERROR_ECONNREFUSED_NEGATIVE",
+            "dsc": "I"
+          },
+          {
+            "acc": 25,
+            "nme": "ERROR_EISCONN_NEGATIVE",
+            "dsc": "I"
+          },
+          {
+            "acc": 25,
+            "nme": "ERROR_EALREADY_NEGATIVE",
+            "dsc": "I"
+          },
+          {
+            "acc": 25,
+            "nme": "ERROR_ENETUNREACH_NEGATIVE",
+            "dsc": "I"
+          },
+          {
+            "acc": 25,
+            "nme": "ERROR_EHOSTUNREACH_NEGATIVE",
+            "dsc": "I"
+          },
+          {
+            "acc": 26,
+            "nme": "ERRORS",
+            "dsc": "[Ljava/lang/String;"
+          }
+        ]
+      },
+      "io/netty/channel/unix/Buffer.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "io/netty/channel/unix/Buffer",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "free",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;)V"
+          },
+          {
+            "nme": "allocateDirectWithNativeOrder",
+            "acc": 9,
+            "dsc": "(I)Ljava/nio/ByteBuffer;"
+          },
+          {
+            "nme": "memoryAddress",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;)J"
+          },
+          {
+            "nme": "addressSize",
+            "acc": 9,
+            "dsc": "()I"
+          },
+          {
+            "nme": "addressSize0",
+            "acc": 266,
+            "dsc": "()I"
+          },
+          {
+            "nme": "memoryAddress0",
+            "acc": 266,
+            "dsc": "(Ljava/nio/ByteBuffer;)J"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4120,
+            "nme": "$assertionsDisabled",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "io/netty/channel/unix/Errors$NativeConnectException.class": {
+        "ver": 50,
+        "acc": 48,
+        "nme": "io/netty/channel/unix/Errors$NativeConnectException",
+        "super": "java/net/ConnectException",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "expectedErr",
+            "acc": 0,
+            "dsc": "()I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": -5532328671712318161
+          },
+          {
+            "acc": 18,
+            "nme": "expectedErr",
+            "dsc": "I"
+          }
+        ]
+      },
+      "io/netty/channel/unix/ServerDomainSocketChannel.class": {
+        "ver": 50,
+        "acc": 1537,
+        "nme": "io/netty/channel/unix/ServerDomainSocketChannel",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "remoteAddress",
+            "acc": 1025,
+            "dsc": "()Lio/netty/channel/unix/DomainSocketAddress;"
+          },
+          {
+            "nme": "localAddress",
+            "acc": 1025,
+            "dsc": "()Lio/netty/channel/unix/DomainSocketAddress;"
+          }
+        ],
+        "flds": []
+      },
+      "io/netty/channel/unix/DomainSocketAddress.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "io/netty/channel/unix/DomainSocketAddress",
+        "super": "java/net/SocketAddress",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/io/File;)V"
+          },
+          {
+            "nme": "path",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": -6934618000832236893
+          },
+          {
+            "acc": 18,
+            "nme": "socketPath",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "io/netty/channel/unix/DomainSocketChannelConfig.class": {
+        "ver": 50,
+        "acc": 1537,
+        "nme": "io/netty/channel/unix/DomainSocketChannelConfig",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "setMaxMessagesPerRead",
+            "acc": 132097,
+            "dsc": "(I)Lio/netty/channel/unix/DomainSocketChannelConfig;",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "setConnectTimeoutMillis",
+            "acc": 1025,
+            "dsc": "(I)Lio/netty/channel/unix/DomainSocketChannelConfig;"
+          },
+          {
+            "nme": "setWriteSpinCount",
+            "acc": 1025,
+            "dsc": "(I)Lio/netty/channel/unix/DomainSocketChannelConfig;"
+          },
+          {
+            "nme": "setAllocator",
+            "acc": 1025,
+            "dsc": "(Lio/netty/buffer/ByteBufAllocator;)Lio/netty/channel/unix/DomainSocketChannelConfig;"
+          },
+          {
+            "nme": "setRecvByteBufAllocator",
+            "acc": 1025,
+            "dsc": "(Lio/netty/channel/RecvByteBufAllocator;)Lio/netty/channel/unix/DomainSocketChannelConfig;"
+          },
+          {
+            "nme": "setAutoRead",
+            "acc": 1025,
+            "dsc": "(Z)Lio/netty/channel/unix/DomainSocketChannelConfig;"
+          },
+          {
+            "nme": "setAutoClose",
+            "acc": 1025,
+            "dsc": "(Z)Lio/netty/channel/unix/DomainSocketChannelConfig;"
+          },
+          {
+            "nme": "setWriteBufferHighWaterMark",
+            "acc": 132097,
+            "dsc": "(I)Lio/netty/channel/unix/DomainSocketChannelConfig;",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "setWriteBufferLowWaterMark",
+            "acc": 132097,
+            "dsc": "(I)Lio/netty/channel/unix/DomainSocketChannelConfig;",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "setWriteBufferWaterMark",
+            "acc": 1025,
+            "dsc": "(Lio/netty/channel/WriteBufferWaterMark;)Lio/netty/channel/unix/DomainSocketChannelConfig;"
+          },
+          {
+            "nme": "setMessageSizeEstimator",
+            "acc": 1025,
+            "dsc": "(Lio/netty/channel/MessageSizeEstimator;)Lio/netty/channel/unix/DomainSocketChannelConfig;"
+          },
+          {
+            "nme": "setReadMode",
+            "acc": 1025,
+            "dsc": "(Lio/netty/channel/unix/DomainSocketReadMode;)Lio/netty/channel/unix/DomainSocketChannelConfig;"
+          },
+          {
+            "nme": "getReadMode",
+            "acc": 1025,
+            "dsc": "()Lio/netty/channel/unix/DomainSocketReadMode;"
+          }
+        ],
+        "flds": []
+      },
+      "io/netty/channel/unix/DomainDatagramChannel.class": {
+        "ver": 50,
+        "acc": 1537,
+        "nme": "io/netty/channel/unix/DomainDatagramChannel",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "config",
+            "acc": 1025,
+            "dsc": "()Lio/netty/channel/unix/DomainDatagramChannelConfig;"
+          },
+          {
+            "nme": "isConnected",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "localAddress",
+            "acc": 1025,
+            "dsc": "()Lio/netty/channel/unix/DomainSocketAddress;"
+          },
+          {
+            "nme": "remoteAddress",
+            "acc": 1025,
+            "dsc": "()Lio/netty/channel/unix/DomainSocketAddress;"
+          }
+        ],
+        "flds": []
+      },
+      "io/netty/channel/unix/UnixChannelUtil.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "io/netty/channel/unix/UnixChannelUtil",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "isBufferCopyNeededForWrite",
+            "acc": 9,
+            "dsc": "(Lio/netty/buffer/ByteBuf;)Z"
+          },
+          {
+            "nme": "isBufferCopyNeededForWrite",
+            "acc": 8,
+            "dsc": "(Lio/netty/buffer/ByteBuf;I)Z"
+          },
+          {
+            "nme": "computeRemoteAddr",
+            "acc": 9,
+            "dsc": "(Ljava/net/InetSocketAddress;Ljava/net/InetSocketAddress;)Ljava/net/InetSocketAddress;"
+          }
+        ],
+        "flds": []
+      },
+      "io/netty/channel/unix/SegmentedDatagramPacket.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "io/netty/channel/unix/SegmentedDatagramPacket",
+        "super": "io/netty/channel/socket/DatagramPacket",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lio/netty/buffer/ByteBuf;ILjava/net/InetSocketAddress;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lio/netty/buffer/ByteBuf;ILjava/net/InetSocketAddress;Ljava/net/InetSocketAddress;)V"
+          },
+          {
+            "nme": "segmentSize",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "copy",
+            "acc": 1,
+            "dsc": "()Lio/netty/channel/unix/SegmentedDatagramPacket;"
+          },
+          {
+            "nme": "duplicate",
+            "acc": 1,
+            "dsc": "()Lio/netty/channel/unix/SegmentedDatagramPacket;"
+          },
+          {
+            "nme": "retainedDuplicate",
+            "acc": 1,
+            "dsc": "()Lio/netty/channel/unix/SegmentedDatagramPacket;"
+          },
+          {
+            "nme": "replace",
+            "acc": 1,
+            "dsc": "(Lio/netty/buffer/ByteBuf;)Lio/netty/channel/unix/SegmentedDatagramPacket;"
+          },
+          {
+            "nme": "retain",
+            "acc": 1,
+            "dsc": "()Lio/netty/channel/unix/SegmentedDatagramPacket;"
+          },
+          {
+            "nme": "retain",
+            "acc": 1,
+            "dsc": "(I)Lio/netty/channel/unix/SegmentedDatagramPacket;"
+          },
+          {
+            "nme": "touch",
+            "acc": 1,
+            "dsc": "()Lio/netty/channel/unix/SegmentedDatagramPacket;"
+          },
+          {
+            "nme": "touch",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Lio/netty/channel/unix/SegmentedDatagramPacket;"
+          },
+          {
+            "nme": "touch",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/Object;)Lio/netty/channel/socket/DatagramPacket;"
+          },
+          {
+            "nme": "touch",
+            "acc": 4161,
+            "dsc": "()Lio/netty/channel/socket/DatagramPacket;"
+          },
+          {
+            "nme": "retain",
+            "acc": 4161,
+            "dsc": "(I)Lio/netty/channel/socket/DatagramPacket;"
+          },
+          {
+            "nme": "retain",
+            "acc": 4161,
+            "dsc": "()Lio/netty/channel/socket/DatagramPacket;"
+          },
+          {
+            "nme": "replace",
+            "acc": 4161,
+            "dsc": "(Lio/netty/buffer/ByteBuf;)Lio/netty/channel/socket/DatagramPacket;"
+          },
+          {
+            "nme": "retainedDuplicate",
+            "acc": 4161,
+            "dsc": "()Lio/netty/channel/socket/DatagramPacket;"
+          },
+          {
+            "nme": "duplicate",
+            "acc": 4161,
+            "dsc": "()Lio/netty/channel/socket/DatagramPacket;"
+          },
+          {
+            "nme": "copy",
+            "acc": 4161,
+            "dsc": "()Lio/netty/channel/socket/DatagramPacket;"
+          },
+          {
+            "nme": "touch",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/Object;)Lio/netty/buffer/ByteBufHolder;"
+          },
+          {
+            "nme": "touch",
+            "acc": 4161,
+            "dsc": "()Lio/netty/buffer/ByteBufHolder;"
+          },
+          {
+            "nme": "retain",
+            "acc": 4161,
+            "dsc": "(I)Lio/netty/buffer/ByteBufHolder;"
+          },
+          {
+            "nme": "retain",
+            "acc": 4161,
+            "dsc": "()Lio/netty/buffer/ByteBufHolder;"
+          },
+          {
+            "nme": "replace",
+            "acc": 4161,
+            "dsc": "(Lio/netty/buffer/ByteBuf;)Lio/netty/buffer/ByteBufHolder;"
+          },
+          {
+            "nme": "retainedDuplicate",
+            "acc": 4161,
+            "dsc": "()Lio/netty/buffer/ByteBufHolder;"
+          },
+          {
+            "nme": "duplicate",
+            "acc": 4161,
+            "dsc": "()Lio/netty/buffer/ByteBufHolder;"
+          },
+          {
+            "nme": "copy",
+            "acc": 4161,
+            "dsc": "()Lio/netty/buffer/ByteBufHolder;"
+          },
+          {
+            "nme": "touch",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/Object;)Lio/netty/util/ReferenceCounted;"
+          },
+          {
+            "nme": "touch",
+            "acc": 4161,
+            "dsc": "()Lio/netty/util/ReferenceCounted;"
+          },
+          {
+            "nme": "retain",
+            "acc": 4161,
+            "dsc": "(I)Lio/netty/util/ReferenceCounted;"
+          },
+          {
+            "nme": "retain",
+            "acc": 4161,
+            "dsc": "()Lio/netty/util/ReferenceCounted;"
+          },
+          {
+            "nme": "touch",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/Object;)Lio/netty/channel/AddressedEnvelope;"
+          },
+          {
+            "nme": "touch",
+            "acc": 4161,
+            "dsc": "()Lio/netty/channel/AddressedEnvelope;"
+          },
+          {
+            "nme": "retain",
+            "acc": 4161,
+            "dsc": "(I)Lio/netty/channel/AddressedEnvelope;"
+          },
+          {
+            "nme": "retain",
+            "acc": 4161,
+            "dsc": "()Lio/netty/channel/AddressedEnvelope;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "segmentSize",
+            "dsc": "I"
+          }
+        ]
+      },
+      "io/netty/channel/unix/Errors$NativeIoException.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "io/netty/channel/unix/Errors$NativeIoException",
+        "super": "java/io/IOException",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;IZ)V"
+          },
+          {
+            "nme": "expectedErr",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "fillInStackTrace",
+            "acc": 33,
+            "dsc": "()Ljava/lang/Throwable;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": 8222160204268655526
+          },
+          {
+            "acc": 18,
+            "nme": "expectedErr",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "fillInStackTrace",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "io/netty/channel/unix/DomainSocketReadMode.class": {
+        "ver": 50,
+        "acc": 16433,
+        "nme": "io/netty/channel/unix/DomainSocketReadMode",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lio/netty/channel/unix/DomainSocketReadMode;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lio/netty/channel/unix/DomainSocketReadMode;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "BYTES",
+            "dsc": "Lio/netty/channel/unix/DomainSocketReadMode;"
+          },
+          {
+            "acc": 16409,
+            "nme": "FILE_DESCRIPTORS",
+            "dsc": "Lio/netty/channel/unix/DomainSocketReadMode;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lio/netty/channel/unix/DomainSocketReadMode;"
+          }
+        ]
+      },
+      "io/netty/channel/unix/DomainDatagramSocketAddress.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "io/netty/channel/unix/DomainDatagramSocketAddress",
+        "super": "io/netty/channel/unix/DomainSocketAddress",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "([BILio/netty/channel/unix/DomainDatagramSocketAddress;)V"
+          },
+          {
+            "nme": "localAddress",
+            "acc": 1,
+            "dsc": "()Lio/netty/channel/unix/DomainDatagramSocketAddress;"
+          },
+          {
+            "nme": "receivedAmount",
+            "acc": 1,
+            "dsc": "()I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": -5925732678737768223
+          },
+          {
+            "acc": 18,
+            "nme": "localAddress",
+            "dsc": "Lio/netty/channel/unix/DomainDatagramSocketAddress;"
+          },
+          {
+            "acc": 18,
+            "nme": "receivedAmount",
+            "dsc": "I"
+          }
+        ]
+      },
+      "io/netty/channel/unix/DatagramSocketAddress.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "io/netty/channel/unix/DatagramSocketAddress",
+        "super": "java/net/InetSocketAddress",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "([BIIILio/netty/channel/unix/DatagramSocketAddress;)V",
+            "exs": [
+              "java/net/UnknownHostException"
+            ]
+          },
+          {
+            "nme": "localAddress",
+            "acc": 1,
+            "dsc": "()Lio/netty/channel/unix/DatagramSocketAddress;"
+          },
+          {
+            "nme": "receivedAmount",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "newAddress",
+            "acc": 10,
+            "dsc": "([BI)Ljava/net/InetAddress;",
+            "exs": [
+              "java/net/UnknownHostException"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": 3094819287843178401
+          },
+          {
+            "acc": 18,
+            "nme": "receivedAmount",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "localAddress",
+            "dsc": "Lio/netty/channel/unix/DatagramSocketAddress;"
+          }
+        ]
+      },
+      "io/netty/channel/unix/PeerCredentials.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "io/netty/channel/unix/PeerCredentials",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 128,
+            "dsc": "(II[I)V"
+          },
+          {
+            "nme": "pid",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "uid",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "gids",
+            "acc": 1,
+            "dsc": "()[I"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "pid",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "uid",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "gids",
+            "dsc": "[I"
+          }
+        ]
+      },
+      "io/netty/channel/unix/SocketWritableByteChannel.class": {
+        "ver": 50,
+        "acc": 1057,
+        "nme": "io/netty/channel/unix/SocketWritableByteChannel",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(Lio/netty/channel/unix/FileDescriptor;)V"
+          },
+          {
+            "nme": "write",
+            "acc": 4,
+            "dsc": "(Ljava/nio/ByteBuffer;II)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "write",
+            "acc": 17,
+            "dsc": "(Ljava/nio/ByteBuffer;)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "isOpen",
+            "acc": 17,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "close",
+            "acc": 17,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "alloc",
+            "acc": 1028,
+            "dsc": "()Lio/netty/buffer/ByteBufAllocator;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 20,
+            "nme": "fd",
+            "dsc": "Lio/netty/channel/unix/FileDescriptor;"
+          }
+        ]
+      },
+      "io/netty/channel/unix/Unix.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "io/netty/channel/unix/Unix",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "registerInternal",
+            "acc": 41,
+            "dsc": "(Ljava/lang/Runnable;)V"
+          },
+          {
+            "nme": "isAvailable",
+            "acc": 131081,
+            "dsc": "()Z",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "ensureAvailability",
+            "acc": 131081,
+            "dsc": "()V",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "unavailabilityCause",
+            "acc": 131081,
+            "dsc": "()Ljava/lang/Throwable;",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "registered",
+            "dsc": "Ljava/util/concurrent/atomic/AtomicBoolean;"
+          }
+        ]
+      },
+      "io/netty/channel/unix/DomainSocketChannel.class": {
+        "ver": 50,
+        "acc": 1537,
+        "nme": "io/netty/channel/unix/DomainSocketChannel",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "remoteAddress",
+            "acc": 1025,
+            "dsc": "()Lio/netty/channel/unix/DomainSocketAddress;"
+          },
+          {
+            "nme": "localAddress",
+            "acc": 1025,
+            "dsc": "()Lio/netty/channel/unix/DomainSocketAddress;"
+          },
+          {
+            "nme": "config",
+            "acc": 1025,
+            "dsc": "()Lio/netty/channel/unix/DomainSocketChannelConfig;"
+          }
+        ],
+        "flds": []
+      },
+      "io/netty/channel/unix/PreferredDirectByteBufAllocator.class": {
+        "ver": 50,
+        "acc": 49,
+        "nme": "io/netty/channel/unix/PreferredDirectByteBufAllocator",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "updateAllocator",
+            "acc": 1,
+            "dsc": "(Lio/netty/buffer/ByteBufAllocator;)V"
+          },
+          {
+            "nme": "buffer",
+            "acc": 1,
+            "dsc": "()Lio/netty/buffer/ByteBuf;"
+          },
+          {
+            "nme": "buffer",
+            "acc": 1,
+            "dsc": "(I)Lio/netty/buffer/ByteBuf;"
+          },
+          {
+            "nme": "buffer",
+            "acc": 1,
+            "dsc": "(II)Lio/netty/buffer/ByteBuf;"
+          },
+          {
+            "nme": "ioBuffer",
+            "acc": 1,
+            "dsc": "()Lio/netty/buffer/ByteBuf;"
+          },
+          {
+            "nme": "ioBuffer",
+            "acc": 1,
+            "dsc": "(I)Lio/netty/buffer/ByteBuf;"
+          },
+          {
+            "nme": "ioBuffer",
+            "acc": 1,
+            "dsc": "(II)Lio/netty/buffer/ByteBuf;"
+          },
+          {
+            "nme": "heapBuffer",
+            "acc": 1,
+            "dsc": "()Lio/netty/buffer/ByteBuf;"
+          },
+          {
+            "nme": "heapBuffer",
+            "acc": 1,
+            "dsc": "(I)Lio/netty/buffer/ByteBuf;"
+          },
+          {
+            "nme": "heapBuffer",
+            "acc": 1,
+            "dsc": "(II)Lio/netty/buffer/ByteBuf;"
+          },
+          {
+            "nme": "directBuffer",
+            "acc": 1,
+            "dsc": "()Lio/netty/buffer/ByteBuf;"
+          },
+          {
+            "nme": "directBuffer",
+            "acc": 1,
+            "dsc": "(I)Lio/netty/buffer/ByteBuf;"
+          },
+          {
+            "nme": "directBuffer",
+            "acc": 1,
+            "dsc": "(II)Lio/netty/buffer/ByteBuf;"
+          },
+          {
+            "nme": "compositeBuffer",
+            "acc": 1,
+            "dsc": "()Lio/netty/buffer/CompositeByteBuf;"
+          },
+          {
+            "nme": "compositeBuffer",
+            "acc": 1,
+            "dsc": "(I)Lio/netty/buffer/CompositeByteBuf;"
+          },
+          {
+            "nme": "compositeHeapBuffer",
+            "acc": 1,
+            "dsc": "()Lio/netty/buffer/CompositeByteBuf;"
+          },
+          {
+            "nme": "compositeHeapBuffer",
+            "acc": 1,
+            "dsc": "(I)Lio/netty/buffer/CompositeByteBuf;"
+          },
+          {
+            "nme": "compositeDirectBuffer",
+            "acc": 1,
+            "dsc": "()Lio/netty/buffer/CompositeByteBuf;"
+          },
+          {
+            "nme": "compositeDirectBuffer",
+            "acc": 1,
+            "dsc": "(I)Lio/netty/buffer/CompositeByteBuf;"
+          },
+          {
+            "nme": "isDirectBufferPooled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "calculateNewCapacity",
+            "acc": 1,
+            "dsc": "(II)I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "allocator",
+            "dsc": "Lio/netty/buffer/ByteBufAllocator;"
+          }
+        ]
+      },
+      "io/netty/channel/unix/FileDescriptor.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "io/netty/channel/unix/FileDescriptor",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "intValue",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "markClosed",
+            "acc": 4,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "close",
+            "acc": 1,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "isOpen",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "write",
+            "acc": 17,
+            "dsc": "(Ljava/nio/ByteBuffer;II)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "writeAddress",
+            "acc": 17,
+            "dsc": "(JII)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "writev",
+            "acc": 17,
+            "dsc": "([Ljava/nio/ByteBuffer;IIJ)J",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "writevAddresses",
+            "acc": 17,
+            "dsc": "(JI)J",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "read",
+            "acc": 17,
+            "dsc": "(Ljava/nio/ByteBuffer;II)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "readAddress",
+            "acc": 17,
+            "dsc": "(JII)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "from",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lio/netty/channel/unix/FileDescriptor;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "from",
+            "acc": 9,
+            "dsc": "(Ljava/io/File;)Lio/netty/channel/unix/FileDescriptor;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "pipe",
+            "acc": 9,
+            "dsc": "()[Lio/netty/channel/unix/FileDescriptor;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "casState",
+            "acc": 16,
+            "dsc": "(II)Z"
+          },
+          {
+            "nme": "isClosed",
+            "acc": 8,
+            "dsc": "(I)Z"
+          },
+          {
+            "nme": "isInputShutdown",
+            "acc": 8,
+            "dsc": "(I)Z"
+          },
+          {
+            "nme": "isOutputShutdown",
+            "acc": 8,
+            "dsc": "(I)Z"
+          },
+          {
+            "nme": "inputShutdown",
+            "acc": 8,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "outputShutdown",
+            "acc": 8,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "open",
+            "acc": 266,
+            "dsc": "(Ljava/lang/String;)I"
+          },
+          {
+            "nme": "close",
+            "acc": 266,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "write",
+            "acc": 266,
+            "dsc": "(ILjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "writeAddress",
+            "acc": 266,
+            "dsc": "(IJII)I"
+          },
+          {
+            "nme": "writev",
+            "acc": 266,
+            "dsc": "(I[Ljava/nio/ByteBuffer;IIJ)J"
+          },
+          {
+            "nme": "writevAddresses",
+            "acc": 266,
+            "dsc": "(IJI)J"
+          },
+          {
+            "nme": "read",
+            "acc": 266,
+            "dsc": "(ILjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "readAddress",
+            "acc": 266,
+            "dsc": "(IJII)I"
+          },
+          {
+            "nme": "newPipe",
+            "acc": 266,
+            "dsc": "()J"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "stateUpdater",
+            "dsc": "Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;",
+            "sig": "Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater<Lio/netty/channel/unix/FileDescriptor;>;"
+          },
+          {
+            "acc": 26,
+            "nme": "STATE_CLOSED_MASK",
+            "dsc": "I",
+            "val": 1
+          },
+          {
+            "acc": 26,
+            "nme": "STATE_INPUT_SHUTDOWN_MASK",
+            "dsc": "I",
+            "val": 2
+          },
+          {
+            "acc": 26,
+            "nme": "STATE_OUTPUT_SHUTDOWN_MASK",
+            "dsc": "I",
+            "val": 4
+          },
+          {
+            "acc": 26,
+            "nme": "STATE_ALL_MASK",
+            "dsc": "I",
+            "val": 7
+          },
+          {
+            "acc": 64,
+            "nme": "state",
+            "dsc": "I"
+          },
+          {
+            "acc": 16,
+            "nme": "fd",
+            "dsc": "I"
+          }
+        ]
+      }
+    }
+  }
+}

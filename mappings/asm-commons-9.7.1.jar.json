@@ -1,0 +1,3433 @@
+{
+  "md5": "8344aea3c8b7d707e9d35a62710e77c9",
+  "sha2": "406c6a2225cfe1819f102a161e54cc16a5c24f75",
+  "sha256": "9a579b54d292ad9be171d4313fd4739c635592c2b5ac3a459bbd1049cddec6a0",
+  "contents": {
+    "classes": {
+      "org/objectweb/asm/commons/CodeSizeEvaluator.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/commons/CodeSizeEvaluator",
+        "super": "org/objectweb/asm/MethodVisitor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(ILorg/objectweb/asm/MethodVisitor;)V"
+          },
+          {
+            "nme": "getMinSize",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getMaxSize",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "visitInsn",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "visitIntInsn",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "visitVarInsn",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "visitTypeInsn",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;)V"
+          },
+          {
+            "nme": "visitFieldInsn",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitMethodInsn",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V"
+          },
+          {
+            "nme": "visitInvokeDynamicInsn",
+            "acc": 129,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Lorg/objectweb/asm/Handle;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "visitJumpInsn",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "visitLdcInsn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "visitIincInsn",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "visitTableSwitchInsn",
+            "acc": 129,
+            "dsc": "(IILorg/objectweb/asm/Label;[Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "visitLookupSwitchInsn",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;[I[Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "visitMultiANewArrayInsn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;I)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "minSize",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "maxSize",
+            "dsc": "I"
+          }
+        ]
+      },
+      "org/objectweb/asm/commons/TryCatchBlockSorter$1.class": {
+        "ver": 49,
+        "acc": 32,
+        "nme": "org/objectweb/asm/commons/TryCatchBlockSorter$1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lorg/objectweb/asm/commons/TryCatchBlockSorter;)V"
+          },
+          {
+            "nme": "compare",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/tree/TryCatchBlockNode;Lorg/objectweb/asm/tree/TryCatchBlockNode;)I"
+          },
+          {
+            "nme": "blockLength",
+            "acc": 2,
+            "dsc": "(Lorg/objectweb/asm/tree/TryCatchBlockNode;)I"
+          },
+          {
+            "nme": "compare",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lorg/objectweb/asm/commons/TryCatchBlockSorter;"
+          }
+        ]
+      },
+      "org/objectweb/asm/commons/FieldRemapper.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/commons/FieldRemapper",
+        "super": "org/objectweb/asm/FieldVisitor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/FieldVisitor;Lorg/objectweb/asm/commons/Remapper;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(ILorg/objectweb/asm/FieldVisitor;Lorg/objectweb/asm/commons/Remapper;)V"
+          },
+          {
+            "nme": "visitAnnotation",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Z)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "visitTypeAnnotation",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/TypePath;Ljava/lang/String;Z)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "createAnnotationRemapper",
+            "acc": 131076,
+            "dsc": "(Lorg/objectweb/asm/AnnotationVisitor;)Lorg/objectweb/asm/AnnotationVisitor;",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "createAnnotationRemapper",
+            "acc": 4,
+            "dsc": "(Ljava/lang/String;Lorg/objectweb/asm/AnnotationVisitor;)Lorg/objectweb/asm/AnnotationVisitor;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 20,
+            "nme": "remapper",
+            "dsc": "Lorg/objectweb/asm/commons/Remapper;"
+          }
+        ]
+      },
+      "org/objectweb/asm/commons/JSRInlinerAdapter$Instantiation.class": {
+        "ver": 49,
+        "acc": 48,
+        "nme": "org/objectweb/asm/commons/JSRInlinerAdapter$Instantiation",
+        "super": "java/util/AbstractMap",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lorg/objectweb/asm/commons/JSRInlinerAdapter;Lorg/objectweb/asm/commons/JSRInlinerAdapter$Instantiation;Ljava/util/BitSet;)V"
+          },
+          {
+            "nme": "stringConcat$0",
+            "acc": 4106,
+            "dsc": "(Ljava/util/BitSet;)Ljava/lang/String;"
+          },
+          {
+            "nme": "findOwner",
+            "acc": 0,
+            "dsc": "(I)Lorg/objectweb/asm/commons/JSRInlinerAdapter$Instantiation;"
+          },
+          {
+            "nme": "getClonedLabelForJumpInsn",
+            "acc": 0,
+            "dsc": "(Lorg/objectweb/asm/tree/LabelNode;)Lorg/objectweb/asm/tree/LabelNode;"
+          },
+          {
+            "nme": "getClonedLabel",
+            "acc": 0,
+            "dsc": "(Lorg/objectweb/asm/tree/LabelNode;)Lorg/objectweb/asm/tree/LabelNode;"
+          },
+          {
+            "nme": "entrySet",
+            "acc": 1,
+            "dsc": "()Ljava/util/Set;",
+            "sig": "()Ljava/util/Set<Ljava/util/Map$Entry<Lorg/objectweb/asm/tree/LabelNode;Lorg/objectweb/asm/tree/LabelNode;>;>;"
+          },
+          {
+            "nme": "get",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Lorg/objectweb/asm/tree/LabelNode;"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "get",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16,
+            "nme": "parent",
+            "dsc": "Lorg/objectweb/asm/commons/JSRInlinerAdapter$Instantiation;"
+          },
+          {
+            "acc": 16,
+            "nme": "subroutineInsns",
+            "dsc": "Ljava/util/BitSet;"
+          },
+          {
+            "acc": 16,
+            "nme": "clonedLabels",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lorg/objectweb/asm/tree/LabelNode;Lorg/objectweb/asm/tree/LabelNode;>;"
+          },
+          {
+            "acc": 16,
+            "nme": "returnLabel",
+            "dsc": "Lorg/objectweb/asm/tree/LabelNode;"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lorg/objectweb/asm/commons/JSRInlinerAdapter;"
+          }
+        ]
+      },
+      "org/objectweb/asm/commons/InstructionAdapter.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/commons/InstructionAdapter",
+        "super": "org/objectweb/asm/MethodVisitor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(ILorg/objectweb/asm/MethodVisitor;)V"
+          },
+          {
+            "nme": "visitInsn",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "visitIntInsn",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "visitVarInsn",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "visitTypeInsn",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;)V"
+          },
+          {
+            "nme": "visitFieldInsn",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitMethodInsn",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V"
+          },
+          {
+            "nme": "visitInvokeDynamicInsn",
+            "acc": 129,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Lorg/objectweb/asm/Handle;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "visitJumpInsn",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "visitLabel",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "visitLdcInsn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "visitIincInsn",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "visitTableSwitchInsn",
+            "acc": 129,
+            "dsc": "(IILorg/objectweb/asm/Label;[Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "visitLookupSwitchInsn",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;[I[Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "visitMultiANewArrayInsn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "nop",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "aconst",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "iconst",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "lconst",
+            "acc": 1,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "fconst",
+            "acc": 1,
+            "dsc": "(F)V"
+          },
+          {
+            "nme": "dconst",
+            "acc": 1,
+            "dsc": "(D)V"
+          },
+          {
+            "nme": "tconst",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "hconst",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Handle;)V"
+          },
+          {
+            "nme": "cconst",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/ConstantDynamic;)V"
+          },
+          {
+            "nme": "load",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "aload",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "store",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "astore",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "pop",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "pop2",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "dup",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "dup2",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "dupX1",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "dupX2",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "dup2X1",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "dup2X2",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "swap",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "add",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "sub",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "mul",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "div",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "rem",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "neg",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "shl",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "shr",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "ushr",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "and",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "or",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "xor",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "iinc",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "cast",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "cast",
+            "acc": 8,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;Lorg/objectweb/asm/Type;Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "lcmp",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "cmpl",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "cmpg",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "ifeq",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "ifne",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "iflt",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "ifge",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "ifgt",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "ifle",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "ificmpeq",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "ificmpne",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "ificmplt",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "ificmpge",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "ificmpgt",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "ificmple",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "ifacmpeq",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "ifacmpne",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "goTo",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "jsr",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "ret",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "tableswitch",
+            "acc": 129,
+            "dsc": "(IILorg/objectweb/asm/Label;[Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "lookupswitch",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;[I[Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "areturn",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "getstatic",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "putstatic",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "getfield",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "putfield",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "invokevirtual",
+            "acc": 131073,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "invokevirtual",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V"
+          },
+          {
+            "nme": "invokespecial",
+            "acc": 131073,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "invokespecial",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V"
+          },
+          {
+            "nme": "invokestatic",
+            "acc": 131073,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "invokestatic",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V"
+          },
+          {
+            "nme": "invokeinterface",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "invokedynamic",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Lorg/objectweb/asm/Handle;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "anew",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "newarray",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "newarray",
+            "acc": 8,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "arraylength",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "athrow",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "checkcast",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "instanceOf",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "monitorenter",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "monitorexit",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "multianewarray",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "ifnull",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "ifnonnull",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "mark",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "OBJECT_TYPE",
+            "dsc": "Lorg/objectweb/asm/Type;"
+          }
+        ]
+      },
+      "org/objectweb/asm/commons/SimpleRemapper.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/commons/SimpleRemapper",
+        "super": "org/objectweb/asm/commons/Remapper",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/util/Map;)V",
+            "sig": "(Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "mapMethodName",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "stringConcat$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "mapInvokeDynamicMethodName",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "stringConcat$1",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "mapAnnotationAttributeName",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "stringConcat$2",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "mapFieldName",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "stringConcat$3",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "map",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "mapping",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+          }
+        ]
+      },
+      "org/objectweb/asm/commons/AnnotationRemapper.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/commons/AnnotationRemapper",
+        "super": "org/objectweb/asm/AnnotationVisitor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 131073,
+            "dsc": "(Lorg/objectweb/asm/AnnotationVisitor;Lorg/objectweb/asm/commons/Remapper;)V",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Lorg/objectweb/asm/AnnotationVisitor;Lorg/objectweb/asm/commons/Remapper;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 131076,
+            "dsc": "(ILorg/objectweb/asm/AnnotationVisitor;Lorg/objectweb/asm/commons/Remapper;)V",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(ILjava/lang/String;Lorg/objectweb/asm/AnnotationVisitor;Lorg/objectweb/asm/commons/Remapper;)V"
+          },
+          {
+            "nme": "visit",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "visitEnum",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitAnnotation",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "visitArray",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "createAnnotationRemapper",
+            "acc": 131076,
+            "dsc": "(Lorg/objectweb/asm/AnnotationVisitor;)Lorg/objectweb/asm/AnnotationVisitor;",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "createAnnotationRemapper",
+            "acc": 4,
+            "dsc": "(Ljava/lang/String;Lorg/objectweb/asm/AnnotationVisitor;)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "orDeprecatedValue",
+            "acc": 16,
+            "dsc": "(Lorg/objectweb/asm/AnnotationVisitor;)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "mapAnnotationAttributeName",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 20,
+            "nme": "descriptor",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 20,
+            "nme": "remapper",
+            "dsc": "Lorg/objectweb/asm/commons/Remapper;"
+          }
+        ]
+      },
+      "org/objectweb/asm/commons/ModuleHashesAttribute.class": {
+        "ver": 49,
+        "acc": 49,
+        "nme": "org/objectweb/asm/commons/ModuleHashesAttribute",
+        "super": "org/objectweb/asm/Attribute",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/util/List;Ljava/util/List;)V",
+            "sig": "(Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;Ljava/util/List<[B>;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "read",
+            "acc": 4,
+            "dsc": "(Lorg/objectweb/asm/ClassReader;II[CI[Lorg/objectweb/asm/Label;)Lorg/objectweb/asm/Attribute;"
+          },
+          {
+            "nme": "write",
+            "acc": 4,
+            "dsc": "(Lorg/objectweb/asm/ClassWriter;[BIII)Lorg/objectweb/asm/ByteVector;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "algorithm",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 1,
+            "nme": "modules",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Ljava/lang/String;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "hashes",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<[B>;"
+          }
+        ]
+      },
+      "org/objectweb/asm/commons/JSRInlinerAdapter.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/commons/JSRInlinerAdapter",
+        "super": "org/objectweb/asm/tree/MethodNode",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(ILorg/objectweb/asm/MethodVisitor;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitJumpInsn",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "visitEnd",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "findSubroutinesInsns",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "findSubroutineInsns",
+            "acc": 2,
+            "dsc": "(ILjava/util/BitSet;Ljava/util/BitSet;)V"
+          },
+          {
+            "nme": "findReachableInsns",
+            "acc": 2,
+            "dsc": "(ILjava/util/BitSet;Ljava/util/BitSet;)V"
+          },
+          {
+            "nme": "emitCode",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "emitInstantiation",
+            "acc": 2,
+            "dsc": "(Lorg/objectweb/asm/commons/JSRInlinerAdapter$Instantiation;Ljava/util/List;Lorg/objectweb/asm/tree/InsnList;Ljava/util/List;Ljava/util/List;)V",
+            "sig": "(Lorg/objectweb/asm/commons/JSRInlinerAdapter$Instantiation;Ljava/util/List<Lorg/objectweb/asm/commons/JSRInlinerAdapter$Instantiation;>;Lorg/objectweb/asm/tree/InsnList;Ljava/util/List<Lorg/objectweb/asm/tree/TryCatchBlockNode;>;Ljava/util/List<Lorg/objectweb/asm/tree/LocalVariableNode;>;)V"
+          },
+          {
+            "nme": "stringConcat$0",
+            "acc": 4106,
+            "dsc": "(I)Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "mainSubroutineInsns",
+            "dsc": "Ljava/util/BitSet;"
+          },
+          {
+            "acc": 18,
+            "nme": "subroutinesInsns",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lorg/objectweb/asm/tree/LabelNode;Ljava/util/BitSet;>;"
+          },
+          {
+            "acc": 16,
+            "nme": "sharedSubroutineInsns",
+            "dsc": "Ljava/util/BitSet;"
+          }
+        ]
+      },
+      "org/objectweb/asm/commons/StaticInitMerger.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/commons/StaticInitMerger",
+        "super": "org/objectweb/asm/ClassVisitor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Lorg/objectweb/asm/ClassVisitor;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(ILjava/lang/String;Lorg/objectweb/asm/ClassVisitor;)V"
+          },
+          {
+            "nme": "visit",
+            "acc": 1,
+            "dsc": "(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitMethod",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Lorg/objectweb/asm/MethodVisitor;"
+          },
+          {
+            "nme": "stringConcat$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;I)Ljava/lang/String;"
+          },
+          {
+            "nme": "visitEnd",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "owner",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "renamedClinitMethodPrefix",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 2,
+            "nme": "numClinitMethods",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "mergedClinitVisitor",
+            "dsc": "Lorg/objectweb/asm/MethodVisitor;"
+          }
+        ]
+      },
+      "module-info.class": {
+        "ver": 53,
+        "acc": 32768,
+        "nme": "module-info",
+        "mthds": [],
+        "flds": []
+      },
+      "org/objectweb/asm/commons/ClassRemapper.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/commons/ClassRemapper",
+        "super": "org/objectweb/asm/ClassVisitor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/ClassVisitor;Lorg/objectweb/asm/commons/Remapper;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(ILorg/objectweb/asm/ClassVisitor;Lorg/objectweb/asm/commons/Remapper;)V"
+          },
+          {
+            "nme": "visit",
+            "acc": 1,
+            "dsc": "(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitModule",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;ILjava/lang/String;)Lorg/objectweb/asm/ModuleVisitor;"
+          },
+          {
+            "nme": "visitAnnotation",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Z)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "visitTypeAnnotation",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/TypePath;Ljava/lang/String;Z)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "visitAttribute",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Attribute;)V"
+          },
+          {
+            "nme": "visitRecordComponent",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/objectweb/asm/RecordComponentVisitor;"
+          },
+          {
+            "nme": "visitField",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)Lorg/objectweb/asm/FieldVisitor;"
+          },
+          {
+            "nme": "visitMethod",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Lorg/objectweb/asm/MethodVisitor;"
+          },
+          {
+            "nme": "visitInnerClass",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "visitOuterClass",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitNestHost",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitNestMember",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitPermittedSubclass",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "createFieldRemapper",
+            "acc": 4,
+            "dsc": "(Lorg/objectweb/asm/FieldVisitor;)Lorg/objectweb/asm/FieldVisitor;"
+          },
+          {
+            "nme": "createMethodRemapper",
+            "acc": 4,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;)Lorg/objectweb/asm/MethodVisitor;"
+          },
+          {
+            "nme": "createAnnotationRemapper",
+            "acc": 131076,
+            "dsc": "(Lorg/objectweb/asm/AnnotationVisitor;)Lorg/objectweb/asm/AnnotationVisitor;",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "createAnnotationRemapper",
+            "acc": 4,
+            "dsc": "(Ljava/lang/String;Lorg/objectweb/asm/AnnotationVisitor;)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "createModuleRemapper",
+            "acc": 4,
+            "dsc": "(Lorg/objectweb/asm/ModuleVisitor;)Lorg/objectweb/asm/ModuleVisitor;"
+          },
+          {
+            "nme": "createRecordComponentRemapper",
+            "acc": 4,
+            "dsc": "(Lorg/objectweb/asm/RecordComponentVisitor;)Lorg/objectweb/asm/RecordComponentVisitor;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 20,
+            "nme": "remapper",
+            "dsc": "Lorg/objectweb/asm/commons/Remapper;"
+          },
+          {
+            "acc": 4,
+            "nme": "className",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "org/objectweb/asm/commons/Method.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/commons/Method",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Lorg/objectweb/asm/Type;[Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "getMethod",
+            "acc": 9,
+            "dsc": "(Ljava/lang/reflect/Method;)Lorg/objectweb/asm/commons/Method;"
+          },
+          {
+            "nme": "getMethod",
+            "acc": 9,
+            "dsc": "(Ljava/lang/reflect/Constructor;)Lorg/objectweb/asm/commons/Method;",
+            "sig": "(Ljava/lang/reflect/Constructor<*>;)Lorg/objectweb/asm/commons/Method;"
+          },
+          {
+            "nme": "getMethod",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lorg/objectweb/asm/commons/Method;"
+          },
+          {
+            "nme": "getMethod",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Z)Lorg/objectweb/asm/commons/Method;"
+          },
+          {
+            "nme": "getDescriptorInternal",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;Z)Ljava/lang/String;"
+          },
+          {
+            "nme": "getName",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getDescriptor",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getReturnType",
+            "acc": 1,
+            "dsc": "()Lorg/objectweb/asm/Type;"
+          },
+          {
+            "nme": "getArgumentTypes",
+            "acc": 1,
+            "dsc": "()[Lorg/objectweb/asm/Type;"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "stringConcat$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "descriptor",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 26,
+            "nme": "PRIMITIVE_TYPE_DESCRIPTORS",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+          }
+        ]
+      },
+      "org/objectweb/asm/commons/MethodRemapper.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/commons/MethodRemapper",
+        "super": "org/objectweb/asm/MethodVisitor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;Lorg/objectweb/asm/commons/Remapper;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(ILorg/objectweb/asm/MethodVisitor;Lorg/objectweb/asm/commons/Remapper;)V"
+          },
+          {
+            "nme": "visitAnnotationDefault",
+            "acc": 1,
+            "dsc": "()Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "visitAnnotation",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Z)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "visitTypeAnnotation",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/TypePath;Ljava/lang/String;Z)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "visitParameterAnnotation",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;Z)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "visitFrame",
+            "acc": 1,
+            "dsc": "(II[Ljava/lang/Object;I[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "remapFrameTypes",
+            "acc": 2,
+            "dsc": "(I[Ljava/lang/Object;)[Ljava/lang/Object;"
+          },
+          {
+            "nme": "visitFieldInsn",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitMethodInsn",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V"
+          },
+          {
+            "nme": "visitInvokeDynamicInsn",
+            "acc": 129,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Lorg/objectweb/asm/Handle;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "visitTypeInsn",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;)V"
+          },
+          {
+            "nme": "visitLdcInsn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "visitMultiANewArrayInsn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "visitInsnAnnotation",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/TypePath;Ljava/lang/String;Z)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "visitTryCatchBlock",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;Lorg/objectweb/asm/Label;Lorg/objectweb/asm/Label;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitTryCatchAnnotation",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/TypePath;Ljava/lang/String;Z)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "visitLocalVariable",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/objectweb/asm/Label;Lorg/objectweb/asm/Label;I)V"
+          },
+          {
+            "nme": "visitLocalVariableAnnotation",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/TypePath;[Lorg/objectweb/asm/Label;[Lorg/objectweb/asm/Label;[ILjava/lang/String;Z)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "createAnnotationRemapper",
+            "acc": 131076,
+            "dsc": "(Lorg/objectweb/asm/AnnotationVisitor;)Lorg/objectweb/asm/AnnotationVisitor;",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "createAnnotationRemapper",
+            "acc": 4,
+            "dsc": "(Ljava/lang/String;Lorg/objectweb/asm/AnnotationVisitor;)Lorg/objectweb/asm/AnnotationVisitor;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 20,
+            "nme": "remapper",
+            "dsc": "Lorg/objectweb/asm/commons/Remapper;"
+          }
+        ]
+      },
+      "org/objectweb/asm/commons/RecordComponentRemapper.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/commons/RecordComponentRemapper",
+        "super": "org/objectweb/asm/RecordComponentVisitor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/RecordComponentVisitor;Lorg/objectweb/asm/commons/Remapper;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(ILorg/objectweb/asm/RecordComponentVisitor;Lorg/objectweb/asm/commons/Remapper;)V"
+          },
+          {
+            "nme": "visitAnnotation",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Z)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "visitTypeAnnotation",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/TypePath;Ljava/lang/String;Z)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "createAnnotationRemapper",
+            "acc": 131076,
+            "dsc": "(Lorg/objectweb/asm/AnnotationVisitor;)Lorg/objectweb/asm/AnnotationVisitor;",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "createAnnotationRemapper",
+            "acc": 4,
+            "dsc": "(Ljava/lang/String;Lorg/objectweb/asm/AnnotationVisitor;)Lorg/objectweb/asm/AnnotationVisitor;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 20,
+            "nme": "remapper",
+            "dsc": "Lorg/objectweb/asm/commons/Remapper;"
+          }
+        ]
+      },
+      "org/objectweb/asm/commons/TableSwitchGenerator.class": {
+        "ver": 49,
+        "acc": 1537,
+        "nme": "org/objectweb/asm/commons/TableSwitchGenerator",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "generateCase",
+            "acc": 1025,
+            "dsc": "(ILorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "generateDefault",
+            "acc": 1025,
+            "dsc": "()V"
+          }
+        ],
+        "flds": []
+      },
+      "org/objectweb/asm/commons/AnalyzerAdapter.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/commons/AnalyzerAdapter",
+        "super": "org/objectweb/asm/MethodVisitor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Lorg/objectweb/asm/MethodVisitor;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(ILjava/lang/String;ILjava/lang/String;Ljava/lang/String;Lorg/objectweb/asm/MethodVisitor;)V"
+          },
+          {
+            "nme": "visitFrame",
+            "acc": 1,
+            "dsc": "(II[Ljava/lang/Object;I[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "visitFrameTypes",
+            "acc": 10,
+            "dsc": "(I[Ljava/lang/Object;Ljava/util/List;)V",
+            "sig": "(I[Ljava/lang/Object;Ljava/util/List<Ljava/lang/Object;>;)V"
+          },
+          {
+            "nme": "visitInsn",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "visitIntInsn",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "visitVarInsn",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "visitTypeInsn",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;)V"
+          },
+          {
+            "nme": "visitFieldInsn",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitMethodInsn",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V"
+          },
+          {
+            "nme": "visitInvokeDynamicInsn",
+            "acc": 129,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Lorg/objectweb/asm/Handle;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "visitJumpInsn",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "visitLabel",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "visitLdcInsn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "visitIincInsn",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "visitTableSwitchInsn",
+            "acc": 129,
+            "dsc": "(IILorg/objectweb/asm/Label;[Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "visitLookupSwitchInsn",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;[I[Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "visitMultiANewArrayInsn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "visitLocalVariable",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/objectweb/asm/Label;Lorg/objectweb/asm/Label;I)V"
+          },
+          {
+            "nme": "visitMaxs",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "get",
+            "acc": 2,
+            "dsc": "(I)Ljava/lang/Object;"
+          },
+          {
+            "nme": "set",
+            "acc": 2,
+            "dsc": "(ILjava/lang/Object;)V"
+          },
+          {
+            "nme": "push",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "pushDescriptor",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "pop",
+            "acc": 2,
+            "dsc": "()Ljava/lang/Object;"
+          },
+          {
+            "nme": "pop",
+            "acc": 2,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "pop",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "execute",
+            "acc": 2,
+            "dsc": "(IILjava/lang/String;)V"
+          },
+          {
+            "nme": "stringConcat$0",
+            "acc": 4106,
+            "dsc": "(I)Ljava/lang/String;"
+          },
+          {
+            "nme": "stringConcat$1",
+            "acc": 4106,
+            "dsc": "(Lorg/objectweb/asm/Type;)Ljava/lang/String;"
+          },
+          {
+            "nme": "stringConcat$2",
+            "acc": 4106,
+            "dsc": "(I)Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "locals",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Ljava/lang/Object;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "stack",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Ljava/lang/Object;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "labels",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/Label;>;"
+          },
+          {
+            "acc": 1,
+            "nme": "uninitializedTypes",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/Object;Ljava/lang/Object;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "maxStack",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "maxLocals",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "owner",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "org/objectweb/asm/commons/SerialVersionUIDAdder.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/commons/SerialVersionUIDAdder",
+        "super": "org/objectweb/asm/ClassVisitor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/ClassVisitor;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(ILorg/objectweb/asm/ClassVisitor;)V"
+          },
+          {
+            "nme": "visit",
+            "acc": 1,
+            "dsc": "(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitMethod",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Lorg/objectweb/asm/MethodVisitor;"
+          },
+          {
+            "nme": "visitField",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)Lorg/objectweb/asm/FieldVisitor;"
+          },
+          {
+            "nme": "visitInnerClass",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "visitEnd",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "stringConcat$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "hasSVUID",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "addSVUID",
+            "acc": 4,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "computeSVUID",
+            "acc": 4,
+            "dsc": "()J",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "computeSHAdigest",
+            "acc": 4,
+            "dsc": "([B)[B"
+          },
+          {
+            "nme": "writeItems",
+            "acc": 10,
+            "dsc": "(Ljava/util/Collection;Ljava/io/DataOutput;Z)V",
+            "sig": "(Ljava/util/Collection<Lorg/objectweb/asm/commons/SerialVersionUIDAdder$Item;>;Ljava/io/DataOutput;Z)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "CLINIT",
+            "dsc": "Ljava/lang/String;",
+            "val": "<clinit>"
+          },
+          {
+            "acc": 2,
+            "nme": "computeSvuid",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "hasSvuid",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "access",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 2,
+            "nme": "interfaces",
+            "dsc": "[Ljava/lang/String;"
+          },
+          {
+            "acc": 2,
+            "nme": "svuidFields",
+            "dsc": "Ljava/util/Collection;",
+            "sig": "Ljava/util/Collection<Lorg/objectweb/asm/commons/SerialVersionUIDAdder$Item;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "hasStaticInitializer",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "svuidConstructors",
+            "dsc": "Ljava/util/Collection;",
+            "sig": "Ljava/util/Collection<Lorg/objectweb/asm/commons/SerialVersionUIDAdder$Item;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "svuidMethods",
+            "dsc": "Ljava/util/Collection;",
+            "sig": "Ljava/util/Collection<Lorg/objectweb/asm/commons/SerialVersionUIDAdder$Item;>;"
+          }
+        ]
+      },
+      "org/objectweb/asm/commons/ModuleResolutionAttribute.class": {
+        "ver": 49,
+        "acc": 49,
+        "nme": "org/objectweb/asm/commons/ModuleResolutionAttribute",
+        "super": "org/objectweb/asm/Attribute",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "read",
+            "acc": 4,
+            "dsc": "(Lorg/objectweb/asm/ClassReader;II[CI[Lorg/objectweb/asm/Label;)Lorg/objectweb/asm/Attribute;"
+          },
+          {
+            "nme": "write",
+            "acc": 4,
+            "dsc": "(Lorg/objectweb/asm/ClassWriter;[BIII)Lorg/objectweb/asm/ByteVector;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "RESOLUTION_DO_NOT_RESOLVE_BY_DEFAULT",
+            "dsc": "I",
+            "val": 1
+          },
+          {
+            "acc": 25,
+            "nme": "RESOLUTION_WARN_DEPRECATED",
+            "dsc": "I",
+            "val": 2
+          },
+          {
+            "acc": 25,
+            "nme": "RESOLUTION_WARN_DEPRECATED_FOR_REMOVAL",
+            "dsc": "I",
+            "val": 4
+          },
+          {
+            "acc": 25,
+            "nme": "RESOLUTION_WARN_INCUBATING",
+            "dsc": "I",
+            "val": 8
+          },
+          {
+            "acc": 1,
+            "nme": "resolution",
+            "dsc": "I"
+          }
+        ]
+      },
+      "org/objectweb/asm/commons/LocalVariablesSorter.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/commons/LocalVariablesSorter",
+        "super": "org/objectweb/asm/MethodVisitor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;Lorg/objectweb/asm/MethodVisitor;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(IILjava/lang/String;Lorg/objectweb/asm/MethodVisitor;)V"
+          },
+          {
+            "nme": "visitVarInsn",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "stringConcat$0",
+            "acc": 4106,
+            "dsc": "(I)Ljava/lang/String;"
+          },
+          {
+            "nme": "visitIincInsn",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "visitMaxs",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "visitLocalVariable",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/objectweb/asm/Label;Lorg/objectweb/asm/Label;I)V"
+          },
+          {
+            "nme": "visitLocalVariableAnnotation",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/TypePath;[Lorg/objectweb/asm/Label;[Lorg/objectweb/asm/Label;[ILjava/lang/String;Z)Lorg/objectweb/asm/AnnotationVisitor;"
+          },
+          {
+            "nme": "visitFrame",
+            "acc": 1,
+            "dsc": "(II[Ljava/lang/Object;I[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "newLocal",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)I"
+          },
+          {
+            "nme": "updateNewLocals",
+            "acc": 4,
+            "dsc": "([Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "setLocalType",
+            "acc": 4,
+            "dsc": "(ILorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "setFrameLocal",
+            "acc": 2,
+            "dsc": "(ILjava/lang/Object;)V"
+          },
+          {
+            "nme": "remap",
+            "acc": 2,
+            "dsc": "(ILorg/objectweb/asm/Type;)I"
+          },
+          {
+            "nme": "newLocalMapping",
+            "acc": 4,
+            "dsc": "(Lorg/objectweb/asm/Type;)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "OBJECT_TYPE",
+            "dsc": "Lorg/objectweb/asm/Type;"
+          },
+          {
+            "acc": 2,
+            "nme": "remappedVariableIndices",
+            "dsc": "[I"
+          },
+          {
+            "acc": 2,
+            "nme": "remappedLocalTypes",
+            "dsc": "[Ljava/lang/Object;"
+          },
+          {
+            "acc": 20,
+            "nme": "firstLocal",
+            "dsc": "I"
+          },
+          {
+            "acc": 4,
+            "nme": "nextLocal",
+            "dsc": "I"
+          }
+        ]
+      },
+      "org/objectweb/asm/commons/SignatureRemapper.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/commons/SignatureRemapper",
+        "super": "org/objectweb/asm/signature/SignatureVisitor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/signature/SignatureVisitor;Lorg/objectweb/asm/commons/Remapper;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(ILorg/objectweb/asm/signature/SignatureVisitor;Lorg/objectweb/asm/commons/Remapper;)V"
+          },
+          {
+            "nme": "visitClassType",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitInnerClassType",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "stringConcat$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "stringConcat$1",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "visitFormalTypeParameter",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitTypeVariable",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitArrayType",
+            "acc": 1,
+            "dsc": "()Lorg/objectweb/asm/signature/SignatureVisitor;"
+          },
+          {
+            "nme": "visitBaseType",
+            "acc": 1,
+            "dsc": "(C)V"
+          },
+          {
+            "nme": "visitClassBound",
+            "acc": 1,
+            "dsc": "()Lorg/objectweb/asm/signature/SignatureVisitor;"
+          },
+          {
+            "nme": "visitExceptionType",
+            "acc": 1,
+            "dsc": "()Lorg/objectweb/asm/signature/SignatureVisitor;"
+          },
+          {
+            "nme": "visitInterface",
+            "acc": 1,
+            "dsc": "()Lorg/objectweb/asm/signature/SignatureVisitor;"
+          },
+          {
+            "nme": "visitInterfaceBound",
+            "acc": 1,
+            "dsc": "()Lorg/objectweb/asm/signature/SignatureVisitor;"
+          },
+          {
+            "nme": "visitParameterType",
+            "acc": 1,
+            "dsc": "()Lorg/objectweb/asm/signature/SignatureVisitor;"
+          },
+          {
+            "nme": "visitReturnType",
+            "acc": 1,
+            "dsc": "()Lorg/objectweb/asm/signature/SignatureVisitor;"
+          },
+          {
+            "nme": "visitSuperclass",
+            "acc": 1,
+            "dsc": "()Lorg/objectweb/asm/signature/SignatureVisitor;"
+          },
+          {
+            "nme": "visitTypeArgument",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "visitTypeArgument",
+            "acc": 1,
+            "dsc": "(C)Lorg/objectweb/asm/signature/SignatureVisitor;"
+          },
+          {
+            "nme": "visitEnd",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "signatureVisitor",
+            "dsc": "Lorg/objectweb/asm/signature/SignatureVisitor;"
+          },
+          {
+            "acc": 18,
+            "nme": "remapper",
+            "dsc": "Lorg/objectweb/asm/commons/Remapper;"
+          },
+          {
+            "acc": 2,
+            "nme": "classNames",
+            "dsc": "Ljava/util/ArrayList;",
+            "sig": "Ljava/util/ArrayList<Ljava/lang/String;>;"
+          }
+        ]
+      },
+      "org/objectweb/asm/commons/SerialVersionUIDAdder$Item.class": {
+        "ver": 49,
+        "acc": 48,
+        "nme": "org/objectweb/asm/commons/SerialVersionUIDAdder$Item",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;ILjava/lang/String;)V"
+          },
+          {
+            "nme": "compareTo",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/commons/SerialVersionUIDAdder$Item;)I"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "compareTo",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/Object;)I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 16,
+            "nme": "access",
+            "dsc": "I"
+          },
+          {
+            "acc": 16,
+            "nme": "descriptor",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "org/objectweb/asm/commons/GeneratorAdapter.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/commons/GeneratorAdapter",
+        "super": "org/objectweb/asm/commons/LocalVariablesSorter",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;ILjava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(ILorg/objectweb/asm/MethodVisitor;ILjava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/commons/Method;Lorg/objectweb/asm/MethodVisitor;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/commons/Method;Ljava/lang/String;[Lorg/objectweb/asm/Type;Lorg/objectweb/asm/ClassVisitor;)V"
+          },
+          {
+            "nme": "getInternalNames",
+            "acc": 10,
+            "dsc": "([Lorg/objectweb/asm/Type;)[Ljava/lang/String;"
+          },
+          {
+            "nme": "getAccess",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getName",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getReturnType",
+            "acc": 1,
+            "dsc": "()Lorg/objectweb/asm/Type;"
+          },
+          {
+            "nme": "getArgumentTypes",
+            "acc": 1,
+            "dsc": "()[Lorg/objectweb/asm/Type;"
+          },
+          {
+            "nme": "push",
+            "acc": 1,
+            "dsc": "(Z)V"
+          },
+          {
+            "nme": "push",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "push",
+            "acc": 1,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "push",
+            "acc": 1,
+            "dsc": "(F)V"
+          },
+          {
+            "nme": "push",
+            "acc": 1,
+            "dsc": "(D)V"
+          },
+          {
+            "nme": "push",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "push",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "push",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Handle;)V"
+          },
+          {
+            "nme": "push",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/ConstantDynamic;)V"
+          },
+          {
+            "nme": "getArgIndex",
+            "acc": 2,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "loadInsn",
+            "acc": 2,
+            "dsc": "(Lorg/objectweb/asm/Type;I)V"
+          },
+          {
+            "nme": "storeInsn",
+            "acc": 2,
+            "dsc": "(Lorg/objectweb/asm/Type;I)V"
+          },
+          {
+            "nme": "loadThis",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "loadArg",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "loadArgs",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "loadArgs",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "loadArgArray",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "storeArg",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "getLocalType",
+            "acc": 1,
+            "dsc": "(I)Lorg/objectweb/asm/Type;"
+          },
+          {
+            "nme": "setLocalType",
+            "acc": 4,
+            "dsc": "(ILorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "loadLocal",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "loadLocal",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "storeLocal",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "storeLocal",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "arrayLoad",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "arrayStore",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "pop",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "pop2",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "dup",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "dup2",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "dupX1",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "dupX2",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "dup2X1",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "dup2X2",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "swap",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "swap",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "math",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "not",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "iinc",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "cast",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "stringConcat$0",
+            "acc": 4106,
+            "dsc": "(Lorg/objectweb/asm/Type;Lorg/objectweb/asm/Type;)Ljava/lang/String;"
+          },
+          {
+            "nme": "getBoxedType",
+            "acc": 10,
+            "dsc": "(Lorg/objectweb/asm/Type;)Lorg/objectweb/asm/Type;"
+          },
+          {
+            "nme": "box",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "unbox",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "newLabel",
+            "acc": 1,
+            "dsc": "()Lorg/objectweb/asm/Label;"
+          },
+          {
+            "nme": "mark",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "mark",
+            "acc": 1,
+            "dsc": "()Lorg/objectweb/asm/Label;"
+          },
+          {
+            "nme": "ifCmp",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;ILorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "stringConcat$1",
+            "acc": 4106,
+            "dsc": "(Lorg/objectweb/asm/Type;)Ljava/lang/String;"
+          },
+          {
+            "nme": "stringConcat$2",
+            "acc": 4106,
+            "dsc": "(I)Ljava/lang/String;"
+          },
+          {
+            "nme": "ifICmp",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "ifZCmp",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "ifNull",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "ifNonNull",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "goTo",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "ret",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "tableSwitch",
+            "acc": 1,
+            "dsc": "([ILorg/objectweb/asm/commons/TableSwitchGenerator;)V"
+          },
+          {
+            "nme": "tableSwitch",
+            "acc": 1,
+            "dsc": "([ILorg/objectweb/asm/commons/TableSwitchGenerator;Z)V"
+          },
+          {
+            "nme": "returnValue",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "fieldInsn",
+            "acc": 2,
+            "dsc": "(ILorg/objectweb/asm/Type;Ljava/lang/String;Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "getStatic",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;Ljava/lang/String;Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "putStatic",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;Ljava/lang/String;Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "getField",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;Ljava/lang/String;Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "putField",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;Ljava/lang/String;Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "invokeInsn",
+            "acc": 2,
+            "dsc": "(ILorg/objectweb/asm/Type;Lorg/objectweb/asm/commons/Method;Z)V"
+          },
+          {
+            "nme": "invokeVirtual",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;Lorg/objectweb/asm/commons/Method;)V"
+          },
+          {
+            "nme": "invokeConstructor",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;Lorg/objectweb/asm/commons/Method;)V"
+          },
+          {
+            "nme": "invokeStatic",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;Lorg/objectweb/asm/commons/Method;)V"
+          },
+          {
+            "nme": "invokeInterface",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;Lorg/objectweb/asm/commons/Method;)V"
+          },
+          {
+            "nme": "invokeDynamic",
+            "acc": 129,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Lorg/objectweb/asm/Handle;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "typeInsn",
+            "acc": 2,
+            "dsc": "(ILorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "newInstance",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "newArray",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "arrayLength",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "throwException",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "throwException",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "checkCast",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "instanceOf",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "monitorEnter",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "monitorExit",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "endMethod",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "catchException",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;Lorg/objectweb/asm/Label;Lorg/objectweb/asm/Type;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "CLASS_DESCRIPTOR",
+            "dsc": "Ljava/lang/String;",
+            "val": "Ljava/lang/Class;"
+          },
+          {
+            "acc": 26,
+            "nme": "BYTE_TYPE",
+            "dsc": "Lorg/objectweb/asm/Type;"
+          },
+          {
+            "acc": 26,
+            "nme": "BOOLEAN_TYPE",
+            "dsc": "Lorg/objectweb/asm/Type;"
+          },
+          {
+            "acc": 26,
+            "nme": "SHORT_TYPE",
+            "dsc": "Lorg/objectweb/asm/Type;"
+          },
+          {
+            "acc": 26,
+            "nme": "CHARACTER_TYPE",
+            "dsc": "Lorg/objectweb/asm/Type;"
+          },
+          {
+            "acc": 26,
+            "nme": "INTEGER_TYPE",
+            "dsc": "Lorg/objectweb/asm/Type;"
+          },
+          {
+            "acc": 26,
+            "nme": "FLOAT_TYPE",
+            "dsc": "Lorg/objectweb/asm/Type;"
+          },
+          {
+            "acc": 26,
+            "nme": "LONG_TYPE",
+            "dsc": "Lorg/objectweb/asm/Type;"
+          },
+          {
+            "acc": 26,
+            "nme": "DOUBLE_TYPE",
+            "dsc": "Lorg/objectweb/asm/Type;"
+          },
+          {
+            "acc": 26,
+            "nme": "NUMBER_TYPE",
+            "dsc": "Lorg/objectweb/asm/Type;"
+          },
+          {
+            "acc": 26,
+            "nme": "OBJECT_TYPE",
+            "dsc": "Lorg/objectweb/asm/Type;"
+          },
+          {
+            "acc": 26,
+            "nme": "BOOLEAN_VALUE",
+            "dsc": "Lorg/objectweb/asm/commons/Method;"
+          },
+          {
+            "acc": 26,
+            "nme": "CHAR_VALUE",
+            "dsc": "Lorg/objectweb/asm/commons/Method;"
+          },
+          {
+            "acc": 26,
+            "nme": "INT_VALUE",
+            "dsc": "Lorg/objectweb/asm/commons/Method;"
+          },
+          {
+            "acc": 26,
+            "nme": "FLOAT_VALUE",
+            "dsc": "Lorg/objectweb/asm/commons/Method;"
+          },
+          {
+            "acc": 26,
+            "nme": "LONG_VALUE",
+            "dsc": "Lorg/objectweb/asm/commons/Method;"
+          },
+          {
+            "acc": 26,
+            "nme": "DOUBLE_VALUE",
+            "dsc": "Lorg/objectweb/asm/commons/Method;"
+          },
+          {
+            "acc": 25,
+            "nme": "ADD",
+            "dsc": "I",
+            "val": 96
+          },
+          {
+            "acc": 25,
+            "nme": "SUB",
+            "dsc": "I",
+            "val": 100
+          },
+          {
+            "acc": 25,
+            "nme": "MUL",
+            "dsc": "I",
+            "val": 104
+          },
+          {
+            "acc": 25,
+            "nme": "DIV",
+            "dsc": "I",
+            "val": 108
+          },
+          {
+            "acc": 25,
+            "nme": "REM",
+            "dsc": "I",
+            "val": 112
+          },
+          {
+            "acc": 25,
+            "nme": "NEG",
+            "dsc": "I",
+            "val": 116
+          },
+          {
+            "acc": 25,
+            "nme": "SHL",
+            "dsc": "I",
+            "val": 120
+          },
+          {
+            "acc": 25,
+            "nme": "SHR",
+            "dsc": "I",
+            "val": 122
+          },
+          {
+            "acc": 25,
+            "nme": "USHR",
+            "dsc": "I",
+            "val": 124
+          },
+          {
+            "acc": 25,
+            "nme": "AND",
+            "dsc": "I",
+            "val": 126
+          },
+          {
+            "acc": 25,
+            "nme": "OR",
+            "dsc": "I",
+            "val": 128
+          },
+          {
+            "acc": 25,
+            "nme": "XOR",
+            "dsc": "I",
+            "val": 130
+          },
+          {
+            "acc": 25,
+            "nme": "EQ",
+            "dsc": "I",
+            "val": 153
+          },
+          {
+            "acc": 25,
+            "nme": "NE",
+            "dsc": "I",
+            "val": 154
+          },
+          {
+            "acc": 25,
+            "nme": "LT",
+            "dsc": "I",
+            "val": 155
+          },
+          {
+            "acc": 25,
+            "nme": "GE",
+            "dsc": "I",
+            "val": 156
+          },
+          {
+            "acc": 25,
+            "nme": "GT",
+            "dsc": "I",
+            "val": 157
+          },
+          {
+            "acc": 25,
+            "nme": "LE",
+            "dsc": "I",
+            "val": 158
+          },
+          {
+            "acc": 18,
+            "nme": "access",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "name",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "returnType",
+            "dsc": "Lorg/objectweb/asm/Type;"
+          },
+          {
+            "acc": 18,
+            "nme": "argumentTypes",
+            "dsc": "[Lorg/objectweb/asm/Type;"
+          },
+          {
+            "acc": 18,
+            "nme": "localTypes",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lorg/objectweb/asm/Type;>;"
+          }
+        ]
+      },
+      "org/objectweb/asm/commons/ModuleRemapper.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/commons/ModuleRemapper",
+        "super": "org/objectweb/asm/ModuleVisitor",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/ModuleVisitor;Lorg/objectweb/asm/commons/Remapper;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(ILorg/objectweb/asm/ModuleVisitor;Lorg/objectweb/asm/commons/Remapper;)V"
+          },
+          {
+            "nme": "visitMainClass",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitPackage",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitRequire",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;ILjava/lang/String;)V"
+          },
+          {
+            "nme": "visitExport",
+            "acc": 129,
+            "dsc": "(Ljava/lang/String;I[Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitOpen",
+            "acc": 129,
+            "dsc": "(Ljava/lang/String;I[Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitUse",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitProvide",
+            "acc": 129,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/String;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 20,
+            "nme": "remapper",
+            "dsc": "Lorg/objectweb/asm/commons/Remapper;"
+          }
+        ]
+      },
+      "org/objectweb/asm/commons/Remapper.class": {
+        "ver": 49,
+        "acc": 1057,
+        "nme": "org/objectweb/asm/commons/Remapper",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "mapDesc",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "mapType",
+            "acc": 2,
+            "dsc": "(Lorg/objectweb/asm/Type;)Lorg/objectweb/asm/Type;"
+          },
+          {
+            "nme": "mapType",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "mapTypes",
+            "acc": 1,
+            "dsc": "([Ljava/lang/String;)[Ljava/lang/String;"
+          },
+          {
+            "nme": "mapMethodDesc",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "mapValue",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;"
+          },
+          {
+            "nme": "mapSignature",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Z)Ljava/lang/String;"
+          },
+          {
+            "nme": "createRemappingSignatureAdapter",
+            "acc": 131076,
+            "dsc": "(Lorg/objectweb/asm/signature/SignatureVisitor;)Lorg/objectweb/asm/signature/SignatureVisitor;",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "createSignatureRemapper",
+            "acc": 4,
+            "dsc": "(Lorg/objectweb/asm/signature/SignatureVisitor;)Lorg/objectweb/asm/signature/SignatureVisitor;"
+          },
+          {
+            "nme": "mapAnnotationAttributeName",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "mapInnerClassName",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "mapMethodName",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "mapInvokeDynamicMethodName",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "mapRecordComponentName",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "mapFieldName",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "mapPackageName",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "mapModuleName",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "map",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          }
+        ],
+        "flds": []
+      },
+      "org/objectweb/asm/commons/AdviceAdapter.class": {
+        "ver": 49,
+        "acc": 1057,
+        "nme": "org/objectweb/asm/commons/AdviceAdapter",
+        "super": "org/objectweb/asm/commons/GeneratorAdapter",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(ILorg/objectweb/asm/MethodVisitor;ILjava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitCode",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "visitLabel",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "visitInsn",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "stringConcat$0",
+            "acc": 4106,
+            "dsc": "(I)Ljava/lang/String;"
+          },
+          {
+            "nme": "visitVarInsn",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "stringConcat$1",
+            "acc": 4106,
+            "dsc": "(I)Ljava/lang/String;"
+          },
+          {
+            "nme": "visitFieldInsn",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "stringConcat$2",
+            "acc": 4106,
+            "dsc": "(I)Ljava/lang/String;"
+          },
+          {
+            "nme": "visitIntInsn",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "visitLdcInsn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "visitMultiANewArrayInsn",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;I)V"
+          },
+          {
+            "nme": "visitTypeInsn",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;)V"
+          },
+          {
+            "nme": "visitMethodInsn",
+            "acc": 1,
+            "dsc": "(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V"
+          },
+          {
+            "nme": "doVisitMethodInsn",
+            "acc": 2,
+            "dsc": "(ILjava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitInvokeDynamicInsn",
+            "acc": 129,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;Lorg/objectweb/asm/Handle;[Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "visitJumpInsn",
+            "acc": 1,
+            "dsc": "(ILorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "visitLookupSwitchInsn",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;[I[Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "visitTableSwitchInsn",
+            "acc": 129,
+            "dsc": "(IILorg/objectweb/asm/Label;[Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "visitTryCatchBlock",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/Label;Lorg/objectweb/asm/Label;Lorg/objectweb/asm/Label;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "addForwardJumps",
+            "acc": 2,
+            "dsc": "(Lorg/objectweb/asm/Label;[Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "addForwardJump",
+            "acc": 2,
+            "dsc": "(Lorg/objectweb/asm/Label;)V"
+          },
+          {
+            "nme": "endConstructorBasicBlockWithoutSuccessor",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "popValue",
+            "acc": 2,
+            "dsc": "()Ljava/lang/Object;"
+          },
+          {
+            "nme": "peekValue",
+            "acc": 2,
+            "dsc": "()Ljava/lang/Object;"
+          },
+          {
+            "nme": "pushValue",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;)V"
+          },
+          {
+            "nme": "onMethodEnter",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "onMethodExit",
+            "acc": 4,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "UNINITIALIZED_THIS",
+            "dsc": "Ljava/lang/Object;"
+          },
+          {
+            "acc": 26,
+            "nme": "OTHER",
+            "dsc": "Ljava/lang/Object;"
+          },
+          {
+            "acc": 26,
+            "nme": "INVALID_OPCODE",
+            "dsc": "Ljava/lang/String;",
+            "val": "Invalid opcode "
+          },
+          {
+            "acc": 4,
+            "nme": "methodAccess",
+            "dsc": "I"
+          },
+          {
+            "acc": 4,
+            "nme": "methodDesc",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "isConstructor",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "superClassConstructorCalled",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "stackFrame",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Ljava/lang/Object;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "forwardJumpStackFrames",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lorg/objectweb/asm/Label;Ljava/util/List<Ljava/lang/Object;>;>;"
+          }
+        ]
+      },
+      "org/objectweb/asm/commons/ModuleTargetAttribute.class": {
+        "ver": 49,
+        "acc": 49,
+        "nme": "org/objectweb/asm/commons/ModuleTargetAttribute",
+        "super": "org/objectweb/asm/Attribute",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "read",
+            "acc": 4,
+            "dsc": "(Lorg/objectweb/asm/ClassReader;II[CI[Lorg/objectweb/asm/Label;)Lorg/objectweb/asm/Attribute;"
+          },
+          {
+            "nme": "write",
+            "acc": 4,
+            "dsc": "(Lorg/objectweb/asm/ClassWriter;[BIII)Lorg/objectweb/asm/ByteVector;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 1,
+            "nme": "platform",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "org/objectweb/asm/commons/TryCatchBlockSorter.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/objectweb/asm/commons/TryCatchBlockSorter",
+        "super": "org/objectweb/asm/tree/MethodNode",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/objectweb/asm/MethodVisitor;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(ILorg/objectweb/asm/MethodVisitor;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V"
+          },
+          {
+            "nme": "visitEnd",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": []
+      }
+    }
+  }
+}

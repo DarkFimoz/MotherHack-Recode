@@ -1,0 +1,2792 @@
+{
+  "md5": "f64df5d6ef332ffe03d15e1ef846b841",
+  "sha2": "44b2a787cc5962d6f6df3a07cf7a809b6016e474",
+  "sha256": "8dce970026f4623725ee2e29833d766e95b96644c9a16d16d610438afc3f9ca7",
+  "contents": {
+    "classes": {
+      "net/fabricmc/fabric/impl/biome/WeightedPicker.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/biome/WeightedPicker",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(DLjava/util/List;)V",
+            "sig": "(DLjava/util/List<Lnet/fabricmc/fabric/impl/biome/WeightedPicker$WeightedEntry<TT;>;>;)V"
+          },
+          {
+            "nme": "add",
+            "acc": 0,
+            "dsc": "(Ljava/lang/Object;D)V",
+            "sig": "(TT;D)V"
+          },
+          {
+            "nme": "getCurrentWeightTotal",
+            "acc": 0,
+            "dsc": "()D"
+          },
+          {
+            "nme": "getEntryCount",
+            "acc": 0,
+            "dsc": "()I"
+          },
+          {
+            "nme": "pickFromNoise",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/math/noise/PerlinNoiseSampler;DDD)Ljava/lang/Object;",
+            "sig": "(Lnet/minecraft/util/math/noise/PerlinNoiseSampler;DDD)TT;"
+          },
+          {
+            "nme": "map",
+            "acc": 0,
+            "dsc": "(Ljava/util/function/Function;)Lnet/fabricmc/fabric/impl/biome/WeightedPicker;",
+            "sig": "<U:Ljava/lang/Object;>(Ljava/util/function/Function<TT;TU;>;)Lnet/fabricmc/fabric/impl/biome/WeightedPicker<TU;>;"
+          },
+          {
+            "nme": "search",
+            "acc": 0,
+            "dsc": "(D)Lnet/fabricmc/fabric/impl/biome/WeightedPicker$WeightedEntry;",
+            "sig": "(D)Lnet/fabricmc/fabric/impl/biome/WeightedPicker$WeightedEntry<TT;>;"
+          },
+          {
+            "nme": "lambda$map$0",
+            "acc": 4106,
+            "dsc": "(Ljava/util/function/Function;Lnet/fabricmc/fabric/impl/biome/WeightedPicker$WeightedEntry;)Lnet/fabricmc/fabric/impl/biome/WeightedPicker$WeightedEntry;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "currentTotal",
+            "dsc": "D"
+          },
+          {
+            "acc": 18,
+            "nme": "entries",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lnet/fabricmc/fabric/impl/biome/WeightedPicker$WeightedEntry<TT;>;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/biome/NetherBiomeData.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/biome/NetherBiomeData",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "addNetherBiome",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;Lnet/minecraft/world/biome/source/util/MultiNoiseUtil$NoiseHypercube;)V",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;Lnet/minecraft/world/biome/source/util/MultiNoiseUtil$NoiseHypercube;)V"
+          },
+          {
+            "nme": "canGenerateInNether",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Z",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;)Z"
+          },
+          {
+            "nme": "clearBiomeSourceCache",
+            "acc": 10,
+            "dsc": "()V"
+          },
+          {
+            "nme": "withModdedBiomeEntries",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/world/biome/source/util/MultiNoiseUtil$Entries;Ljava/util/function/Function;)Lnet/minecraft/world/biome/source/util/MultiNoiseUtil$Entries;",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/minecraft/world/biome/source/util/MultiNoiseUtil$Entries<TT;>;Ljava/util/function/Function<Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;TT;>;)Lnet/minecraft/world/biome/source/util/MultiNoiseUtil$Entries<TT;>;"
+          },
+          {
+            "nme": "lambda$canGenerateInNether$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;Lnet/minecraft/registry/RegistryKey;)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "NETHER_BIOMES",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;>;"
+          },
+          {
+            "acc": 26,
+            "nme": "NETHER_BIOME_NOISE_POINTS",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;Lnet/minecraft/world/biome/source/util/MultiNoiseUtil$NoiseHypercube;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/biome/modification/BiomeModificationContextImpl$SpawnSettingsContextImpl.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "net/fabricmc/fabric/impl/biome/modification/BiomeModificationContextImpl$SpawnSettingsContextImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lnet/fabricmc/fabric/impl/biome/modification/BiomeModificationContextImpl;)V"
+          },
+          {
+            "nme": "unfreezeSpawners",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "unfreezeSpawnCost",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "freeze",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "freezeSpawners",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "freezeSpawnCosts",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setCreatureSpawnProbability",
+            "acc": 1,
+            "dsc": "(F)V"
+          },
+          {
+            "nme": "addSpawn",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/entity/SpawnGroup;Lnet/minecraft/world/biome/SpawnSettings$SpawnEntry;)V"
+          },
+          {
+            "nme": "removeSpawns",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/BiPredicate;)Z",
+            "sig": "(Ljava/util/function/BiPredicate<Lnet/minecraft/entity/SpawnGroup;Lnet/minecraft/world/biome/SpawnSettings$SpawnEntry;>;)Z"
+          },
+          {
+            "nme": "setSpawnCost",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/entity/EntityType;DD)V",
+            "sig": "(Lnet/minecraft/entity/EntityType<*>;DD)V"
+          },
+          {
+            "nme": "clearSpawnCost",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/entity/EntityType;)V",
+            "sig": "(Lnet/minecraft/entity/EntityType<*>;)V"
+          },
+          {
+            "nme": "lambda$removeSpawns$0",
+            "acc": 4106,
+            "dsc": "(Ljava/util/function/BiPredicate;Lnet/minecraft/entity/SpawnGroup;Lnet/minecraft/world/biome/SpawnSettings$SpawnEntry;)Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "spawnSettings",
+            "dsc": "Lnet/minecraft/world/biome/SpawnSettings;"
+          },
+          {
+            "acc": 18,
+            "nme": "fabricSpawners",
+            "dsc": "Ljava/util/EnumMap;",
+            "sig": "Ljava/util/EnumMap<Lnet/minecraft/entity/SpawnGroup;Ljava/util/List<Lnet/minecraft/world/biome/SpawnSettings$SpawnEntry;>;>;"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lnet/fabricmc/fabric/impl/biome/modification/BiomeModificationContextImpl;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/biome/modification/BiomeModificationMarker.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/impl/biome/modification/BiomeModificationMarker",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "fabric_markModified",
+            "acc": 1025,
+            "dsc": "()V"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/impl/biome/modification/BiomeModificationContextImpl$GenerationSettingsContextImpl.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "net/fabricmc/fabric/impl/biome/modification/BiomeModificationContextImpl$GenerationSettingsContextImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lnet/fabricmc/fabric/impl/biome/modification/BiomeModificationContextImpl;)V"
+          },
+          {
+            "nme": "unfreezeFeatures",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "freeze",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "freezeFeatures",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "rebuildFlowerFeatures",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "removeFeature",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/world/gen/GenerationStep$Feature;Lnet/minecraft/registry/RegistryKey;)Z",
+            "sig": "(Lnet/minecraft/world/gen/GenerationStep$Feature;Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/gen/feature/PlacedFeature;>;)Z"
+          },
+          {
+            "nme": "addFeature",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/world/gen/GenerationStep$Feature;Lnet/minecraft/registry/RegistryKey;)V",
+            "sig": "(Lnet/minecraft/world/gen/GenerationStep$Feature;Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/gen/feature/PlacedFeature;>;)V"
+          },
+          {
+            "nme": "addCarver",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)V",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/gen/carver/ConfiguredCarver<*>;>;)V"
+          },
+          {
+            "nme": "removeCarver",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Z",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/gen/carver/ConfiguredCarver<*>;>;)Z"
+          },
+          {
+            "nme": "plus",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/registry/entry/RegistryEntryList;Lnet/minecraft/registry/entry/RegistryEntry;)Lnet/minecraft/registry/entry/RegistryEntryList;",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/minecraft/registry/entry/RegistryEntryList<TT;>;Lnet/minecraft/registry/entry/RegistryEntry<TT;>;)Lnet/minecraft/registry/entry/RegistryEntryList<TT;>;"
+          },
+          {
+            "nme": "lambda$removeCarver$4",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/world/gen/carver/ConfiguredCarver;Lnet/minecraft/registry/entry/RegistryEntry;)Z"
+          },
+          {
+            "nme": "lambda$removeFeature$3",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/world/gen/feature/PlacedFeature;Lnet/minecraft/registry/entry/RegistryEntry;)Z"
+          },
+          {
+            "nme": "lambda$rebuildFlowerFeatures$2",
+            "acc": 4098,
+            "dsc": "()Ljava/util/List;"
+          },
+          {
+            "nme": "lambda$rebuildFlowerFeatures$1",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/world/gen/feature/ConfiguredFeature;)Z"
+          },
+          {
+            "nme": "lambda$freezeFeatures$0",
+            "acc": 4098,
+            "dsc": "()Ljava/util/Set;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "carvers",
+            "dsc": "Lnet/minecraft/registry/Registry;",
+            "sig": "Lnet/minecraft/registry/Registry<Lnet/minecraft/world/gen/carver/ConfiguredCarver<*>;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "features",
+            "dsc": "Lnet/minecraft/registry/Registry;",
+            "sig": "Lnet/minecraft/registry/Registry<Lnet/minecraft/world/gen/feature/PlacedFeature;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "generationSettings",
+            "dsc": "Lnet/minecraft/world/biome/GenerationSettings;"
+          },
+          {
+            "acc": 0,
+            "nme": "rebuildFeatures",
+            "dsc": "Z"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lnet/fabricmc/fabric/impl/biome/modification/BiomeModificationContextImpl;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/biome/MultiNoiseSamplerHooks.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/impl/biome/MultiNoiseSamplerHooks",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "fabric_getEndBiomesSampler",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/util/math/noise/PerlinNoiseSampler;"
+          },
+          {
+            "nme": "fabric_setSeed",
+            "acc": 1025,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "fabric_getSeed",
+            "acc": 1025,
+            "dsc": "()J"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/api/biome/v1/NetherBiomes.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/biome/v1/NetherBiomes",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "addNetherBiome",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;Lnet/minecraft/world/biome/source/util/MultiNoiseUtil$NoiseValuePoint;)V",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;Lnet/minecraft/world/biome/source/util/MultiNoiseUtil$NoiseValuePoint;)V"
+          },
+          {
+            "nme": "addNetherBiome",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;Lnet/minecraft/world/biome/source/util/MultiNoiseUtil$NoiseHypercube;)V",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;Lnet/minecraft/world/biome/source/util/MultiNoiseUtil$NoiseHypercube;)V"
+          },
+          {
+            "nme": "canGenerateInNether",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Z",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;)Z"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/mixin/biome/ChunkNoiseSamplerMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/biome/ChunkNoiseSamplerMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "init",
+            "acc": 2,
+            "dsc": "(ILnet/minecraft/world/gen/noise/NoiseConfig;IILnet/minecraft/world/gen/chunk/GenerationShapeConfig;Lnet/minecraft/world/gen/densityfunction/DensityFunctionTypes$Beardifying;Lnet/minecraft/world/gen/chunk/ChunkGeneratorSettings;Lnet/minecraft/world/gen/chunk/AquiferSampler$FluidLevelSampler;Lnet/minecraft/world/gen/chunk/Blender;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "<init>"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "TAIL"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "createMultiNoiseSampler",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/world/gen/noise/NoiseRouter;Ljava/util/List;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lnet/minecraft/world/gen/noise/NoiseRouter;Ljava/util/List<Lnet/minecraft/world/biome/source/util/MultiNoiseUtil$NoiseHypercube;>;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Lnet/minecraft/world/biome/source/util/MultiNoiseUtil$MultiNoiseSampler;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "createMultiNoiseSampler"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "seed",
+            "dsc": "J"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/world/gen/chunk/ChunkNoiseSampler"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/biome/v1/ModificationPhase.class": {
+        "ver": 65,
+        "acc": 16433,
+        "nme": "net/fabricmc/fabric/api/biome/v1/ModificationPhase",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lnet/fabricmc/fabric/api/biome/v1/ModificationPhase;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lnet/fabricmc/fabric/api/biome/v1/ModificationPhase;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "$values",
+            "acc": 4106,
+            "dsc": "()[Lnet/fabricmc/fabric/api/biome/v1/ModificationPhase;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "ADDITIONS",
+            "dsc": "Lnet/fabricmc/fabric/api/biome/v1/ModificationPhase;"
+          },
+          {
+            "acc": 16409,
+            "nme": "REMOVALS",
+            "dsc": "Lnet/fabricmc/fabric/api/biome/v1/ModificationPhase;"
+          },
+          {
+            "acc": 16409,
+            "nme": "REPLACEMENTS",
+            "dsc": "Lnet/fabricmc/fabric/api/biome/v1/ModificationPhase;"
+          },
+          {
+            "acc": 16409,
+            "nme": "POST_PROCESSING",
+            "dsc": "Lnet/fabricmc/fabric/api/biome/v1/ModificationPhase;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lnet/fabricmc/fabric/api/biome/v1/ModificationPhase;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/biome/modification/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/mixin/biome/modification/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/biome/modification/BiomeModificationContextImpl$WeatherContextImpl.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "net/fabricmc/fabric/impl/biome/modification/BiomeModificationContextImpl$WeatherContextImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Lnet/fabricmc/fabric/impl/biome/modification/BiomeModificationContextImpl;)V"
+          },
+          {
+            "nme": "setPrecipitation",
+            "acc": 1,
+            "dsc": "(Z)V"
+          },
+          {
+            "nme": "setTemperature",
+            "acc": 1,
+            "dsc": "(F)V"
+          },
+          {
+            "nme": "setTemperatureModifier",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/world/biome/Biome$TemperatureModifier;)V"
+          },
+          {
+            "nme": "setDownfall",
+            "acc": 1,
+            "dsc": "(F)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lnet/fabricmc/fabric/impl/biome/modification/BiomeModificationContextImpl;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/biome/v1/BiomeModificationContext$EffectsContext.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/biome/v1/BiomeModificationContext$EffectsContext",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "setFogColor",
+            "acc": 1025,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "setWaterColor",
+            "acc": 1025,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "setWaterFogColor",
+            "acc": 1025,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "setSkyColor",
+            "acc": 1025,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "setFoliageColor",
+            "acc": 1025,
+            "dsc": "(Ljava/util/Optional;)V",
+            "sig": "(Ljava/util/Optional<Ljava/lang/Integer;>;)V"
+          },
+          {
+            "nme": "setFoliageColor",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "setFoliageColor",
+            "acc": 1,
+            "dsc": "(Ljava/util/OptionalInt;)V"
+          },
+          {
+            "nme": "clearFoliageColor",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setGrassColor",
+            "acc": 1025,
+            "dsc": "(Ljava/util/Optional;)V",
+            "sig": "(Ljava/util/Optional<Ljava/lang/Integer;>;)V"
+          },
+          {
+            "nme": "setGrassColor",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "setGrassColor",
+            "acc": 1,
+            "dsc": "(Ljava/util/OptionalInt;)V"
+          },
+          {
+            "nme": "clearGrassColor",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setGrassColorModifier",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/world/biome/BiomeEffects$GrassColorModifier;)V"
+          },
+          {
+            "nme": "setParticleConfig",
+            "acc": 1025,
+            "dsc": "(Ljava/util/Optional;)V",
+            "sig": "(Ljava/util/Optional<Lnet/minecraft/world/biome/BiomeParticleConfig;>;)V"
+          },
+          {
+            "nme": "setParticleConfig",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/world/biome/BiomeParticleConfig;)V"
+          },
+          {
+            "nme": "clearParticleConfig",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setAmbientSound",
+            "acc": 1025,
+            "dsc": "(Ljava/util/Optional;)V",
+            "sig": "(Ljava/util/Optional<Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/sound/SoundEvent;>;>;)V"
+          },
+          {
+            "nme": "setAmbientSound",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/registry/entry/RegistryEntry;)V",
+            "sig": "(Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/sound/SoundEvent;>;)V"
+          },
+          {
+            "nme": "clearAmbientSound",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setMoodSound",
+            "acc": 1025,
+            "dsc": "(Ljava/util/Optional;)V",
+            "sig": "(Ljava/util/Optional<Lnet/minecraft/sound/BiomeMoodSound;>;)V"
+          },
+          {
+            "nme": "setMoodSound",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/sound/BiomeMoodSound;)V"
+          },
+          {
+            "nme": "clearMoodSound",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setAdditionsSound",
+            "acc": 1025,
+            "dsc": "(Ljava/util/Optional;)V",
+            "sig": "(Ljava/util/Optional<Lnet/minecraft/sound/BiomeAdditionsSound;>;)V"
+          },
+          {
+            "nme": "setAdditionsSound",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/sound/BiomeAdditionsSound;)V"
+          },
+          {
+            "nme": "clearAdditionsSound",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setMusic",
+            "acc": 1025,
+            "dsc": "(Ljava/util/Optional;)V",
+            "sig": "(Ljava/util/Optional<Lnet/minecraft/util/collection/DataPool<Lnet/minecraft/sound/MusicSound;>;>;)V"
+          },
+          {
+            "nme": "setMusic",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/collection/DataPool;)V",
+            "sig": "(Lnet/minecraft/util/collection/DataPool<Lnet/minecraft/sound/MusicSound;>;)V"
+          },
+          {
+            "nme": "setMusic",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/sound/MusicSound;)V"
+          },
+          {
+            "nme": "clearMusic",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setMusicVolume",
+            "acc": 1025,
+            "dsc": "(F)V"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/api/biome/v1/BiomeModificationContext$WeatherContext.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/biome/v1/BiomeModificationContext$WeatherContext",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "setPrecipitation",
+            "acc": 1025,
+            "dsc": "(Z)V"
+          },
+          {
+            "nme": "setTemperature",
+            "acc": 1025,
+            "dsc": "(F)V"
+          },
+          {
+            "nme": "setTemperatureModifier",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/world/biome/Biome$TemperatureModifier;)V"
+          },
+          {
+            "nme": "setDownfall",
+            "acc": 1025,
+            "dsc": "(F)V"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/impl/biome/WeightedPicker$WeightedEntry.class": {
+        "ver": 65,
+        "acc": 65584,
+        "nme": "net/fabricmc/fabric/impl/biome/WeightedPicker$WeightedEntry",
+        "super": "java/lang/Record",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/Object;DD)V",
+            "sig": "(TT;DD)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 17,
+            "dsc": "()I"
+          },
+          {
+            "nme": "equals",
+            "acc": 17,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "entry",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Object;",
+            "sig": "()TT;"
+          },
+          {
+            "nme": "weight",
+            "acc": 1,
+            "dsc": "()D"
+          },
+          {
+            "nme": "upperWeightBound",
+            "acc": 1,
+            "dsc": "()D"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "entry",
+            "dsc": "Ljava/lang/Object;",
+            "sig": "TT;"
+          },
+          {
+            "acc": 18,
+            "nme": "weight",
+            "dsc": "D"
+          },
+          {
+            "acc": 18,
+            "nme": "upperWeightBound",
+            "dsc": "D"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/biome/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/biome/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/biome/modification/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/impl/biome/modification/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/biome/TheEndBiomeData$Overrides.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/biome/TheEndBiomeData$Overrides",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/registry/RegistryEntryLookup;)V",
+            "sig": "(Lnet/minecraft/registry/RegistryEntryLookup<Lnet/minecraft/world/biome/Biome;>;)V"
+          },
+          {
+            "nme": "resolveOverrides",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/registry/RegistryEntryLookup;Ljava/util/Map;Lnet/minecraft/registry/RegistryKey;)Ljava/util/Map;",
+            "sig": "(Lnet/minecraft/registry/RegistryEntryLookup<Lnet/minecraft/world/biome/Biome;>;Ljava/util/Map<Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;Lnet/fabricmc/fabric/impl/biome/WeightedPicker<Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;>;>;Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;)Ljava/util/Map<Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;Lnet/fabricmc/fabric/impl/biome/WeightedPicker<Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;>;>;",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/Nullable;"
+              }
+            ]
+          },
+          {
+            "nme": "pick",
+            "acc": 1,
+            "dsc": "(IIILnet/minecraft/world/biome/source/util/MultiNoiseUtil$MultiNoiseSampler;Lnet/minecraft/registry/entry/RegistryEntry;)Lnet/minecraft/registry/entry/RegistryEntry;",
+            "sig": "(IIILnet/minecraft/world/biome/source/util/MultiNoiseUtil$MultiNoiseSampler;Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;)Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "nme": "pick",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/registry/entry/RegistryEntry;Lnet/minecraft/registry/entry/RegistryEntry;Ljava/util/Map;IILnet/minecraft/world/biome/source/util/MultiNoiseUtil$MultiNoiseSampler;)Lnet/minecraft/registry/entry/RegistryEntry;",
+            "sig": "<T::Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;>(TT;TT;Ljava/util/Map<TT;Lnet/fabricmc/fabric/impl/biome/WeightedPicker<TT;>;>;IILnet/minecraft/world/biome/source/util/MultiNoiseUtil$MultiNoiseSampler;)TT;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 17,
+            "nme": "customBiomes",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "endMidlands",
+            "dsc": "Lnet/minecraft/registry/entry/RegistryEntry;",
+            "sig": "Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "endBarrens",
+            "dsc": "Lnet/minecraft/registry/entry/RegistryEntry;",
+            "sig": "Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "endHighlands",
+            "dsc": "Lnet/minecraft/registry/entry/RegistryEntry;",
+            "sig": "Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "endBiomesMap",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;Lnet/fabricmc/fabric/impl/biome/WeightedPicker<Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;>;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "endMidlandsMap",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;Lnet/fabricmc/fabric/impl/biome/WeightedPicker<Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;>;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "endBarrensMap",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;Lnet/fabricmc/fabric/impl/biome/WeightedPicker<Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;>;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "samplers",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/world/biome/source/util/MultiNoiseUtil$MultiNoiseSampler;Lnet/minecraft/util/math/noise/PerlinNoiseSampler;>;"
+          },
+          {
+            "acc": 4120,
+            "nme": "$assertionsDisabled",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/biome/TheEndBiomeSourceMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/biome/TheEndBiomeSourceMixin",
+        "super": "net/fabricmc/fabric/mixin/biome/BiomeSourceMixin",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "modifyCodec",
+            "acc": 10,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "<clinit>"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "TAIL"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "rememberLookup",
+            "acc": 10,
+            "dsc": "(Lnet/minecraft/registry/RegistryEntryLookup;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lnet/minecraft/registry/RegistryEntryLookup<Lnet/minecraft/world/biome/Biome;>;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<*>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "createVanilla"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "HEAD"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "clearLookup",
+            "acc": 10,
+            "dsc": "(Lnet/minecraft/registry/RegistryEntryLookup;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(Lnet/minecraft/registry/RegistryEntryLookup<Lnet/minecraft/world/biome/Biome;>;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<*>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "createVanilla"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "TAIL"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "init",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/registry/entry/RegistryEntry;Lnet/minecraft/registry/entry/RegistryEntry;Lnet/minecraft/registry/entry/RegistryEntry;Lnet/minecraft/registry/entry/RegistryEntry;Lnet/minecraft/registry/entry/RegistryEntry;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "sig": "(Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "<init>"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "getWeightedEndBiome",
+            "acc": 2,
+            "dsc": "(IIILnet/minecraft/world/biome/source/util/MultiNoiseUtil$MultiNoiseSampler;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "(IIILnet/minecraft/world/biome/source/util/MultiNoiseUtil$MultiNoiseSampler;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "getBiome"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "fabric_modifyBiomeSet",
+            "acc": 4,
+            "dsc": "(Ljava/util/Set;)Ljava/util/Set;",
+            "sig": "(Ljava/util/Set<Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;>;)Ljava/util/Set<Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;>;"
+          },
+          {
+            "nme": "lambda$init$1",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/registry/RegistryEntryLookup;)Lnet/fabricmc/fabric/impl/biome/TheEndBiomeData$Overrides;"
+          },
+          {
+            "nme": "lambda$modifyCodec$0",
+            "acc": 4106,
+            "dsc": "(Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 8,
+            "nme": "field_24730",
+            "dsc": "Lcom/mojang/serialization/MapCodec;",
+            "sig": "Lcom/mojang/serialization/MapCodec<Lnet/minecraft/world/biome/source/TheEndBiomeSource;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "overrides",
+            "dsc": "Ljava/util/function/Supplier;",
+            "sig": "Ljava/util/function/Supplier<Lnet/fabricmc/fabric/impl/biome/TheEndBiomeData$Overrides;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "biomeSetModified",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "hasCheckedForModifiedSet",
+            "dsc": "Z"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/world/biome/source/TheEndBiomeSource"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/biome/v1/BiomeModification.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/api/biome/v1/BiomeModification",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lnet/minecraft/util/Identifier;)V",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+              }
+            ]
+          },
+          {
+            "nme": "add",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/biome/v1/ModificationPhase;Ljava/util/function/Predicate;Ljava/util/function/Consumer;)Lnet/fabricmc/fabric/api/biome/v1/BiomeModification;",
+            "sig": "(Lnet/fabricmc/fabric/api/biome/v1/ModificationPhase;Ljava/util/function/Predicate<Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;>;Ljava/util/function/Consumer<Lnet/fabricmc/fabric/api/biome/v1/BiomeModificationContext;>;)Lnet/fabricmc/fabric/api/biome/v1/BiomeModification;"
+          },
+          {
+            "nme": "add",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/biome/v1/ModificationPhase;Ljava/util/function/Predicate;Ljava/util/function/BiConsumer;)Lnet/fabricmc/fabric/api/biome/v1/BiomeModification;",
+            "sig": "(Lnet/fabricmc/fabric/api/biome/v1/ModificationPhase;Ljava/util/function/Predicate<Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;>;Ljava/util/function/BiConsumer<Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;Lnet/fabricmc/fabric/api/biome/v1/BiomeModificationContext;>;)Lnet/fabricmc/fabric/api/biome/v1/BiomeModification;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "id",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/biome/modification/BuiltInRegistryKeys.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/biome/modification/BuiltInRegistryKeys",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "isBuiltinBiome",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Z",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;)Z"
+          },
+          {
+            "nme": "biomeRegistryWrapper",
+            "acc": 9,
+            "dsc": "()Lnet/minecraft/registry/RegistryEntryLookup;",
+            "sig": "()Lnet/minecraft/registry/RegistryEntryLookup<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "vanillaRegistries",
+            "dsc": "Lnet/minecraft/registry/RegistryWrapper$WrapperLookup;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/biome/modification/DynamicRegistryManagerImmutableImplMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/biome/modification/DynamicRegistryManagerImmutableImplMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "fabric_markModified",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "modified",
+            "dsc": "Z"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/registry/DynamicRegistryManager$ImmutableImpl"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/biome/modification/BiomeSelectionContextImpl.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/biome/modification/BiomeSelectionContextImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/registry/DynamicRegistryManager;Lnet/minecraft/registry/RegistryKey;Lnet/minecraft/world/biome/Biome;)V",
+            "sig": "(Lnet/minecraft/registry/DynamicRegistryManager;Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;Lnet/minecraft/world/biome/Biome;)V"
+          },
+          {
+            "nme": "getBiomeKey",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/registry/RegistryKey;",
+            "sig": "()Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "nme": "getBiome",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/world/biome/Biome;"
+          },
+          {
+            "nme": "getBiomeRegistryEntry",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/registry/entry/RegistryEntry;",
+            "sig": "()Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "nme": "getFeatureKey",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/world/gen/feature/ConfiguredFeature;)Ljava/util/Optional;",
+            "sig": "(Lnet/minecraft/world/gen/feature/ConfiguredFeature<**>;)Ljava/util/Optional<Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/gen/feature/ConfiguredFeature<**>;>;>;"
+          },
+          {
+            "nme": "getPlacedFeatureKey",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/world/gen/feature/PlacedFeature;)Ljava/util/Optional;",
+            "sig": "(Lnet/minecraft/world/gen/feature/PlacedFeature;)Ljava/util/Optional<Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/gen/feature/PlacedFeature;>;>;"
+          },
+          {
+            "nme": "validForStructure",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Z",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/gen/structure/Structure;>;)Z"
+          },
+          {
+            "nme": "getStructureKey",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/world/gen/structure/Structure;)Ljava/util/Optional;",
+            "sig": "(Lnet/minecraft/world/gen/structure/Structure;)Ljava/util/Optional<Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/gen/structure/Structure;>;>;"
+          },
+          {
+            "nme": "canGenerateIn",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Z",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/dimension/DimensionOptions;>;)Z"
+          },
+          {
+            "nme": "hasTag",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/registry/tag/TagKey;)Z",
+            "sig": "(Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;)Z"
+          },
+          {
+            "nme": "lambda$canGenerateIn$0",
+            "acc": 4098,
+            "dsc": "(Lnet/minecraft/registry/entry/RegistryEntry;)Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "dynamicRegistries",
+            "dsc": "Lnet/minecraft/registry/DynamicRegistryManager;"
+          },
+          {
+            "acc": 18,
+            "nme": "key",
+            "dsc": "Lnet/minecraft/registry/RegistryKey;",
+            "sig": "Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "biome",
+            "dsc": "Lnet/minecraft/world/biome/Biome;"
+          },
+          {
+            "acc": 18,
+            "nme": "entry",
+            "dsc": "Lnet/minecraft/registry/entry/RegistryEntry;",
+            "sig": "Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/biome/MultiNoiseUtilMultiNoiseSamplerMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/biome/MultiNoiseUtilMultiNoiseSamplerMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "fabric_setSeed",
+            "acc": 1,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "fabric_getSeed",
+            "acc": 1,
+            "dsc": "()J"
+          },
+          {
+            "nme": "fabric_getEndBiomesSampler",
+            "acc": 1,
+            "dsc": "()Lnet/minecraft/util/math/noise/PerlinNoiseSampler;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "seed",
+            "dsc": "Ljava/lang/Long;"
+          },
+          {
+            "acc": 2,
+            "nme": "endBiomesSampler",
+            "dsc": "Lnet/minecraft/util/math/noise/PerlinNoiseSampler;"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/world/biome/source/util/MultiNoiseUtil$MultiNoiseSampler"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/biome/v1/BiomeSelectors.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/biome/v1/BiomeSelectors",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "all",
+            "acc": 9,
+            "dsc": "()Ljava/util/function/Predicate;",
+            "sig": "()Ljava/util/function/Predicate<Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;>;"
+          },
+          {
+            "nme": "vanilla",
+            "acc": 9,
+            "dsc": "()Ljava/util/function/Predicate;",
+            "sig": "()Ljava/util/function/Predicate<Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;>;"
+          },
+          {
+            "nme": "foundInOverworld",
+            "acc": 9,
+            "dsc": "()Ljava/util/function/Predicate;",
+            "sig": "()Ljava/util/function/Predicate<Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;>;"
+          },
+          {
+            "nme": "foundInTheNether",
+            "acc": 9,
+            "dsc": "()Ljava/util/function/Predicate;",
+            "sig": "()Ljava/util/function/Predicate<Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;>;"
+          },
+          {
+            "nme": "foundInTheEnd",
+            "acc": 9,
+            "dsc": "()Ljava/util/function/Predicate;",
+            "sig": "()Ljava/util/function/Predicate<Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;>;"
+          },
+          {
+            "nme": "tag",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/tag/TagKey;)Ljava/util/function/Predicate;",
+            "sig": "(Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;)Ljava/util/function/Predicate<Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;>;"
+          },
+          {
+            "nme": "excludeByKey",
+            "acc": 137,
+            "dsc": "([Lnet/minecraft/registry/RegistryKey;)Ljava/util/function/Predicate;",
+            "sig": "([Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;)Ljava/util/function/Predicate<Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;>;",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/SafeVarargs;"
+              }
+            ]
+          },
+          {
+            "nme": "excludeByKey",
+            "acc": 9,
+            "dsc": "(Ljava/util/Collection;)Ljava/util/function/Predicate;",
+            "sig": "(Ljava/util/Collection<Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;>;)Ljava/util/function/Predicate<Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;>;"
+          },
+          {
+            "nme": "includeByKey",
+            "acc": 137,
+            "dsc": "([Lnet/minecraft/registry/RegistryKey;)Ljava/util/function/Predicate;",
+            "sig": "([Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;)Ljava/util/function/Predicate<Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;>;",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/SafeVarargs;"
+              }
+            ]
+          },
+          {
+            "nme": "includeByKey",
+            "acc": 9,
+            "dsc": "(Ljava/util/Collection;)Ljava/util/function/Predicate;",
+            "sig": "(Ljava/util/Collection<Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;>;)Ljava/util/function/Predicate<Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;>;"
+          },
+          {
+            "nme": "spawnsOneOf",
+            "acc": 137,
+            "dsc": "([Lnet/minecraft/entity/EntityType;)Ljava/util/function/Predicate;",
+            "sig": "([Lnet/minecraft/entity/EntityType<*>;)Ljava/util/function/Predicate<Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;>;"
+          },
+          {
+            "nme": "spawnsOneOf",
+            "acc": 9,
+            "dsc": "(Ljava/util/Set;)Ljava/util/function/Predicate;",
+            "sig": "(Ljava/util/Set<Lnet/minecraft/entity/EntityType<*>;>;)Ljava/util/function/Predicate<Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;>;"
+          },
+          {
+            "nme": "lambda$spawnsOneOf$8",
+            "acc": 4106,
+            "dsc": "(Ljava/util/Set;Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;)Z"
+          },
+          {
+            "nme": "lambda$includeByKey$7",
+            "acc": 4106,
+            "dsc": "(Ljava/util/Collection;Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;)Z"
+          },
+          {
+            "nme": "lambda$excludeByKey$6",
+            "acc": 4106,
+            "dsc": "(Ljava/util/Collection;Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;)Z"
+          },
+          {
+            "nme": "lambda$tag$5",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/registry/tag/TagKey;Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;)Z"
+          },
+          {
+            "nme": "lambda$foundInTheEnd$4",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;)Z"
+          },
+          {
+            "nme": "lambda$foundInTheNether$3",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;)Z"
+          },
+          {
+            "nme": "lambda$foundInOverworld$2",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;)Z"
+          },
+          {
+            "nme": "lambda$vanilla$1",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;)Z"
+          },
+          {
+            "nme": "lambda$all$0",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;)Z"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/api/biome/v1/BiomeSelectionContext.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/biome/v1/BiomeSelectionContext",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getBiomeKey",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/registry/RegistryKey;",
+            "sig": "()Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "nme": "getBiome",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/world/biome/Biome;"
+          },
+          {
+            "nme": "getBiomeRegistryEntry",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/registry/entry/RegistryEntry;",
+            "sig": "()Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;"
+          },
+          {
+            "nme": "hasFeature",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Z",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/gen/feature/ConfiguredFeature<**>;>;)Z"
+          },
+          {
+            "nme": "hasPlacedFeature",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Z",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/gen/feature/PlacedFeature;>;)Z"
+          },
+          {
+            "nme": "getFeatureKey",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/world/gen/feature/ConfiguredFeature;)Ljava/util/Optional;",
+            "sig": "(Lnet/minecraft/world/gen/feature/ConfiguredFeature<**>;)Ljava/util/Optional<Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/gen/feature/ConfiguredFeature<**>;>;>;"
+          },
+          {
+            "nme": "getPlacedFeatureKey",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/world/gen/feature/PlacedFeature;)Ljava/util/Optional;",
+            "sig": "(Lnet/minecraft/world/gen/feature/PlacedFeature;)Ljava/util/Optional<Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/gen/feature/PlacedFeature;>;>;"
+          },
+          {
+            "nme": "validForStructure",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Z",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/gen/structure/Structure;>;)Z"
+          },
+          {
+            "nme": "getStructureKey",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/world/gen/structure/Structure;)Ljava/util/Optional;",
+            "sig": "(Lnet/minecraft/world/gen/structure/Structure;)Ljava/util/Optional<Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/gen/structure/Structure;>;>;"
+          },
+          {
+            "nme": "canGenerateIn",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Z",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/dimension/DimensionOptions;>;)Z"
+          },
+          {
+            "nme": "hasTag",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/registry/tag/TagKey;)Z",
+            "sig": "(Lnet/minecraft/registry/tag/TagKey<Lnet/minecraft/world/biome/Biome;>;)Z"
+          },
+          {
+            "nme": "lambda$hasFeature$0",
+            "acc": 4098,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;Lnet/minecraft/world/gen/feature/ConfiguredFeature;)Z"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/impl/biome/TheEndBiomeData.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/impl/biome/TheEndBiomeData",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "addEndBiomeReplacement",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;Lnet/minecraft/registry/RegistryKey;D)V",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;D)V"
+          },
+          {
+            "nme": "addEndMidlandsReplacement",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;Lnet/minecraft/registry/RegistryKey;D)V",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;D)V"
+          },
+          {
+            "nme": "addEndBarrensReplacement",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;Lnet/minecraft/registry/RegistryKey;D)V",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;D)V"
+          },
+          {
+            "nme": "createOverrides",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/RegistryEntryLookup;)Lnet/fabricmc/fabric/impl/biome/TheEndBiomeData$Overrides;",
+            "sig": "(Lnet/minecraft/registry/RegistryEntryLookup<Lnet/minecraft/world/biome/Biome;>;)Lnet/fabricmc/fabric/impl/biome/TheEndBiomeData$Overrides;"
+          },
+          {
+            "nme": "lambda$addEndBarrensReplacement$7",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Lnet/fabricmc/fabric/impl/biome/WeightedPicker;"
+          },
+          {
+            "nme": "lambda$addEndMidlandsReplacement$6",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Lnet/fabricmc/fabric/impl/biome/WeightedPicker;"
+          },
+          {
+            "nme": "lambda$addEndBiomeReplacement$5",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Lnet/fabricmc/fabric/impl/biome/WeightedPicker;"
+          },
+          {
+            "nme": "lambda$static$4",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Lnet/fabricmc/fabric/impl/biome/WeightedPicker;"
+          },
+          {
+            "nme": "lambda$static$3",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Lnet/fabricmc/fabric/impl/biome/WeightedPicker;"
+          },
+          {
+            "nme": "lambda$static$2",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Lnet/fabricmc/fabric/impl/biome/WeightedPicker;"
+          },
+          {
+            "nme": "lambda$static$1",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Lnet/fabricmc/fabric/impl/biome/WeightedPicker;"
+          },
+          {
+            "nme": "lambda$static$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Lnet/fabricmc/fabric/impl/biome/WeightedPicker;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "biomeRegistry",
+            "dsc": "Ljava/lang/ThreadLocal;",
+            "sig": "Ljava/lang/ThreadLocal<Lnet/minecraft/registry/RegistryEntryLookup<Lnet/minecraft/world/biome/Biome;>;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "ADDED_BIOMES",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;>;"
+          },
+          {
+            "acc": 26,
+            "nme": "END_BIOMES_MAP",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;Lnet/fabricmc/fabric/impl/biome/WeightedPicker<Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;>;>;"
+          },
+          {
+            "acc": 26,
+            "nme": "END_MIDLANDS_MAP",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;Lnet/fabricmc/fabric/impl/biome/WeightedPicker<Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;>;>;"
+          },
+          {
+            "acc": 26,
+            "nme": "END_BARRENS_MAP",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;Lnet/fabricmc/fabric/impl/biome/WeightedPicker<Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;>;>;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/biome/v1/BiomeModifications.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/biome/v1/BiomeModifications",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "addFeature",
+            "acc": 9,
+            "dsc": "(Ljava/util/function/Predicate;Lnet/minecraft/world/gen/GenerationStep$Feature;Lnet/minecraft/registry/RegistryKey;)V",
+            "sig": "(Ljava/util/function/Predicate<Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;>;Lnet/minecraft/world/gen/GenerationStep$Feature;Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/gen/feature/PlacedFeature;>;)V"
+          },
+          {
+            "nme": "addCarver",
+            "acc": 9,
+            "dsc": "(Ljava/util/function/Predicate;Lnet/minecraft/registry/RegistryKey;)V",
+            "sig": "(Ljava/util/function/Predicate<Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;>;Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/gen/carver/ConfiguredCarver<*>;>;)V"
+          },
+          {
+            "nme": "addSpawn",
+            "acc": 9,
+            "dsc": "(Ljava/util/function/Predicate;Lnet/minecraft/entity/SpawnGroup;Lnet/minecraft/entity/EntityType;III)V",
+            "sig": "(Ljava/util/function/Predicate<Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;>;Lnet/minecraft/entity/SpawnGroup;Lnet/minecraft/entity/EntityType<*>;III)V"
+          },
+          {
+            "nme": "create",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/util/Identifier;)Lnet/fabricmc/fabric/api/biome/v1/BiomeModification;"
+          },
+          {
+            "nme": "lambda$addSpawn$2",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/entity/SpawnGroup;Lnet/minecraft/entity/EntityType;IIILnet/fabricmc/fabric/api/biome/v1/BiomeModificationContext;)V"
+          },
+          {
+            "nme": "lambda$addCarver$1",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;Lnet/fabricmc/fabric/api/biome/v1/BiomeModificationContext;)V"
+          },
+          {
+            "nme": "lambda$addFeature$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/world/gen/GenerationStep$Feature;Lnet/minecraft/registry/RegistryKey;Lnet/fabricmc/fabric/api/biome/v1/BiomeModificationContext;)V"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/impl/biome/modification/BiomeModificationImpl$ModifierRecord.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "net/fabricmc/fabric/impl/biome/modification/BiomeModificationImpl$ModifierRecord",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lnet/fabricmc/fabric/api/biome/v1/ModificationPhase;Lnet/minecraft/util/Identifier;Ljava/util/function/Predicate;Ljava/util/function/Consumer;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/biome/v1/ModificationPhase;Lnet/minecraft/util/Identifier;Ljava/util/function/Predicate<Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;>;Ljava/util/function/Consumer<Lnet/fabricmc/fabric/api/biome/v1/BiomeModificationContext;>;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Lnet/fabricmc/fabric/api/biome/v1/ModificationPhase;Lnet/minecraft/util/Identifier;Ljava/util/function/Predicate;Ljava/util/function/BiConsumer;)V",
+            "sig": "(Lnet/fabricmc/fabric/api/biome/v1/ModificationPhase;Lnet/minecraft/util/Identifier;Ljava/util/function/Predicate<Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;>;Ljava/util/function/BiConsumer<Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;Lnet/fabricmc/fabric/api/biome/v1/BiomeModificationContext;>;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "apply",
+            "acc": 1,
+            "dsc": "(Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;Lnet/fabricmc/fabric/impl/biome/modification/BiomeModificationContextImpl;)V"
+          },
+          {
+            "nme": "setOrder",
+            "acc": 1,
+            "dsc": "(I)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "phase",
+            "dsc": "Lnet/fabricmc/fabric/api/biome/v1/ModificationPhase;"
+          },
+          {
+            "acc": 18,
+            "nme": "id",
+            "dsc": "Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "acc": 18,
+            "nme": "selector",
+            "dsc": "Ljava/util/function/Predicate;",
+            "sig": "Ljava/util/function/Predicate<Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "contextSensitiveModifier",
+            "dsc": "Ljava/util/function/BiConsumer;",
+            "sig": "Ljava/util/function/BiConsumer<Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;Lnet/fabricmc/fabric/api/biome/v1/BiomeModificationContext;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "modifier",
+            "dsc": "Ljava/util/function/Consumer;",
+            "sig": "Ljava/util/function/Consumer<Lnet/fabricmc/fabric/api/biome/v1/BiomeModificationContext;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "order",
+            "dsc": "I"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/biome/modification/BiomeModificationContextImpl.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/biome/modification/BiomeModificationContextImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/registry/DynamicRegistryManager;Lnet/minecraft/world/biome/Biome;)V"
+          },
+          {
+            "nme": "getWeather",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/biome/v1/BiomeModificationContext$WeatherContext;"
+          },
+          {
+            "nme": "getEffects",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/biome/v1/BiomeModificationContext$EffectsContext;"
+          },
+          {
+            "nme": "getGenerationSettings",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/biome/v1/BiomeModificationContext$GenerationSettingsContext;"
+          },
+          {
+            "nme": "getSpawnSettings",
+            "acc": 1,
+            "dsc": "()Lnet/fabricmc/fabric/api/biome/v1/BiomeModificationContext$SpawnSettingsContext;"
+          },
+          {
+            "nme": "freeze",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "shouldRebuildFeatures",
+            "acc": 0,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getEntry",
+            "acc": 10,
+            "dsc": "(Lnet/minecraft/registry/Registry;Lnet/minecraft/registry/RegistryKey;)Lnet/minecraft/registry/entry/RegistryEntry$Reference;",
+            "sig": "<T:Ljava/lang/Object;>(Lnet/minecraft/registry/Registry<TT;>;Lnet/minecraft/registry/RegistryKey<TT;>;)Lnet/minecraft/registry/entry/RegistryEntry$Reference<TT;>;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "registries",
+            "dsc": "Lnet/minecraft/registry/DynamicRegistryManager;"
+          },
+          {
+            "acc": 18,
+            "nme": "biome",
+            "dsc": "Lnet/minecraft/world/biome/Biome;"
+          },
+          {
+            "acc": 18,
+            "nme": "weather",
+            "dsc": "Lnet/fabricmc/fabric/api/biome/v1/BiomeModificationContext$WeatherContext;"
+          },
+          {
+            "acc": 18,
+            "nme": "effects",
+            "dsc": "Lnet/fabricmc/fabric/api/biome/v1/BiomeModificationContext$EffectsContext;"
+          },
+          {
+            "acc": 18,
+            "nme": "generationSettings",
+            "dsc": "Lnet/fabricmc/fabric/impl/biome/modification/BiomeModificationContextImpl$GenerationSettingsContextImpl;"
+          },
+          {
+            "acc": 18,
+            "nme": "spawnSettings",
+            "dsc": "Lnet/fabricmc/fabric/impl/biome/modification/BiomeModificationContextImpl$SpawnSettingsContextImpl;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/biome/v1/BiomeModificationContext.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/biome/v1/BiomeModificationContext",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getWeather",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/biome/v1/BiomeModificationContext$WeatherContext;"
+          },
+          {
+            "nme": "getEffects",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/biome/v1/BiomeModificationContext$EffectsContext;"
+          },
+          {
+            "nme": "getGenerationSettings",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/biome/v1/BiomeModificationContext$GenerationSettingsContext;"
+          },
+          {
+            "nme": "getSpawnSettings",
+            "acc": 1025,
+            "dsc": "()Lnet/fabricmc/fabric/api/biome/v1/BiomeModificationContext$SpawnSettingsContext;"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/api/biome/v1/BiomeModificationContext$GenerationSettingsContext.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/biome/v1/BiomeModificationContext$GenerationSettingsContext",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "removeFeature",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/world/gen/GenerationStep$Feature;Lnet/minecraft/registry/RegistryKey;)Z",
+            "sig": "(Lnet/minecraft/world/gen/GenerationStep$Feature;Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/gen/feature/PlacedFeature;>;)Z"
+          },
+          {
+            "nme": "removeFeature",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Z",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/gen/feature/PlacedFeature;>;)Z"
+          },
+          {
+            "nme": "addFeature",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/world/gen/GenerationStep$Feature;Lnet/minecraft/registry/RegistryKey;)V",
+            "sig": "(Lnet/minecraft/world/gen/GenerationStep$Feature;Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/gen/feature/PlacedFeature;>;)V"
+          },
+          {
+            "nme": "addCarver",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)V",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/gen/carver/ConfiguredCarver<*>;>;)V"
+          },
+          {
+            "nme": "removeCarver",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;)Z",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/gen/carver/ConfiguredCarver<*>;>;)Z"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/mixin/biome/BiomeSourceMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/biome/BiomeSourceMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getBiomes",
+            "acc": 2,
+            "dsc": "(Ljava/util/function/Supplier;)Ljava/lang/Object;",
+            "sig": "(Ljava/util/function/Supplier<Ljava/util/Set<Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;>;>;)Ljava/lang/Object;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Redirect;",
+                "vals": [
+                  "method",
+                  [
+                    "getBiomes"
+                  ],
+                  "at",
+                  {
+                    "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                    "values": [
+                      "value",
+                      "INVOKE",
+                      "target",
+                      "Ljava/util/function/Supplier;get()Ljava/lang/Object;"
+                    ],
+                    "api": 589824
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nme": "fabric_modifyBiomeSet",
+            "acc": 4,
+            "dsc": "(Ljava/util/Set;)Ljava/util/Set;",
+            "sig": "(Ljava/util/Set<Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;>;)Ljava/util/Set<Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/world/biome/Biome;>;>;"
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/world/biome/source/BiomeSource"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/biome/NoiseConfigMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/biome/NoiseConfigMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "init",
+            "acc": 2,
+            "dsc": "(Lnet/minecraft/world/gen/chunk/ChunkGeneratorSettings;Lnet/minecraft/registry/RegistryEntryLookup;JLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "sig": "(Lnet/minecraft/world/gen/chunk/ChunkGeneratorSettings;Lnet/minecraft/registry/RegistryEntryLookup<Lnet/minecraft/util/math/noise/DoublePerlinNoiseSampler$NoiseParameters;>;JLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "<init>"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "TAIL"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "field_38258",
+            "dsc": "Lnet/minecraft/world/biome/source/util/MultiNoiseUtil$MultiNoiseSampler;"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/world/gen/noise/NoiseConfig"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/biome/modification/BiomeModificationImpl.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/impl/biome/modification/BiomeModificationImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "addModifier",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/Identifier;Lnet/fabricmc/fabric/api/biome/v1/ModificationPhase;Ljava/util/function/Predicate;Ljava/util/function/BiConsumer;)V",
+            "sig": "(Lnet/minecraft/util/Identifier;Lnet/fabricmc/fabric/api/biome/v1/ModificationPhase;Ljava/util/function/Predicate<Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;>;Ljava/util/function/BiConsumer<Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;Lnet/fabricmc/fabric/api/biome/v1/BiomeModificationContext;>;)V"
+          },
+          {
+            "nme": "addModifier",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/util/Identifier;Lnet/fabricmc/fabric/api/biome/v1/ModificationPhase;Ljava/util/function/Predicate;Ljava/util/function/Consumer;)V",
+            "sig": "(Lnet/minecraft/util/Identifier;Lnet/fabricmc/fabric/api/biome/v1/ModificationPhase;Ljava/util/function/Predicate<Lnet/fabricmc/fabric/api/biome/v1/BiomeSelectionContext;>;Ljava/util/function/Consumer<Lnet/fabricmc/fabric/api/biome/v1/BiomeModificationContext;>;)V"
+          },
+          {
+            "nme": "changeOrder",
+            "acc": 0,
+            "dsc": "(Lnet/minecraft/util/Identifier;I)V"
+          },
+          {
+            "nme": "clearModifiers",
+            "acc": 0,
+            "dsc": "()V",
+            "invanns": [
+              {
+                "dsc": "Lorg/jetbrains/annotations/TestOnly;"
+              }
+            ]
+          },
+          {
+            "nme": "getSortedModifiers",
+            "acc": 2,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<Lnet/fabricmc/fabric/impl/biome/modification/BiomeModificationImpl$ModifierRecord;>;"
+          },
+          {
+            "nme": "finalizeWorldGen",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/registry/DynamicRegistryManager;)V"
+          },
+          {
+            "nme": "lambda$finalizeWorldGen$6",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/world/dimension/DimensionOptions;)V"
+          },
+          {
+            "nme": "lambda$finalizeWorldGen$5",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/world/dimension/DimensionOptions;)Ljava/util/List;"
+          },
+          {
+            "nme": "lambda$finalizeWorldGen$4",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/world/dimension/DimensionOptions;Lnet/minecraft/registry/entry/RegistryEntry;)Ljava/util/List;"
+          },
+          {
+            "nme": "lambda$finalizeWorldGen$3",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/registry/Registry;Lnet/minecraft/registry/RegistryKey;)I"
+          },
+          {
+            "nme": "lambda$static$2",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/impl/biome/modification/BiomeModificationImpl$ModifierRecord;)Lnet/minecraft/util/Identifier;"
+          },
+          {
+            "nme": "lambda$static$1",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/impl/biome/modification/BiomeModificationImpl$ModifierRecord;)I"
+          },
+          {
+            "nme": "lambda$static$0",
+            "acc": 4106,
+            "dsc": "(Lnet/fabricmc/fabric/impl/biome/modification/BiomeModificationImpl$ModifierRecord;)I"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Lorg/slf4j/Logger;"
+          },
+          {
+            "acc": 26,
+            "nme": "MODIFIER_ORDER_COMPARATOR",
+            "dsc": "Ljava/util/Comparator;",
+            "sig": "Ljava/util/Comparator<Lnet/fabricmc/fabric/impl/biome/modification/BiomeModificationImpl$ModifierRecord;>;"
+          },
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/fabricmc/fabric/impl/biome/modification/BiomeModificationImpl;"
+          },
+          {
+            "acc": 18,
+            "nme": "modifiers",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Lnet/fabricmc/fabric/impl/biome/modification/BiomeModificationImpl$ModifierRecord;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "modifiersUnsorted",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/api/biome/v1/TheEndBiomes.class": {
+        "ver": 65,
+        "acc": 49,
+        "nme": "net/fabricmc/fabric/api/biome/v1/TheEndBiomes",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "addMainIslandBiome",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;D)V",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;D)V"
+          },
+          {
+            "nme": "addHighlandsBiome",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;D)V",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;D)V"
+          },
+          {
+            "nme": "addSmallIslandsBiome",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;D)V",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;D)V"
+          },
+          {
+            "nme": "addMidlandsBiome",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;Lnet/minecraft/registry/RegistryKey;D)V",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;D)V"
+          },
+          {
+            "nme": "addBarrensBiome",
+            "acc": 9,
+            "dsc": "(Lnet/minecraft/registry/RegistryKey;Lnet/minecraft/registry/RegistryKey;D)V",
+            "sig": "(Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;D)V"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/mixin/biome/package-info.class": {
+        "ver": 65,
+        "acc": 5632,
+        "nme": "net/fabricmc/fabric/mixin/biome/package-info",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/jetbrains/annotations/ApiStatus$Internal;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/biome/MultiNoiseBiomeSourceMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/biome/MultiNoiseBiomeSourceMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "fabric_setModifyBiomeEntries",
+            "acc": 1,
+            "dsc": "(Z)V"
+          },
+          {
+            "nme": "fabric_shouldModifyBiomeEntries",
+            "acc": 1,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "modifyBiomeEntries",
+            "dsc": "Z"
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/world/biome/source/MultiNoiseBiomeSource"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/mixin/biome/NetherBiomePresetMixin.class": {
+        "ver": 65,
+        "acc": 33,
+        "nme": "net/fabricmc/fabric/mixin/biome/NetherBiomePresetMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "apply",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/Function;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+            "sig": "<T:Ljava/lang/Object;>(Ljava/util/function/Function<Lnet/minecraft/registry/RegistryKey<Lnet/minecraft/world/biome/Biome;>;TT;>;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Lnet/minecraft/world/biome/source/util/MultiNoiseUtil$Entries<TT;>;>;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "apply"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ],
+                  "cancellable",
+                  true
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "targets",
+              [
+                "net/minecraft/world/biome/source/MultiNoiseBiomeSourceParameterList$Preset$1"
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/biome/BiomeSourceAccess.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/impl/biome/BiomeSourceAccess",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "fabric_shouldModifyBiomeEntries",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "fabric_setModifyBiomeEntries",
+            "acc": 1025,
+            "dsc": "(Z)V"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/api/biome/v1/BiomeModificationContext$SpawnSettingsContext.class": {
+        "ver": 65,
+        "acc": 1537,
+        "nme": "net/fabricmc/fabric/api/biome/v1/BiomeModificationContext$SpawnSettingsContext",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "setCreatureSpawnProbability",
+            "acc": 1025,
+            "dsc": "(F)V"
+          },
+          {
+            "nme": "addSpawn",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/entity/SpawnGroup;Lnet/minecraft/world/biome/SpawnSettings$SpawnEntry;)V"
+          },
+          {
+            "nme": "removeSpawns",
+            "acc": 1025,
+            "dsc": "(Ljava/util/function/BiPredicate;)Z",
+            "sig": "(Ljava/util/function/BiPredicate<Lnet/minecraft/entity/SpawnGroup;Lnet/minecraft/world/biome/SpawnSettings$SpawnEntry;>;)Z"
+          },
+          {
+            "nme": "removeSpawnsOfEntityType",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/entity/EntityType;)Z",
+            "sig": "(Lnet/minecraft/entity/EntityType<*>;)Z"
+          },
+          {
+            "nme": "clearSpawns",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/entity/SpawnGroup;)V"
+          },
+          {
+            "nme": "clearSpawns",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setSpawnCost",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/entity/EntityType;DD)V",
+            "sig": "(Lnet/minecraft/entity/EntityType<*>;DD)V"
+          },
+          {
+            "nme": "clearSpawnCost",
+            "acc": 1025,
+            "dsc": "(Lnet/minecraft/entity/EntityType;)V",
+            "sig": "(Lnet/minecraft/entity/EntityType<*>;)V"
+          },
+          {
+            "nme": "lambda$clearSpawns$2",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/entity/SpawnGroup;Lnet/minecraft/world/biome/SpawnSettings$SpawnEntry;)Z"
+          },
+          {
+            "nme": "lambda$clearSpawns$1",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/entity/SpawnGroup;Lnet/minecraft/entity/SpawnGroup;Lnet/minecraft/world/biome/SpawnSettings$SpawnEntry;)Z"
+          },
+          {
+            "nme": "lambda$removeSpawnsOfEntityType$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/entity/EntityType;Lnet/minecraft/entity/SpawnGroup;Lnet/minecraft/world/biome/SpawnSettings$SpawnEntry;)Z"
+          }
+        ],
+        "flds": []
+      },
+      "net/fabricmc/fabric/mixin/biome/modification/MinecraftServerMixin.class": {
+        "ver": 65,
+        "acc": 1057,
+        "nme": "net/fabricmc/fabric/mixin/biome/modification/MinecraftServerMixin",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "method_30611",
+            "acc": 1025,
+            "dsc": "()Lnet/minecraft/registry/DynamicRegistryManager$Immutable;",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/Shadow;"
+              }
+            ]
+          },
+          {
+            "nme": "finalizeWorldGen",
+            "acc": 2,
+            "dsc": "(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
+            "vanns": [
+              {
+                "dsc": "Lorg/spongepowered/asm/mixin/injection/Inject;",
+                "vals": [
+                  "method",
+                  [
+                    "<init>"
+                  ],
+                  "at",
+                  [
+                    {
+                      "desc": "Lorg/spongepowered/asm/mixin/injection/At;",
+                      "values": [
+                        "value",
+                        "RETURN"
+                      ],
+                      "api": 589824
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "flds": [],
+        "invanns": [
+          {
+            "dsc": "Lorg/spongepowered/asm/mixin/Mixin;",
+            "vals": [
+              "value",
+              [
+                {
+                  "itrlNme": "net/minecraft/server/MinecraftServer"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/biome/TheEndBiomeData$RegistryKeyHashStrategy.class": {
+        "ver": 65,
+        "acc": 16432,
+        "nme": "net/fabricmc/fabric/impl/biome/TheEndBiomeData$RegistryKeyHashStrategy",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lnet/fabricmc/fabric/impl/biome/TheEndBiomeData$RegistryKeyHashStrategy;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lnet/fabricmc/fabric/impl/biome/TheEndBiomeData$RegistryKeyHashStrategy;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/registry/entry/RegistryEntry;Lnet/minecraft/registry/entry/RegistryEntry;)Z",
+            "sig": "(Lnet/minecraft/registry/entry/RegistryEntry<*>;Lnet/minecraft/registry/entry/RegistryEntry<*>;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/registry/entry/RegistryEntry;)I",
+            "sig": "(Lnet/minecraft/registry/entry/RegistryEntry<*>;)I"
+          },
+          {
+            "nme": "equals",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "hashCode",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/Object;)I"
+          },
+          {
+            "nme": "lambda$equals$0",
+            "acc": 4106,
+            "dsc": "(Lnet/minecraft/registry/entry/RegistryEntry;Lnet/minecraft/registry/RegistryKey;)Ljava/lang/Boolean;"
+          },
+          {
+            "nme": "$values",
+            "acc": 4106,
+            "dsc": "()[Lnet/fabricmc/fabric/impl/biome/TheEndBiomeData$RegistryKeyHashStrategy;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "INSTANCE",
+            "dsc": "Lnet/fabricmc/fabric/impl/biome/TheEndBiomeData$RegistryKeyHashStrategy;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lnet/fabricmc/fabric/impl/biome/TheEndBiomeData$RegistryKeyHashStrategy;"
+          }
+        ]
+      },
+      "net/fabricmc/fabric/impl/biome/modification/BiomeModificationContextImpl$EffectsContextImpl.class": {
+        "ver": 65,
+        "acc": 32,
+        "nme": "net/fabricmc/fabric/impl/biome/modification/BiomeModificationContextImpl$EffectsContextImpl",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Lnet/fabricmc/fabric/impl/biome/modification/BiomeModificationContextImpl;)V"
+          },
+          {
+            "nme": "setFogColor",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "setWaterColor",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "setWaterFogColor",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "setSkyColor",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "setFoliageColor",
+            "acc": 1,
+            "dsc": "(Ljava/util/Optional;)V",
+            "sig": "(Ljava/util/Optional<Ljava/lang/Integer;>;)V"
+          },
+          {
+            "nme": "setGrassColor",
+            "acc": 1,
+            "dsc": "(Ljava/util/Optional;)V",
+            "sig": "(Ljava/util/Optional<Ljava/lang/Integer;>;)V"
+          },
+          {
+            "nme": "setGrassColorModifier",
+            "acc": 1,
+            "dsc": "(Lnet/minecraft/world/biome/BiomeEffects$GrassColorModifier;)V"
+          },
+          {
+            "nme": "setParticleConfig",
+            "acc": 1,
+            "dsc": "(Ljava/util/Optional;)V",
+            "sig": "(Ljava/util/Optional<Lnet/minecraft/world/biome/BiomeParticleConfig;>;)V"
+          },
+          {
+            "nme": "setAmbientSound",
+            "acc": 1,
+            "dsc": "(Ljava/util/Optional;)V",
+            "sig": "(Ljava/util/Optional<Lnet/minecraft/registry/entry/RegistryEntry<Lnet/minecraft/sound/SoundEvent;>;>;)V"
+          },
+          {
+            "nme": "setMoodSound",
+            "acc": 1,
+            "dsc": "(Ljava/util/Optional;)V",
+            "sig": "(Ljava/util/Optional<Lnet/minecraft/sound/BiomeMoodSound;>;)V"
+          },
+          {
+            "nme": "setAdditionsSound",
+            "acc": 1,
+            "dsc": "(Ljava/util/Optional;)V",
+            "sig": "(Ljava/util/Optional<Lnet/minecraft/sound/BiomeAdditionsSound;>;)V"
+          },
+          {
+            "nme": "setMusic",
+            "acc": 1,
+            "dsc": "(Ljava/util/Optional;)V",
+            "sig": "(Ljava/util/Optional<Lnet/minecraft/util/collection/DataPool<Lnet/minecraft/sound/MusicSound;>;>;)V"
+          },
+          {
+            "nme": "setMusicVolume",
+            "acc": 1,
+            "dsc": "(F)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "effects",
+            "dsc": "Lnet/minecraft/world/biome/BiomeEffects;"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lnet/fabricmc/fabric/impl/biome/modification/BiomeModificationContextImpl;"
+          }
+        ]
+      }
+    }
+  }
+}

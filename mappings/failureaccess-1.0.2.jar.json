@@ -1,0 +1,47 @@
+{
+  "md5": "3f75955b49b6758fd6d1e1bd9bf777b3",
+  "sha2": "c4a06a64e650562f30b7bf9aaec1bfed43aca12b",
+  "sha256": "8a8f81cf9b359e3f6dfa691a1e776985c061ef2f223c9b2c80753e1b458e8064",
+  "contents": {
+    "classes": {
+      "com/google/common/util/concurrent/internal/InternalFutureFailureAccess.class": {
+        "ver": 51,
+        "acc": 1057,
+        "nme": "com/google/common/util/concurrent/internal/InternalFutureFailureAccess",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "tryInternalFastPathGetFailure",
+            "acc": 1028,
+            "dsc": "()Ljava/lang/Throwable;"
+          }
+        ],
+        "flds": []
+      },
+      "com/google/common/util/concurrent/internal/InternalFutures.class": {
+        "ver": 51,
+        "acc": 49,
+        "nme": "com/google/common/util/concurrent/internal/InternalFutures",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "tryInternalFastPathGetFailure",
+            "acc": 9,
+            "dsc": "(Lcom/google/common/util/concurrent/internal/InternalFutureFailureAccess;)Ljava/lang/Throwable;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          }
+        ],
+        "flds": []
+      }
+    }
+  }
+}

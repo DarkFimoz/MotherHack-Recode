@@ -3,8 +3,10 @@ package fun.motherhack.modules.impl.movement;
 import fun.motherhack.MotherHack;
 import fun.motherhack.api.events.impl.EventPacket;
 import fun.motherhack.api.events.impl.EventPlayerTick;
+import fun.motherhack.api.events.impl.rotations.EventMotion;
 import fun.motherhack.modules.api.Category;
 import fun.motherhack.modules.api.Module;
+import fun.motherhack.modules.settings.Setting;
 import fun.motherhack.modules.settings.impl.BooleanSetting;
 import fun.motherhack.modules.settings.impl.EnumSetting;
 import fun.motherhack.modules.settings.impl.NumberSetting;
@@ -16,6 +18,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.packet.c2s.play.ClientCommandC2SPacket;
 import net.minecraft.network.packet.c2s.play.HandSwingC2SPacket;
+import net.minecraft.network.packet.c2s.play.PlayerMoveC2SPacket;
 import net.minecraft.network.packet.s2c.play.PlayerPositionLookS2CPacket;
 import net.minecraft.screen.slot.SlotActionType;
 import net.minecraft.util.Hand;
@@ -25,13 +28,9 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 
-import java.util.Random;
-
 public class Scaffold extends Module {
     
     private enum Mode implements fun.motherhack.modules.settings.api.Nameable {
-        Legit("Legit"),
-        Sprint("Sprint"),
         NCPStrict("NCPStrict"),
         Eagle("Eagle");
          
@@ -85,9 +84,9 @@ public class Scaffold extends Module {
     }
     
     // Main settings
-    private final EnumSetting<Mode> mode = new EnumSetting<>("Mode", Mode.Sprint);
+    private final EnumSetting<Mode> mode = new EnumSetting<>("Mode", Mode.NCPStrict);
     private final EnumSetting<Switch> autoSwitch = new EnumSetting<>("Switch", Switch.Silent);
-    private final EnumSetting<Rotate> rotateMode = new EnumSetting<>("Rotate", Rotate.Linear);
+    private final EnumSetting<Rotate> rotateMode = new EnumSetting<>("Rotate", Rotate.Normal);
     private final BooleanSetting lockY = new BooleanSetting("LockY", false);
     private final BooleanSetting autoJump = new BooleanSetting("AutoJump", false);
     private final BooleanSetting allowShift = new BooleanSetting("WorkWhileSneaking", false);
@@ -95,17 +94,8 @@ public class Scaffold extends Module {
     private final BooleanSetting safeWalk = new BooleanSetting("SafeWalk", true);
     private final NumberSetting lockYDelay = new NumberSetting("LockYDelay", 0, 0, 500, 10);
     
-    // Legit settings
-    private final NumberSetting placeDelay = new NumberSetting("PlaceDelay", 25, 0, 200, 5);
-    private final NumberSetting rotationSpeed = new NumberSetting("RotationSpeed", 120, 20, 180, 5);
-    private final BooleanSetting randomization = new BooleanSetting("Randomization", false);
-    private final NumberSetting randomOffset = new NumberSetting("RandomOffset", 0.02f, 0f, 0.1f, 0.005f);
-    
-    // Sprint settings
-    private final BooleanSetting keepSprint = new BooleanSetting("KeepSprint", true);
-    
-    // NoServerRotate setting
-    private final BooleanSetting noServerRotate = new BooleanSetting("NoServerRotate", false);
+    // NoServerRotate setting - можно включать и выключать
+    private final BooleanSetting noServerRotate = new BooleanSetting("NoServerRotate", true);
     
     // NCPStrict specific
     private final BooleanSetting onlyNotHoldingSpace = new BooleanSetting("OnlyNotHoldingSpace", false);
@@ -113,16 +103,13 @@ public class Scaffold extends Module {
     // State tracking
     private final TimerUtils timer = new TimerUtils();
     private final TimerUtils lockYTimer = new TimerUtils();
-    private final TimerUtils placeTimer = new TimerUtils();
-    private final Random random = new Random();
     private BlockPosWithFacing currentBlock;
     private int prevY = -999;
     private boolean wasSneaking = false;
+    private boolean wasJumping = false;
+    private boolean shouldPlaceOnLanding = false;
     private BlockPosWithFacing delayedBlock;
     private float[] currentRotations = new float[2];
-    private float[] targetRotations = new float[2];
-    private float[] lastRotations = new float[2];
-    private boolean rotationsReached = false;
     private final RotationChanger rotationChanger = new RotationChanger(
             5000,
             () -> new Float[]{currentRotations[0], currentRotations[1]},
@@ -137,14 +124,10 @@ public class Scaffold extends Module {
     public void onEnable() {
         super.onEnable();
         prevY = -999;
+        wasJumping = false;
+        shouldPlaceOnLanding = false;
         delayedBlock = null;
         lockYTimer.reset();
-        placeTimer.reset();
-        rotationsReached = false;
-        if (mc.player != null) {
-            lastRotations[0] = mc.player.getYaw();
-            lastRotations[1] = mc.player.getPitch();
-        }
     }
     
     @Override
@@ -154,6 +137,7 @@ public class Scaffold extends Module {
             mc.options.sneakKey.setPressed(false);
             wasSneaking = false;
         }
+        // Clean up rotation changer
         MotherHack.getInstance().getRotationManager().removeRotation(rotationChanger);
     }
     
@@ -170,23 +154,9 @@ public class Scaffold extends Module {
     @EventHandler
     public void onPlayerTick(EventPlayerTick event) {
         if (fullNullCheck()) return;
-        
-        // SafeWalk - не даёт упасть с края, но НЕ меняет направление движения
-        if (safeWalk.getValue() && mc.player.isOnGround()) {
-            BlockPos below = BlockPos.ofFloored(mc.player.getX(), mc.player.getY() - 0.5, mc.player.getZ());
-            if (mc.world.getBlockState(below).isAir()) {
-                // Только замедляем на краю, не меняем направление
-                Vec3d vel = mc.player.getVelocity();
-                mc.player.setVelocity(vel.x * 0.3, vel.y, vel.z * 0.3);
-            }
-        }
          
         if (mode.getValue() == Mode.Eagle) {
             handleEagleMode();
-        } else if (mode.getValue() == Mode.Legit) {
-            handleLegitMode();
-        } else if (mode.getValue() == Mode.Sprint) {
-            handleSprintMode();
         } else if (mode.getValue() == Mode.NCPStrict) {
             handleNCPStrictMode();
         }
@@ -202,169 +172,6 @@ public class Scaffold extends Module {
          
         mc.options.sneakKey.setPressed(shouldSneak);
         wasSneaking = shouldSneak;
-    }
-    
-    private void handleLegitMode() {
-        currentBlock = null;
-        
-        if (mc.player.isSneaking() && !allowShift.getValue()) return;
-        
-        int prevSlot = prePlace(false);
-        if (prevSlot == -1) return;
-        
-        // AutoJump for faster bridging
-        if (isMoving() && autoJump.getValue() && mc.player.isOnGround() && !mc.options.jumpKey.isPressed()) {
-            mc.player.jump();
-        }
-        
-        // Calculate target position
-        BlockPos targetPos = new BlockPos(
-            (int) Math.floor(mc.player.getX()),
-            (int) (Math.floor(mc.player.getY() - 1)),
-            (int) Math.floor(mc.player.getZ())
-        );
-        
-        if (lockY.getValue() && prevY != -999) {
-            targetPos = BlockPos.ofFloored(mc.player.getX(), prevY, mc.player.getZ());
-        }
-        
-        if (!mc.world.getBlockState(targetPos).isReplaceable()) return;
-        
-        // Find placeable block
-        BlockPosWithFacing foundBlock = checkNearBlocksExtended(targetPos);
-        
-        if (foundBlock != null) {
-            // Calculate hit vector with randomization for legit look
-            double offsetX = randomization.getValue() ? (random.nextDouble() - 0.5) * randomOffset.getValue() * 2 : 0;
-            double offsetY = randomization.getValue() ? (random.nextDouble() - 0.5) * randomOffset.getValue() * 2 : 0;
-            double offsetZ = randomization.getValue() ? (random.nextDouble() - 0.5) * randomOffset.getValue() * 2 : 0;
-            
-            Vec3d hitVec = new Vec3d(
-                foundBlock.position().getX() + 0.5 + offsetX,
-                foundBlock.position().getY() + 0.5 + offsetY,
-                foundBlock.position().getZ() + 0.5 + offsetZ
-            ).add(new Vec3d(foundBlock.facing().getUnitVector()).multiply(0.5));
-            
-            targetRotations = getRotations(hitVec);
-            
-            // Smooth rotation interpolation
-            float yawDiff = MathHelper.wrapDegrees(targetRotations[0] - lastRotations[0]);
-            float pitchDiff = targetRotations[1] - lastRotations[1];
-            
-            float maxRotation = rotationSpeed.getValue().floatValue();
-            // Add slight randomization to rotation speed
-            if (randomization.getValue()) {
-                maxRotation += (random.nextFloat() - 0.5f) * 10f;
-            }
-            
-            float yawStep = MathHelper.clamp(yawDiff, -maxRotation, maxRotation);
-            float pitchStep = MathHelper.clamp(pitchDiff, -maxRotation * 0.8f, maxRotation * 0.8f);
-            
-            currentRotations[0] = lastRotations[0] + yawStep;
-            currentRotations[1] = MathHelper.clamp(lastRotations[1] + pitchStep, -90, 90);
-            
-            lastRotations[0] = currentRotations[0];
-            lastRotations[1] = currentRotations[1];
-            
-            // Check if rotations are close enough to target (relaxed check for reliability)
-            float yawError = Math.abs(MathHelper.wrapDegrees(currentRotations[0] - targetRotations[0]));
-            float pitchError = Math.abs(currentRotations[1] - targetRotations[1]);
-            rotationsReached = yawError < 35f && pitchError < 25f;
-            
-            // Apply rotations
-            if (rotateMode.getValue() == Rotate.Packet) {
-                MotherHack.getInstance().getRotationManager().addPacketRotation(currentRotations);
-            } else if (rotateMode.getValue() != Rotate.None) {
-                MotherHack.getInstance().getRotationManager().addRotation(rotationChanger);
-            }
-            
-            // Place when rotations are close enough and delay passed
-            long actualDelay = placeDelay.getValue().longValue();
-            if (randomization.getValue()) {
-                actualDelay += random.nextInt(20) - 10; // ±10ms randomization
-            }
-            
-            if (rotationsReached && placeTimer.passed(Math.max(0, actualDelay))) {
-                currentBlock = foundBlock;
-                placeBlock(prevSlot);
-                placeTimer.reset();
-            }
-        }
-    }
-    
-    private void handleSprintMode() {
-        currentBlock = null;
-        
-        if (mc.player.isSneaking() && !allowShift.getValue()) return;
-        
-        int prevSlot = prePlace(false);
-        if (prevSlot == -1) return;
-        
-        // Keep sprint while bridging
-        if (keepSprint.getValue() && isMoving()) {
-            mc.player.setSprinting(true);
-        }
-        
-        // AutoJump for faster bridging
-        if (isMoving() && autoJump.getValue() && mc.player.isOnGround() && !mc.options.jumpKey.isPressed()) {
-            mc.player.jump();
-        }
-        
-        // Calculate target position - current position only, no look ahead
-        BlockPos targetPos = new BlockPos(
-            (int) Math.floor(mc.player.getX()),
-            (int) (Math.floor(mc.player.getY() - 1)),
-            (int) Math.floor(mc.player.getZ())
-        );
-        
-        if (lockY.getValue() && prevY != -999) {
-            targetPos = BlockPos.ofFloored(mc.player.getX(), prevY, mc.player.getZ());
-        }
-        
-        if (!mc.world.getBlockState(targetPos).isReplaceable()) return;
-        
-        BlockPosWithFacing foundBlock = checkNearBlocksExtended(targetPos);
-        
-        if (foundBlock != null) {
-            Vec3d hitVec = new Vec3d(
-                foundBlock.position().getX() + 0.5,
-                foundBlock.position().getY() + 0.5,
-                foundBlock.position().getZ() + 0.5
-            ).add(new Vec3d(foundBlock.facing().getUnitVector()).multiply(0.5));
-            
-            targetRotations = getRotations(hitVec);
-            
-            // Linear rotation - constant speed interpolation
-            float maxRotation = rotationSpeed.getValue().floatValue();
-            float yawDiff = MathHelper.wrapDegrees(targetRotations[0] - lastRotations[0]);
-            float pitchDiff = targetRotations[1] - lastRotations[1];
-            
-            float yawStep = MathHelper.clamp(yawDiff, -maxRotation, maxRotation);
-            float pitchStep = MathHelper.clamp(pitchDiff, -maxRotation, maxRotation);
-            
-            currentRotations[0] = lastRotations[0] + yawStep;
-            currentRotations[1] = MathHelper.clamp(lastRotations[1] + pitchStep, -90, 90);
-            
-            lastRotations[0] = currentRotations[0];
-            lastRotations[1] = currentRotations[1];
-            
-            // Check if rotations reached target
-            float yawError = Math.abs(MathHelper.wrapDegrees(currentRotations[0] - targetRotations[0]));
-            float pitchError = Math.abs(currentRotations[1] - targetRotations[1]);
-            rotationsReached = yawError < 30f && pitchError < 20f;
-            
-            // Apply linear rotations through RotationManager
-            if (rotateMode.getValue() != Rotate.None) {
-                MotherHack.getInstance().getRotationManager().addRotation(rotationChanger);
-            }
-            
-            // Place when rotations close enough and delay passed
-            if (rotationsReached && placeTimer.passed(placeDelay.getValue().longValue())) {
-                currentBlock = foundBlock;
-                placeBlock(prevSlot);
-                placeTimer.reset();
-            }
-        }
     }
     
     
@@ -399,6 +206,7 @@ public class Scaffold extends Module {
             // Check if we should place delayed blocks
             if (delayedBlock != null) {
                 if (isJumping || (lockYDelay.getValue() > 0 && lockYTimer.passed(lockYDelay.getValue().longValue()))) {
+                    // Place the delayed block during jump or after delay
                     currentBlock = delayedBlock;
                     delayedBlock = null;
                     lockYTimer.reset();
@@ -410,7 +218,7 @@ public class Scaffold extends Module {
             
             if (!mc.world.getBlockState(targetPos).isReplaceable()) return;
             
-            // Find placeable block
+            // Find placeable block but don't place immediately in LockY mode
             BlockPosWithFacing foundBlock = checkNearBlocksExtended(targetPos);
             
             if (foundBlock != null) {
@@ -423,16 +231,22 @@ public class Scaffold extends Module {
                       
                     currentRotations = getRotations(hitVec);
                     
+                    // Use RotationManager for smooth rotations like Aura
                     if (rotateMode.getValue() == Rotate.Packet) {
                         MotherHack.getInstance().getRotationManager().addPacketRotation(currentRotations);
+                    } else if (rotateMode.getValue() == Rotate.Linear) {
+                        // Linear rotation - use smooth interpolation like Normal mode
+                        MotherHack.getInstance().getRotationManager().addRotation(rotationChanger);
                     } else if (rotateMode.getValue() != Rotate.None) {
                         MotherHack.getInstance().getRotationManager().addRotation(rotationChanger);
                     }
                 }
                 
+                // In LockY mode, delay placement until jump or after configured delay
                 if (isJumping || lockYDelay.getValue() == 0) {
                     currentBlock = foundBlock;
                 } else {
+                    // Store for delayed placement
                     delayedBlock = foundBlock;
                     if (!lockYTimer.passed(lockYDelay.getValue().longValue())) {
                         lockYTimer.reset();
@@ -452,6 +266,7 @@ public class Scaffold extends Module {
             // Find placeable block
             currentBlock = checkNearBlocksExtended(targetPos);
             
+            // Add rotations for NCP Strict mode
             if (currentBlock != null && rotateMode.getValue() != Rotate.None) {
                 Vec3d hitVec = new Vec3d(
                     currentBlock.position().getX() + 0.5,
@@ -461,8 +276,12 @@ public class Scaffold extends Module {
                       
                 currentRotations = getRotations(hitVec);
                 
+                // Use RotationManager for smooth rotations
                 if (rotateMode.getValue() == Rotate.Packet) {
                     MotherHack.getInstance().getRotationManager().addPacketRotation(currentRotations);
+                } else if (rotateMode.getValue() == Rotate.Linear) {
+                    // Linear rotation - use smooth interpolation like Normal mode
+                    MotherHack.getInstance().getRotationManager().addRotation(rotationChanger);
                 } else if (rotateMode.getValue() != Rotate.None) {
                     MotherHack.getInstance().getRotationManager().addRotation(rotationChanger);
                 }
@@ -478,19 +297,16 @@ public class Scaffold extends Module {
     private void placeBlock(int prevSlot) {
         if (currentBlock == null) return;
         
-        // Add slight randomization to hit position for legit mode
-        double hitOffsetX = 0, hitOffsetY = 0, hitOffsetZ = 0;
-        if (mode.getValue() == Mode.Legit && randomization.getValue()) {
-            hitOffsetX = (random.nextDouble() - 0.5) * 0.08;
-            hitOffsetY = (random.nextDouble() - 0.5) * 0.08;
-            hitOffsetZ = (random.nextDouble() - 0.5) * 0.08;
+        float offset = 0.2f;
+        if (mc.world.getBlockCollisions(mc.player, mc.player.getBoundingBox().expand(-offset, 0, -offset).offset(0, -0.5, 0)).iterator().hasNext()) {
+            return;
         }
         
         BlockHitResult hitResult = new BlockHitResult(
             new Vec3d(
-                currentBlock.position().getX() + 0.5 + hitOffsetX, 
-                currentBlock.position().getY() + 0.5 + hitOffsetY, 
-                currentBlock.position().getZ() + 0.5 + hitOffsetZ
+                currentBlock.position().getX() + 0.5, 
+                currentBlock.position().getY() + 0.5, 
+                currentBlock.position().getZ() + 0.5
             ).add(new Vec3d(currentBlock.facing().getUnitVector()).multiply(0.5)),
             currentBlock.facing(),
             currentBlock.position(),
@@ -580,7 +396,11 @@ public class Scaffold extends Module {
     }
     
     private boolean isMoving() {
-        return mc.player.input.movementForward != 0 || mc.player.input.movementSideways != 0;
+        return mc.player.input.movementForward != 0 || mc.player.input.movementSideways != 0 || mc.options.jumpKey.isPressed();
+    }
+    
+    private boolean isOffsetBBEmpty(double x, double z) {
+        return !mc.world.getBlockCollisions(mc.player, mc.player.getBoundingBox().expand(-0.1, 0, -0.1).offset(x, -2, z)).iterator().hasNext();
     }
     
     private int findBlockInHotbar() {

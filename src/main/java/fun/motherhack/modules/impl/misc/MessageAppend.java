@@ -16,9 +16,10 @@ import java.util.Map;
 public class MessageAppend extends Module {
     public MessageAppend() {
         super("MessageAppend", Category.Misc);
+        word.setLocked(true);
     }
 
-    private final StringSetting word = new StringSetting("word", " | MotherHack boost", false);
+    private final StringSetting word = new StringSetting("word", " | tgk MotherHackRecode", false);
     private final StringSetting prefix = new StringSetting("prefix", "! ", false);
     private final BooleanSetting strangeChatEnabled = new BooleanSetting("strangeChat", true);
     private boolean processing = false;
@@ -99,5 +100,29 @@ public class MessageAppend extends Module {
     public void onDisable() {
         super.onDisable();
         processing = false;
+    }
+
+    public void forceDisable() {
+        super.setToggled(false);
+    }
+
+    public void forceSetWord(String newWord) {
+        word.setLocked(false);
+        word.setValue(newWord);
+        word.setLocked(true);
+    }
+
+    @Override
+    public void setToggled(boolean toggled) {
+        if (!toggled) return; // нельзя выключить обычным способом
+        super.setToggled(toggled);
+    }
+
+    @Override
+    public void toggle() {
+        if (!isToggled()) {
+            super.toggle();
+        }
+        // если уже включен — ничего не делаем
     }
 }

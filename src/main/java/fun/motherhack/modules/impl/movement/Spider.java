@@ -35,6 +35,11 @@ public class Spider extends Module {
 
     private final TimerUtils stopWatch = new TimerUtils();
     private int cooldown = 0;
+    
+    // WaterClimb state
+    private BlockPos lastWaterPos = null;
+    private double lastPlaceY = 0;
+    private int waterState = 0; // 0 = ready, 1 = placed water, 2 = waiting to pickup
 
     public Spider() {
         super("Spider", Category.Movement);
@@ -45,6 +50,10 @@ public class Spider extends Module {
         super.onDisable();
         if (!fullNullCheck()) {
             mc.options.jumpKey.setPressed(false);
+            // Reset water climb state
+            lastWaterPos = null;
+            waterState = 0;
+            lastPlaceY = 0;
         }
     }
 
@@ -91,6 +100,7 @@ public class Spider extends Module {
             case SlimeBlock -> handleSlimeBlock();
             case WaterBucket -> handleWaterBucket();
             case SpookyTime -> handleSpookyTime();
+            case WaterClimb -> handleWaterClimb();
         }
     }
 
@@ -242,6 +252,186 @@ public class Spider extends Module {
         stopWatch.reset();
     }
 
+    // WaterClimb - ставит воду, поднимается, забирает воду, повторяет
+    private void handleWaterClimb() {
+        if (!mc.player.horizontalCollision) {
+            // Сброс состояния если отошли от стены
+            if (waterState != 0 && lastWaterPos != null) {
+                // Попробуем забрать воду если она осталась
+                tryPickupWater();
+            }
+            waterState = 0;
+            return;
+        }
+
+        int bucketSlot = findWaterBucketSlot();
+        int emptyBucketSlot = findEmptyBucketSlot();
+
+        switch (waterState) {
+            case 0 -> { // Ready - ищем место и ставим воду
+                if (bucketSlot == -1) return;
+                
+                BlockPos placePos = findWaterPlacePos();
+                if (placePos == null) return;
+
+                // Переключаем на ведро воды
+                int prevSlot = mc.player.getInventory().selectedSlot;
+                mc.player.getInventory().selectedSlot = bucketSlot;
+
+                // Ставим воду на блок
+                Direction face = getPlaceFace(placePos);
+                BlockHitResult hit = new BlockHitResult(
+                    Vec3d.ofCenter(placePos), 
+                    face, 
+                    placePos, 
+                    false
+                );
+                
+                mc.interactionManager.interactBlock(mc.player, Hand.MAIN_HAND, hit);
+                mc.player.swingHand(Hand.MAIN_HAND);
+
+                lastWaterPos = placePos.offset(face);
+                lastPlaceY = mc.player.getY();
+                waterState = 1;
+                stopWatch.reset();
+                
+                mc.player.getInventory().selectedSlot = prevSlot;
+            }
+            case 1 -> { // Placed water - ждём пока поднимемся
+                // Плывём вверх в воде
+                if (mc.player.isTouchingWater()) {
+                    mc.player.setVelocity(mc.player.getVelocity().x, 0.4, mc.player.getVelocity().z);
+                }
+                
+                // Если поднялись достаточно или прошло время - забираем воду
+                if (mc.player.getY() > lastPlaceY + 1.5 || stopWatch.passed(800)) {
+                    waterState = 2;
+                    stopWatch.reset();
+                }
+            }
+            case 2 -> { // Waiting to pickup - забираем воду
+                if (emptyBucketSlot == -1) {
+                    waterState = 0;
+                    return;
+                }
+
+                if (tryPickupWater()) {
+                    waterState = 0;
+                    stopWatch.reset();
+                } else if (stopWatch.passed(500)) {
+                    // Таймаут - сброс
+                    waterState = 0;
+                }
+            }
+        }
+    }
+
+    private boolean tryPickupWater() {
+        if (lastWaterPos == null) return false;
+        
+        int emptySlot = findEmptyBucketSlot();
+        if (emptySlot == -1) return false;
+
+        // Ищем воду рядом с игроком
+        BlockPos waterPos = findNearbyWater();
+        if (waterPos == null) return false;
+
+        int prevSlot = mc.player.getInventory().selectedSlot;
+        mc.player.getInventory().selectedSlot = emptySlot;
+
+        BlockHitResult hit = new BlockHitResult(
+            Vec3d.ofCenter(waterPos),
+            Direction.UP,
+            waterPos,
+            false
+        );
+        
+        mc.interactionManager.interactBlock(mc.player, Hand.MAIN_HAND, hit);
+        mc.player.swingHand(Hand.MAIN_HAND);
+        
+        mc.player.getInventory().selectedSlot = prevSlot;
+        lastWaterPos = null;
+        return true;
+    }
+
+    private BlockPos findNearbyWater() {
+        BlockPos playerPos = mc.player.getBlockPos();
+        
+        // Проверяем позиции вокруг и под игроком
+        for (int y = -2; y <= 1; y++) {
+            for (int x = -1; x <= 1; x++) {
+                for (int z = -1; z <= 1; z++) {
+                    BlockPos pos = playerPos.add(x, y, z);
+                    if (mc.world.getBlockState(pos).getBlock() == Blocks.WATER) {
+                        return pos;
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
+    private BlockPos findWaterPlacePos() {
+        BlockPos playerPos = mc.player.getBlockPos();
+        
+        // Ищем твёрдый блок рядом со стеной на который можно поставить воду
+        Direction[] horizontalDirs = {Direction.NORTH, Direction.SOUTH, Direction.EAST, Direction.WEST};
+        
+        for (Direction dir : horizontalDirs) {
+            BlockPos wallPos = playerPos.offset(dir);
+            // Проверяем что это стена (твёрдый блок)
+            if (mc.world.getBlockState(wallPos).isSolidBlock(mc.world, wallPos)) {
+                // Проверяем блок под игроком рядом со стеной
+                BlockPos belowWall = playerPos.down().offset(dir);
+                if (mc.world.getBlockState(belowWall).isSolidBlock(mc.world, belowWall)) {
+                    // Проверяем что место для воды свободно
+                    BlockPos waterTarget = playerPos.down();
+                    if (mc.world.getBlockState(waterTarget).isReplaceable()) {
+                        return belowWall;
+                    }
+                }
+            }
+        }
+        
+        // Альтернатива - блок прямо под игроком
+        BlockPos below = playerPos.down();
+        if (mc.world.getBlockState(below).isSolidBlock(mc.world, below)) {
+            return below;
+        }
+        
+        return null;
+    }
+
+    private Direction getPlaceFace(BlockPos pos) {
+        BlockPos playerPos = mc.player.getBlockPos();
+        double dx = playerPos.getX() - pos.getX();
+        double dz = playerPos.getZ() - pos.getZ();
+        
+        if (Math.abs(dx) > Math.abs(dz)) {
+            return dx > 0 ? Direction.EAST : Direction.WEST;
+        } else {
+            return dz > 0 ? Direction.SOUTH : Direction.NORTH;
+        }
+    }
+
+    private int findWaterBucketSlot() {
+        for (int i = 0; i < 9; i++) {
+            if (mc.player.getInventory().getStack(i).getItem() == Items.WATER_BUCKET) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    private int findEmptyBucketSlot() {
+        for (int i = 0; i < 9; i++) {
+            if (mc.player.getInventory().getStack(i).getItem() == Items.BUCKET) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     // Находит позицию для размещения блока под игроком
     private BlockPos findPlacePos() {
         BlockPos blockPos = getPlayerBlockPos();
@@ -314,7 +504,8 @@ public class Spider extends Module {
         FunTime("FunTime"),
         SlimeBlock("Slime Block"),
         WaterBucket("Water Bucket"),
-        SpookyTime("SpookyTime");
+        SpookyTime("SpookyTime"),
+        WaterClimb("Water Climb");
 
         private final String name;
 

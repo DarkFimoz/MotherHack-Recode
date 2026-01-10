@@ -6,17 +6,16 @@ import fun.motherhack.api.events.impl.rotations.EventMotion;
 import fun.motherhack.api.events.impl.EventPacket;
 import fun.motherhack.modules.api.Category;
 import fun.motherhack.modules.api.Module;
+import fun.motherhack.modules.impl.client.Targets;
 import fun.motherhack.modules.settings.api.Nameable;
 import fun.motherhack.modules.settings.impl.BooleanSetting;
 import fun.motherhack.modules.settings.impl.EnumSetting;
 import fun.motherhack.modules.settings.impl.NumberSetting;
-import fun.motherhack.utils.network.Server;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.network.packet.c2s.play.ClientCommandC2SPacket;
 import net.minecraft.network.packet.s2c.play.EntityVelocityUpdateS2CPacket;
 import net.minecraft.network.packet.s2c.play.PlayerPositionLookS2CPacket;
@@ -27,28 +26,62 @@ import java.util.Comparator;
 import java.util.List;
 
 public class TargetStrafe extends Module {
-    private final BooleanSetting jump = new BooleanSetting("Jump", true);
-    private final NumberSetting distance = new NumberSetting("Distance", 1.3f, 0.2f, 7f, 0.1f);
-    private final EnumSetting<Boost> boost = new EnumSetting<>("Boost", Boost.None);
-    private final NumberSetting setSpeed = new NumberSetting("Speed", 1.3f, 0.0f, 2f, 0.1f);
-    private final NumberSetting velReduction = new NumberSetting("Reduction", 6.0f, 0.1f, 10f, 0.1f);
-    private final NumberSetting maxVelocitySpeed = new NumberSetting("Max Velocity", 0.8f, 0.1f, 2f, 0.1f);
+    // Rich Mode setting
+    private final EnumSetting<RichMode> richMode = new EnumSetting<>("RichMode", RichMode.THMode);
+    
+    // General settings
+    private final NumberSetting maxRange = new NumberSetting("MaxRange", 6f, 1f, 20f, 0.5f);
+    
+    // TH Mode settings
+    private final BooleanSetting jump = new BooleanSetting("Jump", true, () -> richMode.getValue() == RichMode.THMode);
+    private final NumberSetting distance = new NumberSetting("Distance", 1.3f, 0.2f, 7f, 0.1f, () -> richMode.getValue() == RichMode.THMode);
+    private final EnumSetting<Boost> boost = new EnumSetting<>("Boost", Boost.None, () -> richMode.getValue() == RichMode.THMode);
+    private final NumberSetting setSpeed = new NumberSetting("Speed", 1.3f, 0.0f, 2f, 0.1f, () -> richMode.getValue() == RichMode.THMode);
+    private final NumberSetting velReduction = new NumberSetting("Reduction", 6.0f, 0.1f, 10f, 0.1f, () -> richMode.getValue() == RichMode.THMode);
+    private final NumberSetting maxVelocitySpeed = new NumberSetting("Max Velocity", 0.8f, 0.1f, 2f, 0.1f, () -> richMode.getValue() == RichMode.THMode);
+    
+    // Rich Mode settings
+    private final EnumSetting<RichStrafeMode> richStrafeMode = new EnumSetting<>("Mode", RichStrafeMode.Matrix, () -> richMode.getValue() == RichMode.RichMode);
+    private final EnumSetting<RichPointType> richPointType = new EnumSetting<>("PointType", RichPointType.Cube, () -> richMode.getValue() == RichMode.RichMode && richStrafeMode.getValue() == RichStrafeMode.Grim);
+    private final EnumSetting<RichPointType> richPointTypeMatrix = new EnumSetting<>("MatrixPoint", RichPointType.Circle, () -> richMode.getValue() == RichMode.RichMode && richStrafeMode.getValue() == RichStrafeMode.Matrix);
+    private final NumberSetting richGrimRadius = new NumberSetting("GrimRadius", 0.87f, 0.1f, 1.5f, 0.01f, () -> richMode.getValue() == RichMode.RichMode && richStrafeMode.getValue() == RichStrafeMode.Grim);
+    private final NumberSetting richRadius = new NumberSetting("RichRadius", 2.5f, 0.1f, 7f, 0.1f, () -> richMode.getValue() == RichMode.RichMode && richStrafeMode.getValue() == RichStrafeMode.Matrix);
+    private final NumberSetting richSpeed = new NumberSetting("RichSpeed", 0.3f, 0.1f, 1f, 0.01f, () -> richMode.getValue() == RichMode.RichMode && richStrafeMode.getValue() == RichStrafeMode.Matrix);
+    private final BooleanSetting richAutoJump = new BooleanSetting("AutoJump", true, () -> richMode.getValue() == RichMode.RichMode);
+    private final BooleanSetting richOnlyKeyPressed = new BooleanSetting("OnlyKeyPressed", false, () -> richMode.getValue() == RichMode.RichMode);
+    private final BooleanSetting richInFrontOfTarget = new BooleanSetting("InFrontOfTarget", false, () -> richMode.getValue() == RichMode.RichMode);
+    private final EnumSetting<RichDirection> richDirection = new EnumSetting<>("Direction", RichDirection.Clockwise, () -> richMode.getValue() == RichMode.RichMode);
 
     private double oldSpeed, fovVal;
-    private boolean needSprintState, switchDir, disabled;
-    private int noSlowTicks, jumpTicks, waterTicks;
+    private boolean switchDir, disabled;
+    private int jumpTicks, waterTicks;
     private long disableTime;
     private LivingEntity target;
     private int elytraSlot = -1;
+    private int richPointIndex = 0;
 
     public TargetStrafe() {
         super("TargetStrafe", Category.Combat);
+        getSettings().add(richMode);
+        getSettings().add(maxRange);
+        // TH Mode settings
         getSettings().add(jump);
         getSettings().add(distance);
         getSettings().add(boost);
         getSettings().add(setSpeed);
         getSettings().add(velReduction);
         getSettings().add(maxVelocitySpeed);
+        // Rich Mode settings
+        getSettings().add(richStrafeMode);
+        getSettings().add(richPointType);
+        getSettings().add(richPointTypeMatrix);
+        getSettings().add(richGrimRadius);
+        getSettings().add(richRadius);
+        getSettings().add(richSpeed);
+        getSettings().add(richAutoJump);
+        getSettings().add(richOnlyKeyPressed);
+        getSettings().add(richInFrontOfTarget);
+        getSettings().add(richDirection);
     }
 
     @Override
@@ -57,6 +90,7 @@ public class TargetStrafe extends Module {
         oldSpeed = 0;
         disabled = false;
         target = null;
+        richPointIndex = 0;
         if (mc != null && mc.player != null && mc.options != null) {
             try {
                 fovVal = mc.options.getFovEffectScale().getValue();
@@ -138,13 +172,6 @@ public class TargetStrafe extends Module {
              
             double max2 = oldSpeed + n8;
              
-            // Simplified sprint state handling
-            if (!mc.player.isOnGround()) {
-                needSprintState = !mc.player.isSprinting();
-            } else {
-                needSprintState = false;
-            }
-             
             return Math.max(0.25, max2);
         } catch (Exception e) {
             e.printStackTrace();
@@ -181,6 +208,23 @@ public class TargetStrafe extends Module {
         }
     }
     
+    private int getRichDirectionMultiplier() {
+        if (richDirection.getValue() == RichDirection.Counterclockwise) {
+            return -1;
+        } else if (richDirection.getValue() == RichDirection.Random) {
+            long time = System.currentTimeMillis() / 3000;
+            return (time % 2 == 0) ? 1 : -1;
+        }
+        return 1;
+    }
+    
+    private boolean isRichKeyPressed() {
+        return mc.options.forwardKey.isPressed() ||
+               mc.options.backKey.isPressed() ||
+               mc.options.leftKey.isPressed() ||
+               mc.options.rightKey.isPressed();
+    }
+    
     @EventHandler
     public void onMotion(EventMotion event) {
         if (mc == null || mc.player == null || mc.world == null) return;
@@ -200,6 +244,13 @@ public class TargetStrafe extends Module {
             e.printStackTrace();
         }
 
+        // Rich Mode handling
+        if (richMode.getValue() == RichMode.RichMode) {
+            handleRichModeMotion();
+            return;
+        }
+
+        // TH Mode handling
         try {
             if (boost.getValue() == Boost.Elytra && elytraSlot != -1) {
                 if (isMoving() && !mc.player.isOnGround() &&
@@ -253,6 +304,73 @@ public class TargetStrafe extends Module {
         }
     }
     
+    private void handleRichModeMotion() {
+        if (target == null || !target.isAlive()) return;
+        
+        if (richStrafeMode.getValue() != RichStrafeMode.Matrix) return;
+        
+        Vec3d playerPos = mc.player.getPos();
+        Vec3d targetPos = target.getPos();
+        double r = richRadius.getValue();
+        
+        if (richOnlyKeyPressed.getValue() && !isRichKeyPressed()) return;
+        
+        if (richAutoJump.getValue() && mc.player.isOnGround()) {
+            mc.player.jump();
+        }
+        
+        int directionMultiplier = getRichDirectionMultiplier();
+        
+        if (richInFrontOfTarget.getValue()) {
+            float targetYaw = target.getYaw();
+            double x = targetPos.x - Math.sin(Math.toRadians(targetYaw)) * r * directionMultiplier;
+            double z = targetPos.z + Math.cos(Math.toRadians(targetYaw)) * r * directionMultiplier;
+            float yaw = (float) Math.toDegrees(Math.atan2(z - playerPos.z, x - playerPos.x)) - 90F;
+            double motionSpeed = richSpeed.getValue();
+            mc.player.setVelocity(
+                -Math.sin(Math.toRadians(yaw)) * motionSpeed,
+                mc.player.getVelocity().y,
+                Math.cos(Math.toRadians(yaw)) * motionSpeed
+            );
+            return;
+        }
+        
+        if (richPointTypeMatrix.getValue() == RichPointType.Cube) {
+            Vec3d[] points = new Vec3d[]{
+                new Vec3d(targetPos.x - r, playerPos.y, targetPos.z - r),
+                new Vec3d(targetPos.x - r, playerPos.y, targetPos.z + r),
+                new Vec3d(targetPos.x + r, playerPos.y, targetPos.z + r),
+                new Vec3d(targetPos.x + r, playerPos.y, targetPos.z - r)
+            };
+            
+            if (playerPos.distanceTo(points[richPointIndex]) < 0.5) {
+                richPointIndex = (richPointIndex + directionMultiplier + points.length) % points.length;
+            }
+            
+            Vec3d nextPoint = points[richPointIndex];
+            Vec3d dirVec = nextPoint.subtract(playerPos).normalize();
+            float yaw = (float) Math.toDegrees(Math.atan2(dirVec.z, dirVec.x)) - 90F;
+            double motionSpeed = richSpeed.getValue();
+            mc.player.setVelocity(
+                -Math.sin(Math.toRadians(yaw)) * motionSpeed,
+                mc.player.getVelocity().y,
+                Math.cos(Math.toRadians(yaw)) * motionSpeed
+            );
+        } else if (richPointTypeMatrix.getValue() == RichPointType.Circle) {
+            double angle = Math.atan2(playerPos.z - targetPos.z, playerPos.x - targetPos.x);
+            angle += directionMultiplier * richSpeed.getValue() / Math.max(playerPos.distanceTo(targetPos), r);
+            double x = targetPos.x + r * Math.cos(angle);
+            double z = targetPos.z + r * Math.sin(angle);
+            float yaw = (float) Math.toDegrees(Math.atan2(z - playerPos.z, x - playerPos.x)) - 90F;
+            double motionSpeed = richSpeed.getValue();
+            mc.player.setVelocity(
+                -Math.sin(Math.toRadians(yaw)) * motionSpeed,
+                mc.player.getVelocity().y,
+                Math.cos(Math.toRadians(yaw)) * motionSpeed
+            );
+        }
+    }
+    
     private double wrapDS(double x, double z) {
         try {
             double diffX = x - mc.player.getX();
@@ -267,6 +385,12 @@ public class TargetStrafe extends Module {
     @EventHandler
     public void onTick(EventPlayerTick event) {
         if (mc == null || mc.player == null) return;
+        
+        // Rich Mode Grim handling in tick
+        if (richMode.getValue() == RichMode.RichMode && richStrafeMode.getValue() == RichStrafeMode.Grim) {
+            handleRichGrimTick();
+            return;
+        }
         
         try {
             if (boost.getValue() == Boost.Elytra && elytraSlot != -1 &&
@@ -285,6 +409,82 @@ public class TargetStrafe extends Module {
             }
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+    
+    private void handleRichGrimTick() {
+        if (target == null || !target.isAlive()) return;
+        
+        if (richOnlyKeyPressed.getValue() && !isRichKeyPressed()) return;
+        
+        Vec3d playerPos = mc.player.getPos();
+        Vec3d targetPos = target.getPos();
+        double r = richGrimRadius.getValue();
+        
+        int directionMultiplier = getRichDirectionMultiplier();
+        
+        Vec3d nextPoint;
+        
+        if (richInFrontOfTarget.getValue()) {
+            float targetYaw = target.getYaw();
+            if (richPointType.getValue() == RichPointType.Center) {
+                nextPoint = targetPos.add(
+                    -Math.sin(Math.toRadians(targetYaw)) * r * directionMultiplier,
+                    0,
+                    Math.cos(Math.toRadians(targetYaw)) * r * directionMultiplier
+                );
+            } else {
+                double offset = Math.cos(System.currentTimeMillis() / 500.0) * r * directionMultiplier;
+                nextPoint = targetPos.add(
+                    -Math.sin(Math.toRadians(targetYaw)) * r + Math.cos(Math.toRadians(targetYaw)) * offset,
+                    0,
+                    Math.cos(Math.toRadians(targetYaw)) * r + Math.sin(Math.toRadians(targetYaw)) * offset
+                );
+            }
+        } else {
+            if (richPointType.getValue() == RichPointType.Cube) {
+                Vec3d[] points = new Vec3d[]{
+                    new Vec3d(targetPos.x - r, playerPos.y, targetPos.z - r),
+                    new Vec3d(targetPos.x - r, playerPos.y, targetPos.z + r),
+                    new Vec3d(targetPos.x + r, playerPos.y, targetPos.z + r),
+                    new Vec3d(targetPos.x + r, playerPos.y, targetPos.z - r)
+                };
+                
+                if (playerPos.distanceTo(points[richPointIndex]) < 0.5) {
+                    richPointIndex = (richPointIndex + directionMultiplier + points.length) % points.length;
+                }
+                nextPoint = points[richPointIndex];
+            } else if (richPointType.getValue() == RichPointType.Circle) {
+                double baseAngle = (System.currentTimeMillis() % 3600L) / 3600.0 * 4 * Math.PI;
+                double angle = directionMultiplier > 0 ? baseAngle : (2 * Math.PI - baseAngle);
+                nextPoint = new Vec3d(
+                    targetPos.x + Math.cos(angle) * r,
+                    playerPos.y,
+                    targetPos.z + Math.sin(angle) * r
+                );
+            } else {
+                nextPoint = new Vec3d(targetPos.x, playerPos.y, targetPos.z);
+            }
+        }
+        
+        // Calculate movement direction and apply input simulation
+        Vec3d direction = nextPoint.subtract(playerPos).normalize();
+        float yaw = mc.player.getYaw();
+        float movementAngle = (float) Math.toDegrees(Math.atan2(direction.z, direction.x)) - 90F;
+        float angleDiff = MathHelper.wrapDegrees(movementAngle - yaw);
+        
+        // Apply movement based on angle difference
+        double motionX = -Math.sin(Math.toRadians(movementAngle)) * 0.2;
+        double motionZ = Math.cos(Math.toRadians(movementAngle)) * 0.2;
+        
+        mc.player.setVelocity(
+            mc.player.getVelocity().x + motionX,
+            mc.player.getVelocity().y,
+            mc.player.getVelocity().z + motionZ
+        );
+        
+        if (richAutoJump.getValue() && mc.player.isOnGround()) {
+            mc.player.jump();
         }
     }
     
@@ -345,11 +545,15 @@ public class TargetStrafe extends Module {
         if (mc == null || mc.world == null || mc.player == null) return null;
         
         try {
-            // Basic target finding logic
+            Targets targetsModule = MotherHack.getInstance().getModuleManager().getModule(Targets.class);
+            double maxRangeSq = maxRange.getValue() * maxRange.getValue();
+            
             List<LivingEntity> entities = new ArrayList<>();
             for (Entity entity : mc.world.getEntities()) {
-                if (entity instanceof LivingEntity living && entity != mc.player && living.isAlive()) {
-                    entities.add(living);
+                if (entity instanceof LivingEntity living && targetsModule.isValid(living)) {
+                    if (mc.player.squaredDistanceTo(living) <= maxRangeSq) {
+                        entities.add(living);
+                    }
                 }
             }
             entities.sort(Comparator.comparingDouble(entity -> mc.player.squaredDistanceTo(entity)));
@@ -369,6 +573,66 @@ public class TargetStrafe extends Module {
             this.name = name;
         }
 
+        @Override
+        public String getName() {
+            return name;
+        }
+    }
+    
+    private enum RichMode implements Nameable {
+        THMode("THMode"), RichMode("RichMode");
+        
+        private final String name;
+        
+        RichMode(String name) {
+            this.name = name;
+        }
+        
+        @Override
+        public String getName() {
+            return name;
+        }
+    }
+    
+    private enum RichStrafeMode implements Nameable {
+        Matrix("Matrix"), Grim("Grim");
+        
+        private final String name;
+        
+        RichStrafeMode(String name) {
+            this.name = name;
+        }
+        
+        @Override
+        public String getName() {
+            return name;
+        }
+    }
+    
+    private enum RichPointType implements Nameable {
+        Cube("Cube"), Center("Center"), Circle("Circle");
+        
+        private final String name;
+        
+        RichPointType(String name) {
+            this.name = name;
+        }
+        
+        @Override
+        public String getName() {
+            return name;
+        }
+    }
+    
+    private enum RichDirection implements Nameable {
+        Clockwise("Clockwise"), Counterclockwise("Counterclockwise"), Random("Random");
+        
+        private final String name;
+        
+        RichDirection(String name) {
+            this.name = name;
+        }
+        
         @Override
         public String getName() {
             return name;

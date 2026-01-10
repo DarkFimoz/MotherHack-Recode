@@ -88,7 +88,7 @@ public class ModuleManager implements Wrapper {
                 new InvseeExploit(),
                 new AutoFlyme(),
                 new FastHub(),
-                new ElytraFlight(),
+                new ElytraPlus(),
                 new ElytraRecast(),
                 new FreeLook(),
                 new Zoom(),
@@ -127,8 +127,12 @@ public class ModuleManager implements Wrapper {
                 //new NingaBridge() (АВЗХЗХВАЗХВАЗХВ НУ ТИПО ЛЕГИТНЫЙ СКАФФУЛД)
                 //new GrimElytra(), (я тупо тестил)
                 new LegitAura(),
+                new TpAura(),
                 new Arrows(),
-                new AmbienceModule()
+                new AmbienceModule(),
+                new Parkour(),
+                new Recorder(),
+                new Xray()
         );
 
         for (Module module : modules) {

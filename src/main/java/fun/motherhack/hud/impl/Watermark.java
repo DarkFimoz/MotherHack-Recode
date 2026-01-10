@@ -19,7 +19,6 @@ public class Watermark extends HudElement {
 
     private final NumberSetting backgroundAlpha = new NumberSetting("Background Alpha", 80f, 10f, 100f, 5f);
     private final NumberSetting textAlpha = new NumberSetting("Text Alpha", 80f, 10f, 100f, 5f);
-    private final BooleanSetting showIcon = new BooleanSetting("Show Icon", false);
     private final BooleanSetting showName = new BooleanSetting("Show Name", true);
     private final BooleanSetting showFps = new BooleanSetting("Show FPS", true);
     private final BooleanSetting showPing = new BooleanSetting("Show Ping", true);
@@ -27,12 +26,13 @@ public class Watermark extends HudElement {
     private final BooleanSetting showTps = new BooleanSetting("Show Server TPS", true);
     private final BooleanSetting showTime = new BooleanSetting("Show Time", true);
     private final BooleanSetting showInternet = new BooleanSetting("Show Internet Icon", true);
+    private final BooleanSetting visualZero = new BooleanSetting("Visual Zero", false);
+    private final BooleanSetting russian = new BooleanSetting("Russian", false);
 
     public Watermark() {
         super("Watermark");
         getSettings().add(backgroundAlpha);
         getSettings().add(textAlpha);
-        getSettings().add(showIcon);
         getSettings().add(showName);
         getSettings().add(showFps);
         getSettings().add(showPing);
@@ -40,6 +40,8 @@ public class Watermark extends HudElement {
         getSettings().add(showTps);
         getSettings().add(showTime);
         getSettings().add(showInternet);
+        getSettings().add(visualZero);
+        getSettings().add(russian);
         // Set default position to top left
         getPosition().getValue().setX(0.01f);
         getPosition().getValue().setY(0.01f);
@@ -55,9 +57,10 @@ public class Watermark extends HudElement {
         float y = getY();
         float padding = 5f;
         float fontSize = 8f;
-        String name = showName.getValue() ? "MotherHack Recode" : "";
+        String name = showName.getValue() ? (russian.getValue() ? "МатерьХак Рекод" : "MotherHack Recode") : "";
         String ping = showPing.getValue() ? Server.getPing(mc.player) + "ms" : "";
-        String fps = showFps.getValue() ? Counter.getCurrentFPS() + "fps" : "";
+        int fpsValue = Counter.getCurrentFPS();
+        String fps = showFps.getValue() ? (visualZero.getValue() ? (fpsValue + "0") : String.valueOf(fpsValue)) + "fps" : "";
         String coords = showCoords.getValue() ? String.format("%.0f %.0f %.0f", mc.player.getX(), mc.player.getY(), mc.player.getZ()) : "";
         String tps = showTps.getValue() ? String.format("%.1f tps", getServerTPS()) : "";
         String time = showTime.getValue() ? MathUtils.getCurrentTime() : "";
@@ -75,7 +78,6 @@ public class Watermark extends HudElement {
 
         // Calculate total width based on enabled elements - more compact
         float totalWidth = 0;
-        if (showIcon.getValue()) totalWidth += padding * 2; // Icon space
         if (showName.getValue()) totalWidth += width1;
         if (showFps.getValue()) totalWidth += width2 + padding;
         if (showPing.getValue()) totalWidth += width3 + padding;
@@ -104,11 +106,6 @@ public class Watermark extends HudElement {
         // Time on the left (like in DynamicIsland)
         if (showTime.getValue()) {
             Render2D.drawFont(e.getContext().getMatrices(), font.getFont(fontSize), time, currentX - (padding * 3f) - Fonts.BOLD.getWidth(time, fontSize), y + 3.5f, textColor);
-        }
-
-        if (showIcon.getValue()) {
-            Render2D.drawFont(e.getContext().getMatrices(), Fonts.ICONS.getFont(11f), "R", currentX + padding / 2f, y + 3.5f, textColor);
-            currentX += padding * 2;
         }
 
         if (showName.getValue()) {

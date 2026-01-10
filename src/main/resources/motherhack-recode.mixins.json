@@ -4,6 +4,8 @@
   "package": "fun.motherhack.api.mixins",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "AbstractBlockStateMixin",
+    "BlockMixin",
     "CameraMixin",
     "ClientConnectionMixin",
     "EntityMixin",

@@ -31,7 +31,7 @@ public abstract class Module implements Wrapper {
         toggled = true;
         MotherHack.getInstance().getEventHandler().subscribe(this);
         if (!fullNullCheck()) {
-            MotherHack.getInstance().getNotifyManager().add(new Notify(NotifyIcons.successIcon, "Feature " + name + " was enable", 1000));
+            MotherHack.getInstance().getNotifyManager().add(new Notify(NotifyIcons.successIcon, name + " was enable", 800));
             GuiSoundHelper.playToggleSound(true);
         }
     }
@@ -40,7 +40,7 @@ public abstract class Module implements Wrapper {
         toggled = false;
         MotherHack.getInstance().getEventHandler().unsubscribe(this);
         if (!fullNullCheck()) {
-            MotherHack.getInstance().getNotifyManager().add(new Notify(NotifyIcons.failIcon, "Feature " + name + " was disable", 1000));
+            MotherHack.getInstance().getNotifyManager().add(new Notify(NotifyIcons.failIcon, name + " was disable", 800));
             GuiSoundHelper.playToggleSound(false);
         }
     }

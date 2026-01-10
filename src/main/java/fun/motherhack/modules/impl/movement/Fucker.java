@@ -33,7 +33,8 @@ public class Fucker extends Module {
         Bed("Bed"),
         Crystal("Crystal"),
         Egg("Egg"),
-        All("All");
+        All("All"),
+        Legit("Legit");
 
         private final String name;
 
@@ -65,12 +66,14 @@ public class Fucker extends Module {
     }
 
     private final EnumSetting<Mode> mode = new EnumSetting<>("Mode", Mode.Bed);
-    private final EnumSetting<Switch> autoSwitch = new EnumSetting<>("Switch", Switch.Silent);
-    private final NumberSetting range = new NumberSetting("Range", 4f, 1f, 6f, 0.5f);
-    private final BooleanSetting instant = new BooleanSetting("Instant", false);
-    private final BooleanSetting rotate = new BooleanSetting("Rotate", true);
-    private final BooleanSetting strictDirection = new BooleanSetting("Strict Direction", true);
-    private final NumberSetting delay = new NumberSetting("Delay", 100, 0, 500, 10);
+    private final EnumSetting<Switch> autoSwitch = new EnumSetting<>("Switch", Switch.Silent, () -> mode.getValue() != Mode.Legit);
+    private final NumberSetting range = new NumberSetting("Range", 4f, 1f, 6f, 0.5f, () -> mode.getValue() != Mode.Legit);
+    private final NumberSetting legitRange = new NumberSetting("Legit Range", 3f, 1f, 4f, 0.5f, () -> mode.getValue() == Mode.Legit);
+    private final BooleanSetting instant = new BooleanSetting("Instant", false, () -> mode.getValue() != Mode.Legit);
+    private final BooleanSetting rotate = new BooleanSetting("Rotate", true, () -> mode.getValue() != Mode.Legit);
+    private final BooleanSetting strictDirection = new BooleanSetting("Strict Direction", true, () -> mode.getValue() != Mode.Legit);
+    private final NumberSetting delay = new NumberSetting("Delay", 100f, 0f, 500f, 10f, () -> mode.getValue() != Mode.Legit);
+    private final NumberSetting rotationSpeed = new NumberSetting("Rotation Speed", 10f, 1f, 20f, 1f, () -> mode.getValue() == Mode.Legit);
 
     private BlockPos currentBlock = null;
     private BlockPos breakingBlock = null;
@@ -82,6 +85,12 @@ public class Fucker extends Module {
     private boolean isBreaking = false;
     private int breakingTicks = 0;
     private Direction breakDirection = Direction.UP;
+    
+    // Legit mode variables
+    private BlockPos legitTarget = null;
+    private boolean legitBreaking = false;
+    private float targetYaw = 0;
+    private float targetPitch = 0;
     
     private final RotationChanger rotationChanger = new RotationChanger(
             1000,
@@ -102,6 +111,12 @@ public class Fucker extends Module {
         isBreaking = false;
         breakingTicks = 0;
         breakingBlock = null;
+        
+        // Legit mode cleanup
+        legitTarget = null;
+        legitBreaking = false;
+        mc.options.attackKey.setPressed(false);
+        
         // Отменяем ломание блока при выключении
         if (mc.interactionManager != null) {
             mc.interactionManager.cancelBlockBreaking();
@@ -111,6 +126,12 @@ public class Fucker extends Module {
     @EventHandler
     public void onPlayerTick(EventPlayerTick event) {
         if (fullNullCheck()) return;
+
+        // Legit mode - отдельная логика
+        if (mode.getValue() == Mode.Legit) {
+            handleLegitMode();
+            return;
+        }
 
         // Очищаем список обработанных кроватей от несуществующих блоков
         processedBeds.removeIf(pos -> !isBed(mc.world.getBlockState(pos).getBlock()));
@@ -429,5 +450,131 @@ public class Fucker extends Module {
         }
         
         previousSlot = -1;
+    }
+
+    // ==================== LEGIT MODE ====================
+    
+    private void handleLegitMode() {
+        // Если есть текущая цель, проверяем её
+        if (legitTarget != null) {
+            Block block = mc.world.getBlockState(legitTarget).getBlock();
+            
+            // Кровать сломана
+            if (!isBed(block)) {
+                legitTarget = null;
+                legitBreaking = false;
+                mc.options.attackKey.setPressed(false);
+                return;
+            }
+            
+            // Проверяем дистанцию
+            double distance = mc.player.getPos().distanceTo(legitTarget.toCenterPos());
+            if (distance > legitRange.getValue()) {
+                legitTarget = null;
+                legitBreaking = false;
+                mc.options.attackKey.setPressed(false);
+                return;
+            }
+            
+            // Плавно поворачиваем камеру к кровати
+            smoothRotateToBlock(legitTarget);
+            
+            // Проверяем, смотрим ли мы на кровать (с небольшим допуском)
+            if (isLookingAtBlock(legitTarget, 5f)) {
+                // Зажимаем ЛКМ
+                mc.options.attackKey.setPressed(true);
+                legitBreaking = true;
+            }
+            
+            return;
+        }
+        
+        // Ищем новую кровать
+        legitTarget = findLegitBed();
+        
+        if (legitTarget != null) {
+            // Вычисляем целевые углы
+            Vec3d targetVec = legitTarget.toCenterPos();
+            float[] rotations = RotationUtils.getRotations(targetVec.x, targetVec.y, targetVec.z);
+            targetYaw = rotations[0];
+            targetPitch = rotations[1];
+        }
+    }
+    
+    private BlockPos findLegitBed() {
+        BlockPos playerPos = mc.player.getBlockPos();
+        int rangeInt = (int) Math.ceil(legitRange.getValue());
+        BlockPos closest = null;
+        double closestDistance = legitRange.getValue() + 1;
+
+        for (int x = -rangeInt; x <= rangeInt; x++) {
+            for (int y = -rangeInt; y <= rangeInt; y++) {
+                for (int z = -rangeInt; z <= rangeInt; z++) {
+                    BlockPos pos = playerPos.add(x, y, z);
+                    
+                    double distance = mc.player.getPos().distanceTo(pos.toCenterPos());
+                    if (distance > legitRange.getValue()) {
+                        continue;
+                    }
+
+                    Block block = mc.world.getBlockState(pos).getBlock();
+                    
+                    if (isBed(block) && distance < closestDistance) {
+                        closest = pos;
+                        closestDistance = distance;
+                    }
+                }
+            }
+        }
+
+        return closest;
+    }
+    
+    private void smoothRotateToBlock(BlockPos pos) {
+        Vec3d targetVec = pos.toCenterPos();
+        float[] targetRotations = RotationUtils.getRotations(targetVec.x, targetVec.y, targetVec.z);
+        targetYaw = targetRotations[0];
+        targetPitch = targetRotations[1];
+        
+        float currentYaw = mc.player.getYaw();
+        float currentPitch = mc.player.getPitch();
+        
+        // Вычисляем разницу углов
+        float yawDiff = wrapAngle(targetYaw - currentYaw);
+        float pitchDiff = targetPitch - currentPitch;
+        
+        // Скорость поворота
+        float speed = rotationSpeed.getValue().floatValue();
+        
+        // Плавно поворачиваем
+        float newYaw = currentYaw + clamp(yawDiff, -speed, speed);
+        float newPitch = currentPitch + clamp(pitchDiff, -speed, speed);
+        
+        // Ограничиваем pitch
+        newPitch = clamp(newPitch, -90f, 90f);
+        
+        // Применяем поворот к игроку (реальный поворот камеры)
+        mc.player.setYaw(newYaw);
+        mc.player.setPitch(newPitch);
+    }
+    
+    private boolean isLookingAtBlock(BlockPos pos, float tolerance) {
+        Vec3d targetVec = pos.toCenterPos();
+        float[] targetRotations = RotationUtils.getRotations(targetVec.x, targetVec.y, targetVec.z);
+        
+        float yawDiff = Math.abs(wrapAngle(targetRotations[0] - mc.player.getYaw()));
+        float pitchDiff = Math.abs(targetRotations[1] - mc.player.getPitch());
+        
+        return yawDiff <= tolerance && pitchDiff <= tolerance;
+    }
+    
+    private float wrapAngle(float angle) {
+        while (angle > 180f) angle -= 360f;
+        while (angle < -180f) angle += 360f;
+        return angle;
+    }
+    
+    private float clamp(float value, float min, float max) {
+        return Math.max(min, Math.min(max, value));
     }
 }

@@ -36,9 +36,9 @@ public class Notify implements Wrapper {
         float width3 = width + width2 + 7f;
         float x = mc.getWindow().getScaledWidth() / 2f - (width3 / 2f);
         if (timer.passed(delay)) animation.update(false);
-        Render2D.drawStyledRect(e.getContext().getMatrices(), x - 2.5f, y - 2.5f, width3 + 5f, 15f, 1.5f, new Color(0, 0, 0, (int) (175 * animation.getValue())), (int) (255 * animation.getValue()));
-        Render2D.drawFont(e.getContext().getMatrices(), Fonts.MEDIUM.getFont(9f), notify, x + width2 + 4f, y - 0.5f, new Color(255, 255, 255, (int) (255 * animation.getValue())));
-        Render2D.drawFont(e.getContext().getMatrices(), Fonts.ICONS.getFont(8f), icon.icon(), x + 1f, y + 1f, new Color(255, 255, 255, (int) (255 * animation.getValue())));
+        Render2D.drawStyledRect(e.getContext().getMatrices(), x - 2.5f, y - 2.5f, width3 + 5f, 15f, 1.5f, new Color(0, 0, 0, (int) (87 * animation.getValue())), (int) (127 * animation.getValue()));
+        Render2D.drawFont(e.getContext().getMatrices(), Fonts.MEDIUM.getFont(9f), notify, x + width2 + 4f, y - 0.5f, new Color(255, 255, 255, (int) (127 * animation.getValue())));
+        Render2D.drawFont(e.getContext().getMatrices(), Fonts.ICONS.getFont(8f), icon.icon(), x + 1f, y + 1f, new Color(255, 255, 255, (int) (127 * animation.getValue())));
     }
 
     public float animate(float value, float target) {

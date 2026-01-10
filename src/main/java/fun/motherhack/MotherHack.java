@@ -28,6 +28,8 @@ import java.lang.invoke.MethodHandles;
 public class MotherHack implements ModInitializer, Wrapper {
 
     @Getter private static MotherHack instance;
+    
+    public static float TICK_TIMER = 1.0f;
 
     private IEventBus eventHandler;
     private NotifyManager notifyManager;

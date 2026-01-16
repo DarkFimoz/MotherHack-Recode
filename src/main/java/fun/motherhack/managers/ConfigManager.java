@@ -199,6 +199,14 @@ public class ConfigManager {
             modules.add(element.getName(), object);
         }
 
+        // Save HUD elements visibility settings
+        JsonObject hudElementsVisibility = new JsonObject();
+        ListSetting elements = MotherHack.getInstance().getHudManager().getElements();
+        for (BooleanSetting setting : elements.getValue()) {
+            hudElementsVisibility.add(setting.getName(), new JsonPrimitive(setting.getValue()));
+        }
+        modules.add("_HudElementsVisibility", hudElementsVisibility);
+
         return modules;
     }
 
@@ -285,6 +293,17 @@ public class ConfigManager {
                         float y = Float.parseFloat(data[1]);
                         ((PositionSetting) s).setValue(new Position(x, y));
                     }
+                }
+            }
+        }
+
+        // Load HUD elements visibility settings
+        if (modules.has("_HudElementsVisibility")) {
+            JsonObject hudElementsVisibility = modules.get("_HudElementsVisibility").getAsJsonObject();
+            ListSetting elements = MotherHack.getInstance().getHudManager().getElements();
+            for (BooleanSetting setting : elements.getValue()) {
+                if (hudElementsVisibility.has(setting.getName())) {
+                    setting.setValue(hudElementsVisibility.get(setting.getName()).getAsBoolean());
                 }
             }
         }

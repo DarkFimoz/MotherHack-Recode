@@ -48,13 +48,18 @@ public class ElytraRecast extends Module {
     public NumberSetting legitFallDistance = new NumberSetting("LegitFallDistance", 0.3f, 0.1f, 1.0f, 0.05f, () -> exploit.getValue() == Exploit.Legit);
     public BooleanSetting legitOnlyMoving = new BooleanSetting("LegitOnlyMoving", true, () -> exploit.getValue() == Exploit.Legit);
 
+    // Javelin bypass variables
+    private int groundTick = 0;
+    private boolean changed = false;
+
     private enum Exploit implements Nameable {
         None("None"),
         Strict("Strict"),
         Strong("Strong"),
         TH("TH"),
         Legit("Legit"),
-        Liquid("Liquid");
+        Liquid("Liquid"),
+        Javelin("Javelin");
 
         private final String name;
 
@@ -72,7 +77,9 @@ public class ElytraRecast extends Module {
     public void onTick(EventPlayerTick e) {
         if (mc.player == null || mc.world == null) return;
 
-        if (exploit.getValue() == Exploit.Liquid) {
+        if (exploit.getValue() == Exploit.Javelin) {
+            handleJavelinMode();
+        } else if (exploit.getValue() == Exploit.Liquid) {
             handleLiquidMode();
         } else if (exploit.getValue() == Exploit.TH) {
             // Only press jump when autoJump is enabled and the conditions for elytra recast are plausible
@@ -122,7 +129,10 @@ public class ElytraRecast extends Module {
 
     @EventHandler
     public void onMotion(EventMotion em) {
-        if (exploit.getValue() == Exploit.TH) {
+        if (exploit.getValue() == Exploit.Javelin) {
+            // Javelin bypass - фиксированный питч, без настроек
+            return;
+        } else if (exploit.getValue() == Exploit.TH) {
             if (changePitch.getValue()) {
                 em.setPitch(pitchValue.getValue());
 
@@ -136,6 +146,7 @@ public class ElytraRecast extends Module {
                     }
                     case Liquid -> {}
                     case Legit -> {}
+                    case Javelin -> {}
                 }
             }
         } else {
@@ -254,6 +265,57 @@ public class ElytraRecast extends Module {
         legitWaitingForFall = false;
         legitDelay = 0;
     }
+    
+    private void handleJavelinMode() {
+        if (mc.player.isUsingItem()) {
+            if (mc.player.isSprinting()) {
+                mc.player.networkHandler.sendPacket(new ClientCommandC2SPacket(mc.player, ClientCommandC2SPacket.Mode.STOP_SPRINTING));
+                mc.player.setSprinting(false);
+            }
+            this.groundTick = 5;
+        } else if (this.groundTick > 0) {
+            --this.groundTick;
+            return;
+        }
+
+        if (!mc.player.isUsingItem() && !mc.player.isTouchingWater() && 
+            mc.player.getEquippedStack(EquipmentSlot.CHEST).getItem().equals(Items.ELYTRA) && 
+            isMoving()) {
+            
+            if (mc.player.isOnGround() && isMoving()) {
+                boolean shouldSprint = !mc.player.isUsingItem() && 
+                                      !mc.player.isSneaking() && 
+                                      !mc.player.isTouchingWater() &&
+                                      isMoving();
+                
+                if (!shouldSprint) {
+                    if (mc.player.isSprinting()) {
+                        mc.player.setSprinting(false);
+                    }
+                    mc.player.setSprinting(false);
+                } else {
+                    if (!mc.player.isSprinting()) {
+                        mc.player.setSprinting(true);
+                    }
+                    if (!mc.player.isSprinting()) {
+                        mc.player.networkHandler.sendPacket(new ClientCommandC2SPacket(mc.player, ClientCommandC2SPacket.Mode.START_SPRINTING));
+                        mc.player.setSprinting(true);
+                        this.changed = true;
+                    }
+                }
+                mc.player.jump();
+            } else if (!mc.player.isGliding()) {
+                mc.player.networkHandler.sendPacket(new ClientCommandC2SPacket(mc.player, ClientCommandC2SPacket.Mode.START_FALL_FLYING));
+            }
+        } else if (this.changed && mc.player.isSprinting()) {
+            mc.player.setSprinting(false);
+            this.changed = false;
+        }
+
+        if (this.groundTick > 0) {
+            --this.groundTick;
+        }
+    }
 
     public boolean castElytra() {
         if (checkElytra() && check()) {
@@ -307,5 +369,12 @@ public class ElytraRecast extends Module {
         resetLegitState();
         legitCooldown = 0;
         lastJumpTime = 0;
+        
+        // Reset Javelin mode state
+        if (this.changed && mc.player.isSprinting()) {
+            mc.player.setSprinting(false);
+        }
+        this.groundTick = 0;
+        this.changed = false;
     }
 }

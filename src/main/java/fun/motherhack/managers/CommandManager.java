@@ -27,7 +27,8 @@ public class CommandManager implements Wrapper {
                 new WaypointCommand(),
                 new IgnoreCommand(),
                 new MessageAppendCommand(),
-                new MessageAppendWordCommand()
+                new MessageAppendWordCommand(),
+                new GotoCommand()
         );
     }
 

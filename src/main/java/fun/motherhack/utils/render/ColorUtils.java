@@ -69,4 +69,11 @@ public class ColorUtils implements Wrapper {
 
         return new Color(r, g, b, a);
     }
+    
+    public Color getGradientColor(int offset, int alpha) {
+        float hue = (System.currentTimeMillis() % 10000) / 10000f;
+        hue += offset / 360f;
+        hue = hue % 1f;
+        return new Color(Color.HSBtoRGB(hue, 0.7f, 1f) & 0xFFFFFF | (alpha << 24), true);
+    }
 }

@@ -30,6 +30,7 @@ public abstract class HeldItemRendererMixin implements Wrapper {
     @Shadow private float equipProgressMainHand;
     @Shadow private float prevEquipProgressMainHand;
     @Shadow protected abstract void renderFirstPersonItem(AbstractClientPlayerEntity player, float tickDelta, float pitch, Hand hand, float swingProgress, ItemStack item, float equipProgress, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light);
+    @Shadow protected abstract void applyEquipOffset(MatrixStack matrices, Arm arm, float equipProgress);
     @Shadow private float prevEquipProgressOffHand;
     @Shadow private float equipProgressOffHand;
     @Shadow private ItemStack offHand;

@@ -38,8 +38,12 @@ public class Targets extends Module {
             if (player.hasStatusEffect(StatusEffects.INVISIBILITY) && !targets.getName("settings.targets.invisibles").getValue()) return false;
             if (MotherHack.getInstance().getFriendManager().isFriend(entity.getName().getString())) return false;
             if (Server.isBot(player)) return false;
-            return !MotherHack.getInstance().getModuleManager().getModule(Teams.class).isToggled()
-            		|| InventoryUtils.getArmorColor(player, 3) == InventoryUtils.getArmorColor(mc.player, 3);
+            // Если Teams включен - не бить тиммейтов (с таким же цветом брони)
+            if (MotherHack.getInstance().getModuleManager().getModule(Teams.class).isToggled()
+                    && InventoryUtils.getArmorColor(player, 3) == InventoryUtils.getArmorColor(mc.player, 3)) {
+                return false;
+            }
+            return true;
         }
         if (entity instanceof PassiveEntity && !targets.getName("settings.targets.passives").getValue()) return false;
         if (entity instanceof HostileEntity && !targets.getName("settings.targets.hostiles").getValue()) return false;

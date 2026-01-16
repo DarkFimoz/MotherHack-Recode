@@ -48,6 +48,7 @@ public class MotherHack implements ModInitializer, Wrapper {
     private MHackGui mHackGui;
     private MainMenu mainMenu;
     private MediaPlayer mediaPlayer;
+    private BotManager botManager;
     @Setter private boolean panic = false;
     private long initTime;
 
@@ -88,6 +89,7 @@ public class MotherHack implements ModInitializer, Wrapper {
         mHackGui = new MHackGui();
         mainMenu = new MainMenu();
         mediaPlayer = new MediaPlayer();
+        botManager = new BotManager();
 
         ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new SimpleSynchronousResourceReloadListener() {
             @Override

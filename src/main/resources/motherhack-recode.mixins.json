@@ -8,8 +8,10 @@
     "BlockMixin",
     "CameraMixin",
     "ClientConnectionMixin",
+    "DecoderHandlerMixin",
     "EntityMixin",
     "FireworkRocketEntityMixin",
+    "HandshakeC2SPacketMixin",
     "HeldItemRendererMixin",
     "ItemEntityMixin",
     "KeyboardMixin",
@@ -18,10 +20,12 @@
     "PlayerEntityMixin",
     "ScoreboardMixin",
     "accessors.IGameRenderer",
+    "accessors.IHandshakeC2SPacket",
     "accessors.ILivingEntity"
   ],
   "client": [
     "ArmorFeatureRendererMixin",
+    "PlayerEntityRendererMixin",
     "BackgroundRendererMixin",
     "BossBarHudMixin",
     "ChatHudMixin",

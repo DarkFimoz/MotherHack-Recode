@@ -9,7 +9,6 @@ import fun.motherhack.modules.impl.client.UI;
 import fun.motherhack.modules.settings.impl.NumberSetting;
 import fun.motherhack.utils.animations.Animation;
 import fun.motherhack.utils.animations.Easing;
-import fun.motherhack.utils.animations.infinity.InfinityAnimation;
 import fun.motherhack.utils.mediaplayer.MediaPlayer;
 import fun.motherhack.utils.render.Render2D;
 import fun.motherhack.utils.render.fonts.Fonts;
@@ -37,7 +36,10 @@ public class DynamicIsland extends HudElement {
     @EventHandler
     public void onTick(EventTick e) {
         try {
-            if (Module.fullNullCheck() || MotherHack.getInstance().isPanic()) return;
+            if (Module.fullNullCheck() || MotherHack.getInstance().isPanic() || closed()) {
+                mediaAnimation.update(false);
+                return;
+            }
             
             MediaPlayer mediaPlayer = MotherHack.getInstance().getMediaPlayer();
             if (mediaPlayer == null) {
@@ -91,8 +93,6 @@ public class DynamicIsland extends HudElement {
             String title = mediaPlayer.getTitle() != null ? mediaPlayer.getTitle() : "";
             String artist = mediaPlayer.getArtist() != null ? mediaPlayer.getArtist() : "";
             String track = title + (artist.isEmpty() ? "" : " - " + artist);
-            
-            mediaAnimation.update(true);
             
             float padding = 2f;
             float round = 6f;

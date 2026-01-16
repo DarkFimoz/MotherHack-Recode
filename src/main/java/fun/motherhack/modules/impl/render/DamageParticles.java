@@ -6,6 +6,8 @@ import fun.motherhack.api.events.impl.EventRender2D;
 import fun.motherhack.api.mixins.accessors.IWorldRenderer;
 import fun.motherhack.modules.api.Category;
 import fun.motherhack.modules.api.Module;
+import fun.motherhack.modules.impl.client.UI;
+import fun.motherhack.modules.settings.impl.EnumSetting;
 import fun.motherhack.modules.settings.impl.NumberSetting;
 import fun.motherhack.utils.math.MathUtils;
 import fun.motherhack.utils.render.Render2D;
@@ -24,9 +26,36 @@ public class DamageParticles extends Module {
 
     private final NumberSetting count = new NumberSetting("settings.damageparticles.count", 30f, 10f, 50f, 1f);
     private final NumberSetting size = new NumberSetting("settings.damageparticles.size", 30f, 10f, 50f, 1f);
+    private final NumberSetting maxParticles = new NumberSetting("settings.damageparticles.maxparticles", 500f, 100f, 2000f, 50f);
+    private final EnumSetting<ParticleTexture> particleTexture = new EnumSetting<>("settings.damageparticles.texture", ParticleTexture.Star);
 
     public DamageParticles() {
         super("DamageParticles", Category.Render);
+    }
+
+    public enum ParticleTexture implements fun.motherhack.modules.settings.api.Nameable {
+        Glow("settings.damageparticles.texture.glow"),
+        Star("settings.damageparticles.texture.star"),
+        Feather("settings.damageparticles.texture.feather"),
+        Moon("settings.damageparticles.texture.moon"),
+        Spark("settings.damageparticles.texture.spark"),
+        Triangle("settings.damageparticles.texture.triangle"),
+        Cube("settings.damageparticles.texture.cube"),
+        Cross("settings.damageparticles.texture.cross"),
+        Arrow("settings.damageparticles.texture.arrow"),
+        Firefly("settings.damageparticles.texture.firefly"),
+        Marker("settings.damageparticles.texture.marker");
+
+        private final String name;
+
+        ParticleTexture(String name) {
+            this.name = name;
+        }
+
+        @Override
+        public String getName() {
+            return name;
+        }
     }
 
     private final CopyOnWriteArrayList<Particle> particles = new CopyOnWriteArrayList<>();
@@ -42,12 +71,29 @@ public class DamageParticles extends Module {
         if (e.getTarget() == mc.player) return;
         if (!(e.getTarget() instanceof LivingEntity entity)) return;
         if (!entity.isAlive()) return;
-        for (int i = 0; i < count.getValue(); i++) particles.add(new Particle(entity.getPos().add(0, entity.getHeight() / 2f, 0)));
+        
+        // Проверка лимита частиц
+        int particlesToAdd = count.getValue().intValue();
+        int currentParticles = particles.size();
+        int maxAllowed = maxParticles.getValue().intValue();
+        
+        if (currentParticles >= maxAllowed) return;
+        
+        // Добавляем только столько частиц, сколько можем без превышения лимита
+        int actualCount = Math.min(particlesToAdd, maxAllowed - currentParticles);
+        
+        for (int i = 0; i < actualCount; i++) {
+            particles.add(new Particle(entity.getPos().add(0, entity.getHeight() / 2f, 0)));
+        }
     }
 
     @EventHandler
     private void onRender2D(EventRender2D e) {
-        if (fullNullCheck()) return; 	
+        if (fullNullCheck()) return;
+
+        // Получаем цвет из UI
+        UI uiModule = MotherHack.getInstance().getModuleManager().getModule(UI.class);
+        Color uiColor = uiModule != null ? uiModule.getTheme().getAccentColor() : new Color(255, 0, 0);
 
         //RenderSystem.enableBlend();
         //RenderSystem.blendFunc(GlStateManager.SrcFactor.ONE_MINUS_DST_COLOR, GlStateManager.DstFactor.ONE);
@@ -61,6 +107,15 @@ public class DamageParticles extends Module {
                 particle.update();
                 Vec3d position = WorldUtils.getPosition(particle.pos);
                 float f = 1 - ((System.currentTimeMillis() - particle.time) / 7000f);
+                
+                // Используем цвет из UI с альфой частицы
+                Color particleColor = new Color(
+                    uiColor.getRed(),
+                    uiColor.getGreen(),
+                    uiColor.getBlue(),
+                    (int) (255 * particle.alpha)
+                );
+                
                 Render2D.drawTexture(e.getContext().getMatrices(),
                 		(float) position.getX(),
                 		(float) position.getY(),
@@ -68,7 +123,7 @@ public class DamageParticles extends Module {
                 		size.getValue() * f,
                 		0f,
                 		particle.texture,
-                		new Color(255, 0, 0, (int) (255 * particle.alpha))
+                		particleColor
                 );
             } else particles.remove(particle);
         }
@@ -78,7 +133,7 @@ public class DamageParticles extends Module {
         //RenderSystem.disableBlend();
     }
 
-    private static class Particle {
+    private class Particle {
         private Vec3d pos, velocity;
         private final long time;
         private final Identifier texture;
@@ -93,7 +148,7 @@ public class DamageParticles extends Module {
                     MathUtils.randomFloat(-0.07f, 0.07f)
             );
             this.time = System.currentTimeMillis();
-            this.texture = randomTexture();
+            this.texture = getTexture();
             this.alpha = 0.8f;
         }
 
@@ -124,13 +179,21 @@ public class DamageParticles extends Module {
             velocity = velocity.multiply(0.995);
         }
 
-        private Identifier randomTexture() {
-            int random = MathUtils.randomInt(1, 4);
-            if (random == 1) return MotherHack.id("particles/dollar.png");
-            if (random == 2) return MotherHack.id("particles/firefly.png");
-            if (random == 3) return MotherHack.id("particles/snow.png");
-
-            return MotherHack.id("particles/star.png");
+        private Identifier getTexture() {
+            ParticleTexture textureType = DamageParticles.this.particleTexture.getValue();
+            return switch (textureType) {
+                case Glow -> Identifier.of("motherhack", "hud/glow.png");
+                case Star -> Identifier.of("motherhack", "hud/star.png");
+                case Feather -> Identifier.of("motherhack", "hud/feather.png");
+                case Moon -> Identifier.of("motherhack", "hud/moon.png");
+                case Spark -> Identifier.of("motherhack", "hud/spark.png");
+                case Triangle -> Identifier.of("motherhack", "hud/triangle.png");
+                case Cube -> Identifier.of("motherhack", "hud/cube.png");
+                case Cross -> Identifier.of("motherhack", "hud/mcross.png");
+                case Arrow -> Identifier.of("motherhack", "hud/arrow.png");
+                case Firefly -> Identifier.of("motherhack", "hud/firefly.png");
+                case Marker -> Identifier.of("motherhack", "hud/marker.png");
+            };
         }
     }
 }

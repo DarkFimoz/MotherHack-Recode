@@ -3,10 +3,8 @@ package fun.motherhack.modules.impl.movement;
 import fun.motherhack.MotherHack;
 import fun.motherhack.api.events.impl.EventPacket;
 import fun.motherhack.api.events.impl.EventPlayerTick;
-import fun.motherhack.api.events.impl.rotations.EventMotion;
 import fun.motherhack.modules.api.Category;
 import fun.motherhack.modules.api.Module;
-import fun.motherhack.modules.settings.Setting;
 import fun.motherhack.modules.settings.impl.BooleanSetting;
 import fun.motherhack.modules.settings.impl.EnumSetting;
 import fun.motherhack.modules.settings.impl.NumberSetting;
@@ -25,7 +23,6 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 
 public class Scaffold extends Module {
@@ -51,6 +48,7 @@ public class Scaffold extends Module {
         Smooth("Smooth"),
         Packet("Packet"),
         Linear("Linear"),
+        Snap("Snap"),
         None("None");
         
         private final String name;
@@ -106,10 +104,9 @@ public class Scaffold extends Module {
     private BlockPosWithFacing currentBlock;
     private int prevY = -999;
     private boolean wasSneaking = false;
-    private boolean wasJumping = false;
-    private boolean shouldPlaceOnLanding = false;
     private BlockPosWithFacing delayedBlock;
     private float[] currentRotations = new float[2];
+    private float[] snapRotations = null;
     private final RotationChanger rotationChanger = new RotationChanger(
             5000,
             () -> new Float[]{currentRotations[0], currentRotations[1]},
@@ -124,9 +121,8 @@ public class Scaffold extends Module {
     public void onEnable() {
         super.onEnable();
         prevY = -999;
-        wasJumping = false;
-        shouldPlaceOnLanding = false;
         delayedBlock = null;
+        snapRotations = null;
         lockYTimer.reset();
     }
     
@@ -139,6 +135,28 @@ public class Scaffold extends Module {
         }
         // Clean up rotation changer
         MotherHack.getInstance().getRotationManager().removeRotation(rotationChanger);
+    }
+    
+    @EventHandler
+    public void onPacketSend(EventPacket.Send e) {
+        if (fullNullCheck() || snapRotations == null) return;
+        
+        // Inject snap rotations into movement packets without affecting camera
+        if (e.getPacket() instanceof PlayerMoveC2SPacket packet) {
+            if (packet instanceof PlayerMoveC2SPacket.Full) {
+                e.setPacket(new PlayerMoveC2SPacket.Full(
+                    packet.getX(0), packet.getY(0), packet.getZ(0),
+                    snapRotations[0], snapRotations[1], 
+                    packet.isOnGround(), mc.player.horizontalCollision
+                ));
+            } else if (packet instanceof PlayerMoveC2SPacket.LookAndOnGround) {
+                e.setPacket(new PlayerMoveC2SPacket.LookAndOnGround(
+                    snapRotations[0], snapRotations[1], 
+                    packet.isOnGround(), mc.player.horizontalCollision
+                ));
+            }
+            snapRotations = null; // Reset after sending
+        }
     }
     
     @EventHandler
@@ -234,6 +252,11 @@ public class Scaffold extends Module {
                     // Use RotationManager for smooth rotations like Aura
                     if (rotateMode.getValue() == Rotate.Packet) {
                         MotherHack.getInstance().getRotationManager().addPacketRotation(currentRotations);
+                    } else if (rotateMode.getValue() == Rotate.Snap) {
+                        // Snap rotation - body rotates, camera stays still
+                        snapRotations = currentRotations.clone();
+                        mc.player.setBodyYaw(currentRotations[0]);
+                        mc.player.setHeadYaw(currentRotations[0]);
                     } else if (rotateMode.getValue() == Rotate.Linear) {
                         // Linear rotation - use smooth interpolation like Normal mode
                         MotherHack.getInstance().getRotationManager().addRotation(rotationChanger);
@@ -279,6 +302,11 @@ public class Scaffold extends Module {
                 // Use RotationManager for smooth rotations
                 if (rotateMode.getValue() == Rotate.Packet) {
                     MotherHack.getInstance().getRotationManager().addPacketRotation(currentRotations);
+                } else if (rotateMode.getValue() == Rotate.Snap) {
+                    // Snap rotation - body rotates, camera stays still
+                    snapRotations = currentRotations.clone();
+                    mc.player.setBodyYaw(currentRotations[0]);
+                    mc.player.setHeadYaw(currentRotations[0]);
                 } else if (rotateMode.getValue() == Rotate.Linear) {
                     // Linear rotation - use smooth interpolation like Normal mode
                     MotherHack.getInstance().getRotationManager().addRotation(rotationChanger);

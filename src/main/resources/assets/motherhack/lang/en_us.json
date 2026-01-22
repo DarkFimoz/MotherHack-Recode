@@ -45,6 +45,8 @@
   "descriptions.render.fullbright": "Toggled on max brightness when dark.",
   "descriptions.render.watermark": "Draws watermark of client.",
   "descriptions.render.aspectratio": "Changes the aspect ratio of the game window.",
+  "descriptions.render.arrows": "Shows arrows on screen pointing to players around you.",
+  "descriptions.render.angelwingsesp": "Renders beautiful animated angel wings on players.",
 
   "descriptions.client.ui": "Displays your UI.",
   "descriptions.client.rpc": "Displays client activity in discord.",
@@ -284,6 +286,7 @@
   "settings.targetesp.colormode": "Color Mode",
   "settings.targetesp.colormode.rainbow": "Rainbow",
   "settings.targetesp.colormode.uicolor": "UI Color",
+  "settings.targetesp.renderbehindplayer": "Render Behind Player",
 
   "settings.targets.players": "Players",
   "settings.targets.invisibles": "Invisibles",
@@ -337,6 +340,7 @@
   
   "descriptions.combat.targetstrafe": "Automatically circles around the target at a specified distance.",
   "descriptions.combat.autoclicker": "Automatically hits the targeted enemy.",
+  "descriptions.combat.legitaura": "Legit aura with smooth rotations, elytra prediction and smart crits.",
   "descriptions.movement.backsprint": "Automatically sprints backward with body rotation.",
   "descriptions.movement.elytraflight": "Greatly boosts speed on elytra.",
   "descriptions.movement.flight": "Allows flying with customizable speed.",
@@ -370,6 +374,7 @@
   "descriptions.misc.itemscroller": "Allows you to quickly drop all items of the same type by holding Shift+Ctrl and clicking Q.",
   "descriptions.misc.autologin": "Automatically enters password when /login, /l, /reg or /register commands appear in chat.",
   "descriptions.misc.autorespawn": "Automatically respawns after death.",
+  "descriptions.misc.ezz": "Automatically sends toxic messages in chat when killing a player.",
 
   "settings.autologin.password": "Password",
   "descriptions.render.bedtags": "Shows distance to the bed.",
@@ -656,5 +661,13 @@
 
   "descriptions.render.motionblur": "Adds motion blur effect to the game.",
   "settings.motionblur.strength": "Strength",
-  "settings.motionblur.userrscaling": "Use RR Scaling"
+  "settings.motionblur.userrscaling": "Use RR Scaling",
+
+  "descriptions.client.notifications": "Allows you to enable/disable and configure module toggle notifications.",
+  "settings.notifications.enabled": "Enabled",
+  "settings.notifications.moduletoggle": "Module Toggle",
+  "settings.notifications.position": "Position",
+  "settings.notifications.position.bottomleft": "Bottom Left",
+  "settings.notifications.position.bottomcenter": "Bottom Center",
+  "settings.notifications.position.bottomright": "Bottom Right"
 }

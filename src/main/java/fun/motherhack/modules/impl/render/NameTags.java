@@ -4,13 +4,17 @@ import fun.motherhack.MotherHack;
 import fun.motherhack.api.events.impl.EventRender2D;
 import fun.motherhack.modules.api.Category;
 import fun.motherhack.modules.api.Module;
+import fun.motherhack.modules.impl.client.UI;
+import fun.motherhack.modules.settings.api.Nameable;
 import fun.motherhack.modules.settings.impl.BooleanSetting;
+import fun.motherhack.modules.settings.impl.EnumSetting;
 import fun.motherhack.modules.settings.impl.NumberSetting;
 import fun.motherhack.utils.math.MathUtils;
 import fun.motherhack.utils.network.Server;
 import fun.motherhack.utils.render.fonts.Fonts;
 import fun.motherhack.utils.render.Render2D;
 import fun.motherhack.utils.world.WorldUtils;
+import lombok.Getter;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.option.Perspective;
@@ -25,6 +29,19 @@ import java.awt.*;
 
 public class NameTags extends Module {
 
+    @Getter
+    public enum ColorMode implements Nameable {
+        UIColor("UIColor"),
+        Default("Default");
+
+        private final String name;
+
+        ColorMode(String name) {
+            this.name = name;
+        }
+    }
+
+    private final EnumSetting<ColorMode> colorMode = new EnumSetting<>("Color Mode", ColorMode.Default);
     private final NumberSetting rectRounding = new NumberSetting("settings.nametags.rectrounding", 1.5f, 0f, 5f, 0.5f);
     private final BooleanSetting items = new BooleanSetting("settings.nametags.items", true);
     private final BooleanSetting border = new BooleanSetting("settings.nametags.border", true);
@@ -74,7 +91,7 @@ public class NameTags extends Module {
                         rectWidth,
                         height,
                         rectRounding.getValue(),
-                        entity == mc.player || MotherHack.getInstance().getFriendManager().isFriend(entity.getName().getString()) ? new Color(0, 255, 255, 150) : new Color(0, 0, 0, 150),
+                        entity == mc.player || MotherHack.getInstance().getFriendManager().isFriend(entity.getName().getString()) ? getFriendColor() : new Color(0, 0, 0, 150),
                         255
                 );
             } else {
@@ -84,7 +101,7 @@ public class NameTags extends Module {
                         rectWidth,
                         height,
                         rectRounding.getValue(),
-                        entity == mc.player || MotherHack.getInstance().getFriendManager().isFriend(entity.getName().getString()) ? new Color(0, 255, 255, 150) : new Color(0, 0, 0, 175)
+                        entity == mc.player || MotherHack.getInstance().getFriendManager().isFriend(entity.getName().getString()) ? getFriendColor() : new Color(0, 0, 0, 175)
                 );
             }
 
@@ -287,10 +304,20 @@ public class NameTags extends Module {
     private Color getBorderColor(LivingEntity entity) {
         float health = MathUtils.round(Server.getHealth(entity, true));
 
-        if (entity == mc.player || MotherHack.getInstance().getFriendManager().getFriends().contains(entity.getName().getString())) return new Color(0, 255, 255);
-        else if (health >= 15) return new Color(0, 255, 0);
+        if (entity == mc.player || MotherHack.getInstance().getFriendManager().getFriends().contains(entity.getName().getString())) {
+            return getFriendColor();
+        } else if (health >= 15) return new Color(0, 255, 0);
         else if (health >= 5) return new Color(255, 150, 0);
         else return new Color(255, 0, 0);
+    }
+
+    private Color getFriendColor() {
+        if (colorMode.getValue() == ColorMode.UIColor) {
+            Color uiColor = MotherHack.getInstance().getModuleManager().getModule(UI.class).getTheme().getAccentColor();
+            return new Color(uiColor.getRed(), uiColor.getGreen(), uiColor.getBlue(), 150);
+        } else {
+            return new Color(0, 255, 255, 150); // Default cyan
+        }
     }
 
     private String format(String text) {

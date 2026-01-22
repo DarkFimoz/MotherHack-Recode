@@ -9,6 +9,7 @@
   "descriptions.combat.autogapple": "Автоматически ест золотые яблоки при низком здоровье.",
   "descriptions.combat.targetstrafe": "Автоматически кружит вокруг таргета на заданной дистанции.",
   "descriptions.combat.autoclicker": "Автоматически бьет врага под прицелом.",
+  "descriptions.combat.legitaura": "Легитная аура с плавными ротациями, предиктом для элитр и умными критами.",
 
   "descriptions.movement.sprint": "Автоматически спринтит.",
   "descriptions.movement.guimove": "Позволяет бегать с открытым инвентарем.",
@@ -70,6 +71,7 @@
   "descriptions.misc.itemscroller": "Позволяет быстро выбросить все предметы одного типа, удерживая Shift+Ctrl и нажимая Q.",
   "descriptions.misc.autologin": "Автоматически вводит пароль при появлении команд /login, /l, /reg или /register в чате.",
   "descriptions.misc.autorespawn": "Автовозраждение после смерти.",
+  "descriptions.misc.ezz": "Автоматически пишет токсичные сообщения в чат при убийстве игрока.",
 
   "settings.autologin.password": "Пароль",
 
@@ -96,6 +98,8 @@
   "descriptions.render.swinganimations": "Настраивает анимации взмаха оружия.",
   "descriptions.render.nocameraclip": "Предотвращает прохождение камеры сквозь стены в режиме третьего лица.",
   "descriptions.render.aspectratio": "Изменяет соотношение сторон игрового окна.",
+  "descriptions.render.arrows": "Показывает стрелки на экране, указывающие направление к игрокам вокруг.",
+  "descriptions.render.angelwingsesp": "Рисует красивые анимированные ангельские крылья на игроках.",
   
   "descriptions.client.ui": "Показывает твой UI.",
   "descriptions.client.rpc": "Показывает активность клиента в дискорде.",
@@ -359,6 +363,7 @@
   "settings.targetesp.colormode": "Режим цвета",
   "settings.targetesp.colormode.rainbow": "Радуга",
   "settings.targetesp.colormode.uicolor": "Цвет UI",
+  "settings.targetesp.renderbehindplayer": "Рендер за игроком",
 
   "settings.targets.players": "Игроки",
   "settings.targets.invisibles": "Невидимые",
@@ -660,5 +665,13 @@
 
   "descriptions.render.motionblur": "Добавляет эффект размытия в движении.",
   "settings.motionblur.strength": "Сила",
-  "settings.motionblur.userrscaling": "Масштаб по частоте"
+  "settings.motionblur.userrscaling": "Масштаб по частоте",
+
+  "descriptions.client.notifications": "Позволяет включать/выключать и настраивать уведомления о переключении модулей.",
+  "settings.notifications.enabled": "Включено",
+  "settings.notifications.moduletoggle": "Переключение модулей",
+  "settings.notifications.position": "Позиция",
+  "settings.notifications.position.bottomleft": "Снизу слева",
+  "settings.notifications.position.bottomcenter": "Снизу по центру",
+  "settings.notifications.position.bottomright": "Снизу справа"
   }

@@ -130,7 +130,8 @@ public class ModuleManager implements Wrapper {
                 new RWHelper(), // паста
                 new VanillaDisabler(), // влагалище дизейблер
                 new Bots(), // mineflayer боты
-                new Ezz() // гоу без осуждений, модуль говнише?? BY KISSEDWARRIOR (он фрик)
+                new Ezz(), // гоу без осуждений, модуль говнише?? BY KISSEDWARRIOR (он фрик)
+                new Notifications() // настройки уведомлений
                 //0. new Fly(), тест флая от @ymepwu
                 //1. new ResourcePackPositionManager(), (нуууу короче хотел сделать так, чтобы можно было убирать удобно рп мазерхрюка)
                 //2. new AutoVote(), (BWHelper заменил этот понос)
@@ -937,9 +938,15 @@ public class ModuleManager implements Wrapper {
         if (Module.fullNullCheck() || mc.currentScreen != null || MotherHack.getInstance().isPanic()) return;
 
         if (e.getAction() == 1)
-            for (Module module : modules)
+            for (Module module : modules) {
+                // Запрещаем toggle GUI модулей через keybind когда открыт любой GUI
+                if ((module instanceof fun.motherhack.modules.impl.client.UI || 
+                     module instanceof fun.motherhack.modules.impl.client.MHACKGUI) && 
+                    mc.currentScreen != null) continue;
+                
                 if (module.getBind().getKey() == e.getKey() && !module.getBind().isMouse())
                     module.toggle();
+            }
     }
 
     @EventHandler
@@ -947,9 +954,15 @@ public class ModuleManager implements Wrapper {
         if (Module.fullNullCheck() || mc.currentScreen != null || MotherHack.getInstance().isPanic()) return;
 
         if (e.getAction() == 1)
-            for (Module module : modules)
+            for (Module module : modules) {
+                // Запрещаем toggle GUI модулей через keybind когда открыт любой GUI
+                if ((module instanceof fun.motherhack.modules.impl.client.UI || 
+                     module instanceof fun.motherhack.modules.impl.client.MHACKGUI) && 
+                    mc.currentScreen != null) continue;
+                
                 if (module.getBind().getKey() == e.getButton() && module.getBind().isMouse())
                     module.toggle();
+            }
     }
 
     public List<Module> getModules(Category category) {
@@ -964,6 +977,13 @@ public class ModuleManager implements Wrapper {
         for (Module module : modules) {
             if (!clazz.isInstance(module)) continue;
             return (T) module;
+        }
+        return null;
+    }
+
+    public Module getModuleByClass(Class<? extends Module> clazz) {
+        for (Module module : modules) {
+            if (module.getClass() == clazz) return module;
         }
         return null;
     }

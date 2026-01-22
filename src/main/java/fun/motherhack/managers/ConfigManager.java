@@ -174,7 +174,7 @@ public class ConfigManager {
                 if (s instanceof BooleanSetting) settings.add(s.getName(), new JsonPrimitive((Boolean) s.getValue()));
                 else if (s instanceof NumberSetting) settings.add(s.getName(), new JsonPrimitive((Float) s.getValue()));
                 else if (s instanceof StringSetting) settings.add(s.getName(), new JsonPrimitive((String) s.getValue()));
-                else if (s instanceof EnumSetting<?> enums) settings.add(s.getName(), new JsonPrimitive(((Nameable) enums.getValue()).getName()));
+                else if (s instanceof EnumSetting<?> enums) settings.add(s.getName(), new JsonPrimitive(((Enum<?>) enums.getValue()).name()));
                 else if (s instanceof BindSetting bind) settings.add(s.getName(), new JsonPrimitive(bind.getValue().getKey() + ", " + bind.getValue().isMouse()));
                 else if (s instanceof ListSetting list) {
                     JsonObject list2 = new JsonObject();
@@ -213,13 +213,13 @@ public class ConfigManager {
     private void deserializeModules(JsonObject modules) {
         for (Module module : MotherHack.getInstance().getModuleManager().getModules()) {
             if (!modules.has(module.getName())) {
-                module.setToggled(false);
+                module.setToggled(false, true);
                 for (Setting<?> setting : module.getSettings()) setting.reset();
                 continue;
             }
 
             JsonObject object = modules.get(module.getName()).getAsJsonObject();
-            if (!(module instanceof UI || module instanceof Panic)) module.setToggled(object.has("toggled") && object.get("toggled").getAsBoolean());
+            if (!(module instanceof UI || module instanceof Panic)) module.setToggled(object.has("toggled") && object.get("toggled").getAsBoolean(), true);
 
             if (object.has("bind")) {
                 String[] data = object.get("bind").getAsString().split(", ");

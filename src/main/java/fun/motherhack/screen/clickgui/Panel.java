@@ -55,7 +55,14 @@ public class Panel implements Wrapper {
     public void render(DrawContext context, int mouseX, int mouseY, float delta) {
         openAnimation.update(open);
         scroll = MathHelper.clamp(scroll, 0f, Math.max(0, getTotalHeight() - 230f));
+        UI uiModule = MotherHack.getInstance().getModuleManager().getModule(UI.class);
         UI.ClickGuiTheme theme = MotherHack.getInstance().getClickGui().getTheme();
+        
+        // Get blur and alpha settings
+        boolean enableBlur = uiModule != null && uiModule.isEnableBlur();
+        float blurRadius = uiModule != null ? uiModule.getBlurRadius() : 20f;
+        float blurAlpha = uiModule != null ? uiModule.getBlurAlpha() : 150f;
+        float bgAlpha = uiModule != null ? uiModule.getBackgroundAlpha() : 180f;
         
         // Get search query
         String searchQuery = MotherHack.getInstance().getClickGui().getSearchQuery().toLowerCase();
@@ -69,7 +76,22 @@ public class Panel implements Wrapper {
             searchScrolled = false;
         }
         
-        Render2D.drawStyledRect(context.getMatrices(), x, y, width, (250f * openAnimation.getValue()) + (height * openAnimation.getReversedValue()), 5f, theme.getBackgroundColor(), 255);
+        float panelHeight = (250f * openAnimation.getValue()) + (height * openAnimation.getReversedValue());
+        
+        // Render panel background with blur if enabled
+        if (enableBlur) {
+            Render2D.drawBlurredRect(context.getMatrices(), x, y, width, panelHeight, 5f, blurRadius, new Color(255, 255, 255, (int)blurAlpha));
+            Color transparentBg = new Color(
+                theme.getBackgroundColor().getRed(),
+                theme.getBackgroundColor().getGreen(),
+                theme.getBackgroundColor().getBlue(),
+                (int)bgAlpha
+            );
+            Render2D.drawRoundedRect(context.getMatrices(), x, y, width, panelHeight, 5f, transparentBg);
+        } else {
+            Render2D.drawStyledRect(context.getMatrices(), x, y, width, panelHeight, 5f, theme.getBackgroundColor(), 255);
+        }
+        
         Render2D.drawFont(context.getMatrices(), Fonts.SEMIBOLD.getFont(9f), category.name(), x + 6f, y + 5f, theme.getTextColor());
         Render2D.drawFont(context.getMatrices(), Fonts.ICONS.getFont(10f), category.getIcon(), x + width - 15f, y + 5f, theme.getTextColor());
 

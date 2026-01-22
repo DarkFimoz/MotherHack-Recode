@@ -45,7 +45,7 @@ public class GuiMove extends Module {
         		|| (funtime.getValue() && mc.currentScreen instanceof GenericContainerScreen)
         ) return;
 
-        for (KeyBinding binding : new KeyBinding[]{mc.options.forwardKey, mc.options.backKey, mc.options.rightKey, mc.options.leftKey, mc.options.jumpKey}) {
+        for (KeyBinding binding : new KeyBinding[]{mc.options.forwardKey, mc.options.backKey, mc.options.rightKey, mc.options.leftKey, mc.options.jumpKey, mc.options.sprintKey}) {
         	if (!InputUtil.isKeyPressed(mc.getWindow().getHandle(), binding.getDefaultKey().getCode())) continue;
             binding.setPressed(true);
         }

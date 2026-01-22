@@ -4,6 +4,8 @@ import fun.motherhack.MotherHack;
 import fun.motherhack.api.events.impl.EventRender2D;
 import fun.motherhack.hud.HudElement;
 import fun.motherhack.modules.api.Module;
+import fun.motherhack.modules.impl.client.UI;
+import fun.motherhack.modules.impl.client.MHACKGUI;
 import fun.motherhack.modules.settings.impl.BooleanSetting;
 import fun.motherhack.modules.settings.impl.NumberSetting;
 import fun.motherhack.utils.animations.Animation;
@@ -78,6 +80,8 @@ public class KeyBinds extends HudElement {
         return MotherHack.getInstance().getModuleManager().getModules().stream()
                 .filter(m -> !m.getBind().isEmpty())
                 .filter(m -> !onlyEnabled.getValue() || m.isToggled())
+                .filter(m -> !(m instanceof UI)) // Исключаем UI модуль из списка
+                .filter(m -> !(m instanceof MHACKGUI)) // Исключаем MHACKGUI модуль из списка
                 .sorted(Comparator.comparing(Module::getName))
                 .collect(Collectors.toList());
     }

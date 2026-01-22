@@ -29,6 +29,19 @@ public class Watermark extends HudElement {
     private final BooleanSetting visualZero = new BooleanSetting("Visual Zero", false);
     private final BooleanSetting russian = new BooleanSetting("Russian", false);
 
+    // Animation cycle for Russian watermark
+    private final String[] russianAnimationCycle = {
+        "М", "Ма", "Мат", "Мате", "Матер", "Матерь", "МатерьХ", "МатерьХа", "МатерьХак", 
+        "МатерьХак Р", "МатерьХак Ре", "МатерьХак Рек", "МатерьХак Реко", "МатерьХак Рекод",
+        "МатерьХак Реко", "МатерьХак Рек", "МатерьХак Ре", "МатерьХак Р", "МатерьХак",
+        "МатерьХа", "МатерьХ", "Матерь", "Матер", "Мате", "Мат", "Ма", "М",
+        "Т", "Тр", "Тро", "Троф", "Трофи", "Трофим", "ТрофимХ", "ТрофимХа", "ТрофимХак", "ТрофимХа", "ТрофимХ", "Трофим", "Трофи", "Троф",
+        "Тро", "Тр", "Т"
+        };
+    private int animationIndex = 0;
+    private long lastAnimationUpdate = 0;
+    private final long animationDelay = 150; // milliseconds between frames
+
     public Watermark() {
         super("Watermark");
         getSettings().add(backgroundAlpha);
@@ -57,7 +70,24 @@ public class Watermark extends HudElement {
         float y = getY();
         float padding = 5f;
         float fontSize = 8f;
-        String name = showName.getValue() ? (russian.getValue() ? "МатерьХак Рекод" : "MotherHack Recode") : "";
+        
+        // Update animation for Russian watermark
+        String name;
+        if (showName.getValue()) {
+            if (russian.getValue()) {
+                long currentTime = System.currentTimeMillis();
+                if (currentTime - lastAnimationUpdate >= animationDelay) {
+                    animationIndex = (animationIndex + 1) % russianAnimationCycle.length;
+                    lastAnimationUpdate = currentTime;
+                }
+                name = russianAnimationCycle[animationIndex];
+            } else {
+                name = "MotherHack Recode";
+            }
+        } else {
+            name = "";
+        }
+        
         String ping = showPing.getValue() ? Server.getPing(mc.player) + "ms" : "";
         int fpsValue = Counter.getCurrentFPS();
         String fps = showFps.getValue() ? (visualZero.getValue() ? (fpsValue + "0") : String.valueOf(fpsValue)) + "fps" : "";

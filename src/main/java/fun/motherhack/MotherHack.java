@@ -8,6 +8,7 @@ import fun.motherhack.screen.mainmenu.MainMenu;
 import fun.motherhack.utils.mediaplayer.MediaPlayer;
 import fun.motherhack.utils.render.fonts.Fonts;
 import fun.motherhack.utils.sound.GuiSoundHelper;
+import fun.motherhack.utils.sound.KillSoundHelper;
 import fun.motherhack.utils.Wrapper;
 import meteordevelopment.orbit.EventBus;
 import meteordevelopment.orbit.IEventBus;
@@ -69,6 +70,7 @@ public class MotherHack implements ModInitializer, Wrapper {
         
         // Регистрируем звуки в самом начале (до загрузки ресурсов)
         GuiSoundHelper.init();
+        KillSoundHelper.init();
         
         createDirs(globalsDir, configsDir, abItemsDir);
         eventHandler = new EventBus();

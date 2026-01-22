@@ -25,14 +25,30 @@ public class NotifyManager implements Wrapper {
     @EventHandler
     public void onRender2D(EventRender2D e) {
         if (Module.fullNullCheck() || MotherHack.getInstance().isPanic()) return;
+        
+        Module notificationsModule = MotherHack.getInstance().getModuleManager().getModuleByClass(fun.motherhack.modules.impl.client.Notifications.class);
+        if (notificationsModule == null || !notificationsModule.isToggled()) return;
+        
+        fun.motherhack.modules.impl.client.Notifications notifications = (fun.motherhack.modules.impl.client.Notifications) notificationsModule;
+        if (!notifications.isEnabled()) return;
+        
         if (notifies.isEmpty()) return;
-        float startY = mc.getWindow().getScaledHeight() / 2f + 26;
+        
+        fun.motherhack.modules.impl.client.Notifications.NotificationPosition pos = notifications.getPosition();
+        float startY;
+        
+        if (pos == fun.motherhack.modules.impl.client.Notifications.NotificationPosition.BottomCenter) {
+            startY = mc.getWindow().getScaledHeight() / 2f + 26;
+        } else {
+            startY = mc.getWindow().getScaledHeight() - 40;
+        }
+        
         if (notifies.size() > 10) notifies.removeFirst();
         notifies.removeIf(Notify::expired);
 
         for (Notify notify : Lists.newArrayList(notifies)) {
-            startY = (startY - 16f);
-            notify.render(e, startY + (notifies.size() * 16f));
+            startY = (startY - 18f);
+            notify.render(e, startY + (notifies.size() * 18f), pos);
         }
     }
 }

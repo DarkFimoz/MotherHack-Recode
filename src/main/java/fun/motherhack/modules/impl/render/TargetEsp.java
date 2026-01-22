@@ -7,6 +7,7 @@ import fun.motherhack.modules.api.Module;
 import fun.motherhack.modules.impl.combat.Aura;
 import fun.motherhack.modules.impl.client.UI;
 import fun.motherhack.modules.settings.api.Nameable;
+import fun.motherhack.modules.settings.impl.BooleanSetting;
 import fun.motherhack.modules.settings.impl.EnumSetting;
 import fun.motherhack.modules.settings.impl.NumberSetting;
 import fun.motherhack.utils.animations.Animation;
@@ -32,6 +33,7 @@ public class TargetEsp extends Module {
     public final NumberSetting ghostSize = new NumberSetting(I18n.translate("settings.targetesp.ghostsize"), 30f, 5f, 140f, 1f, () -> mode.getValue() == Mode.Ghosts);
     public final NumberSetting brightness = new NumberSetting(I18n.translate("settings.targetesp.brightness"), 255f, 1f, 255f, 1f, () -> mode.getValue() == Mode.Ghosts);
     public final EnumSetting<ColorMode> colorMode = new EnumSetting<>("settings.targetesp.colormode", ColorMode.UIColor, () -> mode.getValue() == Mode.Ghosts);
+    public final BooleanSetting renderBehindPlayer = new BooleanSetting(I18n.translate("settings.targetesp.renderbehindplayer"), false, () -> mode.getValue() == Mode.Ghosts);
 
     public TargetEsp() {
         super("TargetEsp", Category.Render);
@@ -147,7 +149,8 @@ public class TargetEsp extends Module {
                     pos3d.z + trailSin * 0.5
                 ));
                 
-                if (!(screenPos.z > 0) || !(screenPos.z < 1)) continue;
+                if (!renderBehindPlayer.getValue() && (!(screenPos.z > 0) || !(screenPos.z < 1))) continue;
+                if (renderBehindPlayer.getValue() && !(screenPos.z < 1)) continue;
                 
                 Color color = getGhostColor((int) (trailSin * 360 + i * 180 + angleOffset), (int) alpha);
                 
@@ -168,7 +171,8 @@ public class TargetEsp extends Module {
                     pos3d.z - trailSin * 0.5
                 ));
                 
-                if (!(screenPos.z > 0) || !(screenPos.z < 1)) continue;
+                if (!renderBehindPlayer.getValue() && (!(screenPos.z > 0) || !(screenPos.z < 1))) continue;
+                if (renderBehindPlayer.getValue() && !(screenPos.z < 1)) continue;
                 
                 Color color = getGhostColor((int) (-trailSin * 360 + i * 180 + angleOffset), (int) alpha);
                 

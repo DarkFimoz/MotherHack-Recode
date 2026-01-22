@@ -8,7 +8,6 @@ import fun.motherhack.utils.Wrapper;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.TitleScreen;
-import net.minecraft.client.gui.screen.option.OptionsScreen;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.text.Text;
@@ -48,14 +47,14 @@ public abstract class MixinTitleScreen extends Screen implements Wrapper {
                 System.out.println("From: '" + lastBackground + "'");
                 System.out.println("To: '" + currentBg + "'");
                 
-                // Только для первого фона - сильное приближение
+                // Только для первого фона - используем настраиваемое приближение
                 if (currentBg.equals("background.png")) {
-                    // Меньшее смещение для первого фона (±3%)
+                    // Базовое случайное смещение (±3%)
                     randomOffsetX = (random.nextFloat() - 0.5f) * this.width * 0.06f;
                     randomOffsetY = (random.nextFloat() - 0.5f) * this.height * 0.06f;
-                    // Очень сильное приближение от 1.5 до 1.8
-                    randomZoom = 1.5f + random.nextFloat() * 0.3f;
-                    System.out.println("Zoom: " + randomZoom + " (background.png)");
+                    // Используем настраиваемое приближение из настроек
+                    randomZoom = (float) customBackground.getZoomLevel();
+                    System.out.println("Zoom: " + randomZoom + " (background.png - custom)");
                 } else {
                     // Для остальных фонов - БЕЗ приближения
                     randomOffsetX = 0;
@@ -68,6 +67,11 @@ public abstract class MixinTitleScreen extends Screen implements Wrapper {
                 lastBackground = currentBg;
             }
             
+            // Для background.png обновляем zoom и смещения в реальном времени
+            if (currentBg.equals("background.png")) {
+                randomZoom = (float) customBackground.getZoomLevel();
+            }
+            
             // Создаём Identifier для текущего фона
             Identifier CUSTOM_BACKGROUND = Identifier.of("motherhack", currentBg);
             
@@ -77,8 +81,17 @@ public abstract class MixinTitleScreen extends Screen implements Wrapper {
             // Вычисляем размеры и позицию с учётом зума и смещения
             int scaledWidth = (int) (this.width * randomZoom);
             int scaledHeight = (int) (this.height * randomZoom);
-            int startX = (int) ((this.width - scaledWidth) / 2 + randomOffsetX);
-            int startY = (int) ((this.height - scaledHeight) / 2 + randomOffsetY);
+            
+            // Добавляем кастомные смещения для background.png
+            float finalOffsetX = randomOffsetX;
+            float finalOffsetY = randomOffsetY;
+            if (currentBg.equals("background.png")) {
+                finalOffsetX += (float) customBackground.getOffsetX();
+                finalOffsetY += (float) customBackground.getOffsetY();
+            }
+            
+            int startX = (int) ((this.width - scaledWidth) / 2 + finalOffsetX);
+            int startY = (int) ((this.height - scaledHeight) / 2 + finalOffsetY);
             
             // Рендерим фотографию (средний слой) с приближением
             try {
@@ -137,35 +150,16 @@ public abstract class MixinTitleScreen extends Screen implements Wrapper {
         }
     }
 
-    @Inject(method = "init", at = @At("HEAD"))
-    private void removeOldButtons(CallbackInfo ci) {
-        // Удаляем все старые кнопки ClickGui ДО того, как Minecraft добавит свои кнопки
-        var childrenCopy = new java.util.ArrayList<>(this.children());
-        for (var child : childrenCopy) {
-            if (child instanceof ButtonWidget button) {
-                String buttonText = button.getMessage().getString();
-                if (buttonText.equals("ClickGui")) {
-                    this.remove(button);
-                }
-            }
-        }
-    }
+
 
     @Inject(method = "init", at = @At("TAIL"))
     private void modifyButtons(CallbackInfo ci) {
-        // Удаляем ненужные кнопки и добавляем новые
+        // Удаляем ненужные кнопки
         var childrenCopy = new java.util.ArrayList<>(this.children());
-        boolean hasClickGuiButton = false;
         
         for (var child : childrenCopy) {
             if (child instanceof ButtonWidget button) {
                 String buttonText = button.getMessage().getString();
-                
-                // Проверяем наличие кнопки ClickGui
-                if (buttonText.equals("ClickGui")) {
-                    hasClickGuiButton = true;
-                    continue;
-                }
                 
                 // Удаляем кнопки: Титры, Атрибуции, Язык, Специальные возможности, Mojang AB
                 if (buttonText.contains("Credits") || buttonText.contains("Титры") ||
@@ -186,24 +180,6 @@ public abstract class MixinTitleScreen extends Screen implements Wrapper {
                     this.addDrawableChild(accountsButton);
                 }
             }
-        }
-        
-        // Добавляем кнопку ClickGui только если её нет
-        if (!hasClickGuiButton) {
-            int screenCenterX = this.width / 2;
-            int buttonWidth = 200;
-            int buttonHeight = 20;
-            int buttonY = this.height - 30; // Внизу экрана
-            
-            ButtonWidget clickGuiButton = ButtonWidget.builder(
-                Text.of("ClickGui"),
-                btn -> {
-                    // Открываем MHackGui вместо ClickGui
-                    mc.setScreen(MotherHack.getInstance().getMHackGui());
-                }
-            ).dimensions(screenCenterX - buttonWidth / 2, buttonY, buttonWidth, buttonHeight).build();
-            
-            this.addDrawableChild(clickGuiButton);
         }
     }
 }

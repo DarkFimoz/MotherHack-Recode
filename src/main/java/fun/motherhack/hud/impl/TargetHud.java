@@ -38,6 +38,14 @@ public class TargetHud extends HudElement {
 
     private final InfinityAnimation healthAnimation = new InfinityAnimation(Easing.LINEAR);
     private final InfinityAnimation gappleAnimation = new InfinityAnimation(Easing.LINEAR);
+    
+    // Kill animation
+    private String killText = "";
+    private long killAnimationStart = 0;
+    private boolean wasTargetAlive = true;
+    private LivingEntity lastTarget = null;
+    private int killCount = 0;
+    private static final long ANIMATION_DURATION = 900; // 9 frames * 100ms
 
     @Override
     public void onRender2D(EventRender2D e) {
@@ -47,6 +55,63 @@ public class TargetHud extends HudElement {
 
         Aura aura = MotherHack.getInstance().getModuleManager().getModule(Aura.class);
         LivingEntity target = mc.currentScreen instanceof ChatScreen ? mc.player : aura.getTarget();
+        
+        // Check for kill - улучшенная система отслеживания
+        if (target != null) {
+            // Если это новая цель
+            if (lastTarget != target) {
+                // Проверяем, была ли предыдущая цель убита
+                if (lastTarget != null && wasTargetAlive && lastTarget.getHealth() <= 0) {
+                    // Запускаем анимацию только если предыдущая завершилась или почти завершилась
+                    long currentTime = System.currentTimeMillis();
+                    if (killAnimationStart == 0 || (currentTime - killAnimationStart) > ANIMATION_DURATION - 200) {
+                        killAnimationStart = currentTime;
+                        killCount++;
+                        fun.motherhack.utils.sound.KillSoundHelper.playRandomKillSound();
+                    }
+                }
+                lastTarget = target;
+                wasTargetAlive = target.getHealth() > 0;
+            } else {
+                // Та же цель - проверяем смерть
+                if (wasTargetAlive && target.getHealth() <= 0) {
+                    long currentTime = System.currentTimeMillis();
+                    if (killAnimationStart == 0 || (currentTime - killAnimationStart) > ANIMATION_DURATION - 200) {
+                        killAnimationStart = currentTime;
+                        killCount++;
+                        fun.motherhack.utils.sound.KillSoundHelper.playRandomKillSound();
+                    }
+                    wasTargetAlive = false;
+                }
+            }
+        } else {
+            // Нет цели - проверяем, была ли предыдущая цель убита
+            if (lastTarget != null && wasTargetAlive && lastTarget.getHealth() <= 0) {
+                long currentTime = System.currentTimeMillis();
+                if (killAnimationStart == 0 || (currentTime - killAnimationStart) > ANIMATION_DURATION - 200) {
+                    killAnimationStart = currentTime;
+                    killCount++;
+                    fun.motherhack.utils.sound.KillSoundHelper.playRandomKillSound();
+                }
+            }
+        }
+        
+        // Проверяем активность анимации убийства
+        boolean isKillAnimationActive = killAnimationStart > 0 && 
+            (System.currentTimeMillis() - killAnimationStart) < ANIMATION_DURATION;
+        
+        // Если нет цели и анимация не активна - выходим
+        if (target == null && !isKillAnimationActive) {
+            lastTarget = null;
+            wasTargetAlive = true;
+            return;
+        }
+        
+        // Если анимация активна, но нет цели - используем последнюю цель
+        if (target == null && isKillAnimationActive) {
+            target = lastTarget;
+        }
+        
         if (target == null) return;
         float posX = getX();
         float posY = getY();
@@ -182,6 +247,36 @@ public class TargetHud extends HudElement {
         );
 
         Render2D.stopScissor(e.getContext());
+        
+        // Render kill animation
+        if (killAnimationStart > 0) {
+            long elapsed = System.currentTimeMillis() - killAnimationStart;
+            long frameDuration = 100; // 100ms per frame
+            int totalFrames = 9;
+            long totalDuration = frameDuration * totalFrames;
+            
+            if (elapsed < totalDuration) {
+                int frame = (int) (elapsed / frameDuration);
+                String[] frames = {"Ez", "Ezz", "Ezz", "Ezzz", "Ezzzz", "Ezzzzz", "Ezzzz", "Ezzz", "Ezz"};
+                killText = frames[Math.min(frame, frames.length - 1)];
+                
+                float killTextX = posX + width / 2f - Fonts.BOLD.getWidth(killText, 14f) / 2f;
+                float killTextY = posY - 20f;
+                
+                Render2D.drawFont(
+                    e.getContext().getMatrices(),
+                    Fonts.BOLD.getFont(14f),
+                    killText,
+                    killTextX,
+                    killTextY,
+                    ColorUtils.getGlobalColor()
+                );
+            } else {
+                killAnimationStart = 0;
+                killText = "";
+            }
+        }
+        
         e.getContext().getMatrices().pop();
         setBounds(getX(), getY(), width, height);
         super.onRender2D(e);

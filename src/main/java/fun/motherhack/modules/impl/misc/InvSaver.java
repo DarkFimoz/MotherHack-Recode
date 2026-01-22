@@ -19,7 +19,6 @@ public class InvSaver extends Module {
 
     public InvSaver() {
         super("InvSaver", Category.Misc);
-        setBind(new Bind(66, false)); // B key
 
         notifyOnClose = new BooleanSetting("Notify on Close", false);
     }

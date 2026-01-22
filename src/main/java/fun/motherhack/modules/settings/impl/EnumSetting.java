@@ -28,15 +28,21 @@ public class EnumSetting<Value extends Enum<?>> extends Setting<Value> {
     }
 
     public void setEnumValue(String value) {
+        // Сначала пытаемся найти по имени enum константы (для новых конфигов)
+        for (Value e : (Value[]) this.value.getClass().getEnumConstants()) {
+            if (e.name().equalsIgnoreCase(value)) {
+                setValue(e);
+                return;
+            }
+        }
+        
+        // Если не нашли, пытаемся найти по переведенному имени (для старых конфигов)
         for (Value e : (Value[]) this.value.getClass().getEnumConstants()) {
             if (e instanceof Nameable) {
                 if (((Nameable) e).getName().equalsIgnoreCase(value)) {
                     setValue(e);
-                    break;
+                    return;
                 }
-            } else if (e.name().equalsIgnoreCase(value)) {
-                setValue(e);
-                break;
             }
         }
     }

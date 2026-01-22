@@ -9,9 +9,9 @@ import fun.motherhack.modules.api.Module;
 import fun.motherhack.modules.settings.impl.BooleanSetting;
 import fun.motherhack.modules.settings.impl.NumberSetting;
 
-public class Fly extends Module {
+public class FlyTest extends Module {
 
-    public Fly() {
+    public FlyTest() {
         super("Fly", Category.Movement);
         speed = new NumberSetting("Speed", 1.0f, 0.1f, 5.0f, 0.1f);
         lockY = new BooleanSetting("Lock Y", true);

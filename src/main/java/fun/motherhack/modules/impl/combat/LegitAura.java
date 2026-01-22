@@ -4,6 +4,7 @@ import fun.motherhack.MotherHack;
 import fun.motherhack.api.events.impl.*;
 import fun.motherhack.modules.api.Category;
 import fun.motherhack.modules.api.Module;
+import fun.motherhack.modules.impl.client.Targets;
 import fun.motherhack.modules.settings.api.Nameable;
 import fun.motherhack.modules.settings.impl.BooleanSetting;
 import fun.motherhack.modules.settings.impl.EnumSetting;
@@ -21,6 +22,7 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.EntityHitResult;
@@ -116,12 +118,21 @@ public class LegitAura extends Module {
     }
 
     private void findTarget() {
+        // Используем модуль Targets для валидации целей
+        Targets targetsModule = MotherHack.getInstance().getModuleManager().getModule(Targets.class);
+        if (targetsModule == null) {
+            target = null;
+            predictedPos = null;
+            return;
+        }
+
         List<LivingEntity> targets = new ArrayList<>();
         ClientWorld world = mc.world;
         if (world == null) return;
 
         for (Entity entity : world.getEntities()) {
-            if (!(entity instanceof PlayerEntity living) || living == mc.player) continue;
+            if (!(entity instanceof LivingEntity living) || living == mc.player) continue;
+            if (!targetsModule.isValid(living)) continue;
             if (!isValidTarget(living)) continue;
             targets.add(living);
         }
@@ -159,11 +170,8 @@ public class LegitAura extends Module {
         InventoryUtils.switchBack(InventoryUtils.Switch.Silent, previousSlot, previousSlot);
     }
 
-    private boolean isValidTarget(PlayerEntity e) {
+    private boolean isValidTarget(LivingEntity e) {
         if (e.isDead() || e.getHealth() <= 0) return false;
-        if (e instanceof PlayerEntity player) {
-            if (MotherHack.getInstance().getFriendManager().isFriend(player.getName().getString())) return false;
-        }
 
         float effectiveRange = getEffectiveRange();
         if (e.distanceTo(mc.player) > effectiveRange) return false;
@@ -172,7 +180,7 @@ public class LegitAura extends Module {
         return true;
     }
 
-    private boolean canSeeTarget(PlayerEntity target) {
+    private boolean canSeeTarget(LivingEntity target) {
         Vec3d start = mc.player.getEyePos();
         Vec3d end = target.getPos().add(0, target.getEyeHeight(target.getPose()) * MathUtils.randomFloat(0.3f, 0.6f), 0);
 
@@ -196,11 +204,6 @@ public class LegitAura extends Module {
     private void faceTargetSmooth() {
         if (mc.player == null || target == null || rotate == null) return;
 
-        HitResult hitResult = mc.crosshairTarget;
-        if (hitResult != null && hitResult.getType() == HitResult.Type.ENTITY
-                && ((EntityHitResult) hitResult).getEntity() == target) {
-            return;
-        }
         Vec3d eyes = mc.player.getEyePos();
 
         // Получаем позицию цели с учетом предикта для элитр
@@ -262,10 +265,17 @@ public class LegitAura extends Module {
         if (mc.player == null || target == null) return;
 
         if (attackTimer.passed(500 + random.nextInt(60))) {
-            HitResult hitResult = mc.crosshairTarget;
-            if (hitResult == null || hitResult.getType() != HitResult.Type.ENTITY
-                    || ((EntityHitResult) hitResult).getEntity() != target) {
-                return;
+            // Проверяем что мы смотрим на цель
+            Vec3d eyes = mc.player.getEyePos();
+            Vec3d targetPos = getPredictedTargetPos();
+            float[] rotations = RotationUtils.getRotations(targetPos);
+            
+            // Проверяем что ротация близка к цели (в пределах 10 градусов)
+            float yawDiff = Math.abs(wrapDegrees(rotations[0] - mc.player.getYaw()));
+            float pitchDiff = Math.abs(rotations[1] - mc.player.getPitch());
+            
+            if (yawDiff > 10f || pitchDiff > 10f) {
+                return; // Не атакуем если не смотрим на цель
             }
 
             if (mc.player.getAttackCooldownProgress(0f) < IdealHitUtils.getAICooldown()) return;

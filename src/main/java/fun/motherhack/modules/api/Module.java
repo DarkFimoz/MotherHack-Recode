@@ -20,6 +20,7 @@ public abstract class Module implements Wrapper {
     protected boolean toggled;
     @Setter private Bind bind = new Bind(-1, false);
     private final List<Setting<?>> settings = new ArrayList<>();
+    private boolean silent = false; // флаг для тихой загрузки из конфига
 
     public Module(String name, Category category) {
         this.name = name;
@@ -30,7 +31,7 @@ public abstract class Module implements Wrapper {
     public void onEnable() {
         toggled = true;
         MotherHack.getInstance().getEventHandler().subscribe(this);
-        if (!fullNullCheck()) {
+        if (!fullNullCheck() && shouldShowNotification() && !silent) {
             MotherHack.getInstance().getNotifyManager().add(new Notify(NotifyIcons.successIcon, name + " was enable", 800));
             GuiSoundHelper.playToggleSound(true);
         }
@@ -39,16 +40,30 @@ public abstract class Module implements Wrapper {
     public void onDisable() {
         toggled = false;
         MotherHack.getInstance().getEventHandler().unsubscribe(this);
-        if (!fullNullCheck()) {
+        if (!fullNullCheck() && shouldShowNotification() && !silent) {
             MotherHack.getInstance().getNotifyManager().add(new Notify(NotifyIcons.failIcon, name + " was disable", 800));
             GuiSoundHelper.playToggleSound(false);
         }
+    }
+
+    private boolean shouldShowNotification() {
+        Module notificationsModule = MotherHack.getInstance().getModuleManager().getModuleByClass(fun.motherhack.modules.impl.client.Notifications.class);
+        if (notificationsModule == null) return true;
+        
+        fun.motherhack.modules.impl.client.Notifications notifications = (fun.motherhack.modules.impl.client.Notifications) notificationsModule;
+        return notifications.isToggled() && notifications.isEnabled() && notifications.isModuleToggleEnabled();
     }
 
     public void setToggled(boolean toggled) {
         if (this.toggled == toggled) return; // предотвращаем повторное включение/выключение
         if (toggled) onEnable();
         else onDisable();
+    }
+
+    public void setToggled(boolean toggled, boolean silent) {
+        this.silent = silent;
+        setToggled(toggled);
+        this.silent = false;
     }
 
     public void toggle() {

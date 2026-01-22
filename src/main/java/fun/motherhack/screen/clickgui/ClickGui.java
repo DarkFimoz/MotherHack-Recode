@@ -4,9 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import fun.motherhack.MotherHack;
 import fun.motherhack.modules.api.Category;
-import fun.motherhack.modules.api.Module;
 import fun.motherhack.modules.impl.client.UI;
-import fun.motherhack.screen.clickgui.components.impl.ModuleComponent;
 import fun.motherhack.utils.Wrapper;
 import fun.motherhack.utils.animations.Animation;
 import fun.motherhack.utils.animations.Easing;
@@ -20,20 +18,12 @@ import net.minecraft.text.Text;
 import org.lwjgl.glfw.GLFW;
 
 import java.awt.*;
-import java.util.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ClickGui extends Screen implements Wrapper {
 
     private final List<Panel> panels = new ArrayList<>();
-    private final Map<Category, List<ModuleComponent>> columns = new EnumMap<>(Category.class);
-    private final Map<Category, Float> targetScrollOffsets = new EnumMap<>(Category.class);
-    private final Map<Category, Float> currentScrollOffsets = new EnumMap<>(Category.class);
-    
-    // Кэшированные значения размеров (применяются при открытии)
-    private float cachedColumnWidth = 160f;
-    private float cachedColumnHeight = 400f;
-    private float cachedColumnY = 40f;
     
     private final Animation openAnimation = new Animation(300, 1f, true, Easing.BOTH_SINE);
     private final Animation closeAnimation = new Animation(300, 1f, false, Easing.BOTH_SINE);
@@ -51,23 +41,10 @@ public class ClickGui extends Screen implements Wrapper {
     
     private static final float SEARCH_WIDTH = 220f;
     private static final float SEARCH_HEIGHT = 20f;
-    private final float SCROLL_SPEED = 15f;
-    private final float SCROLL_LERP_FACTOR = 0.15f;
     
     public void setSearchQuery(String query) {
         if (!query.equals(this.searchQuery)) {
             this.searchQuery = query;
-            // Сбрасываем скролл при изменении поиска в Columns стиле
-            if (getStyle() == UI.ClickGuiStyle.Columns) {
-                resetColumnsScroll();
-            }
-        }
-    }
-    
-    private void resetColumnsScroll() {
-        for (Category c : columns.keySet()) {
-            targetScrollOffsets.put(c, 0f);
-            currentScrollOffsets.put(c, 0f);
         }
     }
 
@@ -77,31 +54,10 @@ public class ClickGui extends Screen implements Wrapper {
             if (category == Category.Hud) continue;
             panels.add(new Panel(-999, -999, 110, 20, category));
         }
-        rebuildColumns();
-    }
-    
-    private void rebuildColumns() {
-        columns.clear();
-        List<Module> modules = MotherHack.getInstance().getModuleManager().getModules();
-        Category[] categories = {Category.Combat, Category.Movement, Category.Render, Category.Misc, Category.Client};
-        for (Category c : categories) {
-            List<ModuleComponent> list = new ArrayList<>();
-            for (Module m : modules) {
-                if (m.getCategory() == c) list.add(new ModuleComponent(m));
-            }
-            list.sort(Comparator.comparing(ModuleComponent::getName));
-            columns.put(c, list);
-            targetScrollOffsets.put(c, 0f);
-            currentScrollOffsets.put(c, 0f);
-        }
     }
 
     public UI.ClickGuiTheme getTheme() {
         return MotherHack.getInstance().getModuleManager().getModule(UI.class).getTheme();
-    }
-    
-    private UI.ClickGuiStyle getStyle() {
-        return MotherHack.getInstance().getModuleManager().getModule(UI.class).getStyle();
     }
 
     @Override
@@ -129,11 +85,8 @@ public class ClickGui extends Screen implements Wrapper {
         context.getMatrices().scale(scale, scale, 1f);
         context.getMatrices().translate(-mc.getWindow().getScaledWidth() / 2f, -mc.getWindow().getScaledHeight() / 2f, 0f);
         
-        if (getStyle() == UI.ClickGuiStyle.Columns) {
-            renderColumnsStyle(context, mouseX, mouseY, delta);
-        } else {
-            renderClassicStyle(context, mouseX, mouseY, delta);
-        }
+        renderClassicStyle(context, mouseX, mouseY, delta);
+        
         context.getMatrices().pop();
     }
     
@@ -148,148 +101,29 @@ public class ClickGui extends Screen implements Wrapper {
         }
         renderDescription(context);
     }
-
-    private void renderColumnsStyle(DrawContext context, int mouseX, int mouseY, float delta) {
-        updateSmoothScrolling();
-        UI uiModule = MotherHack.getInstance().getModuleManager().getModule(UI.class);
-        UI.ClickGuiTheme theme = getTheme();
-        boolean enableBlur = uiModule.isEnableBlur();
-        float blurRadius = uiModule.getBlurRadius();
-        float blurAlpha = uiModule.getBlurAlpha();
-        float bgAlpha = uiModule.getBackgroundAlpha();
-        
-        // Используем кэшированные значения
-        float colWidth = cachedColumnWidth;
-        float colHeight = cachedColumnHeight;
-        float startYPos = cachedColumnY;
-        
-        int screenWidth = mc.getWindow().getScaledWidth();
-        int screenHeight = mc.getWindow().getScaledHeight();
-
-        Category[] cats = {Category.Combat, Category.Movement, Category.Render, Category.Misc, Category.Client};
-        float gutter = 6f;
-        float totalWidth = colWidth * cats.length + gutter * (cats.length - 1);
-        float startX = (screenWidth - totalWidth) / 2f;
-        float headerHeight = 22f;
-        float searchHeight = 24f;
-        float searchY = startYPos - searchHeight - 6f;
-        
-        // Рендерим поисковик
-        renderColumnsSearchBar(context, mouseX, mouseY, startX, searchY, totalWidth, searchHeight, theme, enableBlur, blurRadius, blurAlpha, bgAlpha);
-        
-        float listHeight = Math.min(colHeight, screenHeight - startYPos - headerHeight - 60f);
-
-        for (int i = 0; i < cats.length; i++) {
-            Category c = cats[i];
-            float colX = startX + i * (colWidth + gutter);
-            float headerY = startYPos;
-            float listY = headerY + headerHeight + 3f;
-            float contentStart = listY + 3f;
-
-            // Header
-            if (enableBlur) {
-                Render2D.drawBlurredRect(context.getMatrices(), colX, headerY, colWidth, headerHeight, 5f, blurRadius, new Color(255, 255, 255, (int)blurAlpha));
-                Color transparentBg = new Color(
-                    theme.getBackgroundColor().getRed(),
-                    theme.getBackgroundColor().getGreen(),
-                    theme.getBackgroundColor().getBlue(),
-                    (int)bgAlpha
-                );
-                Render2D.drawRoundedRect(context.getMatrices(), colX, headerY, colWidth, headerHeight, 5f, transparentBg);
-            } else {
-                Render2D.drawRoundedRect(context.getMatrices(), colX, headerY, colWidth, headerHeight, 5f, theme.getBackgroundColor());
-            }
-            
-            String catName = c.name();
-            float nameWidth = Fonts.SEMIBOLD.getWidth(catName, 9f);
-            Render2D.drawFont(context.getMatrices(), Fonts.SEMIBOLD.getFont(9f), catName, colX + colWidth / 2f - nameWidth / 2f, headerY + 6f, theme.getTextColor());
-
-            // Module list background
-            if (enableBlur) {
-                Render2D.drawBlurredRect(context.getMatrices(), colX, listY, colWidth, listHeight, 5f, blurRadius, new Color(255, 255, 255, (int)blurAlpha));
-                Color transparentBg = new Color(
-                    theme.getBackgroundColor().getRed(),
-                    theme.getBackgroundColor().getGreen(),
-                    theme.getBackgroundColor().getBlue(),
-                    (int)bgAlpha
-                );
-                Render2D.drawRoundedRect(context.getMatrices(), colX, listY, colWidth, listHeight, 5f, transparentBg);
-            } else {
-                Render2D.drawRoundedRect(context.getMatrices(), colX, listY, colWidth, listHeight, 5f, theme.getBackgroundColor());
-            }
-
-            List<ModuleComponent> comps = columns.getOrDefault(c, Collections.emptyList());
-            float scrollOffset = currentScrollOffsets.getOrDefault(c, 0f);
-
-            // Scissor - используем context.enableScissor
-            context.enableScissor((int)colX, (int)listY, (int)(colX + colWidth), (int)(listY + listHeight));
-            
-            float curY = contentStart + scrollOffset;
-            for (ModuleComponent comp : comps) {
-                // Фильтрация по поиску
-                if (!searchQuery.isEmpty() && !comp.getModule().getName().toLowerCase().contains(searchQuery.toLowerCase())) {
-                    continue;
-                }
-                
-                comp.setX(colX + 3f);
-                comp.setY(curY);
-                comp.setWidth(colWidth - 6f);
-                comp.setHeight(18f);
-                comp.render(context, mouseX, mouseY, delta);
-                curY += comp.getHeight() + 2;
-                
-                // Render settings if module is open
-                if (comp.getOpenAnimation().getValue() > 0f) {
-                    float settingsHeight = 0;
-                    for (fun.motherhack.screen.clickgui.components.Component sub : comp.getComponents()) {
-                        if (!sub.getVisible().get()) continue;
-                        settingsHeight += sub.getHeight() + sub.getAddHeight().get();
-                    }
-                    
-                    float animatedSettingsHeight = settingsHeight * comp.getOpenAnimation().getValue();
-                    float settingY = curY;
-                    
-                    for (fun.motherhack.screen.clickgui.components.Component sub : comp.getComponents()) {
-                        if (!sub.getVisible().get()) continue;
-                        sub.setX(colX + 5f);
-                        sub.setY(settingY);
-                        sub.setWidth(colWidth - 10f);
-                        sub.setHeight(15f);
-                        sub.render(context, mouseX, mouseY, delta);
-                        settingY += (sub.getHeight() + sub.getAddHeight().get());
-                    }
-                    
-                    curY += animatedSettingsHeight;
-                }
-            }
-            
-            context.disableScissor();
-        }
-        
-        if (uiModule.isShowBackground()) {
-            int imageSize = 150;
-            Render2D.drawTexture(context.getMatrices(), 10, screenHeight - imageSize - 10, imageSize, imageSize, 10f, MotherHack.id("sexy.png"), Color.WHITE);
-        }
-    }
-    
-    private void updateSmoothScrolling() {
-        for (Category c : columns.keySet()) {
-            float target = targetScrollOffsets.getOrDefault(c, 0f);
-            float current = currentScrollOffsets.getOrDefault(c, 0f);
-            if (Math.abs(target - current) < 0.01f) current = target;
-            else current += (target - current) * SCROLL_LERP_FACTOR;
-            currentScrollOffsets.put(c, current);
-        }
-    }
     
     private void renderSearchBar(DrawContext context, int mouseX, int mouseY) {
+        UI uiModule = MotherHack.getInstance().getModuleManager().getModule(UI.class);
         UI.ClickGuiTheme theme = getTheme();
         float searchX = getSearchBarX();
         float searchY = getSearchBarY();
-        int bgAlpha = (int) (180 + 40 * searchFocusAnimation.getValue());
-        Color bgColor = new Color(theme.getBackgroundColor().getRed(), theme.getBackgroundColor().getGreen(), theme.getBackgroundColor().getBlue(), bgAlpha);
         
-        Render2D.drawStyledRect(context.getMatrices(), searchX, searchY, SEARCH_WIDTH, SEARCH_HEIGHT, 6f, bgColor, 200);
+        // Get blur and alpha settings
+        boolean enableBlur = uiModule != null && uiModule.isEnableBlur();
+        float blurRadius = uiModule != null ? uiModule.getBlurRadius() : 20f;
+        float blurAlpha = uiModule != null ? uiModule.getBlurAlpha() : 150f;
+        float bgAlpha = uiModule != null ? uiModule.getBackgroundAlpha() : 180f;
+        
+        int bgAlphaInt = (int) (bgAlpha + 40 * searchFocusAnimation.getValue());
+        Color bgColor = new Color(theme.getBackgroundColor().getRed(), theme.getBackgroundColor().getGreen(), theme.getBackgroundColor().getBlue(), bgAlphaInt);
+        
+        // Render with blur if enabled
+        if (enableBlur) {
+            Render2D.drawBlurredRect(context.getMatrices(), searchX, searchY, SEARCH_WIDTH, SEARCH_HEIGHT, 6f, blurRadius, new Color(255, 255, 255, (int)blurAlpha));
+            Render2D.drawRoundedRect(context.getMatrices(), searchX, searchY, SEARCH_WIDTH, SEARCH_HEIGHT, 6f, bgColor);
+        } else {
+            Render2D.drawStyledRect(context.getMatrices(), searchX, searchY, SEARCH_WIDTH, SEARCH_HEIGHT, 6f, bgColor, 200);
+        }
         
         if (searchFocusAnimation.getValue() > 0) {
             Color borderColor = new Color(theme.getAccentColor().getRed(), theme.getAccentColor().getGreen(), theme.getAccentColor().getBlue(), (int) (255 * searchFocusAnimation.getValue()));
@@ -323,54 +157,35 @@ public class ClickGui extends Screen implements Wrapper {
     private void renderDescription(DrawContext context) {
         hoverAnimation.update(!description.isEmpty());
         if (!description.isEmpty()) {
+            UI uiModule = MotherHack.getInstance().getModuleManager().getModule(UI.class);
             UI.ClickGuiTheme theme = getTheme();
+            
+            // Get blur and alpha settings
+            boolean enableBlur = uiModule != null && uiModule.isEnableBlur();
+            float blurRadius = uiModule != null ? uiModule.getBlurRadius() : 20f;
+            float blurAlpha = uiModule != null ? uiModule.getBlurAlpha() : 150f;
+            float bgAlpha = uiModule != null ? uiModule.getBackgroundAlpha() : 180f;
+            
             float width = Fonts.MEDIUM.getWidth(description, 9f);
             float x = mc.getWindow().getScaledWidth() / 2f - width / 2f;
             float y = mc.getWindow().getScaledHeight() / 2f + 145f;
-            Color bgColor = new Color(theme.getBackgroundColor().getRed(), theme.getBackgroundColor().getGreen(), theme.getBackgroundColor().getBlue(), (int) (200 * hoverAnimation.getValue()));
-            Render2D.drawStyledRect(context.getMatrices(), x - 8f, y - 2f, width + 16f, 16f, 4f, bgColor, (int) (200 * hoverAnimation.getValue()));
+            float descWidth = width + 16f;
+            float descHeight = 16f;
+            
+            int bgAlphaInt = (int) (bgAlpha * hoverAnimation.getValue());
+            Color bgColor = new Color(theme.getBackgroundColor().getRed(), theme.getBackgroundColor().getGreen(), theme.getBackgroundColor().getBlue(), bgAlphaInt);
+            
+            // Render with blur if enabled
+            if (enableBlur) {
+                int blurAlphaInt = (int) (blurAlpha * hoverAnimation.getValue());
+                Render2D.drawBlurredRect(context.getMatrices(), x - 8f, y - 2f, descWidth, descHeight, 4f, blurRadius, new Color(255, 255, 255, blurAlphaInt));
+                Render2D.drawRoundedRect(context.getMatrices(), x - 8f, y - 2f, descWidth, descHeight, 4f, bgColor);
+            } else {
+                Render2D.drawStyledRect(context.getMatrices(), x - 8f, y - 2f, descWidth, descHeight, 4f, bgColor, bgAlphaInt);
+            }
+            
             Render2D.drawFont(context.getMatrices(), Fonts.MEDIUM.getFont(9f), description, x, y + 1f, new Color(255, 255, 255, (int) (255 * hoverAnimation.getValue())));
             description = "";
-        }
-    }
-    
-    private void renderColumnsSearchBar(DrawContext context, int mouseX, int mouseY, float x, float y, float width, float height, UI.ClickGuiTheme theme, boolean enableBlur, float blurRadius, float blurAlpha, float bgAlpha) {
-        int bgAlphaInt = (int) (bgAlpha + 40 * searchFocusAnimation.getValue());
-        Color bgColor = new Color(theme.getBackgroundColor().getRed(), theme.getBackgroundColor().getGreen(), theme.getBackgroundColor().getBlue(), bgAlphaInt);
-        
-        if (enableBlur) {
-            Render2D.drawBlurredRect(context.getMatrices(), x, y, width, height, 6f, blurRadius, new Color(255, 255, 255, (int)blurAlpha));
-            Render2D.drawRoundedRect(context.getMatrices(), x, y, width, height, 6f, bgColor);
-        } else {
-            Render2D.drawRoundedRect(context.getMatrices(), x, y, width, height, 6f, bgColor);
-        }
-        
-        if (searchFocusAnimation.getValue() > 0) {
-            Color borderColor = new Color(theme.getAccentColor().getRed(), theme.getAccentColor().getGreen(), theme.getAccentColor().getBlue(), (int) (255 * searchFocusAnimation.getValue()));
-            Render2D.drawBorder(context.getMatrices(), x, y, width, height, 6f, 1f, 1f, borderColor);
-        }
-        
-        float iconOffset = searchFocusAnimation.getValue() * 2f;
-        Color iconColor = new Color((int) (120 + 80 * searchFocusAnimation.getValue()), (int) (120 + 80 * searchFocusAnimation.getValue()), (int) (120 + 80 * searchFocusAnimation.getValue()));
-        Render2D.drawFont(context.getMatrices(), Fonts.ICONS.getFont(10f), "B", x + 7f + iconOffset, y + 6f, iconColor);
-        
-        float textX = x + 22f + iconOffset;
-        String displayText = searchQuery.isEmpty() ? "Search modules..." : searchQuery;
-        Color textColor = searchQuery.isEmpty() ? new Color(100, 100, 100) : theme.getTextColor();
-        Render2D.drawFont(context.getMatrices(), Fonts.REGULAR.getFont(9f), displayText, textX, y + 7f, textColor);
-        
-        if (searchFocused && System.currentTimeMillis() % 1000 < 500) {
-            float cursorX = textX + Fonts.REGULAR.getWidth(searchQuery, 9f) + 1f;
-            Render2D.drawRoundedRect(context.getMatrices(), cursorX, y + 6f, 1f, 10f, 0.5f, theme.getAccentColor());
-        }
-        
-        if (!searchQuery.isEmpty()) {
-            float clearX = x + width - 18f;
-            float clearY = y + 6f;
-            clearButtonHovered = MathUtils.isHovered(clearX - 2f, clearY - 2f, 14f, 14f, mouseX, mouseY);
-            Color clearColor = clearButtonHovered ? new Color(255, 100, 100, (int) (200 + 55 * clearButtonAnimation.getValue())) : new Color(150, 150, 150);
-            float clearScale = 1f + 0.1f * clearButtonAnimation.getValue();
-            Render2D.drawFont(context.getMatrices(), Fonts.ICONS.getFont(9f * clearScale), "C", clearX, clearY, clearColor);
         }
     }
     
@@ -381,7 +196,6 @@ public class ClickGui extends Screen implements Wrapper {
     public void resetSearch() {
         setSearchQuery("");
         searchFocused = false;
-        resetColumnsScroll();
         for (Panel panel : panels) panel.resetSearchState();
     }
 
@@ -390,137 +204,42 @@ public class ClickGui extends Screen implements Wrapper {
     public boolean mouseClicked(double mouseX, double mouseY, int button) {
         if (close) return false;
         
-        if (getStyle() == UI.ClickGuiStyle.Classic) {
-            float searchX = getSearchBarX();
-            float searchY = getSearchBarY();
-            
-            if (!searchQuery.isEmpty()) {
-                float clearX = searchX + SEARCH_WIDTH - 18f;
-                float clearY = searchY + 5f;
-                if (MathUtils.isHovered(clearX - 2f, clearY - 2f, 14f, 14f, (float) mouseX, (float) mouseY)) {
-                    setSearchQuery("");
-                    for (Panel panel : panels) panel.resetSearchState();
-                    return true;
-                }
-            }
-            
-            if (MathUtils.isHovered(searchX, searchY, SEARCH_WIDTH, SEARCH_HEIGHT, (float) mouseX, (float) mouseY)) {
-                searchFocused = true;
+        float searchX = getSearchBarX();
+        float searchY = getSearchBarY();
+        
+        if (!searchQuery.isEmpty()) {
+            float clearX = searchX + SEARCH_WIDTH - 18f;
+            float clearY = searchY + 5f;
+            if (MathUtils.isHovered(clearX - 2f, clearY - 2f, 14f, 14f, (float) mouseX, (float) mouseY)) {
+                setSearchQuery("");
+                for (Panel panel : panels) panel.resetSearchState();
                 return true;
-            } else {
-                searchFocused = false;
-            }
-            
-            for (Panel panel : panels) panel.mouseClicked(mouseX, mouseY, button);
-        } else {
-            // Columns style
-            int screenWidth = mc.getWindow().getScaledWidth();
-            Category[] cats = {Category.Combat, Category.Movement, Category.Render, Category.Misc, Category.Client};
-            float gutter = 6f;
-            float totalWidth = cachedColumnWidth * cats.length + gutter * (cats.length - 1);
-            float startX = (screenWidth - totalWidth) / 2f;
-            float searchHeight = 24f;
-            float searchY = cachedColumnY - searchHeight - 6f;
-            
-            // Проверка клика на кнопку очистки
-            if (!searchQuery.isEmpty()) {
-                float clearX = startX + totalWidth - 18f;
-                float clearY = searchY + 6f;
-                if (MathUtils.isHovered(clearX - 2f, clearY - 2f, 14f, 14f, (float) mouseX, (float) mouseY)) {
-                    setSearchQuery("");
-                    return true;
-                }
-            }
-            
-            // Проверка клика на поисковик
-            if (MathUtils.isHovered(startX, searchY, totalWidth, searchHeight, (float) mouseX, (float) mouseY)) {
-                searchFocused = true;
-                return true;
-            } else {
-                searchFocused = false;
-            }
-            
-            for (List<ModuleComponent> list : columns.values()) {
-                for (ModuleComponent comp : list) {
-                    // Фильтрация по поиску
-                    if (!searchQuery.isEmpty() && !comp.getModule().getName().toLowerCase().contains(searchQuery.toLowerCase())) {
-                        continue;
-                    }
-                    comp.mouseClicked(mouseX, mouseY, button);
-                }
             }
         }
+        
+        if (MathUtils.isHovered(searchX, searchY, SEARCH_WIDTH, SEARCH_HEIGHT, (float) mouseX, (float) mouseY)) {
+            searchFocused = true;
+            return true;
+        } else {
+            searchFocused = false;
+        }
+        
+        for (Panel panel : panels) panel.mouseClicked(mouseX, mouseY, button);
+        
         return super.mouseClicked(mouseX, mouseY, button);
     }
 
     @Override
     public boolean mouseReleased(double mouseX, double mouseY, int button) {
         if (close) return false;
-        if (getStyle() == UI.ClickGuiStyle.Classic) {
-            for (Panel panel : panels) panel.mouseReleased(mouseX, mouseY, button);
-        } else {
-            for (List<ModuleComponent> list : columns.values()) {
-                for (ModuleComponent comp : list) {
-                    // Фильтрация по поиску
-                    if (!searchQuery.isEmpty() && !comp.getModule().getName().toLowerCase().contains(searchQuery.toLowerCase())) {
-                        continue;
-                    }
-                    comp.mouseReleased(mouseX, mouseY, button);
-                }
-            }
-        }
+        for (Panel panel : panels) panel.mouseReleased(mouseX, mouseY, button);
         return super.mouseReleased(mouseX, mouseY, button);
     }
 
     @Override
     public boolean mouseScrolled(double mouseX, double mouseY, double horizontalAmount, double verticalAmount) {
         if (close) return false;
-        if (getStyle() == UI.ClickGuiStyle.Classic) {
-            for (Panel panel : panels) panel.mouseScrolled(mouseX, mouseY, horizontalAmount, verticalAmount);
-        } else {
-            Category[] cats = {Category.Combat, Category.Movement, Category.Render, Category.Misc, Category.Client};
-            float gutter = 6f;
-            int screenWidth = mc.getWindow().getScaledWidth();
-            int screenHeight = mc.getWindow().getScaledHeight();
-            
-            float totalWidth = cachedColumnWidth * cats.length + gutter * (cats.length - 1);
-            float startX = (screenWidth - totalWidth) / 2f;
-            float headerHeight = 22f;
-            float listHeight = Math.min(cachedColumnHeight, screenHeight - cachedColumnY - headerHeight - 60f);
-            float listY = cachedColumnY + headerHeight + 3f;
-
-            for (int i = 0; i < cats.length; i++) {
-                Category c = cats[i];
-                float colX_start = startX + i * (cachedColumnWidth + gutter);
-                float colX_end = colX_start + cachedColumnWidth;
-
-                if (mouseX >= colX_start && mouseX <= colX_end && mouseY >= listY && mouseY <= listY + listHeight) {
-                    float targetOffset = targetScrollOffsets.getOrDefault(c, 0f);
-                    targetOffset += verticalAmount * SCROLL_SPEED;
-                    
-                    // Считаем полную высоту контента включая настройки
-                    float contentTotalHeight = 0;
-                    for (ModuleComponent comp : columns.getOrDefault(c, Collections.emptyList())) {
-                        // Фильтрация по поиску
-                        if (!searchQuery.isEmpty() && !comp.getModule().getName().toLowerCase().contains(searchQuery.toLowerCase())) {
-                            continue;
-                        }
-                        
-                        contentTotalHeight += comp.getHeight() + 2;
-                        if (comp.getOpenAnimation().getValue() > 0f) {
-                            for (fun.motherhack.screen.clickgui.components.Component sub : comp.getComponents()) {
-                                if (!sub.getVisible().get()) continue;
-                                contentTotalHeight += (sub.getHeight() + sub.getAddHeight().get()) * comp.getOpenAnimation().getValue();
-                            }
-                        }
-                    }
-                    float maxScroll = Math.max(0, contentTotalHeight - listHeight + 6f);
-                    targetOffset = Math.max(-maxScroll, Math.min(0, targetOffset));
-                    targetScrollOffsets.put(c, targetOffset);
-                    return true;
-                }
-            }
-        }
+        for (Panel panel : panels) panel.mouseScrolled(mouseX, mouseY, horizontalAmount, verticalAmount);
         return super.mouseScrolled(mouseX, mouseY, horizontalAmount, verticalAmount);
     }
 
@@ -532,9 +251,7 @@ public class ClickGui extends Screen implements Wrapper {
             if (keyCode == GLFW.GLFW_KEY_ESCAPE) {
                 if (!searchQuery.isEmpty()) {
                     setSearchQuery("");
-                    if (getStyle() == UI.ClickGuiStyle.Classic) {
-                        for (Panel panel : panels) panel.resetSearchState();
-                    }
+                    for (Panel panel : panels) panel.resetSearchState();
                 } else searchFocused = false;
                 return true;
             } else if (keyCode == GLFW.GLFW_KEY_BACKSPACE && !searchQuery.isEmpty()) {
@@ -551,38 +268,15 @@ public class ClickGui extends Screen implements Wrapper {
             return true;
         }
         
-        if (getStyle() == UI.ClickGuiStyle.Classic) {
-            for (Panel panel : panels) panel.keyPressed(keyCode, scanCode, modifiers);
-        } else {
-            for (List<ModuleComponent> list : columns.values()) {
-                for (ModuleComponent comp : list) {
-                    // Фильтрация по поиску
-                    if (!searchQuery.isEmpty() && !comp.getModule().getName().toLowerCase().contains(searchQuery.toLowerCase())) {
-                        continue;
-                    }
-                    comp.keyPressed(keyCode, scanCode, modifiers);
-                }
-            }
-        }
+        for (Panel panel : panels) panel.keyPressed(keyCode, scanCode, modifiers);
+        
         return super.keyPressed(keyCode, scanCode, modifiers);
     }
 
     @Override
     public boolean keyReleased(int keyCode, int scanCode, int modifiers) {
         if (close) return false;
-        if (getStyle() == UI.ClickGuiStyle.Classic) {
-            for (Panel panel : panels) panel.keyReleased(keyCode, scanCode, modifiers);
-        } else {
-            for (List<ModuleComponent> list : columns.values()) {
-                for (ModuleComponent comp : list) {
-                    // Фильтрация по поиску
-                    if (!searchQuery.isEmpty() && !comp.getModule().getName().toLowerCase().contains(searchQuery.toLowerCase())) {
-                        continue;
-                    }
-                    comp.keyReleased(keyCode, scanCode, modifiers);
-                }
-            }
-        }
+        for (Panel panel : panels) panel.keyReleased(keyCode, scanCode, modifiers);
         return super.keyReleased(keyCode, scanCode, modifiers);
     }
 
@@ -593,19 +287,7 @@ public class ClickGui extends Screen implements Wrapper {
             setSearchQuery(searchQuery + chr);
             return true;
         }
-        if (getStyle() == UI.ClickGuiStyle.Classic) {
-            for (Panel panel : panels) panel.charTyped(chr, modifiers);
-        } else {
-            for (List<ModuleComponent> list : columns.values()) {
-                for (ModuleComponent comp : list) {
-                    // Фильтрация по поиску
-                    if (!searchQuery.isEmpty() && !comp.getModule().getName().toLowerCase().contains(searchQuery.toLowerCase())) {
-                        continue;
-                    }
-                    comp.charTyped(chr, modifiers);
-                }
-            }
-        }
+        for (Panel panel : panels) panel.charTyped(chr, modifiers);
         return super.charTyped(chr, modifiers);
     }
 
@@ -615,31 +297,21 @@ public class ClickGui extends Screen implements Wrapper {
         close = false;
         resetSearch();
         GuiSoundHelper.playOpenSound();
-        
-        // Кэшируем размеры при открытии
-        UI uiModule = MotherHack.getInstance().getModuleManager().getModule(UI.class);
-        if (uiModule != null) {
-            cachedColumnWidth = uiModule.getColumnWidth();
-            cachedColumnHeight = uiModule.getColumnHeight();
-            cachedColumnY = uiModule.getColumnY();
-        } else {
-            // Значения по умолчанию если модуль не найден
-            cachedColumnWidth = 160f;
-            cachedColumnHeight = 400f;
-            cachedColumnY = 40f;
-        }
     }
 
     @Override
     public void tick() {
-        if (getStyle() == UI.ClickGuiStyle.Classic) {
-            float x = (mc.getWindow().getScaledWidth() / 2f) - (110 * ((Category.values().length - 1) / 2f)) - (4f * 1.5f);
-            float y = (mc.getWindow().getScaledHeight() / 2f) - 115f;
-            for (Panel panel : panels) {
-                panel.setX(x);
-                panel.setY(y);
-                x += 110f + 4f;
-            }
+        UI uiModule = MotherHack.getInstance().getModuleManager().getModule(UI.class);
+        float panelWidth = uiModule != null ? uiModule.getPanelWidth() : 110f;
+        float panelSpacing = uiModule != null ? uiModule.getPanelSpacing() : 4f;
+        
+        float x = (mc.getWindow().getScaledWidth() / 2f) - (panelWidth * ((Category.values().length - 1) / 2f)) - (panelSpacing * 1.5f);
+        float y = (mc.getWindow().getScaledHeight() / 2f) - 115f;
+        for (Panel panel : panels) {
+            panel.setX(x);
+            panel.setY(y);
+            panel.setWidth(panelWidth);
+            x += panelWidth + panelSpacing;
         }
     }
 

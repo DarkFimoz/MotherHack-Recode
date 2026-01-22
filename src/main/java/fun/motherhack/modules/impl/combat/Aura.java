@@ -43,6 +43,10 @@ public class Aura extends Module {
     // 1.8 Mode settings (NoDelay style - very high CPS)
     private final NumberSetting attacksPerTick = new NumberSetting("Attacks/Tick", 50f, 1f, 500f, 1f, 
             () -> pvpMode.getValue() == PvPMode.Mode_1_8);
+    private final BooleanSetting antiKick = new BooleanSetting("Anti Kick", true,
+            () -> pvpMode.getValue() == PvPMode.Mode_1_8);
+    private final NumberSetting antiKickDelay = new NumberSetting("Anti Kick Delay", 50f, 10f, 200f, 10f,
+            () -> pvpMode.getValue() == PvPMode.Mode_1_8 && antiKick.getValue());
     
     // 1.12 Mode settings (with delays)
     private final BooleanSetting useCooldown = new BooleanSetting("Use Cooldown", true,
@@ -81,9 +85,11 @@ public class Aura extends Module {
     @Getter
     private LivingEntity target;
     private final TimerUtils attackTimer = new TimerUtils();
+    private final TimerUtils antiKickTimer = new TimerUtils();
     private long currentDelay = 0;
     private float lastYaw, lastPitch;
     private RotationChanger rotationChanger;
+    private int attackCount = 0;
 
     public Aura() {
         super("Aura", Category.Combat);
@@ -94,6 +100,8 @@ public class Aura extends Module {
         super.onEnable();
         target = null;
         attackTimer.reset();
+        antiKickTimer.reset();
+        attackCount = 0;
         currentDelay = getRandomDelay();
         if (!fullNullCheck()) {
             lastYaw = mc.player.getYaw();
@@ -105,6 +113,7 @@ public class Aura extends Module {
     public void onDisable() {
         super.onDisable();
         target = null;
+        attackCount = 0;
         if (rotationChanger != null) {
             MotherHack.getInstance().getRotationManager().removeRotation(rotationChanger);
             rotationChanger = null;
@@ -165,9 +174,9 @@ public class Aura extends Module {
     }
     
     private boolean canCrit() {
-        // Legit crit conditions: not on ground, falling (negative Y velocity), not in special states
-        return !mc.player.isOnGround() 
-                && mc.player.getVelocity().y < 0  // falling down
+        // Крит только когда падаешь (отрицательная вертикальная скорость)
+        return mc.player.getVelocity().y < 0 
+                && !mc.player.isOnGround()
                 && !mc.player.isClimbing()
                 && !mc.player.isTouchingWater()
                 && !mc.player.isInLava()
@@ -249,7 +258,7 @@ public class Aura extends Module {
             }
             case Mode_1_12 -> {
                 if (useCooldown.getValue()) {
-                    // Используем ванильный кулдаун атаки - учитывает скорость оружия (топор медленнее меча)
+                    // Используем ванильный кулдаун атаки
                     return mc.player.getAttackCooldownProgress(0.5f) >= cooldownProgress.getValue();
                 } else {
                     return attackTimer.passed(currentDelay);
@@ -266,11 +275,23 @@ public class Aura extends Module {
         
         // Attack based on mode
         if (pvpMode.getValue() == PvPMode.Mode_1_8) {
-            // NoDelay style - multiple attacks per tick
+            // NoDelay style - multiple attacks per tick with anti-kick
             int attacks = attacksPerTick.getValue().intValue();
+            
+            // Anti-kick: добавляем паузу каждые N атак
+            if (antiKick.getValue()) {
+                if (antiKickTimer.passed(antiKickDelay.getValue().longValue())) {
+                    // Пауза для предотвращения кика
+                    antiKickTimer.reset();
+                    attackCount = 0;
+                    return;
+                }
+            }
+            
             for (int i = 0; i < attacks; i++) {
                 mc.interactionManager.attackEntity(mc.player, target);
                 mc.player.swingHand(Hand.MAIN_HAND);
+                attackCount++;
             }
         } else {
             mc.interactionManager.attackEntity(mc.player, target);

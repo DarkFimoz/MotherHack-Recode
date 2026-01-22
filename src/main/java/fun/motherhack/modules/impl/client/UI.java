@@ -44,24 +44,14 @@ public class UI extends Module {
         private final Color accentColor;
     }
     
-    @AllArgsConstructor @Getter
-    public enum ClickGuiStyle implements Nameable {
-        Classic("Classic"),
-        Columns("Columns");
-        
-        private final String name;
-    }
-
     private final EnumSetting<ClickGuiTheme> theme = new EnumSetting<>("Theme", ClickGuiTheme.Default);
-    private final EnumSetting<ClickGuiStyle> style = new EnumSetting<>("Style", ClickGuiStyle.Classic);
     private final BooleanSetting showBackground = new BooleanSetting("Show Background", false);
     private final BooleanSetting enableBlur = new BooleanSetting("Enable Blur", true);
     private final NumberSetting blurRadius = new NumberSetting("Blur Radius", 20f, 5f, 50f, 1f);
     private final NumberSetting blurAlpha = new NumberSetting("Blur Alpha", 150f, 50f, 255f, 5f);
     private final NumberSetting backgroundAlpha = new NumberSetting("Background Alpha", 180f, 100f, 255f, 5f);
-    private final NumberSetting columnWidth = new NumberSetting("Column Width", 160f, 100f, 200f, 5f);
-    private final NumberSetting columnHeight = new NumberSetting("Column Height", 400f, 200f, 600f, 10f);
-    private final NumberSetting columnY = new NumberSetting("Column Y Position", 40f, 20f, 200f, 5f);
+    private final NumberSetting panelWidth = new NumberSetting("Panel Width", 110f, 80f, 150f, 5f);
+    private final NumberSetting panelSpacing = new NumberSetting("Panel Spacing", 4f, 0f, 20f, 1f);
     private final BooleanSetting enableSounds = new BooleanSetting("Enable Sounds", true);
 
     public UI() {
@@ -70,25 +60,18 @@ public class UI extends Module {
         
         // Добавляем настройки
         getSettings().add(theme);
-        getSettings().add(style);
         getSettings().add(showBackground);
         getSettings().add(enableSounds);
         getSettings().add(enableBlur);
         getSettings().add(blurRadius);
         getSettings().add(blurAlpha);
         getSettings().add(backgroundAlpha);
-        getSettings().add(columnWidth);
-        getSettings().add(columnHeight);
-        getSettings().add(columnY);
+        getSettings().add(panelWidth);
+        getSettings().add(panelSpacing);
         
-        // Показывать настройки Columns только когда выбран этот стиль
-        enableBlur.setVisible(() -> style.getValue() == ClickGuiStyle.Columns);
-        blurRadius.setVisible(() -> style.getValue() == ClickGuiStyle.Columns && enableBlur.getValue());
-        blurAlpha.setVisible(() -> style.getValue() == ClickGuiStyle.Columns && enableBlur.getValue());
-        backgroundAlpha.setVisible(() -> style.getValue() == ClickGuiStyle.Columns);
-        columnWidth.setVisible(() -> style.getValue() == ClickGuiStyle.Columns);
-        columnHeight.setVisible(() -> style.getValue() == ClickGuiStyle.Columns);
-        columnY.setVisible(() -> style.getValue() == ClickGuiStyle.Columns);
+        // Показывать настройки blur только когда он включен
+        blurRadius.setVisible(() -> enableBlur.getValue());
+        blurAlpha.setVisible(() -> enableBlur.getValue());
     }
 
     @EventHandler
@@ -98,10 +81,6 @@ public class UI extends Module {
 
     public ClickGuiTheme getTheme() {
         return theme.getValue();
-    }
-    
-    public ClickGuiStyle getStyle() {
-        return style.getValue();
     }
 
     public boolean isShowBackground() {
@@ -124,16 +103,12 @@ public class UI extends Module {
         return backgroundAlpha.getValue();
     }
     
-    public float getColumnWidth() {
-        return columnWidth.getValue();
+    public float getPanelWidth() {
+        return panelWidth.getValue();
     }
     
-    public float getColumnHeight() {
-        return columnHeight.getValue();
-    }
-    
-    public float getColumnY() {
-        return columnY.getValue();
+    public float getPanelSpacing() {
+        return panelSpacing.getValue();
     }
     
     public boolean isSoundsEnabled() {
@@ -142,7 +117,16 @@ public class UI extends Module {
 
     @Override
     public void onEnable() {
-        super.onEnable();
+        toggled = true;
+        MotherHack.getInstance().getEventHandler().subscribe(this);
+        // Не воспроизводим звуки и не показываем уведомления для UI модуля
         mc.setScreen(MotherHack.getInstance().getClickGui());
+    }
+    
+    @Override
+    public void onDisable() {
+        toggled = false;
+        MotherHack.getInstance().getEventHandler().unsubscribe(this);
+        // Не воспроизводим звуки и не показываем уведомления для UI модуля
     }
 }

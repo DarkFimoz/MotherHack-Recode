@@ -1,5 +1,6 @@
 package fun.motherhack.modules.impl.client;
 
+import fun.motherhack.MotherHack;
 import fun.motherhack.api.events.impl.EventTick;
 import fun.motherhack.screen.csgui.MHackGui;
 import fun.motherhack.modules.api.Category;
@@ -29,7 +30,16 @@ public class MHACKGUI extends Module {
 
     @Override
     public void onEnable() {
-        super.onEnable();
+        toggled = true;
+        MotherHack.getInstance().getEventHandler().subscribe(this);
+        // Не воспроизводим звуки и не показываем уведомления для MHACKGUI модуля
         mc.execute(() -> mc.setScreen(MHackGui.getInstance()));
+    }
+    
+    @Override
+    public void onDisable() {
+        toggled = false;
+        MotherHack.getInstance().getEventHandler().unsubscribe(this);
+        // Не воспроизводим звуки и не показываем уведомления для MHACKGUI модуля
     }
 }

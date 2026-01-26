@@ -2,6 +2,8 @@ package fun.motherhack.modules.impl.render;
 
 import fun.motherhack.MotherHack;
 import fun.motherhack.api.events.impl.EventRender2D;
+import fun.motherhack.api.render.builders.Builder;
+import fun.motherhack.api.render.renderers.impl.BuiltText;
 import fun.motherhack.modules.api.Category;
 import fun.motherhack.modules.api.Module;
 import fun.motherhack.modules.impl.client.UI;
@@ -10,6 +12,8 @@ import fun.motherhack.modules.settings.impl.BooleanSetting;
 import fun.motherhack.modules.settings.impl.EnumSetting;
 import fun.motherhack.modules.settings.impl.NumberSetting;
 import fun.motherhack.utils.render.Render2D;
+import fun.motherhack.utils.render.fonts.Fonts;
+import fun.motherhack.utils.render.fonts.Instance;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.util.math.MatrixStack;
@@ -96,14 +100,15 @@ public class HotBar extends Module {
         // Уровень опыта (по центру над хотбаром)
         if (showLevel.getValue() && mc.player.experienceLevel > 0) {
             String levelStr = String.valueOf(mc.player.experienceLevel);
-            int textWidth = mc.textRenderer.getWidth(levelStr);
-            int textX = centerX - textWidth / 2;
-            int textY = hotbarY - 12;
+            Instance font = Fonts.SEMIBOLD.getFont(10f);
+            float textWidth = font.getWidth(levelStr);
+            float textX = centerX - textWidth / 2;
+            float textY = hotbarY - 12;
             
             // Тень
-            context.drawText(mc.textRenderer, levelStr, textX + 1, textY + 1, 0x000000, false);
+            drawCustomText(matrices, font, levelStr, textX + 0.5f, textY + 0.5f, new Color(0, 0, 0, 150));
             // Текст
-            context.drawText(mc.textRenderer, levelStr, textX, textY, 0x80FF20, false);
+            drawCustomText(matrices, font, levelStr, textX, textY, new Color(128, 255, 32));
         }
         
         // Здоровье (слева от хотбара)
@@ -113,16 +118,17 @@ public class HotBar extends Module {
             
             String healthText = String.format("%.1f", health);
             String fullText = healthText + " HP";
-            int fullWidth = mc.textRenderer.getWidth(fullText);
-            int healthX = centerX - 91 - fullWidth - 8;
-            int healthY = hotbarY + (hotbarHeight - 9) / 2;
+            Instance font = Fonts.MEDIUM.getFont(9f);
+            float fullWidth = font.getWidth(fullText);
+            float healthX = centerX - 91 - fullWidth - 8;
+            float healthY = hotbarY + (hotbarHeight - font.getHeight()) / 2;
             
             // Фон для здоровья
-            Render2D.drawRoundedRect(matrices, healthX - 4, healthY - 2, fullWidth + 8, 12, 3f, bgColor);
+            Render2D.drawRoundedRect(matrices, healthX - 4, healthY - 2, fullWidth + 8, font.getHeight() + 4, 3f, bgColor);
             
             // Цвет в зависимости от здоровья
             Color healthColor = getHealthColor(health, maxHealth);
-            context.drawText(mc.textRenderer, fullText, healthX, healthY, healthColor.getRGB(), true);
+            drawCustomText(matrices, font, fullText, healthX, healthY, healthColor);
         }
         
         // Голод (справа от хотбара)
@@ -130,16 +136,17 @@ public class HotBar extends Module {
             int hunger = mc.player.getHungerManager().getFoodLevel();
             
             String hungerText = hunger + " Food";
-            int hungerWidth = mc.textRenderer.getWidth(hungerText);
-            int hungerX = centerX + 91 + 8;
-            int hungerY = hotbarY + (hotbarHeight - 9) / 2;
+            Instance font = Fonts.MEDIUM.getFont(9f);
+            float hungerWidth = font.getWidth(hungerText);
+            float hungerX = centerX + 91 + 8;
+            float hungerY = hotbarY + (hotbarHeight - font.getHeight()) / 2;
             
             // Фон для голода
-            Render2D.drawRoundedRect(matrices, hungerX - 4, hungerY - 2, hungerWidth + 8, 12, 3f, bgColor);
+            Render2D.drawRoundedRect(matrices, hungerX - 4, hungerY - 2, hungerWidth + 8, font.getHeight() + 4, 3f, bgColor);
             
             // Цвет в зависимости от голода
             Color hungerColor = getHungerColor(hunger);
-            context.drawText(mc.textRenderer, hungerText, hungerX, hungerY, hungerColor.getRGB(), true);
+            drawCustomText(matrices, font, hungerText, hungerX, hungerY, hungerColor);
         }
         
         // Броня (над хотбаром слева)
@@ -147,14 +154,15 @@ public class HotBar extends Module {
             int armor = mc.player.getArmor();
             if (armor > 0) {
                 String armorText = armor + " Armor";
-                int armorWidth = mc.textRenderer.getWidth(armorText);
-                int armorX = centerX - armorWidth / 2;
-                int armorY = hotbarY - 26;
+                Instance font = Fonts.MEDIUM.getFont(9f);
+                float armorWidth = font.getWidth(armorText);
+                float armorX = centerX - armorWidth / 2;
+                float armorY = hotbarY - 26;
                 
                 // Фон для брони
-                Render2D.drawRoundedRect(matrices, armorX - 4, armorY - 2, armorWidth + 8, 12, 3f, bgColor);
+                Render2D.drawRoundedRect(matrices, armorX - 4, armorY - 2, armorWidth + 8, font.getHeight() + 4, 3f, bgColor);
                 
-                context.drawText(mc.textRenderer, armorText, armorX, armorY, new Color(170, 170, 255).getRGB(), true);
+                drawCustomText(matrices, font, armorText, armorX, armorY, new Color(170, 170, 255));
             }
         }
         
@@ -163,12 +171,13 @@ public class HotBar extends Module {
             ItemStack mainHand = mc.player.getMainHandStack();
             if (!mainHand.isEmpty() && mainHand.getCount() > 1) {
                 String countText = "x" + mainHand.getCount();
-                int textWidth = mc.textRenderer.getWidth(countText);
-                int textX = (int) selectedX + 9 - textWidth / 2;
-                int textY = hotbarY - 12;
+                Instance font = Fonts.BOLD.getFont(9f);
+                float textWidth = font.getWidth(countText);
+                float textX = selectedX + 9 - textWidth / 2;
+                float textY = hotbarY - 12;
                 
-                Render2D.drawRoundedRect(matrices, textX - 2, textY - 2, textWidth + 4, 12, 3f, new Color(20, 20, 20, 200));
-                context.drawText(mc.textRenderer, countText, textX, textY, accentColor.getRGB(), true);
+                Render2D.drawRoundedRect(matrices, textX - 2, textY - 2, textWidth + 4, font.getHeight() + 4, 3f, new Color(20, 20, 20, 200));
+                drawCustomText(matrices, font, countText, textX, textY, accentColor);
             }
         }
     }
@@ -230,5 +239,17 @@ public class HotBar extends Module {
         context.drawStackOverlay(mc.textRenderer, stack, x, y);
         
         context.getMatrices().pop();
+    }
+    
+    private void drawCustomText(MatrixStack matrices, Instance font, String text, float x, float y, Color color) {
+        BuiltText built = Builder.text()
+                .font(font.font())
+                .text(text)
+                .size(font.size())
+                .thickness(0.05f)
+                .smoothness(0.5f)
+                .color(color)
+                .build();
+        built.render(matrices.peek().getPositionMatrix(), x, y);
     }
 }

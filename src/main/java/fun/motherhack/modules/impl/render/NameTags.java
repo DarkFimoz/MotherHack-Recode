@@ -31,8 +31,9 @@ public class NameTags extends Module {
 
     @Getter
     public enum ColorMode implements Nameable {
-        UIColor("UIColor"),
-        Default("Default");
+        UIColor("settings.nametags.colormode.uicolor"),
+        Default("settings.nametags.colormode.default"),
+        Cyber("settings.nametags.colormode.cyber");
 
         private final String name;
 
@@ -41,6 +42,19 @@ public class NameTags extends Module {
         }
     }
 
+    @Getter
+    public enum RenderMode implements Nameable {
+        Default("settings.nametags.mode.default"),
+        ThunderHack("settings.nametags.mode.thunderhack");
+
+        private final String name;
+
+        RenderMode(String name) {
+            this.name = name;
+        }
+    }
+
+    private final EnumSetting<RenderMode> mode = new EnumSetting<>("settings.nametags.mode", RenderMode.Default);
     private final EnumSetting<ColorMode> colorMode = new EnumSetting<>("Color Mode", ColorMode.Default);
     private final NumberSetting rectRounding = new NumberSetting("settings.nametags.rectrounding", 1.5f, 0f, 5f, 0.5f);
     private final BooleanSetting items = new BooleanSetting("settings.nametags.items", true);
@@ -49,6 +63,7 @@ public class NameTags extends Module {
     private final BooleanSetting box = new BooleanSetting("settings.nametags.box", true);
     private final NumberSetting boxRounding = new NumberSetting("settings.nametags.boxrounding", 2f, 0f, 5f, 0.5f, box::getValue);
     private final BooleanSetting blur = new BooleanSetting("settings.nametags.blur", true);
+    private final NumberSetting range = new NumberSetting("settings.nametags.range", 100f, 10f, 5000f, 10f);
 
     public NameTags() {
         super("NameTags", Category.Render);
@@ -58,11 +73,20 @@ public class NameTags extends Module {
     public void onRender2D(EventRender2D e) {
         if (fullNullCheck()) return;
 
+        if (mode.getValue() == RenderMode.Default) {
+            renderDefault(e);
+        } else {
+            renderThunderHack(e);
+        }
+    }
+
+    private void renderDefault(EventRender2D e) {
         for (Entity entity : mc.world.getEntities()) {
             if (entity == null) continue;
             if (!(entity instanceof PlayerEntity player)) continue;
             if (entity == mc.player && mc.options.getPerspective() == Perspective.FIRST_PERSON) continue;
             if (Server.isBot(player)) continue;
+            if (mc.player.distanceTo(player) > range.getValue()) continue;
             double x = MathHelper.lerp(e.getTickCounter().getTickDelta(true), player.prevX, player.getX());
             double y = MathHelper.lerp(e.getTickCounter().getTickDelta(true), player.prevY, player.getY()) + player.getHeight() * 1.3f;
             double z = MathHelper.lerp(e.getTickCounter().getTickDelta(true), player.prevZ, player.getZ());
@@ -139,6 +163,142 @@ public class NameTags extends Module {
                     centerY + 2f,
                     getHealthColor(player)
             );
+        }
+    }
+
+    private void renderThunderHack(EventRender2D e) {
+        for (Entity entity : mc.world.getEntities()) {
+            if (entity == null) continue;
+            if (!(entity instanceof PlayerEntity player)) continue;
+            if (entity == mc.player && mc.options.getPerspective() == Perspective.FIRST_PERSON) continue;
+            if (Server.isBot(player)) continue;
+            if (mc.player.distanceTo(player) > range.getValue()) continue;
+
+            double x = MathHelper.lerp(e.getTickCounter().getTickDelta(true), player.prevX, player.getX());
+            double y = MathHelper.lerp(e.getTickCounter().getTickDelta(true), player.prevY, player.getY()) + player.getHeight() + 0.3f;
+            double z = MathHelper.lerp(e.getTickCounter().getTickDelta(true), player.prevZ, player.getZ());
+            Vec3d position = WorldUtils.getPosition(new Vec3d(x, y, z));
+
+            if (!(position.z > 0) || !(position.z < 1)) continue;
+
+            float centerX = (float) position.getX();
+            float centerY = (float) position.getY();
+
+            String name = format(player.getDisplayName().getString());
+            String ping = Server.getPing(player) + "ms";
+            String health = MathUtils.round(Server.getHealth(player, true)) + "";
+            String distance = String.format("%.1f", mc.player.distanceTo(player)) + "m";
+
+            String finalString = ping + " " + name + " " + health + " " + distance;
+
+            float textWidth = Fonts.REGULAR.getWidth(finalString, 9f);
+            float rectWidth = textWidth + 8f;
+            float height = 14f;
+            float tagX = centerX - rectWidth / 2f;
+
+            boolean isFriend = MotherHack.getInstance().getFriendManager().isFriend(entity.getName().getString());
+            
+            // Цвет для всех в зависимости от ColorMode
+            Color accentColor = getAccentColor();
+            Color bgColor = isFriend 
+                ? new Color(accentColor.getRed(), accentColor.getGreen(), accentColor.getBlue(), 120)
+                : new Color(0, 0, 0, 150);
+            Color borderColor = accentColor;
+
+            if (blur.getValue()) {
+                Render2D.drawStyledRect(e.getContext().getMatrices(),
+                        tagX,
+                        centerY - 15f,
+                        rectWidth,
+                        height,
+                        rectRounding.getValue(),
+                        bgColor,
+                        255
+                );
+            } else {
+                Render2D.drawRoundedRect(e.getContext().getMatrices(),
+                        tagX,
+                        centerY - 15f,
+                        rectWidth,
+                        height,
+                        rectRounding.getValue(),
+                        bgColor
+                );
+            }
+
+            if (border.getValue()) {
+                Render2D.drawBorder(e.getContext().getMatrices(),
+                        tagX,
+                        centerY - 15f,
+                        rectWidth,
+                        height,
+                        borderRounding.getValue(),
+                        0.8f,
+                        0.8f,
+                        borderColor
+                );
+            }
+
+            Render2D.drawFont(e.getContext().getMatrices(),
+                    Fonts.REGULAR.getFont(9f),
+                    finalString,
+                    tagX + 4f,
+                    centerY - 11f,
+                    Color.WHITE
+            );
+
+            if (items.getValue()) {
+                renderItemsThunderHack(e.getContext(), player, centerX, centerY - 33f);
+            }
+
+            if (box.getValue()) {
+                renderBox(e, player);
+            }
+        }
+    }
+
+    private void renderItemsThunderHack(DrawContext context, PlayerEntity player, float x, float y) {
+        ItemStack[] items = {
+                player.getOffHandStack(),
+                player.getInventory().getArmorStack(0),
+                player.getInventory().getArmorStack(1),
+                player.getInventory().getArmorStack(2),
+                player.getInventory().getArmorStack(3),
+                player.getMainHandStack()
+        };
+
+        int count = 0;
+        for (ItemStack item : items) if (!item.isEmpty()) count++;
+        if (count == 0) return;
+
+        float armorWidth = count * 18f;
+        float startX = x - armorWidth / 2f;
+
+        int index = 0;
+        for (ItemStack item : items) {
+            if (!item.isEmpty()) {
+                context.drawItem(item, (int) (startX + index * 18f), (int) y);
+
+                if (item.isDamageable()) {
+                    float percent = (float) (item.getMaxDamage() - item.getDamage()) / item.getMaxDamage();
+                    int percentInt = (int) (percent * 100);
+
+                    Color color;
+                    if (percentInt < 33) color = Color.RED;
+                    else if (percentInt < 66) color = Color.YELLOW;
+                    else color = Color.GREEN;
+
+                    Render2D.drawFont(context.getMatrices(),
+                            Fonts.REGULAR.getFont(7f),
+                            percentInt + "%",
+                            startX + index * 18f + 1f,
+                            y + 10f,
+                            color
+                    );
+                }
+
+                index++;
+            }
         }
     }
 
@@ -302,21 +462,48 @@ public class NameTags extends Module {
     }
 
     private Color getBorderColor(LivingEntity entity) {
+        // Для UIColor и Cyber - всегда используем акцентный цвет для ВСЕХ
+        if (colorMode.getValue() == ColorMode.UIColor || colorMode.getValue() == ColorMode.Cyber) {
+            return getAccentColor();
+        }
+        
+        // Для Default режима - цвет по здоровью или друзьям
         float health = MathUtils.round(Server.getHealth(entity, true));
-
+        
         if (entity == mc.player || MotherHack.getInstance().getFriendManager().getFriends().contains(entity.getName().getString())) {
-            return getFriendColor();
+            return getAccentColor();
         } else if (health >= 15) return new Color(0, 255, 0);
         else if (health >= 5) return new Color(255, 150, 0);
         else return new Color(255, 0, 0);
     }
 
     private Color getFriendColor() {
+        Color accent = getAccentColor();
+        return new Color(accent.getRed(), accent.getGreen(), accent.getBlue(), 120);
+    }
+
+    private Color getAccentColor() {
         if (colorMode.getValue() == ColorMode.UIColor) {
             Color uiColor = MotherHack.getInstance().getModuleManager().getModule(UI.class).getTheme().getAccentColor();
-            return new Color(uiColor.getRed(), uiColor.getGreen(), uiColor.getBlue(), 150);
+            return new Color(uiColor.getRed(), uiColor.getGreen(), uiColor.getBlue(), 200);
+        } else if (colorMode.getValue() == ColorMode.Cyber) {
+            // Крутой фиолетово-синий градиент (Cyber)
+            long time = System.currentTimeMillis();
+            float cycle = (time % 3000) / 3000.0f;
+            
+            // Переход между фиолетовым и синим
+            int r = (int) (138 + Math.sin(cycle * Math.PI * 2) * 80); // 58-218
+            int g = (int) (43 + Math.sin(cycle * Math.PI * 2 + Math.PI / 3) * 100); // 0-143
+            int b = (int) (226 + Math.sin(cycle * Math.PI * 2 + Math.PI / 2) * 29); // 197-255
+            
+            return new Color(
+                Math.max(0, Math.min(255, r)),
+                Math.max(0, Math.min(255, g)),
+                Math.max(0, Math.min(255, b)),
+                200
+            );
         } else {
-            return new Color(0, 255, 255, 150); // Default cyan
+            return new Color(0, 255, 255, 200); // Default cyan
         }
     }
 

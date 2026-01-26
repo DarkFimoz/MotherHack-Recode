@@ -6,6 +6,7 @@
   "descriptions.combat.antibot": "Removes bots created by anticheat.",
   "descriptions.combat.clickpearl": "Throw ender pearl on the bind.",
   "descriptions.combat.offhand": "Automatically takes totems to offhand.",
+  "descriptions.combat.autototem": "Automatically puts totem in offhand with a very short stop.",
   "descriptions.combat.autogapple": "Automatically eats golden apples when health is low.",
 
   "descriptions.movement.sprint": "Automatically sprinting.",
@@ -45,6 +46,17 @@
   "descriptions.render.fullbright": "Toggled on max brightness when dark.",
   "descriptions.render.watermark": "Draws watermark of client.",
   "descriptions.render.aspectratio": "Changes the aspect ratio of the game window.",
+  "descriptions.render.itemesp": "Displays ESP for items on the ground.",
+
+  "settings.itemesp.shadow": "Shadow",
+  "settings.itemesp.shadowcolor": "Shadow Color",
+  "settings.itemesp.textcolor": "Text Color",
+  "settings.itemesp.mode": "Mode",
+  "settings.itemesp.radius": "Radius",
+  "settings.itemesp.usehudcolor": "Use HUD Color",
+  "settings.itemesp.coloroffset": "Color Offset",
+  "settings.itemesp.circlecolor": "Circle Color",
+  "settings.itemesp.circlepoints": "Circle Points",
   "descriptions.render.arrows": "Shows arrows on screen pointing to players around you.",
   "descriptions.render.angelwingsesp": "Renders beautiful animated angel wings on players.",
 
@@ -203,6 +215,10 @@
   "settings.offhand.matrixbypass": "Matrix Bypass",
   "settings.offhand.grimbypass": "Grim Bypass",
 
+  "settings.autototem.stopticks": "Stop Ticks",
+  "settings.autototem.swapdelay": "Swap Delay",
+  "settings.autototem.stricttiming": "Strict Timing",
+
   "settings.autogapple.usedelay": "Use Delay",
   "settings.autogapple.health": "Health",
   "settings.autogapple.absorption": "Absorption",
@@ -225,6 +241,12 @@
   "settings.noslow.ticks": "Ticks",
   "settings.noslow.mode.grimv3": "GrimV3",
 
+  "settings.nametags.mode": "Mode",
+  "settings.nametags.mode.default": "Default",
+  "settings.nametags.mode.thunderhack": "ThunderHack",
+  "settings.nametags.colormode.uicolor": "UI Color",
+  "settings.nametags.colormode.default": "Default",
+  "settings.nametags.colormode.cyber": "Cyber",
   "settings.nametags.items": "Items",
   "settings.nametags.border": "Border",
   "settings.nametags.box": "Box",
@@ -658,6 +680,8 @@
   "settings.aura.smartcrit": "Smart Crit",
   "settings.aura.smartcrit.autojump": "Auto Jump",
   "settings.aura.smartcrit.onlycrits": "Only Crits",
+  "settings.aura.elytrafreezer": "ElytraFreezer",
+  "settings.aura.elytrafreezer.radius": "Freeze Radius",
 
   "descriptions.render.motionblur": "Adds motion blur effect to the game.",
   "settings.motionblur.strength": "Strength",
@@ -669,5 +693,21 @@
   "settings.notifications.position": "Position",
   "settings.notifications.position.bottomleft": "Bottom Left",
   "settings.notifications.position.bottomcenter": "Bottom Center",
-  "settings.notifications.position.bottomright": "Bottom Right"
+  "settings.notifications.position.bottomright": "Bottom Right",
+
+  "settings.fucker.freelook": "FreeLook",
+
+  "descriptions.misc.noopen": "Blocks packets for opening chests, inventories, shops on bedwars, etc.",
+  "settings.noopen.mode": "Mode",
+  
+  "descriptions.misc.deathcoords": "Saves death coordinates in chat or as waypoints.",
+  "settings.deathcoords.mode": "Mode",
+  "settings.deathcoords.mode.chat": "Chat",
+  "settings.deathcoords.mode.waypoint": "Waypoint",
+  "settings.deathcoords.mode.both": "Both"
+}
+  "settings.noopen.mode.nopkm": "NoPKM (No Right Click)",
+  "settings.noopen.mode.noopen": "NoOpen (Block Packets)",
+  "settings.noopen.mode.closer": "Closer (Auto Close)",
+  "settings.noopen.delay": "Delay (ms)"
 }

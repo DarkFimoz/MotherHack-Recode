@@ -20,6 +20,7 @@ public class FreeCam extends Module {
     private final NumberSetting speed = new NumberSetting("HSpeed", 1f, 0.1f, 3f, 0.05f);
     private final NumberSetting vspeed = new NumberSetting("VSpeed", 0.42f, 0.1f, 3f, 0.05f);
     private final BooleanSetting track = new BooleanSetting("Track", false);
+    private final BooleanSetting loadChunks = new BooleanSetting("Load Chunks", true);
 
     private float fakeYaw, fakePitch, prevFakeYaw, prevFakePitch;
     private double fakeX, fakeY, fakeZ, prevFakeX, prevFakeY, prevFakeZ;
@@ -29,6 +30,8 @@ public class FreeCam extends Module {
     private float playerYaw, playerPitch;
     
     public LivingEntity trackEntity;
+    
+    private int chunkUpdateTicks = 0;
 
     public FreeCam() {
         super("FreeCam", Category.Render);
@@ -110,6 +113,15 @@ public class FreeCam extends Module {
             fakeYaw = mc.player.getYaw();
             fakePitch = mc.player.getPitch();
         }
+        
+        // Отправляем пакеты для загрузки чанков
+        if (loadChunks.getValue()) {
+            chunkUpdateTicks++;
+            if (chunkUpdateTicks >= 5) { // Каждые 5 тиков (4 раза в секунду)
+                chunkUpdateTicks = 0;
+                sendChunkLoadPacket();
+            }
+        }
     }
 
     @EventHandler
@@ -141,9 +153,32 @@ public class FreeCam extends Module {
     @EventHandler
     public void onPacketSend(EventPacket.Send e) {
         if (fullNullCheck()) return;
-        // Блокируем все пакеты движения чтобы сервер не видел движения
-        if (e.getPacket() instanceof PlayerMoveC2SPacket) {
-            e.cancel();
+        // Блокируем пакеты движения, кроме тех что мы отправляем для загрузки чанков
+        if (e.getPacket() instanceof PlayerMoveC2SPacket packet) {
+            if (!loadChunks.getValue()) {
+                e.cancel();
+            } else {
+                // Проверяем, это наш пакет для загрузки чанков или обычный
+                double distance = Math.sqrt(
+                    Math.pow(packet.getX(playerX) - fakeX, 2) +
+                    Math.pow(packet.getY(playerY) - fakeY, 2) +
+                    Math.pow(packet.getZ(playerZ) - fakeZ, 2)
+                );
+                
+                // Если пакет не с позиции камеры, блокируем его
+                if (distance > 1.0) {
+                    e.cancel();
+                }
+            }
+        }
+    }
+    
+    private void sendChunkLoadPacket() {
+        if (mc.getNetworkHandler() != null) {
+            // Отправляем пакет с позицией камеры для загрузки чанков
+            mc.getNetworkHandler().sendPacket(
+                new PlayerMoveC2SPacket.Full(fakeX, fakeY, fakeZ, fakeYaw, fakePitch, mc.player.isOnGround(), mc.player.horizontalCollision)
+            );
         }
     }
 

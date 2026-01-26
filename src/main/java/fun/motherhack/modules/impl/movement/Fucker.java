@@ -12,6 +12,7 @@ import fun.motherhack.utils.rotations.RotationChanger;
 import fun.motherhack.utils.rotations.RotationUtils;
 import fun.motherhack.utils.world.InventoryUtils;
 import meteordevelopment.orbit.EventHandler;
+import org.lwjgl.glfw.GLFW;
 import net.minecraft.block.BedBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -74,6 +75,7 @@ public class Fucker extends Module {
     private final BooleanSetting strictDirection = new BooleanSetting("Strict Direction", true, () -> mode.getValue() != Mode.Legit);
     private final NumberSetting delay = new NumberSetting("Delay", 100f, 0f, 500f, 10f, () -> mode.getValue() != Mode.Legit);
     private final NumberSetting rotationSpeed = new NumberSetting("Rotation Speed", 10f, 1f, 20f, 1f, () -> mode.getValue() == Mode.Legit);
+    private final BooleanSetting freeLook = new BooleanSetting("FreeLook", true, () -> mode.getValue() == Mode.Legit);
 
     private BlockPos currentBlock = null;
     private BlockPos breakingBlock = null;
@@ -91,6 +93,7 @@ public class Fucker extends Module {
     private boolean legitBreaking = false;
     private float targetYaw = 0;
     private float targetPitch = 0;
+    private boolean isFreeLookActive = false;
     
     private final RotationChanger rotationChanger = new RotationChanger(
             1000,
@@ -115,6 +118,7 @@ public class Fucker extends Module {
         // Legit mode cleanup
         legitTarget = null;
         legitBreaking = false;
+        isFreeLookActive = false;
         mc.options.attackKey.setPressed(false);
         
         // Отменяем ломание блока при выключении
@@ -455,6 +459,13 @@ public class Fucker extends Module {
     // ==================== LEGIT MODE ====================
     
     private void handleLegitMode() {
+        // Проверяем, активен ли FreeLook
+        if (freeLook.getValue()) {
+            isFreeLookActive = isAltKeyPressed();
+        } else {
+            isFreeLookActive = false;
+        }
+        
         // Если есть текущая цель, проверяем её
         if (legitTarget != null) {
             Block block = mc.world.getBlockState(legitTarget).getBlock();
@@ -476,8 +487,10 @@ public class Fucker extends Module {
                 return;
             }
             
-            // Плавно поворачиваем камеру к кровати
-            smoothRotateToBlock(legitTarget);
+            // Плавно поворачиваем камеру к кровати (только если FreeLook не активен)
+            if (!isFreeLookActive) {
+                smoothRotateToBlock(legitTarget);
+            }
             
             // Проверяем, смотрим ли мы на кровать (с небольшим допуском)
             if (isLookingAtBlock(legitTarget, 5f)) {
@@ -499,6 +512,12 @@ public class Fucker extends Module {
             targetYaw = rotations[0];
             targetPitch = rotations[1];
         }
+    }
+    
+    private boolean isAltKeyPressed() {
+        if (mc.getWindow() == null) return false;
+        return GLFW.glfwGetKey(mc.getWindow().getHandle(), GLFW.GLFW_KEY_LEFT_ALT) == GLFW.GLFW_PRESS ||
+               GLFW.glfwGetKey(mc.getWindow().getHandle(), GLFW.GLFW_KEY_RIGHT_ALT) == GLFW.GLFW_PRESS;
     }
     
     private BlockPos findLegitBed() {

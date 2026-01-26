@@ -81,6 +81,11 @@ public class Aura extends Module {
     private final BooleanSetting onlyOnGround = new BooleanSetting("Only Ground Crit", false);
     private final BooleanSetting raycast = new BooleanSetting("Raycast", false);
     private final BooleanSetting throughWalls = new BooleanSetting("Through Walls", true);
+    
+    // ElytraFreezer settings
+    private final BooleanSetting elytraFreezer = new BooleanSetting("settings.aura.elytrafreezer", false);
+    private final NumberSetting elytraFreezerRadius = new NumberSetting("settings.aura.elytrafreezer.radius", 3.0f, 1.0f, 6.0f, 0.5f,
+            () -> elytraFreezer.getValue());
 
     @Getter
     private LivingEntity target;
@@ -90,6 +95,7 @@ public class Aura extends Module {
     private float lastYaw, lastPitch;
     private RotationChanger rotationChanger;
     private int attackCount = 0;
+    private boolean isFrozen = false;
 
     public Aura() {
         super("Aura", Category.Combat);
@@ -102,6 +108,7 @@ public class Aura extends Module {
         attackTimer.reset();
         antiKickTimer.reset();
         attackCount = 0;
+        isFrozen = false;
         currentDelay = getRandomDelay();
         if (!fullNullCheck()) {
             lastYaw = mc.player.getYaw();
@@ -114,6 +121,7 @@ public class Aura extends Module {
         super.onDisable();
         target = null;
         attackCount = 0;
+        isFrozen = false;
         if (rotationChanger != null) {
             MotherHack.getInstance().getRotationManager().removeRotation(rotationChanger);
             rotationChanger = null;
@@ -150,6 +158,9 @@ public class Aura extends Module {
             return;
         }
 
+        // Handle ElytraFreezer
+        handleElytraFreezer();
+        
         // Handle rotations
         handleRotations();
         
@@ -170,6 +181,44 @@ public class Aura extends Module {
         // Auto jump for crits - jump when on ground and target in range
         if (smartCritAutoJump.getValue() && mc.player.isOnGround() && distance <= attackRange.getValue()) {
             mc.player.jump();
+        }
+    }
+    
+    private void handleElytraFreezer() {
+        if (!elytraFreezer.getValue() || target == null) {
+            // Если функция выключена или нет цели, снимаем заморозку
+            if (isFrozen) {
+                isFrozen = false;
+            }
+            return;
+        }
+        
+        // Проверяем, раскрыты ли элитры
+        boolean isElytraFlying = mc.player.isGliding();
+        
+        if (!isElytraFlying) {
+            // Если элитры не раскрыты, снимаем заморозку
+            if (isFrozen) {
+                isFrozen = false;
+            }
+            return;
+        }
+        
+        // Проверяем расстояние до цели
+        double distance = mc.player.squaredDistanceTo(target);
+        double radiusSquared = elytraFreezerRadius.getValue() * elytraFreezerRadius.getValue();
+        
+        if (distance <= radiusSquared) {
+            // Цель в радиусе - замораживаем
+            if (!isFrozen) {
+                isFrozen = true;
+            }
+            mc.player.setVelocity(0.0, 0.0, 0.0);
+        } else {
+            // Цель вне радиуса - снимаем заморозку
+            if (isFrozen) {
+                isFrozen = false;
+            }
         }
     }
     

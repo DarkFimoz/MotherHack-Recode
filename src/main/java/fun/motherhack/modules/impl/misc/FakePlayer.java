@@ -133,15 +133,31 @@ public class FakePlayer extends Module {
         mc.world.playSound(mc.player, fakePlayer.getX(), fakePlayer.getY(), fakePlayer.getZ(),
                 SoundEvents.ENTITY_PLAYER_HURT, SoundCategory.PLAYERS, 1f, 1f);
 
-        if (mc.player.fallDistance > 0) {
+        // Проверка на крит: игрок падает и не на земле
+        boolean isCrit = mc.player.fallDistance > 0.0f && !mc.player.isOnGround() 
+                && !mc.player.isClimbing() && !mc.player.isTouchingWater() 
+                && !mc.player.hasStatusEffect(StatusEffects.BLINDNESS) 
+                && !mc.player.hasVehicle();
+
+        if (isCrit) {
+            // Звук крита
             mc.world.playSound(mc.player, fakePlayer.getX(), fakePlayer.getY(), fakePlayer.getZ(),
                     SoundEvents.ENTITY_PLAYER_ATTACK_CRIT, SoundCategory.PLAYERS, 1f, 1f);
+            
+            // Частицы крита
+            mc.particleManager.addEmitter(fakePlayer, net.minecraft.particle.ParticleTypes.CRIT);
         }
 
         fakePlayer.onDamaged(mc.world.getDamageSources().generic());
 
         float cooldown = mc.player.getAttackCooldownProgress(0f);
         float damage = cooldown >= 0.85f ? calculateHitDamage(mc.player.getMainHandStack(), fakePlayer) : 1f;
+        
+        // Крит увеличивает урон в 1.5 раза
+        if (isCrit) {
+            damage *= 1.5f;
+        }
+        
         fakePlayer.setHealth(fakePlayer.getHealth() + fakePlayer.getAbsorptionAmount() - damage);
 
         if (fakePlayer.isDead()) {

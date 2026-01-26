@@ -58,6 +58,7 @@ public class ModuleManager implements Wrapper {
                 new AutoBuy(),
                 new AuctionHelper(),
                 new OffHand(),
+                new AutoTotem(),
                 new AutoGapple(),
                 new AntiBot(),
                 new DamageParticles(),
@@ -125,13 +126,16 @@ public class ModuleManager implements Wrapper {
                 new Recorder(),
                 new LegitAura(),
                 new Xray(),
+                new ItemESP(),
                 new AutoRespawn(), 
                 new Models(), // тун сахур BY KISSEDWARRIOR (он фрик)
                 new RWHelper(), // паста
                 new VanillaDisabler(), // влагалище дизейблер
                 new Bots(), // mineflayer боты
                 new Ezz(), // гоу без осуждений, модуль говнише?? BY KISSEDWARRIOR (он фрик)
-                new Notifications() // настройки уведомлений
+                new Notifications(), // настройки уведомлений
+                new NoOpen(), // блокировка пакетов открытия экранов
+                new DeathCoords() // координаты смерти
                 //0. new Fly(), тест флая от @ymepwu
                 //1. new ResourcePackPositionManager(), (нуууу короче хотел сделать так, чтобы можно было убирать удобно рп мазерхрюка)
                 //2. new AutoVote(), (BWHelper заменил этот понос)

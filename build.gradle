@@ -49,7 +49,8 @@ loom {
                 "-Dmixin.debug.export=true",
                 "-Dmixin.env.disableRefMap=true",
                 "-Dmixin.checks.interfaces=false",
-                "-Dmixin.checks.interfaces.strict=false"
+                "-Dmixin.checks.interfaces.strict=false",
+                "-XX:CompileCommand=exclude,fun/motherhack/utils/render/Render2D.drawBorder"
             )
             property("fabric.log.disableAnsi", "false")
             property("mixin.env.remapRefMap", "false")

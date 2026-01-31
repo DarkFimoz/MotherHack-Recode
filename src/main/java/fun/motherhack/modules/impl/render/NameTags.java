@@ -42,19 +42,7 @@ public class NameTags extends Module {
         }
     }
 
-    @Getter
-    public enum RenderMode implements Nameable {
-        Default("settings.nametags.mode.default"),
-        ThunderHack("settings.nametags.mode.thunderhack");
-
-        private final String name;
-
-        RenderMode(String name) {
-            this.name = name;
-        }
-    }
-
-    private final EnumSetting<RenderMode> mode = new EnumSetting<>("settings.nametags.mode", RenderMode.Default);
+    private final BooleanSetting healthBar = new BooleanSetting("settings.nametags.healthbar", true);
     private final EnumSetting<ColorMode> colorMode = new EnumSetting<>("Color Mode", ColorMode.Default);
     private final NumberSetting rectRounding = new NumberSetting("settings.nametags.rectrounding", 1.5f, 0f, 5f, 0.5f);
     private final BooleanSetting items = new BooleanSetting("settings.nametags.items", true);
@@ -72,12 +60,7 @@ public class NameTags extends Module {
     @EventHandler
     public void onRender2D(EventRender2D e) {
         if (fullNullCheck()) return;
-
-        if (mode.getValue() == RenderMode.Default) {
-            renderDefault(e);
-        } else {
-            renderThunderHack(e);
-        }
+        renderDefault(e);
     }
 
     private void renderDefault(EventRender2D e) {
@@ -163,141 +146,106 @@ public class NameTags extends Module {
                     centerY + 2f,
                     getHealthColor(player)
             );
-        }
-    }
 
-    private void renderThunderHack(EventRender2D e) {
-        for (Entity entity : mc.world.getEntities()) {
-            if (entity == null) continue;
-            if (!(entity instanceof PlayerEntity player)) continue;
-            if (entity == mc.player && mc.options.getPerspective() == Perspective.FIRST_PERSON) continue;
-            if (Server.isBot(player)) continue;
-            if (mc.player.distanceTo(player) > range.getValue()) continue;
+            // HP Bar to the right of the box
+            if (healthBar.getValue() && box.getValue()) {
+                float maxHealth = player.getMaxHealth();
+                float currentHealth = Server.getHealth(player, true);
+                float healthPercent = Math.min(1.0f, currentHealth / maxHealth);
+                
+                float barWidth = 3f;
+                float barHeight = 0f;
+                float barX = 0f;
+                float barY = 0f;
+                
+                // Calculate box dimensions
+                double minX = player.getBoundingBox().minX;
+                double minY = player.getBoundingBox().minY;
+                double minZ = player.getBoundingBox().minZ;
+                double maxX = player.getBoundingBox().maxX;
+                double maxY = player.getBoundingBox().maxY;
+                double maxZ = player.getBoundingBox().maxZ;
 
-            double x = MathHelper.lerp(e.getTickCounter().getTickDelta(true), player.prevX, player.getX());
-            double y = MathHelper.lerp(e.getTickCounter().getTickDelta(true), player.prevY, player.getY()) + player.getHeight() + 0.3f;
-            double z = MathHelper.lerp(e.getTickCounter().getTickDelta(true), player.prevZ, player.getZ());
-            Vec3d position = WorldUtils.getPosition(new Vec3d(x, y, z));
+                double interpX = MathHelper.lerp(e.getTickCounter().getTickDelta(true), player.prevX, player.getX());
+                double interpY = MathHelper.lerp(e.getTickCounter().getTickDelta(true), player.prevY, player.getY());
+                double interpZ = MathHelper.lerp(e.getTickCounter().getTickDelta(true), player.prevZ, player.getZ());
 
-            if (!(position.z > 0) || !(position.z < 1)) continue;
+                double offsetX = interpX - player.getX();
+                double offsetY = interpY - player.getY();
+                double offsetZ = interpZ - player.getZ();
 
-            float centerX = (float) position.getX();
-            float centerY = (float) position.getY();
+                minX += offsetX;
+                maxX += offsetX;
+                minY += offsetY;
+                maxY += offsetY;
+                minZ += offsetZ;
+                maxZ += offsetZ;
 
-            String name = format(player.getDisplayName().getString());
-            String ping = Server.getPing(player) + "ms";
-            String health = MathUtils.round(Server.getHealth(player, true)) + "";
-            String distance = String.format("%.1f", mc.player.distanceTo(player)) + "m";
+                Vec3d[] corners = {
+                        WorldUtils.getPosition(new Vec3d(minX, minY, minZ)),
+                        WorldUtils.getPosition(new Vec3d(maxX, minY, minZ)),
+                        WorldUtils.getPosition(new Vec3d(maxX, maxY, minZ)),
+                        WorldUtils.getPosition(new Vec3d(minX, maxY, minZ)),
+                        WorldUtils.getPosition(new Vec3d(minX, minY, maxZ)),
+                        WorldUtils.getPosition(new Vec3d(maxX, minY, maxZ)),
+                        WorldUtils.getPosition(new Vec3d(maxX, maxY, maxZ)),
+                        WorldUtils.getPosition(new Vec3d(minX, maxY, maxZ))
+                };
 
-            String finalString = ping + " " + name + " " + health + " " + distance;
+                float minScreenX = Float.MAX_VALUE;
+                float maxScreenX = Float.MIN_VALUE;
+                float minScreenY = Float.MAX_VALUE;
+                float maxScreenY = Float.MIN_VALUE;
 
-            float textWidth = Fonts.REGULAR.getWidth(finalString, 9f);
-            float rectWidth = textWidth + 8f;
-            float height = 14f;
-            float tagX = centerX - rectWidth / 2f;
-
-            boolean isFriend = MotherHack.getInstance().getFriendManager().isFriend(entity.getName().getString());
-            
-            // Цвет для всех в зависимости от ColorMode
-            Color accentColor = getAccentColor();
-            Color bgColor = isFriend 
-                ? new Color(accentColor.getRed(), accentColor.getGreen(), accentColor.getBlue(), 120)
-                : new Color(0, 0, 0, 150);
-            Color borderColor = accentColor;
-
-            if (blur.getValue()) {
-                Render2D.drawStyledRect(e.getContext().getMatrices(),
-                        tagX,
-                        centerY - 15f,
-                        rectWidth,
-                        height,
-                        rectRounding.getValue(),
-                        bgColor,
-                        255
-                );
-            } else {
-                Render2D.drawRoundedRect(e.getContext().getMatrices(),
-                        tagX,
-                        centerY - 15f,
-                        rectWidth,
-                        height,
-                        rectRounding.getValue(),
-                        bgColor
-                );
-            }
-
-            if (border.getValue()) {
-                Render2D.drawBorder(e.getContext().getMatrices(),
-                        tagX,
-                        centerY - 15f,
-                        rectWidth,
-                        height,
-                        borderRounding.getValue(),
-                        0.8f,
-                        0.8f,
-                        borderColor
-                );
-            }
-
-            Render2D.drawFont(e.getContext().getMatrices(),
-                    Fonts.REGULAR.getFont(9f),
-                    finalString,
-                    tagX + 4f,
-                    centerY - 11f,
-                    Color.WHITE
-            );
-
-            if (items.getValue()) {
-                renderItemsThunderHack(e.getContext(), player, centerX, centerY - 33f);
-            }
-
-            if (box.getValue()) {
-                renderBox(e, player);
-            }
-        }
-    }
-
-    private void renderItemsThunderHack(DrawContext context, PlayerEntity player, float x, float y) {
-        ItemStack[] items = {
-                player.getOffHandStack(),
-                player.getInventory().getArmorStack(0),
-                player.getInventory().getArmorStack(1),
-                player.getInventory().getArmorStack(2),
-                player.getInventory().getArmorStack(3),
-                player.getMainHandStack()
-        };
-
-        int count = 0;
-        for (ItemStack item : items) if (!item.isEmpty()) count++;
-        if (count == 0) return;
-
-        float armorWidth = count * 18f;
-        float startX = x - armorWidth / 2f;
-
-        int index = 0;
-        for (ItemStack item : items) {
-            if (!item.isEmpty()) {
-                context.drawItem(item, (int) (startX + index * 18f), (int) y);
-
-                if (item.isDamageable()) {
-                    float percent = (float) (item.getMaxDamage() - item.getDamage()) / item.getMaxDamage();
-                    int percentInt = (int) (percent * 100);
-
-                    Color color;
-                    if (percentInt < 33) color = Color.RED;
-                    else if (percentInt < 66) color = Color.YELLOW;
-                    else color = Color.GREEN;
-
-                    Render2D.drawFont(context.getMatrices(),
-                            Fonts.REGULAR.getFont(7f),
-                            percentInt + "%",
-                            startX + index * 18f + 1f,
-                            y + 10f,
-                            color
-                    );
+                for (Vec3d corner : corners) {
+                    if (corner.z > 0 && corner.z < 1) {
+                        minScreenX = Math.min(minScreenX, (float) corner.x);
+                        maxScreenX = Math.max(maxScreenX, (float) corner.x);
+                        minScreenY = Math.min(minScreenY, (float) corner.y);
+                        maxScreenY = Math.max(maxScreenY, (float) corner.y);
+                    }
                 }
 
-                index++;
+                if (minScreenX != Float.MAX_VALUE) {
+                    barHeight = maxScreenY - minScreenY;
+                    barX = maxScreenX + 4f;
+                    barY = minScreenY;
+                    
+                    // Background bar (black)
+                    Render2D.drawRoundedRect(e.getContext().getMatrices(),
+                            barX,
+                            barY,
+                            barWidth,
+                            barHeight,
+                            0.5f,
+                            new Color(0, 0, 0, 150)
+                    );
+                    
+                    // Health bar (fills from bottom to top based on health)
+                    float filledHeight = barHeight * healthPercent;
+                    if (filledHeight > 0) {
+                        Render2D.drawRoundedRect(e.getContext().getMatrices(),
+                                barX,
+                                barY + (barHeight - filledHeight),
+                                barWidth,
+                                filledHeight,
+                                0.5f,
+                                getAccentColor()
+                        );
+                    }
+                    
+                    // Border around the bar
+                    Render2D.drawBorder(e.getContext().getMatrices(),
+                            barX,
+                            barY,
+                            barWidth,
+                            barHeight,
+                            0.5f,
+                            0.5f,
+                            0.5f,
+                            new Color(200, 200, 200, 200)
+                    );
+                }
             }
         }
     }

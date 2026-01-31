@@ -58,7 +58,8 @@
   "settings.itemesp.circlecolor": "Circle Color",
   "settings.itemesp.circlepoints": "Circle Points",
   "descriptions.render.arrows": "Shows arrows on screen pointing to players around you.",
-  "descriptions.render.angelwingsesp": "Renders beautiful animated angel wings on players.",
+  "descriptions.render.wings": "Renders beautiful animated angel wings on players.",
+  "settings.wings.onlyself": "Only Self",
 
   "descriptions.client.ui": "Displays your UI.",
   "descriptions.client.rpc": "Displays client activity in discord.",
@@ -241,9 +242,6 @@
   "settings.noslow.ticks": "Ticks",
   "settings.noslow.mode.grimv3": "GrimV3",
 
-  "settings.nametags.mode": "Mode",
-  "settings.nametags.mode.default": "Default",
-  "settings.nametags.mode.thunderhack": "ThunderHack",
   "settings.nametags.colormode.uicolor": "UI Color",
   "settings.nametags.colormode.default": "Default",
   "settings.nametags.colormode.cyber": "Cyber",
@@ -254,6 +252,8 @@
   "settings.nametags.rectrounding": "Rect Rounding",
   "settings.nametags.borderrounding": "Border Rounding",
   "settings.nametags.boxrounding": "Box Rounding",
+  "settings.nametags.range": "Display Range",
+  "settings.nametags.healthbar": "Health Bar",
 
   "settings.norender.hurtcam": "Hurtcam",
   "settings.norender.fire": "Fire",
@@ -366,6 +366,7 @@
   "descriptions.movement.backsprint": "Automatically sprints backward with body rotation.",
   "descriptions.movement.elytraflight": "Greatly boosts speed on elytra.",
   "descriptions.movement.flight": "Allows flying with customizable speed.",
+  "descriptions.movement.packetfly": "Advanced packet-based flight with multiple modes and anti-kick features.",
   "descriptions.movement.freelook": "Allows camera rotation without changing movement direction.",
   "descriptions.render.freelook": "Allows camera rotation without changing movement direction.",
   "descriptions.movement.freeze": "Freezes in mid-air.",
@@ -704,10 +705,38 @@
   "settings.deathcoords.mode": "Mode",
   "settings.deathcoords.mode.chat": "Chat",
   "settings.deathcoords.mode.waypoint": "Waypoint",
-  "settings.deathcoords.mode.both": "Both"
-}
+  "settings.deathcoords.mode.both": "Both",
+
   "settings.noopen.mode.nopkm": "NoPKM (No Right Click)",
   "settings.noopen.mode.noopen": "NoOpen (Block Packets)",
   "settings.noopen.mode.closer": "Closer (Auto Close)",
-  "settings.noopen.delay": "Delay (ms)"
+  "settings.noopen.delay": "Delay (ms)",
+
+  "descriptions.render.antivomit": "Draws white stabilization dots on screen that move opposite to camera movement, helping prevent motion sickness when playing in vehicles.",
+  "settings.antivomit.dotcount": "Dot Count",
+  "settings.antivomit.dotsize": "Dot Size",
+  "settings.antivomit.smoothness": "Smoothness",
+  "settings.antivomit.distance": "Distance",
+  "settings.antivomit.rainbow": "Rainbow",
+  "settings.antivomit.useuicolor": "Use UI Color",
+  "settings.antivomit.opacity": "Opacity",
+
+  "descriptions.render.hud": "Allows you to enable/disable HUD elements like Watermark and TargetHUD.",
+  "settings.hud.watermark": "Watermark",
+  "settings.hud.targethud": "TargetHUD",
+  "settings.hud.dynamicisland": "DynamicIsland",
+  "settings.hud.keybinds": "KeyBinds",
+  "settings.hud.potions": "Potions",
+  "settings.hud.stafflist": "StaffList",
+  "settings.hud.desktop": "Desktop",
+  "settings.targethud.killsounds": "Kill Sounds",
+
+  "descriptions.combat.criticals": "Allows critical hits from the ground with bypasses for various anticheats.",
+  "descriptions.combat.reach": "Allows hitting players and mobs from a greater distance with configurable bypasses.",
+  
+  "settings.reach.entityrange": "Entity Range",
+  "settings.reach.blockrange": "Block Range",
+  "settings.reach.creative": "Creative",
+  "settings.reach.creativeentity": "Creative Entity",
+  "settings.reach.creativeblock": "Creative Block"
 }

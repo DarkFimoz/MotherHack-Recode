@@ -99,6 +99,7 @@ public class ModuleManager implements Wrapper {
                 new Freeze(),
                 new ItemScroller(),
                 new Flight(),
+                new PacketFly(),
                 new Speed(),
                 new Spider(),
                 new Fun(),
@@ -110,7 +111,7 @@ public class ModuleManager implements Wrapper {
                 new PenisESP(),
                 new Snow(),
                 new NoServerRotate(),
-                new AngelWingsESP(),
+                new Wings(),
                 new HotBar(),
                 new ItemPhysics(),
                 new DamageTint(),
@@ -135,7 +136,11 @@ public class ModuleManager implements Wrapper {
                 new Ezz(), // гоу без осуждений, модуль говнише?? BY KISSEDWARRIOR (он фрик)
                 new Notifications(), // настройки уведомлений
                 new NoOpen(), // блокировка пакетов открытия экранов
-                new DeathCoords() // координаты смерти
+                new DeathCoords(), // координаты смерти
+                new AntiVomit(), // стабилизация точек для предотвращения укачивания
+                new HUD(), // управление HUD элементами
+                new Criticals(), // критические удары с места
+                new Reach() // увеличенная дистанция атаки
                 //0. new Fly(), тест флая от @ymepwu
                 //1. new ResourcePackPositionManager(), (нуууу короче хотел сделать так, чтобы можно было убирать удобно рп мазерхрюка)
                 //2. new AutoVote(), (BWHelper заменил этот понос)

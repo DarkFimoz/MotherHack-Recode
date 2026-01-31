@@ -5,6 +5,7 @@ import fun.motherhack.api.events.impl.EventRender2D;
 import fun.motherhack.hud.HudElement;
 import fun.motherhack.modules.impl.combat.Aura;
 import fun.motherhack.modules.impl.client.UI;
+import fun.motherhack.modules.settings.impl.BooleanSetting;
 import fun.motherhack.modules.settings.impl.NumberSetting;
 import fun.motherhack.utils.animations.Easing;
 import fun.motherhack.utils.animations.infinity.InfinityAnimation;
@@ -26,11 +27,13 @@ public class TargetHud extends HudElement {
 	
     private final NumberSetting backgroundAlpha = new NumberSetting("Background Alpha", 80f, 10f, 100f, 5f);
     private final NumberSetting textAlpha = new NumberSetting("Text Alpha", 80f, 10f, 100f, 5f);
+    private final BooleanSetting killSounds = new BooleanSetting("Kill Sounds", true);
 
     public TargetHud() {
         super("TargetHud");
         getSettings().add(backgroundAlpha);
         getSettings().add(textAlpha);
+        getSettings().add(killSounds);
         // Set default position to bottom center
         getPosition().getValue().setX(0.42f);
         getPosition().getValue().setY(0.75f);
@@ -44,7 +47,7 @@ public class TargetHud extends HudElement {
     private long killAnimationStart = 0;
     private boolean wasTargetAlive = true;
     private LivingEntity lastTarget = null;
-    private int killCount = 0;
+    private boolean killSoundPlayed = false;
     private static final long ANIMATION_DURATION = 900; // 9 frames * 100ms
 
     @Override
@@ -56,42 +59,48 @@ public class TargetHud extends HudElement {
         Aura aura = MotherHack.getInstance().getModuleManager().getModule(Aura.class);
         LivingEntity target = mc.currentScreen instanceof ChatScreen ? mc.player : aura.getTarget();
         
-        // Check for kill - улучшенная система отслеживания
+        // Check for kill - исправленная система отслеживания
         if (target != null) {
             // Если это новая цель
             if (lastTarget != target) {
                 // Проверяем, была ли предыдущая цель убита
-                if (lastTarget != null && wasTargetAlive && lastTarget.getHealth() <= 0) {
-                    // Запускаем анимацию только если предыдущая завершилась или почти завершилась
+                if (lastTarget != null && wasTargetAlive && !killSoundPlayed && lastTarget.getHealth() <= 0) {
                     long currentTime = System.currentTimeMillis();
-                    if (killAnimationStart == 0 || (currentTime - killAnimationStart) > ANIMATION_DURATION - 200) {
+                    if (killAnimationStart == 0 || (currentTime - killAnimationStart) > ANIMATION_DURATION) {
                         killAnimationStart = currentTime;
-                        killCount++;
-                        fun.motherhack.utils.sound.KillSoundHelper.playRandomKillSound();
+                        killSoundPlayed = true;
+                        if (killSounds.getValue()) {
+                            fun.motherhack.utils.sound.KillSoundHelper.playRandomKillSound();
+                        }
                     }
                 }
                 lastTarget = target;
                 wasTargetAlive = target.getHealth() > 0;
+                killSoundPlayed = false; // Сбрасываем флаг для новой цели
             } else {
-                // Та же цель - проверяем смерть
-                if (wasTargetAlive && target.getHealth() <= 0) {
+                // Та же цель - проверяем смерть только один раз
+                if (wasTargetAlive && !killSoundPlayed && target.getHealth() <= 0) {
                     long currentTime = System.currentTimeMillis();
-                    if (killAnimationStart == 0 || (currentTime - killAnimationStart) > ANIMATION_DURATION - 200) {
+                    if (killAnimationStart == 0 || (currentTime - killAnimationStart) > ANIMATION_DURATION) {
                         killAnimationStart = currentTime;
-                        killCount++;
-                        fun.motherhack.utils.sound.KillSoundHelper.playRandomKillSound();
+                        killSoundPlayed = true;
+                        if (killSounds.getValue()) {
+                            fun.motherhack.utils.sound.KillSoundHelper.playRandomKillSound();
+                        }
                     }
                     wasTargetAlive = false;
                 }
             }
         } else {
-            // Нет цели - проверяем, была ли предыдущая цель убита
-            if (lastTarget != null && wasTargetAlive && lastTarget.getHealth() <= 0) {
+            // Нет цели - проверяем, была ли предыдущая цель убита (только один раз)
+            if (lastTarget != null && wasTargetAlive && !killSoundPlayed && lastTarget.getHealth() <= 0) {
                 long currentTime = System.currentTimeMillis();
-                if (killAnimationStart == 0 || (currentTime - killAnimationStart) > ANIMATION_DURATION - 200) {
+                if (killAnimationStart == 0 || (currentTime - killAnimationStart) > ANIMATION_DURATION) {
                     killAnimationStart = currentTime;
-                    killCount++;
-                    fun.motherhack.utils.sound.KillSoundHelper.playRandomKillSound();
+                    killSoundPlayed = true;
+                    if (killSounds.getValue()) {
+                        fun.motherhack.utils.sound.KillSoundHelper.playRandomKillSound();
+                    }
                 }
             }
         }

@@ -40,6 +40,9 @@ public class Aura extends Module {
     private final NumberSetting attackRange = new NumberSetting("Attack Range", 3.0f, 1.0f, 6.0f, 0.1f);
     private final NumberSetting rotationRange = new NumberSetting("Rotation Range", 4.5f, 1.0f, 8.0f, 0.1f);
     
+    // Reach integration
+    private final BooleanSetting useReachModule = new BooleanSetting("Use Reach Module", false);
+    
     // 1.8 Mode settings (NoDelay style - very high CPS)
     private final NumberSetting attacksPerTick = new NumberSetting("Attacks/Tick", 50f, 1f, 500f, 1f, 
             () -> pvpMode.getValue() == PvPMode.Mode_1_8);
@@ -285,7 +288,17 @@ public class Aura extends Module {
         if (target == null) return false;
         
         double distance = mc.player.getEyePos().distanceTo(getTargetPosition());
-        if (distance > attackRange.getValue()) return false;
+        
+        // Use Reach module if enabled
+        float effectiveRange = attackRange.getValue();
+        if (useReachModule.getValue()) {
+            Reach reach = MotherHack.getInstance().getModuleManager().getModule(Reach.class);
+            if (reach != null && reach.isToggled()) {
+                effectiveRange = reach.getReachDistance();
+            }
+        }
+        
+        if (distance > effectiveRange) return false;
         
         // Check raycast if enabled
         if (raycast.getValue() && !throughWalls.getValue()) {

@@ -21,10 +21,6 @@ import java.util.stream.Collectors;
 
 import static fun.motherhack.utils.Wrapper.mc;
 
-/**
- * PanelGui - красивая панель в стиле из папки "красивое"
- * @author chuppachups1337 style adaptation
- */
 public class PanelGui extends Screen {
 
     private float x, y;

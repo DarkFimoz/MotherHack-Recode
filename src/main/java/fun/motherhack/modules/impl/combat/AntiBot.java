@@ -26,9 +26,11 @@ public class AntiBot extends Module {
     public void onTick(EventTick e) {
         if (fullNullCheck()) return;
 
-        if (timer.passed(10000) && !bots.isEmpty()) {
-        	bots.clear();
+        // Очищаем список ботов каждые 10 секунд
+        if (timer.passed(10000)) {
             timer.reset();
+            // Удаляем только тех ботов, которые больше не в мире или прошли проверку
+            bots.removeIf(bot -> bot.isRemoved() || !armorCheck(bot));
         }
 
         //bots.forEach(bot -> {
@@ -40,12 +42,22 @@ public class AntiBot extends Module {
         		//ChatUtils.sendMessage("Bot: " + result.getEntity().getName().getString());
         //}
         
+        // Проверяем игроков и добавляем ботов
         for (PlayerEntity player : mc.world.getPlayers()) {
             if (player == null) continue;
             if (player == mc.player) continue;
-            //rw bypasses
-            if (armorCheck(player) && !bots.contains(player)) bots.add(player);
+            
+            // Если игрок уже в списке ботов, пропускаем
+            if (bots.contains(player)) continue;
+            
+            // Проверяем, является ли игрок ботом
+            if (armorCheck(player)) {
+                bots.add(player);
+            }
         }
+        
+        // Дополнительная проверка: удаляем из списка ботов тех, кто больше не проходит проверку
+        bots.removeIf(bot -> !bot.isRemoved() && !armorCheck(bot));
     }
 
     private boolean armorCheck(PlayerEntity entity) {

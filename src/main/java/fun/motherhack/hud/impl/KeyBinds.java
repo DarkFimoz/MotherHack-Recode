@@ -141,7 +141,7 @@ public class KeyBinds extends HudElement {
 
         if (toggledModules.isEmpty() && isInChatScreen) {
             // Превью
-            String moduleName = "AttackAura";
+            String moduleName = "Aura";
             String bind = "R";
             float lineWidth = bodyFont.getWidth(moduleName, currentFontSize) + bodyFont.getWidth(bind, currentFontSize) + padding * 10;
             maxWidth = Math.max(maxWidth, lineWidth);
@@ -174,7 +174,7 @@ public class KeyBinds extends HudElement {
 
         if (toggledModules.isEmpty() && isInChatScreen) {
             // Превью модуля
-            String moduleName = "AttackAura";
+            String moduleName = "Aura";
             String bind = "R";
 
             Render2D.drawBlurredRect(e.getContext().getMatrices(), x, currentY - padding, width, rowHeight, 5f, 10f, new Color(255, 255, 255, (int)(bgAlpha * 0.3f)));

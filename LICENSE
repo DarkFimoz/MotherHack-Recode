@@ -103,6 +103,38 @@ Corresponding Source under the terms of this License.
 "Additional permissions" are terms that supplement the terms of this
 License by making exceptions from one or more of its conditions.
 
+ADDITIONAL TERMS FOR MOTHERHACK PROJECT:
+
+In accordance with section 7 of the GNU GPL v3, the following additional
+terms apply to this work:
+
+a) ATTRIBUTION REQUIREMENT: Any modified version of this work must
+   prominently display attribution to the original author (Dmitriy Fimozov)
+   in all of the following locations:
+   - The project's README file
+   - The project's main documentation
+   - Any user-facing interface or about screen
+   - The modified project's repository description
+
+b) FORK REQUIREMENT: Any modified version of this work must be clearly
+   identified as a fork of the original MotherHack project. The modified
+   project must include a clear statement that it is derived from
+   MotherHack and must provide a link to the original repository.
+
+c) OPEN SOURCE REQUIREMENT: Any modified version of this work must be
+   released under the GNU GPL v3 license (or later) and must be made
+   publicly available as open source software. The complete source code
+   must be accessible to all users.
+
+d) NOTICE PRESERVATION: You must retain all copyright notices, license
+   notices, and attribution statements from the original work in any
+   modified version.
+
+These additional terms are designed to ensure proper attribution and
+maintain the open source nature of derivative works. Failure to comply
+with these terms will result in termination of your license rights under
+section 8 of the GNU GPL v3.
+
 8. Termination.
 
 You may not propagate or modify a covered work except as expressly

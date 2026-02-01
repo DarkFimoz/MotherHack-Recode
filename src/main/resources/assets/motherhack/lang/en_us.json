@@ -1,5 +1,6 @@
 {
   "descriptions.combat.aura": "Automatically attacks all targets in range.",
+  "descriptions.combat.autobuff": "Automatically throws strength, speed, fire resistance, healing and regeneration potions.",
   "descriptions.combat.noattackcooldown": "Removes cooldown attacks for 1.8 pvp.",
   "descriptions.combat.nofrienddamage": "Removes damage for friends.",
   "descriptions.combat.noentitytrace": "Removes hitbox of players.",
@@ -23,6 +24,13 @@
   "descriptions.movement.fucker": "Automatically destroys beds, crystals, and dragon eggs.",
 
   "descriptions.misc.multitask": "Allows you to do two actions at once.",
+  "descriptions.misc.antiafk": "Prevents kick for inactivity with various modes.",
+  "descriptions.misc.autoduel": "Automatically accepts or sends duel requests.",
+  "descriptions.misc.autofish": "Automatically catches fish with various detection modes.",
+  "descriptions.misc.autosign": "Automatically fills signs with formatting.",
+  "descriptions.misc.fakeping": "Shows fake ping on the server.",
+  "descriptions.misc.totempop": "Tracks and displays information about totem pops.",
+  "descriptions.misc.antiattack": "Prevents attacking specific entities like friends or villagers.",
   "descriptions.misc.nopush": "Toggled of push from blocks/entity/water.",
   "descriptions.misc.fastuse": "Toggled of delay of use something items.",
   "descriptions.misc.autovault": "Uses keys automatically for vaults for cool loot.",
@@ -47,6 +55,9 @@
   "descriptions.render.watermark": "Draws watermark of client.",
   "descriptions.render.aspectratio": "Changes the aspect ratio of the game window.",
   "descriptions.render.itemesp": "Displays ESP for items on the ground.",
+  "descriptions.render.fov": "Changes the field of view with customizable settings.",
+  "descriptions.render.breaklight": "Highlights blocks being broken with customizable effects.",
+  "descriptions.render.worldtweaks": "Modifies world settings like fog and time.",
 
   "settings.itemesp.shadow": "Shadow",
   "settings.itemesp.shadowcolor": "Shadow Color",
@@ -398,6 +409,10 @@
   "descriptions.misc.autologin": "Automatically enters password when /login, /l, /reg or /register commands appear in chat.",
   "descriptions.misc.autorespawn": "Automatically respawns after death.",
   "descriptions.misc.ezz": "Automatically sends toxic messages in chat when killing a player.",
+  "descriptions.misc.autocasino": "Automatically rotates to and interacts with nearby levers.",
+
+  "settings.autocasino.range": "Range",
+  "settings.autocasino.delay": "Delay",
 
   "settings.autologin.password": "Password",
   "descriptions.render.bedtags": "Shows distance to the bed.",
@@ -738,5 +753,39 @@
   "settings.reach.blockrange": "Block Range",
   "settings.reach.creative": "Creative",
   "settings.reach.creativeentity": "Creative Entity",
-  "settings.reach.creativeblock": "Creative Block"
+  "settings.reach.creativeblock": "Creative Block",
+
+  "descriptions.movement.blink": "Freezes your position on the server while you can move freely, then teleports you to the new position.",
+  "settings.blink.pulse": "Pulse",
+  "settings.blink.autodisable": "Auto Disable",
+  "settings.blink.disableonvelocity": "Disable On Velocity",
+  "settings.blink.disablepackets": "Disable Packets",
+  "settings.blink.pulsepackets": "Pulse Packets",
+  "settings.blink.render": "Render",
+  "settings.blink.rendermode": "Render Mode",
+  "settings.blink.rendermode.circle": "Circle",
+  "settings.blink.rendermode.model": "Model",
+  "settings.blink.rendermode.both": "Both",
+  "settings.blink.circlecolor": "Circle Color",
+  "settings.blink.cancelkey": "Cancel Key",
+
+  "descriptions.movement.glide": "Allows smooth gliding in the air with various anticheat bypass modes.",
+  "settings.glide.mode": "Mode",
+  "settings.glide.smart": "Smart Mode",
+  "settings.glide.speed": "Speed",
+  "settings.glide.height": "Height",
+  "settings.glide.interval": "Interval",
+
+  "descriptions.misc.autocasino": "Automatically interacts with casino levers.",
+  "settings.autocasino.range": "Range",
+  "settings.autocasino.delay": "Delay",
+
+  "descriptions.misc.fakefine": "Makes the server think you're playing with Optifine 1.16.5.",
+  
+  "descriptions.render.fov": "Changes the field of view with customizable settings.",
+  "descriptions.misc.antiattack": "Prevents attacking specific entities like friends or villagers.",
+  "descriptions.render.breaklight": "Highlights blocks being broken with customizable effects.",
+  "descriptions.render.worldtweaks": "Modifies world settings like fog and time.",
+  "descriptions.movement.strafe": "Enhanced strafe movement to bypass anticheats.",
+  "descriptions.movement.waterspeed": "Increases movement speed in water."
 }

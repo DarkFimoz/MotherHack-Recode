@@ -1,5 +1,6 @@
 {
   "descriptions.combat.aura": "Автоматически бьет всех таргетов в рендже.",
+  "descriptions.combat.autobuff": "Автоматически кидает зелья силы, скорости, огнестойкости, лечения и регенерации.",
   "descriptions.combat.noattackcooldown": "Убирает кулдаун аттаки для 1.8 пвп.",
   "descriptions.combat.nofrienddamage": "Убирает дамаг по друзьям.",
   "descriptions.combat.noentitytrace": "Убирает хитбоксы игроков.",
@@ -24,6 +25,8 @@
   "descriptions.movement.scaffold": "Ставит блоки под ноги.",
   "descriptions.movement.autowalk": "Автоматически идёт вперёд с настраиваемыми режимами.",
   "descriptions.movement.fucker": "Автоматически ломает кровати, кристаллы и яйца дракона.",
+  "descriptions.movement.strafe": "Улучшенное стрейф-движение для обхода античитов.",
+  "descriptions.movement.waterspeed": "Увеличивает скорость движения в воде.",
   "descriptions.movement.backsprint": "Автоматический спринт назад с поворотом тела.",
   "descriptions.movement.elytraflight": "Очень сильно бустит скорость на элитре.",
   "descriptions.movement.flight": "Позволяет летать с настраиваемой скоростью.",
@@ -42,6 +45,12 @@
   "descriptions.movement.akb": "Уменьшает или полностью убирает отбрасывание при получении урона с улучшенными обходами античитов.",
 
   "descriptions.misc.multitask": "Позволяет делать два действия одновременно.",
+  "descriptions.misc.antiafk": "Предотвращает кик за неактивность с различными режимами.",
+  "descriptions.misc.autoduel": "Автоматически принимает или отправляет запросы на дуэль.",
+  "descriptions.misc.autofish": "Автоматически ловит рыбу с различными режимами обнаружения.",
+  "descriptions.misc.autosign": "Автоматически заполняет таблички с форматированием.",
+  "descriptions.misc.fakeping": "Показывает поддельный пинг на сервере.",
+  "descriptions.misc.totempop": "Отслеживает и выводит информацию о попаданиях тотемов.",
   "descriptions.misc.math": "Отображает математические вычисления на экране.",
   "descriptions.misc.noserverrotate": "Предотвращает серверные пакеты поворота.",
   "descriptions.misc.anticheatdetector": "Обнаруживает и уведомляет о системах античита сервера.",
@@ -74,6 +83,10 @@
   "descriptions.misc.autologin": "Автоматически вводит пароль при появлении команд /login, /l, /reg или /register в чате.",
   "descriptions.misc.autorespawn": "Автовозраждение после смерти.",
   "descriptions.misc.ezz": "Автоматически пишет токсичные сообщения в чат при убийстве игрока.",
+  "descriptions.misc.autocasino": "Автоматически поворачивается к рычагам и взаимодействует с ними.",
+
+  "settings.autocasino.range": "Дистанция",
+  "settings.autocasino.delay": "Задержка",
 
   "settings.autologin.password": "Пароль",
 
@@ -746,5 +759,39 @@
   "settings.reach.blockrange": "Дистанция блоков",
   "settings.reach.creative": "Креатив",
   "settings.reach.creativeentity": "Креатив сущности",
-  "settings.reach.creativeblock": "Креатив блоки"
-  }
+  "settings.reach.creativeblock": "Креатив блоки",
+
+  "descriptions.movement.blink": "Замораживает вашу позицию на сервере, пока вы можете свободно двигаться, затем телепортирует вас в новую позицию.",
+  "settings.blink.pulse": "Пульс",
+  "settings.blink.autodisable": "Авто выключение",
+  "settings.blink.disableonvelocity": "Выкл при велосити",
+  "settings.blink.disablepackets": "Пакетов для выкл",
+  "settings.blink.pulsepackets": "Пакетов для пульса",
+  "settings.blink.render": "Рендер",
+  "settings.blink.rendermode": "Режим рендера",
+  "settings.blink.rendermode.circle": "Круг",
+  "settings.blink.rendermode.model": "Модель",
+  "settings.blink.rendermode.both": "Оба",
+  "settings.blink.circlecolor": "Цвет круга",
+  "settings.blink.cancelkey": "Клавиша отмены",
+
+  "descriptions.movement.glide": "Позволяет плавно парить в воздухе с различными режимами обхода античитов.",
+  "settings.glide.mode": "Режим",
+  "settings.glide.smart": "Умный режим",
+  "settings.glide.speed": "Скорость",
+  "settings.glide.height": "Высота",
+  "settings.glide.interval": "Интервал",
+
+  "descriptions.misc.autocasino": "Автоматически взаимодействует с рычагами казино.",
+  "settings.autocasino.range": "Дистанция",
+  "settings.autocasino.delay": "Задержка",
+
+  "descriptions.misc.fakefine": "Заставляет сервер думать, что вы играете с Optifine 1.16.5.",
+  
+  "descriptions.render.fov": "Изменяет поле зрения с настраиваемыми параметрами.",
+  "descriptions.misc.antiattack": "Предотвращает атаку на определенные сущности.",
+  "descriptions.render.breaklight": "Подсвечивает ломаемые блоки с настраиваемыми эффектами.",
+  "descriptions.render.worldtweaks": "Изменяет параметры мира, такие как туман и время.",
+  "descriptions.movement.strafe": "Улучшенное стрейф-движение для обхода античитов.",
+  "descriptions.movement.waterspeed": "Увеличивает скорость движения в воде."
+}

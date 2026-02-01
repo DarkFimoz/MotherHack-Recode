@@ -86,6 +86,12 @@ public abstract class GameRendererMixin implements Wrapper {
         if (zoom.isToggled()) {
             return zoom.getFov(original);
         }
+        
+        fun.motherhack.modules.impl.render.FOV fov = MotherHack.getInstance().getModuleManager().getModule(fun.motherhack.modules.impl.render.FOV.class);
+        if (fov != null && fov.isToggled()) {
+            return fov.fovModifier.getValue();
+        }
+        
         return original;
     }
 

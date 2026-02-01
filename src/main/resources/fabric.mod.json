@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "motherhack-recode-fabric",
-  "version": "1.6-recode",
+  "version": "1.7-recode",
   "name": "MotherHack",
   "description": "",
   "authors": ["Dmitriy Fimozov, KissedWarrior"],

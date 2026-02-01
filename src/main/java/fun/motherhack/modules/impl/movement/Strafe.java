@@ -1,163 +1,152 @@
 package fun.motherhack.modules.impl.movement;
 
-import fun.motherhack.MotherHack;
-import fun.motherhack.api.events.impl.EventPlayerTick;
-import fun.motherhack.api.events.impl.rotations.EventMotion;
 import fun.motherhack.modules.api.Category;
 import fun.motherhack.modules.api.Module;
-import fun.motherhack.modules.impl.combat.Aura;
-import fun.motherhack.modules.settings.api.Nameable;
 import fun.motherhack.modules.settings.impl.EnumSetting;
 import fun.motherhack.modules.settings.impl.NumberSetting;
-import fun.motherhack.utils.movement.MoveUtils;
+import fun.motherhack.modules.settings.api.Nameable;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 import meteordevelopment.orbit.EventHandler;
-import net.minecraft.util.math.MathHelper;
+import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Box;
+import net.minecraft.util.math.Direction;
+import fun.motherhack.api.events.impl.EventPlayerTick;
 
 public class Strafe extends Module {
+    private final EnumSetting<Boost> boost = new EnumSetting<>("Буст", Boost.None);
+    private final NumberSetting setSpeed = new NumberSetting("Скорость", 1.3f, 0.0f, 2f, 0.1f);
+    private final NumberSetting velReduction = new NumberSetting("Редукция", 6.0f, 0.1f, 10f, 0.1f);
+    private final NumberSetting maxVelocitySpeed = new NumberSetting("Макс скорость", 0.8f, 0.1f, 2f, 0.1f);
 
-private final EnumSetting<Mode> mode = new EnumSetting<>("Mode", Mode.Matrix);
-private final NumberSetting speed = new NumberSetting("Speed", 0.42f, 0f, 1f, 0.01f,
-        () -> mode.getValue() == Mode.Matrix);
+    public static double oldSpeed = 0;
+    public static double contextFriction = 0.91;
+    public static boolean needSwap = false;
+    public static boolean needSprintState = false;
+    public static boolean disabled = false;
+    static long disableTime = 0;
+    public static int noSlowTicks = 0;
 
-private float lastYaw = 0;
+    @AllArgsConstructor
+    @Getter
+    public enum Boost implements Nameable {
+        None("Нет"),
+        Elytra("Элитра"),
+        Damage("Урон");
 
-public Strafe() {
-    super("Strafe", Category.Movement);
-}
-
-@Override
-public void onEnable() {
-    super.onEnable();
-    if (!fullNullCheck()) {
-        lastYaw = mc.player.getYaw();
-    }
-}
-
-@Override
-public void onDisable() {
-    super.onDisable();
-    if (!fullNullCheck()) {
-        mc.player.setSprinting(false);
-        mc.options.sprintKey.setPressed(false);
-    }
-}
-
-@EventHandler
-public void onMotion(EventMotion e) {
-    if (fullNullCheck()) return;
-
-    boolean moving = MoveUtils.isMoving();
-
-    if (mode.getValue() == Mode.Matrix) {
-        if (moving) {
-            float yaw = getMoveYaw(mc.player.getYaw());
-            double motion = speed.getValue().doubleValue() * 1.5;
-            setVelocity(motion);
-            lastYaw = yaw;
-        } else {
-            setVelocity(0);
-        }
-    } else if (mode.getValue() == Mode.Grim) {
-        if (moving) {
-            float yaw = getMoveYaw(mc.player.getYaw());
-            
-            Aura aura = MotherHack.getInstance().getModuleManager().getModule(Aura.class);
-            if (aura == null || aura.getTarget() == null) {
-                e.setYaw(yaw);
-                mc.player.setBodyYaw(yaw);
-                mc.player.setHeadYaw(yaw);
-            }
-            lastYaw = yaw;
-        }
-    }
-}
-
-@EventHandler
-public void onTick(EventPlayerTick event) {
-    if (fullNullCheck()) return;
-
-    boolean moving = MoveUtils.isMoving();
-
-    if (mode.getValue() == Mode.Grim && moving) {
-        // Подменяем инпут чтобы игрок всегда шёл "вперёд" по направлению движения
-        // Это позволяет спринтить в любую сторону
-        mc.player.input.movementForward = 1.0f;
-        mc.player.input.movementSideways = 0.0f;
-
-        // Включаем спринт — клиентский флаг и системная клавиша
-        mc.player.setSprinting(true);
-        mc.options.sprintKey.setPressed(true);
-    } else {
-        // При выходе из Grim или остановке — сбрасываем спринт и клавишу
-        mc.player.setSprinting(false);
-        mc.options.sprintKey.setPressed(false);
-    }
-}
-
-private float getMoveYaw(float yaw) {
-    float forward = mc.player.input.movementForward;
-    float strafe = mc.player.input.movementSideways;
-
-    if (forward == 0 && strafe == 0) {
-        return yaw;
+        private final String name;
     }
 
-    float moveYaw = yaw;
-
-    if (forward < 0) {
-        if (strafe > 0) {
-            moveYaw -= 135;
-        } else if (strafe < 0) {
-            moveYaw += 135;
-        } else {
-            moveYaw += 180;
-        }
-    } else if (forward > 0) {
-        if (strafe > 0) {
-            moveYaw -= 45;
-        } else if (strafe < 0) {
-            moveYaw += 45;
-        }
-    } else {
-        if (strafe > 0) {
-            moveYaw -= 90;
-        } else if (strafe < 0) {
-            moveYaw += 90;
-        }
-    }
-
-    return MathHelper.wrapDegrees(moveYaw);
-}
-
-private void setVelocity(double speed) {
-    if (!MoveUtils.isMoving()) {
-        mc.player.setVelocity(0, mc.player.getVelocity().y, 0);
-        return;
-    }
-
-    float yaw = getMoveYaw(mc.player.getYaw());
-    double rad = Math.toRadians(yaw);
-
-    mc.player.setVelocity(
-        -Math.sin(rad) * speed,
-        mc.player.getVelocity().y,
-        Math.cos(rad) * speed
-    );
-}
-
-public enum Mode implements Nameable {
-    Matrix("Matrix"),
-    Grim("Grim");
-
-    private final String name;
-
-    Mode(String name) {
-        this.name = name;
+    public Strafe() {
+        super("Strafe", Category.Movement);
+        getSettings().add(boost);
+        getSettings().add(setSpeed);
+        getSettings().add(velReduction);
+        getSettings().add(maxVelocitySpeed);
     }
 
     @Override
-    public String getName() {
-        return name;
+    public void onEnable() {
+        super.onEnable();
+        oldSpeed = 0.0;
     }
-}
+
+    @Override
+    public void onDisable() {
+        super.onDisable();
+    }
+
+    public boolean canStrafe() {
+        if (mc.player.isSneaking()) return false;
+        if (mc.player.isInLava()) return false;
+        if (mc.player.isSubmergedInWater()) return false;
+        return !mc.player.getAbilities().flying;
+    }
+
+    public Box getBoundingBox() {
+        return new Box(mc.player.getX() - 0.1, mc.player.getY(), mc.player.getZ() - 0.1,
+                mc.player.getX() + 0.1, mc.player.getY() + 1, mc.player.getZ() + 0.1);
+    }
+
+    public double calculateSpeed() {
+        float speedAttributes = getAIMoveSpeed();
+        final float frictionFactor = mc.world.getBlockState(new BlockPos.Mutable().set(mc.player.getX(),
+                getBoundingBox().getMin(Direction.Axis.Y), mc.player.getZ())).getBlock().getSlipperiness() * 0.91F;
+        float n6 = mc.player.hasStatusEffect(StatusEffects.JUMP_BOOST) && mc.player.isUsingItem() ? 0.88f : 0.91F;
+        if (mc.player.isOnGround()) n6 = frictionFactor;
+        float n7 = (float) (0.1631f / Math.pow(n6, 3.0f));
+        float n8;
+        if (mc.player.isOnGround()) {
+            n8 = speedAttributes * n7;
+            disabled = false;
+        } else {
+            n8 = 0.0255f;
+        }
+        double max2 = oldSpeed + n8;
+        contextFriction = n6;
+        if (!mc.player.isOnGround()) {
+            needSprintState = !mc.player.isSprinting();
+            needSwap = true;
+        } else {
+            needSprintState = false;
+        }
+        return max2;
+    }
+
+    public float getAIMoveSpeed() {
+        boolean prevSprinting = mc.player.isSprinting();
+        mc.player.setSprinting(false);
+        float speed = mc.player.getMovementSpeed() * 1.3f;
+        mc.player.setSprinting(prevSprinting);
+        return speed;
+    }
+
+    @EventHandler
+    public void onTick(EventPlayerTick event) {
+        if (fullNullCheck()) return;
+        if (!canStrafe()) {
+            oldSpeed = 0;
+            return;
+        }
+
+        if (isMoving()) {
+            double speed = calculateSpeed();
+            double[] motion = forward(speed);
+            mc.player.setVelocity(motion[0], mc.player.getVelocity().y, motion[1]);
+            oldSpeed = speed * contextFriction;
+        } else {
+            oldSpeed = 0;
+        }
+    }
+
+    private boolean isMoving() {
+        return mc.options.forwardKey.isPressed() || mc.options.leftKey.isPressed() ||
+                mc.options.rightKey.isPressed() || mc.options.backKey.isPressed();
+    }
+
+    private double[] forward(double speed) {
+        float forward = 0;
+        float strafe = 0;
+        float yaw = mc.player.getYaw();
+
+        if (mc.options.forwardKey.isPressed()) forward++;
+        if (mc.options.backKey.isPressed()) forward--;
+        if (mc.options.leftKey.isPressed()) strafe++;
+        if (mc.options.rightKey.isPressed()) strafe--;
+
+        if (forward == 0 && strafe == 0) {
+            return new double[]{0, 0};
+        }
+
+        if (forward != 0 && strafe != 0) {
+            forward *= Math.sin(Math.toRadians(45));
+            strafe *= Math.cos(Math.toRadians(45));
+        }
+
+        double x = forward * speed * -Math.sin(Math.toRadians(yaw)) + strafe * speed * Math.cos(Math.toRadians(yaw));
+        double z = forward * speed * Math.cos(Math.toRadians(yaw)) - strafe * speed * -Math.sin(Math.toRadians(yaw));
+
+        return new double[]{x, z};
+    }
 }

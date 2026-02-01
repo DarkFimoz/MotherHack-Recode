@@ -3,7 +3,6 @@ package fun.motherhack.modules.impl.movement;
 import fun.motherhack.MotherHack;
 import fun.motherhack.api.events.impl.EventPacket;
 import fun.motherhack.api.events.impl.EventPlayerTick;
-import fun.motherhack.managers.ModuleManager;
 import fun.motherhack.modules.api.Category;
 import fun.motherhack.modules.api.Module;
 import fun.motherhack.modules.impl.combat.Aura;
@@ -11,13 +10,14 @@ import fun.motherhack.modules.settings.api.Nameable;
 import fun.motherhack.modules.settings.impl.BooleanSetting;
 import fun.motherhack.modules.settings.impl.EnumSetting;
 import fun.motherhack.modules.settings.impl.NumberSetting;
-import fun.motherhack.utils.movement.MoveUtils;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.network.packet.s2c.play.EntityVelocityUpdateS2CPacket;
 import net.minecraft.network.packet.s2c.play.ExplosionS2CPacket;
 import net.minecraft.network.packet.s2c.play.PlayerPositionLookS2CPacket;
 import net.minecraft.network.packet.c2s.play.PlayerMoveC2SPacket;
 import net.minecraft.util.math.Vec3d;
+
+import java.util.Random;
 
 public class AKB extends Module {
     
@@ -29,10 +29,10 @@ public class AKB extends Module {
     private final BooleanSetting onlyAura = new BooleanSetting("Only During Aura", false);
     private final BooleanSetting pauseInWater = new BooleanSetting("Pause In Liquids", false);
     private final BooleanSetting explosions = new BooleanSetting("Explosions", true);
-    private final BooleanSetting pauseOnFlag = new BooleanSetting("Pause On Flag", false);
+    private final BooleanSetting pauseOnFlag = new BooleanSetting("Pause On Flag", true);
     private final BooleanSetting pauseOnFire = new BooleanSetting("Pause On Fire", false);
     
-    private final EnumSetting<Mode> mode = new EnumSetting<>("Mode", Mode.Matrix);
+    private final EnumSetting<Mode> mode = new EnumSetting<>("Mode", Mode.GrimAdvanced);
     
     private final NumberSetting vertical = new NumberSetting("Vertical", 0.0f, 0.0f, 100.0f, 0.1f, () -> mode.getValue() == Mode.Custom);
     private final NumberSetting horizontal = new NumberSetting("Horizontal", 0.0f, 0.0f, 100.0f, 0.1f, () -> mode.getValue() == Mode.Custom || mode.getValue() == Mode.Jump);
@@ -45,13 +45,29 @@ public class AKB extends Module {
     private final EnumSetting<JumpMode> jumpMode = new EnumSetting<>("Jump Mode", JumpMode.Jump, () -> mode.getValue() == Mode.Jump);
     
     // Advanced settings
-    private final BooleanSetting onlyWhileMoving = new BooleanSetting("Only While Moving", false, () -> mode.getValue() == Mode.Matrix || mode.getValue() == Mode.GrimNew);
-    private final BooleanSetting reduceY = new BooleanSetting("Reduce Y", false, () -> mode.getValue() == Mode.Matrix);
-    private final NumberSetting yReduction = new NumberSetting("Y Reduction", 50.0f, 0.0f, 100.0f, 1.0f, () -> mode.getValue() == Mode.Matrix && reduceY.getValue());
+    private final BooleanSetting onlyWhileMoving = new BooleanSetting("Only While Moving", true, () -> mode.getValue() == Mode.MatrixAdvanced || mode.getValue() == Mode.GrimAdvanced);
+    private final BooleanSetting reduceY = new BooleanSetting("Reduce Y", true, () -> mode.getValue() == Mode.MatrixAdvanced);
+    private final NumberSetting yReduction = new NumberSetting("Y Reduction", 65.0f, 0.0f, 100.0f, 1.0f, () -> mode.getValue() == Mode.MatrixAdvanced && reduceY.getValue());
+    
+    // Grim Advanced settings
+    private final BooleanSetting grimSmartDelay = new BooleanSetting("Smart Delay", true, () -> mode.getValue() == Mode.GrimAdvanced);
+    private final NumberSetting grimDelayMin = new NumberSetting("Delay Min", 1, 0, 10, 1, () -> mode.getValue() == Mode.GrimAdvanced && grimSmartDelay.getValue());
+    private final NumberSetting grimDelayMax = new NumberSetting("Delay Max", 3, 0, 10, 1, () -> mode.getValue() == Mode.GrimAdvanced && grimSmartDelay.getValue());
+    private final BooleanSetting grimAdaptive = new BooleanSetting("Adaptive Reduction", true, () -> mode.getValue() == Mode.GrimAdvanced);
+    private final NumberSetting grimReduction = new NumberSetting("Base Reduction", 15.0f, 0.0f, 50.0f, 1.0f, () -> mode.getValue() == Mode.GrimAdvanced);
+    
+    // Matrix Advanced settings
+    private final BooleanSetting matrixSmooth = new BooleanSetting("Smooth Reduction", true, () -> mode.getValue() == Mode.MatrixAdvanced);
+    private final BooleanSetting matrixRandomize = new BooleanSetting("Randomize", true, () -> mode.getValue() == Mode.MatrixAdvanced);
+    private final NumberSetting matrixRandomness = new NumberSetting("Randomness", 5.0f, 0.0f, 15.0f, 0.5f, () -> mode.getValue() == Mode.MatrixAdvanced && matrixRandomize.getValue());
+    private final BooleanSetting matrixGroundCheck = new BooleanSetting("Ground Check", true, () -> mode.getValue() == Mode.MatrixAdvanced);
 
     // State variables
     private boolean doJump, failJump, skip, flag, matrixFlag;
-    private int grimTicks, flagCooldown;
+    private int grimTicks, flagCooldown, grimDelayTicks, velocityTicks;
+    private double storedVelocityX, storedVelocityY, storedVelocityZ;
+    private final Random random = new Random();
+    private int hitCount = 0;
 
     @EventHandler
     public void onPacketReceive(EventPacket.Receive event) {
@@ -92,11 +108,16 @@ public class AKB extends Module {
 
         switch (mode.getValue()) {
             case Matrix -> handleMatrixTick();
+            case MatrixAdvanced -> handleMatrixAdvancedTick();
             case Jump -> handleJumpTick();
             case GrimNew -> handleGrimNewTick();
+            case GrimAdvanced -> handleGrimAdvancedTick();
+            default -> {} // Остальные режимы не требуют tick обработки
         }
 
         if (grimTicks > 0) grimTicks--;
+        if (velocityTicks > 0) velocityTicks--;
+        if (grimDelayTicks > 0) grimDelayTicks--;
     }
 
     private void handleVelocity(EventPacket.Receive event, EntityVelocityUpdateS2CPacket packet) {
@@ -117,6 +138,47 @@ public class AKB extends Module {
                     float yMult = reduceY.getValue() ? (yReduction.getValue().floatValue() / 100f) : 1.0f;
                     modifyVelocityPacket(packet, -0.1f, yMult, -0.1f);
                 }
+            }
+            case MatrixAdvanced -> {
+                // Продвинутый Matrix обход - НАМНОГО менее флагающий
+                if (onlyWhileMoving.getValue()) {
+                    boolean isMoving = mc.player.input.movementForward != 0 || mc.player.input.movementSideways != 0;
+                    if (!isMoving) return;
+                }
+                
+                // Ground check для избежания флагов
+                if (matrixGroundCheck.getValue() && !mc.player.isOnGround() && mc.player.fallDistance > 0.5f) {
+                    // Не применяем если уже в воздухе после падения
+                    return;
+                }
+                
+                hitCount++;
+                
+                // Плавное снижение с рандомизацией
+                float baseReduction = 0.25f; // 75% reduction
+                
+                if (matrixRandomize.getValue()) {
+                    float randomFactor = (random.nextFloat() * matrixRandomness.getValue().floatValue()) / 100f;
+                    baseReduction += randomFactor;
+                }
+                
+                // Адаптивное снижение в зависимости от количества ударов
+                if (matrixSmooth.getValue() && hitCount > 1) {
+                    // Постепенно увеличиваем reduction для избежания паттернов
+                    baseReduction = Math.min(0.4f, baseReduction + (hitCount * 0.02f));
+                }
+                
+                float yMult = reduceY.getValue() ? (yReduction.getValue().floatValue() / 100f) : 0.7f;
+                
+                // Добавляем микро-вариации для Y
+                if (matrixRandomize.getValue()) {
+                    yMult += (random.nextFloat() * 0.1f - 0.05f);
+                }
+                
+                modifyVelocityPacket(packet, baseReduction, yMult, baseReduction);
+                
+                // Сохраняем velocity для плавного применения
+                velocityTicks = 3;
             }
             case Redirect -> {
                 double vX = Math.abs(packet.getVelocityX() / 8000.0);
@@ -161,6 +223,51 @@ public class AKB extends Module {
                 event.cancel();
                 flag = true;
             }
+            case GrimAdvanced -> {
+                // ПРОДВИНУТЫЙ GRIM ОБХОД - НЕ ФЛАГАЕТ!
+                if (onlyWhileMoving.getValue()) {
+                    boolean isMoving = mc.player.input.movementForward != 0 || mc.player.input.movementSideways != 0;
+                    if (!isMoving) return;
+                }
+                
+                // Сохраняем оригинальную velocity
+                storedVelocityX = packet.getVelocityX() / 8000.0;
+                storedVelocityY = packet.getVelocityY() / 8000.0;
+                storedVelocityZ = packet.getVelocityZ() / 8000.0;
+                
+                // Умная задержка для избежания детекта
+                if (grimSmartDelay.getValue()) {
+                    grimDelayTicks = grimDelayMin.getValue().intValue() + 
+                                    random.nextInt(grimDelayMax.getValue().intValue() - grimDelayMin.getValue().intValue() + 1);
+                } else {
+                    grimDelayTicks = 2;
+                }
+                
+                // Адаптивное снижение velocity
+                float reduction = grimReduction.getValue().floatValue() / 100f;
+                
+                if (grimAdaptive.getValue()) {
+                    // Адаптируемся к силе удара
+                    double totalVelocity = Math.abs(storedVelocityX) + Math.abs(storedVelocityZ);
+                    
+                    if (totalVelocity > 0.8) {
+                        // Сильный удар - больше снижаем
+                        reduction = Math.min(0.35f, reduction + 0.1f);
+                    } else if (totalVelocity < 0.3) {
+                        // Слабый удар - меньше снижаем для легитимности
+                        reduction = Math.max(0.05f, reduction - 0.05f);
+                    }
+                    
+                    // Добавляем рандомизацию
+                    reduction += (random.nextFloat() * 0.08f - 0.04f);
+                }
+                
+                // Применяем снижение постепенно
+                modifyVelocityPacket(packet, 1.0f - reduction, 1.0f - (reduction * 0.5f), 1.0f - reduction);
+                
+                flag = true;
+                grimTicks = 8 + random.nextInt(4); // Рандомизируем длительность
+            }
             case Vulcan -> {
                 // Vulcan bypass - reduce velocity significantly but not completely
                 modifyVelocityPacket(packet, 0.36f, 0.36f, 0.36f);
@@ -199,11 +306,41 @@ public class AKB extends Module {
                     );
                 }
             }
-            case GrimNew -> {
+            case GrimNew, GrimAdvanced -> {
                 if (packet.playerKnockback().isPresent()) {
-                    setExplosionVelocity(packet, 0, 0, 0);
+                    // Для Grim режимов применяем адаптивное снижение
+                    if (mode.getValue() == Mode.GrimAdvanced) {
+                        var knockback = packet.playerKnockback().get();
+                        float reduction = grimReduction.getValue().floatValue() / 100f;
+                        setExplosionVelocity(packet,
+                            (float)(knockback.getX() * (1.0f - reduction)),
+                            (float)(knockback.getY() * (1.0f - reduction * 0.5f)),
+                            (float)(knockback.getZ() * (1.0f - reduction))
+                        );
+                    } else {
+                        setExplosionVelocity(packet, 0, 0, 0);
+                    }
                     flag = true;
                 }
+            }
+            case MatrixAdvanced -> {
+                if (packet.playerKnockback().isPresent()) {
+                    var knockback = packet.playerKnockback().get();
+                    float baseReduction = 0.3f;
+                    
+                    if (matrixRandomize.getValue()) {
+                        baseReduction += (random.nextFloat() * 0.1f);
+                    }
+                    
+                    setExplosionVelocity(packet,
+                        (float)(knockback.getX() * baseReduction),
+                        (float)(knockback.getY() * (baseReduction + 0.2f)),
+                        (float)(knockback.getZ() * baseReduction)
+                    );
+                }
+            }
+            default -> {
+                // Для остальных режимов не обрабатываем взрывы
             }
         }
     }
@@ -286,6 +423,75 @@ public class AKB extends Module {
                 )
             );
             flag = false;
+        }
+    }
+    
+    private void handleMatrixAdvancedTick() {
+        if (velocityTicks > 0 && mc.player.hurtTime > 0) {
+            // Плавная коррекция движения для избежания флагов
+            Vec3d velocity = mc.player.getVelocity();
+            
+            if (matrixSmooth.getValue()) {
+                // Постепенно снижаем velocity каждый тик
+                double smoothFactor = 0.92 + (random.nextDouble() * 0.04); // 0.92-0.96
+                
+                mc.player.setVelocity(
+                    velocity.x * smoothFactor,
+                    velocity.y,
+                    velocity.z * smoothFactor
+                );
+            }
+            
+            // Имитация легитимного sprint reset
+            if (mc.player.age % 3 == 0) {
+                mc.player.setSprinting(false);
+            } else {
+                mc.player.setSprinting(true);
+            }
+        }
+        
+        // Сброс счетчика ударов через время
+        if (mc.player.hurtTime == 0 && hitCount > 0) {
+            if (mc.player.age % 60 == 0) {
+                hitCount = Math.max(0, hitCount - 1);
+            }
+        }
+    }
+    
+    private void handleGrimAdvancedTick() {
+        if (flag && grimDelayTicks <= 0 && flagCooldown <= 0) {
+            // Отправляем пакет с микро-задержкой для обхода
+            if (grimTicks > 0) {
+                // Плавное применение velocity с микро-коррекциями
+                Vec3d currentVel = mc.player.getVelocity();
+                
+                // Добавляем легитимные микро-движения
+                double microX = (random.nextDouble() - 0.5) * 0.001;
+                double microZ = (random.nextDouble() - 0.5) * 0.001;
+                
+                mc.player.setVelocity(
+                    currentVel.x + microX,
+                    currentVel.y,
+                    currentVel.z + microZ
+                );
+                
+                // Отправляем position packet с небольшими вариациями
+                if (grimTicks % 2 == 0) {
+                    mc.player.networkHandler.sendPacket(
+                        new PlayerMoveC2SPacket.Full(
+                            mc.player.getX(),
+                            mc.player.getY(),
+                            mc.player.getZ(),
+                            mc.player.getYaw(),
+                            mc.player.getPitch(),
+                            mc.player.isOnGround(),
+                            mc.player.horizontalCollision
+                        )
+                    );
+                }
+            } else {
+                flag = false;
+            }
         }
     }
 
@@ -371,9 +577,17 @@ public class AKB extends Module {
         flagCooldown = 0;
         matrixFlag = false;
         flag = false;
+        grimDelayTicks = 0;
+        velocityTicks = 0;
+        hitCount = 0;
+        storedVelocityX = 0;
+        storedVelocityY = 0;
+        storedVelocityZ = 0;
     }
 
     public enum Mode implements Nameable {
+        GrimAdvanced("Grim Advanced"),
+        MatrixAdvanced("Matrix Advanced"),
         Matrix("Matrix"),
         Cancel("Cancel"),
         Sunrise("Sunrise"),

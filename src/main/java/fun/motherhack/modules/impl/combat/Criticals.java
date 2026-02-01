@@ -62,23 +62,27 @@ public class Criticals extends Module {
                 sendCritPacket(x, y + 0.05, z, false, horizontalCollision, 0.0, false);
             }
             case NCP -> {
-                sendCritPacket(x, y, z, onGround, horizontalCollision, 0.11, false);
-                sendCritPacket(x, y + 0.11, z, false, horizontalCollision, 0.0, false);
+                sendCritPacket(x, y, z, onGround, horizontalCollision, 0.0001, false);
+                sendCritPacket(x, y, z, false, horizontalCollision, 0.0, false);
             }
             case StrictNCP -> {
-                sendCritPacket(x, y, z, onGround, horizontalCollision, 0.062600301692775, false);
-                sendCritPacket(x, y, z, false, horizontalCollision, 0.07260029960661, false);
-                sendCritPacket(x, y, z, false, horizontalCollision, 0.0, false);
+                sendCritPacket(x, y, z, onGround, horizontalCollision, 0.0626003, false);
+                sendCritPacket(x, y, z, false, horizontalCollision, 0.00001, false);
                 sendCritPacket(x, y, z, false, horizontalCollision, 0.0, false);
             }
             case OldNCP -> {
-                sendCritPacket(x, y, z, onGround, horizontalCollision, 0.00001058293536, false);
-                sendCritPacket(x, y, z, false, horizontalCollision, 0.00000916580235, false);
-                sendCritPacket(x, y, z, false, horizontalCollision, 0.00000010371854, false);
+                sendCritPacket(x, y, z, onGround, horizontalCollision, 0.0000105829, false);
+                sendCritPacket(x, y, z, false, horizontalCollision, 0.0000091658, false);
+                sendCritPacket(x, y, z, false, horizontalCollision, 0.0, false);
             }
             case UpdatedNCP -> {
-                sendCritPacket(x, y, z, onGround, horizontalCollision, 0.000000271875, false);
+                sendCritPacket(x, y, z, onGround, horizontalCollision, 0.0000002718, false);
                 sendCritPacket(x, y, z, false, horizontalCollision, 0.0, false);
+            }
+            case HvH -> {
+                sendCritPacket(x, y, z, onGround, horizontalCollision, 0.0625, false);
+                sendCritPacket(x, y, z, false, horizontalCollision, 0.0, false);
+                sendCritPacket(x, y, z, false, horizontalCollision, 0.01, false);
             }
             case DoubleCrits -> {
                 // Двойные криты для HVH серверов (Grim/Matrix)
@@ -121,7 +125,8 @@ public class Criticals extends Module {
         StrictNCP("StrictNCP"),
         OldNCP("OldNCP"),
         UpdatedNCP("UpdatedNCP"),
-        DoubleCrits("DoubleCrits");
+        DoubleCrits("DoubleCrits"),
+        HvH("HvH");
 
         private final String name;
 

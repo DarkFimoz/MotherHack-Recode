@@ -39,8 +39,8 @@ public class Wings extends Module {
             if (onlySelf.getValue() && player != mc.player) continue;
 
             Vec3d base = getBase(player, tickDelta);
-            // Крылья крепятся к спине (между плечами)
-            Vec3d attach = base.add(0, player.getHeight() * 0.5, 0);
+            // Крылья крепятся к спине (между плечами), чуть выше
+            Vec3d attach = base.add(0, player.getHeight() * 0.65, 0);
 
             drawParticleWing(player, attach, -1, event.getMatrixStack(), tickDelta);
             drawParticleWing(player, attach, 1, event.getMatrixStack(), tickDelta);
@@ -97,11 +97,13 @@ public class Wings extends Module {
 
         // Параметры крыла как на картинке
         double wingSpan = 2.0;      // Размах крыла (горизонтально)
-        double wingHeight = 1.5;    // Высота крыла (вертикально)
         int featherCount = 12;      // Количество перьев
         
         BufferBuilder buffer = Tessellator.getInstance().begin(VertexFormat.DrawMode.DEBUG_LINES, 
             VertexFormats.POSITION_COLOR);
+
+        // Массив для хранения контурных точек
+        Vec3d[][] featherOutlines = new Vec3d[featherCount][2]; // [feather][left/right edge]
 
         // Рисуем крыло из перьев
         for (int feather = 0; feather < featherCount; feather++) {
@@ -119,6 +121,10 @@ public class Wings extends Module {
             
             // Количество сегментов в пере
             int segments = 20;
+            
+            Vec3d prevLeftEdge = null;
+            Vec3d prevRightEdge = null;
+            Vec3d prevCenter = null;
             
             for (int seg = 0; seg < segments; seg++) {
                 double segProgress = (double) seg / (segments - 1);
@@ -147,13 +153,13 @@ public class Wings extends Module {
                 Vec3d back = backDir.multiply(backOffset);
                 Vec3d pos = new Vec3d(lateral.x + back.x, y + back.y, lateral.z + back.z);
                 
-                // Цвет - черный с желтыми кончиками как на картинке
+                // Цвет - черный с красными кончиками
                 float r, g, b;
                 if (segProgress > 0.7) {
-                    // Желтые кончики
+                    // Красные кончики
                     float tipProgress = (float)((segProgress - 0.7) / 0.3);
                     r = 0.1f + tipProgress * 0.8f;
-                    g = 0.1f + tipProgress * 0.8f;
+                    g = 0.1f;
                     b = 0.1f;
                 } else {
                     // Черное основание
@@ -164,12 +170,47 @@ public class Wings extends Module {
                 
                 float alpha = 0.9f * (1.0f - (float)segProgress * 0.2f);
                 
+                // Вычисляем края пера для контура
+                Vec3d lineDir = new Vec3d(Math.cos(lateralYawRad), 0, Math.sin(lateralYawRad));
+                Vec3d leftEdge = pos.add(lineDir.multiply(-width / 2));
+                Vec3d rightEdge = pos.add(lineDir.multiply(width / 2));
+                
+                // Сохраняем крайние точки для контура между перьями
+                if (seg == segments - 1) {
+                    featherOutlines[feather][0] = leftEdge;
+                    featherOutlines[feather][1] = rightEdge;
+                }
+                
+                // Рисуем контур пера
+                if (prevLeftEdge != null) {
+                    // Левый край пера
+                    buffer.vertex(mat, (float)prevLeftEdge.x, (float)prevLeftEdge.y, (float)prevLeftEdge.z)
+                        .color(r * 1.2f, g * 1.2f, b * 1.2f, alpha);
+                    buffer.vertex(mat, (float)leftEdge.x, (float)leftEdge.y, (float)leftEdge.z)
+                        .color(r * 1.2f, g * 1.2f, b * 1.2f, alpha);
+                    
+                    // Правый край пера
+                    buffer.vertex(mat, (float)prevRightEdge.x, (float)prevRightEdge.y, (float)prevRightEdge.z)
+                        .color(r * 1.2f, g * 1.2f, b * 1.2f, alpha);
+                    buffer.vertex(mat, (float)rightEdge.x, (float)rightEdge.y, (float)rightEdge.z)
+                        .color(r * 1.2f, g * 1.2f, b * 1.2f, alpha);
+                    
+                    // Центральная линия пера (стержень)
+                    buffer.vertex(mat, (float)prevCenter.x, (float)prevCenter.y, (float)prevCenter.z)
+                        .color(r * 1.5f, g * 1.5f, b * 1.5f, alpha);
+                    buffer.vertex(mat, (float)pos.x, (float)pos.y, (float)pos.z)
+                        .color(r * 1.5f, g * 1.5f, b * 1.5f, alpha);
+                }
+                
+                prevLeftEdge = leftEdge;
+                prevRightEdge = rightEdge;
+                prevCenter = pos;
+                
                 // Рисуем несколько линий для создания объема пера
                 for (int line = 0; line < 3; line++) {
                     double lineOffset = (line - 1) * width / 2;
                     
-                    Vec3d lineDir = new Vec3d(Math.cos(lateralYawRad), 0, Math.sin(lateralYawRad)).multiply(lineOffset);
-                    Vec3d finalPos = pos.add(lineDir);
+                    Vec3d finalPos = pos.add(lineDir.multiply(lineOffset));
                     
                     float px = (float) finalPos.x;
                     float py = (float) finalPos.y;
@@ -184,6 +225,30 @@ public class Wings extends Module {
                     buffer.vertex(mat, px, py - size, pz).color(r, g, b, alpha);
                     buffer.vertex(mat, px, py + size, pz).color(r, g, b, alpha);
                 }
+            }
+        }
+        
+        // Рисуем контур между перьями (соединяем кончики)
+        for (int feather = 0; feather < featherCount - 1; feather++) {
+            Vec3d leftTip1 = featherOutlines[feather][0];
+            Vec3d rightTip1 = featherOutlines[feather][1];
+            Vec3d leftTip2 = featherOutlines[feather + 1][0];
+            Vec3d rightTip2 = featherOutlines[feather + 1][1];
+            
+            if (leftTip1 != null && leftTip2 != null) {
+                // Соединяем левые края соседних перьев
+                buffer.vertex(mat, (float)leftTip1.x, (float)leftTip1.y, (float)leftTip1.z)
+                    .color(0.9f, 0.2f, 0.2f, 0.8f);
+                buffer.vertex(mat, (float)leftTip2.x, (float)leftTip2.y, (float)leftTip2.z)
+                    .color(0.9f, 0.2f, 0.2f, 0.8f);
+            }
+            
+            if (rightTip1 != null && rightTip2 != null) {
+                // Соединяем правые края соседних перьев
+                buffer.vertex(mat, (float)rightTip1.x, (float)rightTip1.y, (float)rightTip1.z)
+                    .color(0.9f, 0.2f, 0.2f, 0.8f);
+                buffer.vertex(mat, (float)rightTip2.x, (float)rightTip2.y, (float)rightTip2.z)
+                    .color(0.9f, 0.2f, 0.2f, 0.8f);
             }
         }
 

@@ -32,7 +32,8 @@ public class HudManager implements Wrapper {
             new BooleanSetting("KeyBinds", true),
             new BooleanSetting("Potions", true),
             new BooleanSetting("StaffList", true),
-            new BooleanSetting("Desktop", true)
+            new BooleanSetting("Desktop", true),
+            new BooleanSetting("Companion", true)
     );
     @Setter private Window window;
 
@@ -46,7 +47,8 @@ public class HudManager implements Wrapper {
                 new KeyBinds(),
                 new Potions(),
                 new StaffList(),
-                new Desktop()
+                new Desktop(),
+                new Companion()
         );
 
         for (HudElement element : hudElements) {

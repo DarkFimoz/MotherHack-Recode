@@ -48,8 +48,8 @@ public abstract class LivingEntityMixin extends Entity implements Wrapper {
     private void modifySwingDuration(CallbackInfoReturnable<Integer> cir) {
         if ((Object)this == mc.player) {
             SwingAnimations swingAnimations = MotherHack.getInstance().getModuleManager().getModule(SwingAnimations.class);
-            if (swingAnimations != null && swingAnimations.shouldChangeAnimationDuration() && swingAnimations.slowAnimation.getValue()) {
-                cir.setReturnValue(swingAnimations.slowAnimationVal.getValue().intValue());
+            if (swingAnimations != null && swingAnimations.isToggled() && swingAnimations.slow.getValue()) {
+                cir.setReturnValue(swingAnimations.speed.getValue().intValue());
             }
         }
     }

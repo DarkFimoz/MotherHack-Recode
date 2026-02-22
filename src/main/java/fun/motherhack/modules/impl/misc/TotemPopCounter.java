@@ -3,6 +3,7 @@ package fun.motherhack.modules.impl.misc;
 import fun.motherhack.modules.api.Category;
 import fun.motherhack.modules.api.Module;
 import fun.motherhack.modules.settings.impl.BooleanSetting;
+import fun.motherhack.modules.settings.impl.NumberSetting;
 import fun.motherhack.utils.animations.Animation;
 import fun.motherhack.utils.animations.Easing;
 import meteordevelopment.orbit.EventHandler;
@@ -15,18 +16,19 @@ import net.minecraft.util.Formatting;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.util.math.MathHelper;
-
 import java.util.HashMap;
 import java.util.Map;
 
 public class TotemPopCounter extends Module {
     public final BooleanSetting notification = new BooleanSetting("Уведомление", true);
     public final BooleanSetting renderTotem = new BooleanSetting("Рендер тотема", true);
+    public final NumberSetting animationRepeats = new NumberSetting("Повторы анимации", 2f, 1f, 3f, 1f);
 
-    private final Animation colorAnimation = new Animation(500, 1.0, false, Easing.EASE_OUT_CUBIC);
-    private final Animation rotationAnimation = new Animation(400, 0.0, false, Easing.EASE_OUT_BACK);
+    private final Animation colorAnimation = new Animation(500, 1.0, true, Easing.EASE_OUT_CUBIC);
+    private final Animation rotationAnimation = new Animation(400, 1.0, true, Easing.EASE_OUT_BACK);
     private boolean shouldAnimate = false;
+    private int currentRepeat = 0;
+    private int maxRepeats = 2;
     
     private final Map<String, Integer> popCounts = new HashMap<>();
 
@@ -34,6 +36,7 @@ public class TotemPopCounter extends Module {
         super("TotemPopCounter", Category.Misc);
         getSettings().add(notification);
         getSettings().add(renderTotem);
+        getSettings().add(animationRepeats);
     }
 
     @Override
@@ -56,6 +59,8 @@ public class TotemPopCounter extends Module {
         if (player == mc.player) {
             if (renderTotem.getValue()) {
                 shouldAnimate = true;
+                currentRepeat = 0;
+                maxRepeats = animationRepeats.getValue().intValue();
                 colorAnimation.reset();
                 rotationAnimation.reset();
             }
@@ -113,11 +118,22 @@ public class TotemPopCounter extends Module {
         float redProgress = 0f;
         
         if (shouldAnimate) {
-            redProgress = 1.0f - (float) colorAnimation.getValue();
-            rotation = (float) (rotationAnimation.getValue() * 15.0);
+            float colorValue = colorAnimation.getValue();
+            float rotationValue = rotationAnimation.getValue();
             
-            if (colorAnimation.finished() && rotationAnimation.finished()) {
-                shouldAnimate = false;
+            redProgress = colorValue;
+            rotation = rotationValue * 15.0f;
+            
+            if (colorAnimation.finished(true) && rotationAnimation.finished(true)) {
+                currentRepeat++;
+                if (currentRepeat >= maxRepeats) {
+                    shouldAnimate = false;
+                    redProgress = 0f;
+                    rotation = 0f;
+                } else {
+                    colorAnimation.reset();
+                    rotationAnimation.reset();
+                }
             }
         }
         

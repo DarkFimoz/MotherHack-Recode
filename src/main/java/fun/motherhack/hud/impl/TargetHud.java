@@ -4,6 +4,7 @@ import fun.motherhack.MotherHack;
 import fun.motherhack.api.events.impl.EventRender2D;
 import fun.motherhack.hud.HudElement;
 import fun.motherhack.modules.impl.combat.Aura;
+//import fun.motherhack.modules.impl.combat.AttackAura; доступно в платной версии
 import fun.motherhack.modules.impl.client.UI;
 import fun.motherhack.modules.settings.impl.BooleanSetting;
 import fun.motherhack.modules.settings.impl.NumberSetting;
@@ -56,8 +57,21 @@ public class TargetHud extends HudElement {
 
         UI.ClickGuiTheme theme = MotherHack.getInstance().getModuleManager().getModule(UI.class).getTheme();
 
+        // Получаем цель из Aura или AttackAura
         Aura aura = MotherHack.getInstance().getModuleManager().getModule(Aura.class);
-        LivingEntity target = mc.currentScreen instanceof ChatScreen ? mc.player : aura.getTarget();
+        //AttackAura attackAura = MotherHack.getInstance().getModuleManager().getModule(AttackAura.class); доступно в платной версии
+        
+        LivingEntity target = null;
+        if (mc.currentScreen instanceof ChatScreen) {
+            target = mc.player;
+        } else {
+            // Приоритет: сначала Aura, потом AttackAura
+            if (aura != null && aura.getTarget() != null) {
+                target = aura.getTarget();
+            //} else if (attackAura != null && attackAura.getTarget() != null) { доступно в платной версии
+                //target = attackAura.getTarget(); доступно в платной версии
+            }
+        }
         
         // Check for kill - исправленная система отслеживания
         if (target != null) {

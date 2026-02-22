@@ -49,6 +49,7 @@ public class Scaffold extends Module {
         Packet("Packet"),
         Linear("Linear"),
         Snap("Snap"),
+        GrimMatrix("Grim+Matrix"),
         None("None");
         
         private final String name;
@@ -84,29 +85,43 @@ public class Scaffold extends Module {
     // Main settings
     private final EnumSetting<Mode> mode = new EnumSetting<>("Mode", Mode.NCPStrict);
     private final EnumSetting<Switch> autoSwitch = new EnumSetting<>("Switch", Switch.Silent);
-    private final EnumSetting<Rotate> rotateMode = new EnumSetting<>("Rotate", Rotate.Normal);
+    private final EnumSetting<Rotate> rotateMode = new EnumSetting<>("Rotate", Rotate.GrimMatrix);
     private final BooleanSetting lockY = new BooleanSetting("LockY", false);
     private final BooleanSetting autoJump = new BooleanSetting("AutoJump", false);
     private final BooleanSetting allowShift = new BooleanSetting("WorkWhileSneaking", false);
-    private final BooleanSetting tower = new BooleanSetting("Tower", true);
-    private final BooleanSetting safeWalk = new BooleanSetting("SafeWalk", true);
+    private final BooleanSetting tower = new BooleanSetting("Tower", false); // Выключен по умолчанию для Grim
     private final NumberSetting lockYDelay = new NumberSetting("LockYDelay", 0, 0, 500, 10);
     
-    // NoServerRotate setting - можно включать и выключать
+    // Grim+Matrix specific settings
+    private final BooleanSetting staticPitch = new BooleanSetting("StaticPitch", true); // Для Matrix
+    private final NumberSetting fixedPitch = new NumberSetting("FixedPitch", 80, 75, 85, 1); // Фиксированный pitch для Matrix
+    private final NumberSetting grimPitchLimit = new NumberSetting("GrimPitchLimit", 67, 30, 110, 1); // Лимит Grim (67.246 оптимально)
+    private final BooleanSetting randomizeDelay = new BooleanSetting("RandomizeDelay", true);
+    private final NumberSetting minPlaceDelay = new NumberSetting("MinPlaceDelay", 50, 0, 300, 10);
+    private final NumberSetting maxPlaceDelay = new NumberSetting("MaxPlaceDelay", 100, 50, 500, 10);
+    private final BooleanSetting buildTrust = new BooleanSetting("BuildTrust", true); // Накопление траста
+    private final NumberSetting trustBlocks = new NumberSetting("TrustBlocks", 3, 1, 10, 1); // Сколько блоков ставить легитно
+    private final BooleanSetting lastMomentPlace = new BooleanSetting("LastMomentPlace", false); // Выключен по умолчанию
+    
+    // NoServerRotate setting
     private final BooleanSetting noServerRotate = new BooleanSetting("NoServerRotate", true);
     
     // NCPStrict specific
     private final BooleanSetting onlyNotHoldingSpace = new BooleanSetting("OnlyNotHoldingSpace", false);
     
     // State tracking
-    private final TimerUtils timer = new TimerUtils();
     private final TimerUtils lockYTimer = new TimerUtils();
     private BlockPosWithFacing currentBlock;
     private int prevY = -999;
     private boolean wasSneaking = false;
     private BlockPosWithFacing delayedBlock;
     private float[] currentRotations = new float[2];
+    private float[] lastRotations = new float[2]; // Для отслеживания изменений pitch
     private float[] snapRotations = null;
+    private int blocksPlaced = 0; // Счетчик для траста
+    private int trustLevel = 0; // Уровень траста
+    private long nextPlaceTime = 0; // Время следующей установки блока
+    private final java.util.Random random = new java.util.Random();
     private final RotationChanger rotationChanger = new RotationChanger(
             5000,
             () -> new Float[]{currentRotations[0], currentRotations[1]},
@@ -124,6 +139,15 @@ public class Scaffold extends Module {
         delayedBlock = null;
         snapRotations = null;
         lockYTimer.reset();
+        blocksPlaced = 0;
+        trustLevel = 0;
+        nextPlaceTime = 0;
+        
+        // Инициализируем lastRotations текущими углами игрока
+        if (mc.player != null) {
+            lastRotations[0] = mc.player.getYaw();
+            lastRotations[1] = mc.player.getPitch();
+        }
     }
     
     @Override
@@ -159,15 +183,7 @@ public class Scaffold extends Module {
         }
     }
     
-    @EventHandler
-    public void onPacketReceive(EventPacket.Receive e) {
-        if (!noServerRotate.getValue() || fullNullCheck()) return;
-        
-        // Отменяем серверные пакеты, которые пытаются изменить вращение игрока
-        if (e.getPacket() instanceof PlayerPositionLookS2CPacket) {
-            e.cancel();
-        }
-    }
+
     
     @EventHandler
     public void onPlayerTick(EventPlayerTick event) {
@@ -247,22 +263,8 @@ public class Scaffold extends Module {
                         foundBlock.position().getZ() + 0.5
                     ).add(new Vec3d(foundBlock.facing().getUnitVector()).multiply(0.5));
                       
-                    currentRotations = getRotations(hitVec);
-                    
-                    // Use RotationManager for smooth rotations like Aura
-                    if (rotateMode.getValue() == Rotate.Packet) {
-                        MotherHack.getInstance().getRotationManager().addPacketRotation(currentRotations);
-                    } else if (rotateMode.getValue() == Rotate.Snap) {
-                        // Snap rotation - body rotates, camera stays still
-                        snapRotations = currentRotations.clone();
-                        mc.player.setBodyYaw(currentRotations[0]);
-                        mc.player.setHeadYaw(currentRotations[0]);
-                    } else if (rotateMode.getValue() == Rotate.Linear) {
-                        // Linear rotation - use smooth interpolation like Normal mode
-                        MotherHack.getInstance().getRotationManager().addRotation(rotationChanger);
-                    } else if (rotateMode.getValue() != Rotate.None) {
-                        MotherHack.getInstance().getRotationManager().addRotation(rotationChanger);
-                    }
+                    currentRotations = getRotationsWithGrimMatrix(hitVec);
+                    applyRotation();
                 }
                 
                 // In LockY mode, delay placement until jump or after configured delay
@@ -297,38 +299,161 @@ public class Scaffold extends Module {
                     currentBlock.position().getZ() + 0.5
                 ).add(new Vec3d(currentBlock.facing().getUnitVector()).multiply(0.5));
                       
-                currentRotations = getRotations(hitVec);
-                
-                // Use RotationManager for smooth rotations
-                if (rotateMode.getValue() == Rotate.Packet) {
-                    MotherHack.getInstance().getRotationManager().addPacketRotation(currentRotations);
-                } else if (rotateMode.getValue() == Rotate.Snap) {
-                    // Snap rotation - body rotates, camera stays still
-                    snapRotations = currentRotations.clone();
-                    mc.player.setBodyYaw(currentRotations[0]);
-                    mc.player.setHeadYaw(currentRotations[0]);
-                } else if (rotateMode.getValue() == Rotate.Linear) {
-                    // Linear rotation - use smooth interpolation like Normal mode
-                    MotherHack.getInstance().getRotationManager().addRotation(rotationChanger);
-                } else if (rotateMode.getValue() != Rotate.None) {
-                    MotherHack.getInstance().getRotationManager().addRotation(rotationChanger);
-                }
+                currentRotations = getRotationsWithGrimMatrix(hitVec);
+                applyRotation();
             }
         }
         
         // Place the block if we have one
         if (currentBlock != null) {
-            placeBlock(prevSlot);
+            // Проверка траста - первые N блоков ставим легитно
+            if (buildTrust.getValue() && blocksPlaced < trustBlocks.getValue().intValue()) {
+                // Легитный режим - минимальная задержка
+                if (canPlaceBlock()) {
+                    placeBlock(prevSlot);
+                    blocksPlaced++;
+                }
+            } else {
+                // Полный функционал после накопления траста
+                if (trustLevel < 40 && buildTrust.getValue()) {
+                    trustLevel++;
+                }
+                
+                // Last moment placement - ставим только когда вот-вот упадем
+                if (lastMomentPlace.getValue()) {
+                    if (shouldPlaceLastMoment() && canPlaceBlock()) {
+                        placeBlock(prevSlot);
+                        blocksPlaced++;
+                    }
+                } else {
+                    if (canPlaceBlock()) {
+                        placeBlock(prevSlot);
+                        blocksPlaced++;
+                    }
+                }
+            }
+        }
+    }
+    
+    /**
+     * Проверяет, нужно ли ставить блок в последний момент (для обхода Grim)
+     */
+    private boolean shouldPlaceLastMoment() {
+        if (mc.player.isOnGround()) return true;
+        
+        // Проверяем, близко ли мы к краю блока
+        double playerX = mc.player.getX();
+        double playerZ = mc.player.getZ();
+        double playerY = mc.player.getY();
+        
+        // Расстояние от центра блока
+        double offsetX = Math.abs(playerX - Math.floor(playerX) - 0.5);
+        double offsetZ = Math.abs(playerZ - Math.floor(playerZ) - 0.5);
+        
+        // Если близко к краю (больше 0.3 от центра), ставим сразу
+        if (offsetX > 0.3 || offsetZ > 0.3) {
+            return true;
+        }
+        
+        // Рассчитываем расстояние до падения
+        BlockPos targetBlock = new BlockPos(
+            (int) Math.floor(playerX),
+            (int) (Math.floor(playerY - 1)),
+            (int) Math.floor(playerZ)
+        );
+        
+        double fallDistance = playerY - targetBlock.getY() - 1;
+        double verticalSpeed = mc.player.getVelocity().y;
+        
+        if (verticalSpeed < 0) {
+            // Рассчитываем тики до падения
+            int ticksUntilFall = (int)(fallDistance / Math.abs(verticalSpeed));
+            
+            // Увеличиваем окно до 3 тиков для более надежной установки
+            return ticksUntilFall <= 3;
+        }
+        
+        return false;
+    }
+    
+    /**
+     * Проверяет, можно ли ставить блок с учетом рандомизированной задержки
+     */
+    private boolean canPlaceBlock() {
+        long currentTime = System.currentTimeMillis();
+        
+        if (currentTime < nextPlaceTime) {
+            return false;
+        }
+        
+        // Рандомизация задержки для обхода паттерн-детекта
+        if (randomizeDelay.getValue()) {
+            int minDelay = minPlaceDelay.getValue().intValue();
+            int maxDelay = maxPlaceDelay.getValue().intValue();
+            int delay = minDelay + random.nextInt(maxDelay - minDelay + 1);
+            nextPlaceTime = currentTime + delay;
+        } else {
+            nextPlaceTime = currentTime + minPlaceDelay.getValue().longValue();
+        }
+        
+        return true;
+    }
+    
+    /**
+     * Получает ротацию с учетом Grim+Matrix обхода
+     */
+    private float[] getRotationsWithGrimMatrix(Vec3d vec) {
+        float[] targetRotations = RotationUtils.getRotations(vec.x, vec.y, vec.z);
+        
+        if (rotateMode.getValue() != Rotate.GrimMatrix) {
+            return targetRotations;
+        }
+        
+        float yaw = targetRotations[0];
+        float pitch = targetRotations[1];
+        
+        // Matrix байпас - статичный pitch
+        if (staticPitch.getValue()) {
+            pitch = fixedPitch.getValue().floatValue();
+        } else {
+            // Grim байпас - лимитируем скорость изменения pitch
+            float pitchDiff = pitch - lastRotations[1];
+            float maxPitchChange = grimPitchLimit.getValue().floatValue();
+            
+            if (Math.abs(pitchDiff) > maxPitchChange) {
+                pitch = lastRotations[1] + (pitchDiff > 0 ? maxPitchChange : -maxPitchChange);
+            }
+        }
+        
+        // Сохраняем текущие ротации для следующего тика
+        lastRotations[0] = yaw;
+        lastRotations[1] = pitch;
+        
+        return new float[]{yaw, pitch};
+    }
+    
+    /**
+     * Применяет ротацию в зависимости от выбранного режима
+     */
+    private void applyRotation() {
+        if (rotateMode.getValue() == Rotate.Packet) {
+            MotherHack.getInstance().getRotationManager().addPacketRotation(currentRotations);
+        } else if (rotateMode.getValue() == Rotate.Snap) {
+            snapRotations = currentRotations.clone();
+            mc.player.setBodyYaw(currentRotations[0]);
+            mc.player.setHeadYaw(currentRotations[0]);
+        } else if (rotateMode.getValue() == Rotate.Linear) {
+            MotherHack.getInstance().getRotationManager().addRotation(rotationChanger);
+        } else if (rotateMode.getValue() == Rotate.GrimMatrix) {
+            // Для Grim+Matrix используем packet rotation
+            MotherHack.getInstance().getRotationManager().addPacketRotation(currentRotations);
+        } else if (rotateMode.getValue() != Rotate.None) {
+            MotherHack.getInstance().getRotationManager().addRotation(rotationChanger);
         }
     }
     
     private void placeBlock(int prevSlot) {
         if (currentBlock == null) return;
-        
-        float offset = 0.2f;
-        if (mc.world.getBlockCollisions(mc.player, mc.player.getBoundingBox().expand(-offset, 0, -offset).offset(0, -0.5, 0)).iterator().hasNext()) {
-            return;
-        }
         
         BlockHitResult hitResult = new BlockHitResult(
             new Vec3d(
@@ -341,15 +466,11 @@ public class Scaffold extends Module {
             false
         );
         
-        // Handle tower logic
+        // Handle tower logic - только если включен и не в режиме траста
         if (mc.options.jumpKey.isPressed() && !isMoving() && tower.getValue()) {
-            mc.player.setVelocity(0.0, 0.42, 0.0);
-            if (timer.passed(1500)) {
-                mc.player.setVelocity(mc.player.getVelocity().x, -0.28, mc.player.getVelocity().z);
-                timer.reset();
+            if (mc.player.isOnGround()) {
+                mc.player.jump();
             }
-        } else {
-            timer.reset();
         }
         
         // Place the block
@@ -427,10 +548,6 @@ public class Scaffold extends Module {
         return mc.player.input.movementForward != 0 || mc.player.input.movementSideways != 0 || mc.options.jumpKey.isPressed();
     }
     
-    private boolean isOffsetBBEmpty(double x, double z) {
-        return !mc.world.getBlockCollisions(mc.player, mc.player.getBoundingBox().expand(-0.1, 0, -0.1).offset(x, -2, z)).iterator().hasNext();
-    }
-    
     private int findBlockInHotbar() {
         for (int i = 0; i < 9; i++) {
             ItemStack stack = mc.player.getInventory().getStack(i);
@@ -488,10 +605,6 @@ public class Scaffold extends Module {
     private boolean needSneak(net.minecraft.block.Block block) {
         // Simplified sneak check - some blocks require sneaking to place
         return false; // Can be expanded for specific blocks
-    }
-    
-    private float[] getRotations(Vec3d vec) {
-        return RotationUtils.getRotations(vec.x, vec.y, vec.z);
     }
     
     public String getSuffix() {

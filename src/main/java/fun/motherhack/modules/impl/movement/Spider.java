@@ -1,6 +1,7 @@
 package fun.motherhack.modules.impl.movement;
 
 import fun.motherhack.api.events.impl.EventPlayerTick;
+import fun.motherhack.api.events.impl.EventPacket;
 import fun.motherhack.api.events.impl.rotations.EventMotion;
 import fun.motherhack.modules.api.Category;
 import fun.motherhack.modules.api.Module;
@@ -14,8 +15,10 @@ import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.c2s.play.HandSwingC2SPacket;
 import net.minecraft.network.packet.c2s.play.PlayerInteractItemC2SPacket;
+import net.minecraft.network.packet.c2s.play.PlayerMoveC2SPacket;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
@@ -24,6 +27,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.shape.VoxelShape;
 
+import java.util.ArrayList;
 import java.util.stream.Stream;
 
 public class Spider extends Module {
@@ -32,9 +36,13 @@ public class Spider extends Module {
             () -> mode.getValue() == Mode.Vanilla || mode.getValue() == Mode.Matrix);
     private final NumberSetting delay = new NumberSetting("Delay", 2f, 1f, 10f, 1f,
             () -> mode.getValue() == Mode.Matrix || mode.getValue() == Mode.MatrixNew);
-
+    
     private final TimerUtils stopWatch = new TimerUtils();
     private int cooldown = 0;
+    
+    // Polar state
+    private final ArrayList<Packet<?>> polarPackets = new ArrayList<>();
+    private boolean polarActive = false;
     
     // WaterClimb state
     private BlockPos lastWaterPos = null;
@@ -54,6 +62,12 @@ public class Spider extends Module {
             lastWaterPos = null;
             waterState = 0;
             lastPlaceY = 0;
+            // Reset polar state
+            if (polarActive) {
+                mc.player.noClip = false;
+                flushPolarPackets();
+                polarActive = false;
+            }
         }
     }
 
@@ -87,6 +101,18 @@ public class Spider extends Module {
     }
 
     @EventHandler
+    public void onPacketSend(EventPacket.Send event) {
+        if (fullNullCheck()) return;
+        if (mode.getValue() != Mode.Polar) return;
+        
+        // Блокируем пакеты движения когда в стене
+        if (event.getPacket() instanceof PlayerMoveC2SPacket && polarActive) {
+            event.cancel();
+            polarPackets.add(event.getPacket());
+        }
+    }
+
+    @EventHandler
     public void onPlayerTick(EventPlayerTick event) {
         if (fullNullCheck()) return;
 
@@ -101,6 +127,7 @@ public class Spider extends Module {
             case WaterBucket -> handleWaterBucket();
             case SpookyTime -> handleSpookyTime();
             case WaterClimb -> handleWaterClimb();
+            case Polar -> handlePolar();
         }
     }
 
@@ -497,6 +524,41 @@ public class Spider extends Module {
         return new float[]{yaw, pitch};
     }
 
+    // Polar mode - использует noClip и блокировку пакетов для прохождения сквозь блоки
+    private void handlePolar() {
+        if (!mc.player.horizontalCollision) {
+            // Если не у стены - отключаем noClip и отправляем пакеты
+            if (polarActive) {
+                mc.player.noClip = false;
+                flushPolarPackets();
+                polarActive = false;
+            }
+            return;
+        }
+
+        // Включаем noClip когда касаемся стены
+        mc.player.noClip = true;
+        polarActive = true;
+        
+        // Замедляем горизонтальное движение чтобы не улететь
+        mc.player.setVelocity(
+            mc.player.getVelocity().x * 0.6, 
+            mc.player.getVelocity().y, 
+            mc.player.getVelocity().z * 0.6
+        );
+    }
+
+    private void flushPolarPackets() {
+        if (polarPackets.isEmpty()) return;
+        
+        ArrayList<Packet<?>> packetsToSend = new ArrayList<>(polarPackets);
+        polarPackets.clear();
+        
+        for (Packet<?> packet : packetsToSend) {
+            mc.getNetworkHandler().sendPacket(packet);
+        }
+    }
+
     public enum Mode implements Nameable {
         Vanilla("Vanilla"),
         Matrix("Matrix"),
@@ -505,7 +567,8 @@ public class Spider extends Module {
         SlimeBlock("Slime Block"),
         WaterBucket("Water Bucket"),
         SpookyTime("SpookyTime"),
-        WaterClimb("Water Climb");
+        WaterClimb("Water Climb"),
+        Polar("Polar");
 
         private final String name;
 

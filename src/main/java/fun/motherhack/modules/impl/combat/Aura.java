@@ -412,6 +412,7 @@ public class Aura extends Module {
             if (name.contains("1.8")) {
                 if (pvpMode.getValue() != PvPMode.Mode_1_8) {
                     pvpMode.setValue(PvPMode.Mode_1_8);
+                    sprint.setValue(Sprint.Legit);
                     currentDelay = getRandomDelay();
                 }
                 return;
@@ -420,6 +421,7 @@ public class Aura extends Module {
             if (name.contains("1.12")) {
                 if (pvpMode.getValue() != PvPMode.Mode_1_12) {
                     pvpMode.setValue(PvPMode.Mode_1_12);
+                    sprint.setValue(Sprint.None);
                     currentDelay = getRandomDelay();
                 }
                 return;

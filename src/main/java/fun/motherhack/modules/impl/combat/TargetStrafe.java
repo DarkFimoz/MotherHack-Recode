@@ -229,16 +229,22 @@ public class TargetStrafe extends Module {
     public void onMotion(EventMotion event) {
         if (mc == null || mc.player == null || mc.world == null) return;
          
-        // Update target from Aura if available
+        // Update target from Aura or AttackAura
         target = findTarget();
         
         try {
             if (MotherHack.getInstance() != null &&
                 MotherHack.getInstance().getModuleManager() != null) {
+                // Приоритет: сначала Aura, потом AttackAura
                 Aura aura = MotherHack.getInstance().getModuleManager().getModule(Aura.class);
                 if (aura != null && aura.isToggled() && aura.getTarget() != null) {
                     target = aura.getTarget();
-                }
+                } else {
+                    //AttackAura attackAura = MotherHack.getInstance().getModuleManager().getModule(AttackAura.class); доступно в платной версии
+                    //if (attackAura != null && attackAura.isToggled() && attackAura.getTarget() != null) { доступно в платной версии
+                    //    target = attackAura.getTarget(); доступно в платной версии
+                //    }
+                }// я натурал кстати
             }
         } catch (Exception e) {
             e.printStackTrace();

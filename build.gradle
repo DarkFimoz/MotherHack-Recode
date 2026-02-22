@@ -46,6 +46,8 @@ loom {
     runs {
         client {
             vmArgs(
+                "-Xmx1536M",
+                "-Xms512M",
                 "-Dmixin.debug.export=true",
                 "-Dmixin.env.disableRefMap=true",
                 "-Dmixin.checks.interfaces=false",

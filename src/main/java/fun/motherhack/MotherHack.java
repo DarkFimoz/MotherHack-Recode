@@ -45,6 +45,7 @@ public class MotherHack implements ModInitializer, Wrapper {
     private WaypointManager waypointManager;
     private AccountManager accountManager;
     private IgnoreManager ignoreManager;
+    private CapeManager capeManager;
     private ClickGui clickGui;
     private MHackGui mHackGui;
     private MainMenu mainMenu;
@@ -87,6 +88,7 @@ public class MotherHack implements ModInitializer, Wrapper {
         waypointManager = new WaypointManager();
         accountManager = new AccountManager();
         ignoreManager = new IgnoreManager();
+        capeManager = new CapeManager();
         clickGui = new ClickGui();
         mHackGui = new MHackGui();
         mainMenu = new MainMenu();

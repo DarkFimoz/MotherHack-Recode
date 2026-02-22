@@ -17,12 +17,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.network.packet.s2c.play.GameMessageS2CPacket;
-import net.minecraft.registry.Registries;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.screen.slot.SlotActionType;
-import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.Identifier;
 
 import java.awt.*;
 import java.awt.TrayIcon.MessageType;
@@ -78,27 +75,31 @@ public class BedWarsHelper extends Module {
     private final EnumSetting<SwordVersion> swordVersion = new EnumSetting<>("settings.bedwarshelper.swordversion", SwordVersion.V1_8);
     private final EnumSetting<MaterialType> materialType = new EnumSetting<>("settings.bedwarshelper.materialtype", MaterialType.Virtual);
     private final BooleanSetting joinMessage = new BooleanSetting("settings.bedwarshelper.joinmessage", false);
-    private final StringSetting joinMessageText = new StringSetting("settings.bedwarshelper.joinmessagetext", "Всем удачи, наверное вы все умрёте tgk motherhackrecode", false);
+    private final StringSetting joinMessageText = new StringSetting("settings.bedwarshelper.joinmessagetext", "Если вы подписаны на тгк motherhackrecode, то вероятность вашей смерти ниже", false);
     private final BooleanSetting autoJoin = new BooleanSetting("settings.bedwarshelper.autojoin", false);
     private final BooleanSetting playSound = new BooleanSetting("settings.bedwarshelper.playsound", false);
     private final BooleanSetting autoBuy = new BooleanSetting("settings.bedwarshelper.autobuy", false);
     private final NumberSetting autoBuyDelay = new NumberSetting("settings.bedwarshelper.autobuydelay", 150, 0, 1000, 10);
+    private final BooleanSetting autoStealElytra = new BooleanSetting("settings.bedwarshelper.autostealelytra", false);
 
     private final TimerUtils timer = new TimerUtils();
     private final TimerUtils autoBuyTimer = new TimerUtils();
     
-    // Порядок покупки для автобая
+    // Порядок покупки для автобая - просто список предметов для стилла
     private final String[] autoBuyOrder = {
         "shears",           // ножницы
-        "chainmail_boots",  // chainmail_boots
-        "elytra",           // elytra
-        "stone_pickaxe",    // stone_pickaxe
+        "chainmail_boots",  // кольчужные ботинки
+        "elytra",           // элитра
+        "stone_pickaxe",    // каменная кирка (переключит категорию)
         "iron_axe",         // железный топор
         "iron_pickaxe",     // железная кирка
-        "tnt",              // tnt
-        "totem"             // totem
+        "tnt",              // тнт (переключит категорию)
+        "totem"             // тотем
     };
+    
     private int autoBuyIndex = 0;
+    private boolean[] purchasedItems; // Отслеживаем что уже купили
+    private boolean autoBuyCompleted = false; // Флаг завершения покупок в текущей катке
 
     public BedWarsHelper() {
         super("BedWarsHelper", Category.Misc);
@@ -107,7 +108,13 @@ public class BedWarsHelper extends Module {
     @Override
     public void onEnable() {
         super.onEnable();
-        autoBuyIndex = 0; // Сброс индекса при включении модуля
+        resetAutoBuy();
+    }
+    
+    private void resetAutoBuy() {
+        autoBuyIndex = 0;
+        purchasedItems = new boolean[autoBuyOrder.length];
+        autoBuyCompleted = false;
     }
 
     @Override
@@ -125,7 +132,16 @@ public class BedWarsHelper extends Module {
             String containerTitle = containerScreen.getTitle().getString().toLowerCase();
 
             // AutoBuy functionality - работает только в магазине
+            // Проверяем что InvSaver и BuyHelper выключены
             if (autoBuy.getValue() && containerTitle.contains("магазин")) {
+                // Проверяем совместимость с другими модулями
+                Module invSaver = fun.motherhack.MotherHack.getInstance().getModuleManager().getModule(InvSaver.class);
+                
+                if ((invSaver != null && invSaver.isToggled())) {
+                    // Если InvSaver или BuyHelper включены - не работаем
+                    return;  
+                }
+                
                 int playerExp = mc.player.experienceLevel;
                 
                 // Если опыт меньше 3000 или больше 3500 - ничего не делаем
@@ -133,7 +149,12 @@ public class BedWarsHelper extends Module {
                     return;
                 }
                 
-                // Если опыт в диапазоне 3000-3500 - покупаем по порядку
+                // Если уже все купили - не делаем ничего
+                if (autoBuyCompleted) {
+                    return;
+                }
+                
+                // Покупаем по порядку
                 if (autoBuyTimer.passed(autoBuyDelay.getValue().longValue())) {
                     autoBuyFromShop(containerScreen);
                     autoBuyTimer.reset();
@@ -141,12 +162,21 @@ public class BedWarsHelper extends Module {
                 return;
             }
 
+            // AutoStealElytra functionality - работает в GUI "за элитры"
+            if (autoStealElytra.getValue() && containerTitle.contains("за элитры")) {
+                if (timer.passed(delay.getValue().longValue())) {
+                    autoStealElytraFromContainer(containerScreen);
+                    timer.reset();
+                }
+                return;
+            }
+
             // AutoJoin functionality - handle specific containers
             if (autoJoin.getValue()) {
-                if (containerTitle.contains("выбор режима")) {
+                if (containerTitle.contains("выбор режима") || containerTitle.contains("выбор сервера")) {
                     autoJoinSteal(containerScreen, Items.PUFFERFISH);
                     return;
-                } else if (containerTitle.contains("выбор мини-игр")) {
+                } else if (containerTitle.contains("выбор мини-игр") || containerTitle.contains("МИНИ—ИГРЫ")) {
                     autoJoinSteal(containerScreen, Items.RED_BED);
                     return;
                 }
@@ -176,6 +206,11 @@ public class BedWarsHelper extends Module {
         
         if (e.getPacket() instanceof GameMessageS2CPacket packet) {
             String message = packet.content().getString();
+            
+            // Сброс AutoBuy при начале новой катки
+            if (message.contains("Защити свою кровать") || message.contains("bw-")) {
+                resetAutoBuy();
+            }
             
             // Check if JoinMessage is enabled and if the message contains "Защити свою кровать"
             if (joinMessage.getValue() && message.contains("Защити свою кровать")) {
@@ -258,14 +293,58 @@ public class BedWarsHelper extends Module {
         }
     }
 
+    private void autoStealElytraFromContainer(GenericContainerScreen container) {
+        if (container == null || container.getScreenHandler() == null) {
+            return;
+        }
+        
+        // Ищем элитру с названием "Включены" в контейнере
+        for (int i = 0; i < container.getScreenHandler().slots.size() - 36; i++) {
+            Slot slot = container.getScreenHandler().getSlot(i);
+            if (slot == null || slot.getStack() == null || slot.getStack().isEmpty()) continue;
+            
+            ItemStack stack = slot.getStack();
+            
+            // Проверяем, что это элитра
+            if (stack.getItem() == Items.ELYTRA) {
+                // Проверяем название предмета
+                String itemName = stack.getName().getString();
+                if (itemName.contains("Включены")) {
+                    // Кликаем на элитру для покупки/получения
+                    mc.interactionManager.clickSlot(container.getScreenHandler().syncId, i, 0, SlotActionType.QUICK_MOVE, mc.player);
+                    timer.reset();
+                    
+                    // Закрываем контейнер если включено автозакрытие
+                    if (autoClose.getValue()) {
+                        mc.player.closeHandledScreen();
+                    }
+                    return;
+                }
+            }
+        }
+    }
+
     private void autoBuyFromShop(GenericContainerScreen container) {
         if (container == null || container.getScreenHandler() == null) {
             return;
         }
         
-        // Если прошли весь список - сбрасываем
+        // Если прошли весь список - завершаем
         if (autoBuyIndex >= autoBuyOrder.length) {
-            autoBuyIndex = 0;
+            autoBuyCompleted = true;
+            if (autoClose.getValue()) {
+                mc.player.closeHandledScreen();
+            }
+            return;
+        }
+        
+        // Пропускаем уже купленные предметы
+        while (autoBuyIndex < autoBuyOrder.length && purchasedItems[autoBuyIndex]) {
+            autoBuyIndex++;
+        }
+        
+        if (autoBuyIndex >= autoBuyOrder.length) {
+            autoBuyCompleted = true;
             if (autoClose.getValue()) {
                 mc.player.closeHandledScreen();
             }
@@ -274,7 +353,7 @@ public class BedWarsHelper extends Module {
         
         String targetItemName = autoBuyOrder[autoBuyIndex];
         
-        // Ищем предмет в контейнере по имени
+        // Ищем предмет в контейнере
         for (int i = 0; i < container.getScreenHandler().slots.size() - 36; i++) {
             Slot slot = container.getScreenHandler().getSlot(i);
             if (slot == null || slot.getStack() == null || slot.getStack().isEmpty()) continue;
@@ -283,15 +362,15 @@ public class BedWarsHelper extends Module {
             String itemId = net.minecraft.registry.Registries.ITEM.getId(stack.getItem()).getPath().toLowerCase();
             
             if (itemId.contains(targetItemName)) {
-                // Кликаем на предмет для покупки
+                // Кликаем на предмет (стиллим/покупаем)
                 mc.interactionManager.clickSlot(container.getScreenHandler().syncId, i, 0, SlotActionType.PICKUP, mc.player);
+                
+                // Отмечаем что купили
+                purchasedItems[autoBuyIndex] = true;
                 autoBuyIndex++;
                 return;
             }
         }
-        
-        // Если предмет не найден - переходим к следующему
-        autoBuyIndex++;
     }
     
     private void showSystemNotification(String title, String message) {

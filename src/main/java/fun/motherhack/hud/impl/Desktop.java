@@ -3,6 +3,7 @@ package fun.motherhack.hud.impl;
 import fun.motherhack.MotherHack;
 import fun.motherhack.api.events.impl.EventRender2D;
 import fun.motherhack.hud.HudElement;
+import fun.motherhack.modules.impl.client.UI;
 import fun.motherhack.modules.settings.impl.BooleanSetting;
 import fun.motherhack.modules.settings.impl.NumberSetting;
 import fun.motherhack.utils.render.Render2D;
@@ -92,6 +93,8 @@ public class Desktop extends HudElement {
             animPing = animate(animPing, getPing());
         }
 
+        UI.ClickGuiTheme theme = MotherHack.getInstance().getModuleManager().getModule(UI.class).getTheme();
+
         float x = getX();
         float y = getY();
         float currentFontSize = fontSize.getValue();
@@ -99,7 +102,9 @@ public class Desktop extends HudElement {
         Font bodyFont = Fonts.REGULAR;
         int bgAlpha = backgroundAlpha.getValue().intValue();
         Color textColor = new Color(255, 255, 255, 255);
-        Color grayColor = new Color(170, 170, 170, 255);
+        Color accentColor = new Color(255, 100, 120, 255);
+        Color bgColor = new Color(theme.getBackgroundColor().getRed(), theme.getBackgroundColor().getGreen(), theme.getBackgroundColor().getBlue(), bgAlpha);
+        Color blurColor = new Color(theme.getBackgroundColor().getRed(), theme.getBackgroundColor().getGreen(), theme.getBackgroundColor().getBlue(), (int)(bgAlpha * 0.3f));
 
         e.getContext().getMatrices().push();
         e.getContext().getMatrices().translate(x, y, 0f);
@@ -108,33 +113,34 @@ public class Desktop extends HudElement {
 
         float currentX = x;
         float currentY = y;
-        float panelHeight = 15f;
-        float padding = 5f;
+        float panelHeight = 18f;
+        float padding = 6f;
+        float gap = 3f;
 
         // Логотип MH
         String logoText = "MH";
-        float logoWidth = font.getWidth(logoText, currentFontSize + 2f) + padding * 2;
-        Render2D.drawBlurredRect(e.getContext().getMatrices(), currentX, currentY, logoWidth, panelHeight, 5f, 10f, new Color(255, 255, 255, (int)(bgAlpha * 0.3f)));
-        Render2D.drawRoundedRect(e.getContext().getMatrices(), currentX, currentY, logoWidth, panelHeight, 5f, new Color(0, 0, 0, bgAlpha));
-        Render2D.drawFont(e.getContext().getMatrices(), font.getFont(currentFontSize + 2f), logoText, currentX + padding, currentY + 2.5f, textColor);
-        currentX += logoWidth + 2;
+        float logoWidth = font.getWidth(logoText, currentFontSize + 3f) + padding * 2;
+        Render2D.drawBlurredRect(e.getContext().getMatrices(), currentX, currentY, logoWidth, panelHeight, 6f, 12f, blurColor);
+        Render2D.drawRoundedRect(e.getContext().getMatrices(), currentX, currentY, logoWidth, panelHeight, 6f, bgColor);
+        Render2D.drawFont(e.getContext().getMatrices(), font.getFont(currentFontSize + 3f), logoText, currentX + padding, currentY + 3f, accentColor);
+        currentX += logoWidth + gap;
 
-        // Название клиента
-        String clientName = "MotherHack";
+        // Имя игрока
+        String clientName = mc.player != null ? mc.player.getName().getString() : "Player";
         float nameWidth = bodyFont.getWidth(clientName, currentFontSize) + padding * 2;
-        Render2D.drawBlurredRect(e.getContext().getMatrices(), currentX, currentY, nameWidth, panelHeight, 5f, 10f, new Color(255, 255, 255, (int)(bgAlpha * 0.3f)));
-        Render2D.drawRoundedRect(e.getContext().getMatrices(), currentX, currentY, nameWidth, panelHeight, 5f, new Color(0, 0, 0, bgAlpha));
-        Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), clientName, currentX + padding, currentY + 3f, textColor);
-        currentX += nameWidth + 2;
+        Render2D.drawBlurredRect(e.getContext().getMatrices(), currentX, currentY, nameWidth, panelHeight, 6f, 12f, blurColor);
+        Render2D.drawRoundedRect(e.getContext().getMatrices(), currentX, currentY, nameWidth, panelHeight, 6f, bgColor);
+        Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), clientName, currentX + padding, currentY + 5f, textColor);
+        currentX += nameWidth + gap;
 
         // FPS
         if (showFps.getValue()) {
             String fpsText = Math.round(animFps) + " fps";
             float fpsWidth = bodyFont.getWidth(fpsText, currentFontSize) + padding * 2;
-            Render2D.drawBlurredRect(e.getContext().getMatrices(), currentX, currentY, fpsWidth, panelHeight, 5f, 10f, new Color(255, 255, 255, (int)(bgAlpha * 0.3f)));
-            Render2D.drawRoundedRect(e.getContext().getMatrices(), currentX, currentY, fpsWidth, panelHeight, 5f, new Color(0, 0, 0, bgAlpha));
-            Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), fpsText, currentX + padding, currentY + 3f, textColor);
-            currentX += fpsWidth + 2;
+            Render2D.drawBlurredRect(e.getContext().getMatrices(), currentX, currentY, fpsWidth, panelHeight, 6f, 12f, blurColor);
+            Render2D.drawRoundedRect(e.getContext().getMatrices(), currentX, currentY, fpsWidth, panelHeight, 6f, bgColor);
+            Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), fpsText, currentX + padding, currentY + 5f, textColor);
+            currentX += fpsWidth + gap;
         }
 
         // Время
@@ -143,41 +149,51 @@ public class Desktop extends HudElement {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
             String timeText = now.format(formatter);
             float timeWidth = bodyFont.getWidth(timeText, currentFontSize) + padding * 2;
-            Render2D.drawBlurredRect(e.getContext().getMatrices(), x, currentY + panelHeight + 2, timeWidth, panelHeight, 5f, 10f, new Color(255, 255, 255, (int)(bgAlpha * 0.3f)));
-            Render2D.drawRoundedRect(e.getContext().getMatrices(), x, currentY + panelHeight + 2, timeWidth, panelHeight, 5f, new Color(0, 0, 0, bgAlpha));
-            Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), timeText, x + padding, currentY + panelHeight + 5f, textColor);
+            Render2D.drawBlurredRect(e.getContext().getMatrices(), currentX, currentY, timeWidth, panelHeight, 6f, 12f, blurColor);
+            Render2D.drawRoundedRect(e.getContext().getMatrices(), currentX, currentY, timeWidth, panelHeight, 6f, bgColor);
+            Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), timeText, currentX + padding, currentY + 5f, textColor);
+            currentX += timeWidth + gap;
         }
 
-        // Нижняя информация
-        int scHeight = mc.getWindow().getScaledHeight();
-        float bottomY = scHeight - 20f;
+        // Вторая строка - координаты, скорость, пинг
+        float secondRowY = currentY + panelHeight + gap;
+        float secondRowX = x;
 
         // Координаты
         if (showCoords.getValue() && mc.player != null) {
-            String xyzText = String.format("XYZ: %.1f / %.1f / %.1f", animX, animY, animZ);
-            Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), xyzText, 2, bottomY, grayColor);
-            bottomY -= 10f;
+            String xyzText = String.format("XYZ %.0f %.0f %.0f", animX, animY, animZ);
+            float xyzWidth = bodyFont.getWidth(xyzText, currentFontSize) + padding * 2;
+            Render2D.drawBlurredRect(e.getContext().getMatrices(), secondRowX, secondRowY, xyzWidth, panelHeight, 6f, 12f, blurColor);
+            Render2D.drawRoundedRect(e.getContext().getMatrices(), secondRowX, secondRowY, xyzWidth, panelHeight, 6f, bgColor);
+            Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), xyzText, secondRowX + padding, secondRowY + 5f, textColor);
+            secondRowX += xyzWidth + gap;
         }
 
         // Скорость
         if (showSpeed.getValue()) {
-            String speedText = String.format("Speed: %.1f b/s", animSpeed);
-            Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), speedText, 2, bottomY, grayColor);
+            String speedText = String.format("%.1f b/s", animSpeed);
+            float speedWidth = bodyFont.getWidth(speedText, currentFontSize) + padding * 2;
+            Render2D.drawBlurredRect(e.getContext().getMatrices(), secondRowX, secondRowY, speedWidth, panelHeight, 6f, 12f, blurColor);
+            Render2D.drawRoundedRect(e.getContext().getMatrices(), secondRowX, secondRowY, speedWidth, panelHeight, 6f, bgColor);
+            Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), speedText, secondRowX + padding, secondRowY + 5f, textColor);
+            secondRowX += speedWidth + gap;
         }
 
-        // Пинг (справа)
+        // Пинг
         if (showPing.getValue()) {
-            String pingText = "Ping: " + Math.round(animPing) + "ms";
-            float pingWidth = bodyFont.getWidth(pingText, currentFontSize);
-            int scWidth = mc.getWindow().getScaledWidth();
-            Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), pingText, scWidth - pingWidth - 3f, scHeight - 20f, grayColor);
+            String pingText = Math.round(animPing) + "ms";
+            float pingWidth = bodyFont.getWidth(pingText, currentFontSize) + padding * 2;
+            Render2D.drawBlurredRect(e.getContext().getMatrices(), secondRowX, secondRowY, pingWidth, panelHeight, 6f, 12f, blurColor);
+            Render2D.drawRoundedRect(e.getContext().getMatrices(), secondRowX, secondRowY, pingWidth, panelHeight, 6f, bgColor);
+            Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), pingText, secondRowX + padding, secondRowY + 5f, textColor);
+            secondRowX += pingWidth + gap;
         }
 
         e.getContext().getMatrices().pop();
 
         // Устанавливаем bounds
-        float totalWidth = currentX - x;
-        float totalHeight = panelHeight * 2 + 4;
+        float totalWidth = Math.max(currentX - x, secondRowX - x);
+        float totalHeight = panelHeight * 2 + gap;
         setBounds(getX(), getY(), totalWidth, totalHeight);
         super.onRender2D(e);
     }

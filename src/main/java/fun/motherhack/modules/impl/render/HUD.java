@@ -18,6 +18,7 @@ public class HUD extends Module {
     private final BooleanSetting potions = new BooleanSetting("Potions", true);
     private final BooleanSetting staffList = new BooleanSetting("StaffList", true);
     private final BooleanSetting desktop = new BooleanSetting("Desktop", true);
+    private final BooleanSetting companion = new BooleanSetting("Companion", true);
 
     private boolean lastWatermark = true;
     private boolean lastTargetHud = true;
@@ -26,6 +27,7 @@ public class HUD extends Module {
     private boolean lastPotions = true;
     private boolean lastStaffList = true;
     private boolean lastDesktop = true;
+    private boolean lastCompanion = true;
 
     public HUD() {
         super("HUD", Category.Render);
@@ -36,6 +38,7 @@ public class HUD extends Module {
         getSettings().add(potions);
         getSettings().add(staffList);
         getSettings().add(desktop);
+        getSettings().add(companion);
     }
 
     @Override
@@ -64,7 +67,8 @@ public class HUD extends Module {
             lastKeyBinds != keyBinds.getValue() ||
             lastPotions != potions.getValue() ||
             lastStaffList != staffList.getValue() ||
-            lastDesktop != desktop.getValue()) {
+            lastDesktop != desktop.getValue() ||
+            lastCompanion != companion.getValue()) {
             
             updateHudElements();
             
@@ -75,6 +79,7 @@ public class HUD extends Module {
             lastPotions = potions.getValue();
             lastStaffList = staffList.getValue();
             lastDesktop = desktop.getValue();
+            lastCompanion = companion.getValue();
         }
     }
 
@@ -94,6 +99,8 @@ public class HUD extends Module {
                 element.setToggled(toggled && staffList.getValue());
             } else if (element instanceof Desktop) {
                 element.setToggled(toggled && desktop.getValue());
+            } else if (element instanceof Companion) {
+                element.setToggled(toggled && companion.getValue());
             }
         }
     }

@@ -87,7 +87,15 @@ public abstract class LivingEntityRendererMixin<T extends LivingEntity, S extend
         livingEntityRenderState.usingRiptide = livingEntity.isUsingRiptide();
         livingEntityRenderState.hurt = livingEntity.hurtTime > 0 || livingEntity.deathTime > 0;
         livingEntityRenderState.deathTime = livingEntity.deathTime > 0 ? (float) livingEntity.deathTime + f : 0.0F;
-        livingEntityRenderState.invisibleToPlayer = livingEntityRenderState.invisible && livingEntity.isInvisibleTo(mc.player);
+        
+        // SeeInvisibles module logic
+        fun.motherhack.modules.impl.render.SeeInvisibles seeInvisibles = MotherHack.getInstance().getModuleManager().getModule(fun.motherhack.modules.impl.render.SeeInvisibles.class);
+        if (seeInvisibles != null && seeInvisibles.isToggled()) {
+            livingEntityRenderState.invisibleToPlayer = false;
+        } else {
+            livingEntityRenderState.invisibleToPlayer = livingEntityRenderState.invisible && livingEntity.isInvisibleTo(mc.player);
+        }
+        
         livingEntityRenderState.hasOutline = mc.hasOutline(livingEntity);
     }
 }

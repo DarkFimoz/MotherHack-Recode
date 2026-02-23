@@ -7,7 +7,6 @@ import fun.motherhack.modules.impl.misc.Teams;
 import fun.motherhack.modules.settings.impl.BooleanSetting;
 import fun.motherhack.modules.settings.impl.ListSetting;
 import fun.motherhack.utils.network.Server;
-import fun.motherhack.utils.world.InventoryUtils;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.decoration.ArmorStandEntity;
 import net.minecraft.entity.effect.StatusEffects;
@@ -19,7 +18,8 @@ public class Targets extends Module {
 
     private final ListSetting targets = new ListSetting("Targets",
             new BooleanSetting("settings.targets.players", true),
-            new BooleanSetting("settings.targets.invisibles", true),
+            new BooleanSetting("settings.targets.invisibles", false),
+            new BooleanSetting("settings.targets.spectators", false),
             new BooleanSetting("settings.targets.passives", false),
             new BooleanSetting("settings.targets.hostiles", true)
     );
@@ -36,11 +36,12 @@ public class Targets extends Module {
         if (entity instanceof PlayerEntity player) {
             if (!targets.getName("settings.targets.players").getValue()) return false;
             if (player.hasStatusEffect(StatusEffects.INVISIBILITY) && !targets.getName("settings.targets.invisibles").getValue()) return false;
+            if (player.isSpectator() && !targets.getName("settings.targets.spectators").getValue()) return false;
             if (MotherHack.getInstance().getFriendManager().isFriend(entity.getName().getString())) return false;
             if (Server.isBot(player)) return false;
-            // Если Teams включен - не бить тиммейтов (с таким же цветом брони)
-            if (MotherHack.getInstance().getModuleManager().getModule(Teams.class).isToggled()
-                    && InventoryUtils.getArmorColor(player, 3) == InventoryUtils.getArmorColor(mc.player, 3)) {
+            // Если Teams включен - не бить тиммейтов
+            Teams teamsModule = MotherHack.getInstance().getModuleManager().getModule(Teams.class);
+            if (teamsModule != null && teamsModule.isToggled() && teamsModule.isTeammate(player)) {
                 return false;
             }
             return true;

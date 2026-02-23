@@ -21,11 +21,16 @@ public class BackgroundRendererMixin {
     @Inject(method = "applyFog", at = @At("RETURN"), cancellable = true)
     private static void applyFog(Camera camera, BackgroundRenderer.FogType fogType, Vector4f color, float viewDistance, boolean thickenFog, float tickDelta, CallbackInfoReturnable<Fog> cir) {
         AmbienceModule ambience = MotherHack.getInstance().getModuleManager().getModule(AmbienceModule.class);
-        if (ambience != null && ambience.isToggled() && ambience.customFog.getValue()) {
+        if (ambience != null && ambience.isToggled() && ambience.isCustomFogEnabled()) {
             Color fogColor = ambience.getFogColor();
-            float distance = ambience.distanceFog.getValue();
+            float fogStart = ambience.getFogStart();
+            float fogEnd = ambience.getFogEnd();
             
-            EventFog event = new EventFog(0, distance, fogColor);
+            // Если fogStart или fogEnd равны -1, используем значения по умолчанию
+            if (fogStart < 0) fogStart = 0;
+            if (fogEnd < 0) fogEnd = viewDistance;
+            
+            EventFog event = new EventFog(fogStart, fogEnd, fogColor);
             MotherHack.getInstance().getEventHandler().post(event);
             
             if (!event.isCancelled()) {

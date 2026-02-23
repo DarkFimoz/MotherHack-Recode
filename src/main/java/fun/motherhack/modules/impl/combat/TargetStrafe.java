@@ -229,7 +229,7 @@ public class TargetStrafe extends Module {
     public void onMotion(EventMotion event) {
         if (mc == null || mc.player == null || mc.world == null) return;
          
-        // Update target from Aura if available
+        // Update target from Aura
         target = findTarget();
         
         try {

@@ -46,6 +46,8 @@ loom {
     runs {
         client {
             vmArgs(
+                "-Xmx1536M",
+                "-Xms512M",
                 "-Dmixin.debug.export=true",
                 "-Dmixin.env.disableRefMap=true",
                 "-Dmixin.checks.interfaces=false",
@@ -81,7 +83,7 @@ remapJar {
     inputFile = tasks.shadowJar.archiveFile
 }
 
-// Добавляем ASM для обфускации
+// МАКСИМАЛЬНАЯ ЗАЩИТА JAR
 configurations {
     obfuscator
 }
@@ -91,37 +93,4 @@ dependencies {
     obfuscator 'org.ow2.asm:asm-tree:9.6'
 }
 
-// Компилируем обфускатор
-task compileObfuscator(type: JavaCompile) {
-    source = fileTree('tools') { include '*.java' }
-    destinationDirectory = file("${buildDir}/obfuscator")
-    classpath = configurations.obfuscator
-    sourceCompatibility = '21'
-    targetCompatibility = '21'
-}
 
-// Обфускация строк в JAR файле
-task obfuscateStrings(type: JavaExec, dependsOn: [remapJar, compileObfuscator]) {
-    group = 'build'
-    description = 'Obfuscate strings in module classes'
-    
-    mainClass = 'StringObfuscator'
-    classpath = files("${buildDir}/obfuscator") + configurations.obfuscator
-    
-    doFirst {
-        def inputJar = remapJar.archiveFile.get().asFile
-        def outputJar = file("${buildDir}/libs/${project.archives_base_name}-${project.version}-protected.jar")
-        args = [inputJar.absolutePath, outputJar.absolutePath]
-        println "Obfuscating strings in ${inputJar.name}..."
-    }
-}
-
-// Сборка защищённой версии
-task buildProtected(dependsOn: obfuscateStrings) {
-    group = 'build'
-    description = 'Build protected version with string obfuscation'
-    
-    doLast {
-        println "Protected JAR: build/libs/${project.archives_base_name}-${project.version}-protected.jar"
-    }
-}

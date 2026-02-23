@@ -8,6 +8,7 @@ import fun.motherhack.modules.impl.client.UI;
 import fun.motherhack.modules.settings.impl.BooleanSetting;
 import fun.motherhack.modules.settings.impl.NumberSetting;
 import fun.motherhack.utils.animations.Easing;
+import net.minecraft.util.Identifier;
 import fun.motherhack.utils.animations.infinity.InfinityAnimation;
 import fun.motherhack.utils.math.MathUtils;
 import fun.motherhack.utils.network.Server;
@@ -28,12 +29,16 @@ public class TargetHud extends HudElement {
     private final NumberSetting backgroundAlpha = new NumberSetting("Background Alpha", 80f, 10f, 100f, 5f);
     private final NumberSetting textAlpha = new NumberSetting("Text Alpha", 80f, 10f, 100f, 5f);
     private final BooleanSetting killSounds = new BooleanSetting("Kill Sounds", true);
+    private final BooleanSetting useBackgroundImage = new BooleanSetting("Background Image", false);
+    
+    private static final Identifier BACKGROUND_TEXTURE = Identifier.of("motherhack", "hud/targethud.png");
 
     public TargetHud() {
         super("TargetHud");
         getSettings().add(backgroundAlpha);
         getSettings().add(textAlpha);
         getSettings().add(killSounds);
+        getSettings().add(useBackgroundImage);
         // Set default position to bottom center
         getPosition().getValue().setX(0.42f);
         getPosition().getValue().setY(0.75f);
@@ -56,8 +61,17 @@ public class TargetHud extends HudElement {
 
         UI.ClickGuiTheme theme = MotherHack.getInstance().getModuleManager().getModule(UI.class).getTheme();
 
+        // Получаем цель из Aura
         Aura aura = MotherHack.getInstance().getModuleManager().getModule(Aura.class);
-        LivingEntity target = mc.currentScreen instanceof ChatScreen ? mc.player : aura.getTarget();
+        
+        LivingEntity target = null;
+        if (mc.currentScreen instanceof ChatScreen) {
+            target = mc.player;
+        } else {
+            if (aura != null && aura.getTarget() != null) {
+                target = aura.getTarget();
+            }
+        }
         
         // Check for kill - исправленная система отслеживания
         if (target != null) {
@@ -157,17 +171,39 @@ public class TargetHud extends HudElement {
         }
 
         Render2D.startScissor(e.getContext(), posX, posY, width, height);
-        Color bgColor = new Color(theme.getBackgroundColor().getRed(), theme.getBackgroundColor().getGreen(), theme.getBackgroundColor().getBlue(), backgroundAlpha.getValue().intValue());
-        Render2D.drawStyledRect(
-                e.getContext().getMatrices(),
-                posX,
-                posY,
-                width,
-                height,
-                3.5f,
-                bgColor,
-                255
-        );
+        
+        // Рисуем фон
+        if (useBackgroundImage.getValue()) {
+            // Рисуем изображение как фон с альфа-каналом
+            Color imageColor = new Color(255, 255, 255, backgroundAlpha.getValue().intValue());
+            Render2D.drawTexture(
+                    e.getContext().getMatrices(),
+                    posX,
+                    posY,
+                    width,
+                    height,
+                    3.5f,
+                    0f,
+                    0f,
+                    1f,
+                    1f,
+                    BACKGROUND_TEXTURE,
+                    imageColor
+            );
+        } else {
+            // Обычный цветной фон
+            Color bgColor = new Color(theme.getBackgroundColor().getRed(), theme.getBackgroundColor().getGreen(), theme.getBackgroundColor().getBlue(), backgroundAlpha.getValue().intValue());
+            Render2D.drawStyledRect(
+                    e.getContext().getMatrices(),
+                    posX,
+                    posY,
+                    width,
+                    height,
+                    3.5f,
+                    bgColor,
+                    255
+            );
+        }
 
         float headX = posX + padding;
         float headY = posY + padding;

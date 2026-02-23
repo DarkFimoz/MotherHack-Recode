@@ -21,12 +21,17 @@ public class Panic extends Module {
     }
 
     private final List<Module> saved = new ArrayList<>();
+    private String savedConfig = null;
 
     @Override
     public void onEnable() {
         super.onEnable();
         if (fullNullCheck()) return;
         ChatUtils.sendMessage(I18n.translate("modules.panic.unhookmessage"));
+        
+        // Сохраняем текущий конфиг
+        savedConfig = MotherHack.getInstance().getConfigManager().getCurrentConfig();
+        
         for (Module module : MotherHack.getInstance().getModuleManager().getModules()) {
             if (module == this) continue;
             if (module.isToggled()) {
@@ -64,17 +69,36 @@ public class Panic extends Module {
 
     @EventHandler
     public void onKey(EventKey e) {
-        if (fullNullCheck()) return;
+        if (fullNullCheck() || mc.currentScreen != null) return;
 
         if (e.getKey() == GLFW.GLFW_KEY_PAGE_DOWN && e.getAction() == 1 && MotherHack.getInstance().isPanic()) {
-            for (Module module : saved) {
-                if (module == this) continue;
-                if (!module.isToggled()) module.setToggled(true);
+            // Восстанавливаем конфиг если он был сохранен
+            if (savedConfig != null) {
+                try {
+                    MotherHack.getInstance().getConfigManager().loadConfig(savedConfig);
+                    ChatUtils.sendMessage(I18n.translate("modules.panic.hookmessage") + " (Config: " + savedConfig + ")");
+                } catch (Exception ex) {
+                    ChatUtils.sendMessage("§cОшибка восстановления конфига: " + ex.getMessage());
+                    // Если не удалось загрузить конфиг, восстанавливаем модули вручную
+                    for (Module module : saved) {
+                        if (module == this) continue;
+                        if (!module.isToggled()) module.setToggled(true);
+                    }
+                    ChatUtils.sendMessage(I18n.translate("modules.panic.hookmessage"));
+                }
+            } else {
+                // Восстанавливаем модули вручную если конфиг не был сохранен
+                for (Module module : saved) {
+                    if (module == this) continue;
+                    if (!module.isToggled()) module.setToggled(true);
+                }
+                ChatUtils.sendMessage(I18n.translate("modules.panic.hookmessage"));
             }
 
-            ChatUtils.sendMessage(I18n.translate("modules.panic.hookmessage"));
             MotherHack.getInstance().setPanic(false);
             setToggled(false);
+            saved.clear();
+            savedConfig = null;
         }
     }
 }

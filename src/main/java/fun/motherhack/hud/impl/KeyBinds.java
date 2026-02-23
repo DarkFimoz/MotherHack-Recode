@@ -4,8 +4,8 @@ import fun.motherhack.MotherHack;
 import fun.motherhack.api.events.impl.EventRender2D;
 import fun.motherhack.hud.HudElement;
 import fun.motherhack.modules.api.Module;
-import fun.motherhack.modules.impl.client.UI;
 import fun.motherhack.modules.impl.client.MHACKGUI;
+import fun.motherhack.modules.impl.client.UI;
 import fun.motherhack.modules.settings.impl.BooleanSetting;
 import fun.motherhack.modules.settings.impl.NumberSetting;
 import fun.motherhack.utils.animations.Animation;
@@ -107,9 +107,11 @@ public class KeyBinds extends HudElement {
         if (fullNullCheck() || closed()) return;
         if (Fonts.SEMIBOLD == null || Fonts.REGULAR == null || Fonts.ICONS == null) return;
 
+        UI.ClickGuiTheme theme = MotherHack.getInstance().getModuleManager().getModule(UI.class).getTheme();
+
         List<Module> toggledModules = getToggledModules();
         boolean isInChatScreen = mc.currentScreen instanceof ChatScreen;
-        boolean shouldBeVisible = !toggledModules.isEmpty() || (toggledModules.isEmpty() && isInChatScreen);
+        boolean shouldBeVisible = !toggledModules.isEmpty() || isInChatScreen;
 
         // Анимация появления/исчезновения
         if (shouldBeVisible != isVisible) {
@@ -123,38 +125,39 @@ public class KeyBinds extends HudElement {
 
         float x = getX();
         float y = getY();
-        float padding = 3f;
+        float padding = 5f;
         float currentFontSize = fontSize.getValue();
         Font headerFont = Fonts.SEMIBOLD;
         Font bodyFont = Fonts.REGULAR;
 
-        float headerHeight = currentFontSize + 2f + padding * 2;
+        float headerHeight = currentFontSize + 4f + padding * 2;
         int bgAlpha = (int) (backgroundAlpha.getValue() * alpha);
         int textAlpha = (int) (255 * alpha);
         Color textColor = new Color(255, 255, 255, textAlpha);
-        Color bindColor = new Color(235, 85, 105, textAlpha);
+        Color bindColor = new Color(255, 100, 120, textAlpha);
+        Color bgColor = new Color(theme.getBackgroundColor().getRed(), theme.getBackgroundColor().getGreen(), theme.getBackgroundColor().getBlue(), bgAlpha);
+        Color blurColor = new Color(theme.getBackgroundColor().getRed(), theme.getBackgroundColor().getGreen(), theme.getBackgroundColor().getBlue(), (int)(bgAlpha * 0.3f));
 
         // Расчёт ширины
         String headerText = "KeyBinds";
-        float headerTextWidth = headerFont.getWidth(headerText, currentFontSize + 2f);
-        float maxWidth = headerTextWidth + 30f;
+        float headerTextWidth = headerFont.getWidth(headerText, currentFontSize + 1f);
+        float maxWidth = headerTextWidth + 40f;
 
         if (toggledModules.isEmpty() && isInChatScreen) {
-            // Превью
             String moduleName = "Aura";
             String bind = "R";
-            float lineWidth = bodyFont.getWidth(moduleName, currentFontSize) + bodyFont.getWidth(bind, currentFontSize) + padding * 10;
+            float lineWidth = bodyFont.getWidth(moduleName, currentFontSize) + bodyFont.getWidth(bind, currentFontSize) + padding * 8;
             maxWidth = Math.max(maxWidth, lineWidth);
         } else {
             for (Module module : toggledModules) {
                 String moduleName = module.getName();
                 String bind = getKeyName(module.getBind().toString());
-                float lineWidth = bodyFont.getWidth(moduleName, currentFontSize) + bodyFont.getWidth(bind, currentFontSize) + padding * 10;
+                float lineWidth = bodyFont.getWidth(moduleName, currentFontSize) + bodyFont.getWidth(bind, currentFontSize) + padding * 8;
                 maxWidth = Math.max(maxWidth, lineWidth);
             }
         }
 
-        float width = maxWidth + padding * 2;
+        float width = maxWidth;
 
         e.getContext().getMatrices().push();
         e.getContext().getMatrices().translate(x + width / 2, y + headerHeight / 2, 0f);
@@ -162,65 +165,51 @@ public class KeyBinds extends HudElement {
         e.getContext().getMatrices().translate(-(x + width / 2), -(y + headerHeight / 2), 0f);
 
         // Заголовок с blur
-        Render2D.drawBlurredRect(e.getContext().getMatrices(), x, y, width, headerHeight, 5f, 10f, new Color(255, 255, 255, (int)(bgAlpha * 0.3f)));
-        Render2D.drawRoundedRect(e.getContext().getMatrices(), x, y, width, headerHeight, 5f, new Color(0, 0, 0, bgAlpha));
+        Render2D.drawBlurredRect(e.getContext().getMatrices(), x, y, width, headerHeight, 6f, 12f, blurColor);
+        Render2D.drawRoundedRect(e.getContext().getMatrices(), x, y, width, headerHeight, 6f, bgColor);
 
         // Иконка и текст заголовка
-        Render2D.drawFont(e.getContext().getMatrices(), Fonts.ICONS.getFont(currentFontSize + 4f), "C", x + 5, y + padding - 0.5f, textColor);
-        Render2D.drawFont(e.getContext().getMatrices(), headerFont.getFont(currentFontSize), headerText, x + padding + 20, y + padding - 0.2f, textColor);
+        Render2D.drawFont(e.getContext().getMatrices(), Fonts.ICONS.getFont(currentFontSize + 3f), "C", x + padding, y + padding + 1f, bindColor);
+        Render2D.drawFont(e.getContext().getMatrices(), headerFont.getFont(currentFontSize + 1f), headerText, x + padding + 18, y + padding + 1f, textColor);
 
-        float currentY = y + headerHeight + padding + 0.1f;
-        float rowHeight = currentFontSize + padding * 2 - 1;
+        float currentY = y + headerHeight + 3f;
+        float rowHeight = currentFontSize + padding * 2;
 
         if (toggledModules.isEmpty() && isInChatScreen) {
-            // Превью модуля
             String moduleName = "Aura";
             String bind = "R";
 
-            Render2D.drawBlurredRect(e.getContext().getMatrices(), x, currentY - padding, width, rowHeight, 5f, 10f, new Color(255, 255, 255, (int)(bgAlpha * 0.3f)));
-            Render2D.drawRoundedRect(e.getContext().getMatrices(), x, currentY - padding, width, rowHeight, 5f, new Color(0, 0, 0, bgAlpha));
+            Render2D.drawBlurredRect(e.getContext().getMatrices(), x, currentY, width, rowHeight, 6f, 12f, blurColor);
+            Render2D.drawRoundedRect(e.getContext().getMatrices(), x, currentY, width, rowHeight, 6f, bgColor);
 
-            // Название модуля
-            Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), moduleName, x + padding + 2, currentY - 0.3f, textColor);
+            Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), moduleName, x + padding, currentY + padding, textColor);
 
-            // Бинд
             float bindWidth = bodyFont.getWidth(bind, currentFontSize);
             float bindX = x + width - bindWidth - padding;
-            Render2D.drawFont(e.getContext().getMatrices(), headerFont.getFont(currentFontSize), bind, bindX - 2, currentY - 0.7f, bindColor);
+            Render2D.drawFont(e.getContext().getMatrices(), headerFont.getFont(currentFontSize), bind, bindX, currentY + padding, bindColor);
 
-            // Разделитель (перед биндом)
-            float separatorX = bindX - 8;
-            Render2D.drawRoundedRect(e.getContext().getMatrices(), separatorX, currentY - padding + 1.5f, 1, 11, 1f, new Color(255, 255, 255, textAlpha));
-
-            currentY += rowHeight + 2;
+            currentY += rowHeight + 3f;
         } else {
-            // Реальные модули
             for (Module module : toggledModules) {
                 String moduleName = module.getName();
                 String bind = getKeyName(module.getBind().toString());
 
-                Render2D.drawBlurredRect(e.getContext().getMatrices(), x, currentY - padding, width, rowHeight, 5f, 10f, new Color(255, 255, 255, (int)(bgAlpha * 0.3f)));
-                Render2D.drawRoundedRect(e.getContext().getMatrices(), x, currentY - padding, width, rowHeight, 5f, new Color(0, 0, 0, bgAlpha));
+                Render2D.drawBlurredRect(e.getContext().getMatrices(), x, currentY, width, rowHeight, 6f, 12f, blurColor);
+                Render2D.drawRoundedRect(e.getContext().getMatrices(), x, currentY, width, rowHeight, 6f, bgColor);
 
-                // Название модуля
-                Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), moduleName, x + padding + 2, currentY - 0.3f, textColor);
+                Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), moduleName, x + padding, currentY + padding, textColor);
 
-                // Бинд
                 float bindWidth = bodyFont.getWidth(bind, currentFontSize);
                 float bindX = x + width - bindWidth - padding;
-                Render2D.drawFont(e.getContext().getMatrices(), headerFont.getFont(currentFontSize), bind, bindX - 4, currentY - 0.7f, bindColor);
+                Render2D.drawFont(e.getContext().getMatrices(), headerFont.getFont(currentFontSize), bind, bindX, currentY + padding, bindColor);
 
-                // Разделитель (перед биндом)
-                float separatorX = bindX - 10;
-                Render2D.drawRoundedRect(e.getContext().getMatrices(), separatorX, currentY - padding + 1.5f, 1, 11, 1f, new Color(255, 255, 255, textAlpha));
-
-                currentY += rowHeight + 2;
+                currentY += rowHeight + 3f;
             }
         }
 
         e.getContext().getMatrices().pop();
 
-        float totalHeight = currentY - y + padding;
+        float totalHeight = currentY - y;
         setBounds(getX(), getY(), width, totalHeight);
         super.onRender2D(e);
     }

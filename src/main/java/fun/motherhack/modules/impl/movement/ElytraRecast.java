@@ -51,6 +51,9 @@ public class ElytraRecast extends Module {
     // Javelin bypass variables
     private int groundTick = 0;
     private boolean changed = false;
+    
+    // FullLegit mode variables
+    private boolean fullLegitJumping = false;
 
     private enum Exploit implements Nameable {
         None("None"),
@@ -59,7 +62,8 @@ public class ElytraRecast extends Module {
         TH("TH"),
         Legit("Legit"),
         Liquid("Liquid"),
-        Javelin("Javelin");
+        Javelin("Javelin"),
+        FullLegit("FullLegit");
 
         private final String name;
 
@@ -81,6 +85,8 @@ public class ElytraRecast extends Module {
             handleJavelinMode();
         } else if (exploit.getValue() == Exploit.Liquid) {
             handleLiquidMode();
+        } else if (exploit.getValue() == Exploit.FullLegit) {
+            handleFullLegitMode();
         } else if (exploit.getValue() == Exploit.TH) {
             // Only press jump when autoJump is enabled and the conditions for elytra recast are plausible
             if (autoJump.getValue()) {
@@ -129,8 +135,8 @@ public class ElytraRecast extends Module {
 
     @EventHandler
     public void onMotion(EventMotion em) {
-        if (exploit.getValue() == Exploit.Javelin) {
-            // Javelin bypass - фиксированный питч, без настроек
+        if (exploit.getValue() == Exploit.Javelin || exploit.getValue() == Exploit.FullLegit) {
+            // Javelin и FullLegit bypass - фиксированный питч, без настроек
             return;
         } else if (exploit.getValue() == Exploit.TH) {
             if (changePitch.getValue()) {
@@ -266,6 +272,28 @@ public class ElytraRecast extends Module {
         legitDelay = 0;
     }
     
+    private void handleFullLegitMode() {
+        ItemStack chestStack = mc.player.getEquippedStack(EquipmentSlot.CHEST);
+        
+        // Проверяем, что элитры надеты
+        if (!chestStack.isOf(Items.ELYTRA)) {
+            return;
+        }
+        
+        // Проверяем, что элитры не сломаны
+        if (chestStack.getDamage() >= chestStack.getMaxDamage()) {
+            return;
+        }
+        
+        // ВСЕГДА спамим пробел, без остановки
+        mc.options.jumpKey.setPressed(true);
+        
+        // В воздухе постоянно пытаемся раскрыть элитры (спам пакетов)
+        if (!mc.player.isOnGround() && !mc.player.isGliding()) {
+            mc.player.networkHandler.sendPacket(new ClientCommandC2SPacket(mc.player, ClientCommandC2SPacket.Mode.START_FALL_FLYING));
+        }
+    }
+    
     private void handleJavelinMode() {
         if (mc.player.isUsingItem()) {
             if (mc.player.isSprinting()) {
@@ -351,10 +379,17 @@ public class ElytraRecast extends Module {
         // Check if Minecraft client and player exist
         if (mc == null || mc.player == null) return;
          
-        // Reset key states safely
+        // Reset key states safely - только те, которые модуль контролирует
         try {
-            mc.options.forwardKey.setPressed(false);
-            mc.options.jumpKey.setPressed(false);
+            // Сбрасываем jumpKey только для режимов, которые его контролируют
+            if (exploit.getValue() == Exploit.TH || exploit.getValue() == Exploit.FullLegit) {
+                mc.options.jumpKey.setPressed(false);
+            }
+            
+            // Сбрасываем forwardKey только для TH режима с autoWalk
+            if (exploit.getValue() == Exploit.TH && autoWalk.getValue()) {
+                mc.options.forwardKey.setPressed(false);
+            }
         } catch (Exception e) {
             // Silently handle any exceptions
         }
@@ -369,6 +404,9 @@ public class ElytraRecast extends Module {
         resetLegitState();
         legitCooldown = 0;
         lastJumpTime = 0;
+        
+        // Reset FullLegit mode state
+        fullLegitJumping = false;
         
         // Reset Javelin mode state
         if (this.changed && mc.player.isSprinting()) {

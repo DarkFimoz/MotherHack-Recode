@@ -22,21 +22,21 @@ public class UI extends Module {
     @AllArgsConstructor @Getter
     public enum ClickGuiTheme implements Nameable {
         Default("Default", new Color(0, 0, 0, 220), Color.WHITE, new Color(255, 255, 255, 25)),
-        Christmas("Новогодний", new Color(139, 0, 0, 220), Color.WHITE, new Color(255, 255, 255, 25)),
-        Lime("Лаймовый", new Color(0, 100, 0, 220), Color.WHITE, new Color(255, 255, 255, 25)),
-        Oceanic("Океанический", new Color(0, 0, 139, 220), Color.WHITE, new Color(0, 191, 255, 25)),
-        Sunset("Закат", new Color(255, 140, 0, 220), Color.WHITE, new Color(255, 165, 0, 25)),
-        Forest("Лесной", new Color(34, 139, 34, 220), Color.WHITE, new Color(0, 255, 0, 25)),
-        Midnight("Полночь", new Color(25, 25, 112, 220), Color.WHITE, new Color(0, 0, 255, 25)),
-        Rose("Розовый", new Color(255, 20, 147, 220), Color.WHITE, new Color(255, 182, 193, 25)),
-        Electric("Электрик", new Color(0, 255, 255, 220), Color.BLACK, new Color(0, 255, 255, 25)),
-        Galaxy("Галактика", new Color(75, 0, 130, 220), Color.WHITE, new Color(255, 0, 255, 25)),
-        Amber("Янтарный", new Color(255, 191, 0, 220), Color.BLACK, new Color(255, 215, 0, 25)),
-        Mint("Мятный", new Color(0, 255, 128, 220), Color.BLACK, new Color(0, 255, 128, 25)),
-        Crimson("Багровый", new Color(220, 20, 60, 220), Color.WHITE, new Color(255, 0, 0, 25)),
-        Azure("Лазурный", new Color(0, 127, 255, 220), Color.WHITE, new Color(0, 191, 255, 25)),
-        Emerald("Изумрудный", new Color(0, 128, 0, 220), Color.WHITE, new Color(0, 255, 0, 25)),
-        Ruby("Рубиновый", new Color(155, 17, 30, 220), Color.WHITE, new Color(255, 0, 0, 25));
+        Christmas("Новогодний", new Color(139, 0, 0, 220), new Color(255, 100, 100), new Color(255, 255, 255, 25)),
+        Lime("Лаймовый", new Color(0, 100, 0, 220), new Color(144, 238, 144), new Color(255, 255, 255, 25)),
+        Oceanic("Океанический", new Color(0, 0, 139, 220), new Color(0, 191, 255), new Color(0, 191, 255, 25)),
+        Sunset("Закат", new Color(255, 140, 0, 220), new Color(255, 200, 100), new Color(255, 165, 0, 25)),
+        Forest("Лесной", new Color(34, 139, 34, 220), new Color(144, 238, 144), new Color(0, 255, 0, 25)),
+        Midnight("Полночь", new Color(25, 25, 112, 220), new Color(135, 206, 250), new Color(0, 0, 255, 25)),
+        Rose("Розовый", new Color(255, 20, 147, 220), new Color(255, 182, 193), new Color(255, 182, 193, 25)),
+        Electric("Электрик", new Color(0, 255, 255, 220), new Color(0, 255, 255), new Color(0, 255, 255, 25)),
+        Galaxy("Галактика", new Color(75, 0, 130, 220), new Color(186, 85, 211), new Color(255, 0, 255, 25)),
+        Amber("Янтарный", new Color(255, 191, 0, 220), new Color(255, 215, 0), new Color(255, 215, 0, 25)),
+        Mint("Мятный", new Color(0, 255, 128, 220), new Color(152, 255, 152), new Color(0, 255, 128, 25)),
+        Crimson("Багровый", new Color(220, 20, 60, 220), new Color(255, 99, 71), new Color(255, 0, 0, 25)),
+        Azure("Лазурный", new Color(0, 127, 255, 220), new Color(135, 206, 250), new Color(0, 191, 255, 25)),
+        Emerald("Изумрудный", new Color(0, 128, 0, 220), new Color(80, 200, 120), new Color(0, 255, 0, 25)),
+        Ruby("Рубиновый", new Color(155, 17, 30, 220), new Color(255, 69, 0), new Color(255, 0, 0, 25));
 
         private final String name;
         private final Color backgroundColor;

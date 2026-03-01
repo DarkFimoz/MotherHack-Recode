@@ -6,7 +6,7 @@
 ![Fabric](https://img.shields.io/badge/Fabric-0.16.10-blue?style=for-the-badge)
 ![Java](https://img.shields.io/badge/Java-21-orange?style=for-the-badge&logo=openjdk)
 ![Version](https://img.shields.io/badge/Version-2.0--recode-purple?style=for-the-badge)
-![Modules](https://img.shields.io/badge/Modules-141-black?style=for-the-badge)
+![Modules](https://img.shields.io/badge/Modules-151-black?style=for-the-badge)
 
 **Utility мод для Minecraft на Fabric 1.21.4, требует Fabric Api!!!**
 

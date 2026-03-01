@@ -45,8 +45,9 @@ public class WaterSpeed extends Module {
 
     @Override
     public void onDisable() {
-        if (fullNullCheck()) return;
-        if (mode.getValue() == Mode.DolphinGrace && mc.player != null)
+        if (mc.player != null && mode.getValue() == Mode.DolphinGrace) {
             mc.player.removeStatusEffect(StatusEffects.DOLPHINS_GRACE);
+        }
+        super.onDisable();
     }
 }

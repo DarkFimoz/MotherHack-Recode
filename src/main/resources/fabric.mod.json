@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "motherhack-recode-fabric",
-  "version": "1.7-recode",
+  "version": "2.0-recode",
   "name": "MotherHack",
   "description": "",
   "authors": ["Dmitriy Fimozov, KissedWarrior"],
@@ -17,6 +17,7 @@
   "mixins": [
     "motherhack-recode.mixins.json"
   ],
+  "accessWidener": "motherhack-recode.accesswidener",
   "depends": {
     "fabricloader": ">=0.16.10",
     "minecraft": "1.21.4"

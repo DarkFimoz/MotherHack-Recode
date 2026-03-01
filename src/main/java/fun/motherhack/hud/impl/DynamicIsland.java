@@ -43,15 +43,26 @@ public class DynamicIsland extends HudElement {
             
             MediaPlayer mediaPlayer = MotherHack.getInstance().getMediaPlayer();
             if (mediaPlayer == null) {
+                System.err.println("[DynamicIsland] MediaPlayer is null!");
                 mediaAnimation.update(false);
                 return;
             }
             
+            // Вызываем onTick для обновления состояния медиаплеера
             mediaPlayer.onTick();
             
+            // Проверяем, есть ли активная сессия и трек
             boolean isPlaying = !mediaPlayer.fullNullCheck() && 
                               mediaPlayer.getTitle() != null && 
                               !mediaPlayer.getTitle().isEmpty();
+            
+            // Отладочная информация
+            if (!wasPlaying && isPlaying) {
+                System.out.println("[DynamicIsland] MediaPlayer активен!");
+                System.out.println("[DynamicIsland] Session: " + (mediaPlayer.getSession() != null));
+                System.out.println("[DynamicIsland] Title: " + mediaPlayer.getTitle());
+                System.out.println("[DynamicIsland] Artist: " + mediaPlayer.getArtist());
+            }
             
             mediaAnimation.update(isPlaying);
             
@@ -70,6 +81,7 @@ public class DynamicIsland extends HudElement {
             }
         } catch (Exception ex) {
             System.err.println("[DynamicIsland] Ошибка в onTick: " + ex.getMessage());
+            ex.printStackTrace();
             mediaAnimation.update(false);
             wasPlaying = false;
         }
@@ -81,7 +93,12 @@ public class DynamicIsland extends HudElement {
             if (fullNullCheck() || closed()) return;
 
             MediaPlayer mediaPlayer = MotherHack.getInstance().getMediaPlayer();
-            if (mediaPlayer == null || mediaPlayer.fullNullCheck()) {
+            if (mediaPlayer == null) {
+                return;
+            }
+            
+            // Проверяем, есть ли что отображать
+            if (mediaPlayer.fullNullCheck()) {
                 return;
             }
 
@@ -92,6 +109,12 @@ public class DynamicIsland extends HudElement {
 
             String title = mediaPlayer.getTitle() != null ? mediaPlayer.getTitle() : "";
             String artist = mediaPlayer.getArtist() != null ? mediaPlayer.getArtist() : "";
+            
+            // Если нет ни названия, ни артиста - не отображаем
+            if (title.isEmpty() && artist.isEmpty()) {
+                return;
+            }
+            
             String track = title + (artist.isEmpty() ? "" : " - " + artist);
             
             float padding = 2f;
@@ -119,17 +142,21 @@ public class DynamicIsland extends HudElement {
             );
 
             // Обложка трека (если есть)
-            if (mediaPlayer.hasTexture()) {
-                Render2D.drawTexture(
-                    e.getContext().getMatrices(),
-                    x + padding,
-                    y + padding,
-                    imageSize - padding * 2,
-                    imageSize - padding * 2,
-                    4f,
-                    mediaPlayer.getTexture(),
-                    Color.WHITE
-                );
+            if (mediaPlayer.hasTexture() && mediaPlayer.getTexture() != null) {
+                try {
+                    Render2D.drawTexture(
+                        e.getContext().getMatrices(),
+                        x + padding,
+                        y + padding,
+                        imageSize - padding * 2,
+                        imageSize - padding * 2,
+                        4f,
+                        mediaPlayer.getTexture(),
+                        Color.WHITE
+                    );
+                } catch (Exception ex) {
+                    System.err.println("[DynamicIsland] Ошибка при отрисовке обложки: " + ex.getMessage());
+                }
             }
 
             // Текст трека
@@ -154,6 +181,7 @@ public class DynamicIsland extends HudElement {
             super.onRender2D(e);
         } catch (Exception ex) {
             System.err.println("[DynamicIsland] Ошибка в onRender2D: " + ex.getMessage());
+            ex.printStackTrace();
         }
     }
 }

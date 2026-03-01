@@ -3,6 +3,7 @@ package fun.motherhack.hud.impl;
 import fun.motherhack.MotherHack;
 import fun.motherhack.api.events.impl.EventRender2D;
 import fun.motherhack.hud.HudElement;
+import fun.motherhack.modules.impl.client.UI;
 import fun.motherhack.modules.settings.impl.BooleanSetting;
 import fun.motherhack.modules.settings.impl.NumberSetting;
 import fun.motherhack.utils.animations.Animation;
@@ -21,19 +22,14 @@ import java.util.List;
 import java.util.Locale;
 import java.util.regex.Pattern;
 
-/**
- * StaffList HUD element - отображает список стаффа на сервере
- */
 public class StaffList extends HudElement {
 
     private final NumberSetting fontSize = new NumberSetting("Font Size", 8f, 4f, 16f, 0.5f);
     private final NumberSetting backgroundAlpha = new NumberSetting("Background Alpha", 80f, 50f, 255f, 5f);
 
-    // Анимация появления
     private final Animation alphaAnimation = new Animation(300, 1f, false, Easing.SMOOTH_STEP);
     private boolean isVisible = false;
 
-    // Паттерны для определения стаффа
     private static final Pattern NAME_PATTERN = Pattern.compile("^\\w{3,16}$");
     private static final Pattern PREFIX_MATCHES = Pattern.compile(".*(mod|der|adm|help|wne|хелп|адм|поддержка|кура|own|staf|curat|dev|supp|yt|гл\\.мод|мл\\.мод|мл\\.сотруд|ст\\.сотруд|стажёр|стажер|сотруд).*");
 
@@ -98,12 +94,13 @@ public class StaffList extends HudElement {
         if (fullNullCheck() || closed()) return;
         if (Fonts.SEMIBOLD == null || Fonts.REGULAR == null || Fonts.ICONS == null) return;
 
+        UI.ClickGuiTheme theme = MotherHack.getInstance().getModuleManager().getModule(UI.class).getTheme();
+
         updateStaffList();
 
         boolean isInChatScreen = mc.currentScreen instanceof ChatScreen;
         boolean shouldBeVisible = !staffPlayers.isEmpty() || isInChatScreen;
 
-        // Анимация появления/исчезновения
         if (shouldBeVisible != isVisible) {
             isVisible = shouldBeVisible;
             alphaAnimation.update(isVisible);
@@ -115,32 +112,35 @@ public class StaffList extends HudElement {
 
         float x = getX();
         float y = getY();
-        float padding = 3f;
+        float padding = 5f;
         float circleRadius = 3f;
         float currentFontSize = fontSize.getValue();
         Font headerFont = Fonts.SEMIBOLD;
         Font bodyFont = Fonts.REGULAR;
 
-        float headerHeight = currentFontSize + 2f + padding * 2;
+        float headerHeight = currentFontSize + 4f + padding * 2;
         int bgAlpha = (int) (backgroundAlpha.getValue() * alpha);
         int textAlpha = (int) (255 * alpha);
+        
         Color textColor = new Color(255, 255, 255, textAlpha);
+        Color iconColor = new Color(255, 100, 120, textAlpha);
+        Color bgColor = new Color(theme.getBackgroundColor().getRed(), theme.getBackgroundColor().getGreen(), theme.getBackgroundColor().getBlue(), bgAlpha);
+        Color blurColor = new Color(theme.getBackgroundColor().getRed(), theme.getBackgroundColor().getGreen(), theme.getBackgroundColor().getBlue(), (int)(bgAlpha * 0.3f));
 
-        // Расчёт ширины
-        String headerText = "StaffList";
-        float headerTextWidth = headerFont.getWidth(headerText, currentFontSize + 2f);
-        float maxWidth = headerTextWidth + padding * 2;
+        String headerText = "Staff List";
+        float headerTextWidth = headerFont.getWidth(headerText, currentFontSize + 1f);
+        float maxWidth = headerTextWidth + 40f;
 
         if (staffPlayers.isEmpty() && isInChatScreen) {
-            // Превью
-            String prefixText = "ADMIN";
+            String prefixText = "DEVELOPER";
             String nameText = "DarkFimoz";
-            float nameWidth = bodyFont.getWidth(prefixText, currentFontSize) + 2 + bodyFont.getWidth(nameText, currentFontSize) + padding * 2 + circleRadius * 2 + 2;
+            float nameWidth = bodyFont.getWidth(prefixText, currentFontSize) + bodyFont.getWidth(nameText, currentFontSize) + padding * 8 + circleRadius * 2;
             maxWidth = Math.max(maxWidth, nameWidth);
         } else {
             for (Staff staff : staffPlayers) {
-                float nameWidth = (staff.prefix.isEmpty() ? 0 : bodyFont.getWidth(staff.prefix, currentFontSize) + 2) +
-                        bodyFont.getWidth(staff.name, currentFontSize) + padding * 2 + circleRadius * 2 + 2;
+                String cleanPrefix = staff.prefix.replaceAll("§.", "");
+                float nameWidth = (staff.prefix.isEmpty() ? 0 : bodyFont.getWidth(cleanPrefix, currentFontSize) + 4) +
+                        bodyFont.getWidth(staff.name, currentFontSize) + padding * 8 + circleRadius * 2;
                 maxWidth = Math.max(maxWidth, nameWidth);
             }
         }
@@ -152,58 +152,51 @@ public class StaffList extends HudElement {
         e.getContext().getMatrices().scale(toggledAnimation.getValue(), toggledAnimation.getValue(), 0);
         e.getContext().getMatrices().translate(-(x + width / 2), -(y + headerHeight / 2), 0f);
 
-        // Заголовок с blur
-        Render2D.drawBlurredRect(e.getContext().getMatrices(), x, y, width, headerHeight, 5f, 10f, new Color(255, 255, 255, (int)(bgAlpha * 0.3f)));
-        Render2D.drawRoundedRect(e.getContext().getMatrices(), x, y, width, headerHeight, 5f, new Color(0, 0, 0, bgAlpha));
+        Render2D.drawBlurredRect(e.getContext().getMatrices(), x, y, width, headerHeight, 6f, 12f, blurColor);
+        Render2D.drawRoundedRect(e.getContext().getMatrices(), x, y, width, headerHeight, 6f, bgColor);
 
-        // Иконка и текст заголовка
-        Render2D.drawFont(e.getContext().getMatrices(), Fonts.ICONS.getFont(currentFontSize + 2f), "D", x + 4, y + padding - 1f, textColor);
-        float headerX = x + width / 2 - headerTextWidth / 2f - 1;
-        Render2D.drawFont(e.getContext().getMatrices(), headerFont.getFont(currentFontSize), headerText, headerX, y + padding - 0.1f, textColor);
+        Render2D.drawFont(e.getContext().getMatrices(), Fonts.ICONS.getFont(currentFontSize + 3f), "D", x + padding + 1, y + padding + 0.5f, iconColor);
+        Render2D.drawFont(e.getContext().getMatrices(), headerFont.getFont(currentFontSize + 1f), headerText, x + padding + 18, y + padding + 1f, textColor);
 
-        float currentY = y + headerHeight + padding;
-        float rowHeight = currentFontSize + padding * 2 - 2;
+        float currentY = y + headerHeight + 3f;
+        float rowHeight = currentFontSize + padding * 2;
 
         if (staffPlayers.isEmpty() && isInChatScreen) {
-            // Превью
-            String nameText = "DarkFimoz";
+            String nameText = "Player";
 
-            Render2D.drawBlurredRect(e.getContext().getMatrices(), x, currentY - padding, width, rowHeight, 5f, 10f, new Color(255, 255, 255, (int)(bgAlpha * 0.3f)));
-            Render2D.drawRoundedRect(e.getContext().getMatrices(), x, currentY - padding, width, rowHeight, 5f, new Color(0, 0, 0, bgAlpha));
+            Render2D.drawBlurredRect(e.getContext().getMatrices(), x, currentY, width, rowHeight, 6f, 12f, blurColor);
+            Render2D.drawRoundedRect(e.getContext().getMatrices(), x, currentY, width, rowHeight, 6f, bgColor);
 
-            // Мигающий кружок (онлайн/оффлайн)
             long timeInSeconds = System.currentTimeMillis() / 800;
-            Color circleColor = (timeInSeconds % 2 == 0) ? new Color(0, 255, 0, textAlpha) : new Color(255, 0, 0, textAlpha);
-            Render2D.drawRoundedRect(e.getContext().getMatrices(), x + padding + 1, currentY + currentFontSize / 2f - circleRadius - 1.7f, 6, 6, circleRadius, circleColor);
+            Color circleColor = (timeInSeconds % 2 == 0) ? new Color(100, 255, 100, textAlpha) : new Color(255, 100, 100, textAlpha);
+            Render2D.drawRoundedRect(e.getContext().getMatrices(), x + padding + 1, currentY + padding - 1, 6, 6, circleRadius, circleColor);
 
-            float textOffsetX = x + padding + circleRadius * 2 + 4;
-            Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), "ADMIN", textOffsetX, currentY - 0.2f, new Color(255, 85, 85, textAlpha));
-            textOffsetX += bodyFont.getWidth("ADMIN", currentFontSize) + 2;
-            Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), nameText, textOffsetX, currentY - 0.2f, textColor);
+            float textOffsetX = x + padding + circleRadius * 2 + 6;
+            Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), "ADMIN", textOffsetX, currentY + padding, new Color(255, 100, 100, textAlpha));
+            textOffsetX += bodyFont.getWidth("ADMIN", currentFontSize) + 4;
+            Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), nameText, textOffsetX, currentY + padding, textColor);
 
-            currentY += rowHeight + 2;
+            currentY += rowHeight + 3f;
         } else {
-            // Реальные стаффы
             for (Staff staff : staffPlayers) {
-                Render2D.drawBlurredRect(e.getContext().getMatrices(), x, currentY - padding, width, rowHeight, 5f, 10f, new Color(255, 255, 255, (int)(bgAlpha * 0.3f)));
-                Render2D.drawRoundedRect(e.getContext().getMatrices(), x, currentY - padding, width, rowHeight, 5f, new Color(0, 0, 0, bgAlpha));
+                Render2D.drawBlurredRect(e.getContext().getMatrices(), x, currentY, width, rowHeight, 6f, 12f, blurColor);
+                Render2D.drawRoundedRect(e.getContext().getMatrices(), x, currentY, width, rowHeight, 6f, bgColor);
 
-                // Цветной кружок (спец/не спец)
-                Color circleColor = staff.isSpec ? new Color(255, 0, 0, textAlpha) : new Color(0, 255, 0, textAlpha);
-                Render2D.drawRoundedRect(e.getContext().getMatrices(), x + padding + 1, currentY + currentFontSize / 2f - circleRadius - 1.7f, 6, 6, circleRadius, circleColor);
+                Color circleColor = staff.isSpec ? new Color(255, 100, 100, textAlpha) : new Color(100, 255, 100, textAlpha);
+                Render2D.drawRoundedRect(e.getContext().getMatrices(), x + padding + 1, currentY + padding - 1, 6, 6, circleRadius, circleColor);
 
-                float textOffsetX = x + padding + circleRadius * 2 + 4;
+                float textOffsetX = x + padding + circleRadius * 2 + 6;
 
                 if (!staff.prefix.isEmpty()) {
                     Color prefixColor = getMinecraftColor(staff.prefix, textAlpha);
                     String cleanPrefix = staff.prefix.replaceAll("§.", "");
-                    Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), cleanPrefix, textOffsetX, currentY - 0.2f, prefixColor);
-                    textOffsetX += bodyFont.getWidth(cleanPrefix, currentFontSize) + 2;
+                    Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), cleanPrefix, textOffsetX, currentY + padding, prefixColor);
+                    textOffsetX += bodyFont.getWidth(cleanPrefix, currentFontSize) + 4;
                 }
 
-                Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), staff.name, textOffsetX, currentY - 0.2f, textColor);
+                Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), staff.name, textOffsetX, currentY + padding, textColor);
 
-                currentY += rowHeight + 2;
+                currentY += rowHeight + 3f;
             }
         }
 

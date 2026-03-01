@@ -8,6 +8,7 @@ import fun.motherhack.api.events.impl.EventKey;
 import fun.motherhack.modules.impl.combat.*;
 import fun.motherhack.modules.impl.movement.*;
 import fun.motherhack.modules.impl.render.*;
+import fun.motherhack.modules.impl.render.Particles.ParticlesModule;
 import fun.motherhack.modules.impl.render.motionblur.MotionBlur;
 import fun.motherhack.modules.impl.misc.*;
 import fun.motherhack.modules.impl.client.*;
@@ -17,6 +18,9 @@ import lombok.Getter;
 import meteordevelopment.orbit.EventHandler;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -34,6 +38,7 @@ public class ModuleManager implements Wrapper {
                 new MHACKGUI(),
                 new Configs(),
                 new CustomBackground(),
+                new Cape(),
                 new NameTags(),
                 new GuiMove(),
                 new RPC(),
@@ -59,6 +64,7 @@ public class ModuleManager implements Wrapper {
                 new AuctionHelper(),
                 new OffHand(),
                 new AutoTotem(),
+                new AutoShield(),
                 new AutoGapple(),
                 new AntiBot(),
                 new DamageParticles(),
@@ -75,7 +81,6 @@ public class ModuleManager implements Wrapper {
                 new AutoAccept(),
                 new PotionTracker(),
                 new UseTracker(),
-                new ViewModel(),
                 new ScoreboardHealth(),
                 new MessageAppend(),
                 new BedTags(),
@@ -110,6 +115,7 @@ public class ModuleManager implements Wrapper {
                 new MathSolver(),
                 new PenisESP(),
                 new Snow(),
+                new ParticlesModule(),
                 new NoServerRotate(),
                 new Wings(),
                 new HotBar(),
@@ -118,10 +124,10 @@ public class ModuleManager implements Wrapper {
                 new SwingAnimations(),
                 new AspectRatio(),
                 new NoCameraClip(),
+                new MotionBlur(),
                 new AutoLogin(),
                 new FakePlayer(),
                 new FreeCam(),
-                new TpAura(),
                 new Arrows(),
                 new Parkour(),
                 new Recorder(),
@@ -132,7 +138,7 @@ public class ModuleManager implements Wrapper {
                 new Models(), // тун сахур BY KISSEDWARRIOR (он фрик)
                 new RWHelper(), 
                 new VanillaDisabler(), // влагалище дизейблер
-                new Bots(), // боты
+                new Bots(), 
                 new Ezz(),
                 new Notifications(), 
                 new NoOpen(), 
@@ -142,9 +148,8 @@ public class ModuleManager implements Wrapper {
                 new Criticals(), 
                 new Reach(), 
                 new Blink(), 
-                new Glide(), 
                 new AutoCasino(), 
-                new FakeFine(), // фейк оптифайн 1.16.5
+                new FakeFine(),
                 new AutoBuff(),
                 new AntiAFK(),
                 new AutoDuel(),
@@ -155,13 +160,15 @@ public class ModuleManager implements Wrapper {
                 new Strafe(),
                 new WaterSpeed(),
                 new BreakHighLight(),
-                new WorldTweaks(),
                 new AntiAttack(),
-                new AKB() //флаг каждую секунду
-                //0. new Fly(), тест флая от @ymepwu
-                //1. new Pets(), тест! Кто будет пастить, сделайте пж работиющим 
-                //2. new Phase(), не роб, зачем нужен?
-                //3. new AutoSign(),
+                new AmbienceModule(), 
+                new SeeInvisibles(),
+                new BowHelper(),
+                new Trajectories(),
+                new FastBreak(),
+                new Pets(),
+                new Phase(),
+                new BaseFinder()
         );
 
 // буду пастить пасту драгхака для пасты драгхака а потом перенесу на тх сурсы все пасты и спащу с тх сурсов пасту 
@@ -209,10 +216,20 @@ public class ModuleManager implements Wrapper {
 
     @EventHandler
     public void onKey(EventKey e) {
-        if (Module.fullNullCheck() || mc.currentScreen != null || MotherHack.getInstance().isPanic()) return;
+        if (Module.fullNullCheck() || mc.currentScreen != null) return;
 
         if (e.getAction() == 1)
             for (Module module : modules) {
+                // Разрешаем Panic работать даже в режиме паники
+                if (module instanceof fun.motherhack.modules.impl.client.Panic) {
+                    if (module.getBind().getKey() == e.getKey() && !module.getBind().isMouse())
+                        module.toggle();
+                    continue;
+                }
+                
+                // Блокируем остальные модули в режиме паники
+                if (MotherHack.getInstance().isPanic()) continue;
+                
                 // Запрещаем toggle GUI модулей через keybind когда открыт любой GUI
                 if ((module instanceof fun.motherhack.modules.impl.client.UI || 
                      module instanceof fun.motherhack.modules.impl.client.MHACKGUI) && 
@@ -225,10 +242,20 @@ public class ModuleManager implements Wrapper {
 
     @EventHandler
     public void onMouse(EventMouse e) {
-        if (Module.fullNullCheck() || mc.currentScreen != null || MotherHack.getInstance().isPanic()) return;
+        if (Module.fullNullCheck() || mc.currentScreen != null) return;
 
         if (e.getAction() == 1)
             for (Module module : modules) {
+                // Разрешаем Panic работать даже в режиме паники
+                if (module instanceof fun.motherhack.modules.impl.client.Panic) {
+                    if (module.getBind().getKey() == e.getButton() && module.getBind().isMouse())
+                        module.toggle();
+                    continue;
+                }
+                
+                // Блокируем остальные модули в режиме паники
+                if (MotherHack.getInstance().isPanic()) continue;
+                
                 // Запрещаем toggle GUI модулей через keybind когда открыт любой GUI
                 if ((module instanceof fun.motherhack.modules.impl.client.UI || 
                      module instanceof fun.motherhack.modules.impl.client.MHACKGUI) && 

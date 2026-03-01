@@ -28,6 +28,7 @@ import java.awt.*;
 public class TargetEsp extends Module {
 
     public final EnumSetting<Mode> mode = new EnumSetting<>("settings.targetesp.mode", Mode.Client);
+    public final EnumSetting<MarkerType> markerType = new EnumSetting<>("settings.targetesp.markertype", MarkerType.Default, () -> mode.getValue() == Mode.Client);
     public final NumberSetting size = new NumberSetting(I18n.translate("settings.targetesp.size"), 15f, 10f, 25f, 1f);
     public final NumberSetting speed = new NumberSetting(I18n.translate("settings.targetesp.speed"), 3f, 0.7f, 9f, 0.1f, () -> mode.getValue() == Mode.Ghosts);
     public final NumberSetting ghostSize = new NumberSetting(I18n.translate("settings.targetesp.ghostsize"), 30f, 5f, 140f, 1f, () -> mode.getValue() == Mode.Ghosts);
@@ -39,6 +40,21 @@ public class TargetEsp extends Module {
         super("TargetEsp", Category.Render);
     }
     
+    @AllArgsConstructor @Getter
+    public enum MarkerType implements Nameable {
+        Default("settings.targetesp.markertype.default", "hud/marker.png"),
+        Rounded("settings.targetesp.markertype.rounded", "hud/rounded_marker.png"),
+        Squared("settings.targetesp.markertype.squared", "hud/square_marker.png");
+
+        private final String name;
+        private final String texturePath;
+
+        @Override
+        public String getName() {
+            return I18n.translate(name);
+        }
+    }
+
     @AllArgsConstructor @Getter
     public enum ColorMode implements Nameable {
         Rainbow("settings.targetesp.colormode.rainbow"),
@@ -75,13 +91,25 @@ public class TargetEsp extends Module {
     public void onRender2D(EventRender2D e) {
         if (fullNullCheck()) return;
         
+        // Получаем цель из Aura модуля
         Aura aura = MotherHack.getInstance().getModuleManager().getModule(Aura.class);
-        if (aura.getTarget() != null) lastTarget = aura.getTarget();
-        animation.update(aura.getTarget() != null);
+        
+        LivingEntity currentTarget = null;
+        
+        // Проверяем что модуль включен и имеет валидную цель
+        if (aura != null && aura.isToggled() && aura.getTarget() != null && aura.getTarget().isAlive()) {
+            currentTarget = aura.getTarget();
+        }
+        
+        if (currentTarget != null && !currentTarget.isRemoved()) {
+            lastTarget = currentTarget;
+        }
+        animation.update(currentTarget != null);
         
         if (animation.getValue() > 0 && lastTarget != null) {
             if (lastTarget.isRemoved() || !lastTarget.isAlive()) {
                 lastTarget = null;
+                animation.update(false);
                 return;
             }
 
@@ -111,7 +139,7 @@ public class TargetEsp extends Module {
         e.getContext().getMatrices().translate(pos.getX(), pos.getY(), 0);
         e.getContext().getMatrices().multiply(RotationAxis.POSITIVE_Z.rotationDegrees((float) sin * 360));
         Render2D.drawTexture(e.getContext().getMatrices(), -finalSize / 2f, -finalSize / 2f, finalSize, finalSize, 0f,
-                MotherHack.id("hud/marker.png"), color);
+                MotherHack.id(markerType.getValue().getTexturePath()), color);
         e.getContext().getMatrices().pop();
     }
 

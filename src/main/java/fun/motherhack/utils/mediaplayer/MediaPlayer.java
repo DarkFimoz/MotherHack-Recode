@@ -19,6 +19,9 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MediaPlayer {
     private static final boolean DISABLE_MEDIA_PLAYER = Boolean.getBoolean("mediaplayer.disable");
     private static final AtomicBoolean isInitialized = new AtomicBoolean(false);
+    private static final int MAX_INIT_RETRIES = 3;
+    private static final AtomicBoolean libraryAvailable = new AtomicBoolean(true);
+    private int initRetries = 0;
     
     private BufferedImage image;
     private AbstractTexture texture;
@@ -40,7 +43,7 @@ public class MediaPlayer {
     private String cachedTitle = "", cachedArtist = "";
 
     public void onTick() {
-        if (DISABLE_MEDIA_PLAYER || !isActive) {
+        if (DISABLE_MEDIA_PLAYER || !isActive || !libraryAvailable.get()) {
             return;
         }
 
@@ -58,10 +61,13 @@ public class MediaPlayer {
 
         CompletableFuture.runAsync(() -> {
             try {
-                if (!isActive) return;
+                if (!isActive || !libraryAvailable.get()) return;
 
                 if (!isInitialized.get()) {
-                    initializeMediaPlayer();
+                    if (initRetries < MAX_INIT_RETRIES) {
+                        initRetries++;
+                        initializeMediaPlayer();
+                    }
                     if (!isInitialized.get()) {
                         return; // Initialization failed
                     }
@@ -78,23 +84,71 @@ public class MediaPlayer {
 
     private void initializeMediaPlayer() {
         try {
-            // Test if media player is available
-            MediaPlayerInfo.Instance.getMediaSessions();
-            isInitialized.set(true);
+            // Check if the native library class is available
+            try {
+                Class.forName("dev.redstones.mediaplayerinfo.MediaPlayerInfo");
+            } catch (ClassNotFoundException e) {
+                System.err.println("[MediaPlayer] MediaPlayerInfo library not found - disabling media player");
+                libraryAvailable.set(false);
+                isActive = false;
+                return;
+            }
+            
+            // Wrap native call in try-catch to prevent JVM crashes
+            List<IMediaSession> testSessions = null;
+            try {
+                testSessions = MediaPlayerInfo.Instance.getMediaSessions();
+            } catch (UnsatisfiedLinkError | NoClassDefFoundError e) {
+                System.err.println("[MediaPlayer] Native library not available: " + e.getMessage());
+                libraryAvailable.set(false);
+                throw e;
+            } catch (Throwable e) {
+                System.err.println("[MediaPlayer] Native call failed: " + e.getMessage());
+                throw e;
+            }
+            
+            if (testSessions != null) {
+                isInitialized.set(true);
+                System.out.println("[MediaPlayer] Successfully initialized");
+            }
         } catch (Throwable e) {
             System.err.println("[MediaPlayer] Failed to initialize media player: " + e.getMessage());
+            e.printStackTrace();
             isActive = false;
+            isInitialized.set(false);
+            libraryAvailable.set(false);
         }
     }
 
     private void updateMediaSession() {
         try {
-            sessions = MediaPlayerInfo.Instance.getMediaSessions();
+            // Wrap native call to prevent crashes
+            List<IMediaSession> newSessions = null;
+            try {
+                newSessions = MediaPlayerInfo.Instance.getMediaSessions();
+            } catch (Throwable e) {
+                System.err.println("[MediaPlayer] Failed to get media sessions: " + e.getMessage());
+                handleError(e);
+                return;
+            }
+            
+            if (newSessions == null || newSessions.isEmpty()) {
+                resetMediaState();
+                return;
+            }
+            
+            sessions = newSessions;
             session = sessions.stream()
-                    .filter(s -> s != null && 
-                              (s.getMedia() != null) && 
-                              (s.getMedia().getArtist() != null || s.getMedia().getTitle() != null) &&
-                              (!s.getMedia().getArtist().isEmpty() || !s.getMedia().getTitle().isEmpty()))
+                    .filter(s -> {
+                        try {
+                            return s != null && 
+                                  (s.getMedia() != null) && 
+                                  (s.getMedia().getArtist() != null || s.getMedia().getTitle() != null) &&
+                                  (!s.getMedia().getArtist().isEmpty() || !s.getMedia().getTitle().isEmpty());
+                        } catch (Throwable e) {
+                            return false;
+                        }
+                    })
                     .findFirst()
                     .orElse(null);
 
@@ -103,7 +157,15 @@ public class MediaPlayer {
                 return;
             }
 
-            MediaInfo info = session.getMedia();
+            MediaInfo info = null;
+            try {
+                info = session.getMedia();
+            } catch (Throwable e) {
+                System.err.println("[MediaPlayer] Failed to get media info: " + e.getMessage());
+                resetMediaState();
+                return;
+            }
+            
             if (info == null) {
                 resetMediaState();
                 return;

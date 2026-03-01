@@ -51,22 +51,23 @@ public class NameProtect extends Module {
     private String createRainbowText(String text) {
         StringBuilder result = new StringBuilder();
         long time = System.currentTimeMillis();
-        double speed = rainbowSpeed.getValue();
+        float speed = rainbowSpeed.getValue().floatValue();
         
         for (int i = 0; i < text.length(); i++) {
             char c = text.charAt(i);
             // Вычисляем hue для каждого символа с учётом времени и позиции
-            float hue = (float) (((time * speed / 10.0) + (i * 10)) % 360) / 360f;
+            // Используем модуль для корректного зацикливания от 0 до 1
+            float hue = (float) ((time * speed * 0.001 + i * 0.1) % 1.0);
             Color color = Color.getHSBColor(hue, 1.0f, 1.0f);
             
-            // Конвертируем в Minecraft цветовой код (используем hex формат §x)
-            String hexColor = String.format("§x§%c§%c§%c§%c§%c§%c",
-                    Character.forDigit((color.getRed() >> 4) & 0xF, 16),
-                    Character.forDigit(color.getRed() & 0xF, 16),
-                    Character.forDigit((color.getGreen() >> 4) & 0xF, 16),
-                    Character.forDigit(color.getGreen() & 0xF, 16),
-                    Character.forDigit((color.getBlue() >> 4) & 0xF, 16),
-                    Character.forDigit(color.getBlue() & 0xF, 16));
+            // Конвертируем в Minecraft hex формат (§x§R§R§G§G§B§B)
+            String hexColor = String.format("§x§%x§%x§%x§%x§%x§%x",
+                    (color.getRed() >> 4) & 0xF,
+                    color.getRed() & 0xF,
+                    (color.getGreen() >> 4) & 0xF,
+                    color.getGreen() & 0xF,
+                    (color.getBlue() >> 4) & 0xF,
+                    color.getBlue() & 0xF);
             
             result.append(hexColor).append(c);
         }

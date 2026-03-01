@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(PlayerEntity.class)
-public abstract class PlayerEntityMixin extends LivingEntity implements Wrapper {
+public abstract class PlayerEntityMixin extends LivingEntity implements Wrapper, fun.motherhack.api.interfaces.IPlayerEntity {
 
     protected PlayerEntityMixin(EntityType<? extends LivingEntity> entityType, World world) {
         super(entityType, world);
@@ -29,4 +29,10 @@ public abstract class PlayerEntityMixin extends LivingEntity implements Wrapper 
 
         return instance.getRotationVector();
     }
+    
+    @org.spongepowered.asm.mixin.Shadow
+    public abstract void setShoulderEntityLeft(net.minecraft.nbt.NbtCompound nbt);
+    
+    @org.spongepowered.asm.mixin.Shadow
+    public abstract void setShoulderEntityRight(net.minecraft.nbt.NbtCompound nbt);
 }

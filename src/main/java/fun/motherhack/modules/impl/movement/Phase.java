@@ -4,104 +4,134 @@ import fun.motherhack.api.events.impl.EventPacket;
 import fun.motherhack.api.events.impl.EventPlayerTick;
 import fun.motherhack.modules.api.Category;
 import fun.motherhack.modules.api.Module;
+import fun.motherhack.modules.settings.api.Nameable;
 import fun.motherhack.modules.settings.impl.BooleanSetting;
-import fun.motherhack.utils.math.TimerUtils;
+import fun.motherhack.modules.settings.impl.EnumSetting;
+import fun.motherhack.modules.settings.impl.NumberSetting;
 import meteordevelopment.orbit.EventHandler;
-import net.minecraft.block.BlockState;
-import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.c2s.play.PlayerMoveC2SPacket;
-import net.minecraft.network.packet.s2c.play.PlayerPositionLookS2CPacket;
+import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec3d;
 
-import java.util.ArrayList;
-
 public class Phase extends Module {
+
     public Phase() {
         super("Phase", Category.Movement);
     }
 
-    public final BooleanSetting duplicate = new BooleanSetting("Duplicate on flag", false);
+    private final EnumSetting<Mode> mode = new EnumSetting<>("Mode", Mode.Vanilla);
+    private final NumberSetting speed = new NumberSetting("Speed", 0.05f, 0.01f, 0.5f, 0.01f);
+    private final BooleanSetting autoDisable = new BooleanSetting("Auto Disable", true);
+    private final BooleanSetting onlyInBlock = new BooleanSetting("Only In Block", true);
 
-    private boolean isInCollisionCheck = false;
-    private Vec3d start = Vec3d.ZERO;
-    private final ArrayList<Packet<?>> blinkedPackets = new ArrayList<>();
-    private final ArrayList<Packet<?>> buffered = new ArrayList<>();
-    private final TimerUtils timeResend = new TimerUtils();
+    private int phaseTimer = 0;
+    private boolean wasInBlock = false;
 
     @Override
     public void onEnable() {
         super.onEnable();
-        if (fullNullCheck()) return;
-        isInCollisionCheck = false;
-        start = mc.player.getPos();
-        blinkedPackets.clear();
-        buffered.clear();
-    }
-
-    @Override
-    public void onDisable() {
-        super.onDisable();
-        if (!fullNullCheck()) {
-            mc.player.noClip = false;
-        }
-        flushPackets();
-        isInCollisionCheck = false;
-        timeResend.reset();
-    }
-
-    @EventHandler
-    public void onPacketSend(EventPacket.Send event) {
-        if (fullNullCheck()) return;
-        
-        if (event.getPacket() instanceof PlayerMoveC2SPacket) {
-            event.cancel();
-            blinkedPackets.add(event.getPacket());
-            buffered.add(event.getPacket());
-        }
-    }
-
-    @EventHandler
-    public void onPacketReceive(EventPacket.Receive event) {
-        if (fullNullCheck()) return;
-        
-        if (event.getPacket() instanceof PlayerPositionLookS2CPacket packet) {
-            if (packet.change().position().distanceTo(start) < 0.3 && duplicate.getValue()) {
-                timeResend.reset();
-            }
-        }
+        phaseTimer = 0;
+        wasInBlock = false;
     }
 
     @EventHandler
     public void onPlayerTick(EventPlayerTick event) {
         if (fullNullCheck()) return;
 
-        boolean hasBlock = mc.world.getStatesInBox(mc.player.getBoundingBox().shrink(0.01F, 0.01F, 0.01F))
-                .anyMatch(BlockState::isSolid);
+        boolean inBlock = isInsideBlock();
 
-        if (!hasBlock && isInCollisionCheck) {
-            flushPackets();
-            isInCollisionCheck = false;
-            mc.player.noClip = false;
-            timeResend.reset();
+        if (onlyInBlock.getValue() && !inBlock) {
+            if (wasInBlock && autoDisable.getValue()) {
+                toggle();
+            }
+            wasInBlock = inBlock;
             return;
         }
 
-        if (hasBlock) {
-            mc.player.setVelocity(mc.player.getVelocity().multiply(0.6F, 1, 0.6F));
-            mc.player.noClip = true;
-            isInCollisionCheck = true;
+        wasInBlock = inBlock;
+
+        switch (mode.getValue()) {
+            case Vanilla -> handleVanillaPhase();
+            case Packet -> handlePacketPhase();
+            case Skip -> handleSkipPhase();
         }
     }
 
-    private void flushPackets() {
-        if (blinkedPackets.isEmpty()) return;
-        
-        // Создаем копию списка для безопасной итерации
-        ArrayList<Packet<?>> packetsToSend = new ArrayList<>(blinkedPackets);
-        blinkedPackets.clear();
-        
-        for (Packet<?> packet : packetsToSend) {
-            mc.getNetworkHandler().sendPacket(packet);
+    @EventHandler
+    public void onPacketSend(EventPacket.Send event) {
+        if (fullNullCheck()) return;
+
+        if (mode.getValue() == Mode.Packet && event.getPacket() instanceof PlayerMoveC2SPacket) {
+            if (isInsideBlock()) {
+                event.cancel();
+            }
+        }
+    }
+
+    private void handleVanillaPhase() {
+        if (!isInsideBlock()) return;
+
+        Vec3d motion = getPhaseMotion();
+        mc.player.setVelocity(motion.x, motion.y, motion.z);
+    }
+
+    private void handlePacketPhase() {
+        if (!isInsideBlock()) return;
+
+        Vec3d motion = getPhaseMotion();
+        Vec3d newPos = mc.player.getPos().add(motion);
+
+        mc.player.setPosition(newPos);
+        mc.player.setVelocity(0, 0, 0);
+    }
+
+    private void handleSkipPhase() {
+        if (!isInsideBlock()) return;
+
+        phaseTimer++;
+        if (phaseTimer >= 3) {
+            Vec3d motion = getPhaseMotion().multiply(2.0);
+            mc.player.setPosition(mc.player.getPos().add(motion));
+            phaseTimer = 0;
+        }
+    }
+
+    private Vec3d getPhaseMotion() {
+        double forward = mc.player.input.movementForward;
+        double strafe = mc.player.input.movementSideways;
+
+        double yaw = Math.toRadians(mc.player.getYaw());
+        double x = (forward * Math.sin(yaw) + strafe * Math.cos(yaw)) * speed.getValue();
+        double z = (forward * Math.cos(yaw) - strafe * Math.sin(yaw)) * speed.getValue();
+        double y = 0;
+
+        if (mc.player.input.playerInput.jump()) y = speed.getValue();
+        if (mc.player.input.playerInput.sneak()) y = -speed.getValue();
+
+        return new Vec3d(-x, y, z);
+    }
+
+    private boolean isInsideBlock() {
+        if (mc.player == null || mc.world == null) return false;
+
+        Box box = mc.player.getBoundingBox().contract(0.0625);
+        return mc.world.getBlockCollisions(mc.player, box).iterator().hasNext();
+    }
+
+    public enum Mode implements Nameable {
+        Vanilla("Vanilla"),
+        Packet("Packet"),
+        Skip("Skip");
+
+        private final String name;
+
+        Mode(String name) {
+            this.name = name;
+        }
+
+        @Override
+        public String getName() {
+            return name;
         }
     }
 }

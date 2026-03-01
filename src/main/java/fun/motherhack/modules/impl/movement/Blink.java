@@ -1,5 +1,6 @@
 package fun.motherhack.modules.impl.movement;
 
+import com.mojang.blaze3d.systems.RenderSystem;
 import fun.motherhack.api.events.impl.EventPacket;
 import fun.motherhack.api.events.impl.EventPlayerTick;
 import fun.motherhack.api.events.impl.EventRender3D;
@@ -7,20 +8,21 @@ import fun.motherhack.modules.api.Category;
 import fun.motherhack.modules.api.Module;
 import fun.motherhack.modules.settings.impl.BooleanSetting;
 import fun.motherhack.modules.settings.impl.ColorSetting;
-import fun.motherhack.modules.settings.impl.EnumSetting;
 import fun.motherhack.modules.settings.impl.NumberSetting;
-import fun.motherhack.modules.settings.api.Nameable;
 import fun.motherhack.utils.network.NetworkUtils;
 import meteordevelopment.orbit.EventHandler;
+import net.minecraft.client.gl.ShaderProgramKeys;
+import net.minecraft.client.render.*;
+import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.c2s.common.CommonPongC2SPacket;
 import net.minecraft.network.packet.c2s.play.*;
 import net.minecraft.network.packet.s2c.play.EntityVelocityUpdateS2CPacket;
 import net.minecraft.util.math.Vec3d;
 import org.lwjgl.glfw.GLFW;
+import org.lwjgl.opengl.GL11;
 
 import java.awt.*;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -32,39 +34,19 @@ public class Blink extends Module {
     private final BooleanSetting disableOnVelocity = new BooleanSetting("settings.blink.disableonvelocity", false);
     private final NumberSetting disablePackets = new NumberSetting("settings.blink.disablepackets", 17f, 1f, 1000f, 1f, autoDisable::getValue);
     private final NumberSetting pulsePackets = new NumberSetting("settings.blink.pulsepackets", 20f, 1f, 1000f, 1f, pulse::getValue);
-    
-    private final BooleanSetting render = new BooleanSetting("settings.blink.render", true);
-    private final EnumSetting<RenderMode> renderMode = new EnumSetting<>("settings.blink.rendermode", RenderMode.Circle, render::getValue);
-    private final ColorSetting circleColor = new ColorSetting("settings.blink.circlecolor", new Color(0xFFda6464), 
-        () -> render.getValue() && (renderMode.getValue() == RenderMode.Circle || renderMode.getValue() == RenderMode.Both));
-    
+    private final ColorSetting circleColor = new ColorSetting("settings.blink.circlecolor", new Color(0xFFda6464));
     private final NumberSetting cancelKey = new NumberSetting("settings.blink.cancelkey", (float) GLFW.GLFW_KEY_LEFT_SHIFT, 0f, 348f, 1f);
 
     public Blink() {
         super("Blink", Category.Movement);
     }
 
-    private enum RenderMode implements Nameable {
-        Circle("settings.blink.rendermode.circle"),
-        Model("settings.blink.rendermode.model"),
-        Both("settings.blink.rendermode.both");
-
-        private final String name;
-
-        RenderMode(String name) {
-            this.name = name;
-        }
-
-        @Override
-        public String getName() {
-            return name;
-        }
-    }
-
     public static Vec3d lastPos = Vec3d.ZERO;
     private Vec3d prevVelocity = Vec3d.ZERO;
     private float prevYaw = 0;
+    private float prevPitch = 0;
     private boolean prevSprinting = false;
+    private boolean prevSneaking = false;
     private final Queue<Packet<?>> storedPackets = new LinkedList<>();
     private final Queue<Packet<?>> storedTransactions = new LinkedList<>();
     private final AtomicBoolean sending = new AtomicBoolean(false);
@@ -82,7 +64,9 @@ public class Blink extends Module {
         lastPos = mc.player.getPos();
         prevVelocity = mc.player.getVelocity();
         prevYaw = mc.player.getYaw();
+        prevPitch = mc.player.getPitch();
         prevSprinting = mc.player.isSprinting();
+        prevSneaking = mc.player.isSneaking();
 
         sending.set(false);
         storedPackets.clear();
@@ -144,9 +128,10 @@ public class Blink extends Module {
             mc.player.setPos(lastPos.getX(), lastPos.getY(), lastPos.getZ());
             mc.player.setVelocity(prevVelocity);
             mc.player.setYaw(prevYaw);
+            mc.player.setPitch(prevPitch);
             mc.player.setSprinting(prevSprinting);
-            mc.player.setSneaking(false);
-            mc.options.sneakKey.setPressed(false);
+            mc.player.setSneaking(prevSneaking);
+            mc.options.sneakKey.setPressed(prevSneaking);
 
             sending.set(true);
             while (!storedTransactions.isEmpty()) {
@@ -194,40 +179,63 @@ public class Blink extends Module {
     @EventHandler
     public void onRender3D(EventRender3D.Game event) {
         if (mc.player == null || mc.world == null) return;
-        if (!render.getValue() || lastPos == null) return;
+        if (lastPos == null || lastPos == Vec3d.ZERO) return;
 
-        if (renderMode.getValue() == RenderMode.Circle || renderMode.getValue() == RenderMode.Both) {
-            float[] hsb = Color.RGBtoHSB(circleColor.getValue().getRed(), 
-                                        circleColor.getValue().getGreen(), 
-                                        circleColor.getValue().getBlue(), null);
-            float hue = (float) (System.currentTimeMillis() % 7200L) / 7200F;
-            int rgb = Color.getHSBColor(hue, hsb[1], hsb[2]).getRGB();
+        MatrixStack matrices = event.getMatrixStack();
+        Vec3d cameraPos = mc.getEntityRenderDispatcher().camera.getPos();
 
-            ArrayList<Vec3d> vecs = new ArrayList<>();
-            double x = lastPos.x;
-            double y = lastPos.y;
-            double z = lastPos.z;
-
-            for (int i = 0; i <= 360; ++i) {
-                Vec3d vec = new Vec3d(
-                    x + Math.sin((double) i * Math.PI / 180.0) * 0.5D,
-                    y + 0.01,
-                    z + Math.cos((double) i * Math.PI / 180.0) * 0.5D
-                );
-                vecs.add(vec);
-            }
-
-            for (int j = 0; j < vecs.size() - 1; ++j) {
-                drawLine(event, vecs.get(j), vecs.get(j + 1), new Color(rgb));
-                hue += (1F / 360F);
-                rgb = Color.getHSBColor(hue, hsb[1], hsb[2]).getRGB();
-            }
-        }
+        renderCircle(matrices, cameraPos);
     }
 
-    private void drawLine(EventRender3D.Game event, Vec3d start, Vec3d end, Color color) {
-        // Simple line rendering using Render3D utility
-        // This is a simplified version - you may need to adjust based on your Render3D implementation
+    private void renderCircle(MatrixStack matrices, Vec3d cameraPos) {
+        matrices.push();
+        
+        RenderSystem.disableDepthTest();
+        RenderSystem.enableBlend();
+        RenderSystem.blendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE);
+        RenderSystem.setShader(ShaderProgramKeys.POSITION_COLOR);
+
+        BufferBuilder buffer = RenderSystem.renderThreadTesselator().begin(VertexFormat.DrawMode.DEBUG_LINES, VertexFormats.POSITION_COLOR);
+
+        double x = lastPos.x - cameraPos.x;
+        double y = lastPos.y - cameraPos.y + 0.01;
+        double z = lastPos.z - cameraPos.z;
+
+        float[] hsb = Color.RGBtoHSB(circleColor.getValue().getRed(), 
+                                    circleColor.getValue().getGreen(), 
+                                    circleColor.getValue().getBlue(), null);
+        float hue = (float) (System.currentTimeMillis() % 7200L) / 7200F;
+
+        int segments = 360;
+        double radius = 0.5;
+
+        for (int i = 0; i <= segments; i++) {
+            double angle1 = Math.toRadians(i);
+            double angle2 = Math.toRadians(i + 1);
+
+            double x1 = x + Math.sin(angle1) * radius;
+            double z1 = z + Math.cos(angle1) * radius;
+            double x2 = x + Math.sin(angle2) * radius;
+            double z2 = z + Math.cos(angle2) * radius;
+
+            int rgb = Color.getHSBColor(hue, hsb[1], hsb[2]).getRGB();
+            int r = (rgb >> 16) & 0xFF;
+            int g = (rgb >> 8) & 0xFF;
+            int b = rgb & 0xFF;
+
+            buffer.vertex(matrices.peek().getPositionMatrix(), (float) x1, (float) y, (float) z1).color(r, g, b, 255);
+            buffer.vertex(matrices.peek().getPositionMatrix(), (float) x2, (float) y, (float) z2).color(r, g, b, 255);
+
+            hue += (1F / segments);
+            if (hue > 1F) hue -= 1F;
+        }
+
+        BufferRenderer.drawWithGlobalProgram(buffer.end());
+
+        RenderSystem.disableBlend();
+        RenderSystem.enableDepthTest();
+        
+        matrices.pop();
     }
 
     public String getDisplayInfo() {

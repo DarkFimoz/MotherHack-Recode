@@ -1,230 +1,226 @@
 package fun.motherhack.modules.impl.render;
 
-import fun.motherhack.MotherHack;
 import fun.motherhack.api.events.impl.EventRender2D;
-import fun.motherhack.api.events.impl.EventRender3D;
 import fun.motherhack.modules.api.Category;
 import fun.motherhack.modules.api.Module;
-import fun.motherhack.modules.impl.client.UI;
-import fun.motherhack.modules.settings.api.Nameable;
-import fun.motherhack.modules.settings.impl.BooleanSetting;
 import fun.motherhack.modules.settings.impl.ColorSetting;
-import fun.motherhack.modules.settings.impl.EnumSetting;
 import fun.motherhack.modules.settings.impl.NumberSetting;
 import fun.motherhack.utils.render.Render2D;
-import fun.motherhack.utils.render.Render3D;
 import fun.motherhack.utils.render.fonts.Fonts;
 import fun.motherhack.utils.world.WorldUtils;
-import lombok.Getter;
-import meteordevelopment.orbit.EventHandler;
-import net.minecraft.client.gui.DrawContext;
-import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.util.math.Box;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.math.MathHelper;
 import org.joml.Vector4d;
 
-import java.awt.*;
+import java.awt.Color;
+import java.util.*;
 
 public class ItemESP extends Module {
-
-    @Getter
-    public enum ESPMode implements Nameable {
-        Rect("Rect"),
-        Circle("Circle"),
-        None("None");
-
-        private final String name;
-
-        ESPMode(String name) {
-            this.name = name;
-        }
-    }
-
-    private final BooleanSetting shadow = new BooleanSetting("settings.itemesp.shadow", true);
-    private final ColorSetting shadowColor = new ColorSetting("settings.itemesp.shadowcolor", new Color(0, 0, 0, 255));
-    private final ColorSetting textColor = new ColorSetting("settings.itemesp.textcolor", new Color(255, 255, 255, 255));
-    private final EnumSetting<ESPMode> espMode = new EnumSetting<>("settings.itemesp.mode", ESPMode.Rect);
-    private final NumberSetting radius = new NumberSetting("settings.itemesp.radius", 1f, 0.1f, 5f, 0.1f, () -> espMode.getValue() == ESPMode.Circle);
-    private final BooleanSetting useHudColor = new BooleanSetting("settings.itemesp.usehudcolor", true, () -> espMode.getValue() == ESPMode.Circle);
-    private final NumberSetting colorOffset = new NumberSetting("settings.itemesp.coloroffset", 2, 1, 50, 1, () -> espMode.getValue() == ESPMode.Circle && useHudColor.getValue());
-    private final ColorSetting circleColor = new ColorSetting("settings.itemesp.circlecolor", new Color(255, 255, 255, 255), () -> espMode.getValue() == ESPMode.Circle && !useHudColor.getValue());
-    private final NumberSetting circlePoints = new NumberSetting("settings.itemesp.circlepoints", 12, 3, 32, 1, () -> espMode.getValue() == ESPMode.Circle);
-    private final NumberSetting range = new NumberSetting("settings.itemesp.range", 100f, 10f, 5000f, 10f);
-
+    
+    private final ColorSetting backgroundColor;
+    private final ColorSetting textColor;
+    private final NumberSetting range;
+    
+    private static final double GROUP_DISTANCE = 2.0;
+    
     public ItemESP() {
         super("ItemESP", Category.Render);
+        
+        this.backgroundColor = new ColorSetting("settings.itemesp.backgroundcolor", 
+            new Color(0, 0, 0, 80));
+        this.textColor = new ColorSetting("settings.itemesp.textcolor", 
+            new Color(255, 255, 255, 255));
+        this.range = new NumberSetting("settings.itemesp.range", 100.0f, 10.0f, 5000.0f, 10.0f);
     }
-
-    @EventHandler
-    public void onRender2D(EventRender2D e) {
-        if (fullNullCheck()) return;
-
-        for (Entity ent : mc.world.getEntities()) {
-            if (!(ent instanceof ItemEntity)) continue;
-            if (mc.player.distanceTo(ent) > range.getValue()) continue;
-
-            Vec3d[] vectors = getPoints(ent, e.getTickCounter().getTickDelta(true));
-            Vector4d position = null;
-
-            for (Vec3d vector : vectors) {
-                vector = WorldUtils.getPosition(new Vec3d(vector.x, vector.y, vector.z));
-                if (vector.z > 0 && vector.z < 1) {
-                    if (position == null)
-                        position = new Vector4d(vector.x, vector.y, vector.z, 0);
-                    position.x = Math.min(vector.x, position.x);
-                    position.y = Math.min(vector.y, position.y);
-                    position.z = Math.max(vector.x, position.z);
-                    position.w = Math.max(vector.y, position.w);
+    
+    @meteordevelopment.orbit.EventHandler
+    public void onRender2D(EventRender2D event) {
+        if (fullNullCheck()) {
+            return;
+        }
+        
+        List<ItemEntity> itemEntities = new ArrayList<>();
+        
+        for (var entity : mc.world.getEntities()) {
+            if (!(entity instanceof ItemEntity itemEntity)) {
+                continue;
+            }
+            
+            float distance = mc.player.distanceTo(entity);
+            if (distance > this.range.getValue()) {
+                continue;
+            }
+            
+            itemEntities.add(itemEntity);
+        }
+        
+        List<ItemGroup> groups = new ArrayList<>();
+        Set<ItemEntity> processed = new HashSet<>();
+        
+        for (ItemEntity item : itemEntities) {
+            if (processed.contains(item)) {
+                continue;
+            }
+            
+            ItemGroup group = new ItemGroup();
+            group.addEntity(item);
+            processed.add(item);
+            
+            for (ItemEntity other : itemEntities) {
+                if (processed.contains(other)) {
+                    continue;
+                }
+                
+                double distance = item.getPos().distanceTo(other.getPos());
+                if (distance <= GROUP_DISTANCE) {
+                    group.addEntity(other);
+                    processed.add(other);
                 }
             }
-
-            if (position != null) {
-                float posX = (float) position.x;
-                float posY = (float) position.y;
-                float endPosX = (float) position.z;
-                float diff = (endPosX - posX) / 2f;
-                String itemName = ent.getDisplayName().getString();
-                float textWidth = Fonts.REGULAR.getWidth(itemName, 9f);
-                float tagX = (posX + diff - textWidth / 2f);
-                float rectWidth = textWidth + 4;
-                float rectHeight = 10;
-
-                if (shadow.getValue()) {
-                    Render2D.drawBlurredRect(e.getContext().getMatrices(),
-                            tagX - 2, posY - 13,
-                            rectWidth, rectHeight,
-                            1.5f, 10f,
-                            shadowColor.getValue());
-                }
-
-                Render2D.drawFont(e.getContext().getMatrices(),
-                        Fonts.REGULAR.getFont(9f),
-                        itemName,
-                        tagX, posY - 12.5f,
-                        textColor.getValue());
-            }
+            
+            groups.add(group);
         }
-
-        if (espMode.getValue() == ESPMode.Rect) {
-            renderRectESP(e);
+        
+        for (ItemGroup group : groups) {
+            renderGroup(event, group);
         }
     }
-
-    @EventHandler
-    public void onRender3D(EventRender3D.Game e) {
-        if (fullNullCheck()) return;
-        if (espMode.getValue() != ESPMode.Circle) return;
-
-        for (Entity ent : mc.world.getEntities()) {
-            if (!(ent instanceof ItemEntity)) continue;
-            if (mc.player.distanceTo(ent) > range.getValue()) continue;
-            renderCircleESP(e.getMatrixStack(), ent, e.getTickCounter().getTickDelta(true));
-        }
-    }
-
-    private void renderRectESP(EventRender2D event) {
-        for (Entity ent : mc.world.getEntities()) {
-            if (!(ent instanceof ItemEntity)) continue;
-            if (mc.player.distanceTo(ent) > range.getValue()) continue;
-
-            Vec3d[] vectors = getPoints(ent, event.getTickCounter().getTickDelta(true));
-            Vector4d position = null;
-
-            for (Vec3d vector : vectors) {
-                vector = WorldUtils.getPosition(new Vec3d(vector.x, vector.y, vector.z));
-                if (vector.z > 0 && vector.z < 1) {
-                    if (position == null)
-                        position = new Vector4d(vector.x, vector.y, vector.z, 0);
-                    position.x = Math.min(vector.x, position.x);
-                    position.y = Math.min(vector.y, position.y);
-                    position.z = Math.max(vector.x, position.z);
-                    position.w = Math.max(vector.y, position.w);
+    
+    private void renderGroup(EventRender2D event, ItemGroup group) {
+        Vector4d bounds = null;
+        
+        for (ItemEntity entity : group.entities) {
+            Vec3d[] points = getPoints(entity, event.getTickCounter().getTickDelta(true));
+            
+            for (Vec3d point : points) {
+                Vec3d screenPos = WorldUtils.getPosition(
+                    new Vec3d(point.x, point.y, point.z));
+                
+                if (screenPos.z > 0 && screenPos.z < 1) {
+                    if (bounds == null) {
+                        bounds = new Vector4d(
+                            screenPos.x, screenPos.y,
+                            screenPos.x, screenPos.y
+                        );
+                    } else {
+                        bounds.x = Math.min(screenPos.x, bounds.x);
+                        bounds.y = Math.min(screenPos.y, bounds.y);
+                        bounds.z = Math.max(screenPos.x, bounds.z);
+                        bounds.w = Math.max(screenPos.y, bounds.w);
+                    }
                 }
             }
-
-            if (position != null) {
-                float posX = (float) position.x;
-                float posY = (float) position.y;
-                float endPosX = (float) position.z;
-                float endPosY = (float) position.w;
-
-                drawRect(event.getContext(), posX, posY, endPosX, endPosY);
+        }
+        
+        if (bounds == null) {
+            return;
+        }
+        
+        float x1 = (float) bounds.x;
+        float y1 = (float) bounds.y;
+        float x2 = (float) bounds.z;
+        float centerX = (x1 + x2) / 2.0f;
+        
+        Map<String, Integer> itemCounts = new LinkedHashMap<>();
+        
+        for (ItemEntity entity : group.entities) {
+            String itemName = entity.getStack().getName().getString();
+            int count = entity.getStack().getCount();
+            
+            itemCounts.put(itemName, 
+                itemCounts.getOrDefault(itemName, 0) + count);
+        }
+        
+        List<String> displayLines = new ArrayList<>();
+        
+        for (Map.Entry<String, Integer> entry : itemCounts.entrySet()) {
+            String line = entry.getValue() > 1 
+                ? entry.getKey() + " " + entry.getValue()
+                : entry.getKey();
+            displayLines.add(line);
+        }
+        
+        float maxWidth = 0;
+        for (String line : displayLines) {
+            float width = Fonts.BOLD.getWidth(line, 10.0f);
+            if (width > maxWidth) {
+                maxWidth = width;
             }
         }
-    }
-
-    private void drawRect(DrawContext context, float posX, float posY, float endPosX, float endPosY) {
-        Color black = Color.BLACK;
-        Color hudColor = getHudColor();
-
-        // Black outline
-        Render2D.drawRoundedRect(context.getMatrices(), posX - 1F, posY, 1.5f, endPosY - posY + 0.5f, 0f, black);
-        Render2D.drawRoundedRect(context.getMatrices(), posX - 1F, posY - 0.5f, endPosX - posX + 0.5f, 1.5f, 0f, black);
-        Render2D.drawRoundedRect(context.getMatrices(), endPosX - 1f, posY, 1.5f, endPosY - posY + 0.5f, 0f, black);
-        Render2D.drawRoundedRect(context.getMatrices(), posX - 1, endPosY - 1f, endPosX - posX + 0.5f, 1.5f, 0f, black);
-
-        // Colored lines
-        Render2D.drawRoundedRect(context.getMatrices(), posX - 0.5f, posY, 1f, endPosY - posY, 0f, hudColor);
-        Render2D.drawRoundedRect(context.getMatrices(), posX, endPosY - 0.5f, endPosX - posX, 1f, 0f, hudColor);
-        Render2D.drawRoundedRect(context.getMatrices(), posX - 0.5f, posY, endPosX - posX, 0.5f, 0f, hudColor);
-        Render2D.drawRoundedRect(context.getMatrices(), endPosX - 0.5f, posY, 1f, endPosY - posY, 0f, hudColor);
-    }
-
-    private void renderCircleESP(MatrixStack stack, Entity ent, float tickDelta) {
-        double x = MathHelper.lerp(tickDelta, ent.prevX, ent.getX());
-        double y = MathHelper.lerp(tickDelta, ent.prevY, ent.getY());
-        double z = MathHelper.lerp(tickDelta, ent.prevZ, ent.getZ());
-
-        Vec3d pos = new Vec3d(x, y, z);
-        Color color = useHudColor.getValue() ? getHudColor() : circleColor.getValue();
-
-        // Simple circle rendering using box
-        Box box = new Box(
-                pos.x - radius.getValue(), y, pos.z - radius.getValue(),
-                pos.x + radius.getValue(), y + 0.1, pos.z + radius.getValue()
+        
+        float padding = 12.0f + (displayLines.size() > 1 ? 4.0f : 0.0f);
+        float verticalPadding = 4.0f + (displayLines.size() > 1 ? 2.0f : 0.0f);
+        float lineHeight = 12.0f;
+        
+        float boxWidth = maxWidth + padding * 2;
+        float boxHeight = displayLines.size() * lineHeight + verticalPadding * 2;
+        
+        float boxX = centerX - boxWidth / 2.0f;
+        float boxY = y1 - boxHeight - 2.0f;
+        
+        Render2D.drawRoundedRect(
+            event.getContext().getMatrices(),
+            boxX, boxY, boxWidth, boxHeight, 4.0f,
+            this.backgroundColor.getValue()
         );
-
-        Render3D.renderBox(stack, box, color);
+        
+        float textY = boxY + verticalPadding;
+        
+        for (String line : displayLines) {
+            float textWidth = Fonts.BOLD.getWidth(line, 10.0f);
+            float textX = boxX + (boxWidth - textWidth) / 2.0f;
+            
+            Render2D.drawFont(
+                event.getContext().getMatrices(),
+                Fonts.BOLD.getFont(10.0f),
+                line, textX, textY,
+                this.textColor.getValue()
+            );
+            
+            textY += lineHeight;
+        }
     }
-
-    private Vec3d[] getPoints(Entity ent, float tickDelta) {
-        Box axisAlignedBB = getBox(ent, tickDelta);
-        return new Vec3d[]{
-                new Vec3d(axisAlignedBB.minX, axisAlignedBB.minY, axisAlignedBB.minZ),
-                new Vec3d(axisAlignedBB.minX, axisAlignedBB.maxY, axisAlignedBB.minZ),
-                new Vec3d(axisAlignedBB.maxX, axisAlignedBB.minY, axisAlignedBB.minZ),
-                new Vec3d(axisAlignedBB.maxX, axisAlignedBB.maxY, axisAlignedBB.minZ),
-                new Vec3d(axisAlignedBB.minX, axisAlignedBB.minY, axisAlignedBB.maxZ),
-                new Vec3d(axisAlignedBB.minX, axisAlignedBB.maxY, axisAlignedBB.maxZ),
-                new Vec3d(axisAlignedBB.maxX, axisAlignedBB.minY, axisAlignedBB.maxZ),
-                new Vec3d(axisAlignedBB.maxX, axisAlignedBB.maxY, axisAlignedBB.maxZ)
+    
+    private Vec3d[] getPoints(Entity entity, float partialTicks) {
+        Box box = getBox(entity, partialTicks);
+        
+        return new Vec3d[] {
+            new Vec3d(box.minX, box.minY, box.minZ),
+            new Vec3d(box.minX, box.maxY, box.minZ),
+            new Vec3d(box.maxX, box.minY, box.minZ),
+            new Vec3d(box.maxX, box.maxY, box.minZ),
+            new Vec3d(box.minX, box.minY, box.maxZ),
+            new Vec3d(box.minX, box.maxY, box.maxZ),
+            new Vec3d(box.maxX, box.minY, box.maxZ),
+            new Vec3d(box.maxX, box.maxY, box.maxZ)
         };
     }
-
-    private Box getBox(Entity ent, float tickDelta) {
-        double x = MathHelper.lerp(tickDelta, ent.prevX, ent.getX());
-        double y = MathHelper.lerp(tickDelta, ent.prevY, ent.getY());
-        double z = MathHelper.lerp(tickDelta, ent.prevZ, ent.getZ());
-
-        Box axisAlignedBB2 = ent.getBoundingBox();
+    
+    private Box getBox(Entity entity, float partialTicks) {
+        double x = MathHelper.lerp(partialTicks, entity.prevX, entity.getX());
+        double y = MathHelper.lerp(partialTicks, entity.prevY, entity.getY());
+        double z = MathHelper.lerp(partialTicks, entity.prevZ, entity.getZ());
+        
+        Box box = entity.getBoundingBox();
+        
         return new Box(
-                axisAlignedBB2.minX - ent.getX() + x - 0.05,
-                axisAlignedBB2.minY - ent.getY() + y,
-                axisAlignedBB2.minZ - ent.getZ() + z - 0.05,
-                axisAlignedBB2.maxX - ent.getX() + x + 0.05,
-                axisAlignedBB2.maxY - ent.getY() + y + 0.15,
-                axisAlignedBB2.maxZ - ent.getZ() + z + 0.05
+            box.minX - entity.getX() + x - 0.05,
+            box.minY - entity.getY() + y,
+            box.minZ - entity.getZ() + z - 0.05,
+            box.maxX - entity.getX() + x + 0.05,
+            box.maxY - entity.getY() + y + 0.15,
+            box.maxZ - entity.getZ() + z + 0.05
         );
     }
-
-    private Color getHudColor() {
-        UI uiModule = MotherHack.getInstance().getModuleManager().getModule(UI.class);
-        if (uiModule != null && uiModule.getTheme() != null) {
-            return uiModule.getTheme().getAccentColor();
+    
+    static class ItemGroup {
+        List<ItemEntity> entities = new ArrayList<>();
+        
+        void addEntity(ItemEntity entity) {
+            entities.add(entity);
         }
-        return new Color(255, 255, 255);
     }
 }

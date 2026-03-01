@@ -20,10 +20,11 @@ public class Bots extends Module {
     private final BooleanSetting enableSpam = new BooleanSetting("settings.bots.enablespam", false);
     private final StringSetting spamMessage = new StringSetting("settings.bots.spammessage", "Hello from MotherHack!", false);
     private final NumberSetting spamDelay = new NumberSetting("settings.bots.spamdelay", 5.0f, 0.5f, 60.0f, 0.5f);
-    private final NumberSetting joinDelay = new NumberSetting("settings.bots.joindelay", 1.0f, 0.1f, 10.0f, 0.1f);
+    private final NumberSetting joinDelay = new NumberSetting("settings.bots.joindelay", 2.0f, 0.5f, 10.0f, 0.1f);
     
     private final ButtonSetting startBots = new ButtonSetting("settings.bots.start", this::startBotsAction);
     private final ButtonSetting stopBots = new ButtonSetting("settings.bots.stop", this::stopBotsAction);
+    private final ButtonSetting statusBots = new ButtonSetting("settings.bots.status", this::statusBotsAction);
 
     private BotManager botManager;
 
@@ -94,6 +95,26 @@ public class Bots extends Module {
     private void stopBotsAction() {
         if (botManager != null) {
             botManager.stopAllBots();
+            ChatUtils.sendMessage("§c[Bots] Stopping all bots...");
+        }
+    }
+    
+    private void statusBotsAction() {
+        if (botManager == null) {
+            ChatUtils.sendMessage("§c[Bots] BotManager not initialized!");
+            return;
+        }
+        
+        int active = botManager.getActiveBotCount();
+        int total = botManager.getBots().size();
+        ChatUtils.sendMessage("§e[Bots] Status: " + active + "/" + total + " bots active");
+        
+        if (total > 0) {
+            ChatUtils.sendMessage("§7[Bots] Connected bots:");
+            botManager.getBots().forEach(bot -> {
+                String status = bot.isConnected() ? "§a✓" : "§c✗";
+                ChatUtils.sendMessage("  " + status + " §7" + bot.getUsername());
+            });
         }
     }
 

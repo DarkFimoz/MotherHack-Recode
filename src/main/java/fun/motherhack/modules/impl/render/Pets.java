@@ -1,42 +1,34 @@
 package fun.motherhack.modules.impl.render;
 
-import com.mojang.blaze3d.systems.RenderSystem;
-import fun.motherhack.api.events.impl.EventRender3D;
+import fun.motherhack.api.events.impl.EventTick;
+import fun.motherhack.api.interfaces.IPlayerEntity;
 import fun.motherhack.modules.api.Category;
 import fun.motherhack.modules.api.Module;
 import fun.motherhack.modules.settings.api.Nameable;
-import fun.motherhack.modules.settings.impl.BooleanSetting;
 import fun.motherhack.modules.settings.impl.EnumSetting;
 import meteordevelopment.orbit.EventHandler;
-import net.minecraft.client.render.*;
-import net.minecraft.client.render.entity.model.EntityModelLayers;
-import net.minecraft.client.render.entity.model.ParrotEntityModel;
-import net.minecraft.client.render.entity.state.ParrotEntityRenderState;
-import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.math.RotationAxis;
-import net.minecraft.util.math.Vec3d;
+import net.minecraft.entity.EntityType;
+import net.minecraft.nbt.NbtCompound;
 
 public class Pets extends Module {
 
     public enum ParrotVariant implements Nameable {
-        RED_BLUE("Red Blue", "parrot_red_blue"),
-        BLUE("Blue", "parrot_blue"),
-        GREEN("Green", "parrot_green"),
-        YELLOW_BLUE("Yellow Blue", "parrot_yellow_blue"),
-        GRAY("Gray", "parrot_grey");
+        RED_BLUE("Red Blue", 0),
+        BLUE("Blue", 1),
+        GREEN("Green", 2),
+        YELLOW_BLUE("Yellow Blue", 3),
+        GRAY("Gray", 4);
 
         private final String displayName;
-        private final Identifier texture;
+        private final int variantId;
 
-        ParrotVariant(String displayName, String textureName) {
+        ParrotVariant(String displayName, int variantId) {
             this.displayName = displayName;
-            this.texture = Identifier.ofVanilla("textures/entity/parrot/" + textureName + ".png");
+            this.variantId = variantId;
         }
 
-        public Identifier getTexture() {
-            return texture;
+        public int getVariantId() {
+            return variantId;
         }
 
         @Override
@@ -46,7 +38,9 @@ public class Pets extends Module {
     }
 
     public enum Shoulder implements Nameable {
-        RIGHT("Right"), LEFT("Left");
+        RIGHT("Right"), 
+        LEFT("Left"), 
+        BOTH("Both");
         
         private final String name;
         
@@ -62,11 +56,9 @@ public class Pets extends Module {
 
     public EnumSetting<ParrotVariant> variant = new EnumSetting<>("Variant", ParrotVariant.RED_BLUE);
     public EnumSetting<Shoulder> shoulder = new EnumSetting<>("Shoulder", Shoulder.RIGHT);
-    public BooleanSetting renderOnSelf = new BooleanSetting("RenderOnSelf", true);
-    public BooleanSetting onlyFirstPerson = new BooleanSetting("OnlyFirstPerson", false);
 
-    private ParrotEntityModel parrotModel;
-    private ParrotEntityRenderState parrotState;
+    private NbtCompound savedLeftShoulder = null;
+    private NbtCompound savedRightShoulder = null;
 
     public Pets() {
         super("Pets", Category.Render);
@@ -75,114 +67,66 @@ public class Pets extends Module {
     @Override
     public void onEnable() {
         super.onEnable();
-        initModel();
+        if (mc.player != null) {
+            // Сохраняем оригинальные данные плеч
+            savedLeftShoulder = mc.player.getShoulderEntityLeft().copy();
+            savedRightShoulder = mc.player.getShoulderEntityRight().copy();
+            
+            // Устанавливаем попугая на плечо
+            updateParrotOnShoulder();
+        }
     }
 
-    private void initModel() {
-        try {
-            if (mc.getBakedModelManager() == null) return;
-            var supplier = mc.getBakedModelManager().getEntityModelsSupplier();
-            if (supplier == null) return;
-            var entityModels = supplier.get();
-            if (entityModels != null) {
-                parrotModel = new ParrotEntityModel(entityModels.getModelPart(EntityModelLayers.PARROT));
-                parrotState = new ParrotEntityRenderState();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
+    @Override
+    public void onDisable() {
+        super.onDisable();
+        if (mc.player != null) {
+            // Восстанавливаем оригинальные данные плеч
+            ((IPlayerEntity) mc.player).setShoulderEntityLeft(savedLeftShoulder != null ? savedLeftShoulder : new NbtCompound());
+            ((IPlayerEntity) mc.player).setShoulderEntityRight(savedRightShoulder != null ? savedRightShoulder : new NbtCompound());
         }
     }
 
     @EventHandler
-    public void onRender3D(EventRender3D.Game event) {
-        if (mc.player == null || mc.world == null) return;
+    public void onTick(EventTick event) {
+        if (mc.player == null) return;
         
-        if (parrotModel == null || parrotState == null) {
-            initModel();
-            if (parrotModel == null) return;
-        }
-
-        if (onlyFirstPerson.getValue() && !mc.options.getPerspective().isFirstPerson()) {
-            return;
-        }
-
-        MatrixStack matrices = event.getMatrixStack();
-        Vec3d cameraPos = mc.getEntityRenderDispatcher().camera.getPos();
-        float tickDelta = event.getTickCounter().getTickDelta(true);
-        
-        // Получаем буфер для рендеринга
-        VertexConsumerProvider.Immediate immediate = mc.getBufferBuilders().getEntityVertexConsumers();
-        
-        if (renderOnSelf.getValue()) {
-            renderParrotOnPlayer(matrices, mc.player, cameraPos, immediate, tickDelta);
-        }
-        
-        for (PlayerEntity player : mc.world.getPlayers()) {
-            if (player == mc.player) continue;
-            if (player.getShoulderEntityLeft().isEmpty() && player.getShoulderEntityRight().isEmpty()) {
-                renderParrotOnPlayer(matrices, player, cameraPos, immediate, tickDelta);
-            }
-        }
-        
-        // Важно: рисуем буфер
-        immediate.draw();
+        // Постоянно обновляем попугая на плече, чтобы он не слетал
+        updateParrotOnShoulder();
     }
 
-    private void renderParrotOnPlayer(MatrixStack matrices, PlayerEntity player, Vec3d cameraPos, 
-                                       VertexConsumerProvider vertexConsumers, float tickDelta) {
-        // Интерполяция позиции игрока
-        double x = player.prevX + (player.getX() - player.prevX) * tickDelta;
-        double y = player.prevY + (player.getY() - player.prevY) * tickDelta;
-        double z = player.prevZ + (player.getZ() - player.prevZ) * tickDelta;
+    private void updateParrotOnShoulder() {
+        NbtCompound parrotNbt = createParrotNbt();
         
-        // Интерполяция поворота тела
-        float bodyYaw = player.prevBodyYaw + (player.bodyYaw - player.prevBodyYaw) * tickDelta;
+        Shoulder shoulderSetting = shoulder.getValue();
         
-        matrices.push();
+        IPlayerEntity player = (IPlayerEntity) mc.player;
         
-        // Настройка рендер-состояния
-        RenderSystem.enableDepthTest();
-        RenderSystem.enableBlend();
-        RenderSystem.defaultBlendFunc();
+        switch (shoulderSetting) {
+            case LEFT:
+                player.setShoulderEntityLeft(parrotNbt);
+                player.setShoulderEntityRight(new NbtCompound());
+                break;
+            case RIGHT:
+                player.setShoulderEntityLeft(new NbtCompound());
+                player.setShoulderEntityRight(parrotNbt);
+                break;
+            case BOTH:
+                player.setShoulderEntityLeft(parrotNbt.copy());
+                player.setShoulderEntityRight(parrotNbt.copy());
+                break;
+        }
+    }
+
+    private NbtCompound createParrotNbt() {
+        NbtCompound nbt = new NbtCompound();
         
-        // Позиция относительно камеры (центр игрока на уровне пояса, как в vanilla renderer)
-        // Vanilla PlayerEntityRenderer рендерит игрока с pivot point на уровне ног + 0.9375 (15/16 блока)
-        matrices.translate(x - cameraPos.x, y - cameraPos.y + 0.9375, z - cameraPos.z);
+        // Устанавливаем тип сущности - попугай
+        nbt.putString("id", EntityType.getId(EntityType.PARROT).toString());
         
-        // Поворот по направлению тела игрока
-        matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(-bodyYaw));
+        // Устанавливаем вариант попугая (цвет)
+        nbt.putInt("Variant", variant.getValue().getVariantId());
         
-        // Vanilla координаты плеча относительно pivot point модели игрока
-        boolean leftShoulder = shoulder.getValue() == Shoulder.LEFT;
-        float shoulderX = leftShoulder ? 0.4f : -0.4f;
-        float shoulderY = player.isInSneakingPose() ? -1.3f : -1.5f;
-        matrices.translate(shoulderX, shoulderY, 0.0f);
-        
-        // Поворот модели (стандартно для Minecraft)
-        matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(180));
-        
-        // Масштаб попугая (vanilla = 0.5)
-        matrices.scale(0.5f, 0.5f, 0.5f);
-        
-        // Настройка состояния попугая
-        parrotState.age = player.age + tickDelta;
-        parrotState.flapAngle = 0.0f;
-        parrotState.parrotPose = ParrotEntityModel.Pose.ON_SHOULDER;
-        
-        // Получаем текстуру и рендер слой
-        Identifier texture = variant.getValue().getTexture();
-        RenderLayer renderLayer = RenderLayer.getEntityCutoutNoCull(texture);
-        VertexConsumer vertexConsumer = vertexConsumers.getBuffer(renderLayer);
-        
-        // Устанавливаем углы модели
-        parrotModel.setAngles(parrotState);
-        
-        // Рендерим модель
-        int light = LightmapTextureManager.MAX_LIGHT_COORDINATE;
-        parrotModel.render(matrices, vertexConsumer, light, OverlayTexture.DEFAULT_UV);
-        
-        RenderSystem.disableBlend();
-        
-        matrices.pop();
+        return nbt;
     }
 }

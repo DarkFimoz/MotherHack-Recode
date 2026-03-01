@@ -29,7 +29,8 @@ dependencies {
     }
     include implementation("meteordevelopment:discord-ipc:1.1")
     include implementation("meteordevelopment:orbit:0.2.3")
-    implementation(shadow("dev.redstones.mediaplayerinfo:media-player-info:0.1.0"))
+    // MediaPlayerInfo - optional dependency, wrapped in try-catch to prevent crashes
+    compileOnly("dev.redstones.mediaplayerinfo:media-player-info:0.1.0")
     
     compileOnly("org.projectlombok:lombok:1.18.38")
     annotationProcessor("org.projectlombok:lombok:1.18.38")
@@ -46,6 +47,8 @@ loom {
     runs {
         client {
             vmArgs(
+                "-Xmx1536M",
+                "-Xms512M",
                 "-Dmixin.debug.export=true",
                 "-Dmixin.env.disableRefMap=true",
                 "-Dmixin.checks.interfaces=false",
@@ -81,7 +84,7 @@ remapJar {
     inputFile = tasks.shadowJar.archiveFile
 }
 
-// Добавляем ASM для обфускации
+// МАКСИМАЛЬНАЯ ЗАЩИТА JAR
 configurations {
     obfuscator
 }
@@ -91,37 +94,52 @@ dependencies {
     obfuscator 'org.ow2.asm:asm-tree:9.6'
 }
 
-// Компилируем обфускатор
-task compileObfuscator(type: JavaCompile) {
-    source = fileTree('tools') { include '*.java' }
-    destinationDirectory = file("${buildDir}/obfuscator")
+// Компиляция защитного инструмента
+task compileProtector(type: JavaCompile) {
+    source = fileTree('tools') { include 'MaxProtector.java' }
+    destinationDirectory = file("${buildDir}/protector")
     classpath = configurations.obfuscator
     sourceCompatibility = '21'
     targetCompatibility = '21'
+    options.encoding = 'UTF-8'
 }
 
-// Обфускация строк в JAR файле
-task obfuscateStrings(type: JavaExec, dependsOn: [remapJar, compileObfuscator]) {
+// МАКСИМАЛЬНАЯ ЗАЩИТА - всё в одном
+task buildProtected(type: JavaExec, dependsOn: [remapJar, compileProtector]) {
     group = 'build'
-    description = 'Obfuscate strings in module classes'
+    description = 'Build MAXIMUM protected JAR (string obfuscation + number obfuscation + variable renaming)'
     
-    mainClass = 'StringObfuscator'
-    classpath = files("${buildDir}/obfuscator") + configurations.obfuscator
+    mainClass = 'MaxProtector'
+    classpath = files("${buildDir}/protector") + configurations.obfuscator
     
     doFirst {
         def inputJar = remapJar.archiveFile.get().asFile
-        def outputJar = file("${buildDir}/libs/${project.archives_base_name}-${project.version}-protected.jar")
+        def timestamp = new Date().format('yyyyMMdd-HHmmss')
+        def outputJar = file("${buildDir}/libs/${project.archives_base_name}-${project.version}-protected-${timestamp}.jar")
         args = [inputJar.absolutePath, outputJar.absolutePath]
-        println "Obfuscating strings in ${inputJar.name}..."
     }
-}
-
-// Сборка защищённой версии
-task buildProtected(dependsOn: obfuscateStrings) {
-    group = 'build'
-    description = 'Build protected version with string obfuscation'
     
     doLast {
-        println "Protected JAR: build/libs/${project.archives_base_name}-${project.version}-protected.jar"
+        def timestamp = new Date().format('yyyyMMdd-HHmmss')
+        def protectedJar = file("${buildDir}/libs/${project.archives_base_name}-${project.version}-protected-${timestamp}.jar")
+        println ""
+        println "╔${'═' * 58}╗"
+        println "║${' ' * 15}ЗАЩИЩЁННЫЙ JAR ГОТОВ!${' ' * 20}║"
+        println "╠${'═' * 58}╣"
+        println "║ Файл: ${protectedJar.name.padRight(48)}║"
+        println "║ Размер: ${(protectedJar.length() / 1024 / 1024).round(2)} MB${' ' * 43}║"
+        println "╠${'═' * 58}╣"
+        println "║ Применённая защита:${' ' * 36}║"
+        println "║   ✓ Обфускация строк (XOR + Base64)${' ' * 21}║"
+        println "║   ✓ Обфускация чисел (int, long, double)${' ' * 16}║"
+        println "║   ✓ Переименование переменных${' ' * 26}║"
+        println "║   ✓ Переименование полей и методов${' ' * 21}║"
+        println "║   ✓ Control Flow обфускация${' ' * 28}║"
+        println "║   ✓ Фейковые методы-ловушки${' ' * 28}║"
+        println "║   ✓ Мусорный код${' ' * 39}║"
+        println "╠${'═' * 58}╣"
+        println "║ Мод полностью работоспособен!${' ' * 27}║"
+        println "║ Все функции сохранены.${' ' * 35}║"
+        println "╚${'═' * 58}╝"
     }
 }

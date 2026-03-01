@@ -42,11 +42,15 @@ public class GuiMove extends Module {
         		|| mc.currentScreen instanceof ChatScreen 
         		|| mc.currentScreen instanceof SignEditScreen 
         		|| mc.currentScreen instanceof AnvilScreen
-        		|| (funtime.getValue() && mc.currentScreen instanceof GenericContainerScreen)
         ) return;
 
         for (KeyBinding binding : new KeyBinding[]{mc.options.forwardKey, mc.options.backKey, mc.options.rightKey, mc.options.leftKey, mc.options.jumpKey, mc.options.sprintKey}) {
             binding.setPressed(InputUtil.isKeyPressed(mc.getWindow().getHandle(), binding.getDefaultKey().getCode()));
+        }
+        
+        // Автоспринт в GUI
+        if (mc.options.forwardKey.isPressed() && !mc.player.isSprinting()) {
+            mc.player.setSprinting(true);
         }
     }
     
@@ -54,10 +58,10 @@ public class GuiMove extends Module {
     public void onPacketSend(EventPacket.Send e) {
     	if (fullNullCheck() || !funtime.getValue()) return;
     	
-    	if (e.getPacket() instanceof ClickSlotC2SPacket && mc.currentScreen instanceof InventoryScreen && MoveUtils.isMoving()) {
+    	if (e.getPacket() instanceof ClickSlotC2SPacket && mc.currentScreen != null && MoveUtils.isMoving()) {
     		packets.add(e.getPacket());
     		e.cancel();
-    	} else if (e.getPacket() instanceof CloseHandledScreenC2SPacket && !packets.isEmpty() && mc.currentScreen instanceof InventoryScreen && MoveUtils.isMoving()) {
+    	} else if (e.getPacket() instanceof CloseHandledScreenC2SPacket && !packets.isEmpty() && mc.currentScreen != null && MoveUtils.isMoving()) {
     		ticks = 8;
     		new Thread(() -> {
     			try {

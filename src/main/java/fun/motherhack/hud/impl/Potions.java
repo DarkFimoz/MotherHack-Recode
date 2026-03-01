@@ -3,6 +3,7 @@ package fun.motherhack.hud.impl;
 import fun.motherhack.MotherHack;
 import fun.motherhack.api.events.impl.EventRender2D;
 import fun.motherhack.hud.HudElement;
+import fun.motherhack.modules.impl.client.UI;
 import fun.motherhack.modules.settings.impl.BooleanSetting;
 import fun.motherhack.modules.settings.impl.NumberSetting;
 import fun.motherhack.utils.animations.Animation;
@@ -19,15 +20,11 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-/**
- * Potions HUD element - красивый стиль с blur и анимациями
- */
 public class Potions extends HudElement {
 
     private final NumberSetting fontSize = new NumberSetting("Font Size", 8f, 4f, 16f, 0.5f);
     private final NumberSetting backgroundAlpha = new NumberSetting("Background Alpha", 80f, 50f, 255f, 5f);
 
-    // Анимация появления
     private final Animation alphaAnimation = new Animation(300, 1f, false, Easing.SMOOTH_STEP);
     private boolean isVisible = false;
 
@@ -55,6 +52,22 @@ public class Potions extends HudElement {
         return String.format("%d:%02d", m, s);
     }
 
+    private String getRomanNumeral(int number) {
+        return switch (number) {
+            case 1 -> "I";
+            case 2 -> "II";
+            case 3 -> "III";
+            case 4 -> "IV";
+            case 5 -> "V";
+            case 6 -> "VI";
+            case 7 -> "VII";
+            case 8 -> "VIII";
+            case 9 -> "IX";
+            case 10 -> "X";
+            default -> String.valueOf(number);
+        };
+    }
+
     @EventHandler
     public void onRender2DX2(EventRender2D e) {
         if (fullNullCheck()) return;
@@ -71,11 +84,12 @@ public class Potions extends HudElement {
         if (fullNullCheck() || closed()) return;
         if (Fonts.SEMIBOLD == null || Fonts.REGULAR == null || Fonts.ICONS == null) return;
 
+        UI.ClickGuiTheme theme = MotherHack.getInstance().getModuleManager().getModule(UI.class).getTheme();
+
         List<StatusEffectInstance> potions = getActivePotions();
         boolean isInChatScreen = mc.currentScreen instanceof ChatScreen;
-        boolean shouldBeVisible = !potions.isEmpty() || (potions.isEmpty() && isInChatScreen);
+        boolean shouldBeVisible = !potions.isEmpty() || isInChatScreen;
 
-        // Анимация появления/исчезновения
         if (shouldBeVisible != isVisible) {
             isVisible = shouldBeVisible;
             alphaAnimation.update(isVisible);
@@ -87,35 +101,37 @@ public class Potions extends HudElement {
 
         float x = getX();
         float y = getY();
-        float padding = 3f;
+        float padding = 5f;
         float currentFontSize = fontSize.getValue();
         Font headerFont = Fonts.SEMIBOLD;
         Font bodyFont = Fonts.REGULAR;
 
-        float headerHeight = currentFontSize + 2f + padding * 2;
+        float headerHeight = currentFontSize + 4f + padding * 2;
         int bgAlpha = (int) (backgroundAlpha.getValue() * alpha);
         int textAlpha = (int) (255 * alpha);
+        
         Color textColor = new Color(255, 255, 255, textAlpha);
-        Color levelColor = new Color(235, 85, 105, textAlpha);
+        Color levelColor = new Color(255, 100, 120, textAlpha);
+        Color durationColor = new Color(200, 200, 200, textAlpha);
+        Color bgColor = new Color(theme.getBackgroundColor().getRed(), theme.getBackgroundColor().getGreen(), theme.getBackgroundColor().getBlue(), bgAlpha);
+        Color blurColor = new Color(theme.getBackgroundColor().getRed(), theme.getBackgroundColor().getGreen(), theme.getBackgroundColor().getBlue(), (int)(bgAlpha * 0.3f));
 
-        // Расчёт ширины
-        String headerText = "Active Potions";
-        float headerTextWidth = headerFont.getWidth(headerText, currentFontSize + 2f);
-        float maxWidth = headerTextWidth + 30f;
+        String headerText = "Potions";
+        float headerTextWidth = headerFont.getWidth(headerText, currentFontSize + 1f);
+        float maxWidth = headerTextWidth + 40f;
 
         if (potions.isEmpty() && isInChatScreen) {
-            // Превью
-            String potionName = "Preview";
-            String level = "10";
-            String duration = "**:**";
-            float lineWidth = bodyFont.getWidth(potionName, currentFontSize) + bodyFont.getWidth(level, currentFontSize) + bodyFont.getWidth(duration, currentFontSize) + 35;
+            String potionName = "Speed";
+            String level = "II";
+            String duration = "5:00";
+            float lineWidth = bodyFont.getWidth(potionName, currentFontSize) + bodyFont.getWidth(level, currentFontSize) + bodyFont.getWidth(duration, currentFontSize) + padding * 8;
             maxWidth = Math.max(maxWidth, lineWidth);
         } else {
             for (StatusEffectInstance potion : potions) {
                 String potionName = potion.getEffectType().value().getName().getString();
-                int level = potion.getAmplifier() + 1;
+                String level = getRomanNumeral(potion.getAmplifier() + 1);
                 String duration = formatDuration(potion.getDuration());
-                float lineWidth = bodyFont.getWidth(potionName, currentFontSize) + bodyFont.getWidth("" + level, currentFontSize) + bodyFont.getWidth(duration, currentFontSize) + 30;
+                float lineWidth = bodyFont.getWidth(potionName, currentFontSize) + bodyFont.getWidth(level, currentFontSize) + bodyFont.getWidth(duration, currentFontSize) + padding * 8;
                 maxWidth = Math.max(maxWidth, lineWidth);
             }
         }
@@ -127,64 +143,58 @@ public class Potions extends HudElement {
         e.getContext().getMatrices().scale(toggledAnimation.getValue(), toggledAnimation.getValue(), 0);
         e.getContext().getMatrices().translate(-(x + width / 2), -(y + headerHeight / 2), 0f);
 
-        // Заголовок с blur
-        Render2D.drawBlurredRect(e.getContext().getMatrices(), x, y, width, headerHeight, 5f, 10f, new Color(255, 255, 255, (int)(bgAlpha * 0.3f)));
-        Render2D.drawRoundedRect(e.getContext().getMatrices(), x, y, width, headerHeight + 1, 5f, new Color(0, 0, 0, bgAlpha));
+        Render2D.drawBlurredRect(e.getContext().getMatrices(), x, y, width, headerHeight, 6f, 12f, blurColor);
+        Render2D.drawRoundedRect(e.getContext().getMatrices(), x, y, width, headerHeight, 6f, bgColor);
 
-        // Иконка и текст заголовка
-        Render2D.drawFont(e.getContext().getMatrices(), Fonts.ICONS.getFont(currentFontSize + 2f), "E", x + 4, y + padding + 0.5f, textColor);
-        Render2D.drawFont(e.getContext().getMatrices(), headerFont.getFont(currentFontSize), headerText, x + 20, y + padding + 0.5f, textColor);
+        Render2D.drawFont(e.getContext().getMatrices(), Fonts.ICONS.getFont(currentFontSize + 3f), "E", x + padding, y + padding + 1f, levelColor);
+        Render2D.drawFont(e.getContext().getMatrices(), headerFont.getFont(currentFontSize + 1f), headerText, x + padding + 18, y + padding + 1f, textColor);
 
-        float currentY = y + headerHeight + padding + 0.7f;
-        float rowHeight = currentFontSize + padding * 2 - 1;
+        float currentY = y + headerHeight + 3f;
+        float rowHeight = currentFontSize + padding * 2;
 
         if (potions.isEmpty() && isInChatScreen) {
-            // Превью
-            String potionName = "Preview";
-            String level = "10";
-            String duration = "**:**";
+            String potionName = "Speed";
+            String level = "II";
+            String duration = "5:00";
 
-            Render2D.drawBlurredRect(e.getContext().getMatrices(), x, currentY - padding, width, rowHeight, 5f, 10f, new Color(255, 255, 255, (int)(bgAlpha * 0.3f)));
-            Render2D.drawRoundedRect(e.getContext().getMatrices(), x, currentY - padding, width, rowHeight, 5f, new Color(0, 0, 0, bgAlpha));
-            Render2D.drawRoundedRect(e.getContext().getMatrices(), x + 15, currentY - padding + 1.5f, 1, 11, 1f, new Color(255, 255, 255, textAlpha));
+            Render2D.drawBlurredRect(e.getContext().getMatrices(), x, currentY, width, rowHeight, 6f, 12f, blurColor);
+            Render2D.drawRoundedRect(e.getContext().getMatrices(), x, currentY, width, rowHeight, 6f, bgColor);
 
-            float textOffsetX = x + padding + 16;
-            Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), potionName, textOffsetX, currentY, textColor);
-            textOffsetX += bodyFont.getWidth(potionName, currentFontSize) + 4;
-            Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), level, textOffsetX, currentY, levelColor);
+            Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), potionName, x + padding, currentY + padding, textColor);
+            
+            float levelX = x + padding + bodyFont.getWidth(potionName, currentFontSize) + 4;
+            Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), level, levelX, currentY + padding, levelColor);
 
             float durationWidth = bodyFont.getWidth(duration, currentFontSize);
             float durationX = x + width - durationWidth - padding;
-            Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), duration, durationX, currentY + 0.5f, textColor);
+            Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), duration, durationX, currentY + padding, durationColor);
 
-            currentY += rowHeight + 2;
+            currentY += rowHeight + 3f;
         } else {
-            // Реальные зелья
             for (StatusEffectInstance potion : potions) {
                 String potionName = potion.getEffectType().value().getName().getString();
-                int level = potion.getAmplifier() + 1;
+                String level = getRomanNumeral(potion.getAmplifier() + 1);
                 String duration = formatDuration(potion.getDuration());
 
-                Render2D.drawBlurredRect(e.getContext().getMatrices(), x, currentY - padding, width, rowHeight, 5f, 10f, new Color(255, 255, 255, (int)(bgAlpha * 0.3f)));
-                Render2D.drawRoundedRect(e.getContext().getMatrices(), x, currentY - padding, width, rowHeight, 5f, new Color(0, 0, 0, bgAlpha));
-                Render2D.drawRoundedRect(e.getContext().getMatrices(), x + 15, currentY - padding + 1.5f, 1, 11, 1f, new Color(255, 255, 255, textAlpha));
+                Render2D.drawBlurredRect(e.getContext().getMatrices(), x, currentY, width, rowHeight, 6f, 12f, blurColor);
+                Render2D.drawRoundedRect(e.getContext().getMatrices(), x, currentY, width, rowHeight, 6f, bgColor);
 
-                float textOffsetX = x + padding + 16;
-                Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), potionName, textOffsetX, currentY, textColor);
-                textOffsetX += bodyFont.getWidth(potionName, currentFontSize) + 4;
-                Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), "" + level, textOffsetX, currentY, levelColor);
+                Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), potionName, x + padding, currentY + padding, textColor);
+                
+                float levelX = x + padding + bodyFont.getWidth(potionName, currentFontSize) + 4;
+                Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), level, levelX, currentY + padding, levelColor);
 
                 float durationWidth = bodyFont.getWidth(duration, currentFontSize);
                 float durationX = x + width - durationWidth - padding;
-                Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), duration, durationX, currentY - 0.2f, textColor);
+                Render2D.drawFont(e.getContext().getMatrices(), bodyFont.getFont(currentFontSize), duration, durationX, currentY + padding, durationColor);
 
-                currentY += rowHeight + 2;
+                currentY += rowHeight + 3f;
             }
         }
 
         e.getContext().getMatrices().pop();
 
-        float totalHeight = currentY - y + padding;
+        float totalHeight = currentY - y;
         setBounds(getX(), getY(), width, totalHeight);
         super.onRender2D(e);
     }

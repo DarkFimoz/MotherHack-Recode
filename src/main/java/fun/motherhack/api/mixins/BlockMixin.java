@@ -18,7 +18,11 @@ public class BlockMixin {
         if (MotherHack.getInstance() == null) return;
         Xray xray = MotherHack.getInstance().getModuleManager().getModule(Xray.class);
         if (xray != null && xray.isToggled()) {
-            cir.setReturnValue(xray.isBlockVisible(state.getBlock()));
+            if (xray.isBlockVisible(state.getBlock())) {
+                cir.setReturnValue(true);
+            } else {
+                cir.setReturnValue(xray.isBlockVisible(otherState.getBlock()));
+            }
         }
     }
 }

@@ -33,6 +33,10 @@ public record BuiltText(
 	
 	@Override
     public void render(Matrix4f matrix, float x, float y, float z) {
+		if (this.text == null || this.text.isEmpty()) {
+			return;
+		}
+		
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		RenderSystem.disableCull();
@@ -54,7 +58,14 @@ public record BuiltText(
 		
 		BufferBuilder builder = Tessellator.getInstance().begin(DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
 		this.font.applyGlyphs(matrix, builder, this.text, this.size, (this.thickness + this.outlineThickness * 0.5f) * 0.5f * this.size, this.spacing, x, y + this.font.getMetrics().baselineHeight() * this.size, z, this.color);
-		BufferRenderer.drawWithGlobalProgram(builder.end());
+		try {
+			var builtBuffer = builder.end();
+			if (builtBuffer != null) {
+				BufferRenderer.drawWithGlobalProgram(builtBuffer);
+			}
+		} catch (IllegalStateException e) {
+			// BufferBuilder was empty, skip rendering
+		}
 		RenderSystem.setShaderTexture(0, 0);
 		RenderSystem.enableCull();
 		RenderSystem.disableBlend();

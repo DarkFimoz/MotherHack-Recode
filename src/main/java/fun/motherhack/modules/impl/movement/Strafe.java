@@ -1,10 +1,12 @@
 package fun.motherhack.modules.impl.movement;
 
+import fun.motherhack.MotherHack;
 import fun.motherhack.modules.api.Category;
 import fun.motherhack.modules.api.Module;
 import fun.motherhack.modules.settings.impl.EnumSetting;
 import fun.motherhack.modules.settings.impl.NumberSetting;
 import fun.motherhack.modules.settings.api.Nameable;
+import fun.motherhack.utils.rotations.RotationChanger;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import meteordevelopment.orbit.EventHandler;
@@ -13,12 +15,14 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Direction;
 import fun.motherhack.api.events.impl.EventPlayerTick;
+import fun.motherhack.api.events.impl.EventKeyboardInput;
 
 public class Strafe extends Module {
-    private final EnumSetting<Boost> boost = new EnumSetting<>("Буст", Boost.None);
-    private final NumberSetting setSpeed = new NumberSetting("Скорость", 1.3f, 0.0f, 2f, 0.1f);
-    private final NumberSetting velReduction = new NumberSetting("Редукция", 6.0f, 0.1f, 10f, 0.1f);
-    private final NumberSetting maxVelocitySpeed = new NumberSetting("Макс скорость", 0.8f, 0.1f, 2f, 0.1f);
+    private final EnumSetting<Mode> mode = new EnumSetting<>("mode", Mode.Legit);
+    private final EnumSetting<Boost> boost = new EnumSetting<>("Буст", Boost.None, () -> mode.getValue() == Mode.Rage);
+    private final NumberSetting setSpeed = new NumberSetting("Скорость", 1.3f, 0.0f, 2f, 0.1f, () -> mode.getValue() == Mode.Rage);
+    private final NumberSetting velReduction = new NumberSetting("Редукция", 6.0f, 0.1f, 10f, 0.1f, () -> mode.getValue() == Mode.Rage);
+    private final NumberSetting maxVelocitySpeed = new NumberSetting("Макс скорость", 0.8f, 0.1f, 2f, 0.1f, () -> mode.getValue() == Mode.Rage);
 
     public static double oldSpeed = 0;
     public static double contextFriction = 0.91;
@@ -27,6 +31,17 @@ public class Strafe extends Module {
     public static boolean disabled = false;
     static long disableTime = 0;
     public static int noSlowTicks = 0;
+
+    private RotationChanger rotationChanger;
+
+    @AllArgsConstructor
+    @Getter
+    public enum Mode implements Nameable {
+        Legit("Легит"),
+        Rage("Рейдж");
+
+        private final String name;
+    }
 
     @AllArgsConstructor
     @Getter
@@ -40,6 +55,7 @@ public class Strafe extends Module {
 
     public Strafe() {
         super("Strafe", Category.Movement);
+        getSettings().add(mode);
         getSettings().add(boost);
         getSettings().add(setSpeed);
         getSettings().add(velReduction);
@@ -50,11 +66,23 @@ public class Strafe extends Module {
     public void onEnable() {
         super.onEnable();
         oldSpeed = 0.0;
+        
+        if (mode.getValue() == Mode.Legit) {
+            rotationChanger = new RotationChanger(
+                0,
+                () -> new Float[]{mc.player.getYaw() + calculateYawOffset(), mc.player.getPitch()},
+                () -> false
+            );
+        }
     }
 
     @Override
     public void onDisable() {
         super.onDisable();
+        
+        if (mode.getValue() == Mode.Legit && !fullNullCheck() && rotationChanger != null) {
+            MotherHack.getInstance().getRotationManager().removeRotation(rotationChanger);
+        }
     }
 
     public boolean canStrafe() {
@@ -105,6 +133,22 @@ public class Strafe extends Module {
     @EventHandler
     public void onTick(EventPlayerTick event) {
         if (fullNullCheck()) return;
+        
+        if (mode.getValue() == Mode.Rage) {
+            handleRageMode();
+        }
+    }
+
+    @EventHandler
+    public void onKeyboardInput(EventKeyboardInput event) {
+        if (fullNullCheck()) return;
+        
+        if (mode.getValue() == Mode.Legit) {
+            handleLegitMode(event);
+        }
+    }
+
+    private void handleRageMode() {
         if (!canStrafe()) {
             oldSpeed = 0;
             return;
@@ -118,6 +162,57 @@ public class Strafe extends Module {
         } else {
             oldSpeed = 0;
         }
+    }
+
+    private void handleLegitMode(EventKeyboardInput event) {
+        MotherHack.getInstance().getRotationManager().addRotation(rotationChanger);
+
+        boolean w = mc.options.forwardKey.isPressed();
+        boolean s = mc.options.backKey.isPressed();
+        boolean a = mc.options.leftKey.isPressed();
+        boolean d = mc.options.rightKey.isPressed();
+
+        if (w && s) {
+            w = false;
+            s = false;
+        }
+        if (a && d) {
+            a = false;
+            d = false;
+        }
+
+        event.setMovementSideways(0);
+        event.setMovementForward(w || s || a || d ? 1.0f : 0);
+    }
+
+    private float calculateYawOffset() {
+        boolean w = mc.options.forwardKey.isPressed();
+        boolean s = mc.options.backKey.isPressed();
+        boolean a = mc.options.leftKey.isPressed();
+        boolean d = mc.options.rightKey.isPressed();
+
+        if (w && s) {
+            w = false;
+            s = false;
+        }
+        if (a && d) {
+            a = false;
+            d = false;
+        }
+
+        if (w) {
+            if (a) return -45f;
+            if (d) return 45f;
+            return 0f;
+        }
+        if (s) {
+            if (a) return -135f;
+            if (d) return 135f;
+            return 180f;
+        }
+        if (a) return -90f;
+        if (d) return 90f;
+        return 0f;
     }
 
     private boolean isMoving() {

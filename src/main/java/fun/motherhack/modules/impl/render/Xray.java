@@ -18,7 +18,10 @@ public class Xray extends Module {
     public BooleanSetting ironOre = new BooleanSetting(I18n.translate("settings.xray.ironore"), true);
     public BooleanSetting lapisOre = new BooleanSetting(I18n.translate("settings.xray.lapisore"), true);
     public BooleanSetting redstoneOre = new BooleanSetting(I18n.translate("settings.xray.redstoneore"), false);
+    public BooleanSetting emeraldOre = new BooleanSetting(I18n.translate("settings.xray.emeraldore"), true);
+    public BooleanSetting copperOre = new BooleanSetting(I18n.translate("settings.xray.copperore"), false);
     public BooleanSetting netheriteOre = new BooleanSetting(I18n.translate("settings.xray.netheriteore"), true);
+    public BooleanSetting netherQuartz = new BooleanSetting(I18n.translate("settings.xray.netherquartz"), false);
     public BooleanSetting obsidian = new BooleanSetting(I18n.translate("settings.xray.obsidian"), true);
     public BooleanSetting water = new BooleanSetting(I18n.translate("settings.xray.water"), false);
     public BooleanSetting lava = new BooleanSetting(I18n.translate("settings.xray.lava"), true);
@@ -72,8 +75,19 @@ public class Xray extends Module {
             blocks.add(Blocks.REDSTONE_ORE);
             blocks.add(Blocks.DEEPSLATE_REDSTONE_ORE);
         }
+        if (emeraldOre.getValue()) {
+            blocks.add(Blocks.EMERALD_ORE);
+            blocks.add(Blocks.DEEPSLATE_EMERALD_ORE);
+        }
+        if (copperOre.getValue()) {
+            blocks.add(Blocks.COPPER_ORE);
+            blocks.add(Blocks.DEEPSLATE_COPPER_ORE);
+        }
         if (netheriteOre.getValue()) {
             blocks.add(Blocks.ANCIENT_DEBRIS);
+        }
+        if (netherQuartz.getValue()) {
+            blocks.add(Blocks.NETHER_QUARTZ_ORE);
         }
         if (obsidian.getValue()) {
             blocks.add(Blocks.OBSIDIAN);

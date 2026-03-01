@@ -118,6 +118,8 @@ public class BotManager {
         private ScheduledFuture<?> keepAliveTask;
         private final AtomicBoolean loggedIn = new AtomicBoolean(false);
         private final AtomicBoolean registered = new AtomicBoolean(false);
+        private final AtomicBoolean inPlayState = new AtomicBoolean(false);
+        private final AtomicBoolean inConfigState = new AtomicBoolean(false);
 
         public MinecraftBot(String username, String host, int port, String password,
                            boolean spamEnabled, String spamMessage, long spamDelay, BotManager manager) {
@@ -136,9 +138,13 @@ public class BotManager {
                 shouldRun = true;
                 loggedIn.set(false);
                 registered.set(false);
+                inPlayState.set(false);
+                inConfigState.set(false);
                 
                 socket = new Socket();
                 socket.setSoTimeout(30000);
+                socket.setKeepAlive(true);
+                socket.setTcpNoDelay(true);
                 socket.connect(new InetSocketAddress(host, port), 10000);
                 
                 in = new DataInputStream(new BufferedInputStream(socket.getInputStream()));
@@ -159,6 +165,11 @@ public class BotManager {
             } catch (Exception e) {
                 ChatUtils.sendMessage("§c[Bots] " + username + " failed to connect: " + e.getMessage());
                 disconnect();
+                
+                // Auto-reconnect on connection failure
+                if (shouldRun && manager.running) {
+                    manager.scheduleReconnect(this, 5000);
+                }
             }
         }
 
@@ -194,9 +205,9 @@ public class BotManager {
 
         private void readPackets() {
             try {
-                while (shouldRun && connected && !socket.isClosed()) {
+                while (shouldRun && connected && socket != null && !socket.isClosed()) {
                     int length = readVarInt(in);
-                    if (length <= 0) continue;
+                    if (length <= 0 || length > 2097151) continue; // Max packet size check
                     
                     byte[] packetData = new byte[length];
                     in.readFully(packetData);
@@ -207,13 +218,15 @@ public class BotManager {
                     handlePacket(packetId, packetIn, packetData);
                 }
             } catch (Exception e) {
-                if (shouldRun) {
+                if (shouldRun && manager.running) {
                     String error = e.getMessage() != null ? e.getMessage().toLowerCase() : "";
-                    if (error.contains("logging in too fast") || error.contains("too fast")) {
-                        ChatUtils.sendMessage("§e[Bots] " + username + " kicked for logging too fast, reconnecting in 10s...");
+                    if (error.contains("logging in too fast") || error.contains("too fast") || 
+                        error.contains("слишком быстро")) {
+                        ChatUtils.sendMessage("§e[Bots] " + username + " kicked: too fast, reconnecting in 10s...");
                         manager.scheduleReconnect(this, 10000);
-                    } else {
-                        ChatUtils.sendMessage("§c[Bots] " + username + " disconnected: " + e.getMessage());
+                    } else if (!error.contains("socket closed") && !error.isEmpty()) {
+                        ChatUtils.sendMessage("§c[Bots] " + username + " error: " + e.getMessage());
+                        manager.scheduleReconnect(this, 5000);
                     }
                 }
             } finally {
@@ -222,63 +235,127 @@ public class BotManager {
         }
 
         private void handlePacket(int packetId, DataInputStream packetIn, byte[] rawData) throws IOException {
-            switch (packetId) {
-                case 0x00 -> { // Disconnect (Login) or Keep Alive response needed
-                    if (!loggedIn.get()) {
-                        // Login disconnect
+            if (!inPlayState.get() && !inConfigState.get()) {
+                // Login state packets
+                switch (packetId) {
+                    case 0x00 -> { // Disconnect (Login)
                         String reason = readString(packetIn);
                         handleDisconnect(reason);
                     }
+                    case 0x01 -> { // Encryption Request
+                        // Skip encryption for offline mode
+                        ChatUtils.sendMessage("§e[Bots] " + username + " - server requires encryption (online mode)");
+                        disconnect();
+                    }
+                    case 0x02 -> { // Login Success
+                        ChatUtils.sendMessage("§a[Bots] " + username + " logged in successfully!");
+                        loggedIn.set(true);
+                        
+                        // Send Login Acknowledged to enter Configuration state
+                        sendLoginAcknowledged();
+                        inConfigState.set(true);
+                    }
+                    case 0x03 -> { // Set Compression
+                        int threshold = readVarInt(packetIn);
+                        // Compression not implemented, but acknowledged
+                    }
                 }
-                case 0x01 -> { // Encryption Request - offline mode servers skip this
-                    // For offline servers, we don't need encryption
+            } else if (inConfigState.get()) {
+                // Configuration state packets
+                switch (packetId) {
+                    case 0x00 -> { // Cookie Request (Config)
+                        // Ignore
+                    }
+                    case 0x01 -> { // Plugin Message (Config)
+                        // Ignore
+                    }
+                    case 0x02 -> { // Disconnect (Config)
+                        String reason = readString(packetIn);
+                        handleDisconnect(reason);
+                    }
+                    case 0x03 -> { // Finish Configuration
+                        // Send Acknowledge Finish Configuration
+                        sendAcknowledgeFinishConfiguration();
+                        inConfigState.set(false);
+                        inPlayState.set(true);
+                        ChatUtils.sendMessage("§a[Bots] " + username + " entered play state!");
+                        
+                        // Start spam if enabled
+                        if (spamEnabled && spamMessage != null && !spamMessage.isEmpty()) {
+                            manager.scheduler.schedule(this::startSpam, 2000, TimeUnit.MILLISECONDS);
+                        }
+                    }
+                    case 0x07 -> { // Registry Data
+                        // Ignore
+                    }
+                    case 0x09 -> { // Reset Chat
+                        // Ignore
+                    }
                 }
-                case 0x02 -> { // Login Success
-                    ChatUtils.sendMessage("§a[Bots] " + username + " logged in successfully!");
-                    loggedIn.set(true);
-                    
-                    // Send Login Acknowledged
-                    sendLoginAcknowledged();
-                }
-                case 0x03 -> { // Set Compression
-                    readVarInt(packetIn); // threshold - compression not implemented
-                }
-                case 0x19 -> { // Plugin Message (play state)
-                    // Ignore
-                }
-                case 0x1F, 0x26 -> { // Keep Alive (different IDs for different states)
-                    long keepAliveId = packetIn.readLong();
-                    sendKeepAlive(keepAliveId);
-                }
-                case 0x6C -> { // System Chat Message
-                    String message = readString(packetIn);
-                    handleChatMessage(message);
-                }
-                case 0x1D -> { // Disconnect (Play)
-                    String reason = readString(packetIn);
-                    handleDisconnect(reason);
+            } else if (inPlayState.get()) {
+                // Play state packets
+                switch (packetId) {
+                    case 0x1A -> { // Disconnect (Play)
+                        String reason = readString(packetIn);
+                        handleDisconnect(reason);
+                    }
+                    case 0x24 -> { // Keep Alive
+                        long keepAliveId = packetIn.readLong();
+                        sendKeepAlive(keepAliveId);
+                    }
+                    case 0x6C -> { // System Chat Message
+                        String message = readString(packetIn);
+                        boolean overlay = packetIn.readBoolean();
+                        if (!overlay) {
+                            handleChatMessage(message);
+                        }
+                    }
+                    case 0x17 -> { // Plugin Message (Play)
+                        // Ignore
+                    }
                 }
             }
         }
 
         private void handleChatMessage(String message) {
-            String lowerMessage = message.toLowerCase();
-            
-            // Check for registration prompt
-            if ((lowerMessage.contains("reg") || lowerMessage.contains("register")) && !registered.get() && password != null && !password.isEmpty()) {
-                manager.scheduler.schedule(() -> {
-                    sendChat("/register " + password + " " + password);
-                    registered.set(true);
-                    ChatUtils.sendMessage("§a[Bots] " + username + " sent /register");
-                }, 500, TimeUnit.MILLISECONDS);
-            }
-            
-            // Check for login prompt
-            if ((lowerMessage.contains("log") || lowerMessage.contains("login") || lowerMessage.contains("авториз")) && !loggedIn.get() && password != null && !password.isEmpty()) {
-                manager.scheduler.schedule(() -> {
-                    sendChat("/login " + password);
-                    ChatUtils.sendMessage("§a[Bots] " + username + " sent /login");
-                }, 500, TimeUnit.MILLISECONDS);
+            try {
+                // Parse JSON chat message
+                String plainText = message;
+                if (message.startsWith("{")) {
+                    // Simple JSON parsing for text content
+                    if (message.contains("\"text\"")) {
+                        int textStart = message.indexOf("\"text\"") + 8;
+                        int textEnd = message.indexOf("\"", textStart);
+                        if (textEnd > textStart) {
+                            plainText = message.substring(textStart, textEnd);
+                        }
+                    }
+                }
+                
+                String lowerMessage = plainText.toLowerCase();
+                
+                // Check for registration prompt
+                if ((lowerMessage.contains("reg") || lowerMessage.contains("register") || 
+                     lowerMessage.contains("зарег")) && !registered.get() && 
+                    password != null && !password.isEmpty()) {
+                    manager.scheduler.schedule(() -> {
+                        sendChat("/register " + password + " " + password);
+                        registered.set(true);
+                        ChatUtils.sendMessage("§a[Bots] " + username + " registered");
+                    }, 1000, TimeUnit.MILLISECONDS);
+                }
+                
+                // Check for login prompt
+                else if ((lowerMessage.contains("log") || lowerMessage.contains("login") || 
+                         lowerMessage.contains("авториз") || lowerMessage.contains("войд")) && 
+                        password != null && !password.isEmpty()) {
+                    manager.scheduler.schedule(() -> {
+                        sendChat("/login " + password);
+                        ChatUtils.sendMessage("§a[Bots] " + username + " logged in");
+                    }, 1000, TimeUnit.MILLISECONDS);
+                }
+            } catch (Exception e) {
+                // Ignore parsing errors
             }
         }
 
@@ -299,20 +376,31 @@ public class BotManager {
             try {
                 ByteArrayOutputStream buffer = new ByteArrayOutputStream();
                 DataOutputStream packet = new DataOutputStream(buffer);
-                writeVarInt(packet, 0x03); // Login Acknowledged
+                writeVarInt(packet, 0x03); // Login Acknowledged packet ID
                 
                 byte[] data = buffer.toByteArray();
                 writeVarInt(out, data.length);
                 out.write(data);
                 out.flush();
                 
-                // Start spam if enabled
-                if (spamEnabled && spamMessage != null && !spamMessage.isEmpty()) {
-                    startSpam();
-                }
+            } catch (IOException e) {
+                ChatUtils.sendMessage("§c[Bots] " + username + " failed to send Login Acknowledged");
+            }
+        }
+        
+        private void sendAcknowledgeFinishConfiguration() {
+            try {
+                ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+                DataOutputStream packet = new DataOutputStream(buffer);
+                writeVarInt(packet, 0x03); // Acknowledge Finish Configuration packet ID
+                
+                byte[] data = buffer.toByteArray();
+                writeVarInt(out, data.length);
+                out.write(data);
+                out.flush();
                 
             } catch (IOException e) {
-                // Ignore
+                ChatUtils.sendMessage("§c[Bots] " + username + " failed to finish configuration");
             }
         }
 
@@ -320,7 +408,7 @@ public class BotManager {
             try {
                 ByteArrayOutputStream buffer = new ByteArrayOutputStream();
                 DataOutputStream packet = new DataOutputStream(buffer);
-                writeVarInt(packet, 0x18); // Keep Alive response
+                writeVarInt(packet, 0x15); // Keep Alive response packet ID (Play state)
                 packet.writeLong(id);
                 
                 byte[] data = buffer.toByteArray();
@@ -333,38 +421,40 @@ public class BotManager {
         }
 
         public void sendChat(String message) {
-            if (!connected || socket.isClosed()) return;
+            if (!connected || socket == null || socket.isClosed() || !inPlayState.get()) return;
             
             try {
                 ByteArrayOutputStream buffer = new ByteArrayOutputStream();
                 DataOutputStream packet = new DataOutputStream(buffer);
                 
                 if (message.startsWith("/")) {
-                    // Chat Command packet
+                    // Chat Command packet (0x04)
                     writeVarInt(packet, 0x04);
                     writeString(packet, message.substring(1)); // Remove leading /
                     packet.writeLong(System.currentTimeMillis()); // Timestamp
                     packet.writeLong(0); // Salt
                     writeVarInt(packet, 0); // Argument signatures count
                     writeVarInt(packet, 0); // Message count
-                    packet.write(new byte[20]); // Acknowledged
+                    packet.write(new byte[20]); // Acknowledged (bit set)
                 } else {
-                    // Chat Message packet
-                    writeVarInt(packet, 0x06);
+                    // Chat Message packet (0x07)
+                    writeVarInt(packet, 0x07);
                     writeString(packet, message);
-                    packet.writeLong(System.currentTimeMillis());
+                    packet.writeLong(System.currentTimeMillis()); // Timestamp
                     packet.writeLong(0); // Salt
-                    packet.writeBoolean(false); // Has signature
+                    writeVarInt(packet, 0); // Signature length (no signature)
                     writeVarInt(packet, 0); // Message count
-                    packet.write(new byte[20]); // Acknowledged
+                    packet.write(new byte[20]); // Acknowledged (bit set)
                 }
                 
                 byte[] data = buffer.toByteArray();
-                writeVarInt(out, data.length);
-                out.write(data);
-                out.flush();
+                synchronized (out) {
+                    writeVarInt(out, data.length);
+                    out.write(data);
+                    out.flush();
+                }
             } catch (IOException e) {
-                // Ignore
+                ChatUtils.sendMessage("§c[Bots] " + username + " failed to send message: " + e.getMessage());
             }
         }
 
@@ -374,7 +464,7 @@ public class BotManager {
             }
             
             spamTask = manager.scheduler.scheduleAtFixedRate(() -> {
-                if (connected && shouldRun) {
+                if (connected && shouldRun && inPlayState.get()) {
                     sendChat(spamMessage);
                 }
             }, spamDelay, spamDelay, TimeUnit.MILLISECONDS);
